@@ -1,0 +1,12 @@
+.env
+*.pyc
+__pycache__/
+*.db
+data/applications.json
+data/logs.json
+*.log
+.DS_Store
+Thumbs.db
+browser_data/
+screenshots/
+node_modules/

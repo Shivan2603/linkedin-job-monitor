@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobBot Monitor — Siva Shankar</title>
+  <meta name="description" content="Real-time monitoring dashboard for Siva Shankar's automated job application bot — LinkedIn, Naukri, Indeed, Shine, Monster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="extra.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">JobBot</span>
+        <span class="logo-sub">AI Monitor</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active" data-page="dashboard" onclick="navigate(this,'dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item" data-page="applications" onclick="navigate(this,'applications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Applications
+      </a>
+      <a href="#" class="nav-item" data-page="sites" onclick="navigate(this,'sites')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Job Sites
+      </a>
+      <a href="#" class="nav-item" data-page="resumes" onclick="navigate(this,'resumes')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Resume Vault
+      </a>
+      <a href="#" class="nav-item" data-page="scheduler" onclick="navigate(this,'scheduler')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Scheduler
+      </a>
+      <a href="#" class="nav-item" data-page="analytics" onclick="navigate(this,'analytics')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      <a href="#" class="nav-item" data-page="logs" onclick="navigate(this,'logs')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Live Logs
+      </a>
+    </nav>
+
+    <div class="sidebar-status">
+      <div class="bot-status">
+        <div class="status-pulse" id="statusPulse"></div>
+        <div>
+          <div class="status-label">Bot Status</div>
+          <div class="status-value" id="sidebarStatusText">Running</div>
+        </div>
+      </div>
+      <div class="schedule-window">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>12:00 AM – 11:00 PM</span>
+      </div>
+      <div class="data-source-note" id="dataSourceNote">
+        <span class="dot-live"></span> Live data from bot
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-btn" onclick="toggleSidebar()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div>
+          <h1 class="page-title" id="pageTitle">Dashboard</h1>
+          <p class="page-subtitle" id="pageSubtitle">Real-time job application monitor</p>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="live-clock" id="liveClock"></div>
+        <div class="ai-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Claude Sonnet 4.6
+        </div>
+        <div class="refresh-btn" onclick="loadData()" title="Refresh data">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </div>
+        <div class="user-avatar">SS</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <!-- DASHBOARD -->
+      <section class="page active" id="page-dashboard">
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-primary">
+            <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="kpiToday">0</div>
+              <div class="kpi-label">Applied Today</div>
+              <div class="kpi-trend up" id="kpiTodayDate">—</div>
+            </div>
+          </div>
+          <div class="kpi-card kpi-blue">
+            <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="kpiTotal">0</div>
+              <div class="kpi-label">Total Applied</div>
+              <div class="kpi-trend neutral">All time</div>
+            </div>
+          </div>
+          <div class="kpi-card kpi-violet">
+            <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="kpiResumes">0</div>
+              <div class="kpi-label">Resumes Tailored</div>
+              <div class="kpi-trend neutral">AI-generated</div>
+            </div>
+          </div>
+          <div class="kpi-card kpi-amber">
+            <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.5 2 2 0 0 1 3.22 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.1a16 16 0 0 0 6 6l.62-.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg></div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="kpiCallbacks">0</div>
+              <div class="kpi-label">Callbacks</div>
+              <div class="kpi-trend up" id="kpiCallbackRate">0% rate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="middle-grid">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot green-dot"></div><h2 class="card-title">Live Activity</h2></div>
+              <div class="live-badge"><span class="live-dot"></span>LIVE</div>
+            </div>
+            <div class="activity-feed" id="activityFeed"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot blue-dot"></div><h2 class="card-title">Today's Progress</h2></div>
+              <span class="badge-pill" id="progressBadge">Active</span>
+            </div>
+            <div class="progress-ring-container">
+              <svg class="progress-ring" width="180" height="180" viewBox="0 0 180 180">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6366f1"/>
+                    <stop offset="100%" stop-color="#3b82f6"/>
+                  </linearGradient>
+                </defs>
+                <circle class="ring-bg" cx="90" cy="90" r="75"/>
+                <circle class="ring-fill" id="ringFill" cx="90" cy="90" r="75"
+                  stroke-dasharray="471" stroke-dashoffset="471" transform="rotate(-90 90 90)"/>
+              </svg>
+              <div class="ring-label">
+                <div class="ring-value" id="ringValue">0</div>
+                <div class="ring-sub">applied today</div>
+              </div>
+            </div>
+            <div class="progress-stats">
+              <div class="pstat"><div class="pstat-label">LinkedIn</div><div class="pstat-value" id="statLinkedIn">0</div></div>
+              <div class="pstat"><div class="pstat-label">Naukri</div><div class="pstat-value" id="statNaukri">0</div></div>
+              <div class="pstat"><div class="pstat-label">Indeed</div><div class="pstat-value" id="statIndeed">0</div></div>
+            </div>
+            <div class="next-run-section">
+              <div class="next-run-label">Bot Window</div>
+              <div class="next-run-time" id="nextRunTime">12:00 AM – 11:00 PM IST</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-grid">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot violet-dot"></div><h2 class="card-title">Recent Applications</h2></div>
+              <button class="btn-ghost" onclick="navigate(document.querySelector('[data-page=applications]'),'applications')">View All →</button>
+            </div>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead><tr><th>Company</th><th>Role</th><th>Site</th><th>Match</th><th>Status</th><th>Time</th></tr></thead>
+                <tbody id="recentTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot amber-dot"></div><h2 class="card-title">Site Health</h2></div>
+            </div>
+            <div id="siteHealthItems"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPLICATIONS -->
+      <section class="page" id="page-applications">
+        <div class="card full-card">
+          <div class="card-header">
+            <div class="card-title-group"><div class="card-dot violet-dot"></div><h2 class="card-title">All Applications</h2></div>
+            <div class="filter-bar">
+              <select class="filter-select" id="siteFlt" onchange="filterApps()">
+                <option value="all">All Sites</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="naukri">Naukri</option>
+                <option value="indeed">Indeed</option>
+                <option value="shine">Shine</option>
+                <option value="monster">Monster</option>
+              </select>
+              <select class="filter-select" id="statusFlt" onchange="filterApps()">
+                <option value="all">All Status</option>
+                <option value="applied">Applied</option>
+                <option value="viewed">Viewed</option>
+                <option value="shortlisted">Shortlisted</option>
+                <option value="rejected">Rejected</option>
+                <option value="callback">Callback</option>
+              </select>
+              <input class="search-input" id="searchFlt" placeholder="Search..." oninput="filterApps()"/>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>#</th><th>Company</th><th>Role</th><th>Location</th><th>Site</th><th>Match</th><th>Resume</th><th>Status</th><th>Applied At</th></tr></thead>
+              <tbody id="allAppsBody"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="appCount">0 applications</span>
+            <div class="pagination" id="pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SITES -->
+      <section class="page" id="page-sites">
+        <div class="sites-grid" id="sitesGrid"></div>
+      </section>
+
+      <!-- RESUMES -->
+      <section class="page" id="page-resumes">
+        <div class="card vault-info-card" style="margin-bottom:20px">
+          <div class="vault-path">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="mono">E:\SivaShankar\Resume\</span>
+          </div>
+          <div class="vault-stats">
+            <div class="vault-stat"><span>12</span> Base Files</div>
+            <div class="vault-stat"><span id="tailoredCountBig">0</span> Tailored Today</div>
+            <div class="vault-stat"><span>Claude 4.6</span> AI Engine</div>
+          </div>
+        </div>
+        <h2 class="section-heading">Base Resumes (E:\SivaShankar\Resume)</h2>
+        <div class="resume-grid" id="resumeGrid"></div>
+        <h2 class="section-heading" style="margin-top:24px">AI-Tailored Today (E:\SivaShankar\Resume\tailored\<span id="todayFolderName"></span>)</h2>
+        <div class="tailored-list" id="tailoredList"></div>
+      </section>
+
+      <!-- SCHEDULER -->
+      <section class="page" id="page-scheduler">
+        <div class="scheduler-layout">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot green-dot"></div><h2 class="card-title">Scheduler Config</h2></div>
+              <span class="badge-pill" id="schedBadge">Active</span>
+            </div>
+            <div class="sched-timeline">
+              <div class="timeline-bar">
+                <div class="timeline-active" id="timelineActive"></div>
+                <div class="timeline-cursor" id="timelineCursor"></div>
+              </div>
+              <div class="timeline-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>11 PM</span></div>
+            </div>
+            <div class="sched-details">
+              <div class="sched-row">
+                <div class="sched-item"><div class="sched-label">Start</div><div class="sched-value">12:00 AM</div></div>
+                <div class="sched-item"><div class="sched-label">End</div><div class="sched-value">11:00 PM</div></div>
+                <div class="sched-item"><div class="sched-label">Active</div><div class="sched-value">23 hrs/day</div></div>
+                <div class="sched-item"><div class="sched-label">Limit</div><div class="sched-value highlight">Unlimited ∞</div></div>
+              </div>
+            </div>
+            <div class="sched-sites">
+              <div class="sched-label" style="margin-bottom:10px;font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em">Active Sites</div>
+              <div class="sites-pills">
+                <span class="site-pill li">LinkedIn</span>
+                <span class="site-pill nk">Naukri</span>
+                <span class="site-pill in">Indeed</span>
+                <span class="site-pill sh">Shine</span>
+                <span class="site-pill mn">Monster</span>
+              </div>
+            </div>
+            <div class="sched-controls">
+              <button class="btn-danger" id="pauseBtn" onclick="alert('To pause: stop the main.py process in Task Scheduler')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                Pause Bot
+              </button>
+              <button class="btn-primary" onclick="alert('Bot is scheduled via Windows Task Scheduler. It runs automatically at 12 AM.')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Task Scheduled
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group"><div class="card-dot blue-dot"></div><h2 class="card-title">Windows Task</h2></div>
+            </div>
+            <div class="task-info">
+              <div class="task-row"><span>Task Name</span><code>LinkedInJobBot</code></div>
+              <div class="task-row"><span>Trigger</span><code>Daily at 12:00 AM</code></div>
+              <div class="task-row"><span>Action</span><code>python bot\main.py</code></div>
+              <div class="task-row"><span>Working Dir</span><code>E:\SivaShankar\jobbot</code></div>
+              <div class="task-row"><span>Run Mode</span><code>Background (headless)</code></div>
+              <div class="task-row"><span>Cycle</span><code>Every 90 minutes</code></div>
+              <div class="task-row"><span>Stop At</span><code>11:00 PM daily</code></div>
+            </div>
+          </div>
+        </div>
+        <div class="card heatmap-card" style="margin-top:18px">
+          <div class="card-header">
+            <div class="card-title-group"><div class="card-dot violet-dot"></div><h2 class="card-title">Today's Hourly Heatmap</h2></div>
+          </div>
+          <div class="heatmap-wrap">
+            <div class="heatmap" id="heatmap"></div>
+            <div class="heatmap-legend"><span>0</span><div class="legend-gradient"></div><span id="heatmapMax">20+</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="page" id="page-analytics">
+        <div class="analytics-grid">
+          <div class="card" style="grid-column:span 2">
+            <div class="card-header"><div class="card-title-group"><div class="card-dot blue-dot"></div><h2 class="card-title">Applications Per Day (Last 14 Days)</h2></div></div>
+            <canvas id="dailyChart" height="200"></canvas>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title-group"><div class="card-dot violet-dot"></div><h2 class="card-title">Status Breakdown</h2></div></div>
+            <canvas id="statusChart" height="220"></canvas>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title-group"><div class="card-dot green-dot"></div><h2 class="card-title">Applications by Site</h2></div></div>
+            <canvas id="siteChart" height="220"></canvas>
+          </div>
+          <div class="card" style="grid-column:span 2">
+            <div class="card-header"><div class="card-title-group"><div class="card-dot amber-dot"></div><h2 class="card-title">Match Score Distribution</h2></div></div>
+            <canvas id="matchChart" height="160"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOGS -->
+      <section class="page" id="page-logs">
+        <div class="card logs-card">
+          <div class="card-header">
+            <div class="card-title-group"><div class="card-dot green-dot"></div><h2 class="card-title">Live System Logs</h2></div>
+            <div class="log-controls">
+              <select class="filter-select" id="logLevel" onchange="renderLogsPage()">
+                <option value="all">All</option>
+                <option value="INFO">INFO</option>
+                <option value="SUCCESS">SUCCESS</option>
+                <option value="WARN">WARN</option>
+                <option value="ERROR">ERROR</option>
+                <option value="AI">AI</option>
+              </select>
+              <button class="btn-ghost" onclick="clearLogs()">Clear</button>
+            </div>
+          </div>
+          <div class="log-terminal" id="logTerminal"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
