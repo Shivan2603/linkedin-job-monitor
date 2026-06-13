@@ -73,7 +73,7 @@
       </div>
       <div class="schedule-window">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>12:00 AM – 11:00 PM</span>
+        <span>24/7 Continuous Mode</span>
       </div>
       <div class="data-source-note" id="dataSourceNote">
         <span class="dot-live"></span> Live data from bot
@@ -182,7 +182,7 @@
             </div>
             <div class="next-run-section">
               <div class="next-run-label">Bot Window</div>
-              <div class="next-run-time" id="nextRunTime">12:00 AM – 11:00 PM IST</div>
+              <div class="next-run-time" id="nextRunTime">24/7 Continuous Mode</div>
             </div>
           </div>
         </div>
@@ -222,6 +222,7 @@
                 <option value="indeed">Indeed</option>
                 <option value="shine">Shine</option>
                 <option value="monster">Monster</option>
+                <option value="company_careers">Company Careers</option>
               </select>
               <select class="filter-select" id="statusFlt" onchange="filterApps()">
                 <option value="all">All Status</option>
@@ -284,16 +285,16 @@
                 <div class="timeline-active" id="timelineActive"></div>
                 <div class="timeline-cursor" id="timelineCursor"></div>
               </div>
-              <div class="timeline-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>11 PM</span></div>
+              <div class="timeline-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
             </div>
-            <div class="sched-details">
-              <div class="sched-row">
-                <div class="sched-item"><div class="sched-label">Start</div><div class="sched-value">12:00 AM</div></div>
-                <div class="sched-item"><div class="sched-label">End</div><div class="sched-value">11:00 PM</div></div>
-                <div class="sched-item"><div class="sched-label">Active</div><div class="sched-value">23 hrs/day</div></div>
-                <div class="sched-item"><div class="sched-label">Limit</div><div class="sched-value highlight">Unlimited ∞</div></div>
+              <div class="sched-details">
+                <div class="sched-row">
+                  <div class="sched-item"><div class="sched-label">Start</div><div class="sched-value">00:00</div></div>
+                  <div class="sched-item"><div class="sched-label">End</div><div class="sched-value">24:00</div></div>
+                  <div class="sched-item"><div class="sched-label">Active</div><div class="sched-value">24 hrs/day</div></div>
+                  <div class="sched-item"><div class="sched-label">Limit</div><div class="sched-value highlight">Unlimited ∞</div></div>
+                </div>
               </div>
-            </div>
             <div class="sched-sites">
               <div class="sched-label" style="margin-bottom:10px;font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em">Active Sites</div>
               <div class="sites-pills">
@@ -302,6 +303,7 @@
                 <span class="site-pill in">Indeed</span>
                 <span class="site-pill sh">Shine</span>
                 <span class="site-pill mn">Monster</span>
+                <span class="site-pill cc">Company Careers</span>
               </div>
             </div>
             <div class="sched-controls">
@@ -320,13 +322,13 @@
               <div class="card-title-group"><div class="card-dot blue-dot"></div><h2 class="card-title">Windows Task</h2></div>
             </div>
             <div class="task-info">
-              <div class="task-row"><span>Task Name</span><code>LinkedInJobBot</code></div>
-              <div class="task-row"><span>Trigger</span><code>Daily at 12:00 AM</code></div>
+              <div class="task-row"><span>Task Name</span><code>LinkedInJobBot_247</code></div>
+              <div class="task-row"><span>Trigger</span><code>Startup / Hourly</code></div>
               <div class="task-row"><span>Action</span><code>python bot\main.py</code></div>
               <div class="task-row"><span>Working Dir</span><code>E:\SivaShankar\jobbot</code></div>
               <div class="task-row"><span>Run Mode</span><code>Background (headless)</code></div>
-              <div class="task-row"><span>Cycle</span><code>Every 90 minutes</code></div>
-              <div class="task-row"><span>Stop At</span><code>11:00 PM daily</code></div>
+              <div class="task-row"><span>Cycle</span><code>Every 60 minutes</code></div>
+              <div class="task-row"><span>Stop At</span><code>Never (24/7)</code></div>
             </div>
           </div>
         </div>

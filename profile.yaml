@@ -1,0 +1,44 @@
+# ==============================================================
+# CANDIDATE PROFILE FOR AI FORM FILLER
+# Used by Claude 4.6 to automatically answer custom application questions
+# ==============================================================
+
+personal_info:
+  first_name: "Siva Shankar"
+  last_name: "V"
+  email: "sivashankar.avi6@gmail.com"
+  phone: "+91 9999999999"
+  location: "India"
+  linkedin: "https://www.linkedin.com/in/sivashankar"
+  github: "https://github.com/Shivan2603"
+  portfolio: ""
+  address: "India"
+
+preferences:
+  expected_salary: "Competitive"
+  notice_period: "15 to 30 days"
+  willing_to_relocate: "Yes"
+  requires_sponsorship: "Yes"
+  work_authorization_countries:
+    - "India"
+
+education:
+  - degree: "Bachelor of Engineering / Technology"
+    major: "Computer Science"
+    university: "Unknown University" # AI will infer from resume if possible
+    graduation_year: "2020"
+
+experience_summary:
+  total_years: 5
+  primary_stack: [".NET", "C#", "Azure", "React", "Full Stack"]
+
+standard_answers:
+  "Are you legally authorized to work in the country where this job is located?": "If applying to India: Yes. If abroad: No, requires sponsorship."
+  "Will you now or in the future require sponsorship for employment visa status?": "Yes"
+  "What is your expected salary?": "Open to negotiation based on local market rates."
+  "Are you willing to relocate?": "Yes"
+  "Notice Period": "30 days"
+  "Do you have a disability?": "No / Prefer not to answer"
+  "Veteran status?": "I am not a protected veteran / Prefer not to answer"
+  "Race/Ethnicity": "Asian / Prefer not to answer"
+  "Gender": "Male"

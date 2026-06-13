@@ -40,6 +40,23 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
 
     base_text = extract_resume_text(BASE_RESUME_DOCX)
 
+    if not ANTHROPIC_API_KEY or "PASTE_YOUR_KEY" in ANTHROPIC_API_KEY:
+        logger.warn(f"Skipping AI tailoring for {company} (No Anthropic API Key) - Using base resume", site=site)
+        safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
+        safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
+        filename     = f"{safe_company}_{safe_role}_base.docx"
+        out_path     = os.path.join(TAILORED_TODAY, filename)
+        
+        # Copy base document
+        doc = Document(BASE_RESUME_DOCX)
+        doc.save(out_path)
+        
+        return {
+            "resume_path":  out_path,
+            "match_score":  85, # Default generic score
+            "tailored":     {},
+        }
+
     prompt = f"""Here is the candidate's current resume:
 
 <resume>

@@ -2,9 +2,9 @@
 utils/logger.py — Structured logger that writes to data/logs.json
                   and data/applications.json for the monitoring dashboard
 """
-import json, os, uuid
+import json, os, uuid, subprocess
 from datetime import datetime
-from bot.config import DATA_FOLDER
+from bot.config import DATA_FOLDER, PROJECT_FOLDER
 
 LOGS_FILE = os.path.join(DATA_FOLDER, "logs.json")
 APPS_FILE = os.path.join(DATA_FOLDER, "applications.json")
@@ -87,3 +87,24 @@ def update_status(app_id: str, new_status: str):
             app["updated_at"] = datetime.now().isoformat()
             break
     _save(APPS_FILE, apps)
+
+def is_already_applied(site: str, company: str, role: str) -> bool:
+    """Check if we already applied to this company & role on this site"""
+    apps = _load(APPS_FILE)
+    for app in apps:
+        if app.get("site") == site and app.get("company", "").lower() == company.lower() and app.get("role", "").lower() == role.lower():
+            return True
+    return False
+
+def git_sync():
+    """Sync metrics to GitHub so the dashboard updates in real-time."""
+    try:
+        # Run git commands from the project root
+        subprocess.run(["git", "add", "data/applications.json", "data/logs.json"], cwd=PROJECT_FOLDER, capture_output=True, check=True)
+        # Check if there are changes to commit
+        status = subprocess.run(["git", "status", "--porcelain", "data/"], cwd=PROJECT_FOLDER, capture_output=True, text=True)
+        if status.stdout.strip():
+            subprocess.run(["git", "commit", "-m", "bot: update metrics [skip ci]"], cwd=PROJECT_FOLDER, capture_output=True)
+            subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_FOLDER, capture_output=True)
+    except Exception as e:
+        print(f"Git sync failed: {e}")

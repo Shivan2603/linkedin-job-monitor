@@ -20,6 +20,7 @@ from bot.sites.naukri   import run_naukri_bot
 from bot.sites.indeed   import run_indeed_bot
 from bot.sites.shine    import run_shine_bot
 from bot.sites.monster  import run_monster_bot
+from bot.sites.company_careers import run_company_careers_bot
 
 SITE_BOTS = [
     ("LinkedIn",      run_linkedin_bot),
@@ -27,18 +28,11 @@ SITE_BOTS = [
     ("Indeed India",  run_indeed_bot),
     ("Shine",         run_shine_bot),
     ("Monster India", run_monster_bot),
+    ("Company Careers", run_company_careers_bot),
 ]
-
-def is_in_window() -> bool:
-    """Check if current time is within 12 AM – 11 PM"""
-    h = datetime.now().hour
-    return BOT_START_HOUR <= h < BOT_END_HOUR
 
 def run_all_sites():
     """Run all configured job site bots"""
-    if not is_in_window():
-        logger.info(f"Outside bot window ({BOT_START_HOUR}:00 – {BOT_END_HOUR}:00). Sleeping.")
-        return
 
     logger.info("=" * 60)
     logger.info(f"🤖 Job Bot Session Started — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -46,9 +40,6 @@ def run_all_sites():
     logger.info("=" * 60)
 
     for site_name, bot_fn in SITE_BOTS:
-        if not is_in_window():
-            logger.warn(f"Bot window ended. Stopping before {site_name}.")
-            break
         logger.info(f"--- Starting {site_name} ---")
         try:
             bot_fn()
@@ -58,26 +49,23 @@ def run_all_sites():
         time.sleep(10)  # Brief pause between sites
 
     logger.info("✅ All site bots completed for this cycle.")
-    logger.info("💤 Waiting 90 minutes before next cycle...")
+    logger.info("💤 Waiting 60 minutes before next cycle...")
 
 def main():
     logger.info("🚀 Job Bot Scheduler Starting...")
-    logger.info(f"📅 Active window: {BOT_START_HOUR}:00 AM – {BOT_END_HOUR}:00 PM")
+    logger.info("📅 Active window: 24/7 Continuous Mode")
     logger.info("♾️  Application limit: UNLIMITED")
 
     # Run immediately on start
     run_all_sites()
 
-    # Then run every 90 minutes within the window
-    schedule.every(90).minutes.do(run_all_sites)
+    # Then run every 60 minutes
+    schedule.every(60).minutes.do(run_all_sites)
 
-    logger.info("⏰ Scheduler running. Bot will cycle every 90 minutes.")
+    logger.info("⏰ Scheduler running. Bot will cycle every 60 minutes.")
 
     while True:
-        if is_in_window():
-            schedule.run_pending()
-        else:
-            logger.info("💤 Outside window. Sleeping until next window opens...")
+        schedule.run_pending()
         time.sleep(60)  # Check every minute
 
 if __name__ == "__main__":

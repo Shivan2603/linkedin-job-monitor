@@ -141,6 +141,12 @@ def _apply_to_job(page, job_el) -> bool:
         if not easy_btn:
             return False
 
+        from bot.utils.logger import record_application, is_already_applied, git_sync
+
+        if is_already_applied(SITE, company, job_title):
+            logger.info(f"Skipping {company} - {job_title} (Already applied)", SITE)
+            return False
+
         # AI Tailor Resume
         tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
@@ -164,6 +170,7 @@ def _apply_to_job(page, job_el) -> bool:
             match_score=match_score,
             resume_used=resume_path,
         )
+        git_sync()
         return True
 
     except Exception as e:

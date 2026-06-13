@@ -76,6 +76,12 @@ def _apply_shine_jobs(page, job_title: str, location: str):
             if not apply_btn:
                 continue
 
+            from bot.utils.logger import record_application, is_already_applied, git_sync
+
+            if is_already_applied(SITE, company, job_t):
+                logger.info(f"Skipping {company} - {job_t} (Already applied)", SITE)
+                continue
+
             tailor_result = tailor_resume(job_t, company, desc, site=SITE)
             apply_btn.click()
             _human_delay(2, 3)
@@ -89,12 +95,12 @@ def _apply_shine_jobs(page, job_title: str, location: str):
             if submit:
                 submit.click()
 
-            from bot.utils.logger import record_application
-            record_application(
-                site=SITE, company=company, role=job_t, location=location,
-                job_url=page.url, match_score=tailor_result["match_score"],
-                resume_used=tailor_result["resume_path"],
-            )
+                record_application(
+                    site=SITE, company=company, role=job_t, location=location,
+                    job_url=page.url, match_score=tailor_result["match_score"],
+                    resume_used=tailor_result["resume_path"],
+                )
+                git_sync()
             applied += 1
             _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 4)
 

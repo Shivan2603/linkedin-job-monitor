@@ -83,6 +83,12 @@ def _apply_naukri_jobs(page, job_title: str, location: str):
             company_txt   = company_el.inner_text().strip() if company_el else "Company"
             desc_txt      = desc_el.inner_text().strip()    if desc_el    else ""
 
+            from bot.utils.logger import record_application, is_already_applied, git_sync
+
+            if is_already_applied(SITE, company_txt, job_title_txt):
+                logger.info(f"Skipping {company_txt} - {job_title_txt} (Already applied)", SITE)
+                continue
+
             tailor_result = tailor_resume(job_title_txt, company_txt, desc_txt, site=SITE)
             resume_path   = tailor_result["resume_path"]
             match_score   = tailor_result["match_score"]
@@ -101,12 +107,12 @@ def _apply_naukri_jobs(page, job_title: str, location: str):
                     if submit:
                         submit.click()
 
-                from bot.utils.logger import record_application
                 record_application(
                     site=SITE, company=company_txt, role=job_title_txt,
                     location=location, job_url=page.url,
                     match_score=match_score, resume_used=resume_path,
                 )
+                git_sync()
                 applied += 1
                 _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 5)
 

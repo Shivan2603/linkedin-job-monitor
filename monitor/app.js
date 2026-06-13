@@ -20,6 +20,7 @@ const SITE_META = {
   indeed:   {name:'Indeed India', logo:'🌐', cls:'in', url:'in.indeed.com',   color:'#2557a7'},
   shine:    {name:'Shine',        logo:'✨', cls:'sh', url:'shine.com',       color:'#ff8c00'},
   monster:  {name:'Monster',      logo:'👾', cls:'mn', url:'monsterindia.com',color:'#6632e1'},
+  company_careers: {name:'Company Careers', logo:'🏢', cls:'cc', url:'Various', color:'#10b981'},
   system:   {name:'System',       logo:'⚙️', cls:'sys',url:'',                color:'#6366f1'},
 };
 
@@ -78,7 +79,7 @@ function loadDemoData() {
   const companies = ['Google','Microsoft','TCS','Infosys','Wipro','Accenture','Capgemini','HCL','IBM','Deloitte','Cognizant','Zoho','Freshworks','Razorpay','PhonePe','Flipkart','Amazon','Adobe','Oracle','SAP'];
   const roles = ['Software Engineer','Full Stack Developer','.NET Developer','Java Developer','Python Developer','React Developer','Node.js Developer','Senior Developer','Tech Lead'];
   const locs = ['Bangalore','Chennai','Hyderabad','Remote','UK','Australia','Singapore'];
-  const sites = ['linkedin','naukri','indeed','shine','monster'];
+  const sites = ['linkedin','naukri','indeed','shine','monster','company_careers'];
   const statuses = ['applied','applied','applied','viewed','shortlisted','rejected','callback'];
 
   state.applications = [];
@@ -182,7 +183,7 @@ function msAgo(ts) {
   if (s < 3600) return `${Math.floor(s/60)}m ago`;
   return `${Math.floor(s/3600)}h ago`;
 }
-function isBotActive() { const h = new Date().getHours(); return h >= 0 && h < 23; }
+function isBotActive() { return true; }
 
 // ===== DASHBOARD =====
 function renderDashboard() {
@@ -265,7 +266,7 @@ function renderRecentTable() {
 function renderSiteHealth() {
   const c = document.getElementById('siteHealthItems');
   if (!c) return;
-  const sites = ['linkedin','naukri','indeed','shine','monster'];
+  const sites = ['linkedin','naukri','indeed','shine','monster','company_careers'];
   c.innerHTML = sites.map(s => {
     const m = SITE_META[s];
     const count = siteApps(s).length;
@@ -285,15 +286,15 @@ function renderSiteHealth() {
 
 function updateTimeline() {
   const h = new Date().getHours(), m = new Date().getMinutes();
-  const mins = h*60+m, total = 24*60, botEnd = 23*60;
+  const mins = h*60+m, total = 24*60;
   const ta = document.getElementById('timelineActive');
   const tc = document.getElementById('timelineCursor');
-  if (ta) ta.style.width = (botEnd/total*100) + '%';
+  if (ta) ta.style.width = '100%';
   if (tc) tc.style.left  = (mins/total*100)   + '%';
   const nrt = document.getElementById('nextRunTime');
   if (nrt) {
-    nrt.textContent = isBotActive() ? '⚡ Running — ends at 11:00 PM IST' : 'Tomorrow at 12:00 AM IST';
-    nrt.style.color = isBotActive() ? 'var(--green)' : 'var(--text)';
+    nrt.textContent = '⚡ Running 24/7 continuously';
+    nrt.style.color = 'var(--green)';
   }
 }
 
@@ -553,8 +554,8 @@ function renderSiteChart() {
   canvas.width = canvas.parentElement.clientWidth - 48;
   canvas.height = 220;
   const W=canvas.width, H=canvas.height;
-  const sites=['linkedin','naukri','indeed','shine','monster'];
-  const colors=['#0a66c2','#3399ff','#2557a7','#ff8c00','#6632e1'];
+  const sites=['linkedin','naukri','indeed','shine','monster','company_careers'];
+  const colors=['#0a66c2','#3399ff','#2557a7','#ff8c00','#6632e1','#10b981'];
   const counts=sites.map(s=>siteApps(s).length);
   const max=Math.max(...counts)+2;
   const pad={top:20,right:20,bottom:40,left:40};
