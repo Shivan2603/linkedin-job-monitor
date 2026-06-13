@@ -1,6 +1,9 @@
 """
 utils/logger.py — Structured logger that writes to data/logs.json
-                  and data/applications.json for the monitoring dashboard
+                  and data/applications.json for the monitoring dashboard.
+                  git_sync() pushes updates to GitHub so the live dashboard
+                  at https://shivan2603.github.io/linkedin-job-monitor reflects
+                  real-time metrics immediately after every application.
 """
 import json, os, uuid, subprocess
 from datetime import datetime
@@ -92,19 +95,57 @@ def is_already_applied(site: str, company: str, role: str) -> bool:
     """Check if we already applied to this company & role on this site"""
     apps = _load(APPS_FILE)
     for app in apps:
-        if app.get("site") == site and app.get("company", "").lower() == company.lower() and app.get("role", "").lower() == role.lower():
+        if (app.get("site") == site
+                and app.get("company", "").lower() == company.lower()
+                and app.get("role", "").lower() == role.lower()):
             return True
     return False
 
 def git_sync():
-    """Sync metrics to GitHub so the dashboard updates in real-time."""
+    """
+    Sync data files to GitHub so the live dashboard updates in real-time.
+    Runs after every successful application submission.
+    Uses git add → commit → push (non-blocking, suppresses output).
+    """
     try:
-        # Run git commands from the project root
-        subprocess.run(["git", "add", "data/applications.json", "data/logs.json"], cwd=PROJECT_FOLDER, capture_output=True, check=True)
-        # Check if there are changes to commit
-        status = subprocess.run(["git", "status", "--porcelain", "data/"], cwd=PROJECT_FOLDER, capture_output=True, text=True)
-        if status.stdout.strip():
-            subprocess.run(["git", "commit", "-m", "bot: update metrics [skip ci]"], cwd=PROJECT_FOLDER, capture_output=True)
-            subprocess.run(["git", "push", "origin", "main"], cwd=PROJECT_FOLDER, capture_output=True)
+        data_dir = os.path.join(PROJECT_FOLDER, "data")
+
+        # Stage both data files
+        subprocess.run(
+            ["git", "add", "data/applications.json", "data/logs.json"],
+            cwd=PROJECT_FOLDER, capture_output=True, check=False, timeout=15
+        )
+
+        # Check if there are actually changes to commit
+        status = subprocess.run(
+            ["git", "status", "--porcelain", "data/"],
+            cwd=PROJECT_FOLDER, capture_output=True, text=True, timeout=10
+        )
+
+        if not status.stdout.strip():
+            return  # Nothing to commit
+
+        # Commit with timestamp
+        commit_msg = f"bot: update metrics {datetime.now().strftime('%Y-%m-%d %H:%M')} [skip ci]"
+        subprocess.run(
+            ["git", "commit", "-m", commit_msg],
+            cwd=PROJECT_FOLDER, capture_output=True, timeout=15
+        )
+
+        # Push to main branch
+        push_result = subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=PROJECT_FOLDER, capture_output=True, text=True, timeout=30
+        )
+
+        if push_result.returncode == 0:
+            print(f"[git_sync] ✅ Pushed metrics to GitHub")
+        else:
+            print(f"[git_sync] ⚠️  Push failed: {push_result.stderr[:200]}")
+
+    except subprocess.TimeoutExpired:
+        print("[git_sync] ⏱️  Git push timed out — will retry next application")
+    except FileNotFoundError:
+        print("[git_sync] ⚠️  git not found in PATH — install git and re-run setup_247.ps1")
     except Exception as e:
-        print(f"Git sync failed: {e}")
+        print(f"[git_sync] ❌ Unexpected error: {e}")

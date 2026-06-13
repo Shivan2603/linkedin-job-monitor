@@ -1,12 +1,16 @@
 """
 sites/linkedin.py — LinkedIn Easy Apply automation
-Uses Playwright to log in, search jobs, filter Easy Apply, tailor resume, apply
+Uses Playwright to log in, search jobs, filter Easy Apply, tailor resume, apply.
+Now integrates ai_agent_filler to handle complex multi-step custom question forms.
+Applies broadly to any matching job — no visa/salary filter.
 """
 import time, random, os
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
+from bot.ai_agent_filler import fill_form_with_ai
 from bot.utils import logger
+from bot.utils.logger import record_application, is_already_applied, git_sync
 
 SITE = "linkedin"
 BASE_URL = "https://www.linkedin.com"
@@ -21,11 +25,11 @@ def run_linkedin_bot():
         logger.warn("LinkedIn credentials not configured — skipping", SITE)
         return
 
-    logger.info("🚀 Starting LinkedIn Easy Apply bot", SITE)
+    logger.info("🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)", SITE)
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=False,  # Set True for background running
+            headless=True,  # Background mode for 24/7 running
             args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
         )
         context = browser.new_context(
@@ -64,7 +68,7 @@ def _login(page, creds) -> bool:
         page.fill("#password", creds["password"])
         _human_delay(0.5, 1)
         page.click('[type="submit"]')
-        page.wait_for_url("**/feed/**", timeout=15000)
+        page.wait_for_url("**/feed/**", timeout=20000)
         logger.success("LinkedIn login successful ✅", SITE)
         return True
     except PWTimeout:
@@ -75,10 +79,9 @@ def _apply_for_jobs(page, job_title: str, location: str):
     """Search and apply to Easy Apply jobs for a title/location combo"""
     logger.info(f"Searching: '{job_title}' in '{location}'", SITE)
 
-    # Build search URL with Easy Apply filter
     search_url = (
         f"{BASE_URL}/jobs/search/?keywords={_encode(job_title)}"
-        f"&location={_encode(location)}&f_AL=true"  # f_AL = Easy Apply
+        f"&location={_encode(location)}&f_AL=true"  # f_AL = Easy Apply filter
     )
 
     page.goto(search_url, wait_until="domcontentloaded")
@@ -130,18 +133,16 @@ def _apply_to_job(page, job_el) -> bool:
         loc_el     = page.query_selector(".jobs-unified-top-card__bullet")
         desc_el    = page.query_selector(".jobs-description__content, .jobs-box__html-content")
 
-        job_title   = title_el.inner_text().strip()   if title_el   else "Unknown Role"
-        company     = company_el.inner_text().strip()  if company_el else "Unknown Company"
-        location    = loc_el.inner_text().strip()      if loc_el     else "Unknown"
-        job_desc    = desc_el.inner_text().strip()     if desc_el    else ""
-        job_url     = page.url
+        job_title  = title_el.inner_text().strip()   if title_el   else "Unknown Role"
+        company    = company_el.inner_text().strip()  if company_el else "Unknown Company"
+        location   = loc_el.inner_text().strip()      if loc_el     else "Unknown"
+        job_desc   = desc_el.inner_text().strip()     if desc_el    else ""
+        job_url    = page.url
 
         # Check Easy Apply button
         easy_btn = page.query_selector(".jobs-apply-button--top-card button, button[aria-label*='Easy Apply']")
         if not easy_btn:
             return False
-
-        from bot.utils.logger import record_application, is_already_applied, git_sync
 
         if is_already_applied(SITE, company, job_title):
             logger.info(f"Skipping {company} - {job_title} (Already applied)", SITE)
@@ -156,63 +157,85 @@ def _apply_to_job(page, job_el) -> bool:
         easy_btn.click()
         _human_delay(1, 2)
 
-        # Fill Easy Apply modal
-        _fill_easy_apply_modal(page, resume_path)
+        # Fill Easy Apply modal — now uses AI for custom questions
+        success = _fill_easy_apply_modal(page, resume_path)
 
-        # Record application
-        from bot.utils.logger import record_application
-        record_application(
-            site=SITE,
-            company=company,
-            role=job_title,
-            location=location,
-            job_url=job_url,
-            match_score=match_score,
-            resume_used=resume_path,
-        )
-        git_sync()
-        return True
+        if success:
+            record_application(
+                site=SITE,
+                company=company,
+                role=job_title,
+                location=location,
+                job_url=job_url,
+                match_score=match_score,
+                resume_used=resume_path,
+            )
+            git_sync()
+
+        return success
 
     except Exception as e:
         logger.warn(f"Failed to apply: {e}", SITE)
         return False
 
-def _fill_easy_apply_modal(page, resume_path: str):
-    """Step through Easy Apply multi-step modal"""
-    for _ in range(10):  # Max 10 steps/pages in modal
+def _fill_easy_apply_modal(page, resume_path: str) -> bool:
+    """Step through Easy Apply multi-step modal, using AI for custom questions"""
+    from bot.config import CREDENTIALS
+    phone = "+91 9999999999"  # Default; will use profile.yaml value
+
+    for step in range(12):  # Max 12 steps in modal
         _human_delay(1, 2)
 
         # Upload resume if prompted
         upload = page.query_selector('input[type="file"]')
         if upload:
-            upload.set_input_files(resume_path)
-            _human_delay(1, 2)
+            try:
+                upload.set_input_files(resume_path)
+                _human_delay(1, 2)
+            except Exception:
+                pass
 
-        # Fill phone if asked
-        phone_input = page.query_selector('input[id*="phoneNumber"]')
-        if phone_input and not phone_input.input_value():
-            phone_input.fill("+91 9999999999")  # Will be replaced with real number from .env
+        # Fill phone if asked and empty
+        phone_input = page.query_selector('input[id*="phoneNumber"], input[name*="phone"]')
+        if phone_input:
+            try:
+                if not phone_input.input_value():
+                    phone_input.fill(phone)
+            except Exception:
+                pass
+
+        # Use AI to fill any remaining custom form fields on this step
+        try:
+            fill_form_with_ai(page, site=SITE)
+        except Exception as e:
+            logger.warn(f"AI form fill failed on step {step}: {e}", SITE)
 
         # Click Next / Review / Submit
-        next_btn   = page.query_selector('button[aria-label="Continue to next step"]')
-        review_btn = page.query_selector('button[aria-label="Review your application"]')
         submit_btn = page.query_selector('button[aria-label="Submit application"]')
+        review_btn = page.query_selector('button[aria-label="Review your application"]')
+        next_btn   = page.query_selector('button[aria-label="Continue to next step"]')
 
         if submit_btn:
             submit_btn.click()
             _human_delay(1, 2)
-            # Close confirmation
+            # Close confirmation dialog
             close = page.query_selector('button[aria-label="Dismiss"]')
             if close:
                 close.click()
-            return
+            logger.success("Easy Apply submitted ✅", SITE)
+            return True
 
         if review_btn:
             review_btn.click()
         elif next_btn:
             next_btn.click()
         else:
-            break
+            # Check for "discard" or modal closed state
+            modal = page.query_selector('.artdeco-modal--layer-confirmation, .jobs-easy-apply-modal')
+            if not modal:
+                break
+
+    return False
 
 def _encode(text: str) -> str:
     from urllib.parse import quote

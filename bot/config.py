@@ -25,7 +25,7 @@ BASE_RESUME_DOCX    = os.path.join(RESUME_FOLDER, "Siva_Shankar_Resume_6062026.d
 
 # ─── AI ───────────────────────────────────────────────────
 ANTHROPIC_API_KEY   = os.getenv("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL        = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-5")
+CLAUDE_MODEL        = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6")
 
 # ─── JOB SEARCH ───────────────────────────────────────────
 JOB_TITLES = [t.strip() for t in os.getenv(

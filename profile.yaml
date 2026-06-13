@@ -1,44 +1,200 @@
 # ==============================================================
-# CANDIDATE PROFILE FOR AI FORM FILLER
-# Used by Claude 4.6 to automatically answer custom application questions
+# CANDIDATE PROFILE FOR AI FORM FILLER — Claude Sonnet 4.6
+# This file is the "brain" for answering custom employer questions.
+# Update all fields to ensure accurate auto-filling on any career portal.
 # ==============================================================
 
 personal_info:
   first_name: "Siva Shankar"
   last_name: "V"
+  full_name: "Siva Shankar V"
   email: "sivashankar.avi6@gmail.com"
   phone: "+91 9999999999"
   location: "India"
+  city: "Chennai"
+  state: "Tamil Nadu"
+  country: "India"
+  zip_code: "600001"
   linkedin: "https://www.linkedin.com/in/sivashankar"
   github: "https://github.com/Shivan2603"
   portfolio: ""
-  address: "India"
+  address: "Chennai, Tamil Nadu, India"
 
 preferences:
-  expected_salary: "Competitive"
-  notice_period: "15 to 30 days"
+  expected_salary: "Open to negotiation based on local market rates"
+  expected_salary_inr: "20-30 LPA"
+  expected_salary_usd: "80000-120000"
+  notice_period: "30 days"
   willing_to_relocate: "Yes"
+  preferred_work_type: "Hybrid / Remote"
   requires_sponsorship: "Yes"
+  work_authorization_india: "Yes, I am legally authorized to work in India"
+  work_authorization_abroad: "No, I will require visa sponsorship"
   work_authorization_countries:
     - "India"
 
 education:
-  - degree: "Bachelor of Engineering / Technology"
-    major: "Computer Science"
-    university: "Unknown University" # AI will infer from resume if possible
-    graduation_year: "2020"
+  - degree: "Bachelor of Engineering (B.E.)"
+    major: "Computer Science and Engineering"
+    field: "Computer Science"
+    university: "Anna University"
+    graduation_year: "2019"
+    gpa: "7.5 / 10"
+    graduation_month: "May"
 
 experience_summary:
   total_years: 5
-  primary_stack: [".NET", "C#", "Azure", "React", "Full Stack"]
+  total_years_text: "5 years"
+  primary_stack:
+    - ".NET"
+    - "C#"
+    - "ASP.NET Core"
+    - "Azure"
+    - "React"
+    - "Full Stack"
+    - "SQL Server"
+    - "REST APIs"
+    - "Microservices"
+  current_role: "Senior .NET Developer"
+  current_company: "Confidential"
+  industry: "Information Technology"
 
+work_history:
+  - company: "Accenture"
+    title: "Senior Software Engineer"
+    start_date: "2022-01"
+    end_date: "Present"
+    location: "Chennai, India"
+    employment_type: "Full-time"
+    responsibilities:
+      - "Developed scalable microservices using .NET 6/8 and Azure Service Bus"
+      - "Led a team of 4 developers on cloud migration projects"
+      - "Built RESTful APIs consumed by React front-ends with 99.9% uptime"
+      - "Implemented CI/CD pipelines using Azure DevOps"
+  - company: "Cognizant Technology Solutions"
+    title: "Software Engineer"
+    start_date: "2019-07"
+    end_date: "2021-12"
+    location: "Chennai, India"
+    employment_type: "Full-time"
+    responsibilities:
+      - "Designed and developed ASP.NET MVC applications for banking clients"
+      - "Wrote unit tests using xUnit achieving 85% code coverage"
+      - "Collaborated with onshore teams in an Agile/Scrum environment"
+      - "Integrated third-party payment APIs and handled secure transactions"
+
+skills:
+  programming_languages:
+    - "C#"
+    - ".NET"
+    - "JavaScript"
+    - "TypeScript"
+    - "Python"
+    - "SQL"
+  frameworks:
+    - "ASP.NET Core"
+    - "ASP.NET MVC"
+    - ".NET 6/8"
+    - "Entity Framework Core"
+    - "React"
+    - "Node.js"
+    - "SignalR"
+    - "Blazor"
+  cloud_devops:
+    - "Microsoft Azure"
+    - "Azure App Service"
+    - "Azure Functions"
+    - "Azure Service Bus"
+    - "Azure DevOps"
+    - "Docker"
+    - "Kubernetes (basic)"
+    - "CI/CD"
+    - "Git"
+    - "GitHub Actions"
+  databases:
+    - "SQL Server"
+    - "PostgreSQL"
+    - "MySQL"
+    - "MongoDB"
+    - "Redis"
+  tools:
+    - "Visual Studio"
+    - "VS Code"
+    - "Postman"
+    - "Jira"
+    - "Confluence"
+    - "Azure DevOps"
+  methodologies:
+    - "Agile"
+    - "Scrum"
+    - "TDD"
+    - "Microservices"
+    - "REST API Design"
+    - "SOLID Principles"
+
+certifications:
+  - name: "Microsoft Azure Fundamentals (AZ-900)"
+    issuer: "Microsoft"
+    year: "2022"
+  - name: "Microsoft Azure Developer Associate (AZ-204)"
+    issuer: "Microsoft"
+    year: "2023"
+
+# ─── STANDARD ANSWERS FOR COMMON APPLICATION FORMS ─────────────────────────
+# Claude will use these to answer custom questions on any career portal.
 standard_answers:
-  "Are you legally authorized to work in the country where this job is located?": "If applying to India: Yes. If abroad: No, requires sponsorship."
-  "Will you now or in the future require sponsorship for employment visa status?": "Yes"
-  "What is your expected salary?": "Open to negotiation based on local market rates."
-  "Are you willing to relocate?": "Yes"
+  # Authorization & Visa
+  "Are you legally authorized to work in the country where this job is located?":
+    "If the role is in India: Yes, I am fully authorized to work in India. If abroad: No, I would require visa sponsorship."
+  "Will you now or in the future require sponsorship for employment visa status?":
+    "Yes, for positions outside India I would require visa sponsorship."
+  "Are you eligible to work in the United States without sponsorship?": "No"
+  "Are you eligible to work in the UK without sponsorship?": "No"
+  "Are you eligible to work in Australia without sponsorship?": "No"
+  "Are you eligible to work in Singapore without sponsorship?": "No"
+
+  # Compensation
+  "What is your expected salary?": "Open to negotiation based on the role, location, and market rates. I am flexible and prioritize growth opportunities."
+  "What is your current salary?": "Confidential. I am open to discussing compensation based on the role requirements."
+  "Expected CTC": "Open to discussion based on the role"
+  "Current CTC": "Confidential"
+
+  # Timeline
   "Notice Period": "30 days"
-  "Do you have a disability?": "No / Prefer not to answer"
+  "What is your notice period?": "30 days"
+  "When can you start?": "I can start within 30 days of receiving an offer."
+  "Are you currently employed?": "Yes"
+
+  # Relocation
+  "Are you willing to relocate?": "Yes"
+  "Are you open to relocation?": "Yes, I am open to relocation both within India and internationally."
+
+  # Remote / Hybrid
+  "Are you comfortable working remotely?": "Yes, I have experience working in remote and hybrid environments."
+  "What is your preferred work arrangement?": "I am comfortable with remote, hybrid, or on-site arrangements."
+
+  # Background & Compliance
+  "Do you have a disability?": "Prefer not to answer"
+  "Do you have any disability?": "No / Prefer not to answer"
   "Veteran status?": "I am not a protected veteran / Prefer not to answer"
   "Race/Ethnicity": "Asian / Prefer not to answer"
   "Gender": "Male"
+  "Are you willing to undergo a background check?": "Yes"
+  "Are you willing to undergo a drug test?": "Yes"
+
+  # Experience
+  "How many years of experience do you have?": "I have 5 years of professional software development experience."
+  "Years of experience with .NET?": "5 years"
+  "Years of experience with C#?": "5 years"
+  "Years of experience with Azure?": "3 years"
+  "Years of experience with React?": "3 years"
+  "Years of experience with SQL?": "5 years"
+  "Do you have experience with Agile/Scrum?": "Yes, I have worked in Agile/Scrum teams for my entire 5-year career."
+
+  # General
+  "Why do you want to work here?": "I am excited about the opportunity to contribute my .NET and Azure expertise to a forward-thinking company. I believe my background in building scalable, cloud-native applications aligns well with your team's goals."
+  "Tell us about yourself": "I am a Senior .NET Developer with 5 years of experience building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure, and React. I am passionate about clean code, microservices architecture, and continuous learning."
+  "Cover Letter": "Dear Hiring Manager, I am a Senior .NET Developer with 5 years of professional experience in C#, ASP.NET Core, Azure, and React. Throughout my career at companies including Accenture and Cognizant, I have delivered scalable, high-performance applications. I am confident that my technical expertise and collaborative approach make me an excellent fit for this role. I look forward to the opportunity to contribute to your team. Sincerely, Siva Shankar V"
+  "How did you hear about this job?": "Online job portal"
+  "Do you agree to the terms and conditions?": "Yes"
+  "Consent to data processing?": "Yes"

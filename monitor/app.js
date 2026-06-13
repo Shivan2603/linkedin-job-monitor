@@ -41,23 +41,35 @@ async function loadData() {
   if (btn) btn.classList.add('spinning');
 
   try {
-    // Try to load real data from bot output files
+    // data/ is served alongside index.html on GitHub Pages (see deploy.yml)
+    const ts = Date.now();
     const [appsRes, logsRes] = await Promise.all([
-      fetch('data/applications.json?t=' + Date.now()).catch(() => null),
-      fetch('data/logs.json?t=' + Date.now()).catch(() => null),
+      fetch('data/applications.json?t=' + ts).catch(() => null),
+      fetch('data/logs.json?t=' + ts).catch(() => null),
     ]);
 
     if (appsRes && appsRes.ok) {
-      state.applications = await appsRes.json();
-      state.isDemo = false;
-      document.getElementById('dataSourceNote').innerHTML =
-        '<span class="dot-live"></span> Live data from bot (' + state.applications.length + ' records)';
+      const data = await appsRes.json();
+      if (Array.isArray(data)) {
+        state.applications = data;
+        state.isDemo = false;
+        const now = new Date().toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit',hour12:true});
+        document.getElementById('dataSourceNote').innerHTML =
+          '<span class="dot-live"></span> Live bot data — ' + state.applications.length + ' records · updated ' + now;
+      } else {
+        loadDemoData();
+      }
     } else {
       loadDemoData();
     }
 
     if (logsRes && logsRes.ok) {
-      state.logs = await logsRes.json();
+      const logData = await logsRes.json();
+      if (Array.isArray(logData)) {
+        state.logs = logData;
+      } else if (state.isDemo) {
+        loadDemoLogs();
+      }
     } else if (state.isDemo) {
       loadDemoLogs();
     }
@@ -70,6 +82,9 @@ async function loadData() {
   refreshCurrentPage();
   showToast('📊 Data refreshed', 'info');
 }
+
+// Auto-refresh every 5 minutes so the dashboard stays current
+setInterval(loadData, 5 * 60 * 1000);
 
 function loadDemoData() {
   state.isDemo = true;
@@ -154,7 +169,7 @@ function navigate(el, page) {
     applications: ['Applications',   'All applications across LinkedIn, Naukri, Indeed, Shine, Monster'],
     sites:        ['Job Sites',      '5 connected job portals status and metrics'],
     resumes:      ['Resume Vault',   'Base resumes from E:\\SivaShankar\\Resume + AI-tailored copies'],
-    scheduler:    ['Scheduler',      'Windows Task Scheduler • 12:00 AM – 11:00 PM daily'],
+    scheduler:    ['Scheduler',      'Windows Task Scheduler • 24/7 Continuous Mode'],
     analytics:    ['Analytics',      'Deep insights and application trends'],
     logs:         ['Live Logs',      'Real-time system logs from the automation bot'],
   };

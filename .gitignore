@@ -2,11 +2,11 @@
 *.pyc
 __pycache__/
 *.db
-data/applications.json
-data/logs.json
 *.log
 .DS_Store
 Thumbs.db
 browser_data/
 screenshots/
 node_modules/
+# NOTE: data/applications.json and data/logs.json are intentionally tracked
+# so the GitHub Pages dashboard shows real bot metrics in real-time.
