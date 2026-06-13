@@ -1,1 +1,653 @@
-[]
+[
+  {
+    "id": "4f9a0e3f",
+    "ts": "2026-06-13T20:00:47.748674",
+    "level": "INFO",
+    "site": "system",
+    "message": "🚀 Job Bot Scheduler Starting..."
+  },
+  {
+    "id": "b26b19de",
+    "ts": "2026-06-13T20:01:50.543439",
+    "level": "INFO",
+    "site": "system",
+    "message": "🚀 Job Bot Scheduler Starting..."
+  },
+  {
+    "id": "69f9202e",
+    "ts": "2026-06-13T20:01:50.559374",
+    "level": "INFO",
+    "site": "system",
+    "message": "📅 Active window: 24/7 Continuous Mode"
+  },
+  {
+    "id": "7cc0040c",
+    "ts": "2026-06-13T20:01:50.574465",
+    "level": "INFO",
+    "site": "system",
+    "message": "♾️  Application limit: UNLIMITED"
+  },
+  {
+    "id": "7954f21b",
+    "ts": "2026-06-13T20:01:50.588024",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "01630a40",
+    "ts": "2026-06-13T20:01:50.601582",
+    "level": "INFO",
+    "site": "system",
+    "message": "🤖 Job Bot Session Started — 2026-06-13 20:01:50"
+  },
+  {
+    "id": "64de9f96",
+    "ts": "2026-06-13T20:01:50.617147",
+    "level": "INFO",
+    "site": "system",
+    "message": "📁 Tailored resumes → E:\\SivaShankar\\Resume\\tailored\\13-06-2026"
+  },
+  {
+    "id": "3928a7ae",
+    "ts": "2026-06-13T20:01:50.633410",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "83169d64",
+    "ts": "2026-06-13T20:01:50.649240",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "89cd4f4e",
+    "ts": "2026-06-13T20:01:50.664498",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
+  },
+  {
+    "id": "36216251",
+    "ts": "2026-06-13T20:01:51.788772",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "24cc09aa",
+    "ts": "2026-06-13T20:02:21.814774",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn bot crash: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://www.linkedin.com/login\", waiting until \"networkidle\"\n"
+  },
+  {
+    "id": "bc538aec",
+    "ts": "2026-06-13T20:02:21.967186",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "67945127",
+    "ts": "2026-06-13T20:02:21.990097",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "fe7bd8e0",
+    "ts": "2026-06-13T20:02:32.004574",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "f38373bf",
+    "ts": "2026-06-13T20:02:32.027802",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "🚀 Starting Naukri.com bot"
+  },
+  {
+    "id": "f87f862b",
+    "ts": "2026-06-13T20:02:32.969395",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "323f7b88",
+    "ts": "2026-06-13T20:03:05.716565",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Naukri login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[placeholder*=\\\"Email\\\"]\")\n"
+  },
+  {
+    "id": "43d7c152",
+    "ts": "2026-06-13T20:03:06.000604",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "f7b9c17e",
+    "ts": "2026-06-13T20:03:06.021359",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Naukri done ---"
+  },
+  {
+    "id": "147f29e9",
+    "ts": "2026-06-13T20:03:16.031456",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed India ---"
+  },
+  {
+    "id": "322b943e",
+    "ts": "2026-06-13T20:03:16.047072",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed India bot"
+  },
+  {
+    "id": "d9d11cd0",
+    "ts": "2026-06-13T20:03:17.150474",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Logging into Indeed..."
+  },
+  {
+    "id": "8613d493",
+    "ts": "2026-06-13T20:03:56.223301",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[type=\\\"password\\\"]\")\n  -   locator resolved to <input type=\"password\" data-tn-action-click=\"true\" auto…/>\n  -   fill(\"Shiva26@\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  - element was detached from the DOM, retrying\n"
+  },
+  {
+    "id": "c250fefb",
+    "ts": "2026-06-13T20:03:56.614158",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Indeed India done ---"
+  },
+  {
+    "id": "a364cee2",
+    "ts": "2026-06-13T20:04:06.629371",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "17e9e0b1",
+    "ts": "2026-06-13T20:04:06.646948",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "c5f32dfe",
+    "ts": "2026-06-13T20:04:07.842479",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "cfb5da0b",
+    "ts": "2026-06-13T20:04:43.475657",
+    "level": "ERROR",
+    "site": "shine",
+    "message": "Shine login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"email\\\"]\")\n  -   locator resolved to 3 elements. Proceeding with the first one: <input type=\"text\" name=\"email\" id=\"id_hidden_email\"/>\n  -   fill(\"sivashankar.avi6@gmail.com\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #54\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #55\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #56\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #57\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #58\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #59\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #60\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #61\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #62\n  -   waiting 500ms\n"
+  },
+  {
+    "id": "67c01f43",
+    "ts": "2026-06-13T20:04:43.546195",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "12615bab",
+    "ts": "2026-06-13T20:04:47.899141",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "33b0d215",
+    "ts": "2026-06-13T20:04:47.915222",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "db7e4c1a",
+    "ts": "2026-06-13T20:04:51.332981",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "be7a85e4",
+    "ts": "2026-06-13T20:04:51.362879",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "fcf8deaf",
+    "ts": "2026-06-13T20:04:54.729946",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "e7f4aded",
+    "ts": "2026-06-13T20:04:54.744508",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "b22528ab",
+    "ts": "2026-06-13T20:04:57.870669",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "cc1e1f29",
+    "ts": "2026-06-13T20:04:57.888367",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior Software Engineer' in 'Bangalore'"
+  },
+  {
+    "id": "b71e1188",
+    "ts": "2026-06-13T20:05:01.235731",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "efb7ec0a",
+    "ts": "2026-06-13T20:05:01.278670",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior Software Engineer' in 'Chennai'"
+  },
+  {
+    "id": "e944051a",
+    "ts": "2026-06-13T20:05:05.207991",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "da953af2",
+    "ts": "2026-06-13T20:05:05.243794",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior Software Engineer' in 'Hyderabad'"
+  },
+  {
+    "id": "bde40fcd",
+    "ts": "2026-06-13T20:05:09.698410",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "59154dce",
+    "ts": "2026-06-13T20:05:09.740127",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior Software Engineer' in 'Remote'"
+  },
+  {
+    "id": "4978f57c",
+    "ts": "2026-06-13T20:05:13.713851",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "4b1a3b26",
+    "ts": "2026-06-13T20:05:13.734784",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Full Stack Developer' in 'Bangalore'"
+  },
+  {
+    "id": "b53fcb2b",
+    "ts": "2026-06-13T20:05:17.461087",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "a1fdf762",
+    "ts": "2026-06-13T20:05:17.494664",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Full Stack Developer' in 'Chennai'"
+  },
+  {
+    "id": "a8d53ab9",
+    "ts": "2026-06-13T20:05:20.894508",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "40f7047c",
+    "ts": "2026-06-13T20:05:20.922375",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Full Stack Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "52316d6b",
+    "ts": "2026-06-13T20:05:25.083078",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "d4309773",
+    "ts": "2026-06-13T20:05:25.098939",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Full Stack Developer' in 'Remote'"
+  },
+  {
+    "id": "43bbf804",
+    "ts": "2026-06-13T20:05:28.764784",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "96aabf9f",
+    "ts": "2026-06-13T20:05:28.784452",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'C# Developer' in 'Bangalore'"
+  },
+  {
+    "id": "6ad287c6",
+    "ts": "2026-06-13T20:05:32.850000",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "044e5e8a",
+    "ts": "2026-06-13T20:05:32.865848",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'C# Developer' in 'Chennai'"
+  },
+  {
+    "id": "eaf7a885",
+    "ts": "2026-06-13T20:05:35.861907",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "d45947b1",
+    "ts": "2026-06-13T20:05:35.875891",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'C# Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "b10242b0",
+    "ts": "2026-06-13T20:05:40.103688",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "acd0b8af",
+    "ts": "2026-06-13T20:05:40.116777",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'C# Developer' in 'Remote'"
+  },
+  {
+    "id": "a37913fd",
+    "ts": "2026-06-13T20:05:43.841964",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "f1e5933c",
+    "ts": "2026-06-13T20:05:44.524000",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Shine done ---"
+  },
+  {
+    "id": "2763c6d2",
+    "ts": "2026-06-13T20:05:54.549775",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Monster India ---"
+  },
+  {
+    "id": "98deab82",
+    "ts": "2026-06-13T20:05:54.577003",
+    "level": "INFO",
+    "site": "monster",
+    "message": "🚀 Starting Monster India bot"
+  },
+  {
+    "id": "6602b89e",
+    "ts": "2026-06-13T20:05:55.674203",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Logging into Monster India..."
+  },
+  {
+    "id": "9bb39f1d",
+    "ts": "2026-06-13T20:06:30.081981",
+    "level": "ERROR",
+    "site": "monster",
+    "message": "Monster login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"emailAddress\\\"]\")\n"
+  },
+  {
+    "id": "e62c9aea",
+    "ts": "2026-06-13T20:06:30.081981",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "e4deb70b",
+    "ts": "2026-06-13T20:06:38.712199",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "fe056e2b",
+    "ts": "2026-06-13T20:06:38.734813",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "cedf6595",
+    "ts": "2026-06-13T20:06:43.366352",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "dfbbeac7",
+    "ts": "2026-06-13T20:06:43.396447",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "aea2d905",
+    "ts": "2026-06-13T20:06:47.824651",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "dba78306",
+    "ts": "2026-06-13T20:06:47.851655",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior Software Engineer' in 'Bangalore'"
+  },
+  {
+    "id": "eae487c7",
+    "ts": "2026-06-13T20:06:52.703803",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "97f346b0",
+    "ts": "2026-06-13T20:06:52.715077",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior Software Engineer' in 'Chennai'"
+  },
+  {
+    "id": "76f1204c",
+    "ts": "2026-06-13T20:06:56.840775",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "7f471643",
+    "ts": "2026-06-13T20:06:56.862300",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Senior Software Engineer' in 'Remote'"
+  },
+  {
+    "id": "07d1a5ef",
+    "ts": "2026-06-13T20:07:01.050827",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "437fd7d3",
+    "ts": "2026-06-13T20:07:01.066249",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Full Stack Developer' in 'Bangalore'"
+  },
+  {
+    "id": "7216f821",
+    "ts": "2026-06-13T20:07:05.228695",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "c8205792",
+    "ts": "2026-06-13T20:07:05.247234",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Full Stack Developer' in 'Chennai'"
+  },
+  {
+    "id": "0402065a",
+    "ts": "2026-06-13T20:07:10.060332",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "5cc54218",
+    "ts": "2026-06-13T20:07:10.074331",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'Full Stack Developer' in 'Remote'"
+  },
+  {
+    "id": "6dde9543",
+    "ts": "2026-06-13T20:07:14.517109",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "a89b61bc",
+    "ts": "2026-06-13T20:07:14.544546",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'C# Developer' in 'Bangalore'"
+  },
+  {
+    "id": "64439457",
+    "ts": "2026-06-13T20:07:20.439585",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "b7896613",
+    "ts": "2026-06-13T20:07:20.473870",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'C# Developer' in 'Chennai'"
+  },
+  {
+    "id": "b877f999",
+    "ts": "2026-06-13T20:07:25.238042",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "86250824",
+    "ts": "2026-06-13T20:07:25.252560",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Monster: 'C# Developer' in 'Remote'"
+  },
+  {
+    "id": "8010fad4",
+    "ts": "2026-06-13T20:07:28.835923",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Monster: Applied to 0 jobs"
+  },
+  {
+    "id": "bb93c894",
+    "ts": "2026-06-13T20:07:29.575245",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Monster India done ---"
+  },
+  {
+    "id": "d9a74dcc",
+    "ts": "2026-06-13T20:07:39.603026",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "5b15459e",
+    "ts": "2026-06-13T20:07:39.623071",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  }
+]

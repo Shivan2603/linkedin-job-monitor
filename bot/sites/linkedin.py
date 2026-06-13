@@ -29,7 +29,7 @@ def run_linkedin_bot():
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=True,  # Background mode for 24/7 running
+            headless=False,  # Set to False so user can solve CAPTCHAs/2FA
             args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
         )
         context = browser.new_context(
