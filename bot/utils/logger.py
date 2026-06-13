@@ -42,7 +42,11 @@ def log(level: str, message: str, site: str = "system"):
         logs = logs[-2000:]
     _save(LOGS_FILE, logs)
     # Also print to console
-    print(f"[{entry['ts'][:19]}] [{level.upper():7s}] [{site}] {message}")
+    try:
+        print(f"[{entry['ts'][:19]}] [{level.upper():7s}] [{site}] {message}")
+    except UnicodeEncodeError:
+        safe_msg = message.encode('ascii', 'ignore').decode()
+        print(f"[{entry['ts'][:19]}] [{level.upper():7s}] [{site}] {safe_msg}")
     return entry
 
 def info(msg, site="system"):    return log("INFO",    msg, site)
