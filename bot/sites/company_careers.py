@@ -48,15 +48,15 @@ def _build_search_queries() -> list:
     ]
 
     queries = []
-    # 1. ATS-specific searches (most reliable) - targeting Visa Sponsorship/Relocation
+    # 1. ATS-specific searches (most reliable)
     for domain in ATS_DOMAINS[:8]:  # Top 8 to avoid too many queries
         kw = " OR ".join(ROLE_KEYWORDS[:3])
-        queries.append(f'site:{domain} {kw} "visa sponsorship" OR "relocation"')
+        queries.append(f'site:{domain} {kw}')
 
     # 2. General Google job search (picks up company career pages)
     for title in JOB_TITLES[:3]:
-        queries.append(f'"{title}" job "apply now" "visa sponsorship" -.net site:lever.co OR site:greenhouse.io')
-        queries.append(f'"{title}" remote "visa sponsorship" site:linkedin.com/jobs')
+        queries.append(f'"{title}" job "apply now" -.net site:lever.co OR site:greenhouse.io')
+        queries.append(f'"{title}" remote "easy apply" site:linkedin.com/jobs')
 
     # 3. India-specific tech company boards
     queries += [

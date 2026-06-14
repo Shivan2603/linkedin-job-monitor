@@ -159,14 +159,8 @@ def _login(page: Page, creds: dict) -> bool:
 def _search_and_apply(page: Page, job_title: str, location: str):
     logger.info(f"LinkedIn search: '{job_title}' in '{location}'", SITE)
 
-    # Target Visa Sponsorship for international locations
-    search_keyword = job_title
-    india_locs = ["bangalore", "chennai", "hyderabad", "pune", "mumbai", "delhi", "india"]
-    if not any(loc in location.lower() for loc in india_locs):
-        search_keyword = f"{job_title} visa sponsorship"
-
     search_url = (
-        f"{BASE_URL}/jobs/search/?keywords={_encode(search_keyword)}"
+        f"{BASE_URL}/jobs/search/?keywords={_encode(job_title)}"
         f"&location={_encode(location)}"
         f"&f_AL=true"       # Easy Apply only
         f"&f_TPR=r86400"    # Last 24 hours
