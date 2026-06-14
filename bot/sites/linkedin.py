@@ -102,10 +102,20 @@ def _login(page: Page, creds: dict) -> bool:
             logger.success("LinkedIn: already logged in via saved cookies", SITE)
             return True
 
-        # Fill credentials using role-based locators (resilient)
-        page.get_by_label("Email or phone").first.fill(creds["email"])
+        # Fill credentials using resilient locators
+        email_loc = page.locator('#username, #session_key, input[name="session_key"], [autocomplete="username"]').first
+        if email_loc.is_visible(timeout=5000):
+            email_loc.fill(creds["email"])
+        else:
+            page.get_by_label(re.compile(r"email|phone", re.I)).first.fill(creds["email"])
+
         _delay(0.6, 1.2)
-        page.get_by_label("Password").first.fill(creds["password"])
+
+        pass_loc = page.locator('#password, #session_password, input[name="session_password"], [autocomplete="current-password"]').first
+        if pass_loc.is_visible(timeout=5000):
+            pass_loc.fill(creds["password"])
+        else:
+            page.get_by_label(re.compile(r"password", re.I)).first.fill(creds["password"])
         _delay(0.5, 1.0)
         # Click Sign in button
         for btn_sel in ['button[type="submit"]', '[data-litms-control-urn*="sign_in"]']:
