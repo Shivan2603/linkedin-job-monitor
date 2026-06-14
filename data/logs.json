@@ -1,5 +1,418 @@
 [
   {
+    "id": "814a1a51",
+    "ts": "2026-06-14T15:42:11.718465",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Gr8Tech | Software Engineer | Remote/Various | 92% match"
+  },
+  {
+    "id": "4915c8ad",
+    "ts": "2026-06-14T15:42:06.188603",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 17/47 fields via AI."
+  },
+  {
+    "id": "1d0eb656",
+    "ts": "2026-06-14T15:42:02.822917",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "af2c466c",
+    "ts": "2026-06-14T15:41:58.563672",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['iGaming', 'B2B', 'full-cycle development']"
+  },
+  {
+    "id": "ba5fe850",
+    "ts": "2026-06-14T15:41:58.520819",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "20e47b8e",
+    "ts": "2026-06-14T15:41:57.589419",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Gr8Tech_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "8bf843da",
+    "ts": "2026-06-14T15:41:57.522555",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "a23375bc",
+    "ts": "2026-06-14T15:41:35.713314",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "f791cbfd",
+    "ts": "2026-06-14T15:41:35.476206",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Gr8Tech - Software Engineer"
+  },
+  {
+    "id": "b2dcaf73",
+    "ts": "2026-06-14T15:41:31.787614",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/gr8tech/jobs/4794468101…"
+  },
+  {
+    "id": "f69881d1",
+    "ts": "2026-06-14T15:41:31.748855",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Growe — Software Engineer (Already applied)"
+  },
+  {
+    "id": "5ce0c3e0",
+    "ts": "2026-06-14T15:41:28.786685",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
+  },
+  {
+    "id": "b92ccd90",
+    "ts": "2026-06-14T15:41:28.767900",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "5f49cf71",
+    "ts": "2026-06-14T15:41:28.723929",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['product vision', 'agentic development', 'public-facing applications']"
+  },
+  {
+    "id": "a5ef6975",
+    "ts": "2026-06-14T15:41:28.673198",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "53f66ad2",
+    "ts": "2026-06-14T15:41:28.054301",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_PlayOn_92pct.docx (92% match)"
+  },
+  {
+    "id": "cdc6c56e",
+    "ts": "2026-06-14T15:41:28.005935",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "b2dd7358",
+    "ts": "2026-06-14T15:41:06.322802",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "bed1f957",
+    "ts": "2026-06-14T15:41:06.073621",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "40ffeeae",
+    "ts": "2026-06-14T15:41:01.599941",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
+  },
+  {
+    "id": "8c061727",
+    "ts": "2026-06-14T15:41:01.566564",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "065f8c25",
+    "ts": "2026-06-14T15:41:01.526843",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 0% — Missing: ['job description not available']"
+  },
+  {
+    "id": "75834770",
+    "ts": "2026-06-14T15:41:01.501247",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "30007593",
+    "ts": "2026-06-14T15:41:00.912837",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Valarian_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "5a9538b7",
+    "ts": "2026-06-14T15:41:00.863915",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "4be16ae0",
+    "ts": "2026-06-14T15:40:59.119388",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian - Software Engineer"
+  },
+  {
+    "id": "5fb894a1",
+    "ts": "2026-06-14T15:40:54.899251",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
+  },
+  {
+    "id": "21325639",
+    "ts": "2026-06-14T15:40:54.866782",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "9a765550",
+    "ts": "2026-06-14T15:40:54.805092",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 72% — Missing: ['family fintech', 'banking app', 'financial health']"
+  },
+  {
+    "id": "c341fd7e",
+    "ts": "2026-06-14T15:40:54.772102",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "0f01f935",
+    "ts": "2026-06-14T15:40:54.171714",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_Greenlight_Financial_92pct.docx (92% match)"
+  },
+  {
+    "id": "070be938",
+    "ts": "2026-06-14T15:40:54.052732",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "2556a2a9",
+    "ts": "2026-06-14T15:40:52.113704",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
+  },
+  {
+    "id": "4b0fe50d",
+    "ts": "2026-06-14T15:40:47.131979",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
+  },
+  {
+    "id": "09cc517c",
+    "ts": "2026-06-14T15:40:47.086099",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "f7cfc9f2",
+    "ts": "2026-06-14T15:40:43.761952",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002#:~:text=.NE…"
+  },
+  {
+    "id": "b527a2b3",
+    "ts": "2026-06-14T15:40:43.715354",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "eb00ced1",
+    "ts": "2026-06-14T15:40:38.984767",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002…"
+  },
+  {
+    "id": "86a84d40",
+    "ts": "2026-06-14T15:40:38.931405",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 10 job URLs from Google search"
+  },
+  {
+    "id": "f93dc43d",
+    "ts": "2026-06-14T15:40:34.929494",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
+  },
+  {
+    "id": "65bde89e",
+    "ts": "2026-06-14T15:40:25.302471",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
+  },
+  {
+    "id": "fa1b1af3",
+    "ts": "2026-06-14T15:40:16.706927",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "314dd063",
+    "ts": "2026-06-14T15:40:11.921482",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "feeae3e7",
+    "ts": "2026-06-14T15:40:11.883180",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "49d5fd1e",
+    "ts": "2026-06-14T15:38:42.066924",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 90s before next site..."
+  },
+  {
+    "id": "ff8a9e04",
+    "ts": "2026-06-14T15:38:42.051427",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "ffdbd896",
+    "ts": "2026-06-14T15:38:42.035509",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "f8c85382",
+    "ts": "2026-06-14T15:38:41.735087",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn bot crash: name '_human_delay' is not defined"
+  },
+  {
+    "id": "b9a22116",
+    "ts": "2026-06-14T15:38:39.901245",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "1f0730c6",
+    "ts": "2026-06-14T15:38:38.755366",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
+  },
+  {
+    "id": "bacbde5b",
+    "ts": "2026-06-14T15:38:38.749664",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "4da4d15f",
+    "ts": "2026-06-14T15:38:38.733747",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "a8d8f57c",
+    "ts": "2026-06-14T15:38:38.726985",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "36aee4e4",
+    "ts": "2026-06-14T15:38:38.718332",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "7756a3d1",
+    "ts": "2026-06-14T15:38:38.710896",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 15:38:38"
+  },
+  {
+    "id": "f402b2fa",
+    "ts": "2026-06-14T15:38:38.704907",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "7ef642a6",
+    "ts": "2026-06-14T15:38:38.695513",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "09bbb50c",
+    "ts": "2026-06-14T15:38:38.688509",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "0b8670ae",
+    "ts": "2026-06-14T15:38:38.659045",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
     "id": "bcee8588",
     "ts": "2026-06-14T15:34:45.982576",
     "level": "WARN",
