@@ -97,9 +97,9 @@ def _login(page: Page, creds: dict) -> bool:
         page.goto(f"{BASE_URL}/login", wait_until="domcontentloaded", timeout=45000)
         _delay(2, 3)
 
-        # Check if already logged in natively by looking for the profile avatar in the nav bar
+        # Check if already logged in natively by looking for the global navigation bar
         try:
-            page.wait_for_selector(".global-nav__me-photo", timeout=5000)
+            page.wait_for_selector(".global-nav", timeout=5000)
             logger.success("LinkedIn: already logged in via persistent session", SITE)
             return True
         except Exception:
@@ -146,7 +146,7 @@ def _login(page: Page, creds: dict) -> bool:
         # Wait longer for CAPTCHAs that don't change URL immediately
         logger.info("Waiting for login success... (Solve CAPTCHA manually if it appears - You have 3 minutes)", SITE)
         try:
-            page.wait_for_selector(".global-nav__me-photo", timeout=180000)
+            page.wait_for_selector(".global-nav", timeout=180000)
             logger.success("LinkedIn login successful", SITE)
             return True
         except Exception:
