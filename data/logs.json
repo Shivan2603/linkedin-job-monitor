@@ -1,5 +1,418 @@
 [
   {
+    "id": "d8db1587",
+    "ts": "2026-06-14T16:37:58.926812",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: US Remote at PerfectServe | Job Application for Senior Software Engineer, .NET | Remote/Various | 92% match"
+  },
+  {
+    "id": "0770cbc9",
+    "ts": "2026-06-14T16:37:53.220286",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 10/16 fields via AI."
+  },
+  {
+    "id": "b741dd30",
+    "ts": "2026-06-14T16:37:52.329723",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "95ac3607",
+    "ts": "2026-06-14T16:37:48.562959",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "a2a15a72",
+    "ts": "2026-06-14T16:37:48.549741",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "bb15a72e",
+    "ts": "2026-06-14T16:37:48.512368",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: US_Remote_at_Perfect_Job_Application_for__92pct.docx (92% match)"
+  },
+  {
+    "id": "72abc0eb",
+    "ts": "2026-06-14T16:37:48.486399",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "81559617",
+    "ts": "2026-06-14T16:37:48.458528",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for US Remote at PerfectServe - Job Application for Senior Software Engineer, .NET"
+  },
+  {
+    "id": "371f2d59",
+    "ts": "2026-06-14T16:37:45.400619",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/perfectserve/jobs/5826519004…"
+  },
+  {
+    "id": "b57bea7b",
+    "ts": "2026-06-14T16:37:45.371822",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "8dddcf3c",
+    "ts": "2026-06-14T16:37:45.357837",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "7f5c4464",
+    "ts": "2026-06-14T16:37:45.339899",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "232520c4",
+    "ts": "2026-06-14T16:37:45.300526",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Leadstreams_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "5a5a3cdc",
+    "ts": "2026-06-14T16:37:45.244787",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "0571666a",
+    "ts": "2026-06-14T16:36:41.121472",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 60s (retry 2/2)"
+  },
+  {
+    "id": "339498d6",
+    "ts": "2026-06-14T16:36:10.696400",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "1c0f45b8",
+    "ts": "2026-06-14T16:36:10.522363",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Leadstreams - Software Engineer"
+  },
+  {
+    "id": "6c7eec81",
+    "ts": "2026-06-14T16:36:06.429538",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
+  },
+  {
+    "id": "8616297a",
+    "ts": "2026-06-14T16:36:06.413495",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for US Remote at PerfectServe — Job Application for Senior Software Engineer, .NET"
+  },
+  {
+    "id": "d12ec57a",
+    "ts": "2026-06-14T16:36:06.380296",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "AI Form Filler failed: Unterminated string starting at: line 88 column 10 (char 4197)"
+  },
+  {
+    "id": "db5e9f75",
+    "ts": "2026-06-14T16:36:06.286357",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "d9bcf86f",
+    "ts": "2026-06-14T16:35:34.352513",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "3fbc5c6e",
+    "ts": "2026-06-14T16:35:31.940503",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "3b14992b",
+    "ts": "2026-06-14T16:35:31.915449",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "3595f1a8",
+    "ts": "2026-06-14T16:35:31.874887",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: US_Remote_at_Perfect_Job_Application_for__92pct.docx (92% match)"
+  },
+  {
+    "id": "d13024de",
+    "ts": "2026-06-14T16:35:31.820770",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "e39519d0",
+    "ts": "2026-06-14T16:34:26.991789",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 60s (retry 2/2)"
+  },
+  {
+    "id": "9b8286d9",
+    "ts": "2026-06-14T16:33:56.780665",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "b88ceda5",
+    "ts": "2026-06-14T16:33:56.520201",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for US Remote at PerfectServe - Job Application for Senior Software Engineer, .NET"
+  },
+  {
+    "id": "af53e3d3",
+    "ts": "2026-06-14T16:33:53.294296",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/perfectserve/jobs/5826519004#:~:text=Senior%20So…"
+  },
+  {
+    "id": "33350d18",
+    "ts": "2026-06-14T16:33:53.198742",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "6a6fa7df",
+    "ts": "2026-06-14T16:33:53.171462",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "07c1cd81",
+    "ts": "2026-06-14T16:33:53.119338",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "1f3e5702",
+    "ts": "2026-06-14T16:33:52.574706",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_Evry_Health_92pct.docx (92% match)"
+  },
+  {
+    "id": "cc0f860f",
+    "ts": "2026-06-14T16:33:52.484798",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "015e23ab",
+    "ts": "2026-06-14T16:33:17.509499",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "57c98f45",
+    "ts": "2026-06-14T16:33:17.242096",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer (.NET) - Evry Health"
+  },
+  {
+    "id": "1300483f",
+    "ts": "2026-06-14T16:33:14.594359",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/evry-health/efa4c6a6-a5cb-42cc-8682-b1af9f01e195…"
+  },
+  {
+    "id": "5d946601",
+    "ts": "2026-06-14T16:33:14.578348",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 15 job URLs from Google search"
+  },
+  {
+    "id": "a45ff1cd",
+    "ts": "2026-06-14T16:33:11.522615",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
+  },
+  {
+    "id": "af242cca",
+    "ts": "2026-06-14T16:33:02.622032",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 19 job links: site:greenhouse.io \"senior .net developer\" OR \"senior softwa"
+  },
+  {
+    "id": "f65099f3",
+    "ts": "2026-06-14T16:32:52.554976",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "4523ef37",
+    "ts": "2026-06-14T16:32:47.235736",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "f6086dde",
+    "ts": "2026-06-14T16:32:47.172606",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "66f46a34",
+    "ts": "2026-06-14T16:31:30.456030",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 77s before next site..."
+  },
+  {
+    "id": "886ad30b",
+    "ts": "2026-06-14T16:31:30.440284",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "0d5d8863",
+    "ts": "2026-06-14T16:31:30.393007",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "7245aa80",
+    "ts": "2026-06-14T16:31:29.975454",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "a9536a0b",
+    "ts": "2026-06-14T16:30:55.662305",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "3cbfe2e9",
+    "ts": "2026-06-14T16:30:53.207901",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "50728f98",
+    "ts": "2026-06-14T16:30:53.189048",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "f50d27cc",
+    "ts": "2026-06-14T16:30:53.173279",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "f8598833",
+    "ts": "2026-06-14T16:30:53.157307",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "24904e02",
+    "ts": "2026-06-14T16:30:53.141550",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "aa9ca03f",
+    "ts": "2026-06-14T16:30:53.129457",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 16:30:53"
+  },
+  {
+    "id": "55e742a6",
+    "ts": "2026-06-14T16:30:53.109924",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "86551ac9",
+    "ts": "2026-06-14T16:30:53.094130",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "4808450a",
+    "ts": "2026-06-14T16:30:53.078414",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "17ee84ce",
+    "ts": "2026-06-14T16:30:53.062643",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
     "id": "fd2ea6af",
     "ts": "2026-06-14T16:29:55.295203",
     "level": "AI",
@@ -3085,418 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "5fa4a4de",
-    "ts": "2026-06-14T15:18:05.385181",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Techholding_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "445ff973",
-    "ts": "2026-06-14T15:18:05.289824",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "9251e059",
-    "ts": "2026-06-14T15:18:03.500939",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Techholding - Software Engineer"
-  },
-  {
-    "id": "aa57fe95",
-    "ts": "2026-06-14T15:18:00.301805",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.greenhouse.io/techholding/jobs/4694846005…"
-  },
-  {
-    "id": "f1cb194c",
-    "ts": "2026-06-14T15:18:00.284020",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "520e31b4",
-    "ts": "2026-06-14T15:18:00.245557",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 0% — Missing: []"
-  },
-  {
-    "id": "6c4e4d85",
-    "ts": "2026-06-14T15:18:00.224577",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (ats_check)"
-  },
-  {
-    "id": "2bee8403",
-    "ts": "2026-06-14T15:17:59.661865",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "124a289e",
-    "ts": "2026-06-14T15:17:59.497797",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Valarian_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "4e06fd75",
-    "ts": "2026-06-14T15:17:59.308018",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "bf06f4fe",
-    "ts": "2026-06-14T15:17:57.630990",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Valarian - Software Engineer"
-  },
-  {
-    "id": "3dcb00d0",
-    "ts": "2026-06-14T15:17:52.479424",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
-  },
-  {
-    "id": "bd425b08",
-    "ts": "2026-06-14T15:17:52.448212",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
-  },
-  {
-    "id": "0bf78bc1",
-    "ts": "2026-06-14T15:17:49.570345",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002#:~:text=.NE…"
-  },
-  {
-    "id": "b210458b",
-    "ts": "2026-06-14T15:17:49.555496",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Growe — Software Engineer (Already applied)"
-  },
-  {
-    "id": "2745d52c",
-    "ts": "2026-06-14T15:17:46.392363",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101#:~:text=Senior%20.NET%2…"
-  },
-  {
-    "id": "b0f0a24c",
-    "ts": "2026-06-14T15:17:37.290753",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "✅ Applied → Growe | Software Engineer via Greenhouse"
-  },
-  {
-    "id": "2c86d6e3",
-    "ts": "2026-06-14T15:17:34.479727",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: Growe | Software Engineer | Remote/Various | 85% match"
-  },
-  {
-    "id": "4ec7f83f",
-    "ts": "2026-06-14T15:17:29.794845",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 10/27 fields via AI."
-  },
-  {
-    "id": "369670fd",
-    "ts": "2026-06-14T15:17:29.783829",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-25: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-25\\\"]\")\n"
-  },
-  {
-    "id": "890d68fc",
-    "ts": "2026-06-14T15:16:59.715589",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-24: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-24\\\"]\")\n"
-  },
-  {
-    "id": "b4882dc1",
-    "ts": "2026-06-14T15:16:29.674944",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-23: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-23\\\"]\")\n"
-  },
-  {
-    "id": "b82c06e9",
-    "ts": "2026-06-14T15:15:59.639231",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-22: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-22\\\"]\")\n"
-  },
-  {
-    "id": "79f00c6e",
-    "ts": "2026-06-14T15:15:29.588692",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-21: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-21\\\"]\")\n"
-  },
-  {
-    "id": "0f4ac380",
-    "ts": "2026-06-14T15:14:59.162649",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-20: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-20\\\"]\")\n"
-  },
-  {
-    "id": "946a792f",
-    "ts": "2026-06-14T15:09:30.617741",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-19: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-19\\\"]\")\n"
-  },
-  {
-    "id": "e1910ace",
-    "ts": "2026-06-14T15:05:22.858393",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-18: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-18\\\"]\")\n"
-  },
-  {
-    "id": "20916945",
-    "ts": "2026-06-14T15:04:52.825283",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-17: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-17\\\"]\")\n"
-  },
-  {
-    "id": "0ff04335",
-    "ts": "2026-06-14T15:04:22.758871",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-16: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-16\\\"]\")\n"
-  },
-  {
-    "id": "8490c655",
-    "ts": "2026-06-14T15:03:52.708742",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-15: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-15\\\"]\")\n"
-  },
-  {
-    "id": "8ae54756",
-    "ts": "2026-06-14T15:03:21.513932",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "df509fa4",
-    "ts": "2026-06-14T15:03:19.057557",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "Resume tailoring failed: All AI providers failed. Last error: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno 11001] getaddrinfo failed)\"))"
-  },
-  {
-    "id": "2a45157d",
-    "ts": "2026-06-14T15:03:19.039573",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "91c0f354",
-    "ts": "2026-06-14T15:03:18.972090",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-"
-  },
-  {
-    "id": "b8c50fa9",
-    "ts": "2026-06-14T15:03:18.514632",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "aba6c03c",
-    "ts": "2026-06-14T15:03:18.202022",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "f39a5874",
-    "ts": "2026-06-14T15:03:17.871975",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
-  },
-  {
-    "id": "5c55c861",
-    "ts": "2026-06-14T15:03:17.447638",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Growe - Software Engineer"
-  },
-  {
-    "id": "cd3cd3ed",
-    "ts": "2026-06-14T15:03:13.419954",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
-  },
-  {
-    "id": "de224a60",
-    "ts": "2026-06-14T15:03:13.395830",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "36ba7247",
-    "ts": "2026-06-14T15:03:13.355137",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 80% — Missing: ['Figma', 'Analytics tools', 'Experimentation']"
-  },
-  {
-    "id": "a7f7b38e",
-    "ts": "2026-06-14T15:03:13.318737",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (ats_check)"
-  },
-  {
-    "id": "91e8321f",
-    "ts": "2026-06-14T15:03:12.016549",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "49290bd2",
-    "ts": "2026-06-14T15:03:11.777818",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_Greenlight_Financial_92pct.docx (92% match)"
-  },
-  {
-    "id": "d9ce9f2b",
-    "ts": "2026-06-14T15:03:11.694531",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "ab12dea4",
-    "ts": "2026-06-14T15:03:09.677229",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
-  },
-  {
-    "id": "a3706388",
-    "ts": "2026-06-14T15:03:05.654313",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6#:~:text=Gr…"
-  },
-  {
-    "id": "89605560",
-    "ts": "2026-06-14T15:03:05.624394",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
-  },
-  {
-    "id": "13b1ca83",
-    "ts": "2026-06-14T15:03:00.904244",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002…"
-  },
-  {
-    "id": "1427e13b",
-    "ts": "2026-06-14T15:03:00.887672",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "c0c26137",
-    "ts": "2026-06-14T15:03:00.846476",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 80% — Missing: ['NextJS', 'Remix', 'Express']"
-  },
-  {
-    "id": "5b5cbd2d",
-    "ts": "2026-06-14T15:03:00.831602",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (ats_check)"
-  },
-  {
-    "id": "e204e752",
-    "ts": "2026-06-14T15:02:59.818931",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "3ce085ec",
-    "ts": "2026-06-14T15:02:59.710347",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_Greenlight_Financial_92pct.docx (92% match)"
-  },
-  {
-    "id": "fb4ca358",
-    "ts": "2026-06-14T15:02:59.625019",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "5aed48d2",
-    "ts": "2026-06-14T15:02:57.883491",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
-  },
-  {
-    "id": "2f7e5413",
-    "ts": "2026-06-14T15:02:53.362047",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
-  },
-  {
-    "id": "c8d4fb86",
-    "ts": "2026-06-14T15:02:53.322466",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Discovered 10 job URLs from Google search"
-  },
-  {
-    "id": "ffb0e444",
-    "ts": "2026-06-14T15:02:48.287247",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
   }
 ]
