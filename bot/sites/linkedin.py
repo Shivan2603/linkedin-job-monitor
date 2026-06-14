@@ -103,11 +103,19 @@ def _login(page: Page, creds: dict) -> bool:
             return True
 
         # Fill credentials using role-based locators (resilient)
-        page.get_by_label("Email or phone").fill(creds["email"])
+        page.get_by_label("Email or phone").first.fill(creds["email"])
         _delay(0.6, 1.2)
-        page.get_by_label("Password").fill(creds["password"])
+        page.get_by_label("Password").first.fill(creds["password"])
         _delay(0.5, 1.0)
-        page.get_by_role("button", name="Sign in").click()
+        # Click Sign in button
+        for btn_sel in ['button[type="submit"]', '[data-litms-control-urn*="sign_in"]']:
+            try:
+                el = page.query_selector(btn_sel)
+                if el and el.is_visible():
+                    el.click()
+                    break
+            except Exception:
+                continue
         _delay(3, 5)
 
         # Handle OTP / security checkpoint

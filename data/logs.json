@@ -1,5 +1,628 @@
 [
   {
+    "id": "03fcbac9",
+    "ts": "2026-06-14T16:16:49.445990",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 83s before next site..."
+  },
+  {
+    "id": "83c6ac09",
+    "ts": "2026-06-14T16:16:49.413519",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "6e21ac9c",
+    "ts": "2026-06-14T16:16:49.367527",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "341a7e40",
+    "ts": "2026-06-14T16:16:48.747080",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "37d8baaa",
+    "ts": "2026-06-14T16:16:48.694564",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "e6469b86",
+    "ts": "2026-06-14T16:16:48.669777",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "ebfd67b0",
+    "ts": "2026-06-14T16:16:48.628080",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1cf25d63",
+    "ts": "2026-06-14T16:16:48.408667",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "9149baf8",
+    "ts": "2026-06-14T16:16:47.979285",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "d07d3835",
+    "ts": "2026-06-14T16:16:47.539644",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "9377a66d",
+    "ts": "2026-06-14T16:16:27.345601",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "54ae8b76",
+    "ts": "2026-06-14T16:16:26.855967",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian - Software Engineer"
+  },
+  {
+    "id": "fac12fef",
+    "ts": "2026-06-14T16:16:23.780392",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
+  },
+  {
+    "id": "fcfe5ae5",
+    "ts": "2026-06-14T16:16:23.755457",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Growe — Software Engineer (Already applied)"
+  },
+  {
+    "id": "1637caff",
+    "ts": "2026-06-14T16:16:19.406057",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
+  },
+  {
+    "id": "78c29e44",
+    "ts": "2026-06-14T16:16:19.376366",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "0f091c40",
+    "ts": "2026-06-14T16:16:19.311878",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "10c5e109",
+    "ts": "2026-06-14T16:16:19.292420",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "ce0a3ee1",
+    "ts": "2026-06-14T16:16:19.245811",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "fee15c72",
+    "ts": "2026-06-14T16:16:18.859136",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "3bcd0a01",
+    "ts": "2026-06-14T16:16:18.622566",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "54d222e7",
+    "ts": "2026-06-14T16:16:18.309389",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "37362f87",
+    "ts": "2026-06-14T16:15:58.122777",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "474979b2",
+    "ts": "2026-06-14T16:15:57.860141",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian - Software Engineer"
+  },
+  {
+    "id": "f848c573",
+    "ts": "2026-06-14T16:15:53.756073",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2#:~:text=Seni…"
+  },
+  {
+    "id": "28fc8218",
+    "ts": "2026-06-14T16:15:53.716071",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Gr8Tech — Software Engineer (Already applied)"
+  },
+  {
+    "id": "d4ea42e5",
+    "ts": "2026-06-14T16:15:48.550087",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/gr8tech/jobs/4794468101…"
+  },
+  {
+    "id": "0dd775eb",
+    "ts": "2026-06-14T16:15:48.497458",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "75062ce2",
+    "ts": "2026-06-14T16:15:44.209316",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002…"
+  },
+  {
+    "id": "82934f0c",
+    "ts": "2026-06-14T16:15:44.159188",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "18c94fb8",
+    "ts": "2026-06-14T16:15:44.068297",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "69565e00",
+    "ts": "2026-06-14T16:15:44.025754",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "0b4b0f95",
+    "ts": "2026-06-14T16:15:43.986210",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "fd9c105b",
+    "ts": "2026-06-14T16:15:43.685411",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "e2ef058f",
+    "ts": "2026-06-14T16:15:43.399188",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "c24883cb",
+    "ts": "2026-06-14T16:15:42.956086",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "bd721527",
+    "ts": "2026-06-14T16:15:22.713536",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "a4579d02",
+    "ts": "2026-06-14T16:15:22.385191",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "3b4396a2",
+    "ts": "2026-06-14T16:15:19.015110",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178#:~:text=…"
+  },
+  {
+    "id": "b0dd9d8c",
+    "ts": "2026-06-14T16:15:18.981466",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Growe — Software Engineer (Already applied)"
+  },
+  {
+    "id": "2f0a634c",
+    "ts": "2026-06-14T16:15:15.463153",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101#:~:text=Senior%20.NET%2…"
+  },
+  {
+    "id": "630c4e6a",
+    "ts": "2026-06-14T16:15:15.406757",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "99cde62f",
+    "ts": "2026-06-14T16:15:15.288121",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "bc58e6cf",
+    "ts": "2026-06-14T16:15:15.237765",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "fab755f6",
+    "ts": "2026-06-14T16:15:15.190164",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "104f3eb3",
+    "ts": "2026-06-14T16:15:14.920999",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "d638adfa",
+    "ts": "2026-06-14T16:15:14.487779",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "ff6f17f8",
+    "ts": "2026-06-14T16:15:13.912084",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "a1000958",
+    "ts": "2026-06-14T16:14:53.679599",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "0a76867d",
+    "ts": "2026-06-14T16:14:53.306528",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "9fb7e729",
+    "ts": "2026-06-14T16:14:49.940345",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
+  },
+  {
+    "id": "fc4eee09",
+    "ts": "2026-06-14T16:14:49.890775",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "c8603e41",
+    "ts": "2026-06-14T16:14:44.971540",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002#:~:text=.NE…"
+  },
+  {
+    "id": "f8198ef8",
+    "ts": "2026-06-14T16:14:44.873785",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "ee1021c9",
+    "ts": "2026-06-14T16:14:44.751268",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "ff469456",
+    "ts": "2026-06-14T16:14:44.706884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "7a0b8f08",
+    "ts": "2026-06-14T16:14:44.664225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c1fe5749",
+    "ts": "2026-06-14T16:14:44.351120",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "ac98cf20",
+    "ts": "2026-06-14T16:14:44.056676",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "fb8dc389",
+    "ts": "2026-06-14T16:14:43.722272",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "5d9a81b0",
+    "ts": "2026-06-14T16:14:23.456018",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "a27cd751",
+    "ts": "2026-06-14T16:14:23.001421",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
+  },
+  {
+    "id": "8688e15f",
+    "ts": "2026-06-14T16:14:18.160412",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
+  },
+  {
+    "id": "4683e8bf",
+    "ts": "2026-06-14T16:14:18.104321",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 10 job URLs from Google search"
+  },
+  {
+    "id": "9ae68fbf",
+    "ts": "2026-06-14T16:14:14.130820",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
+  },
+  {
+    "id": "8869bf98",
+    "ts": "2026-06-14T16:14:03.835856",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
+  },
+  {
+    "id": "3af3af9d",
+    "ts": "2026-06-14T16:13:56.399725",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "fd57bc18",
+    "ts": "2026-06-14T16:13:50.112549",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "4e984193",
+    "ts": "2026-06-14T16:13:50.069592",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "64062976",
+    "ts": "2026-06-14T16:12:23.100533",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 87s before next site..."
+  },
+  {
+    "id": "9dabe759",
+    "ts": "2026-06-14T16:12:23.077802",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "c5556ea9",
+    "ts": "2026-06-14T16:12:23.032584",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "45fea431",
+    "ts": "2026-06-14T16:12:22.453504",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login failed: Locator.fill: Error: strict mode violation: get_by_label(\"Email or phone\") resolved to 2 elements:\n    1) <input value=\"\" id=\"«r0»\" dir=\"auto\" type=\"email\" autoc…/> aka get_by_label(\"Email or phone\").first\n    2) <input value=\"\" id=\"«r3»\" dir=\"auto\" type=\"email\" aria-…/> aka get_by_role(\"textbox\", name=\"Email or phone\")\n\nCall log:\nwaiting for get_by_label(\"Email or phone\")\n"
+  },
+  {
+    "id": "117d4646",
+    "ts": "2026-06-14T16:12:18.231402",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "dc1dce3d",
+    "ts": "2026-06-14T16:12:16.184257",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "800f2665",
+    "ts": "2026-06-14T16:12:16.168474",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "2845402e",
+    "ts": "2026-06-14T16:12:16.154383",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "4dee3a6f",
+    "ts": "2026-06-14T16:12:16.137099",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "890837e0",
+    "ts": "2026-06-14T16:12:16.121287",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "89db5163",
+    "ts": "2026-06-14T16:12:16.105494",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 16:12:16"
+  },
+  {
+    "id": "0de23323",
+    "ts": "2026-06-14T16:12:16.089678",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "1a68628d",
+    "ts": "2026-06-14T16:12:16.073860",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "27876f73",
+    "ts": "2026-06-14T16:12:16.058103",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "33086ca2",
+    "ts": "2026-06-14T16:12:16.042245",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "16b74fd7",
+    "ts": "2026-06-14T16:12:07.963303",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior C# Engineer' in 'Bangalore'"
+  },
+  {
+    "id": "bab65354",
+    "ts": "2026-06-14T16:12:07.741127",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Senior C# Engineer' in Remote"
+  },
+  {
+    "id": "9fa83267",
+    "ts": "2026-06-14T16:11:42.232931",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 4 jobs for 'Senior C# Engineer' in Remote"
+  },
+  {
+    "id": "9dc65abb",
+    "ts": "2026-06-14T16:11:38.931441",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior C# Engineer' in 'Remote'"
+  },
+  {
+    "id": "2143355e",
+    "ts": "2026-06-14T16:11:38.881186",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Azure Developer' in Hyderabad"
+  },
+  {
     "id": "7e39a633",
     "ts": "2026-06-14T16:11:34.882908",
     "level": "INFO",
@@ -2875,502 +3498,5 @@
     "level": "INFO",
     "site": "monster",
     "message": "Searching Monster: 'Senior Software Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "ffcc8e81",
-    "ts": "2026-06-14T15:02:10.033600",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "a04d090d",
-    "ts": "2026-06-14T15:02:04.612309",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "3a39b584",
-    "ts": "2026-06-14T15:02:04.562011",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "56f89fd6",
-    "ts": "2026-06-14T15:01:59.553309",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "e6a1b934",
-    "ts": "2026-06-14T15:01:59.523977",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "69142cb0",
-    "ts": "2026-06-14T15:01:53.297670",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "2a02bcd3",
-    "ts": "2026-06-14T15:01:52.914688",
-    "level": "ERROR",
-    "site": "monster",
-    "message": "Monster login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"emailAddress\\\"]\")\n"
-  },
-  {
-    "id": "ff6db64a",
-    "ts": "2026-06-14T15:01:16.710169",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Monster India..."
-  },
-  {
-    "id": "f839a8ae",
-    "ts": "2026-06-14T15:01:13.704760",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Monster India bot"
-  },
-  {
-    "id": "87531216",
-    "ts": "2026-06-14T15:01:13.667632",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Monster India ---"
-  },
-  {
-    "id": "0176c238",
-    "ts": "2026-06-14T15:01:03.644285",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Shine done ---"
-  },
-  {
-    "id": "565a17fd",
-    "ts": "2026-06-14T15:01:02.992813",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "88086c18",
-    "ts": "2026-06-14T15:00:59.154814",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Remote'"
-  },
-  {
-    "id": "7b7412eb",
-    "ts": "2026-06-14T15:00:59.109713",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "234f1ba6",
-    "ts": "2026-06-14T15:00:55.131631",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "9be297ee",
-    "ts": "2026-06-14T15:00:55.100700",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "ffb6a7bb",
-    "ts": "2026-06-14T15:00:51.571839",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Chennai'"
-  },
-  {
-    "id": "6b3c1172",
-    "ts": "2026-06-14T15:00:51.530934",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "904dd72a",
-    "ts": "2026-06-14T15:00:47.948793",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Bangalore'"
-  },
-  {
-    "id": "28388a13",
-    "ts": "2026-06-14T15:00:47.932674",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "2c3e5705",
-    "ts": "2026-06-14T15:00:44.838748",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Remote'"
-  },
-  {
-    "id": "8fe787e8",
-    "ts": "2026-06-14T15:00:44.814725",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "370cb0e2",
-    "ts": "2026-06-14T15:00:41.290631",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "12ced8d1",
-    "ts": "2026-06-14T15:00:41.241033",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "1d6b757a",
-    "ts": "2026-06-14T15:00:35.395533",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Chennai'"
-  },
-  {
-    "id": "1bf53f9f",
-    "ts": "2026-06-14T15:00:35.359993",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "2197351f",
-    "ts": "2026-06-14T15:00:31.136314",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Bangalore'"
-  },
-  {
-    "id": "aa858c45",
-    "ts": "2026-06-14T15:00:30.832161",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "49c37be9",
-    "ts": "2026-06-14T15:00:26.716949",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Remote'"
-  },
-  {
-    "id": "728767ba",
-    "ts": "2026-06-14T15:00:26.700865",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "a712638e",
-    "ts": "2026-06-14T15:00:21.765509",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Hyderabad'"
-  },
-  {
-    "id": "c7ed6c10",
-    "ts": "2026-06-14T15:00:21.694675",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "db73d3a9",
-    "ts": "2026-06-14T15:00:16.664396",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Chennai'"
-  },
-  {
-    "id": "be1569e9",
-    "ts": "2026-06-14T15:00:16.455923",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "b6953006",
-    "ts": "2026-06-14T15:00:12.441107",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "d45daaa0",
-    "ts": "2026-06-14T15:00:12.410101",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "8f256482",
-    "ts": "2026-06-14T15:00:08.875254",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "23a06974",
-    "ts": "2026-06-14T15:00:08.857168",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "cb9194c5",
-    "ts": "2026-06-14T15:00:03.951470",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "e0af548f",
-    "ts": "2026-06-14T15:00:03.935372",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "082d24f1",
-    "ts": "2026-06-14T14:59:59.887168",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "1ead8941",
-    "ts": "2026-06-14T14:59:59.803863",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "64fcd279",
-    "ts": "2026-06-14T14:59:55.078095",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "6b5719ea",
-    "ts": "2026-06-14T14:59:54.939776",
-    "level": "ERROR",
-    "site": "shine",
-    "message": "Shine login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"email\\\"]\")\n  -   locator resolved to 3 elements. Proceeding with the first one: <input type=\"text\" name=\"email\" id=\"id_hidden_email\"/>\n  -   fill(\"sivashankar.avi6@gmail.com\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  - element was detached from the DOM, retrying\n"
-  },
-  {
-    "id": "6344ebdb",
-    "ts": "2026-06-14T14:59:17.194877",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "e442e8da",
-    "ts": "2026-06-14T14:59:14.658453",
-    "level": "INFO",
-    "site": "shine",
-    "message": "🚀 Starting Shine.com bot"
-  },
-  {
-    "id": "0cd91d77",
-    "ts": "2026-06-14T14:59:14.647175",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Shine ---"
-  },
-  {
-    "id": "2d1d54c7",
-    "ts": "2026-06-14T14:59:04.633524",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Indeed India done ---"
-  },
-  {
-    "id": "351a471d",
-    "ts": "2026-06-14T14:59:03.717625",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[type=\\\"password\\\"]\")\n  -   locator resolved to <input type=\"password\" data-tn-action-click=\"true\" auto…/>\n  -   fill(\"Shiva26@\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  - element was detached from the DOM, retrying\n"
-  },
-  {
-    "id": "4353e605",
-    "ts": "2026-06-14T14:58:26.438281",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Logging into Indeed..."
-  },
-  {
-    "id": "f4d45bcf",
-    "ts": "2026-06-14T14:58:24.370777",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed India bot"
-  },
-  {
-    "id": "1ed1279a",
-    "ts": "2026-06-14T14:58:24.361933",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Indeed India ---"
-  },
-  {
-    "id": "a9435058",
-    "ts": "2026-06-14T14:58:14.338028",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Naukri done ---"
-  },
-  {
-    "id": "f5cbcc01",
-    "ts": "2026-06-14T14:58:14.315903",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri bot session ended"
-  },
-  {
-    "id": "0649656d",
-    "ts": "2026-06-14T14:58:13.764176",
-    "level": "ERROR",
-    "site": "naukri",
-    "message": "Naukri login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[placeholder*=\\\"Email\\\"]\")\n"
-  },
-  {
-    "id": "f6ed6815",
-    "ts": "2026-06-14T14:57:40.849765",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "46c4c9a2",
-    "ts": "2026-06-14T14:57:38.961806",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "🚀 Starting Naukri.com bot"
-  },
-  {
-    "id": "75d5af6d",
-    "ts": "2026-06-14T14:57:38.884269",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "54a69f1e",
-    "ts": "2026-06-14T14:57:28.856124",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "372f33c6",
-    "ts": "2026-06-14T14:57:28.826112",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "fc6bd5b4",
-    "ts": "2026-06-14T14:57:28.297484",
-    "level": "ERROR",
-    "site": "linkedin",
-    "message": "LinkedIn bot crash: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://www.linkedin.com/login\", waiting until \"networkidle\"\n"
-  },
-  {
-    "id": "10b9589f",
-    "ts": "2026-06-14T14:56:58.266311",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "772a2ae7",
-    "ts": "2026-06-14T14:56:56.774628",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
-  },
-  {
-    "id": "ea41fdac",
-    "ts": "2026-06-14T14:56:56.766682",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "c7446a0a",
-    "ts": "2026-06-14T14:56:56.761640",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "07be7cda",
-    "ts": "2026-06-14T14:56:56.757415",
-    "level": "INFO",
-    "site": "system",
-    "message": "📁 Tailored resumes → E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
-  },
-  {
-    "id": "b0a28491",
-    "ts": "2026-06-14T14:56:56.750760",
-    "level": "INFO",
-    "site": "system",
-    "message": "🤖 Job Bot Session Started — 2026-06-14 14:56:56"
-  },
-  {
-    "id": "ea413a76",
-    "ts": "2026-06-14T14:56:56.741401",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d4614a06",
-    "ts": "2026-06-14T14:56:56.734711",
-    "level": "INFO",
-    "site": "system",
-    "message": "♾️  Application limit: UNLIMITED"
-  },
-  {
-    "id": "16a3de41",
-    "ts": "2026-06-14T14:56:56.728022",
-    "level": "INFO",
-    "site": "system",
-    "message": "📅 Active window: 24/7 Continuous Mode"
-  },
-  {
-    "id": "7dd94b66",
-    "ts": "2026-06-14T14:56:56.720249",
-    "level": "INFO",
-    "site": "system",
-    "message": "🚀 Job Bot Scheduler Starting..."
   }
 ]

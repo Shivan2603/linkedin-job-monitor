@@ -1,42 +1,86 @@
 """
-bot/ai_router.py — Multi-Provider AI Router (All FREE)
+bot/ai_router.py — Multi-Provider AI Router with Caching
 
-Provider Roles:
-  - Groq (Llama 3.3 70B)  : Primary — resume tailoring + ATS check
-  - Groq (Llama 3.1 8B)   : Fast — form filling
-  - Google Gemini          : Fallback if Groq quota hits
-  - HuggingFace            : Disabled (DNS unreachable on most networks)
+Providers (all FREE):
+  1. Groq          — Primary (Llama 3.3 70B / 3.1 8B) — 30 RPM free
+  2. OpenRouter    — Fallback (Mistral 7B, Llama 3 8B, Gemma 2 9B — FREE tier)
+  3. Google Gemini — Fallback (gemini-2.0-flash, gemini-1.5-flash)
+  4. Cache         — Reuse previous responses for same job+company (saves quota)
 
-Fixes applied:
-  - Groq 429: exponential backoff retry (waits 15s then retries once)
-  - Gemini: updated working model names
-  - HuggingFace: removed from default chain (DNS failure)
-  - Field timeout: handled in ai_agent_filler.py (3s per field)
+Fixes:
+  - Groq 429: 30s backoff + switches to smaller model on retry
+  - Gemini: corrected model names (removed -latest suffix)
+  - OpenRouter: added as free unlimited fallback
+  - Cache: saves AI responses to disk — same job never calls API twice
 """
 
-import json, os, time, requests
+import json, os, time, hashlib, requests
 from bot.config import (
     GROQ_API_KEY, HUGGINGFACE_TOKEN, GEMINI_API_KEY,
-    GROQ_MODEL_PRIMARY, GROQ_MODEL_FAST
+    GROQ_MODEL_PRIMARY, GROQ_MODEL_FAST, DATA_FOLDER
 )
 from bot.utils import logger
 
-GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_API_URL      = "https://api.groq.com/openai/v1/chat/completions"
+OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
-# ─── GROQ (Primary) ──────────────────────────────────────────────────────────
+# Cache file
+CACHE_FILE = os.path.join(DATA_FOLDER, "ai_cache.json")
+
+# ─── RESPONSE CACHE ──────────────────────────────────────────────────────────
+def _load_cache() -> dict:
+    try:
+        if os.path.exists(CACHE_FILE):
+            return json.load(open(CACHE_FILE, encoding="utf-8"))
+    except Exception:
+        pass
+    return {}
+
+def _save_cache(cache: dict):
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    except Exception:
+        pass
+
+def _cache_key(system: str, user: str, task: str) -> str:
+    raw = f"{task}|{system[:100]}|{user[:300]}"
+    return hashlib.md5(raw.encode()).hexdigest()
+
+def _get_cached(key: str) -> str | None:
+    cache = _load_cache()
+    entry = cache.get(key)
+    if entry:
+        # Cache valid for 24 hours
+        if time.time() - entry.get("ts", 0) < 86400:
+            return entry["response"]
+    return None
+
+def _set_cached(key: str, response: str):
+    cache = _load_cache()
+    cache[key] = {"response": response, "ts": time.time()}
+    # Keep only last 500 entries
+    if len(cache) > 500:
+        oldest = sorted(cache.items(), key=lambda x: x[1].get("ts", 0))[:100]
+        for k, _ in oldest:
+            del cache[k]
+    _save_cache(cache)
+
+# ─── GROQ ─────────────────────────────────────────────────────────────────────
 def groq_complete(system_prompt: str, user_prompt: str,
                   model: str = None, max_tokens: int = 2048,
-                  retry: bool = True) -> str:
+                  _retry: int = 0) -> str:
     if not GROQ_API_KEY or len(GROQ_API_KEY) < 10:
-        raise ValueError("GROQ_API_KEY not configured")
+        raise ValueError("GROQ_API_KEY not set")
 
     model = model or GROQ_MODEL_PRIMARY
     headers = {
         "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type":  "application/json",
+        "Content-Type": "application/json",
     }
     payload = {
-        "model":    model,
+        "model": model,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_prompt},
@@ -47,36 +91,93 @@ def groq_complete(system_prompt: str, user_prompt: str,
 
     try:
         resp = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=60)
-        if resp.status_code == 429 and retry:
-            # Rate limited — wait 20 seconds and retry once
-            logger.warn(f"Groq 429 rate limit — waiting 20s then retrying...", "ai")
-            time.sleep(20)
-            return groq_complete(system_prompt, user_prompt, model=model,
-                                 max_tokens=max_tokens, retry=False)
+        if resp.status_code == 429 and _retry < 2:
+            wait = 30 * (_retry + 1)  # 30s, then 60s
+            logger.warn(f"Groq 429 rate limit — waiting {wait}s (retry {_retry+1}/2)", "ai")
+            time.sleep(wait)
+            # On second retry, switch to faster/smaller model to avoid quota
+            fallback_model = GROQ_MODEL_FAST if _retry == 0 else "llama-3.1-8b-instant"
+            return groq_complete(system_prompt, user_prompt,
+                                 model=fallback_model, max_tokens=max_tokens,
+                                 _retry=_retry + 1)
         resp.raise_for_status()
         return resp.json()["choices"][0]["message"]["content"].strip()
     except requests.HTTPError as e:
         raise Exception(f"Groq failed: {e}")
 
+# ─── OPENROUTER (FREE TIER — no credit card needed) ──────────────────────────
+# Sign up free: https://openrouter.ai → Create API Key
+# Free models: mistral-7b, llama-3-8b, gemma-2-9b, phi-3-mini (all :free)
+OPENROUTER_FREE_MODELS = [
+    "meta-llama/llama-3-8b-instruct:free",
+    "mistralai/mistral-7b-instruct:free",
+    "google/gemma-2-9b-it:free",
+    "microsoft/phi-3-mini-128k-instruct:free",
+]
 
-# ─── GEMINI (Fallback) ────────────────────────────────────────────────────────
+def openrouter_complete(system_prompt: str, user_prompt: str,
+                        max_tokens: int = 2048) -> str:
+    if not OPENROUTER_API_KEY or len(OPENROUTER_API_KEY) < 10:
+        raise ValueError("OPENROUTER_API_KEY not set — get free key at openrouter.ai")
+
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://github.com/Shivan2603/linkedin-job-monitor",
+        "X-Title": "Universal Job Bot",
+    }
+
+    for model in OPENROUTER_FREE_MODELS:
+        try:
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user",   "content": user_prompt},
+                ],
+                "max_tokens":  max_tokens,
+                "temperature": 0.3,
+            }
+            resp = requests.post(OPENROUTER_API_URL, headers=headers,
+                                 json=payload, timeout=60)
+            if resp.status_code in [429, 503]:
+                logger.warn(f"OpenRouter {model} unavailable, trying next...", "ai")
+                continue
+            resp.raise_for_status()
+            result = resp.json()["choices"][0]["message"]["content"].strip()
+            logger.ai(f"AI response from OpenRouter ({model.split('/')[1]})", "ai")
+            return result
+        except Exception as e:
+            logger.warn(f"OpenRouter {model} failed: {str(e)[:80]}", "ai")
+            continue
+
+    raise Exception("All OpenRouter free models unavailable")
+
+# ─── GOOGLE GEMINI ────────────────────────────────────────────────────────────
+# Corrected model names (removed -latest suffix which causes 404)
 GEMINI_MODELS = [
-    "gemini-1.5-flash-latest",
-    "gemini-1.5-pro-latest",
-    "gemini-2.0-flash-lite",
+    "gemini-2.0-flash",         # Free, fast, generous quota
+    "gemini-2.0-flash-lite",    # Free, lighter
+    "gemini-1.5-flash",         # Free, proven reliable
+    "gemini-1.5-flash-8b",      # Free, smallest/fastest
 ]
 
 def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
     if not GEMINI_API_KEY or len(GEMINI_API_KEY) < 10:
-        raise ValueError("GEMINI_API_KEY not configured")
+        raise ValueError("GEMINI_API_KEY not set")
 
     for model in GEMINI_MODELS:
         try:
-            url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
-                   f"{model}:generateContent?key={GEMINI_API_KEY}")
+            url = (
+                f"https://generativelanguage.googleapis.com/v1beta/models/"
+                f"{model}:generateContent?key={GEMINI_API_KEY}"
+            )
             payload = {
                 "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"maxOutputTokens": max_tokens, "temperature": 0.3},
+                "generationConfig": {
+                    "maxOutputTokens": max_tokens,
+                    "temperature": 0.3
+                },
             }
             resp = requests.post(url, json=payload, timeout=60)
             if resp.status_code == 429:
@@ -86,100 +187,100 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
                 logger.warn(f"Gemini {model} not found, trying next...", "ai")
                 continue
             resp.raise_for_status()
-            return resp.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            text = resp.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            logger.ai(f"AI response from Gemini ({model})", "ai")
+            return text
         except Exception as e:
-            if "429" in str(e) or "quota" in str(e).lower() or "404" in str(e):
+            err = str(e)
+            if "429" in err or "quota" in err.lower():
+                logger.warn(f"Gemini {model} quota: {err[:60]}", "ai")
+                continue
+            if "404" in err:
                 continue
             raise
+
     raise Exception("All Gemini models unavailable")
 
-
-# ─── HUGGINGFACE (optional, disabled by default — DNS issues on most networks)
-def huggingface_complete(prompt: str, max_tokens: int = 512) -> str:
-    if not HUGGINGFACE_TOKEN or len(HUGGINGFACE_TOKEN) < 10:
-        raise ValueError("HUGGINGFACE_TOKEN not configured")
-    HF_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
-    headers = {"Authorization": f"Bearer {HUGGINGFACE_TOKEN}"}
-    payload = {
-        "inputs": prompt,
-        "parameters": {"max_new_tokens": max_tokens, "temperature": 0.2, "return_full_text": False},
-    }
-    resp = requests.post(HF_URL, headers=headers, json=payload, timeout=30)
-    resp.raise_for_status()
-    result = resp.json()
-    if isinstance(result, list) and result:
-        return result[0].get("generated_text", "").strip()
-    return str(result).strip()
-
-
-# ─── SMART ROUTER ─────────────────────────────────────────────────────────────
+# ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
 def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
     """
-    Smart AI router with automatic fallback.
-
-    task:
-      "tailor"    → Groq 70B primary (best quality)
-      "form_fill" → Groq 8B fast (speed)
-      "ats_check" → Groq 70B (removed HF — DNS issues)
-      "general"   → Groq → Gemini
+    Intelligent AI routing with caching.
+    Order: Cache → Groq → OpenRouter (free) → Gemini → Error
     """
-    combined = f"{system_prompt}\n\n{user_prompt}" if system_prompt else user_prompt
+    combined = f"{system_prompt}\n\n{user_prompt}"
 
+    # 1. Check cache first (saves API quota)
+    if task in ["tailor", "ats_check"]:  # Cache heavy tasks
+        key = _cache_key(system_prompt, user_prompt, task)
+        cached = _get_cached(key)
+        if cached:
+            logger.ai(f"AI response from Cache ({task})", "ai")
+            return cached
+
+    # 2. Build provider chain based on task
     if task == "form_fill":
         providers = [
             ("Groq-Fast", lambda: groq_complete(system_prompt, user_prompt,
-                                                model=GROQ_MODEL_FAST, max_tokens=max_tokens)),
-            ("Groq",      lambda: groq_complete(system_prompt, user_prompt, max_tokens=max_tokens)),
+                                                model=GROQ_MODEL_FAST,
+                                                max_tokens=max_tokens)),
+            ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
+                                                       max_tokens=max_tokens)),
+            ("Groq",      lambda: groq_complete(system_prompt, user_prompt,
+                                                max_tokens=max_tokens)),
             ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
         ]
     else:
-        # tailor, ats_check, general — use 70B
+        # tailor, ats_check, general → best quality first
         providers = [
-            ("Groq",   lambda: groq_complete(system_prompt, user_prompt, max_tokens=max_tokens)),
-            ("Gemini", lambda: gemini_complete(combined, max_tokens)),
+            ("Groq",      lambda: groq_complete(system_prompt, user_prompt,
+                                                max_tokens=max_tokens)),
+            ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
+                                                       max_tokens=max_tokens)),
+            ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
         ]
 
     last_error = None
     for name, fn in providers:
         try:
             result = fn()
-            logger.ai(f"AI response from {name} ({task})", "ai")
+            if name != "Cache":
+                logger.ai(f"AI response from {name} ({task})", "ai")
+            # Cache successful tailor/ats results
+            if task in ["tailor", "ats_check"]:
+                _set_cached(key, result)
             return result
         except ValueError as e:
-            logger.warn(f"{name} skipped: {e}", "ai")
+            # API key not set — skip silently
             continue
         except Exception as e:
-            logger.warn(f"{name} failed: {str(e)[:120]}", "ai")
+            logger.warn(f"{name} failed: {str(e)[:100]}", "ai")
             last_error = e
             continue
 
-    raise Exception(f"All AI providers failed. Last error: {last_error}")
+    raise Exception(f"All AI providers failed. Last: {last_error}")
 
-
-# ─── ATS RESUME CHECKER ──────────────────────────────────────────────────────
+# ─── ATS CHECKER ─────────────────────────────────────────────────────────────
 def check_resume_ats(resume_text: str, job_description: str,
                      job_title: str = "", company: str = "") -> dict:
-    system = "You are an ATS expert and resume analyst. Be concise."
+    system = "You are an ATS expert. Be concise and accurate."
     user = f"""Score this resume against the job description. Return JSON only.
 
-Resume (first 1500 chars):
-{resume_text[:1500]}
-
+Resume (first 1200 chars): {resume_text[:1200]}
 Job: {job_title} at {company}
-JD (first 1000 chars):
-{job_description[:1000]}
+JD (first 800 chars): {job_description[:800]}
 
-Return JSON:
-{{"ats_score": 0-100, "missing_keywords": ["kw1","kw2"], "strengths": ["s1"], "suggestions": ["imp1"]}}"""
+Return exactly:
+{{"ats_score": 0-100, "missing_keywords": ["kw1","kw2"], "strengths": ["s1"], "suggestions": ["s1"]}}"""
 
     try:
-        raw = ai_complete(system, user, task="ats_check", max_tokens=512)
-        if "```json" in raw:
-            raw = raw.split("```json")[1].split("```")[0].strip()
-        elif "```" in raw:
-            raw = raw.split("```")[1].split("```")[0].strip()
+        raw = ai_complete(system, user, task="ats_check", max_tokens=400)
+        # Strip code fences
+        for fence in ["```json", "```"]:
+            if fence in raw:
+                raw = raw.split(fence)[1].split("```")[0].strip()
+                break
         return json.loads(raw)
     except Exception as e:
-        logger.error(f"ATS check failed: {e}", "ai")
+        logger.warn(f"ATS parse failed: {e}", "ai")
         return {"ats_score": 85, "missing_keywords": [], "strengths": [], "suggestions": []}

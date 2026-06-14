@@ -15,15 +15,60 @@ from bot.utils.logger import record_application, is_already_applied, git_sync
 
 SITE = "company_careers"
 
-# ─── DISCOVERY: Google search queries to find job listings ─────────────────
-# These search for open positions on popular ATS platforms
-SEARCH_QUERIES = [
-    'site:lever.co "senior .net developer" OR "senior software engineer" OR "full stack developer"',
-    'site:greenhouse.io "c# developer" OR "senior .net" OR "dotnet developer"',
-    'site:jobs.workday.com "software engineer" ".net" OR "azure"',
-    'site:ashbyhq.com "senior software engineer" ".net" OR "full stack"',
-    'site:boards.greenhouse.io ".net developer" OR "c# engineer"',
-]
+# ─── DYNAMIC SEARCH QUERIES — covers 15+ job boards ─────────────────────────
+def _build_search_queries() -> list:
+    """Build dynamic Google search queries for all job titles across all major ATS platforms."""
+    from bot.config import JOB_TITLES
+
+    # Core ATS platforms used by thousands of companies
+    ATS_DOMAINS = [
+        "lever.co",
+        "greenhouse.io",
+        "boards.greenhouse.io",
+        "job-boards.greenhouse.io",
+        "job-boards.eu.greenhouse.io",
+        "jobs.ashbyhq.com",
+        "apply.workable.com",
+        "jobs.smartrecruiters.com",
+        "careers.jobvite.com",
+        "app.breezy.hr",
+        "jobs.rippling.com",
+        "recruiting.ultipro.com",
+        "careers.icims.com",
+    ]
+
+    ROLE_KEYWORDS = [
+        '"senior .net developer"',
+        '"senior software engineer" ".net"',
+        '"c# developer"',
+        '"dotnet developer"',
+        '"full stack developer" ".net"',
+        '"software engineer" "asp.net"',
+        '"backend developer" "c#"',
+    ]
+
+    queries = []
+    # 1. ATS-specific searches (most reliable)
+    for domain in ATS_DOMAINS[:8]:  # Top 8 to avoid too many queries
+        kw = " OR ".join(ROLE_KEYWORDS[:3])
+        queries.append(f'site:{domain} {kw}')
+
+    # 2. General Google job search (picks up company career pages)
+    for title in JOB_TITLES[:3]:
+        queries.append(f'"{title}" job "apply now" -.net site:lever.co OR site:greenhouse.io')
+        queries.append(f'"{title}" remote india "easy apply" site:linkedin.com/jobs')
+
+    # 3. India-specific tech company boards
+    queries += [
+        'site:careers.zoho.com "software engineer" OR "developer"',
+        'site:jobs.freshworks.com "engineer"',
+        '"senior .net" OR "c# developer" site:instahyre.com OR site:wellfound.com',
+    ]
+
+    return queries
+
+SEARCH_QUERIES = _build_search_queries()
+
 
 # ─── KNOWN TARGET COMPANIES — direct apply URLs ─────────────────────────────
 # These are added directly. Format: {"company": str, "portal": str, "search_url": str}
