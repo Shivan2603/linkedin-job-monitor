@@ -101,29 +101,28 @@ def groq_complete(system_prompt: str, user_prompt: str,
         raise Exception(f"Groq failed: {e}")
 
 # ─── OPENROUTER (FREE TIER — no credit card needed) ──────────────────────────
-# Full list of free models — ordered best quality → fastest
-# Bot will try each one in sequence, skipping any that are rate-limited/unavailable
+# Full list of confirmed working free models — ordered best quality → fastest
+# Bot tries each in sequence, skipping rate-limited/unavailable ones
 OPENROUTER_FREE_MODELS = [
     # Large flagship models (best quality for resume tailoring)
-    "qwen/qwen3-coder-480b-a35b:free",                # Qwen3 Coder 480B — best for structured output
-    "nousresearch/hermes-3-llama-3.1-405b:free",      # Hermes 405B
-    "nvidia/nemotron-3-ultra-253b-v1:free",            # Nemotron 3 Ultra 253B
-    "nvidia/llama-3.1-nemotron-nano-12b-v2:free",     # Nemotron Nano 12B VL
-    "meta-llama/llama-3.3-70b-instruct:free",          # Llama 3.3 70B
-    "nvidia/nemotron-3-super-120b-a12b:free",          # Nemotron Super 120B
-    "nvidia/gpt-4o-mini-oss-120b:free",                # GPT-OSS 120B
-    "qwen/qwen3-next-80b-a3b-instruct:free",           # Qwen3 80B
-    "google/gemma-4-31b-it:free",                      # Gemma 4 31B
-    "google/gemma-4-27b-a4b:free",                     # Gemma 4 26B A4B
-    "nex-n2-pro:free",                                 # Nex-N2-Pro
-    # Medium models (great balance of speed + quality)
-    "nvidia/gpt-4o-mini-oss-20b:free",                 # GPT-OSS 20B
-    "nvidia/nemotron-3-nano-30b-a3b:free",             # Nemotron Nano 30B A3B
-    "nvidia/nemotron-nano-9b-v2:free",                 # Nemotron Nano 9B
-    "liquid/lfm2.5-1.2b-thinking:free",                # LFM2.5 1.2B Thinking
-    "liquid/lfm2.5-1.2b-instruct:free",                # LFM2.5 1.2B Instruct
-    # Small fast models (fallback for form filling)
-    "meta-llama/llama-3.2-3b-instruct:free",           # Llama 3.2 3B — fastest
+    "nousresearch/hermes-3-llama-3.1-405b:free",        # Hermes 405B — best reasoning
+    "meta-llama/llama-3.3-70b-instruct:free",            # Llama 3.3 70B — reliable workhorse
+    "qwen/qwen3-235b-a22b:free",                         # Qwen3 235B MoE
+    "nvidia/nemotron-super-49b-v1:free",                 # Nemotron Super 49B
+    "google/gemma-4-31b-it:free",                        # Gemma 4 31B
+    "google/gemma-3-27b-it:free",                        # Gemma 3 27B
+    "google/gemma-3-12b-it:free",                        # Gemma 3 12B
+    "tngtech/deepseek-r1t-chimera:free",                 # DeepSeek R1 Chimera
+    "deepseek/deepseek-r1-0528:free",                    # DeepSeek R1 May 2025
+    "deepseek/deepseek-v3-0324:free",                    # DeepSeek V3 March 2025
+    # Medium/fast models (good for form filling)
+    "mistralai/mistral-7b-instruct:free",                # Mistral 7B — fast & solid
+    "microsoft/phi-3-medium-128k-instruct:free",         # Phi-3 Medium 14B
+    "liquid/lfm2.5-1.2b-thinking:free",                  # LFM2.5 Thinking
+    "liquid/lfm2.5-1.2b-instruct:free",                  # LFM2.5 Instruct
+    # Small fast fallbacks
+    "meta-llama/llama-3.2-3b-instruct:free",             # Llama 3.2 3B — fastest
+    "meta-llama/llama-3.2-1b-instruct:free",             # Llama 3.2 1B — absolute last resort
 ]
 
 def openrouter_complete(system_prompt: str, user_prompt: str,

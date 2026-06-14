@@ -12,6 +12,7 @@ from bot.ai_resume import tailor_resume
 from bot.ai_agent_filler import fill_form_with_ai
 from bot.utils import logger
 from bot.utils.logger import record_application, is_already_applied, git_sync
+from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count
 
 SITE = "company_careers"
 
@@ -110,15 +111,8 @@ def run_company_careers_bot():
             headless=False,
             args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
         )
-        context = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/125.0.0.0 Safari/537.36"
-            ),
-            viewport={"width": 1366, "height": 768},
-        )
-        page = context.new_page()
+        browser, context = safe_browser_context(p, "company_careers")
+        page = context.pages[0] if context.pages else context.new_page()
 
         applied = 0
         job_urls = []

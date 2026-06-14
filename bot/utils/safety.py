@@ -203,9 +203,23 @@ def random_viewport() -> dict:
 # ─── BROWSER CONTEXT HELPER ─────────────────────────────────────────────────
 def safe_browser_context(playwright, site: str):
     """
-    Launch a stealth browser context with randomized fingerprint.
+    Launch a stealth persistent browser context.
+    Using a persistent profile retains Gmail/LinkedIn logins permanently!
     """
-    browser = playwright.chromium.launch(
+    user_data_dir = os.path.join(DATA_FOLDER, f"chrome_profile_{site}")
+    os.makedirs(user_data_dir, exist_ok=True)
+    
+    # Clean up stale lock files from crashed previous sessions (prevents Error Code 32)
+    for lock_file in ["SingletonLock", "SingletonSocket", "SingletonCookie"]:
+        lock_path = os.path.join(user_data_dir, lock_file)
+        try:
+            if os.path.exists(lock_path):
+                os.remove(lock_path)
+        except Exception:
+            pass
+    
+    context = playwright.chromium.launch_persistent_context(
+        user_data_dir=user_data_dir,
         headless=False,
         args=[
             "--no-sandbox",
@@ -215,21 +229,19 @@ def safe_browser_context(playwright, site: str):
             "--start-maximized",
         ],
         slow_mo=random.randint(30, 80),   # Slow down ALL actions slightly
-    )
-    context = browser.new_context(
         user_agent=random_user_agent(),
         viewport=random_viewport(),
         locale="en-IN",
         timezone_id="Asia/Kolkata",
-        # Hide webdriver flag
         extra_http_headers={"Accept-Language": "en-IN,en;q=0.9"},
     )
+    
     # Remove navigator.webdriver flag
     context.add_init_script("""
         Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
         Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
         window.chrome = { runtime: {} };
     """)
-    # Try to restore saved cookies (avoids re-login)
-    load_cookies(context, site)
-    return browser, context
+    
+    # Return context as both browser and context for backwards compatibility
+    return context, context
