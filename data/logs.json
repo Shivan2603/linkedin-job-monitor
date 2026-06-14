@@ -1,170 +1,44 @@
 [
   {
-    "id": "4353e605",
-    "ts": "2026-06-14T14:58:26.438281",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Logging into Indeed..."
-  },
-  {
-    "id": "f4d45bcf",
-    "ts": "2026-06-14T14:58:24.370777",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed India bot"
-  },
-  {
-    "id": "1ed1279a",
-    "ts": "2026-06-14T14:58:24.361933",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Indeed India ---"
-  },
-  {
-    "id": "a9435058",
-    "ts": "2026-06-14T14:58:14.338028",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Naukri done ---"
-  },
-  {
-    "id": "f5cbcc01",
-    "ts": "2026-06-14T14:58:14.315903",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri bot session ended"
-  },
-  {
-    "id": "0649656d",
-    "ts": "2026-06-14T14:58:13.764176",
-    "level": "ERROR",
-    "site": "naukri",
-    "message": "Naukri login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[placeholder*=\\\"Email\\\"]\")\n"
-  },
-  {
-    "id": "f6ed6815",
-    "ts": "2026-06-14T14:57:40.849765",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "46c4c9a2",
-    "ts": "2026-06-14T14:57:38.961806",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "🚀 Starting Naukri.com bot"
-  },
-  {
-    "id": "75d5af6d",
-    "ts": "2026-06-14T14:57:38.884269",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "54a69f1e",
-    "ts": "2026-06-14T14:57:28.856124",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "372f33c6",
-    "ts": "2026-06-14T14:57:28.826112",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "fc6bd5b4",
-    "ts": "2026-06-14T14:57:28.297484",
-    "level": "ERROR",
-    "site": "linkedin",
-    "message": "LinkedIn bot crash: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://www.linkedin.com/login\", waiting until \"networkidle\"\n"
-  },
-  {
-    "id": "10b9589f",
-    "ts": "2026-06-14T14:56:58.266311",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "772a2ae7",
-    "ts": "2026-06-14T14:56:56.774628",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
-  },
-  {
-    "id": "ea41fdac",
-    "ts": "2026-06-14T14:56:56.766682",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "c7446a0a",
-    "ts": "2026-06-14T14:56:56.761640",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "07be7cda",
-    "ts": "2026-06-14T14:56:56.757415",
-    "level": "INFO",
-    "site": "system",
-    "message": "📁 Tailored resumes → E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
-  },
-  {
-    "id": "b0a28491",
-    "ts": "2026-06-14T14:56:56.750760",
-    "level": "INFO",
-    "site": "system",
-    "message": "🤖 Job Bot Session Started — 2026-06-14 14:56:56"
-  },
-  {
-    "id": "ea413a76",
-    "ts": "2026-06-14T14:56:56.741401",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d4614a06",
-    "ts": "2026-06-14T14:56:56.734711",
-    "level": "INFO",
-    "site": "system",
-    "message": "♾️  Application limit: UNLIMITED"
-  },
-  {
-    "id": "16a3de41",
-    "ts": "2026-06-14T14:56:56.728022",
-    "level": "INFO",
-    "site": "system",
-    "message": "📅 Active window: 24/7 Continuous Mode"
-  },
-  {
-    "id": "7dd94b66",
-    "ts": "2026-06-14T14:56:56.720249",
-    "level": "INFO",
-    "site": "system",
-    "message": "🚀 Job Bot Scheduler Starting..."
-  },
-  {
-    "id": "cb086d82",
-    "ts": "2026-06-14T14:58:32.129094",
+    "id": "2b3f687e",
+    "ts": "2026-06-14T15:02:16.950993",
     "level": "WARN",
     "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-41: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-41\\\"]\")\n"
+    "message": "Failed to apply at https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278d…: Page.goto: Target page, context or browser has been closed"
   },
   {
-    "id": "12200341",
-    "ts": "2026-06-14T14:58:47.008163",
+    "id": "bf1369de",
+    "ts": "2026-06-14T15:02:16.975072",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178#:~:text=…"
+  },
+  {
+    "id": "4d9d0ebd",
+    "ts": "2026-06-14T15:02:17.011535",
     "level": "WARN",
     "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-30: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-30\\\"]\")\n"
+    "message": "Failed to apply at https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6…: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "965a2a54",
+    "ts": "2026-06-14T15:02:17.044174",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "e44a67c6",
+    "ts": "2026-06-14T15:02:17.096915",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "3d61f14a",
+    "ts": "2026-06-14T15:02:17.383453",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
   }
 ]

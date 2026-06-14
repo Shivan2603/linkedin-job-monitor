@@ -1,8 +1,6 @@
 """
-sites/linkedin.py — LinkedIn Easy Apply automation
-Uses Playwright to log in, search jobs, filter Easy Apply, tailor resume, apply.
-Now integrates ai_agent_filler to handle complex multi-step custom question forms.
-Applies broadly to any matching job — no visa/salary filter.
+sites/linkedin.py — LinkedIn Easy Apply automation (Safe Mode)
+Uses stealth browser, cookie persistence, daily limits, human-like delays.
 """
 import time, random, os
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
@@ -10,13 +8,15 @@ from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.ai_agent_filler import fill_form_with_ai
 from bot.utils import logger
-from bot.utils.logger import record_application, is_already_applied, git_sync
+from bot.utils.logger import record_application, is_already_applied
+from bot.utils.safety import (
+    safe_browser_context, save_cookies, load_cookies,
+    long_delay, medium_delay, short_delay, think_delay,
+    human_type, human_scroll, check_daily_limit, increment_daily_count
+)
 
 SITE = "linkedin"
 BASE_URL = "https://www.linkedin.com"
-
-def _human_delay(a=1.5, b=3.5):
-    time.sleep(random.uniform(a, b))
 
 def run_linkedin_bot():
     """Main entry point — applies to all matching LinkedIn Easy Apply jobs"""
@@ -28,18 +28,7 @@ def run_linkedin_bot():
     logger.info("🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)", SITE)
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=False,  # Set to False so user can solve CAPTCHAs/2FA
-            args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
-        )
-        context = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/125.0.0.0 Safari/537.36"
-            ),
-            viewport={"width": 1366, "height": 768},
-        )
+        browser, context = safe_browser_context(p, SITE)
         page = context.new_page()
 
         try:

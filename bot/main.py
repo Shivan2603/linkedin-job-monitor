@@ -1,72 +1,77 @@
 """
 main.py — Master orchestrator for the Job Application Bot
-Runs all site bots sequentially within the 12 AM – 11 PM window
-Loops continuously throughout the day applying to new jobs
+Safe mode: daily limits, site cooldowns, human-like pacing
 """
-import time
-import schedule
-import sys, os
+import time, random, sys, os
 from datetime import datetime
 
-# Allow importing from bot package
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from bot.config import BOT_START_HOUR, BOT_END_HOUR, TAILORED_TODAY
+from bot.config import TAILORED_TODAY
 from bot.utils import logger
+from bot.utils.safety import site_cooldown, get_daily_stats, check_daily_limit
 
 # Site bots
-from bot.sites.linkedin import run_linkedin_bot
-from bot.sites.naukri   import run_naukri_bot
-from bot.sites.indeed   import run_indeed_bot
-from bot.sites.shine    import run_shine_bot
-from bot.sites.monster  import run_monster_bot
+from bot.sites.linkedin        import run_linkedin_bot
+from bot.sites.naukri          import run_naukri_bot
+from bot.sites.indeed          import run_indeed_bot
+from bot.sites.shine           import run_shine_bot
+from bot.sites.monster         import run_monster_bot
 from bot.sites.company_careers import run_company_careers_bot
 
 SITE_BOTS = [
-    ("LinkedIn",      run_linkedin_bot),
-    ("Naukri",        run_naukri_bot),
-    ("Indeed India",  run_indeed_bot),
-    ("Shine",         run_shine_bot),
-    ("Monster India", run_monster_bot),
-    ("Company Careers", run_company_careers_bot),
+    ("linkedin",        "LinkedIn",        run_linkedin_bot),
+    ("company_careers", "Company Careers", run_company_careers_bot),
+    ("naukri",          "Naukri",          run_naukri_bot),
+    ("indeed",          "Indeed India",    run_indeed_bot),
+    ("shine",           "Shine",           run_shine_bot),
+    ("monster",         "Monster India",   run_monster_bot),
 ]
 
 def run_all_sites():
-    """Run all configured job site bots"""
-
     logger.info("=" * 60)
-    logger.info(f"🤖 Job Bot Session Started — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"📁 Tailored resumes → {TAILORED_TODAY}")
+    logger.info(f"Job Bot Session Started — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"Tailored resumes: {TAILORED_TODAY}")
     logger.info("=" * 60)
 
-    for site_name, bot_fn in SITE_BOTS:
+    stats = get_daily_stats()
+    logger.info(f"Today's applications so far: {stats}")
+
+    first_site = True
+    for site_key, site_name, bot_fn in SITE_BOTS:
+        if not check_daily_limit(site_key):
+            logger.info(f"Skipping {site_name} — daily limit reached", site_key)
+            continue
+
+        if not first_site:
+            site_cooldown()   # 30–90 sec random pause between sites
+        first_site = False
+
         logger.info(f"--- Starting {site_name} ---")
         try:
             bot_fn()
         except Exception as e:
-            logger.error(f"{site_name} failed with error: {e}")
+            logger.error(f"{site_name} crashed: {e}")
         logger.info(f"--- {site_name} done ---")
-        time.sleep(10)  # Brief pause between sites
 
-    logger.info("✅ All site bots completed for this cycle.")
-    logger.info("💤 Waiting 60 minutes before next cycle...")
+    logger.info("All sites completed for this cycle.")
+    stats = get_daily_stats()
+    logger.info(f"Today's total applications: {stats}")
+    logger.info("Waiting 60-90 minutes before next cycle...")
 
 def main():
-    logger.info("🚀 Job Bot Scheduler Starting...")
-    logger.info("📅 Active window: 24/7 Continuous Mode")
-    logger.info("♾️  Application limit: UNLIMITED")
+    logger.info("Job Bot Starting — Safe Mode Active")
+    logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50")
+    logger.info("Anti-ban: random delays, cookie persistence, stealth browser")
 
-    # Run immediately on start
     run_all_sites()
 
-    # Then run every 60 minutes
-    schedule.every(60).minutes.do(run_all_sites)
-
-    logger.info("⏰ Scheduler running. Bot will cycle every 60 minutes.")
-
+    # Randomize cycle time (60–90 min) to avoid pattern detection
     while True:
-        schedule.run_pending()
-        time.sleep(60)  # Check every minute
+        wait_mins = random.randint(60, 90)
+        logger.info(f"Next cycle in {wait_mins} minutes...")
+        time.sleep(wait_mins * 60)
+        run_all_sites()
 
 if __name__ == "__main__":
     main()
