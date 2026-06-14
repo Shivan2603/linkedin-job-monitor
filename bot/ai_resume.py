@@ -66,7 +66,7 @@ Return JSON with:
         doc = Document(BASE_RESUME_DOCX)
         _apply_tailoring(doc, tailored)
 
-        filename = f"{safe_company}_{safe_role}_{match_score}pct.docx"
+        filename = f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx"
         out_path = os.path.join(TAILORED_TODAY, filename)
         doc.save(out_path)
         logger.ai(f"Resume saved: {filename} ({match_score}% match)", site=site)
@@ -89,7 +89,7 @@ Return JSON with:
 
     except Exception as e:
         logger.error(f"Resume tailoring failed: {e}", site=site)
-        out_path = os.path.join(TAILORED_TODAY, f"{safe_company}_{safe_role}_base.docx")
+        out_path = os.path.join(TAILORED_TODAY, f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx")
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
         return {"resume_path": out_path, "match_score": 85, "tailored": {}, "ats_report": {}}
