@@ -1,5 +1,152 @@
 [
   {
+    "id": "70324185",
+    "ts": "2026-06-14T17:44:49.061571",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior Software Developer (.NET) | Remote | 94% match"
+  },
+  {
+    "id": "a54fbdd5",
+    "ts": "2026-06-14T17:44:48.934816",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "8d423115",
+    "ts": "2026-06-14T17:44:45.400525",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "377fd0f0",
+    "ts": "2026-06-14T17:44:44.628288",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior Software Developer (.NET) (94%)"
+  },
+  {
+    "id": "f00e3543",
+    "ts": "2026-06-14T17:44:44.592257",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "cf5f9655",
+    "ts": "2026-06-14T17:44:44.558606",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "4aab61b0",
+    "ts": "2026-06-14T17:44:44.397397",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Senior_Software_Deve_94pct.docx (94% match)"
+  },
+  {
+    "id": "d16f9aba",
+    "ts": "2026-06-14T17:44:44.278525",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "05eaeb9d",
+    "ts": "2026-06-14T17:44:44.247240",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "b9198e7c",
+    "ts": "2026-06-14T17:44:40.009472",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "aa391d04",
+    "ts": "2026-06-14T17:44:39.659646",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Business Development"
+  },
+  {
+    "id": "3b99b9ce",
+    "ts": "2026-06-14T17:44:23.627017",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Credit Card Analyst (92%)"
+  },
+  {
+    "id": "24d78275",
+    "ts": "2026-06-14T17:44:23.610783",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "5639ce97",
+    "ts": "2026-06-14T17:44:23.593952",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "7df0c6c1",
+    "ts": "2026-06-14T17:44:23.511752",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Credit_Card_Analyst_92pct.docx (92% match)"
+  },
+  {
+    "id": "7c735463",
+    "ts": "2026-06-14T17:44:23.429277",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "cb42105b",
+    "ts": "2026-06-14T17:44:14.821953",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "15900293",
+    "ts": "2026-06-14T17:44:13.898187",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "2fe52471",
+    "ts": "2026-06-14T17:44:13.853844",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "664c8b2f",
+    "ts": "2026-06-14T17:44:13.356075",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior Software Developer (.NET)"
+  },
+  {
+    "id": "e0ca040a",
+    "ts": "2026-06-14T17:44:09.272549",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior .Net Developer (94%)"
+  },
+  {
     "id": "f8988c53",
     "ts": "2026-06-14T17:44:02.275092",
     "level": "SUCCESS",
@@ -3351,152 +3498,5 @@
     "level": "AI",
     "site": "ai",
     "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "ef786f23",
-    "ts": "2026-06-14T16:38:20.230974",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer (.NET) - Evry Health"
-  },
-  {
-    "id": "2fa7786e",
-    "ts": "2026-06-14T16:38:16.931407",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/evry-health/efa4c6a6-a5cb-42cc-8682-b1af9f01e195#:~:text=S…"
-  },
-  {
-    "id": "0c2a7d20",
-    "ts": "2026-06-14T16:38:16.913200",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "b89ba7ab",
-    "ts": "2026-06-14T16:38:16.881873",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "40ca0807",
-    "ts": "2026-06-14T16:38:16.867682",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "ae473030",
-    "ts": "2026-06-14T16:38:16.834649",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Leadstreams_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "cd8e3ed7",
-    "ts": "2026-06-14T16:38:16.803241",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "741bc0f5",
-    "ts": "2026-06-14T16:38:16.778471",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Leadstreams - Software Engineer"
-  },
-  {
-    "id": "7266c631",
-    "ts": "2026-06-14T16:38:12.997127",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
-  },
-  {
-    "id": "f53d1e0f",
-    "ts": "2026-06-14T16:38:02.809243",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "✅ Applied → US Remote at PerfectServe | Job Application for Senior Software Engineer, .NET via Greenhouse"
-  },
-  {
-    "id": "d8db1587",
-    "ts": "2026-06-14T16:37:58.926812",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: US Remote at PerfectServe | Job Application for Senior Software Engineer, .NET | Remote/Various | 92% match"
-  },
-  {
-    "id": "0770cbc9",
-    "ts": "2026-06-14T16:37:53.220286",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 10/16 fields via AI."
-  },
-  {
-    "id": "b741dd30",
-    "ts": "2026-06-14T16:37:52.329723",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "95ac3607",
-    "ts": "2026-06-14T16:37:48.562959",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "a2a15a72",
-    "ts": "2026-06-14T16:37:48.549741",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "bb15a72e",
-    "ts": "2026-06-14T16:37:48.512368",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: US_Remote_at_Perfect_Job_Application_for__92pct.docx (92% match)"
-  },
-  {
-    "id": "72abc0eb",
-    "ts": "2026-06-14T16:37:48.486399",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "81559617",
-    "ts": "2026-06-14T16:37:48.458528",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for US Remote at PerfectServe - Job Application for Senior Software Engineer, .NET"
-  },
-  {
-    "id": "371f2d59",
-    "ts": "2026-06-14T16:37:45.400619",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/perfectserve/jobs/5826519004…"
-  },
-  {
-    "id": "b57bea7b",
-    "ts": "2026-06-14T16:37:45.371822",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "8dddcf3c",
-    "ts": "2026-06-14T16:37:45.357837",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
   }
 ]
