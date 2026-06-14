@@ -218,6 +218,45 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
 
     raise Exception("All Gemini models unavailable")
 
+# ─── OLLAMA LOCAL AI (100% OFFLINE FALLBACK) ─────────────────────────────
+OLLAMA_URL    = "http://localhost:11434/api/generate"
+OLLAMA_MODELS = [
+    "phi3:mini",        # Microsoft Phi-3 Mini 3.8B — ultra efficient for 8GB RAM
+    "llama3.2:3b",      # Meta Llama 3.2 3B — fast, good JSON output
+    "mistral:7b",       # Mistral 7B — best quality if RAM allows
+    "phi3:medium",      # Phi-3 Medium 14B — best quality for Phi
+]
+
+def ollama_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
+    """
+    Runs a local LLM via Ollama as the absolute last fallback.
+    Zero cost, zero internet, zero rate limits.
+    Install: run SETUP_LOCAL_AI.bat
+    """
+    combined = f"{system_prompt}\n\n{user_prompt}"
+    for model in OLLAMA_MODELS:
+        try:
+            resp = requests.post(
+                OLLAMA_URL,
+                json={"model": model, "prompt": combined, "stream": False,
+                      "options": {"num_predict": max_tokens, "temperature": 0.3}},
+                timeout=120,  # Local models can be slow on CPU
+            )
+            if resp.status_code == 404:
+                # Model not pulled yet, try next
+                continue
+            resp.raise_for_status()
+            result = resp.json().get("response", "").strip()
+            if result:
+                logger.ai(f"AI response from Local Ollama ({model})", "ai")
+                return result
+        except requests.ConnectionError:
+            raise Exception("Ollama not running — run SETUP_LOCAL_AI.bat to install")
+        except Exception as e:
+            logger.warn(f"Ollama {model} failed: {str(e)[:60]}", "ai")
+            continue
+    raise Exception("All Ollama local models unavailable")
+
 # ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
 def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
@@ -238,21 +277,23 @@ def ai_complete(system_prompt: str, user_prompt: str,
     # 2. Build provider chain based on task
     if task == "form_fill":
         providers = [
-            ("Gemini-Fast", lambda: gemini_complete(combined, max_tokens)),
-            ("Groq-Fast", lambda: groq_complete(system_prompt, user_prompt,
-                                                model=GROQ_MODEL_FAST,
-                                                max_tokens=max_tokens)),
-            ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
-                                                       max_tokens=max_tokens)),
+            ("Gemini-Fast",  lambda: gemini_complete(combined, max_tokens)),
+            ("Groq-Fast",    lambda: groq_complete(system_prompt, user_prompt,
+                                                   model=GROQ_MODEL_FAST,
+                                                   max_tokens=max_tokens)),
+            ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
+                                                         max_tokens=max_tokens)),
+            ("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)),
         ]
     else:
         # tailor, ats_check, general → best quality first
         providers = [
-            ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
-            ("Groq",      lambda: groq_complete(system_prompt, user_prompt,
-                                                max_tokens=max_tokens)),
-            ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
-                                                       max_tokens=max_tokens)),
+            ("Gemini",       lambda: gemini_complete(combined, max_tokens)),
+            ("Groq",         lambda: groq_complete(system_prompt, user_prompt,
+                                                   max_tokens=max_tokens)),
+            ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
+                                                         max_tokens=max_tokens)),
+            ("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)),
         ]
 
     last_error = None
@@ -273,7 +314,7 @@ def ai_complete(system_prompt: str, user_prompt: str,
             last_error = e
             continue
 
-    raise Exception(f"All AI providers failed. Last: {last_error}")
+    raise Exception(f"All AI providers failed (Cloud + Local). Last: {last_error}")
 
 # ─── ATS CHECKER ─────────────────────────────────────────────────────────────
 def check_resume_ats(resume_text: str, job_description: str,
