@@ -1,5 +1,306 @@
 [
   {
+    "id": "3c896ecb",
+    "ts": "2026-06-14T17:42:14.643394",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "816329f5",
+    "ts": "2026-06-14T17:42:14.421467",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Client Consulting Analyst, VCA"
+  },
+  {
+    "id": "81192f3b",
+    "ts": "2026-06-14T17:42:02.696151",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Software Engineer (AI Engineer, Python) (92%)"
+  },
+  {
+    "id": "cbc72c04",
+    "ts": "2026-06-14T17:42:02.679257",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "170425cc",
+    "ts": "2026-06-14T17:42:02.655923",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "a5553f23",
+    "ts": "2026-06-14T17:42:02.548452",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Software_Engineer__A_92pct.docx (92% match)"
+  },
+  {
+    "id": "f0e86bb7",
+    "ts": "2026-06-14T17:42:02.450304",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "60b208f0",
+    "ts": "2026-06-14T17:41:27.144385",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "e87a17e8",
+    "ts": "2026-06-14T17:41:26.558201",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Software Engineer (AI Engineer, Python)"
+  },
+  {
+    "id": "7f2858fd",
+    "ts": "2026-06-14T17:41:20.281549",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "47447cc6",
+    "ts": "2026-06-14T17:41:17.547843",
+    "level": "WARN",
+    "site": "naukri",
+    "message": "Naukri URL apply error: fill_form_with_ai() got multiple values for argument 'site'"
+  },
+  {
+    "id": "4281756b",
+    "ts": "2026-06-14T17:41:12.278923",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "90323c10",
+    "ts": "2026-06-14T17:41:12.224209",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "2401ab73",
+    "ts": "2026-06-14T17:41:12.119680",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri already logged in via cookies"
+  },
+  {
+    "id": "3c312f9e",
+    "ts": "2026-06-14T17:41:09.313020",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "40a11879",
+    "ts": "2026-06-14T17:41:06.868008",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior .NET Developers (85%)"
+  },
+  {
+    "id": "fd4490d8",
+    "ts": "2026-06-14T17:41:06.789756",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Resume tailoring failed: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "0e87ac75",
+    "ts": "2026-06-14T17:41:06.748293",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "8192a9c2",
+    "ts": "2026-06-14T17:41:06.679749",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "3766d923",
+    "ts": "2026-06-14T17:41:06.184873",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "81b137e1",
+    "ts": "2026-06-14T17:41:05.144674",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Loaded 16 saved cookies for naukri"
+  },
+  {
+    "id": "196b5850",
+    "ts": "2026-06-14T17:41:02.633264",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "df96ef6d",
+    "ts": "2026-06-14T17:41:01.881232",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "5f4d42ca",
+    "ts": "2026-06-14T17:40:29.036581",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 33s before next site..."
+  },
+  {
+    "id": "3ee229e3",
+    "ts": "2026-06-14T17:40:28.993379",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "3d4797a5",
+    "ts": "2026-06-14T17:40:28.876725",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 1 positions."
+  },
+  {
+    "id": "c7c0d748",
+    "ts": "2026-06-14T17:40:27.674760",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 1/53 fields via AI."
+  },
+  {
+    "id": "8d6173fc",
+    "ts": "2026-06-14T17:40:25.812997",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "e3395fca",
+    "ts": "2026-06-14T17:40:25.449402",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "131e6398",
+    "ts": "2026-06-14T17:40:24.214887",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
+  },
+  {
+    "id": "46c7e474",
+    "ts": "2026-06-14T17:40:22.878756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "87f10635",
+    "ts": "2026-06-14T17:40:21.835142",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "eb8ce937",
+    "ts": "2026-06-14T17:40:21.793365",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "18d92c2b",
+    "ts": "2026-06-14T17:40:21.634286",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Dept_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "fe94730e",
+    "ts": "2026-06-14T17:40:21.479117",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "2d2f3b2a",
+    "ts": "2026-06-14T17:40:21.353330",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Dept - Software Engineer"
+  },
+  {
+    "id": "cd610226",
+    "ts": "2026-06-14T17:40:20.630080",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "d95f0d28",
+    "ts": "2026-06-14T17:40:16.472279",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "3a3757cf",
+    "ts": "2026-06-14T17:40:16.431561",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "16cd8dd9",
+    "ts": "2026-06-14T17:40:16.111190",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/dept/jobs/7553240…"
+  },
+  {
+    "id": "ec7c844a",
+    "ts": "2026-06-14T17:40:16.019307",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior .NET Developers"
+  },
+  {
+    "id": "76dd4775",
+    "ts": "2026-06-14T17:40:12.125115",
+    "level": "WARN",
+    "site": "naukri",
+    "message": "Naukri URL apply error: Timeout 15000ms exceeded.\n=========================== logs ===========================\n\"domcontentlo"
+  },
+  {
+    "id": "ad46a22b",
+    "ts": "2026-06-14T17:40:04.619229",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Constructortech | Software Engineer via Greenhouse"
+  },
+  {
     "id": "d87194b1",
     "ts": "2026-06-14T17:39:57.306036",
     "level": "SUCCESS",
@@ -3197,306 +3498,5 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "f6086dde",
-    "ts": "2026-06-14T16:32:47.172606",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "66f46a34",
-    "ts": "2026-06-14T16:31:30.456030",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 77s before next site..."
-  },
-  {
-    "id": "886ad30b",
-    "ts": "2026-06-14T16:31:30.440284",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "0d5d8863",
-    "ts": "2026-06-14T16:31:30.393007",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "7245aa80",
-    "ts": "2026-06-14T16:31:29.975454",
-    "level": "ERROR",
-    "site": "linkedin",
-    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
-  },
-  {
-    "id": "a9536a0b",
-    "ts": "2026-06-14T16:30:55.662305",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "3cbfe2e9",
-    "ts": "2026-06-14T16:30:53.207901",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "50728f98",
-    "ts": "2026-06-14T16:30:53.189048",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "f50d27cc",
-    "ts": "2026-06-14T16:30:53.173279",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
-  },
-  {
-    "id": "f8598833",
-    "ts": "2026-06-14T16:30:53.157307",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "24904e02",
-    "ts": "2026-06-14T16:30:53.141550",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
-  },
-  {
-    "id": "aa9ca03f",
-    "ts": "2026-06-14T16:30:53.129457",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-14 16:30:53"
-  },
-  {
-    "id": "55e742a6",
-    "ts": "2026-06-14T16:30:53.109924",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "86551ac9",
-    "ts": "2026-06-14T16:30:53.094130",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "4808450a",
-    "ts": "2026-06-14T16:30:53.078414",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
-  },
-  {
-    "id": "17ee84ce",
-    "ts": "2026-06-14T16:30:53.062643",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "fd2ea6af",
-    "ts": "2026-06-14T16:29:55.295203",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "aa9bac22",
-    "ts": "2026-06-14T16:29:54.231297",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "07b18fdb",
-    "ts": "2026-06-14T16:29:53.473104",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
-  },
-  {
-    "id": "f076d0e7",
-    "ts": "2026-06-14T16:29:52.759999",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "c7118ded",
-    "ts": "2026-06-14T16:29:49.807844",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "fd45fa1b",
-    "ts": "2026-06-14T16:28:39.518298",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter microsoft/phi-3-mini-128k-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "745686e5",
-    "ts": "2026-06-14T16:28:39.015145",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-2-9b-it:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "304790d5",
-    "ts": "2026-06-14T16:28:38.835182",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter mistralai/mistral-7b-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "7c73888e",
-    "ts": "2026-06-14T16:28:38.388354",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3-8b-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "03fcbac9",
-    "ts": "2026-06-14T16:16:49.445990",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 83s before next site..."
-  },
-  {
-    "id": "83c6ac09",
-    "ts": "2026-06-14T16:16:49.413519",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "6e21ac9c",
-    "ts": "2026-06-14T16:16:49.367527",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "✅ Company Careers bot finished. Applied to 0 positions."
-  },
-  {
-    "id": "341a7e40",
-    "ts": "2026-06-14T16:16:48.747080",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "37d8baaa",
-    "ts": "2026-06-14T16:16:48.694564",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
-  },
-  {
-    "id": "e6469b86",
-    "ts": "2026-06-14T16:16:48.669777",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models unavailable"
-  },
-  {
-    "id": "ebfd67b0",
-    "ts": "2026-06-14T16:16:48.628080",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1cf25d63",
-    "ts": "2026-06-14T16:16:48.408667",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
-  },
-  {
-    "id": "9149baf8",
-    "ts": "2026-06-14T16:16:47.979285",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
-  },
-  {
-    "id": "d07d3835",
-    "ts": "2026-06-14T16:16:47.539644",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
-  },
-  {
-    "id": "9377a66d",
-    "ts": "2026-06-14T16:16:27.345601",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 20s then retrying..."
-  },
-  {
-    "id": "54ae8b76",
-    "ts": "2026-06-14T16:16:26.855967",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Valarian - Software Engineer"
-  },
-  {
-    "id": "fac12fef",
-    "ts": "2026-06-14T16:16:23.780392",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
-  },
-  {
-    "id": "fcfe5ae5",
-    "ts": "2026-06-14T16:16:23.755457",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Growe — Software Engineer (Already applied)"
-  },
-  {
-    "id": "1637caff",
-    "ts": "2026-06-14T16:16:19.406057",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
-  },
-  {
-    "id": "78c29e44",
-    "ts": "2026-06-14T16:16:19.376366",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "0f091c40",
-    "ts": "2026-06-14T16:16:19.311878",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
-  },
-  {
-    "id": "10c5e109",
-    "ts": "2026-06-14T16:16:19.292420",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models unavailable"
   }
 ]

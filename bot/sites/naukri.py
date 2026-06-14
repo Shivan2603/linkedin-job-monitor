@@ -360,11 +360,30 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
 
         apply_btn.scroll_into_view_if_needed()
         _delay(0.3, 0.6)
-        apply_btn.click()
-        _delay(2, 3)
 
-        # ── Handle application form/modal ─────────────────────────────────────
-        success = _handle_application(page, resume_path, job_title)
+        btn_text_lower = apply_btn.inner_text().lower()
+        is_company_site = "company" in btn_text_lower
+
+        if is_company_site:
+            # Handle Apply on Company Site (opens new tab)
+            logger.info("Naukri: 'Apply on Company Site' detected — opening ATS...", SITE)
+            with page.context.expect_page(timeout=10000) as new_page_info:
+                apply_btn.click()
+            new_page = new_page_info.value
+            new_page.wait_for_load_state("networkidle", timeout=15000)
+            
+            from bot.ai_agent_filler import fill_form_with_ai
+            success = fill_form_with_ai(new_page, site=SITE)
+            try:
+                new_page.close()
+            except Exception:
+                pass
+        else:
+            # Normal Naukri Easy Apply
+            apply_btn.click()
+            _delay(2, 3)
+            # ── Handle application form/modal ─────────────────────────────────────
+            success = _handle_application(page, resume_path, job_title)
 
         if success:
             record_application(
