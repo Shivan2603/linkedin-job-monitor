@@ -1,5 +1,103 @@
 [
   {
+    "id": "909686a7",
+    "ts": "2026-06-14T17:53:48.958911",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior Software Engineer | Remote | 94% match"
+  },
+  {
+    "id": "72bd5b82",
+    "ts": "2026-06-14T17:53:48.798771",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "57202ceb",
+    "ts": "2026-06-14T17:53:45.706972",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "f1039ac5",
+    "ts": "2026-06-14T17:53:45.191528",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior Software Engineer (94%)"
+  },
+  {
+    "id": "33088c73",
+    "ts": "2026-06-14T17:53:45.166635",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "83bcd520",
+    "ts": "2026-06-14T17:53:45.141653",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "245ce1e6",
+    "ts": "2026-06-14T17:53:45.028197",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Senior_Software_Engi_Company_Resume.docx (94% match)"
+  },
+  {
+    "id": "554ee619",
+    "ts": "2026-06-14T17:53:44.965059",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "8c380716",
+    "ts": "2026-06-14T17:53:44.945377",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "9b9a49e3",
+    "ts": "2026-06-14T17:53:16.960770",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "5aa5edee",
+    "ts": "2026-06-14T17:53:14.687657",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "c3341b74",
+    "ts": "2026-06-14T17:53:14.497718",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "a8868801",
+    "ts": "2026-06-14T17:53:10.504285",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior Software Engineer"
+  },
+  {
+    "id": "e994fd26",
+    "ts": "2026-06-14T17:52:52.922084",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior Data Engineer (Java/Python, Spark & Hadoop) (92%)"
+  },
+  {
     "id": "e15d2388",
     "ts": "2026-06-14T17:52:45.949417",
     "level": "SUCCESS",
@@ -3400,103 +3498,5 @@
     "level": "INFO",
     "site": "naukri",
     "message": "No apply button: Company — Senior .NET Developers"
-  },
-  {
-    "id": "6120f258",
-    "ts": "2026-06-14T16:46:55.403968",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 19 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "87ef85a3",
-    "ts": "2026-06-14T16:46:48.080602",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "07652a75",
-    "ts": "2026-06-14T16:46:48.038378",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Cookies saved for naukri"
-  },
-  {
-    "id": "fe1d117b",
-    "ts": "2026-06-14T16:46:47.966666",
-    "level": "SUCCESS",
-    "site": "naukri",
-    "message": "Naukri already logged in via cookies"
-  },
-  {
-    "id": "2ca7fff9",
-    "ts": "2026-06-14T16:46:43.826174",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "4e493ecf",
-    "ts": "2026-06-14T16:46:42.785087",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Loaded 18 saved cookies for naukri"
-  },
-  {
-    "id": "13b2a3d2",
-    "ts": "2026-06-14T16:46:41.039974",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Starting Naukri.com bot"
-  },
-  {
-    "id": "b20f6de6",
-    "ts": "2026-06-14T16:46:41.020798",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "ed621f57",
-    "ts": "2026-06-14T16:45:45.922806",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 55s before next site..."
-  },
-  {
-    "id": "a88abdea",
-    "ts": "2026-06-14T16:45:45.890573",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "290bdc3b",
-    "ts": "2026-06-14T16:45:45.820706",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "✅ Company Careers bot finished. Applied to 4 positions."
-  },
-  {
-    "id": "3f7ab63b",
-    "ts": "2026-06-14T16:45:45.081708",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "6b0b7243",
-    "ts": "2026-06-14T16:45:45.039930",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "1a6fa2c9",
-    "ts": "2026-06-14T16:45:45.024353",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
   }
 ]
