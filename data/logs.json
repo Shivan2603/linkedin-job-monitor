@@ -1,5 +1,96 @@
 [
   {
+    "id": "17410397",
+    "ts": "2026-06-14T16:45:13.858903",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Abbyy | Software Engineer | Remote/Various | 92% match"
+  },
+  {
+    "id": "eecef0f1",
+    "ts": "2026-06-14T16:45:09.361618",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 21/46 fields via AI."
+  },
+  {
+    "id": "c9f594f6",
+    "ts": "2026-06-14T16:45:06.694494",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to fill field ai-form-field-16: Locator.fill: Error: Cannot type text into input[type=number"
+  },
+  {
+    "id": "88cb4ffd",
+    "ts": "2026-06-14T16:45:03.332227",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "bef1613f",
+    "ts": "2026-06-14T16:44:31.942312",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "d76dc2d2",
+    "ts": "2026-06-14T16:44:29.442801",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "e9248c1d",
+    "ts": "2026-06-14T16:44:29.409927",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "09f791fe",
+    "ts": "2026-06-14T16:44:29.327505",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Abbyy_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "9053ac52",
+    "ts": "2026-06-14T16:44:29.254324",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "8019c697",
+    "ts": "2026-06-14T16:43:55.960812",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "1ba15265",
+    "ts": "2026-06-14T16:43:55.343155",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Abbyy - Software Engineer"
+  },
+  {
+    "id": "74b46cab",
+    "ts": "2026-06-14T16:43:51.670789",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101…"
+  },
+  {
+    "id": "fd8686fe",
+    "ts": "2026-06-14T16:43:41.870433",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Diligentcorporation | Software Engineer via Greenhouse"
+  },
+  {
     "id": "7f12e8a2",
     "ts": "2026-06-14T16:43:36.656517",
     "level": "SUCCESS",
@@ -3407,96 +3498,5 @@
     "level": "WARN",
     "site": "company_careers",
     "message": "Failed to fill field ai-form-field-25: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-25\\\"]\")\n"
-  },
-  {
-    "id": "2c834fea",
-    "ts": "2026-06-14T15:30:45.586133",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-24: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-24\\\"]\")\n"
-  },
-  {
-    "id": "592f2619",
-    "ts": "2026-06-14T15:30:15.534987",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-23: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-23\\\"]\")\n"
-  },
-  {
-    "id": "834ce60e",
-    "ts": "2026-06-14T15:29:45.499166",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-22: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-22\\\"]\")\n"
-  },
-  {
-    "id": "9f5e0319",
-    "ts": "2026-06-14T15:29:15.459065",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-21: Locator.evaluate: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"[data-ai-id=\\\"ai-form-field-21\\\"]\")\n"
-  },
-  {
-    "id": "a609f217",
-    "ts": "2026-06-14T15:28:43.561607",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "de9bd828",
-    "ts": "2026-06-14T15:28:37.792669",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['B2B iGaming platforms', 'full-cycle tech', 'seamless integrations']"
-  },
-  {
-    "id": "997d9d19",
-    "ts": "2026-06-14T15:28:37.777721",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (ats_check)"
-  },
-  {
-    "id": "530582b9",
-    "ts": "2026-06-14T15:28:36.511776",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "d4b1f052",
-    "ts": "2026-06-14T15:28:36.325757",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Gr8Tech_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "f326140f",
-    "ts": "2026-06-14T15:28:36.273649",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "0f549d54",
-    "ts": "2026-06-14T15:28:34.518425",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Gr8Tech - Software Engineer"
-  },
-  {
-    "id": "82dbb38c",
-    "ts": "2026-06-14T15:28:30.711485",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/gr8tech/jobs/4794468101…"
-  },
-  {
-    "id": "29f94957",
-    "ts": "2026-06-14T15:28:30.676437",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
   }
 ]
