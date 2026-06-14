@@ -162,11 +162,16 @@ def _search_and_apply(page: Page, job_title: str, location: str):
     logger.info(f"Searching Naukri: '{job_title}' in '{location}'", SITE)
 
     # Build search URL with experience filter (3-8 years)
-    slug = job_title.lower().replace(" ", "-")
+    search_keyword = job_title
+    india_locs = ["bangalore", "chennai", "hyderabad", "pune", "mumbai", "delhi", "india"]
+    if not any(loc in location.lower() for loc in india_locs):
+        search_keyword = f"{job_title} visa sponsorship"
+
+    slug = search_keyword.lower().replace(" ", "-")
     loc  = location.lower().replace(" ", "-")
     search_url = (
         f"{BASE_URL}/{quote(slug)}-jobs"
-        f"?k={quote(job_title)}&l={quote(location)}"
+        f"?k={quote(search_keyword)}&l={quote(location)}"
         f"&experience=3,8&jobAge=7&sort=1"  # sort=1 = most relevant
     )
 
