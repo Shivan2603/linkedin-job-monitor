@@ -109,10 +109,12 @@ def groq_complete(system_prompt: str, user_prompt: str,
 # Sign up free: https://openrouter.ai → Create API Key
 # Free models: mistral-7b, llama-3-8b, gemma-2-9b, phi-3-mini (all :free)
 OPENROUTER_FREE_MODELS = [
-    "meta-llama/llama-3-8b-instruct:free",
-    "mistralai/mistral-7b-instruct:free",
-    "google/gemma-2-9b-it:free",
-    "microsoft/phi-3-mini-128k-instruct:free",
+    "meta-llama/llama-3.3-70b-instruct:free",      # Best quality — Llama 3.3 70B free
+    "google/gemma-4-31b-it:free",                   # Google Gemma 4 31B free
+    "nousresearch/hermes-3-llama-3.1-405b:free",    # Hermes 405B free
+    "qwen/qwen3-next-80b-a3b-instruct:free",        # Qwen3 80B free
+    "nvidia/nemotron-3-super-120b-a12b:free",       # Nvidia 120B free
+    "meta-llama/llama-3.2-3b-instruct:free",        # Fast small model fallback
 ]
 
 def openrouter_complete(system_prompt: str, user_prompt: str,

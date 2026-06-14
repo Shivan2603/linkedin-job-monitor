@@ -1,5 +1,68 @@
 [
   {
+    "id": "fd2ea6af",
+    "ts": "2026-06-14T16:29:55.295203",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "aa9bac22",
+    "ts": "2026-06-14T16:29:54.231297",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "07b18fdb",
+    "ts": "2026-06-14T16:29:53.473104",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
+  },
+  {
+    "id": "f076d0e7",
+    "ts": "2026-06-14T16:29:52.759999",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "c7118ded",
+    "ts": "2026-06-14T16:29:49.807844",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "fd45fa1b",
+    "ts": "2026-06-14T16:28:39.518298",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter microsoft/phi-3-mini-128k-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "745686e5",
+    "ts": "2026-06-14T16:28:39.015145",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-2-9b-it:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "304790d5",
+    "ts": "2026-06-14T16:28:38.835182",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter mistralai/mistral-7b-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "7c73888e",
+    "ts": "2026-06-14T16:28:38.388354",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3-8b-instruct:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
     "id": "03fcbac9",
     "ts": "2026-06-14T16:16:49.445990",
     "level": "INFO",
@@ -3435,68 +3498,5 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
-  },
-  {
-    "id": "1432b1ce",
-    "ts": "2026-06-14T15:02:39.232655",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
-  },
-  {
-    "id": "b367f220",
-    "ts": "2026-06-14T15:02:32.750234",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
-  },
-  {
-    "id": "318fd935",
-    "ts": "2026-06-14T15:02:26.684347",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "7f3bbbe3",
-    "ts": "2026-06-14T15:02:26.675028",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "1faedccc",
-    "ts": "2026-06-14T15:02:16.649966",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Monster India done ---"
-  },
-  {
-    "id": "f71a5a7b",
-    "ts": "2026-06-14T15:02:16.028219",
-    "level": "ERROR",
-    "site": "monster",
-    "message": "Monster bot crash: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.monsterindia.com/srp/results?query=Senior%20Software%20Engineer&locations=Chennai\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "ea5dafc9",
-    "ts": "2026-06-14T15:02:14.716879",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior Software Engineer' in 'Chennai'"
-  },
-  {
-    "id": "4ce1b883",
-    "ts": "2026-06-14T15:02:14.691762",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "ab44bd81",
-    "ts": "2026-06-14T15:02:10.077235",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior Software Engineer' in 'Bangalore'"
   }
 ]
