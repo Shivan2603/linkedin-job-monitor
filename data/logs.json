@@ -649,5 +649,418 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "e59875bf",
+    "ts": "2026-06-13T20:07:46.225651",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "c237c95c",
+    "ts": "2026-06-13T20:07:54.339976",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
+  },
+  {
+    "id": "0b16e550",
+    "ts": "2026-06-13T20:08:04.604461",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
+  },
+  {
+    "id": "8ab5e38f",
+    "ts": "2026-06-13T20:08:07.905884",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 10 job URLs from Google search"
+  },
+  {
+    "id": "f7552609",
+    "ts": "2026-06-13T20:08:07.918016",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
+  },
+  {
+    "id": "7db75542",
+    "ts": "2026-06-13T20:08:10.951153",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer, Full-Stack — Greenlight Financial Technology"
+  },
+  {
+    "id": "4ab53b7a",
+    "ts": "2026-06-13T20:08:11.074740",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Senior Software Engineer, Full-Stack (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "2ea0e6cc",
+    "ts": "2026-06-13T20:08:11.117597",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "9f16449a",
+    "ts": "2026-06-13T20:08:11.128666",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Senior Software Engineer, Full-Stack — Greenlight Financial Technology"
+  },
+  {
+    "id": "f637ad00",
+    "ts": "2026-06-13T20:08:11.138921",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101#:~:text=Senior%20.NET%2…"
+  },
+  {
+    "id": "ab018a5e",
+    "ts": "2026-06-13T20:08:15.431091",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Growe — Software Engineer"
+  },
+  {
+    "id": "7ba478b5",
+    "ts": "2026-06-13T20:08:15.469038",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Growe (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "64eb660b",
+    "ts": "2026-06-13T20:08:17.192241",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "2a5763d1",
+    "ts": "2026-06-13T20:08:17.212806",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Growe — Software Engineer"
+  },
+  {
+    "id": "9ea54011",
+    "ts": "2026-06-13T20:08:17.229891",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/gr8tech/jobs/4794468101…"
+  },
+  {
+    "id": "540a4b68",
+    "ts": "2026-06-13T20:08:20.736163",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Gr8Tech — Software Engineer"
+  },
+  {
+    "id": "6fd39be6",
+    "ts": "2026-06-13T20:08:20.769698",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Gr8Tech (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "4fb83276",
+    "ts": "2026-06-13T20:08:23.479626",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "0bcbe45c",
+    "ts": "2026-06-13T20:08:23.499526",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Gr8Tech — Software Engineer"
+  },
+  {
+    "id": "b666791e",
+    "ts": "2026-06-13T20:08:23.518168",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
+  },
+  {
+    "id": "2d0c6b25",
+    "ts": "2026-06-13T20:08:26.958926",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Growe — Software Engineer"
+  },
+  {
+    "id": "f3d28c84",
+    "ts": "2026-06-13T20:08:26.987662",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Growe (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "c3048727",
+    "ts": "2026-06-13T20:08:29.402210",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "8edb4234",
+    "ts": "2026-06-13T20:08:29.423583",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Growe — Software Engineer"
+  },
+  {
+    "id": "b4395c09",
+    "ts": "2026-06-13T20:08:29.441567",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178#:~:text=…"
+  },
+  {
+    "id": "1f6a7a77",
+    "ts": "2026-06-13T20:08:32.332231",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer — PlayOn"
+  },
+  {
+    "id": "c0594642",
+    "ts": "2026-06-13T20:08:32.363604",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Senior Software Engineer (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "0910c90a",
+    "ts": "2026-06-13T20:08:32.391144",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "4b436e37",
+    "ts": "2026-06-13T20:08:32.402805",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Senior Software Engineer — PlayOn"
+  },
+  {
+    "id": "39781723",
+    "ts": "2026-06-13T20:08:32.413251",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002#:~:text=.NE…"
+  },
+  {
+    "id": "c2aba226",
+    "ts": "2026-06-13T20:08:36.107968",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Northpointtechnology — Software Engineer"
+  },
+  {
+    "id": "cb1f6745",
+    "ts": "2026-06-13T20:08:36.138179",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Northpointtechnology (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "874e979e",
+    "ts": "2026-06-13T20:08:37.310129",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "2d1404d6",
+    "ts": "2026-06-13T20:08:37.331654",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Northpointtechnology — Software Engineer"
+  },
+  {
+    "id": "051cb010",
+    "ts": "2026-06-13T20:08:37.348897",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
+  },
+  {
+    "id": "ecbb7122",
+    "ts": "2026-06-13T20:08:41.185781",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer — PlayOn"
+  },
+  {
+    "id": "05140688",
+    "ts": "2026-06-13T20:08:41.213766",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Senior Software Engineer (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "fa7a8dc3",
+    "ts": "2026-06-13T20:08:41.237485",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "b4194aa0",
+    "ts": "2026-06-13T20:08:41.247787",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Senior Software Engineer — PlayOn"
+  },
+  {
+    "id": "8dc1c39e",
+    "ts": "2026-06-13T20:08:41.257966",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6#:~:text=Gr…"
+  },
+  {
+    "id": "0a081673",
+    "ts": "2026-06-13T20:08:43.919557",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer, Full-Stack — Greenlight Financial Technology"
+  },
+  {
+    "id": "77bb16c4",
+    "ts": "2026-06-13T20:08:43.947952",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Senior Software Engineer, Full-Stack (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "a316c71f",
+    "ts": "2026-06-13T20:08:43.970484",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "e8a008b2",
+    "ts": "2026-06-13T20:08:43.980696",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Senior Software Engineer, Full-Stack — Greenlight Financial Technology"
+  },
+  {
+    "id": "eff337e6",
+    "ts": "2026-06-13T20:08:43.990908",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002…"
+  },
+  {
+    "id": "5e062b76",
+    "ts": "2026-06-13T20:08:47.596883",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Northpointtechnology — Software Engineer"
+  },
+  {
+    "id": "07366c91",
+    "ts": "2026-06-13T20:08:47.692505",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Northpointtechnology (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "39bf4bae",
+    "ts": "2026-06-13T20:08:49.748158",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "d6306020",
+    "ts": "2026-06-13T20:08:49.767372",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Northpointtechnology — Software Engineer"
+  },
+  {
+    "id": "5e4c48a5",
+    "ts": "2026-06-13T20:08:49.813130",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
+  },
+  {
+    "id": "484da097",
+    "ts": "2026-06-13T20:08:53.269259",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian — Software Engineer"
+  },
+  {
+    "id": "8935ca6a",
+    "ts": "2026-06-13T20:08:53.308472",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI tailoring for Valarian (No Anthropic API Key) - Using base resume"
+  },
+  {
+    "id": "3cbfd0aa",
+    "ts": "2026-06-13T20:08:53.349492",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Skipping AI form filling (no Anthropic API Key configured)."
+  },
+  {
+    "id": "fb884776",
+    "ts": "2026-06-13T20:08:53.366044",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "AI form fill failed for Valarian — Software Engineer"
+  },
+  {
+    "id": "9a2aa7e9",
+    "ts": "2026-06-13T20:08:53.507640",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "1d85d9bc",
+    "ts": "2026-06-13T20:08:53.545903",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "9721df2e",
+    "ts": "2026-06-13T20:09:03.563926",
+    "level": "INFO",
+    "site": "system",
+    "message": "✅ All site bots completed for this cycle."
+  },
+  {
+    "id": "2d484cac",
+    "ts": "2026-06-13T20:09:03.583634",
+    "level": "INFO",
+    "site": "system",
+    "message": "💤 Waiting 60 minutes before next cycle..."
+  },
+  {
+    "id": "ba9564fc",
+    "ts": "2026-06-13T20:09:03.604873",
+    "level": "INFO",
+    "site": "system",
+    "message": "⏰ Scheduler running. Bot will cycle every 60 minutes."
   }
 ]

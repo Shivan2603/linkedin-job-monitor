@@ -23,9 +23,13 @@ TAILORED_TODAY      = os.path.join(TAILORED_BASE, TODAY_STR)
 # Always use the most recent resume as the base
 BASE_RESUME_DOCX    = os.path.join(RESUME_FOLDER, "Siva_Shankar_Resume_6062026.docx")
 
-# ─── AI ───────────────────────────────────────────────────
-ANTHROPIC_API_KEY   = os.getenv("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL        = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6")
+# ─── AI (Google Gemini - FREE) ───────────────────────────
+GEMINI_API_KEY      = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL        = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+
+# Legacy aliases so old imports don't break immediately
+ANTHROPIC_API_KEY   = GEMINI_API_KEY
+CLAUDE_MODEL        = GEMINI_MODEL
 
 # ─── JOB SEARCH ───────────────────────────────────────────
 JOB_TITLES = [t.strip() for t in os.getenv(

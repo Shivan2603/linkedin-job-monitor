@@ -1,18 +1,16 @@
 """
-ai_resume.py — Claude Sonnet 4.6 powered resume tailoring
-Reads base .docx, tailors per job description, saves to today's folder
+ai_resume.py — Google Gemini 2.0 Flash powered resume tailoring (FREE)
+Reads base .docx, tailors per job description, saves to today's folder.
 """
-import os, re
+import os, re, json
 from docx import Document
-from docx.shared import Pt
-from anthropic import Anthropic
-from bot.config import (
-    ANTHROPIC_API_KEY, CLAUDE_MODEL,
-    BASE_RESUME_DOCX, TAILORED_TODAY
-)
+import google.generativeai as genai
+from bot.config import GEMINI_API_KEY, GEMINI_MODEL, BASE_RESUME_DOCX, TAILORED_TODAY
 from bot.utils import logger
 
-client = Anthropic(api_key=ANTHROPIC_API_KEY)
+# Configure Gemini client
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
 
 TAILOR_SYSTEM_PROMPT = """You are an expert resume writer and ATS optimization specialist.
 Your job is to tailor a candidate's resume to maximize match with a specific job description.
@@ -33,31 +31,26 @@ def extract_resume_text(docx_path: str) -> str:
 
 def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
     """
-    Use Claude Sonnet 4.6 to tailor the base resume for a specific job.
+    Use Gemini 2.0 Flash (FREE) to tailor the base resume for a specific job.
     Returns: { "resume_path": str, "match_score": int, "tailored_sections": dict }
     """
-    logger.ai(f"Tailoring resume for {company} — {job_title}", site=site)
+    logger.ai(f"Tailoring resume for {company} - {job_title}", site=site)
 
     base_text = extract_resume_text(BASE_RESUME_DOCX)
 
-    if not ANTHROPIC_API_KEY or "PASTE_YOUR_KEY" in ANTHROPIC_API_KEY:
-        logger.warn(f"Skipping AI tailoring for {company} (No Anthropic API Key) - Using base resume", site=site)
+    if not GEMINI_API_KEY or "PASTE" in GEMINI_API_KEY or len(GEMINI_API_KEY) < 10:
+        logger.warn(f"No Gemini API Key — using base resume for {company}", site=site)
         safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
         safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
         filename     = f"{safe_company}_{safe_role}_base.docx"
         out_path     = os.path.join(TAILORED_TODAY, filename)
-        
-        # Copy base document
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
-        
-        return {
-            "resume_path":  out_path,
-            "match_score":  85, # Default generic score
-            "tailored":     {},
-        }
+        return {"resume_path": out_path, "match_score": 85, "tailored": {}}
 
-    prompt = f"""Here is the candidate's current resume:
+    prompt = f"""{TAILOR_SYSTEM_PROMPT}
+
+Here is the candidate's current resume:
 
 <resume>
 {base_text}
@@ -69,7 +62,7 @@ Here is the job description for {job_title} at {company}:
 {job_description[:3000]}
 </job_description>
 
-Please tailor this resume for this specific role. 
+Please tailor this resume for this specific role.
 Return a JSON object with these keys:
 - "professional_summary": rewritten 3-4 line summary targeting this role
 - "key_skills": list of 12-16 relevant skills matching the JD keywords
@@ -79,65 +72,63 @@ Return a JSON object with these keys:
 
 Return ONLY valid JSON, no other text."""
 
-    response = client.messages.create(
-        model=CLAUDE_MODEL,
-        max_tokens=2000,
-        system=TAILOR_SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": prompt}]
-    )
+    try:
+        model = genai.GenerativeModel(GEMINI_MODEL)
+        response = model.generate_content(prompt)
+        raw = response.text.strip()
 
-    raw = response.content[0].text.strip()
+        # Strip markdown code fences if present
+        if "```json" in raw:
+            raw = raw.split("```json")[1].split("```")[0].strip()
+        elif "```" in raw:
+            raw = raw.split("```")[1].split("```")[0].strip()
 
-    # Extract JSON if wrapped in code block
-    if "```json" in raw:
-        raw = raw.split("```json")[1].split("```")[0].strip()
-    elif "```" in raw:
-        raw = raw.split("```")[1].split("```")[0].strip()
+        tailored = json.loads(raw)
+        match_score = tailored.get("match_score", 90)
 
-    import json
-    tailored = json.loads(raw)
-    match_score = tailored.get("match_score", 90)
+        # Build tailored .docx
+        doc = Document(BASE_RESUME_DOCX)
+        _apply_tailoring(doc, tailored)
 
-    # ─── Build tailored .docx ────────────────────────────
-    doc = Document(BASE_RESUME_DOCX)
-    _apply_tailoring(doc, tailored)
+        safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
+        safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
+        filename     = f"{safe_company}_{safe_role}_{match_score}pct.docx"
+        out_path     = os.path.join(TAILORED_TODAY, filename)
+        doc.save(out_path)
 
-    # Save file
-    safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
-    safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
-    filename     = f"{safe_company}_{safe_role}_{match_score}pct.docx"
-    out_path     = os.path.join(TAILORED_TODAY, filename)
-    doc.save(out_path)
+        logger.ai(f"Resume saved: {filename} ({match_score}% match)", site=site)
+        return {"resume_path": out_path, "match_score": match_score, "tailored": tailored}
 
-    logger.ai(f"✅ Resume saved → {filename} ({match_score}% match)", site=site)
-    return {
-        "resume_path":  out_path,
-        "match_score":  match_score,
-        "tailored":     tailored,
-    }
+    except Exception as e:
+        logger.error(f"Gemini resume tailor failed: {e}", site=site)
+        # Fallback to base resume
+        safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
+        safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
+        out_path     = os.path.join(TAILORED_TODAY, f"{safe_company}_{safe_role}_base.docx")
+        doc = Document(BASE_RESUME_DOCX)
+        doc.save(out_path)
+        return {"resume_path": out_path, "match_score": 85, "tailored": {}}
+
 
 def _apply_tailoring(doc: Document, tailored: dict):
     """Inject tailored content into the document paragraphs"""
-    summary_done  = False
-    skills_done   = False
+    summary_done = False
+    skills_done  = False
 
     for para in doc.paragraphs:
         text = para.text.strip().lower()
 
-        # Replace Professional Summary
         if not summary_done and any(k in text for k in ["summary", "objective", "profile"]):
-            # Next non-empty paragraph is the summary content
             summary_done = True
 
         if summary_done and para.text.strip() and not any(
             k in para.text.lower() for k in ["summary", "objective", "profile", "skills", "experience"]
         ):
-            if tailored.get("professional_summary") and summary_done:
+            if tailored.get("professional_summary"):
                 _replace_run_text(para, tailored["professional_summary"])
-                summary_done = False  # done
+                summary_done = False
             continue
 
-        # Replace Skills section
         if not skills_done and "skill" in text:
             skills_done = True
 
@@ -147,6 +138,7 @@ def _apply_tailoring(doc: Document, tailored: dict):
                 _replace_run_text(para, skills_text)
                 skills_done = False
             continue
+
 
 def _replace_run_text(para, new_text: str):
     """Replace paragraph text while preserving formatting of first run"""
