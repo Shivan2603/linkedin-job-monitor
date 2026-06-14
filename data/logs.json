@@ -1,5 +1,551 @@
 [
   {
+    "id": "a9d25ad9",
+    "ts": "2026-06-14T18:24:44.700885",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior . NET developer | Remote | 94% match"
+  },
+  {
+    "id": "316307a3",
+    "ts": "2026-06-14T18:24:44.529855",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Filled 8/8 fields via AI."
+  },
+  {
+    "id": "dbd2a16f",
+    "ts": "2026-06-14T18:23:47.772653",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "f91a282f",
+    "ts": "2026-06-14T18:23:43.992010",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models unavailable"
+  },
+  {
+    "id": "0c56a58b",
+    "ts": "2026-06-14T18:23:42.868850",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "75828948",
+    "ts": "2026-06-14T18:23:41.304220",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5ddba7a5",
+    "ts": "2026-06-14T18:23:40.777428",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "a50978e3",
+    "ts": "2026-06-14T18:23:39.997139",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "0aedaebc",
+    "ts": "2026-06-14T18:23:32.104537",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "7ad73008",
+    "ts": "2026-06-14T18:23:31.087679",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior . NET developer (94%)"
+  },
+  {
+    "id": "db33545f",
+    "ts": "2026-06-14T18:23:31.055502",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "b870e3d0",
+    "ts": "2026-06-14T18:23:31.023414",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "579be22b",
+    "ts": "2026-06-14T18:23:30.820668",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Senior___NET_develop_Company_Resume.docx (94% match)"
+  },
+  {
+    "id": "59e854aa",
+    "ts": "2026-06-14T18:23:30.679338",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "ff2fd676",
+    "ts": "2026-06-14T18:23:29.695427",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "145ca4af",
+    "ts": "2026-06-14T18:23:01.304503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "05606755",
+    "ts": "2026-06-14T18:23:00.061703",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "5850d258",
+    "ts": "2026-06-14T18:23:00.041994",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2846779e",
+    "ts": "2026-06-14T18:22:59.780945",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "980bb7bf",
+    "ts": "2026-06-14T18:22:59.251049",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "a88cc50e",
+    "ts": "2026-06-14T18:22:58.962190",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "eb587524",
+    "ts": "2026-06-14T18:22:58.717637",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c4fa650b",
+    "ts": "2026-06-14T18:22:58.394553",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "aa8ea597",
+    "ts": "2026-06-14T18:22:56.628862",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior . NET developer"
+  },
+  {
+    "id": "28a05c15",
+    "ts": "2026-06-14T18:22:50.000502",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior .NET Developer (React + Python) (already applied)"
+  },
+  {
+    "id": "a754b8d4",
+    "ts": "2026-06-14T18:22:42.969889",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior .Net Developer (already applied)"
+  },
+  {
+    "id": "190b3329",
+    "ts": "2026-06-14T18:22:33.487554",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior Software Developer (.NET) (already applied)"
+  },
+  {
+    "id": "081eac56",
+    "ts": "2026-06-14T18:22:28.597827",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — DOT NET Developer"
+  },
+  {
+    "id": "0011f896",
+    "ts": "2026-06-14T18:22:21.604635",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Senior .NET Developers"
+  },
+  {
+    "id": "b73654f1",
+    "ts": "2026-06-14T18:22:14.723341",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 18 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "392d6814",
+    "ts": "2026-06-14T18:22:11.825510",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "0dd35a25",
+    "ts": "2026-06-14T18:22:08.518699",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "92d180bc",
+    "ts": "2026-06-14T18:22:08.488698",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "281448ce",
+    "ts": "2026-06-14T18:22:08.424243",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri login successful"
+  },
+  {
+    "id": "525cd505",
+    "ts": "2026-06-14T18:21:54.232685",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "be1423e8",
+    "ts": "2026-06-14T18:21:51.212156",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "ad739623",
+    "ts": "2026-06-14T18:21:51.161808",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "1e03e84a",
+    "ts": "2026-06-14T18:21:18.721518",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 32s before next site..."
+  },
+  {
+    "id": "f0f5a4b1",
+    "ts": "2026-06-14T18:21:18.696954",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "ff39a698",
+    "ts": "2026-06-14T18:21:18.671897",
+    "level": "ERROR",
+    "site": "system",
+    "message": "Company Careers crashed: name 'safe_browser_context' is not defined"
+  },
+  {
+    "id": "7a8ecec5",
+    "ts": "2026-06-14T18:21:17.031408",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "7e4993c2",
+    "ts": "2026-06-14T18:21:17.000737",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "245f7a86",
+    "ts": "2026-06-14T18:20:43.961402",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 33s before next site..."
+  },
+  {
+    "id": "3c831d42",
+    "ts": "2026-06-14T18:20:43.937390",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "3d501067",
+    "ts": "2026-06-14T18:20:43.908210",
+    "level": "ERROR",
+    "site": "system",
+    "message": "LinkedIn crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_linkedin --remote-debugging-pipe about:blank\n<launched> pid=11636\n[pid=11636][err] [11636:4544:0614/182043.632:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n[pid=11636][err] [11636:4544:0614/182043.632:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nCall log:\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_linkedin --remote-debugging-pipe about:blank\n  - <launched> pid=11636\n  - [pid=11636][err] [11636:4544:0614/182043.632:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n  - [pid=11636][err] [11636:4544:0614/182043.632:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n"
+  },
+  {
+    "id": "076cf7c4",
+    "ts": "2026-06-14T18:20:42.585104",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "1597054d",
+    "ts": "2026-06-14T18:20:42.559546",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "ac2976a5",
+    "ts": "2026-06-14T18:20:42.532739",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 4, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "ab2e6947",
+    "ts": "2026-06-14T18:20:42.507647",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d1b3cc3d",
+    "ts": "2026-06-14T18:20:42.482810",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "ec9957f4",
+    "ts": "2026-06-14T18:20:42.461176",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 18:20:42"
+  },
+  {
+    "id": "780acc7f",
+    "ts": "2026-06-14T18:20:42.432926",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "c6079305",
+    "ts": "2026-06-14T18:20:42.406942",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "c0a94641",
+    "ts": "2026-06-14T18:20:42.382177",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "8940acf1",
+    "ts": "2026-06-14T18:20:42.355631",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "43ad57be",
+    "ts": "2026-06-14T18:19:11.760121",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Waiting for login success... (Solve CAPTCHA manually if it appears - You have 3 minutes)"
+  },
+  {
+    "id": "3b84dd7c",
+    "ts": "2026-06-14T18:19:11.711919",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Login fields not found. If there is a CAPTCHA or you are on the homepage, please log in or navigate manually."
+  },
+  {
+    "id": "e3a9290c",
+    "ts": "2026-06-14T18:19:02.975690",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "6480e34a",
+    "ts": "2026-06-14T18:17:15.544692",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "558aab8c",
+    "ts": "2026-06-14T18:14:15.503895",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Waiting for login success... (Solve CAPTCHA manually if it appears - You have 3 minutes)"
+  },
+  {
+    "id": "25802991",
+    "ts": "2026-06-14T18:14:15.455013",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Login fields not found. If there is a CAPTCHA or you are on the homepage, please log in or navigate manually."
+  },
+  {
+    "id": "8d6bc7fe",
+    "ts": "2026-06-14T18:14:06.776258",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "935b6c08",
+    "ts": "2026-06-14T18:12:52.111297",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "9b92ce30",
+    "ts": "2026-06-14T18:09:52.053500",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Waiting for login success... (Solve CAPTCHA manually if it appears - You have 3 minutes)"
+  },
+  {
+    "id": "a74e4ab9",
+    "ts": "2026-06-14T18:09:52.008369",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Login fields not found. If there is a CAPTCHA or you are on the homepage, please log in or navigate manually."
+  },
+  {
+    "id": "3c66ff32",
+    "ts": "2026-06-14T18:09:43.188548",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "fe2cabf3",
+    "ts": "2026-06-14T18:08:59.237862",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "df00a6fc",
+    "ts": "2026-06-14T18:07:59.184625",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Waiting for login success... (Solve CAPTCHA if it appears)"
+  },
+  {
+    "id": "b1341dbe",
+    "ts": "2026-06-14T18:07:59.153904",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Login fields not found. If there is a CAPTCHA or you are on the homepage, please log in or navigate manually."
+  },
+  {
+    "id": "16a050a4",
+    "ts": "2026-06-14T18:07:55.265545",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "213035bd",
+    "ts": "2026-06-14T18:07:03.476330",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "6e512818",
+    "ts": "2026-06-14T18:06:28.782245",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "ccd2e357",
+    "ts": "2026-06-14T18:02:22.415198",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "483b037e",
+    "ts": "2026-06-14T18:01:56.568080",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "d7c3e4e8",
+    "ts": "2026-06-14T18:01:55.292553",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "99bfdebc",
+    "ts": "2026-06-14T18:01:55.262526",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "69c4cb7f",
+    "ts": "2026-06-14T18:01:54.961697",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior . NET developer"
+  },
+  {
+    "id": "e2eabc56",
+    "ts": "2026-06-14T18:01:42.229884",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior .NET Developer (React + Python) (85%)"
+  },
+  {
     "id": "0e3a9f69",
     "ts": "2026-06-14T18:01:35.177842",
     "level": "SUCCESS",
@@ -2952,551 +3498,5 @@
     "level": "INFO",
     "site": "shine",
     "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "96fc14e0",
-    "ts": "2026-06-14T16:58:44.686873",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "8dc0b473",
-    "ts": "2026-06-14T16:58:44.649944",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "35b17eaa",
-    "ts": "2026-06-14T16:58:41.315550",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Chennai'"
-  },
-  {
-    "id": "16d2d192",
-    "ts": "2026-06-14T16:58:41.298974",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "8e4467f5",
-    "ts": "2026-06-14T16:58:37.800044",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Bangalore'"
-  },
-  {
-    "id": "df79dbe3",
-    "ts": "2026-06-14T16:58:37.783217",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "b26385ef",
-    "ts": "2026-06-14T16:58:34.691692",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Remote'"
-  },
-  {
-    "id": "c9434109",
-    "ts": "2026-06-14T16:58:34.676627",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "d9c8e2bf",
-    "ts": "2026-06-14T16:58:31.118512",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "6a87210e",
-    "ts": "2026-06-14T16:58:31.102948",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "3760191d",
-    "ts": "2026-06-14T16:58:27.854422",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Chennai'"
-  },
-  {
-    "id": "6d18efda",
-    "ts": "2026-06-14T16:58:27.838426",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "53ac83c1",
-    "ts": "2026-06-14T16:58:24.275424",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Full Stack Developer' in 'Bangalore'"
-  },
-  {
-    "id": "eb6f6734",
-    "ts": "2026-06-14T16:58:24.259397",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "968bd9aa",
-    "ts": "2026-06-14T16:58:20.810527",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Remote'"
-  },
-  {
-    "id": "db32f24f",
-    "ts": "2026-06-14T16:58:20.794295",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "53fd400c",
-    "ts": "2026-06-14T16:58:17.512977",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Hyderabad'"
-  },
-  {
-    "id": "bd02671f",
-    "ts": "2026-06-14T16:58:17.497624",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "a4f29f95",
-    "ts": "2026-06-14T16:58:14.500538",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Chennai'"
-  },
-  {
-    "id": "156a462f",
-    "ts": "2026-06-14T16:58:14.484226",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "3fb567e7",
-    "ts": "2026-06-14T16:58:11.487925",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior Software Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "d6a235f6",
-    "ts": "2026-06-14T16:58:11.470234",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "a83a19e3",
-    "ts": "2026-06-14T16:58:08.622984",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "4acc4add",
-    "ts": "2026-06-14T16:58:08.601219",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "30fed36c",
-    "ts": "2026-06-14T16:58:05.868493",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "299b06fa",
-    "ts": "2026-06-14T16:58:05.850977",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "0a5fa4c0",
-    "ts": "2026-06-14T16:58:02.490969",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "b452b15e",
-    "ts": "2026-06-14T16:58:02.468548",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "2572c287",
-    "ts": "2026-06-14T16:57:58.153975",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "7c087856",
-    "ts": "2026-06-14T16:57:58.133731",
-    "level": "ERROR",
-    "site": "shine",
-    "message": "Shine login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"email\\\"]\")\n  -   locator resolved to 3 elements. Proceeding with the first one: <input type=\"text\" name=\"email\" id=\"id_hidden_email\"/>\n  -   fill(\"sivashankar.avi6@gmail.com\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #54\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #55\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #56\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #57\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #58\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #59\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #60\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #61\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #62\n  -   waiting 500ms\n"
-  },
-  {
-    "id": "4e085369",
-    "ts": "2026-06-14T16:57:22.569913",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "767db418",
-    "ts": "2026-06-14T16:57:20.723255",
-    "level": "INFO",
-    "site": "shine",
-    "message": "🚀 Starting Shine.com bot"
-  },
-  {
-    "id": "16c15c18",
-    "ts": "2026-06-14T16:57:20.699870",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Shine ---"
-  },
-  {
-    "id": "3f58f6cd",
-    "ts": "2026-06-14T16:56:32.097421",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 49s before next site..."
-  },
-  {
-    "id": "6bed6796",
-    "ts": "2026-06-14T16:56:32.073868",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Indeed India done ---"
-  },
-  {
-    "id": "02ff10e1",
-    "ts": "2026-06-14T16:56:31.556952",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[type=\\\"password\\\"]\")\n  -   locator resolved to <input type=\"password\" data-tn-action-click=\"true\" auto…/>\n  -   fill(\"Shiva26@\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  - element was detached from the DOM, retrying\n"
-  },
-  {
-    "id": "13313bc4",
-    "ts": "2026-06-14T16:55:48.236697",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Logging into Indeed..."
-  },
-  {
-    "id": "b090f486",
-    "ts": "2026-06-14T16:55:45.624193",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed India bot"
-  },
-  {
-    "id": "f1f614e4",
-    "ts": "2026-06-14T16:55:45.597503",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Indeed India ---"
-  },
-  {
-    "id": "13a34c7a",
-    "ts": "2026-06-14T16:54:45.913107",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 60s before next site..."
-  },
-  {
-    "id": "f08e5eff",
-    "ts": "2026-06-14T16:54:45.882800",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Naukri done ---"
-  },
-  {
-    "id": "fc6ddfb0",
-    "ts": "2026-06-14T16:54:45.855456",
-    "level": "ERROR",
-    "site": "system",
-    "message": "Naukri crashed: invalid state"
-  },
-  {
-    "id": "3cc5a902",
-    "ts": "2026-06-14T16:54:45.826627",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri bot session ended"
-  },
-  {
-    "id": "02cef44a",
-    "ts": "2026-06-14T16:54:42.083742",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer - .Net"
-  },
-  {
-    "id": "2670f221",
-    "ts": "2026-06-14T16:54:37.726021",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "efd4f21a",
-    "ts": "2026-06-14T16:54:34.441222",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior Software Engineer' in Chennai"
-  },
-  {
-    "id": "f111a679",
-    "ts": "2026-06-14T16:54:28.269858",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior Software Engineer' in 'Chennai'"
-  },
-  {
-    "id": "ffea8dba",
-    "ts": "2026-06-14T16:54:28.249104",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior Software Engineer' in Bangalore"
-  },
-  {
-    "id": "ea22289d",
-    "ts": "2026-06-14T16:54:26.555353",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior software engineer - WPF / .Net"
-  },
-  {
-    "id": "0c89c67f",
-    "ts": "2026-06-14T16:54:21.570014",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "a7dd5029",
-    "ts": "2026-06-14T16:54:17.209353",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "0e4fa816",
-    "ts": "2026-06-14T16:54:12.937192",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "aed6dd1d",
-    "ts": "2026-06-14T16:54:08.628133",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "d802f1e7",
-    "ts": "2026-06-14T16:54:03.559338",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "caaf7af4",
-    "ts": "2026-06-14T16:53:58.808926",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "5929060e",
-    "ts": "2026-06-14T16:53:54.030254",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "dc1a5c37",
-    "ts": "2026-06-14T16:53:49.746828",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "374dec3f",
-    "ts": "2026-06-14T16:53:44.597371",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "2224687c",
-    "ts": "2026-06-14T16:53:39.850137",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "86ea745e",
-    "ts": "2026-06-14T16:53:34.300855",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "225eeac7",
-    "ts": "2026-06-14T16:53:29.955542",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "f65299b4",
-    "ts": "2026-06-14T16:53:24.805713",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "bacde682",
-    "ts": "2026-06-14T16:53:20.245839",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr. Software Engineer"
-  },
-  {
-    "id": "22a3ed8f",
-    "ts": "2026-06-14T16:53:16.573155",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior Software Engineer' in Bangalore"
-  },
-  {
-    "id": "fb06e24f",
-    "ts": "2026-06-14T16:53:11.110443",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior Software Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "f7465e59",
-    "ts": "2026-06-14T16:53:11.085893",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior Software Engineer' in Remote"
-  },
-  {
-    "id": "40f3583d",
-    "ts": "2026-06-14T16:53:10.056797",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer - App Infra"
-  },
-  {
-    "id": "2cf65b31",
-    "ts": "2026-06-14T16:53:05.473255",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "e2e819b0",
-    "ts": "2026-06-14T16:53:00.291574",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer - AI Evaluation & Benchmarks"
-  },
-  {
-    "id": "47ca54a2",
-    "ts": "2026-06-14T16:52:55.356950",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer - Robotics"
-  },
-  {
-    "id": "1c5c488a",
-    "ts": "2026-06-14T16:52:50.844837",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer (Perl)"
-  },
-  {
-    "id": "0cbca854",
-    "ts": "2026-06-14T16:52:45.797916",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer (Kotlin and Springboot)"
-  },
-  {
-    "id": "ff240947",
-    "ts": "2026-06-14T16:52:41.206345",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "0e28891f",
-    "ts": "2026-06-14T16:52:35.990266",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer - API"
-  },
-  {
-    "id": "f7316133",
-    "ts": "2026-06-14T16:52:31.379400",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer (Jest and React)"
-  },
-  {
-    "id": "81e781fd",
-    "ts": "2026-06-14T16:52:27.305930",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer (CI/CD and Go)"
-  },
-  {
-    "id": "18fbfbb7",
-    "ts": "2026-06-14T16:52:23.187830",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "6dbee138",
-    "ts": "2026-06-14T16:52:18.073032",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr Software Engineer"
   }
 ]
