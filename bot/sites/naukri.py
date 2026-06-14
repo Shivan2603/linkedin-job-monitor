@@ -43,16 +43,40 @@ def run_naukri_bot():
 
 def _login(page, creds) -> bool:
     logger.info("Logging into Naukri...", SITE)
-    page.goto(f"{BASE_URL}/login", wait_until="domcontentloaded")
-    _human_delay(2, 3)
+    # Try current login URL first, fallback to alternate
+    for login_url in [f"{BASE_URL}/nlogin/login", f"{BASE_URL}/login"]:
+        try:
+            page.goto(login_url, wait_until="domcontentloaded", timeout=20000)
+            time.sleep(2)
+            # Check if page loaded properly (not 404)
+            if page.title() and "404" not in page.title():
+                break
+        except Exception:
+            continue
     try:
-        page.fill('input[placeholder*="Email"]', creds["email"])
+        # Try multiple selectors for email field
+        for sel in ['input[placeholder*="Email"]', 'input[type="email"]', '#usernameField']:
+            try:
+                page.fill(sel, creds["email"], timeout=5000)
+                break
+            except Exception:
+                continue
         _human_delay(0.5, 1)
-        page.fill('input[type="password"]', creds["password"])
+        for sel in ['input[type="password"]', '#passwordField']:
+            try:
+                page.fill(sel, creds["password"], timeout=5000)
+                break
+            except Exception:
+                continue
         _human_delay(0.5, 1)
-        page.click('button[type="submit"]')
-        _human_delay(3, 5)
-        logger.success("Naukri login successful ✅", SITE)
+        for sel in ['button[type="submit"]', 'button.loginButton', 'input[type="submit"]']:
+            try:
+                page.click(sel, timeout=5000)
+                break
+            except Exception:
+                continue
+        _human_delay(4, 6)
+        logger.success("Naukri login successful", SITE)
         return True
     except Exception as e:
         logger.error(f"Naukri login failed: {e}", SITE)
