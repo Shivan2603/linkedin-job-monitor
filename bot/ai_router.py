@@ -218,21 +218,66 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
 
     raise Exception("All Gemini models unavailable")
 
-# ─── OLLAMA LOCAL AI (100% OFFLINE FALLBACK) ─────────────────────────────
-OLLAMA_URL    = "http://localhost:11434/api/generate"
+# ─── LOCAL AI: OLLAMA + LM STUDIO (PRIMARY — ZERO COST, ZERO RATE LIMITS) ─────
+OLLAMA_URL     = "http://localhost:11434/api/generate"
+LM_STUDIO_URL  = "http://localhost:1234/v1/chat/completions"  # OpenAI-compatible
+
+# Best models for Intel Iris Xe + 8GB RAM (CPU inference)
 OLLAMA_MODELS = [
-    "phi3:mini",        # Microsoft Phi-3 Mini 3.8B — ultra efficient for 8GB RAM
-    "llama3.2:3b",      # Meta Llama 3.2 3B — fast, good JSON output
-    "mistral:7b",       # Mistral 7B — best quality if RAM allows
-    "phi3:medium",      # Phi-3 Medium 14B — best quality for Phi
+    "phi3:mini",         # Microsoft Phi-3 Mini 3.8B — best for 8GB RAM, fast JSON
+    "qwen2.5:3b",        # Qwen 2.5 3B — excellent at structured output / JSON
+    "llama3.2:3b",       # Meta Llama 3.2 3B — reliable workhorse
+    "gemma2:2b",         # Google Gemma 2 2B — tiny & fast
+    "phi3:medium",       # Phi-3 Medium 14B — best quality (needs 10GB+ RAM)
 ]
+
+def _is_ollama_running() -> bool:
+    """Quick check if Ollama server is up."""
+    try:
+        r = requests.get("http://localhost:11434", timeout=2)
+        return r.status_code == 200
+    except Exception:
+        return False
+
+def _is_lm_studio_running() -> bool:
+    """Quick check if LM Studio local server is up."""
+    try:
+        r = requests.get("http://localhost:1234/v1/models", timeout=2)
+        return r.status_code == 200
+    except Exception:
+        return False
+
+def lm_studio_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
+    """
+    Uses LM Studio's local server (OpenAI-compatible on port 1234).
+    Start LM Studio → Local Server tab → Start Server.
+    """
+    if not _is_lm_studio_running():
+        raise Exception("LM Studio server not running — open LM Studio and start Local Server")
+    payload = {
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user",   "content": user_prompt},
+        ],
+        "max_tokens": max_tokens,
+        "temperature": 0.3,
+        "stream": False,
+    }
+    resp = requests.post(LM_STUDIO_URL, json=payload, timeout=180)
+    resp.raise_for_status()
+    result = resp.json()["choices"][0]["message"]["content"].strip()
+    if result:
+        logger.ai("AI response from Local LM Studio", "ai")
+        return result
+    raise Exception("LM Studio returned empty response")
 
 def ollama_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
     """
-    Runs a local LLM via Ollama as the absolute last fallback.
-    Zero cost, zero internet, zero rate limits.
-    Install: run SETUP_LOCAL_AI.bat
+    Runs a local LLM via Ollama. Zero cost, zero internet, zero rate limits.
+    Install: run SETUP_LOCAL_AI.bat to download Ollama + best model automatically.
     """
+    if not _is_ollama_running():
+        raise Exception("Ollama not running — run SETUP_LOCAL_AI.bat")
     combined = f"{system_prompt}\n\n{user_prompt}"
     for model in OLLAMA_MODELS:
         try:
@@ -240,22 +285,22 @@ def ollama_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048
                 OLLAMA_URL,
                 json={"model": model, "prompt": combined, "stream": False,
                       "options": {"num_predict": max_tokens, "temperature": 0.3}},
-                timeout=120,  # Local models can be slow on CPU
+                timeout=180,  # CPU inference can be slow
             )
             if resp.status_code == 404:
-                # Model not pulled yet, try next
-                continue
+                continue  # model not pulled yet
             resp.raise_for_status()
             result = resp.json().get("response", "").strip()
             if result:
                 logger.ai(f"AI response from Local Ollama ({model})", "ai")
                 return result
         except requests.ConnectionError:
-            raise Exception("Ollama not running — run SETUP_LOCAL_AI.bat to install")
+            raise Exception("Ollama stopped unexpectedly")
         except Exception as e:
             logger.warn(f"Ollama {model} failed: {str(e)[:60]}", "ai")
             continue
     raise Exception("All Ollama local models unavailable")
+
 
 # ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
 def ai_complete(system_prompt: str, user_prompt: str,
@@ -274,27 +319,37 @@ def ai_complete(system_prompt: str, user_prompt: str,
             logger.ai(f"AI response from Cache ({task})", "ai")
             return cached
 
-    # 2. Build provider chain based on task
+    # 2. Build provider chain — LOCAL FIRST, then cloud fallback
+    #    This guarantees AI never fails due to rate limits or API issues.
+    #    Order: Ollama → LM Studio → Gemini → Groq → OpenRouter
+    
+    local_providers = []
+    if _is_ollama_running():
+        local_providers.append(
+            ("Local-Ollama",    lambda: ollama_complete(system_prompt, user_prompt, max_tokens)))
+    if _is_lm_studio_running():
+        local_providers.append(
+            ("Local-LMStudio",  lambda: lm_studio_complete(system_prompt, user_prompt, max_tokens)))
+    
     if task == "form_fill":
-        providers = [
+        cloud_providers = [
             ("Gemini-Fast",  lambda: gemini_complete(combined, max_tokens)),
             ("Groq-Fast",    lambda: groq_complete(system_prompt, user_prompt,
                                                    model=GROQ_MODEL_FAST,
                                                    max_tokens=max_tokens)),
             ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
                                                          max_tokens=max_tokens)),
-            ("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)),
         ]
     else:
-        # tailor, ats_check, general → best quality first
-        providers = [
+        cloud_providers = [
             ("Gemini",       lambda: gemini_complete(combined, max_tokens)),
             ("Groq",         lambda: groq_complete(system_prompt, user_prompt,
                                                    max_tokens=max_tokens)),
             ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
                                                          max_tokens=max_tokens)),
-            ("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)),
         ]
+    
+    providers = local_providers + cloud_providers
 
     last_error = None
     for name, fn in providers:
