@@ -322,16 +322,22 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             '#apply-button',
             'button.btn-primary',
         ]
+        
+        # Wait for page to settle
+        try:
+            page.wait_for_load_state("networkidle", timeout=6000)
+        except Exception:
+            pass
+        
         for sel in apply_selectors:
             try:
-                el = page.query_selector(sel)
-                if el and el.is_visible(timeout=2000):
-                    # Skip "Already Applied" or "Save" buttons
-                    btn_text = el.inner_text().lower()
+                el_loc = page.locator(sel).first
+                if el_loc.is_visible(timeout=3000):
+                    btn_text = el_loc.inner_text().lower()
                     if "already" in btn_text or "save" in btn_text:
                         logger.info(f"Already applied on Naukri: {company} — {job_title}", SITE)
                         return False
-                    apply_btn = el
+                    apply_btn = el_loc
                     break
             except Exception:
                 continue

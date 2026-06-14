@@ -120,6 +120,10 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                         el.check()
                 elif input_type == "file":
                     pass  # Skip file uploads
+                elif input_type == "number":
+                    num_val = ''.join(c for c in str(val) if c.isdigit() or c == '.')
+                    if num_val:
+                        el.fill(num_val)
                 else:
                     el.fill(str(val))
                 filled += 1

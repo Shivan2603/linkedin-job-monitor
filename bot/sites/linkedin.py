@@ -118,7 +118,7 @@ def _login(page: Page, creds: dict) -> bool:
                 continue
         _delay(3, 5)
 
-        # Handle OTP / security checkpoint
+        # Handle OTP / security checkpoint / CAPTCHA
         if any(x in page.url for x in ["checkpoint", "challenge", "pin"]):
             logger.info("LinkedIn security check — auto-reading OTP from Gmail...", SITE)
             try:
@@ -127,13 +127,14 @@ def _login(page: Page, creds: dict) -> bool:
                 if not filled:
                     logger.warn("OTP not auto-filled — please enter it manually in the browser", SITE)
                     # Wait up to 2 minutes for user to solve manually
-                    page.wait_for_url("**/feed/**", timeout=120000)
+                    page.wait_for_url(re.compile(r".*/(feed|jobs|mynetwork).*"), timeout=120000)
             except Exception as e:
                 logger.warn(f"OTP handler error: {e}", SITE)
-                page.wait_for_url("**/feed/**", timeout=120000)
+                page.wait_for_url(re.compile(r".*/(feed|jobs|mynetwork).*"), timeout=120000)
 
-        # Verify login success
-        page.wait_for_url("**/feed/**", timeout=30000)
+        # Wait longer for CAPTCHAs that don't change URL immediately
+        logger.info("Waiting for login success... (Solve CAPTCHA if it appears)", SITE)
+        page.wait_for_url(re.compile(r".*/(feed|jobs|mynetwork).*"), timeout=60000)
         logger.success("LinkedIn login successful", SITE)
         return True
 
