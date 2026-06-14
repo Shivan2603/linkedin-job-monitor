@@ -101,15 +101,29 @@ def groq_complete(system_prompt: str, user_prompt: str,
         raise Exception(f"Groq failed: {e}")
 
 # ─── OPENROUTER (FREE TIER — no credit card needed) ──────────────────────────
-# Sign up free: https://openrouter.ai → Create API Key
-# Free models: mistral-7b, llama-3-8b, gemma-2-9b, phi-3-mini (all :free)
+# Full list of free models — ordered best quality → fastest
+# Bot will try each one in sequence, skipping any that are rate-limited/unavailable
 OPENROUTER_FREE_MODELS = [
-    "meta-llama/llama-3.3-70b-instruct:free",      # Best quality — Llama 3.3 70B free
-    "google/gemma-4-31b-it:free",                   # Google Gemma 4 31B free
-    "nousresearch/hermes-3-llama-3.1-405b:free",    # Hermes 405B free
-    "qwen/qwen3-next-80b-a3b-instruct:free",        # Qwen3 80B free
-    "nvidia/nemotron-3-super-120b-a12b:free",       # Nvidia 120B free
-    "meta-llama/llama-3.2-3b-instruct:free",        # Fast small model fallback
+    # Large flagship models (best quality for resume tailoring)
+    "qwen/qwen3-coder-480b-a35b:free",                # Qwen3 Coder 480B — best for structured output
+    "nousresearch/hermes-3-llama-3.1-405b:free",      # Hermes 405B
+    "nvidia/nemotron-3-ultra-253b-v1:free",            # Nemotron 3 Ultra 253B
+    "nvidia/llama-3.1-nemotron-nano-12b-v2:free",     # Nemotron Nano 12B VL
+    "meta-llama/llama-3.3-70b-instruct:free",          # Llama 3.3 70B
+    "nvidia/nemotron-3-super-120b-a12b:free",          # Nemotron Super 120B
+    "nvidia/gpt-4o-mini-oss-120b:free",                # GPT-OSS 120B
+    "qwen/qwen3-next-80b-a3b-instruct:free",           # Qwen3 80B
+    "google/gemma-4-31b-it:free",                      # Gemma 4 31B
+    "google/gemma-4-27b-a4b:free",                     # Gemma 4 26B A4B
+    "nex-n2-pro:free",                                 # Nex-N2-Pro
+    # Medium models (great balance of speed + quality)
+    "nvidia/gpt-4o-mini-oss-20b:free",                 # GPT-OSS 20B
+    "nvidia/nemotron-3-nano-30b-a3b:free",             # Nemotron Nano 30B A3B
+    "nvidia/nemotron-nano-9b-v2:free",                 # Nemotron Nano 9B
+    "liquid/lfm2.5-1.2b-thinking:free",                # LFM2.5 1.2B Thinking
+    "liquid/lfm2.5-1.2b-instruct:free",                # LFM2.5 1.2B Instruct
+    # Small fast models (fallback for form filling)
+    "meta-llama/llama-3.2-3b-instruct:free",           # Llama 3.2 3B — fastest
 ]
 
 def openrouter_complete(system_prompt: str, user_prompt: str,
@@ -137,12 +151,19 @@ def openrouter_complete(system_prompt: str, user_prompt: str,
             }
             resp = requests.post(OPENROUTER_API_URL, headers=headers,
                                  json=payload, timeout=60)
-            if resp.status_code in [429, 503]:
+            if resp.status_code in [429, 402, 503]:
                 logger.warn(f"OpenRouter {model} unavailable, trying next...", "ai")
                 continue
             resp.raise_for_status()
-            result = resp.json()["choices"][0]["message"]["content"].strip()
-            logger.ai(f"AI response from OpenRouter ({model.split('/')[1]})", "ai")
+            data = resp.json()
+            if not data.get("choices"):
+                logger.warn(f"OpenRouter {model} returned empty choices, trying next...", "ai")
+                continue
+            result = data["choices"][0]["message"]["content"].strip()
+            if not result:
+                continue
+            model_short = model.split("/")[-1]
+            logger.ai(f"AI response from OpenRouter ({model_short})", "ai")
             return result
         except Exception as e:
             logger.warn(f"OpenRouter {model} failed: {str(e)[:80]}", "ai")
