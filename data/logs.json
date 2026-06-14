@@ -1,5 +1,103 @@
 [
   {
+    "id": "a999e3cc",
+    "ts": "2026-06-14T17:54:37.241939",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Work Station Support Analyst (Event Operations Specialist) | Remote | 92% match"
+  },
+  {
+    "id": "12051bc7",
+    "ts": "2026-06-14T17:54:36.941131",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "8853e92d",
+    "ts": "2026-06-14T17:54:33.870814",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "9998976f",
+    "ts": "2026-06-14T17:54:33.082915",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Work Station Support Analyst (Event Operations Specialist) (92%)"
+  },
+  {
+    "id": "3168c63c",
+    "ts": "2026-06-14T17:54:33.058290",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "3f087c4a",
+    "ts": "2026-06-14T17:54:33.033687",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "3c65ede0",
+    "ts": "2026-06-14T17:54:32.918564",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Work_Station_Support_Company_Resume.docx (92% match)"
+  },
+  {
+    "id": "b9dc43d2",
+    "ts": "2026-06-14T17:54:32.835493",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "ade24df3",
+    "ts": "2026-06-14T17:54:32.778704",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "014188ad",
+    "ts": "2026-06-14T17:54:10.703044",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "0ce3ffa2",
+    "ts": "2026-06-14T17:54:09.896407",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "55024450",
+    "ts": "2026-06-14T17:54:09.873354",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "33b6ac67",
+    "ts": "2026-06-14T17:54:09.604081",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Work Station Support Analyst (Event Operations Specialist)"
+  },
+  {
+    "id": "3b956c13",
+    "ts": "2026-06-14T17:53:54.571111",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior Software Engineer (94%)"
+  },
+  {
     "id": "909686a7",
     "ts": "2026-06-14T17:53:48.958911",
     "level": "SUCCESS",
@@ -3400,103 +3498,5 @@
     "level": "INFO",
     "site": "naukri",
     "message": "No apply button: Company — Sr .NET Developer (Full-Stack)"
-  },
-  {
-    "id": "37e95178",
-    "ts": "2026-06-14T16:48:01.664395",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "634acf4c",
-    "ts": "2026-06-14T16:47:57.196666",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Dotnet Developer"
-  },
-  {
-    "id": "787e71f1",
-    "ts": "2026-06-14T16:47:51.992962",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "7cf5ed63",
-    "ts": "2026-06-14T16:47:46.854169",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "91301903",
-    "ts": "2026-06-14T16:47:42.403913",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "f96353cc",
-    "ts": "2026-06-14T16:47:37.590288",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Dot Net Developer"
-  },
-  {
-    "id": "8693d6fa",
-    "ts": "2026-06-14T16:47:33.223517",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Full Stack Developer (.NET + Angular + React)"
-  },
-  {
-    "id": "dcccc63b",
-    "ts": "2026-06-14T16:47:28.424208",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "7254933c",
-    "ts": "2026-06-14T16:47:23.969408",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior . NET developer"
-  },
-  {
-    "id": "6085710d",
-    "ts": "2026-06-14T16:47:19.124498",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer (React + Python)"
-  },
-  {
-    "id": "5fce37ae",
-    "ts": "2026-06-14T16:47:14.268315",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "847970ca",
-    "ts": "2026-06-14T16:47:09.411549",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Developer (.NET)"
-  },
-  {
-    "id": "9c5871ba",
-    "ts": "2026-06-14T16:47:04.140223",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — DOT NET Developer"
-  },
-  {
-    "id": "2bc87d7b",
-    "ts": "2026-06-14T16:46:59.224037",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developers"
   }
 ]
