@@ -12,7 +12,7 @@ Key design principles:
   8. All actions mimic human behaviour (delays, scroll, click offset)
 """
 
-import time, random, os, yaml
+import time, random, os, yaml, re
 from urllib.parse import quote
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout, Page
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS

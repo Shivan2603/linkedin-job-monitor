@@ -203,7 +203,7 @@ def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
     """
     Intelligent AI routing with caching.
-    Order: Cache → Groq → OpenRouter (free) → Gemini → Error
+    Order: Cache → Gemini (1500 req/day) → Groq → OpenRouter → Error
     """
     combined = f"{system_prompt}\n\n{user_prompt}"
 
@@ -218,23 +218,21 @@ def ai_complete(system_prompt: str, user_prompt: str,
     # 2. Build provider chain based on task
     if task == "form_fill":
         providers = [
+            ("Gemini-Fast", lambda: gemini_complete(combined, max_tokens)),
             ("Groq-Fast", lambda: groq_complete(system_prompt, user_prompt,
                                                 model=GROQ_MODEL_FAST,
                                                 max_tokens=max_tokens)),
             ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
                                                        max_tokens=max_tokens)),
-            ("Groq",      lambda: groq_complete(system_prompt, user_prompt,
-                                                max_tokens=max_tokens)),
-            ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
         ]
     else:
         # tailor, ats_check, general → best quality first
         providers = [
+            ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
             ("Groq",      lambda: groq_complete(system_prompt, user_prompt,
                                                 max_tokens=max_tokens)),
             ("OpenRouter", lambda: openrouter_complete(system_prompt, user_prompt,
                                                        max_tokens=max_tokens)),
-            ("Gemini",    lambda: gemini_complete(combined, max_tokens)),
         ]
 
     last_error = None
