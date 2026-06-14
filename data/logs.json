@@ -1,5 +1,187 @@
 [
   {
+    "id": "aee6ad07",
+    "ts": "2026-06-14T18:26:20.947806",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior Full Stack Developer (.NET + Angular + React) | Remote | 94% match"
+  },
+  {
+    "id": "d510c625",
+    "ts": "2026-06-14T18:26:20.859030",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Filled 0/6 fields via AI."
+  },
+  {
+    "id": "4a856772",
+    "ts": "2026-06-14T18:26:20.748876",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "094eba0e",
+    "ts": "2026-06-14T18:26:20.197469",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models unavailable"
+  },
+  {
+    "id": "da4785e6",
+    "ts": "2026-06-14T18:26:20.181512",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "55eb0a27",
+    "ts": "2026-06-14T18:26:19.821295",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "bc1c5bde",
+    "ts": "2026-06-14T18:26:19.362177",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1caf6633",
+    "ts": "2026-06-14T18:26:18.926927",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "88453e36",
+    "ts": "2026-06-14T18:26:13.661588",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "1d3faf76",
+    "ts": "2026-06-14T18:26:12.921778",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior Full Stack Developer (.NET + Angular + React) (94%)"
+  },
+  {
+    "id": "ccdebc3c",
+    "ts": "2026-06-14T18:26:12.903081",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "c9fdfe29",
+    "ts": "2026-06-14T18:26:12.878906",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "6ed720d7",
+    "ts": "2026-06-14T18:26:12.780005",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Senior_Full_Stack_De_Company_Resume.docx (94% match)"
+  },
+  {
+    "id": "c3cb4c19",
+    "ts": "2026-06-14T18:26:12.719610",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "be3397d8",
+    "ts": "2026-06-14T18:26:12.673415",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "068d6150",
+    "ts": "2026-06-14T18:25:34.004900",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "21b107ac",
+    "ts": "2026-06-14T18:25:32.904895",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "49ba7db7",
+    "ts": "2026-06-14T18:25:32.894347",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "fd11ce0e",
+    "ts": "2026-06-14T18:25:32.737793",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "fd0cdb07",
+    "ts": "2026-06-14T18:25:32.692447",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "3c6c6a8c",
+    "ts": "2026-06-14T18:25:32.226679",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4019230b",
+    "ts": "2026-06-14T18:25:31.864028",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bfc29747",
+    "ts": "2026-06-14T18:25:31.075658",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a2a16d89",
+    "ts": "2026-06-14T18:25:30.485246",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior Full Stack Developer (.NET + Angular + React)"
+  },
+  {
+    "id": "1bde5759",
+    "ts": "2026-06-14T18:25:25.676974",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior .NET Developer (already applied)"
+  },
+  {
+    "id": "9cb5244f",
+    "ts": "2026-06-14T18:24:53.868974",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior . NET developer (94%)"
+  },
+  {
     "id": "a9d25ad9",
     "ts": "2026-06-14T18:24:44.700885",
     "level": "SUCCESS",
@@ -3316,187 +3498,5 @@
     "level": "INFO",
     "site": "monster",
     "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "3c21ceea",
-    "ts": "2026-06-14T17:00:58.755757",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Full Stack Developer' in 'Remote'"
-  },
-  {
-    "id": "0cff4fa9",
-    "ts": "2026-06-14T17:00:58.720997",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "1ccb0601",
-    "ts": "2026-06-14T17:00:53.948554",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Full Stack Developer' in 'Chennai'"
-  },
-  {
-    "id": "a5beee7c",
-    "ts": "2026-06-14T17:00:53.909849",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "462b0840",
-    "ts": "2026-06-14T17:00:48.349787",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Full Stack Developer' in 'Bangalore'"
-  },
-  {
-    "id": "bad45625",
-    "ts": "2026-06-14T17:00:48.313077",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "401c01da",
-    "ts": "2026-06-14T17:00:43.263345",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior Software Engineer' in 'Remote'"
-  },
-  {
-    "id": "ea7e050b",
-    "ts": "2026-06-14T17:00:43.230026",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "555c9ca2",
-    "ts": "2026-06-14T17:00:37.438814",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior Software Engineer' in 'Chennai'"
-  },
-  {
-    "id": "c7a14c9d",
-    "ts": "2026-06-14T17:00:37.399743",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "e0c6de5b",
-    "ts": "2026-06-14T17:00:31.886542",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior Software Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "01e39147",
-    "ts": "2026-06-14T17:00:31.846904",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "f13d2b1a",
-    "ts": "2026-06-14T17:00:26.834654",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "92255f79",
-    "ts": "2026-06-14T17:00:26.800572",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "5070362e",
-    "ts": "2026-06-14T17:00:22.516489",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "3bec00db",
-    "ts": "2026-06-14T17:00:22.484031",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Monster: Applied to 0 jobs"
-  },
-  {
-    "id": "2e79f5e4",
-    "ts": "2026-06-14T17:00:16.328667",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Monster: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "2fa19bdf",
-    "ts": "2026-06-14T17:00:16.299336",
-    "level": "ERROR",
-    "site": "monster",
-    "message": "Monster login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[name=\\\"emailAddress\\\"]\")\n"
-  },
-  {
-    "id": "361771c2",
-    "ts": "2026-06-14T16:59:40.979694",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Monster India..."
-  },
-  {
-    "id": "d641b36d",
-    "ts": "2026-06-14T16:59:38.336705",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Monster India bot"
-  },
-  {
-    "id": "ff643dd7",
-    "ts": "2026-06-14T16:59:38.311649",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Monster India ---"
-  },
-  {
-    "id": "b6a7edb7",
-    "ts": "2026-06-14T16:58:52.053080",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 46s before next site..."
-  },
-  {
-    "id": "418bfcf0",
-    "ts": "2026-06-14T16:58:52.030488",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Shine done ---"
-  },
-  {
-    "id": "87737168",
-    "ts": "2026-06-14T16:58:51.585641",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "9e4b9559",
-    "ts": "2026-06-14T16:58:47.913077",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'C# Developer' in 'Remote'"
-  },
-  {
-    "id": "3d98ed6d",
-    "ts": "2026-06-14T16:58:47.896156",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
   }
 ]
