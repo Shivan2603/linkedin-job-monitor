@@ -1,26 +1,23 @@
 """
-bot/ai_agent_filler.py — AI-Powered Web Form Filler (Google Gemini 2.0 Flash - FREE)
-Extracts form fields from a page, asks Gemini how to fill them using profile.yaml, and executes the actions.
+bot/ai_agent_filler.py — AI-Powered Web Form Filler
+Primary: Groq Llama 3.1 8B (fast) | Fallback: Groq 70B → Gemini → HuggingFace
 """
-import json
-import os
-import yaml
+import json, os, yaml
 from playwright.sync_api import Page
-from bot.config import GEMINI_API_KEY, GEMINI_MODEL, PROJECT_FOLDER
+from bot.config import GROQ_API_KEY, PROJECT_FOLDER
 from bot.utils import logger
-import google.generativeai as genai
+from bot.ai_router import ai_complete
 
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
 
-def load_profile():
+def load_profile() -> dict:
     profile_path = os.path.join(PROJECT_FOLDER, "profile.yaml")
     if os.path.exists(profile_path):
         with open(profile_path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f)
     return {}
 
-def extract_form_fields(page: Page):
+
+def extract_form_fields(page: Page) -> list:
     """Inject JS to extract all visible inputs, selects, and textareas."""
     return page.evaluate("""
         () => {
@@ -46,19 +43,20 @@ def extract_form_fields(page: Page):
                     inputType: el.type,
                     label: labelText.trim(),
                     name: el.name,
-                    options: el.tagName.toLowerCase() === 'select' ? Array.from(el.options).map(o => o.text) : []
+                    options: el.tagName.toLowerCase() === 'select'
+                        ? Array.from(el.options).map(o => o.text) : []
                 });
             });
             return fields;
         }
     """)
 
-def fill_form_with_ai(page: Page, site: str = "ai"):
-    """Extracts form fields, asks Gemini for answers, and fills the form."""
-    if not GEMINI_API_KEY or len(GEMINI_API_KEY) < 10:
-        logger.warn("Skipping AI form filling (no Gemini API Key configured).", site)
-        return False
 
+def fill_form_with_ai(page: Page, site: str = "ai") -> bool:
+    """
+    Extracts form fields, asks AI for answers (via ai_router), and fills the form.
+    Uses fast Groq model (Llama 3.1 8B) for speed.
+    """
     fields = extract_form_fields(page)
     if not fields:
         logger.info("No form fields found to fill.", site)
@@ -66,37 +64,31 @@ def fill_form_with_ai(page: Page, site: str = "ai"):
 
     profile = load_profile()
 
-    prompt = f"""You are an AI job application assistant helping a user apply for jobs.
-Here is the user's profile information:
+    system = """You are an AI job application assistant filling web forms.
+Be precise. Match dropdown values EXACTLY from the options list.
+Return ONLY a valid JSON array, no other text."""
+
+    user = f"""User profile:
 ```json
-{json.dumps(profile, indent=2)}
+{json.dumps(profile, indent=2)[:3000]}
 ```
 
-Here is a list of form fields extracted from the current web page:
+Form fields:
 ```json
-{json.dumps(fields, indent=2)}
+{json.dumps(fields, indent=2)[:2000]}
 ```
 
-For each field, determine the best value to fill in.
-Rules:
-1. For text inputs, provide the exact string to type.
-2. For select dropdowns, provide the EXACT text of one of the options listed in the "options" array.
-3. For checkboxes/radio buttons, provide "check" to check it, or leave value empty to ignore.
-4. If a field asks for a Cover Letter, write a short professional 2-3 sentence response.
-5. Skip fields that are clearly not relevant (e.g. CAPTCHA, file upload).
-6. Provide the output strictly as a JSON array of objects with keys "id" and "value".
+Fill each field from the profile. Rules:
+1. Text inputs: exact string to type
+2. Select: EXACT text from "options" array  
+3. Checkbox/radio: "check" to tick, empty string to skip
+4. Cover letter: professional 2-3 sentences
+5. Skip CAPTCHA and file upload fields (type=file)
 
-Return ONLY valid JSON array, no other text.
-Example:
-[
-  {{"id": "ai-form-field-0", "value": "Siva Shankar"}},
-  {{"id": "ai-form-field-1", "value": "Yes"}}
-]
-"""
+Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
+
     try:
-        model = genai.GenerativeModel(GEMINI_MODEL)
-        response = model.generate_content(prompt)
-        raw = response.text.strip()
+        raw = ai_complete(system, user, task="form_fill", max_tokens=1500)
 
         if "```json" in raw:
             raw = raw.split("```json")[1].split("```")[0].strip()
@@ -104,30 +96,36 @@ Example:
             raw = raw.split("```")[1].split("```")[0].strip()
 
         actions = json.loads(raw)
+        filled = 0
 
         for action in actions:
             field_id = action.get("id")
-            val = action.get("value")
-            if not field_id or not val:
+            val      = action.get("value")
+            if not field_id or val is None or val == "":
                 continue
+
             selector = f'[data-ai-id="{field_id}"]'
             try:
-                el = page.locator(selector)
+                el         = page.locator(selector)
                 tag_name   = el.evaluate("el => el.tagName.toLowerCase()")
                 input_type = el.evaluate("el => el.type")
-                if tag_name == 'select':
-                    el.select_option(label=val)
-                elif input_type in ['checkbox', 'radio']:
-                    if str(val).lower() in ['check', 'true', 'yes']:
+
+                if tag_name == "select":
+                    el.select_option(label=str(val))
+                elif input_type in ["checkbox", "radio"]:
+                    if str(val).lower() in ["check", "true", "yes"]:
                         el.check()
+                elif input_type == "file":
+                    pass  # Skip file uploads
                 else:
                     el.fill(str(val))
+                filled += 1
             except Exception as ex:
                 logger.warn(f"Failed to fill field {field_id}: {ex}", site)
 
-        logger.ai(f"Filled {len(actions)} fields using Gemini AI.", site)
+        logger.ai(f"Filled {filled}/{len(actions)} fields via AI.", site)
         return True
 
     except Exception as e:
-        logger.error(f"Gemini Form Filler failed: {e}", site)
+        logger.error(f"AI Form Filler failed: {e}", site)
         return False

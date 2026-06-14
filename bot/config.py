@@ -23,13 +23,22 @@ TAILORED_TODAY      = os.path.join(TAILORED_BASE, TODAY_STR)
 # Always use the most recent resume as the base
 BASE_RESUME_DOCX    = os.path.join(RESUME_FOLDER, "Siva_Shankar_Resume_6062026.docx")
 
-# ─── AI (Google Gemini - FREE) ───────────────────────────
-GEMINI_API_KEY      = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL        = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+# ─── AI PROVIDERS (All FREE) ───────────────────────────
+# Groq  (primary): https://console.groq.com
+GROQ_API_KEY         = os.getenv("GROQ_API_KEY", "")
+GROQ_MODEL_PRIMARY   = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")   # Resume tailoring
+GROQ_MODEL_FAST      = os.getenv("GROQ_MODEL_FAST", "llama-3.1-8b-instant") # Form filling (fast)
 
-# Legacy aliases so old imports don't break immediately
-ANTHROPIC_API_KEY   = GEMINI_API_KEY
-CLAUDE_MODEL        = GEMINI_MODEL
+# HuggingFace (ATS checker): https://huggingface.co/settings/tokens
+HUGGINGFACE_TOKEN    = os.getenv("HUGGINGFACE_TOKEN", "")
+
+# Google Gemini (fallback): https://aistudio.google.com/app/apikey
+GEMINI_API_KEY       = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL         = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-lite")
+
+# Legacy aliases
+ANTHROPIC_API_KEY    = GROQ_API_KEY
+CLAUDE_MODEL         = GROQ_MODEL_PRIMARY
 
 # ─── JOB SEARCH ───────────────────────────────────────────
 JOB_TITLES = [t.strip() for t in os.getenv(
