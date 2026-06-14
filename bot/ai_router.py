@@ -91,15 +91,10 @@ def groq_complete(system_prompt: str, user_prompt: str,
 
     try:
         resp = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=60)
-        if resp.status_code == 429 and _retry < 2:
-            wait = 30 * (_retry + 1)  # 30s, then 60s
-            logger.warn(f"Groq 429 rate limit — waiting {wait}s (retry {_retry+1}/2)", "ai")
-            time.sleep(wait)
-            # On second retry, switch to faster/smaller model to avoid quota
-            fallback_model = GROQ_MODEL_FAST if _retry == 0 else "llama-3.1-8b-instant"
-            return groq_complete(system_prompt, user_prompt,
-                                 model=fallback_model, max_tokens=max_tokens,
-                                 _retry=_retry + 1)
+        if resp.status_code == 429:
+            logger.warn("Groq 429 rate limit hit — switching instantly to next provider", "ai")
+            raise Exception("Groq 429 Rate Limit")
+        
         resp.raise_for_status()
         return resp.json()["choices"][0]["message"]["content"].strip()
     except requests.HTTPError as e:
