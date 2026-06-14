@@ -1,5 +1,922 @@
 [
   {
+    "id": "7e39a633",
+    "ts": "2026-06-14T16:11:34.882908",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Azure Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "55142e8f",
+    "ts": "2026-06-14T16:11:34.840768",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Azure Developer' in Chennai"
+  },
+  {
+    "id": "0fd8f448",
+    "ts": "2026-06-14T16:09:59.308620",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Azure Developer' in Chennai"
+  },
+  {
+    "id": "05409f17",
+    "ts": "2026-06-14T16:09:55.838629",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Azure Developer' in 'Chennai'"
+  },
+  {
+    "id": "7fcd14be",
+    "ts": "2026-06-14T16:09:55.771840",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Azure Developer' in Bangalore"
+  },
+  {
+    "id": "d2b5079e",
+    "ts": "2026-06-14T16:09:52.954906",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Azure Developer' in 'Bangalore'"
+  },
+  {
+    "id": "9234fccb",
+    "ts": "2026-06-14T16:09:52.907505",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Azure Developer' in Remote"
+  },
+  {
+    "id": "5cdefa5d",
+    "ts": "2026-06-14T16:09:49.162691",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Azure Developer' in 'Remote'"
+  },
+  {
+    "id": "dfcb39c9",
+    "ts": "2026-06-14T16:09:49.099598",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'C# Developer' in Hyderabad"
+  },
+  {
+    "id": "e73c21a6",
+    "ts": "2026-06-14T16:08:13.344272",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'C# Developer' in Hyderabad"
+  },
+  {
+    "id": "c5829071",
+    "ts": "2026-06-14T16:08:08.586083",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'C# Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "d6877af0",
+    "ts": "2026-06-14T16:08:08.521133",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'C# Developer' in Chennai"
+  },
+  {
+    "id": "037260f8",
+    "ts": "2026-06-14T16:08:04.821468",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'C# Developer' in 'Chennai'"
+  },
+  {
+    "id": "4367202c",
+    "ts": "2026-06-14T16:08:04.622436",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'C# Developer' in Bangalore"
+  },
+  {
+    "id": "cef734ab",
+    "ts": "2026-06-14T16:08:00.164956",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'C# Developer' in 'Bangalore'"
+  },
+  {
+    "id": "31c39973",
+    "ts": "2026-06-14T16:07:59.851252",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'C# Developer' in Remote"
+  },
+  {
+    "id": "782b2b4f",
+    "ts": "2026-06-14T16:07:54.461634",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'C# Developer' in 'Remote'"
+  },
+  {
+    "id": "34be5784",
+    "ts": "2026-06-14T16:07:54.283311",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Full Stack Developer' in Hyderabad"
+  },
+  {
+    "id": "7621edf6",
+    "ts": "2026-06-14T16:07:49.758696",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Full Stack Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "eb3b43d1",
+    "ts": "2026-06-14T16:07:49.412510",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Full Stack Developer' in Chennai"
+  },
+  {
+    "id": "fc809e8c",
+    "ts": "2026-06-14T16:07:45.424023",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Full Stack Developer' in 'Chennai'"
+  },
+  {
+    "id": "775c10d2",
+    "ts": "2026-06-14T16:07:45.321176",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Full Stack Developer' in Bangalore"
+  },
+  {
+    "id": "f2defe8b",
+    "ts": "2026-06-14T16:07:41.036956",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Full Stack Developer' in 'Bangalore'"
+  },
+  {
+    "id": "6f3d83e4",
+    "ts": "2026-06-14T16:07:40.961958",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Full Stack Developer' in Remote"
+  },
+  {
+    "id": "e2fc3807",
+    "ts": "2026-06-14T16:07:36.556981",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Full Stack Developer' in 'Remote'"
+  },
+  {
+    "id": "efcdc854",
+    "ts": "2026-06-14T16:07:36.478965",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Senior Software Engineer' in Hyderabad"
+  },
+  {
+    "id": "0de3bb08",
+    "ts": "2026-06-14T16:07:32.756201",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior Software Engineer' in 'Hyderabad'"
+  },
+  {
+    "id": "76b27e88",
+    "ts": "2026-06-14T16:07:32.552097",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Senior Software Engineer' in Chennai"
+  },
+  {
+    "id": "169108e5",
+    "ts": "2026-06-14T16:05:42.447170",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior Software Engineer' in Chennai"
+  },
+  {
+    "id": "c07b6b3e",
+    "ts": "2026-06-14T16:05:38.325095",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior Software Engineer' in 'Chennai'"
+  },
+  {
+    "id": "3221a40f",
+    "ts": "2026-06-14T16:05:38.297420",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Senior Software Engineer' in Bangalore"
+  },
+  {
+    "id": "3c6c0593",
+    "ts": "2026-06-14T16:05:34.852403",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior Software Engineer' in 'Bangalore'"
+  },
+  {
+    "id": "da248dc3",
+    "ts": "2026-06-14T16:05:34.809863",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Senior Software Engineer' in Remote"
+  },
+  {
+    "id": "532212c7",
+    "ts": "2026-06-14T16:05:30.807109",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior Software Engineer' in 'Remote'"
+  },
+  {
+    "id": "6beee2e8",
+    "ts": "2026-06-14T16:05:30.769657",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No job cards found for 'Senior .NET Developer' in Hyderabad"
+  },
+  {
+    "id": "db5bb498",
+    "ts": "2026-06-14T16:05:27.346323",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "503ddff7",
+    "ts": "2026-06-14T16:05:27.297867",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Senior .NET Developer' in Chennai"
+  },
+  {
+    "id": "0b38ca89",
+    "ts": "2026-06-14T16:03:51.025768",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior .NET Developer' in Chennai"
+  },
+  {
+    "id": "81d9829b",
+    "ts": "2026-06-14T16:03:47.956181",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "9415ed0a",
+    "ts": "2026-06-14T16:03:47.902812",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "13dab225",
+    "ts": "2026-06-14T16:02:24.391710",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "9967a907",
+    "ts": "2026-06-14T16:02:21.632269",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "feb7af86",
+    "ts": "2026-06-14T16:02:21.595590",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied to 0 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "63eeff1a",
+    "ts": "2026-06-14T16:01:02.074016",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 19 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "5dae422c",
+    "ts": "2026-06-14T16:00:58.951718",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "2c75e58c",
+    "ts": "2026-06-14T16:00:58.933133",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "86847f58",
+    "ts": "2026-06-14T16:00:58.884561",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri login successful"
+  },
+  {
+    "id": "137703d8",
+    "ts": "2026-06-14T16:00:46.364166",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "a87df4aa",
+    "ts": "2026-06-14T16:00:44.462579",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "6e8c3689",
+    "ts": "2026-06-14T16:00:44.425647",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "9e831881",
+    "ts": "2026-06-14T15:59:24.169362",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 80s before next site..."
+  },
+  {
+    "id": "c84aa369",
+    "ts": "2026-06-14T15:59:24.158281",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "5beb03ae",
+    "ts": "2026-06-14T15:59:24.137855",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "01f555fc",
+    "ts": "2026-06-14T15:59:23.652233",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "f2e82bfd",
+    "ts": "2026-06-14T15:59:23.588930",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "365f7af2",
+    "ts": "2026-06-14T15:59:23.580786",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "b2e04e3b",
+    "ts": "2026-06-14T15:59:23.541170",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "65cc8d3d",
+    "ts": "2026-06-14T15:59:23.152660",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "87558bc4",
+    "ts": "2026-06-14T15:59:22.676503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "db73f7fc",
+    "ts": "2026-06-14T15:59:22.206867",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "6b67d22a",
+    "ts": "2026-06-14T15:59:01.663347",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "eb354991",
+    "ts": "2026-06-14T15:59:01.424917",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
+  },
+  {
+    "id": "292cdd53",
+    "ts": "2026-06-14T15:58:57.891217",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
+  },
+  {
+    "id": "ba55b439",
+    "ts": "2026-06-14T15:58:57.848536",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Gr8Tech — Software Engineer (Already applied)"
+  },
+  {
+    "id": "46481d2d",
+    "ts": "2026-06-14T15:58:54.957732",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/gr8tech/jobs/4794468101…"
+  },
+  {
+    "id": "c4d81b46",
+    "ts": "2026-06-14T15:58:54.906901",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "734fb548",
+    "ts": "2026-06-14T15:58:50.638918",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002…"
+  },
+  {
+    "id": "ef27eaf8",
+    "ts": "2026-06-14T15:58:50.607259",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "015f9d97",
+    "ts": "2026-06-14T15:58:50.559688",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "f2423a54",
+    "ts": "2026-06-14T15:58:50.543511",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "2f612d71",
+    "ts": "2026-06-14T15:58:50.511206",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "ac7b0d06",
+    "ts": "2026-06-14T15:58:50.274052",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "8cfcbf73",
+    "ts": "2026-06-14T15:58:49.886124",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "b91c50f7",
+    "ts": "2026-06-14T15:58:49.641678",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "e80700e5",
+    "ts": "2026-06-14T15:58:29.433644",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "ac493785",
+    "ts": "2026-06-14T15:58:29.190824",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "2a03b36c",
+    "ts": "2026-06-14T15:58:26.090816",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178#:~:text=…"
+  },
+  {
+    "id": "a6ccadbf",
+    "ts": "2026-06-14T15:58:26.046483",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Growe — Software Engineer (Already applied)"
+  },
+  {
+    "id": "e2d248e0",
+    "ts": "2026-06-14T15:58:22.544465",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101…"
+  },
+  {
+    "id": "404ae0af",
+    "ts": "2026-06-14T15:58:22.521592",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Northpointtechnology — Software Engineer (Already applied)"
+  },
+  {
+    "id": "bd743ab1",
+    "ts": "2026-06-14T15:58:19.094593",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/northpointtechnology/jobs/8546394002#:~:text=.NE…"
+  },
+  {
+    "id": "fb2137b5",
+    "ts": "2026-06-14T15:58:19.078711",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "8747f522",
+    "ts": "2026-06-14T15:58:19.031019",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAaqCnheabs4bVLQN9t5FiuiEIRxIT8C7U"
+  },
+  {
+    "id": "52ea07da",
+    "ts": "2026-06-14T15:58:18.986184",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-"
+  },
+  {
+    "id": "34230106",
+    "ts": "2026-06-14T15:58:18.761006",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "3db30cba",
+    "ts": "2026-06-14T15:57:58.545987",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "5dff1d1b",
+    "ts": "2026-06-14T15:57:57.988283",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "87e5cf73",
+    "ts": "2026-06-14T15:57:54.468775",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
+  },
+  {
+    "id": "7d026540",
+    "ts": "2026-06-14T15:57:54.444232",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "3b655aaa",
+    "ts": "2026-06-14T15:57:54.380937",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "Resume tailoring failed: All AI providers failed. Last error: All Gemini models unavailable"
+  },
+  {
+    "id": "8fa01d98",
+    "ts": "2026-06-14T15:57:54.368285",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "9d3bbccd",
+    "ts": "2026-06-14T15:57:54.334058",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "fd112fc8",
+    "ts": "2026-06-14T15:57:53.929657",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro-latest not found, trying next..."
+  },
+  {
+    "id": "455c46bd",
+    "ts": "2026-06-14T15:57:53.479967",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-latest not found, trying next..."
+  },
+  {
+    "id": "f0faf871",
+    "ts": "2026-06-14T15:57:53.003050",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "46de04a3",
+    "ts": "2026-06-14T15:57:32.790078",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "48d21582",
+    "ts": "2026-06-14T15:57:32.567007",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian - Software Engineer"
+  },
+  {
+    "id": "803cd08f",
+    "ts": "2026-06-14T15:57:29.195990",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2#:~:text=Seni…"
+  },
+  {
+    "id": "02e34b49",
+    "ts": "2026-06-14T15:57:29.164331",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "f58fb8b1",
+    "ts": "2026-06-14T15:57:29.116809",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: []"
+  },
+  {
+    "id": "a015a5c0",
+    "ts": "2026-06-14T15:57:29.102158",
+    "level": "ERROR",
+    "site": "ai",
+    "message": "ATS check failed: All AI providers failed. Last error: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAaqCnheabs4bVLQN9t5FiuiEIRxIT8C7U"
+  },
+  {
+    "id": "38ff58af",
+    "ts": "2026-06-14T15:57:29.068648",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-"
+  },
+  {
+    "id": "6a825f03",
+    "ts": "2026-06-14T15:57:28.609540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+  },
+  {
+    "id": "fb516c12",
+    "ts": "2026-06-14T15:57:08.415437",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 20s then retrying..."
+  },
+  {
+    "id": "29d8e98c",
+    "ts": "2026-06-14T15:57:08.193416",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Valarian_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "cd1968aa",
+    "ts": "2026-06-14T15:57:08.156140",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "8d2f4e76",
+    "ts": "2026-06-14T15:57:06.337525",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Valarian - Software Engineer"
+  },
+  {
+    "id": "1106bcf0",
+    "ts": "2026-06-14T15:57:03.038659",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/valarian/872aec4d-d770-4962-a374-b278dcd513e2…"
+  },
+  {
+    "id": "2d854065",
+    "ts": "2026-06-14T15:57:03.017376",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Growe — Software Engineer (Already applied)"
+  },
+  {
+    "id": "68cbb271",
+    "ts": "2026-06-14T15:56:58.043123",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.eu.greenhouse.io/growe/jobs/4876620101#:~:text=Senior%20.NET%2…"
+  },
+  {
+    "id": "e6788232",
+    "ts": "2026-06-14T15:56:58.001315",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 10 job URLs from Google search"
+  },
+  {
+    "id": "38f64419",
+    "ts": "2026-06-14T15:56:53.350841",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
+  },
+  {
+    "id": "293c92c8",
+    "ts": "2026-06-14T15:56:44.633826",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
+  },
+  {
+    "id": "775849dc",
+    "ts": "2026-06-14T15:56:35.968610",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "0a8bb210",
+    "ts": "2026-06-14T15:56:31.454953",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "eeb301fd",
+    "ts": "2026-06-14T15:56:31.422890",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "51bd881d",
+    "ts": "2026-06-14T15:55:52.540611",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 39s before next site..."
+  },
+  {
+    "id": "6d009b51",
+    "ts": "2026-06-14T15:55:52.532825",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "1d8e30c6",
+    "ts": "2026-06-14T15:55:52.499822",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "dd46bcad",
+    "ts": "2026-06-14T15:55:51.969690",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login failed: Locator.fill: Error: strict mode violation: get_by_label(\"Email or phone\") resolved to 2 elements:\n    1) <input value=\"\" dir=\"auto\" type=\"email\" id=\"«Refvd3ksop…/> aka get_by_label(\"Email or phone\").first\n    2) <input value=\"\" dir=\"auto\" type=\"email\" id=\"«Refvl3ksop…/> aka get_by_role(\"textbox\", name=\"Email or phone\")\n\nCall log:\nwaiting for get_by_label(\"Email or phone\")\n"
+  },
+  {
+    "id": "4a69ae9a",
+    "ts": "2026-06-14T15:55:46.839780",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "7268c7c0",
+    "ts": "2026-06-14T15:55:44.837506",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "60165222",
+    "ts": "2026-06-14T15:55:44.821760",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "4f15bd66",
+    "ts": "2026-06-14T15:55:44.805884",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "0c150409",
+    "ts": "2026-06-14T15:55:44.790032",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "44e3e7db",
+    "ts": "2026-06-14T15:55:44.779816",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "b573b64f",
+    "ts": "2026-06-14T15:55:44.772895",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 15:55:44"
+  },
+  {
+    "id": "30cebc41",
+    "ts": "2026-06-14T15:55:44.757956",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "99b4902e",
+    "ts": "2026-06-14T15:55:44.742056",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "5debd05b",
+    "ts": "2026-06-14T15:55:44.726112",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "67594895",
+    "ts": "2026-06-14T15:55:44.710273",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
     "id": "56d73a87",
     "ts": "2026-06-14T15:49:39.085881",
     "level": "WARN",
