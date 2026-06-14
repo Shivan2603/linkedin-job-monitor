@@ -68,7 +68,7 @@ def run_linkedin_bot():
 
     with sync_playwright() as p:
         browser, context = safe_browser_context(p, SITE)
-        page = context.new_page()
+        page = context.pages[0] if context.pages else context.new_page()
 
         try:
             if not _login(page, creds):
@@ -106,27 +106,25 @@ def _login(page: Page, creds: dict) -> bool:
         email_loc = page.locator('#username, #session_key, input[name="session_key"], [autocomplete="username"]').first
         if email_loc.is_visible(timeout=5000):
             email_loc.fill(creds["email"])
-        else:
-            page.get_by_label(re.compile(r"email|phone", re.I)).first.fill(creds["email"])
+            _delay(0.6, 1.2)
 
-        _delay(0.6, 1.2)
-
-        pass_loc = page.locator('#password, #session_password, input[name="session_password"], [autocomplete="current-password"]').first
-        if pass_loc.is_visible(timeout=5000):
-            pass_loc.fill(creds["password"])
+            pass_loc = page.locator('#password, #session_password, input[name="session_password"], [autocomplete="current-password"]').first
+            if pass_loc.is_visible(timeout=5000):
+                pass_loc.fill(creds["password"])
+            _delay(0.5, 1.0)
+            
+            # Click Sign in button
+            for btn_sel in ['button[type="submit"]', '[data-litms-control-urn*="sign_in"]']:
+                try:
+                    el = page.query_selector(btn_sel)
+                    if el and el.is_visible():
+                        el.click()
+                        break
+                except Exception:
+                    continue
+            _delay(3, 5)
         else:
-            page.get_by_label(re.compile(r"password", re.I)).first.fill(creds["password"])
-        _delay(0.5, 1.0)
-        # Click Sign in button
-        for btn_sel in ['button[type="submit"]', '[data-litms-control-urn*="sign_in"]']:
-            try:
-                el = page.query_selector(btn_sel)
-                if el and el.is_visible():
-                    el.click()
-                    break
-            except Exception:
-                continue
-        _delay(3, 5)
+            logger.info("Login fields not found. If there is a CAPTCHA or you are on the homepage, please log in or navigate manually.", SITE)
 
         # Handle OTP / security checkpoint / CAPTCHA
         if any(x in page.url for x in ["checkpoint", "challenge", "pin"]):
