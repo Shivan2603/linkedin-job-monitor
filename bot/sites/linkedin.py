@@ -48,8 +48,8 @@ def run_linkedin_bot():
 def _login(page, creds) -> bool:
     """Log into LinkedIn"""
     logger.info("Logging into LinkedIn...", SITE)
-    page.goto(f"{BASE_URL}/login", wait_until="networkidle")
-    _human_delay(1, 2)
+    page.goto(f"{BASE_URL}/login", wait_until="domcontentloaded", timeout=45000)
+    _human_delay(2, 3)
 
     try:
         page.fill("#username", creds["email"])

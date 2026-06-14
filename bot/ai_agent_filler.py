@@ -106,9 +106,12 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
 
             selector = f'[data-ai-id="{field_id}"]'
             try:
-                el         = page.locator(selector)
-                tag_name   = el.evaluate("el => el.tagName.toLowerCase()")
-                input_type = el.evaluate("el => el.type")
+                el         = page.locator(selector).first
+                # Use 3s timeout instead of default 30s — skip non-existent fields fast
+                if not el.is_visible(timeout=3000):
+                    continue
+                tag_name   = el.evaluate("el => el.tagName.toLowerCase()", timeout=3000)
+                input_type = el.evaluate("el => el.type", timeout=3000)
 
                 if tag_name == "select":
                     el.select_option(label=str(val))
@@ -121,7 +124,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                     el.fill(str(val))
                 filled += 1
             except Exception as ex:
-                logger.warn(f"Failed to fill field {field_id}: {ex}", site)
+                logger.warn(f"Failed to fill field {field_id}: {str(ex)[:60]}", site)
 
         logger.ai(f"Filled {filled}/{len(actions)} fields via AI.", site)
         return True
