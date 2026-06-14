@@ -1,5 +1,201 @@
 [
   {
+    "id": "7f12e8a2",
+    "ts": "2026-06-14T16:43:36.656517",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Diligentcorporation | Software Engineer | Remote/Various | 92% match"
+  },
+  {
+    "id": "725771d6",
+    "ts": "2026-06-14T16:43:32.671918",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 14/30 fields via AI."
+  },
+  {
+    "id": "088e5288",
+    "ts": "2026-06-14T16:43:28.825766",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "32af8c3c",
+    "ts": "2026-06-14T16:42:57.172465",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "857b0227",
+    "ts": "2026-06-14T16:42:54.306350",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "134b2976",
+    "ts": "2026-06-14T16:42:54.291968",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "f031a5ba",
+    "ts": "2026-06-14T16:42:54.183683",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Diligentcorporation_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "c353315a",
+    "ts": "2026-06-14T16:42:54.106808",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "d8f61a5a",
+    "ts": "2026-06-14T16:42:20.820577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "7d911edf",
+    "ts": "2026-06-14T16:42:20.505811",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Diligentcorporation - Software Engineer"
+  },
+  {
+    "id": "5d3f71d5",
+    "ts": "2026-06-14T16:42:16.922307",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/diligentcorporation/jobs/5729895004…"
+  },
+  {
+    "id": "5a91d1fb",
+    "ts": "2026-06-14T16:42:16.873592",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "6f97a92b",
+    "ts": "2026-06-14T16:42:16.818506",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "ce2f0142",
+    "ts": "2026-06-14T16:42:16.790975",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "0318557d",
+    "ts": "2026-06-14T16:42:16.677898",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_Ippon_Technologies_92pct.docx (92% match)"
+  },
+  {
+    "id": "7e423aad",
+    "ts": "2026-06-14T16:42:16.610831",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "a4cc7918",
+    "ts": "2026-06-14T16:41:44.509044",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "6600f0aa",
+    "ts": "2026-06-14T16:41:44.238657",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer (.NET Developer) - Ippon Technologies"
+  },
+  {
+    "id": "9664faf9",
+    "ts": "2026-06-14T16:41:39.474120",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e#:~:text=Senior%…"
+  },
+  {
+    "id": "713da51e",
+    "ts": "2026-06-14T16:41:39.411375",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "7d4db4fa",
+    "ts": "2026-06-14T16:41:39.328201",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "72c5889b",
+    "ts": "2026-06-14T16:41:39.296050",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "605e1f18",
+    "ts": "2026-06-14T16:41:39.122556",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_PlayOn_92pct.docx (92% match)"
+  },
+  {
+    "id": "dfafa3be",
+    "ts": "2026-06-14T16:41:39.011446",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "b8326ca5",
+    "ts": "2026-06-14T16:41:06.495974",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "ec2d8ea8",
+    "ts": "2026-06-14T16:41:06.255714",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
+  },
+  {
+    "id": "8d3f8fdc",
+    "ts": "2026-06-14T16:41:03.334833",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
+  },
+  {
+    "id": "b0b22b6f",
+    "ts": "2026-06-14T16:40:54.238628",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Providence, RI, USA at Speechify | Job Application for Senior Software Engineer, Windows/Desktop Applications via Greenhouse"
+  },
+  {
     "id": "0f504848",
     "ts": "2026-06-14T16:40:49.783948",
     "level": "SUCCESS",
@@ -3302,201 +3498,5 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "No form fields found to fill."
-  },
-  {
-    "id": "0c0e6033",
-    "ts": "2026-06-14T15:28:30.620048",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "Resume tailoring failed: All AI providers failed. Last error: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /models/mistralai/Mistral-7B-Instruct-v0.3 (Caused by NameResolutionError(\"HTTPSConnection(host='api-inference.huggingface.co', port=443): Failed to resolve 'api-inference.huggingface.co' ([Errno 11001] getaddrinfo failed)\"))"
-  },
-  {
-    "id": "a9d20665",
-    "ts": "2026-06-14T15:28:30.577713",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "702c1237",
-    "ts": "2026-06-14T15:28:30.431114",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-"
-  },
-  {
-    "id": "807a2f38",
-    "ts": "2026-06-14T15:28:30.143736",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "87713050",
-    "ts": "2026-06-14T15:28:29.695329",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "6fa1f783",
-    "ts": "2026-06-14T15:28:29.143705",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
-  },
-  {
-    "id": "d3dbba18",
-    "ts": "2026-06-14T15:28:28.885286",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer, Full-Stack - Greenlight Financial Technology"
-  },
-  {
-    "id": "3be88a66",
-    "ts": "2026-06-14T15:28:24.499638",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/greenlight/83ce1d5b-a2c2-4765-aaae-585d93023af6…"
-  },
-  {
-    "id": "8d80e65d",
-    "ts": "2026-06-14T15:28:24.473479",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "35febc11",
-    "ts": "2026-06-14T15:28:24.441983",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['proactive monitoring', 'incident response', 'operational hardening']"
-  },
-  {
-    "id": "2cf5bcb1",
-    "ts": "2026-06-14T15:28:24.425764",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (ats_check)"
-  },
-  {
-    "id": "d616429c",
-    "ts": "2026-06-14T15:28:23.433700",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  },
-  {
-    "id": "f60e23f7",
-    "ts": "2026-06-14T15:28:23.313305",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_PlayOn_92pct.docx (92% match)"
-  },
-  {
-    "id": "d9a41bc5",
-    "ts": "2026-06-14T15:28:23.259754",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "842bfb92",
-    "ts": "2026-06-14T15:28:21.278288",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
-  },
-  {
-    "id": "e055c48d",
-    "ts": "2026-06-14T15:28:18.062503",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
-  },
-  {
-    "id": "77fc9cf1",
-    "ts": "2026-06-14T15:28:18.021217",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Discovered 10 job URLs from Google search"
-  },
-  {
-    "id": "19e537a0",
-    "ts": "2026-06-14T15:28:14.564583",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 0 job links: site:jobs.workday.com \"software engineer\" \".net\" OR \"azure\""
-  },
-  {
-    "id": "574173a2",
-    "ts": "2026-06-14T15:28:06.706637",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 19 job links: site:greenhouse.io \"c# developer\" OR \"senior .net\" OR \"dotne"
-  },
-  {
-    "id": "54240184",
-    "ts": "2026-06-14T15:27:58.480701",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
-  },
-  {
-    "id": "df4db69c",
-    "ts": "2026-06-14T15:27:53.353438",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "6d59c3bc",
-    "ts": "2026-06-14T15:27:53.315729",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "725ab19a",
-    "ts": "2026-06-14T15:27:23.120912",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "842eb405",
-    "ts": "2026-06-14T15:27:23.120912",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 30s before next site..."
-  },
-  {
-    "id": "45055242",
-    "ts": "2026-06-14T15:27:23.098839",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "7e4b0a5d",
-    "ts": "2026-06-14T15:27:22.599991",
-    "level": "ERROR",
-    "site": "linkedin",
-    "message": "LinkedIn bot crash: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://www.linkedin.com/login\", waiting until \"networkidle\"\n"
-  },
-  {
-    "id": "9e149317",
-    "ts": "2026-06-14T15:26:52.475786",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "de4b5f4c",
-    "ts": "2026-06-14T15:26:50.784456",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
   }
 ]
