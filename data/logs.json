@@ -1,5 +1,432 @@
 [
   {
+    "id": "0e3a9f69",
+    "ts": "2026-06-14T18:01:35.177842",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior .NET Developer (React + Python) | Remote | 85% match"
+  },
+  {
+    "id": "89b2d8cc",
+    "ts": "2026-06-14T18:01:35.091706",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "96ecc053",
+    "ts": "2026-06-14T18:01:21.198481",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "cd776be6",
+    "ts": "2026-06-14T18:01:20.573185",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior .NET Developer (React + Python) (85%)"
+  },
+  {
+    "id": "3d451026",
+    "ts": "2026-06-14T18:01:20.532454",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Resume tailoring failed: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "6af614d9",
+    "ts": "2026-06-14T18:01:20.503755",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "57f53481",
+    "ts": "2026-06-14T18:01:20.464551",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "0fccd8e6",
+    "ts": "2026-06-14T18:00:27.520619",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "c93fae42",
+    "ts": "2026-06-14T18:00:25.904859",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
+  },
+  {
+    "id": "440a2233",
+    "ts": "2026-06-14T18:00:24.566493",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "dfa5d4d5",
+    "ts": "2026-06-14T18:00:22.504650",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "acf5b28f",
+    "ts": "2026-06-14T18:00:21.282791",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "3e04cf54",
+    "ts": "2026-06-14T18:00:21.261116",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2def7974",
+    "ts": "2026-06-14T18:00:20.899840",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior .NET Developer (React + Python)"
+  },
+  {
+    "id": "a47d3338",
+    "ts": "2026-06-14T18:00:15.974077",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior .Net Developer (already applied)"
+  },
+  {
+    "id": "cf698f1b",
+    "ts": "2026-06-14T18:00:11.689615",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Skip: Company — Senior Software Developer (.NET) (already applied)"
+  },
+  {
+    "id": "fe35305b",
+    "ts": "2026-06-14T18:00:07.008604",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — DOT NET Developer"
+  },
+  {
+    "id": "64f2753f",
+    "ts": "2026-06-14T18:00:02.554580",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Senior .NET Developers"
+  },
+  {
+    "id": "72ac2c47",
+    "ts": "2026-06-14T17:59:58.629451",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 18 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "157408a5",
+    "ts": "2026-06-14T17:59:51.309118",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "dbd353b0",
+    "ts": "2026-06-14T17:59:51.268842",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "7ba44f03",
+    "ts": "2026-06-14T17:59:51.203822",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri already logged in via cookies"
+  },
+  {
+    "id": "819b4f2d",
+    "ts": "2026-06-14T17:59:47.687088",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "b898b989",
+    "ts": "2026-06-14T17:59:46.846382",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Loaded 18 saved cookies for naukri"
+  },
+  {
+    "id": "0bb4e4cd",
+    "ts": "2026-06-14T17:59:45.300947",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "e4ca5d83",
+    "ts": "2026-06-14T17:59:45.284832",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "91b819f3",
+    "ts": "2026-06-14T17:59:06.188339",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 39s before next site..."
+  },
+  {
+    "id": "c0c001bc",
+    "ts": "2026-06-14T17:59:06.161052",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "0f97fd60",
+    "ts": "2026-06-14T17:59:06.110781",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "44421627",
+    "ts": "2026-06-14T17:59:05.559646",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 0 job URLs from Google search"
+  },
+  {
+    "id": "36239267",
+    "ts": "2026-06-14T17:59:00.510644",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
+  },
+  {
+    "id": "1fc946a3",
+    "ts": "2026-06-14T17:58:55.659432",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: net::ERR_ABORTED at https://www.google.com/search?q=site%3Agreenhouse.io%20%22senior%20.net%20developer%22%20OR%20%22senior%20software%20engineer%22%20%22.net%22%20OR%20%22c%23%20developer%22&num=10\nCall log:\nnavigating to \"https://www.google.com/search?q=site%3Agreenhouse.io%20%22senior%20.net%20developer%22%20OR%20%22senior%20software%20engineer%22%20%22.net%22%20OR%20%22c%23%20developer%22&num=10\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "1fe8b09b",
+    "ts": "2026-06-14T17:58:48.924182",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "475c4e09",
+    "ts": "2026-06-14T17:58:41.751649",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "5fad9607",
+    "ts": "2026-06-14T17:58:41.710553",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "8417eb42",
+    "ts": "2026-06-14T17:57:19.733957",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 82s before next site..."
+  },
+  {
+    "id": "c3f926ec",
+    "ts": "2026-06-14T17:57:19.707129",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "838f512a",
+    "ts": "2026-06-14T17:57:19.641311",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "904a58fe",
+    "ts": "2026-06-14T17:57:18.857771",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login failed: name 're' is not defined"
+  },
+  {
+    "id": "a79c4185",
+    "ts": "2026-06-14T17:57:13.231905",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "31c34a97",
+    "ts": "2026-06-14T17:57:10.388434",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "98fbfe93",
+    "ts": "2026-06-14T17:57:10.356752",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "ae870211",
+    "ts": "2026-06-14T17:57:10.338666",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 3, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "17be1985",
+    "ts": "2026-06-14T17:57:10.309160",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5fe79295",
+    "ts": "2026-06-14T17:57:10.287011",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "0da7ea8a",
+    "ts": "2026-06-14T17:57:10.261495",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 17:57:10"
+  },
+  {
+    "id": "cf015a54",
+    "ts": "2026-06-14T17:57:10.240819",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "99177a9c",
+    "ts": "2026-06-14T17:57:10.214242",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "2cbd85d7",
+    "ts": "2026-06-14T17:57:10.187462",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "5462a65d",
+    "ts": "2026-06-14T17:57:10.144328",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "bdedae9a",
+    "ts": "2026-06-14T17:56:35.364653",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 90s before next site..."
+  },
+  {
+    "id": "553a1464",
+    "ts": "2026-06-14T17:56:35.335169",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Indeed India done ---"
+  },
+  {
+    "id": "12ea4a53",
+    "ts": "2026-06-14T17:56:34.294567",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed login failed: Page.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\"input[type=\\\"password\\\"]\")\n  -   locator resolved to <input type=\"password\" data-tn-action-click=\"true\" auto…/>\n  -   fill(\"Shiva26@\")\n  - attempting fill action\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #1\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  -   element is not visible\n  - retrying fill action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and editable\n  - element was detached from the DOM, retrying\n"
+  },
+  {
+    "id": "add37785",
+    "ts": "2026-06-14T17:55:50.077120",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Logging into Indeed..."
+  },
+  {
+    "id": "4b927e75",
+    "ts": "2026-06-14T17:55:47.692215",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed India bot"
+  },
+  {
+    "id": "3f95274c",
+    "ts": "2026-06-14T17:55:47.645686",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed India ---"
+  },
+  {
+    "id": "09686723",
+    "ts": "2026-06-14T17:54:48.754762",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 59s before next site..."
+  },
+  {
+    "id": "71a4f36e",
+    "ts": "2026-06-14T17:54:48.696001",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Naukri done ---"
+  },
+  {
+    "id": "a7b04c1b",
+    "ts": "2026-06-14T17:54:48.663870",
+    "level": "ERROR",
+    "site": "system",
+    "message": "Naukri crashed: invalid state"
+  },
+  {
+    "id": "652acdd3",
+    "ts": "2026-06-14T17:54:48.605015",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "208c6a6f",
+    "ts": "2026-06-14T17:54:45.623685",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Work Station Support Analyst (Event Operations Specialist) (92%)"
+  },
+  {
     "id": "a999e3cc",
     "ts": "2026-06-14T17:54:37.241939",
     "level": "SUCCESS",
@@ -3071,432 +3498,5 @@
     "level": "INFO",
     "site": "naukri",
     "message": "No apply button: Company — Sr Software Engineer"
-  },
-  {
-    "id": "55f09bf1",
-    "ts": "2026-06-14T16:52:13.106016",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "86f6f3fe",
-    "ts": "2026-06-14T16:52:08.028716",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer (Pipeline team)"
-  },
-  {
-    "id": "f70dfb21",
-    "ts": "2026-06-14T16:52:03.755579",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Software Engineer"
-  },
-  {
-    "id": "1da7bc2c",
-    "ts": "2026-06-14T16:52:00.787902",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior Software Engineer' in Remote"
-  },
-  {
-    "id": "5a7e8da0",
-    "ts": "2026-06-14T16:51:54.544912",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior Software Engineer' in 'Remote'"
-  },
-  {
-    "id": "6e3c111d",
-    "ts": "2026-06-14T16:51:54.519913",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "6a783b52",
-    "ts": "2026-06-14T16:51:53.340987",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer (ASP.NET MVC + REST API)"
-  },
-  {
-    "id": "2a3a5682",
-    "ts": "2026-06-14T16:51:49.279298",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "d6142fff",
-    "ts": "2026-06-14T16:51:44.989999",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .Net Developer - Immediate Joiners"
-  },
-  {
-    "id": "c63b826b",
-    "ts": "2026-06-14T16:51:40.189002",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "78b80466",
-    "ts": "2026-06-14T16:51:35.439151",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "a75f33b0",
-    "ts": "2026-06-14T16:51:30.985044",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "c189e3a6",
-    "ts": "2026-06-14T16:51:26.600996",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "357ab46a",
-    "ts": "2026-06-14T16:51:22.330189",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "82da6b1d",
-    "ts": "2026-06-14T16:51:17.671708",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "705cc7a6",
-    "ts": "2026-06-14T16:51:12.943006",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "5842deee",
-    "ts": "2026-06-14T16:51:08.470092",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "75daad3a",
-    "ts": "2026-06-14T16:51:03.585806",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer Arcteksys"
-  },
-  {
-    "id": "462880be",
-    "ts": "2026-06-14T16:50:59.410663",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developers"
-  },
-  {
-    "id": "ab6aaf5c",
-    "ts": "2026-06-14T16:50:54.056815",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "9303e75d",
-    "ts": "2026-06-14T16:50:49.789995",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "acb788f9",
-    "ts": "2026-06-14T16:50:46.820773",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "1720f40c",
-    "ts": "2026-06-14T16:50:39.909093",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "f239ca2a",
-    "ts": "2026-06-14T16:50:39.886007",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "51d7ffd3",
-    "ts": "2026-06-14T16:50:38.338565",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Full Stack Developer"
-  },
-  {
-    "id": "923ec092",
-    "ts": "2026-06-14T16:50:33.366181",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Full Stack Developer (React)"
-  },
-  {
-    "id": "f0271fdf",
-    "ts": "2026-06-14T16:50:28.256681",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — 6+ yrs senior .net developer, Chennai - immediate joiners only"
-  },
-  {
-    "id": "d33a095a",
-    "ts": "2026-06-14T16:50:22.896944",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "b0b8f14a",
-    "ts": "2026-06-14T16:50:18.648419",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior AWS Developer (.NET & AWS), Chennai"
-  },
-  {
-    "id": "615384aa",
-    "ts": "2026-06-14T16:50:14.132236",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET developer"
-  },
-  {
-    "id": "ce4a92df",
-    "ts": "2026-06-14T16:50:09.159318",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "72cb6295",
-    "ts": "2026-06-14T16:50:05.030665",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "e0c57260",
-    "ts": "2026-06-14T16:50:00.223965",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET developer with React"
-  },
-  {
-    "id": "eb13920b",
-    "ts": "2026-06-14T16:49:56.007758",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "fd620efa",
-    "ts": "2026-06-14T16:49:51.264173",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "c63c93a3",
-    "ts": "2026-06-14T16:49:46.406510",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer"
-  },
-  {
-    "id": "99496db5",
-    "ts": "2026-06-14T16:49:42.022312",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior Developer - Dotnet - ASP .Net Core - Angular - C#.Net"
-  },
-  {
-    "id": "7d53b5d1",
-    "ts": "2026-06-14T16:49:37.020375",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .NET Fullstack Developer (Razor)"
-  },
-  {
-    "id": "e3444312",
-    "ts": "2026-06-14T16:49:32.224710",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developers"
-  },
-  {
-    "id": "d0d52761",
-    "ts": "2026-06-14T16:49:28.718750",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "ab5ac44e",
-    "ts": "2026-06-14T16:49:23.410199",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "ef52f3ff",
-    "ts": "2026-06-14T16:49:23.387067",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "19aa0539",
-    "ts": "2026-06-14T16:49:22.085385",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "57d103a0",
-    "ts": "2026-06-14T16:49:17.810057",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "d084bc02",
-    "ts": "2026-06-14T16:49:13.324678",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .Net Developer"
-  },
-  {
-    "id": "a4c41cf0",
-    "ts": "2026-06-14T16:49:09.214592",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "b4a6ee78",
-    "ts": "2026-06-14T16:49:04.443395",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Walk-in || Senior .Net Developer"
-  },
-  {
-    "id": "178cd9ae",
-    "ts": "2026-06-14T16:48:59.640397",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "2307f16f",
-    "ts": "2026-06-14T16:48:55.113731",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "e6b87a11",
-    "ts": "2026-06-14T16:48:50.771999",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer"
-  },
-  {
-    "id": "076d451d",
-    "ts": "2026-06-14T16:48:46.523808",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .NET Developer (React + Python"
-  },
-  {
-    "id": "6679e6b8",
-    "ts": "2026-06-14T16:48:42.327512",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer (Full stack)"
-  },
-  {
-    "id": "c353fa5d",
-    "ts": "2026-06-14T16:48:36.856634",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer (SSE) @ Pune (Remote/Hybrid)"
-  },
-  {
-    "id": "7b87b11b",
-    "ts": "2026-06-14T16:48:32.463992",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .Net Developer (SSE) @ Pune (Remote/Hybrid)"
-  },
-  {
-    "id": "1c64c3fc",
-    "ts": "2026-06-14T16:48:27.146492",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .Net Developer"
-  },
-  {
-    "id": "5c08ab76",
-    "ts": "2026-06-14T16:48:22.381121",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Senior .net Developer"
-  },
-  {
-    "id": "fc696e75",
-    "ts": "2026-06-14T16:48:17.648947",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .Net Developer"
-  },
-  {
-    "id": "d8a653c1",
-    "ts": "2026-06-14T16:48:14.072423",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "3a63aca1",
-    "ts": "2026-06-14T16:48:07.763357",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "1afef345",
-    "ts": "2026-06-14T16:48:07.736591",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "e100fa72",
-    "ts": "2026-06-14T16:48:06.688970",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "No apply button: Company — Sr .NET Developer (Full-Stack)"
   }
 ]
