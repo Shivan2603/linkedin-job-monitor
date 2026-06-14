@@ -97,10 +97,13 @@ def _login(page: Page, creds: dict) -> bool:
         page.goto(f"{BASE_URL}/login", wait_until="domcontentloaded", timeout=45000)
         _delay(2, 3)
 
-        # Check if already logged in from cookies
-        if any(x in page.url for x in ["/feed", "/jobs", "/mynetwork"]):
-            logger.success("LinkedIn: already logged in via saved cookies", SITE)
+        # Check if already logged in from cookies or native session
+        try:
+            page.wait_for_url(re.compile(r".*(/feed|/jobs|/mynetwork|^https://www.linkedin.com/?$).*"), timeout=5000)
+            logger.success("LinkedIn: already logged in via persistent session", SITE)
             return True
+        except Exception:
+            pass
 
         # Fill credentials using resilient locators
         email_loc = page.locator('#username, #session_key, input[name="session_key"], [autocomplete="username"]').first
@@ -141,8 +144,8 @@ def _login(page: Page, creds: dict) -> bool:
                 page.wait_for_url(re.compile(r".*/(feed|jobs|mynetwork).*"), timeout=120000)
 
         # Wait longer for CAPTCHAs that don't change URL immediately
-        logger.info("Waiting for login success... (Solve CAPTCHA if it appears)", SITE)
-        page.wait_for_url(re.compile(r".*/(feed|jobs|mynetwork).*"), timeout=60000)
+        logger.info("Waiting for login success... (Solve CAPTCHA manually if it appears - You have 3 minutes)", SITE)
+        page.wait_for_url(re.compile(r".*(/feed|/jobs|/mynetwork|^https://www.linkedin.com/?$).*"), timeout=180000)
         logger.success("LinkedIn login successful", SITE)
         return True
 
