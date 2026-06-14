@@ -1,5 +1,537 @@
 [
   {
+    "id": "e15d2388",
+    "ts": "2026-06-14T17:52:45.949417",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Company | Senior Data Engineer (Java/Python, Spark & Hadoop) | Remote | 92% match"
+  },
+  {
+    "id": "8641b972",
+    "ts": "2026-06-14T17:52:45.772261",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "22d5d523",
+    "ts": "2026-06-14T17:52:40.756456",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "fe430728",
+    "ts": "2026-06-14T17:52:40.241676",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior Data Engineer (Java/Python, Spark & Hadoop) (92%)"
+  },
+  {
+    "id": "159c71e7",
+    "ts": "2026-06-14T17:52:40.213476",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "0a897cfa",
+    "ts": "2026-06-14T17:52:40.189182",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "f7e2006b",
+    "ts": "2026-06-14T17:52:40.074788",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Senior_Data_Engineer_Company_Resume.docx (92% match)"
+  },
+  {
+    "id": "a25d5e6d",
+    "ts": "2026-06-14T17:52:40.008136",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "178a2b5c",
+    "ts": "2026-06-14T17:52:39.982113",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "78488729",
+    "ts": "2026-06-14T17:52:13.733214",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "b617702a",
+    "ts": "2026-06-14T17:52:12.402000",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "ca8aeb64",
+    "ts": "2026-06-14T17:52:12.373864",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "f986f9f0",
+    "ts": "2026-06-14T17:52:12.023984",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior Data Engineer (Java/Python, Spark & Hadoop)"
+  },
+  {
+    "id": "b8cd3399",
+    "ts": "2026-06-14T17:52:07.338847",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Data Scientist"
+  },
+  {
+    "id": "a63cef12",
+    "ts": "2026-06-14T17:52:00.505400",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Senior Software Full stack engineer-ASP.net and React"
+  },
+  {
+    "id": "de555279",
+    "ts": "2026-06-14T17:51:46.457368",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Credit Card Analyst (92%)"
+  },
+  {
+    "id": "69a37db0",
+    "ts": "2026-06-14T17:51:46.427713",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "73f3c513",
+    "ts": "2026-06-14T17:51:46.405068",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "219b6f76",
+    "ts": "2026-06-14T17:51:46.306698",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Siva_Shankar_Credit_Card_Analyst_Company_Resume.docx (92% match)"
+  },
+  {
+    "id": "9dfe4e70",
+    "ts": "2026-06-14T17:51:46.237825",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "a631c5b8",
+    "ts": "2026-06-14T17:51:45.871946",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Credit Card Analyst"
+  },
+  {
+    "id": "e9e40c0e",
+    "ts": "2026-06-14T17:51:36.315796",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Software Engineer"
+  },
+  {
+    "id": "bdc7e40a",
+    "ts": "2026-06-14T17:51:28.688612",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Client Consulting Analyst, VCA"
+  },
+  {
+    "id": "2401725c",
+    "ts": "2026-06-14T17:51:18.816565",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No apply button: Company — Software Engineer (AI Engineer, Python)"
+  },
+  {
+    "id": "e74fe249",
+    "ts": "2026-06-14T17:51:14.905514",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "70b7318e",
+    "ts": "2026-06-14T17:51:07.648539",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "673a47fb",
+    "ts": "2026-06-14T17:51:07.608969",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "bed1511b",
+    "ts": "2026-06-14T17:51:07.539443",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri already logged in via cookies"
+  },
+  {
+    "id": "354f0ab0",
+    "ts": "2026-06-14T17:51:04.024039",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "63eff855",
+    "ts": "2026-06-14T17:51:03.086054",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Loaded 18 saved cookies for naukri"
+  },
+  {
+    "id": "345eedb6",
+    "ts": "2026-06-14T17:51:01.474128",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "aebdefb3",
+    "ts": "2026-06-14T17:51:01.426819",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "042d2166",
+    "ts": "2026-06-14T17:50:26.160201",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 35s before next site..."
+  },
+  {
+    "id": "8729fc39",
+    "ts": "2026-06-14T17:50:26.136790",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "8187fb5f",
+    "ts": "2026-06-14T17:50:26.074407",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "ecc1eaa0",
+    "ts": "2026-06-14T17:50:25.310952",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 0 job URLs from Google search"
+  },
+  {
+    "id": "8e0e274d",
+    "ts": "2026-06-14T17:50:21.124621",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
+  },
+  {
+    "id": "5ae826dd",
+    "ts": "2026-06-14T17:50:12.653870",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:greenhouse.io \"senior .net developer\" OR \"senior softwa"
+  },
+  {
+    "id": "4c6b200d",
+    "ts": "2026-06-14T17:50:03.939333",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "85692e26",
+    "ts": "2026-06-14T17:49:56.635366",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "a33f8e34",
+    "ts": "2026-06-14T17:49:56.582418",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "1aeb21d3",
+    "ts": "2026-06-14T17:48:31.514600",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 85s before next site..."
+  },
+  {
+    "id": "dd9100e9",
+    "ts": "2026-06-14T17:48:31.481694",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "8e9d7fce",
+    "ts": "2026-06-14T17:48:31.403672",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "c9755efe",
+    "ts": "2026-06-14T17:48:26.633607",
+    "level": "ERROR",
+    "site": "linkedin",
+    "message": "LinkedIn login timeout — check credentials or solve CAPTCHA"
+  },
+  {
+    "id": "14e08997",
+    "ts": "2026-06-14T17:47:51.604502",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "057b5f38",
+    "ts": "2026-06-14T17:47:47.373168",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "f466a271",
+    "ts": "2026-06-14T17:47:47.357059",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "29468617",
+    "ts": "2026-06-14T17:47:47.341295",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "1f7b5f56",
+    "ts": "2026-06-14T17:47:47.310401",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "4ea169c1",
+    "ts": "2026-06-14T17:47:47.294641",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
+  },
+  {
+    "id": "217098b0",
+    "ts": "2026-06-14T17:47:47.271232",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-14 17:47:47"
+  },
+  {
+    "id": "f954db4b",
+    "ts": "2026-06-14T17:47:47.246787",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d4b22b20",
+    "ts": "2026-06-14T17:47:47.222376",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "45d7909e",
+    "ts": "2026-06-14T17:47:47.199198",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "7bf0ccd9",
+    "ts": "2026-06-14T17:47:47.167196",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "2c0ccdb7",
+    "ts": "2026-06-14T17:46:51.588280",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Data Scientist (92%)"
+  },
+  {
+    "id": "5c8e78ac",
+    "ts": "2026-06-14T17:46:51.572887",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "c6ab65e2",
+    "ts": "2026-06-14T17:46:51.545152",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "0a80e7f8",
+    "ts": "2026-06-14T17:46:51.446724",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Data_Scientist_92pct.docx (92% match)"
+  },
+  {
+    "id": "3efa39bb",
+    "ts": "2026-06-14T17:46:51.378595",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "2b8bb0f2",
+    "ts": "2026-06-14T17:46:17.857217",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "a5b28f9e",
+    "ts": "2026-06-14T17:46:17.357523",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Data Scientist"
+  },
+  {
+    "id": "51daba82",
+    "ts": "2026-06-14T17:46:01.078242",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Senior Software Full stack engineer-ASP.net and React (92%)"
+  },
+  {
+    "id": "5d007655",
+    "ts": "2026-06-14T17:46:01.047400",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "37f46176",
+    "ts": "2026-06-14T17:46:01.025101",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "42627df3",
+    "ts": "2026-06-14T17:46:00.913591",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Senior_Software_Full_92pct.docx (92% match)"
+  },
+  {
+    "id": "c87df7e5",
+    "ts": "2026-06-14T17:46:00.807264",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "34a683d0",
+    "ts": "2026-06-14T17:45:28.040191",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "3ea5e334",
+    "ts": "2026-06-14T17:45:27.578624",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Tailoring resume for Company - Senior Software Full stack engineer-ASP.net and React"
+  },
+  {
+    "id": "5c9c9351",
+    "ts": "2026-06-14T17:45:13.279046",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Applying: Company — Business Development (92%)"
+  },
+  {
+    "id": "8a60a2d3",
+    "ts": "2026-06-14T17:45:13.252211",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "ab3c2bac",
+    "ts": "2026-06-14T17:45:13.224009",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "8ed233b2",
+    "ts": "2026-06-14T17:45:13.106535",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Resume saved: Company_Business_Development_92pct.docx (92% match)"
+  },
+  {
+    "id": "458fd9b1",
+    "ts": "2026-06-14T17:45:13.012620",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "ec057c4a",
+    "ts": "2026-06-14T17:44:54.602624",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri applied: Company — Senior Software Developer (.NET) (94%)"
+  },
+  {
     "id": "70324185",
     "ts": "2026-06-14T17:44:49.061571",
     "level": "SUCCESS",
@@ -2966,537 +3498,5 @@
     "level": "AI",
     "site": "ai",
     "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "0690acd3",
-    "ts": "2026-06-14T16:45:44.954923",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_Ippon_Technologies_92pct.docx (92% match)"
-  },
-  {
-    "id": "159c0052",
-    "ts": "2026-06-14T16:45:44.906974",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "d2768611",
-    "ts": "2026-06-14T16:45:44.863095",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer (.NET Developer) - Ippon Technologies"
-  },
-  {
-    "id": "918659f2",
-    "ts": "2026-06-14T16:45:40.818829",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e…"
-  },
-  {
-    "id": "aa9568b4",
-    "ts": "2026-06-14T16:45:40.794838",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Providence, RI, USA at Speechify — Job Application for Senior Software Engineer, Windows/Desktop Applications (Already applied)"
-  },
-  {
-    "id": "f26d824a",
-    "ts": "2026-06-14T16:45:37.215885",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/speechify/jobs/5974885004#:~:text=Senior%20Software…"
-  },
-  {
-    "id": "6f917c15",
-    "ts": "2026-06-14T16:45:37.194411",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Abbyy — Software Engineer (Already applied)"
-  },
-  {
-    "id": "3d85881e",
-    "ts": "2026-06-14T16:45:33.006852",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101#:~:text=Senior%20Software%20E…"
-  },
-  {
-    "id": "53a76031",
-    "ts": "2026-06-14T16:45:19.023046",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "✅ Applied → Abbyy | Software Engineer via Greenhouse"
-  },
-  {
-    "id": "17410397",
-    "ts": "2026-06-14T16:45:13.858903",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: Abbyy | Software Engineer | Remote/Various | 92% match"
-  },
-  {
-    "id": "eecef0f1",
-    "ts": "2026-06-14T16:45:09.361618",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 21/46 fields via AI."
-  },
-  {
-    "id": "c9f594f6",
-    "ts": "2026-06-14T16:45:06.694494",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-16: Locator.fill: Error: Cannot type text into input[type=number"
-  },
-  {
-    "id": "88cb4ffd",
-    "ts": "2026-06-14T16:45:03.332227",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "bef1613f",
-    "ts": "2026-06-14T16:44:31.942312",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "d76dc2d2",
-    "ts": "2026-06-14T16:44:29.442801",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "e9248c1d",
-    "ts": "2026-06-14T16:44:29.409927",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "09f791fe",
-    "ts": "2026-06-14T16:44:29.327505",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Abbyy_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "9053ac52",
-    "ts": "2026-06-14T16:44:29.254324",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "8019c697",
-    "ts": "2026-06-14T16:43:55.960812",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "1ba15265",
-    "ts": "2026-06-14T16:43:55.343155",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Abbyy - Software Engineer"
-  },
-  {
-    "id": "74b46cab",
-    "ts": "2026-06-14T16:43:51.670789",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101…"
-  },
-  {
-    "id": "fd8686fe",
-    "ts": "2026-06-14T16:43:41.870433",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "✅ Applied → Diligentcorporation | Software Engineer via Greenhouse"
-  },
-  {
-    "id": "7f12e8a2",
-    "ts": "2026-06-14T16:43:36.656517",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: Diligentcorporation | Software Engineer | Remote/Various | 92% match"
-  },
-  {
-    "id": "725771d6",
-    "ts": "2026-06-14T16:43:32.671918",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 14/30 fields via AI."
-  },
-  {
-    "id": "088e5288",
-    "ts": "2026-06-14T16:43:28.825766",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "32af8c3c",
-    "ts": "2026-06-14T16:42:57.172465",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "857b0227",
-    "ts": "2026-06-14T16:42:54.306350",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "134b2976",
-    "ts": "2026-06-14T16:42:54.291968",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "f031a5ba",
-    "ts": "2026-06-14T16:42:54.183683",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Diligentcorporation_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "c353315a",
-    "ts": "2026-06-14T16:42:54.106808",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "d8f61a5a",
-    "ts": "2026-06-14T16:42:20.820577",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "7d911edf",
-    "ts": "2026-06-14T16:42:20.505811",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Diligentcorporation - Software Engineer"
-  },
-  {
-    "id": "5d3f71d5",
-    "ts": "2026-06-14T16:42:16.922307",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/diligentcorporation/jobs/5729895004…"
-  },
-  {
-    "id": "5a91d1fb",
-    "ts": "2026-06-14T16:42:16.873592",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "6f97a92b",
-    "ts": "2026-06-14T16:42:16.818506",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "ce2f0142",
-    "ts": "2026-06-14T16:42:16.790975",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "0318557d",
-    "ts": "2026-06-14T16:42:16.677898",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_Ippon_Technologies_92pct.docx (92% match)"
-  },
-  {
-    "id": "7e423aad",
-    "ts": "2026-06-14T16:42:16.610831",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "a4cc7918",
-    "ts": "2026-06-14T16:41:44.509044",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "6600f0aa",
-    "ts": "2026-06-14T16:41:44.238657",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer (.NET Developer) - Ippon Technologies"
-  },
-  {
-    "id": "9664faf9",
-    "ts": "2026-06-14T16:41:39.474120",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e#:~:text=Senior%…"
-  },
-  {
-    "id": "713da51e",
-    "ts": "2026-06-14T16:41:39.411375",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "7d4db4fa",
-    "ts": "2026-06-14T16:41:39.328201",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "72c5889b",
-    "ts": "2026-06-14T16:41:39.296050",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "605e1f18",
-    "ts": "2026-06-14T16:41:39.122556",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_PlayOn_92pct.docx (92% match)"
-  },
-  {
-    "id": "dfafa3be",
-    "ts": "2026-06-14T16:41:39.011446",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "b8326ca5",
-    "ts": "2026-06-14T16:41:06.495974",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "ec2d8ea8",
-    "ts": "2026-06-14T16:41:06.255714",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Senior Software Engineer - PlayOn"
-  },
-  {
-    "id": "8d3f8fdc",
-    "ts": "2026-06-14T16:41:03.334833",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
-  },
-  {
-    "id": "b0b22b6f",
-    "ts": "2026-06-14T16:40:54.238628",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "✅ Applied → Providence, RI, USA at Speechify | Job Application for Senior Software Engineer, Windows/Desktop Applications via Greenhouse"
-  },
-  {
-    "id": "0f504848",
-    "ts": "2026-06-14T16:40:49.783948",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: Providence, RI, USA at Speechify | Job Application for Senior Software Engineer, Windows/Desktop Applications | Remote/Various | 92% match"
-  },
-  {
-    "id": "c2e0bd58",
-    "ts": "2026-06-14T16:40:46.338576",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 9/60 fields via AI."
-  },
-  {
-    "id": "2e8da17b",
-    "ts": "2026-06-14T16:40:44.698453",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "2fff3d50",
-    "ts": "2026-06-14T16:40:08.925229",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "9d1778bf",
-    "ts": "2026-06-14T16:40:06.304212",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "3004d129",
-    "ts": "2026-06-14T16:40:06.304212",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "cb6f1de2",
-    "ts": "2026-06-14T16:40:06.259365",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Providence__RI__USA__Job_Application_for__92pct.docx (92% match)"
-  },
-  {
-    "id": "be115e9f",
-    "ts": "2026-06-14T16:40:06.223860",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "86de7534",
-    "ts": "2026-06-14T16:39:34.004403",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "8d8b48aa",
-    "ts": "2026-06-14T16:39:33.811528",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Providence, RI, USA at Speechify - Job Application for Senior Software Engineer, Windows/Desktop Applications"
-  },
-  {
-    "id": "339fa245",
-    "ts": "2026-06-14T16:39:29.512716",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/speechify/jobs/5974885004…"
-  },
-  {
-    "id": "c6025843",
-    "ts": "2026-06-14T16:39:29.491772",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 3/3 fields via AI."
-  },
-  {
-    "id": "f6b24884",
-    "ts": "2026-06-14T16:39:29.249347",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "bd08994c",
-    "ts": "2026-06-14T16:38:58.235911",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "1547b788",
-    "ts": "2026-06-14T16:38:58.062202",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "901c4de4",
-    "ts": "2026-06-14T16:38:58.047135",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "33881776",
-    "ts": "2026-06-14T16:38:57.999103",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Capco_Software_Engineer_92pct.docx (92% match)"
-  },
-  {
-    "id": "d9eb6482",
-    "ts": "2026-06-14T16:38:57.904604",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "48f2d02a",
-    "ts": "2026-06-14T16:38:25.981367",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
-  },
-  {
-    "id": "d1bc580f",
-    "ts": "2026-06-14T16:38:25.727418",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume for Capco - Software Engineer"
-  },
-  {
-    "id": "afa8133d",
-    "ts": "2026-06-14T16:38:20.366059",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/capco/jobs/7679035…"
-  },
-  {
-    "id": "6314e859",
-    "ts": "2026-06-14T16:38:20.348033",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "fa3bb7af",
-    "ts": "2026-06-14T16:38:20.320672",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "01212908",
-    "ts": "2026-06-14T16:38:20.320672",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
-  },
-  {
-    "id": "2b7e6682",
-    "ts": "2026-06-14T16:38:20.287187",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Senior_Software_Engi_Evry_Health_92pct.docx (92% match)"
-  },
-  {
-    "id": "0a40dec6",
-    "ts": "2026-06-14T16:38:20.255314",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
   }
 ]
