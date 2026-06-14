@@ -1,5 +1,257 @@
 [
   {
+    "id": "0f504848",
+    "ts": "2026-06-14T16:40:49.783948",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Providence, RI, USA at Speechify | Job Application for Senior Software Engineer, Windows/Desktop Applications | Remote/Various | 92% match"
+  },
+  {
+    "id": "c2e0bd58",
+    "ts": "2026-06-14T16:40:46.338576",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 9/60 fields via AI."
+  },
+  {
+    "id": "2e8da17b",
+    "ts": "2026-06-14T16:40:44.698453",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "2fff3d50",
+    "ts": "2026-06-14T16:40:08.925229",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "9d1778bf",
+    "ts": "2026-06-14T16:40:06.304212",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "3004d129",
+    "ts": "2026-06-14T16:40:06.304212",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "cb6f1de2",
+    "ts": "2026-06-14T16:40:06.259365",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Providence__RI__USA__Job_Application_for__92pct.docx (92% match)"
+  },
+  {
+    "id": "be115e9f",
+    "ts": "2026-06-14T16:40:06.223860",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "86de7534",
+    "ts": "2026-06-14T16:39:34.004403",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "8d8b48aa",
+    "ts": "2026-06-14T16:39:33.811528",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Providence, RI, USA at Speechify - Job Application for Senior Software Engineer, Windows/Desktop Applications"
+  },
+  {
+    "id": "339fa245",
+    "ts": "2026-06-14T16:39:29.512716",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/speechify/jobs/5974885004…"
+  },
+  {
+    "id": "c6025843",
+    "ts": "2026-06-14T16:39:29.491772",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 3/3 fields via AI."
+  },
+  {
+    "id": "f6b24884",
+    "ts": "2026-06-14T16:39:29.249347",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "bd08994c",
+    "ts": "2026-06-14T16:38:58.235911",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "1547b788",
+    "ts": "2026-06-14T16:38:58.062202",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "901c4de4",
+    "ts": "2026-06-14T16:38:58.047135",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "33881776",
+    "ts": "2026-06-14T16:38:57.999103",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Capco_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "d9eb6482",
+    "ts": "2026-06-14T16:38:57.904604",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "48f2d02a",
+    "ts": "2026-06-14T16:38:25.981367",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit — waiting 30s (retry 1/2)"
+  },
+  {
+    "id": "d1bc580f",
+    "ts": "2026-06-14T16:38:25.727418",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Capco - Software Engineer"
+  },
+  {
+    "id": "afa8133d",
+    "ts": "2026-06-14T16:38:20.366059",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/capco/jobs/7679035…"
+  },
+  {
+    "id": "6314e859",
+    "ts": "2026-06-14T16:38:20.348033",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "fa3bb7af",
+    "ts": "2026-06-14T16:38:20.320672",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "01212908",
+    "ts": "2026-06-14T16:38:20.320672",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "2b7e6682",
+    "ts": "2026-06-14T16:38:20.287187",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Senior_Software_Engi_Evry_Health_92pct.docx (92% match)"
+  },
+  {
+    "id": "0a40dec6",
+    "ts": "2026-06-14T16:38:20.255314",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "ef786f23",
+    "ts": "2026-06-14T16:38:20.230974",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Senior Software Engineer (.NET) - Evry Health"
+  },
+  {
+    "id": "2fa7786e",
+    "ts": "2026-06-14T16:38:16.931407",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/evry-health/efa4c6a6-a5cb-42cc-8682-b1af9f01e195#:~:text=S…"
+  },
+  {
+    "id": "0c2a7d20",
+    "ts": "2026-06-14T16:38:16.913200",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "b89ba7ab",
+    "ts": "2026-06-14T16:38:16.881873",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 85% — Missing: ['test-driven development', 'virtual networks']"
+  },
+  {
+    "id": "40ca0807",
+    "ts": "2026-06-14T16:38:16.867682",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "ae473030",
+    "ts": "2026-06-14T16:38:16.834649",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Leadstreams_Software_Engineer_92pct.docx (92% match)"
+  },
+  {
+    "id": "cd8e3ed7",
+    "ts": "2026-06-14T16:38:16.803241",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "741bc0f5",
+    "ts": "2026-06-14T16:38:16.778471",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Leadstreams - Software Engineer"
+  },
+  {
+    "id": "7266c631",
+    "ts": "2026-06-14T16:38:12.997127",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
+  },
+  {
+    "id": "f53d1e0f",
+    "ts": "2026-06-14T16:38:02.809243",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → US Remote at PerfectServe | Job Application for Senior Software Engineer, .NET via Greenhouse"
+  },
+  {
     "id": "d8db1587",
     "ts": "2026-06-14T16:37:58.926812",
     "level": "SUCCESS",
@@ -3246,257 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "🚀 Starting LinkedIn Easy Apply bot (AI-enhanced, no visa/salary filter)"
-  },
-  {
-    "id": "712b756d",
-    "ts": "2026-06-14T15:26:50.778041",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "bf09107a",
-    "ts": "2026-06-14T15:26:50.771122",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
-  },
-  {
-    "id": "05cf1127",
-    "ts": "2026-06-14T15:26:50.763373",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a0d68f1f",
-    "ts": "2026-06-14T15:26:50.755329",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\Resume\\tailored\\14-06-2026"
-  },
-  {
-    "id": "e16826a1",
-    "ts": "2026-06-14T15:26:50.750783",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-14 15:26:50"
-  },
-  {
-    "id": "01ccc8c2",
-    "ts": "2026-06-14T15:26:50.743135",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "67009434",
-    "ts": "2026-06-14T15:26:50.735561",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "7bf52d34",
-    "ts": "2026-06-14T15:26:50.726544",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
-  },
-  {
-    "id": "445e6ef5",
-    "ts": "2026-06-14T15:26:50.715876",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "9a512346",
-    "ts": "2026-06-14T15:18:13.786951",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "1a2caca1",
-    "ts": "2026-06-14T15:18:13.730866",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "✅ Company Careers bot finished. Applied to 1 positions."
-  },
-  {
-    "id": "deb44840",
-    "ts": "2026-06-14T15:18:13.091304",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6…: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1a0e95bd",
-    "ts": "2026-06-14T15:18:13.067683",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178…"
-  },
-  {
-    "id": "9e1db333",
-    "ts": "2026-06-14T15:18:13.053211",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6…: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "29cef763",
-    "ts": "2026-06-14T15:18:13.031607",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/playonsports/78469e7c-24d5-4a02-912e-6ec65f156178#:~:text=…"
-  },
-  {
-    "id": "00bc3ef1",
-    "ts": "2026-06-14T15:18:13.016570",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://job-boards.greenhouse.io/techholding/jobs/4694846005…: Page.query_selector: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b70b12ed",
-    "ts": "2026-06-14T15:18:12.991138",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 0/15 fields via AI."
-  },
-  {
-    "id": "54dd05bb",
-    "ts": "2026-06-14T15:18:12.975908",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-14: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "84048568",
-    "ts": "2026-06-14T15:18:12.945829",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-12: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ac485ce8",
-    "ts": "2026-06-14T15:18:12.922405",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-11: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3a98c8d3",
-    "ts": "2026-06-14T15:18:12.901203",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-10: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7660f898",
-    "ts": "2026-06-14T15:18:12.877584",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-9: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "20af4b72",
-    "ts": "2026-06-14T15:18:12.849465",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-8: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "61971690",
-    "ts": "2026-06-14T15:18:12.820835",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-6: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f07cd09a",
-    "ts": "2026-06-14T15:18:12.792335",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-3: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "190624fb",
-    "ts": "2026-06-14T15:18:12.769385",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-2: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c5fc250e",
-    "ts": "2026-06-14T15:18:12.737496",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-1: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7b9c2421",
-    "ts": "2026-06-14T15:18:12.728904",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to fill field ai-form-field-0: Locator.evaluate: Target page, context or browser has been closed"
-  },
-  {
-    "id": "79a744dd",
-    "ts": "2026-06-14T15:18:12.701593",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "da2b8eb4",
-    "ts": "2026-06-14T15:18:08.431341",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Check: 85% — Missing: []"
-  },
-  {
-    "id": "2816d8e3",
-    "ts": "2026-06-14T15:18:08.415442",
-    "level": "ERROR",
-    "site": "ai",
-    "message": "ATS check failed: All AI providers failed. Last error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAaqCnheabs4bVLQN9t5FiuiEIRxIT8C7U"
-  },
-  {
-    "id": "498d7362",
-    "ts": "2026-06-14T15:18:08.384839",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-"
-  },
-  {
-    "id": "7546aa50",
-    "ts": "2026-06-14T15:18:07.149144",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "bb574bb8",
-    "ts": "2026-06-14T15:18:06.653050",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "386c28c8",
-    "ts": "2026-06-14T15:18:06.153362",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: 429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
-  },
-  {
-    "id": "257ff152",
-    "ts": "2026-06-14T15:18:05.683964",
-    "level": "WARN",
-    "site": "ai",
-    "message": "HuggingFace failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
   }
 ]
