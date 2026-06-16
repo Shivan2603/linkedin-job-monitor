@@ -1,5 +1,145 @@
 [
   {
+    "id": "40148938",
+    "ts": "2026-06-16T21:13:14.563174",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Vonage | Software Engineer | Remote/Various | 92% match"
+  },
+  {
+    "id": "69d0d275",
+    "ts": "2026-06-16T21:13:07.640275",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 8/13 fields via AI."
+  },
+  {
+    "id": "adec2a4d",
+    "ts": "2026-06-16T21:13:06.582195",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "eaf7266d",
+    "ts": "2026-06-16T21:13:05.612405",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models unavailable"
+  },
+  {
+    "id": "cd505179",
+    "ts": "2026-06-16T21:13:05.593088",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "853079eb",
+    "ts": "2026-06-16T21:13:05.112937",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "fbe8174f",
+    "ts": "2026-06-16T21:13:04.664469",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "7172b044",
+    "ts": "2026-06-16T21:13:04.191024",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "90a56319",
+    "ts": "2026-06-16T21:12:49.884677",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "ATS Check: 60% — Missing: ['Leadstreams', 'specific job requirements']"
+  },
+  {
+    "id": "80d64ab6",
+    "ts": "2026-06-16T21:12:49.854835",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (ats_check)"
+  },
+  {
+    "id": "83a85e13",
+    "ts": "2026-06-16T21:12:49.805180",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Resume saved: Siva_Shankar_Software_Engineer_Vonage_Resume.docx (92% match)"
+  },
+  {
+    "id": "635ef645",
+    "ts": "2026-06-16T21:12:49.758014",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "70f0006b",
+    "ts": "2026-06-16T21:12:48.017140",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models unavailable"
+  },
+  {
+    "id": "ed851129",
+    "ts": "2026-06-16T21:12:47.985448",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "5d37f12f",
+    "ts": "2026-06-16T21:12:47.748385",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d726df25",
+    "ts": "2026-06-16T21:12:47.526628",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e527db63",
+    "ts": "2026-06-16T21:12:47.273768",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "baba6a42",
+    "ts": "2026-06-16T21:12:34.792583",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Tailoring resume for Vonage - Software Engineer"
+  },
+  {
+    "id": "6080a8d6",
+    "ts": "2026-06-16T21:12:30.734471",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/vonage/jobs/8582358002…"
+  },
+  {
+    "id": "fa9d8898",
+    "ts": "2026-06-16T21:12:20.541488",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Definian | Software Engineer via Greenhouse"
+  },
+  {
     "id": "e6161398",
     "ts": "2026-06-16T21:12:15.977549",
     "level": "SUCCESS",
@@ -3358,145 +3498,5 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "Skipping Contractual Role at Tech Holding — Job Application for Senior Software Engineer (C# / .NET) (Already applied)"
-  },
-  {
-    "id": "45eb3a9a",
-    "ts": "2026-06-14T21:15:47.576910",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/techholding/jobs/4685562005…"
-  },
-  {
-    "id": "e4477e58",
-    "ts": "2026-06-14T21:15:47.532190",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Abbyy — Software Engineer (Already applied)"
-  },
-  {
-    "id": "6d355166",
-    "ts": "2026-06-14T21:15:44.235599",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101#:~:text=Senior%20Software%20E…"
-  },
-  {
-    "id": "16c709eb",
-    "ts": "2026-06-14T21:15:44.158628",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "f9faac0f",
-    "ts": "2026-06-14T21:15:44.077534",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Verification: 85% — Missing: ['Leadstreams', 'Software Engineer', 'team collaboration', 'agile methodologies']"
-  },
-  {
-    "id": "ccd01f61",
-    "ts": "2026-06-14T21:15:44.031475",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "e9378b05",
-    "ts": "2026-06-14T21:15:43.910698",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Siva_Shankar_Ippon_Technologies_Senior_Software_Engi_Resume.docx (0% match)"
-  },
-  {
-    "id": "aec57229",
-    "ts": "2026-06-14T21:15:43.846855",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "1e9467d8",
-    "ts": "2026-06-14T21:15:43.672159",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume (v4 Surgical) for Senior Software Engineer (.NET Developer) - Ippon Technologies"
-  },
-  {
-    "id": "730de134",
-    "ts": "2026-06-14T21:15:40.686910",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e…"
-  },
-  {
-    "id": "3005c2d8",
-    "ts": "2026-06-14T21:15:40.625929",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "No form fields found to fill."
-  },
-  {
-    "id": "478d222a",
-    "ts": "2026-06-14T21:15:40.543786",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "ATS Verification: 85% — Missing: ['Leadstreams', 'Software Engineer', 'team collaboration', 'agile methodologies']"
-  },
-  {
-    "id": "24e54949",
-    "ts": "2026-06-14T21:15:40.498589",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (ats_check)"
-  },
-  {
-    "id": "de5396af",
-    "ts": "2026-06-14T21:15:40.376326",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Resume saved: Siva_Shankar_Software_Engineer_Leadstreams_Resume.docx (0% match)"
-  },
-  {
-    "id": "be663e83",
-    "ts": "2026-06-14T21:15:40.308765",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "cdc6efd6",
-    "ts": "2026-06-14T21:15:40.142114",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Tailoring resume (v4 Surgical) for Leadstreams - Software Engineer"
-  },
-  {
-    "id": "dbea7f61",
-    "ts": "2026-06-14T21:15:37.311698",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
-  },
-  {
-    "id": "443740d2",
-    "ts": "2026-06-14T21:15:37.216318",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "Filled 2/51 fields via AI."
-  },
-  {
-    "id": "fefc2c16",
-    "ts": "2026-06-14T21:15:35.796238",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (form_fill)"
-  },
-  {
-    "id": "e8c2d407",
-    "ts": "2026-06-14T21:15:35.758566",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (llama-3.1-8b-instant)"
   }
 ]
