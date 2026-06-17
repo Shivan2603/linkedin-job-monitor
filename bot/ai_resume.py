@@ -1,19 +1,29 @@
 """
-ai_resume.py — Multi-AI resume tailoring using ai_router.py with Self-Correction Loop
+ai_resume.py — Multi-AI resume tailoring using ai_router.py with Self-Correction Loop and JCode Integration
 Primary: Groq Llama 3.3 70B | ATS Check: HuggingFace Mistral | Fallback: Gemini
 """
 import os, re, json
 from docx import Document
+from docx.shared import Pt
 from bot.config import GROQ_API_KEY, BASE_RESUME_DOCX, TAILORED_TODAY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 
+JCODE_PORTFOLIO = """CANDIDATE'S SYSTEMS & AGENT PROJECT PORTFOLIO (JCode):
+The candidate has worked extensively on JCode, a next-generation high-performance terminal coding agent harness built in Rust.
+Key engineering highlights from JCode to utilize:
+1. Swarm & Coordinator: Implemented recursive, depth-limited spawning of agent swarm coordinators (tree of coordinators) with root-coordinator-scoped plan operations.
+2. Memory & Reranker Optimization: Engineered precision-focused reranking (Mode-1/Mode-2 selection) and KV-reuse reranker design, implementing a cadence gate for mode-2 rerank to decrease token costs.
+3. High Performance TUI: Rebuilt TUI rendering with prefix-reuse body rebuilds using a shared renderer and message boundaries, minimizing redrawing costs. Added scrollbar optimizations for cold starts to avoid wasted body builds.
+4. Telemetry: Developed custom telemetry collection workers to track token usage, costing, and runtime metrics.
+"""
+
 TAILOR_SYSTEM = """You are an expert resume writer and ATS optimization specialist.
 Rules:
 1. ONLY rewrite: Professional Summary, Skills section
-2. NEVER fabricate experience, companies, or degrees — only reframe existing content
-3. Inject job-specific keywords naturally into the summary and skills
-4. Highlight Rust and Cargo skills where appropriate, referencing the JCode project (a high-performance terminal coding agent harness built in Rust).
+2. NEVER fabricate experience, companies, or degrees — only reframe existing content.
+3. Inject job-specific keywords naturally into the summary and skills.
+4. If the Job Description requires Rust, Systems Programming, high performance, CLI/TUI tools, or AI Agents, you should utilize the JCode project details and inject JCode as a project in the output tailored resume.
 5. Target ATS match score: 88-97%
 Return ONLY valid JSON, no other text."""
 
@@ -22,16 +32,17 @@ Your job is to compare a tailored resume draft against the original Job Descript
 Detect and correct:
 1. Any missing critical keywords from the JD that are present in the candidate's skills database (e.g. .NET Core, C#, Azure, React, SQL Server, Microservices, Rust, Cargo).
 2. Grammatical errors or awkward AI phrasing in the summary.
-3. Places where JCode (the Rust terminal agent harness project) or relevant skills could be better highlighted.
+3. Places where JCode (the Rust terminal agent harness project) or relevant skills could be better highlighted if JD calls for Rust/Systems/Agents.
 4. Estimated final ATS score.
 
 Return ONLY valid JSON (no markdown):
 {
   "score": 98,
   "is_perfect": false,
-  "flaws": ["Missing 'Microservices' keyword", "Summarize could be more impactful"],
+  "flaws": ["Missing 'Microservices' keyword"],
   "revised_professional_summary": "rewritten corrected summary...",
-  "revised_key_skills": ["C#", ".NET Core 8", "Rust", "Cargo", ...]
+  "revised_key_skills": ["C#", ".NET Core 8", "Rust", "Cargo", ...],
+  "project_injections": []
 }"""
 
 
@@ -54,7 +65,9 @@ PROPOSED KEY SKILLS:
 JOB DESCRIPTION:
 {jd[:3000]}
 
-Compare the proposed draft against the JD. If there are any missing skills or summary improvements, provide the revised versions. Ensure match_score is maximized (target 95-100%)."""
+{JCODE_PORTFOLIO}
+
+Compare the proposed draft against the JD. If there are any missing skills or summary improvements, provide the revised versions. Ensure match_score is maximized (target 95-100%). If the JD is systems/Rust-oriented, suggest a project injection for JCode."""
 
     try:
         logger.ai("Running Quality Control (Verification Pass)...", site=site)
@@ -74,10 +87,14 @@ Compare the proposed draft against the JD. If there are any missing skills or su
             tailored["professional_summary"] = audit.get("revised_professional_summary", tailored["professional_summary"])
             tailored["key_skills"] = audit.get("revised_key_skills", tailored["key_skills"])
             tailored["match_score"] = audit.get("score", tailored.get("match_score", 90))
+            if "project_injections" in audit:
+                tailored["project_injections"] = audit["project_injections"]
             logger.ai("Corrected resume draft based on verification feedback.", site=site)
         else:
             logger.success("QC Audit passed! Resume matches the JD perfectly.", site=site)
             tailored["match_score"] = max(tailored.get("match_score", 90), audit.get("score", 95))
+            if "project_injections" in audit:
+                tailored["project_injections"] = audit["project_injections"]
             
     except Exception as e:
         logger.error(f"QC verification failed: {e}. Proceeding with original draft.", site=site)
@@ -106,11 +123,24 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
 {job_description[:3000]}
 </job_description>
 
+{JCODE_PORTFOLIO}
+
 Return JSON with:
 - "professional_summary": rewritten 3-4 line summary targeting this role
 - "key_skills": list of 12-16 skills matching JD keywords
 - "match_score": integer 88-97 (estimated ATS match %)
-- "keywords_added": list of keywords injected"""
+- "keywords_added": list of keywords injected
+- "project_injections": list of objects with "title", "tech_stack", and "bullets" to inject if Rust/Systems are needed. Example:
+  [
+    {{
+      "title": "JCode — Next-Generation Rust Coding Agent Harness & Tooling",
+      "tech_stack": "Rust · Cargo · Multi-Agent Workflows · Telemetry · Local Vector Embeddings · WebSockets",
+      "bullets": [
+        "Engineered a high-performance terminal coding agent harness in Rust, optimizing system resource usage with a 27MB RAM baseline for multi-session agent scaling.",
+        "Built a local semantic code search and code indexing engine using vector embeddings, improving context retrieval speed and relevance."
+      ]
+    }}
+  ]"""
 
     try:
         raw = ai_complete(TAILOR_SYSTEM, user_prompt, task="tailor", max_tokens=2048)
@@ -180,6 +210,43 @@ def _apply_tailoring(doc: Document, tailored: dict):
                 _replace_run_text(para, " | ".join(tailored["key_skills"]))
                 skills_done = False
             continue
+
+    # Project Injections (dynamic addition under KEY PROJECTS)
+    project_injections = tailored.get("project_injections", [])
+    if project_injections:
+        key_projects_idx = None
+        for idx, para in enumerate(doc.paragraphs):
+            if para.text.strip() == "KEY PROJECTS":
+                key_projects_idx = idx
+                break
+        if key_projects_idx is not None:
+            parent_element = doc.paragraphs[key_projects_idx]._p.getparent()
+            next_element = doc.paragraphs[key_projects_idx]._p
+            
+            # We insert the projects in reverse order because we're inserting at the same index + 1
+            for proj in reversed(project_injections):
+                bullets = proj.get("bullets", [])
+                tech = proj.get("tech_stack", "")
+                title = proj.get("title", "")
+                
+                # Combine bullet paragraphs and details in reverse order to insert
+                data_list = []
+                data_list.append((title, True, False, 12))
+                if tech:
+                    data_list.append((tech, False, True, 10.5))
+                for b in bullets:
+                    data_list.append((f"- {b}", False, False, 10.5))
+                    
+                for text, bold, italic, size in reversed(data_list):
+                    p = doc.add_paragraph()
+                    p.paragraph_format.space_after = Pt(3)
+                    p.paragraph_format.line_spacing = 1.15
+                    run = p.add_run(text)
+                    run.font.name = 'Calibri'
+                    run.font.size = Pt(size)
+                    run.bold = bold
+                    run.italic = italic
+                    parent_element.insert(parent_element.index(next_element) + 1, p._p)
 
 
 def _replace_run_text(para, new_text: str):
