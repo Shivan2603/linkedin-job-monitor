@@ -2,7 +2,7 @@
 ai_resume.py — Multi-AI resume tailoring using ai_router.py with Self-Correction Loop and clean DOCX generation
 Primary: Groq Llama 3.3 70B | ATS Check: HuggingFace Mistral | Fallback: Gemini
 """
-import os, re, json
+import os, re, json, time
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -10,107 +10,83 @@ from bot.config import GROQ_API_KEY, BASE_RESUME_DOCX, TAILORED_TODAY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 
-TAILOR_SYSTEM = """You are a world-class resume writer, ATS optimization expert, and hiring manager with 15+ years of experience across tech recruitment.
-Your task is to rewrite the candidate's resume so it scores as close to 100% as possible on both ATS keyword matching and human recruiter review — without fabricating any skill, title, date, company, or metric not in the base resume.
+# ─── AGENT SYSTEM PROMPTS ──────────────────────────────────────────────────
 
-══════════════════════════════════════════
-PHASE 1 — DEEP JD ANALYSIS (Do this silently before producing output)
-══════════════════════════════════════════
-1. Extract keywords into: [MUST-HAVE], [NICE-TO-HAVE], [SOFT SKILLS], [COMPANY KEYWORDS], [TITLE VARIANTS].
-2. Identify EXACT PHRASES used in the JD (do not paraphrase).
-3. Score base resume against JD (find matched, missing but equivalent, and true gaps).
+ANALYZER_SYSTEM = """You are the Analyzer Agent in the JCode Multi-Agent Swarm.
+Your job is to perform a deep analysis of the Job Description (JD).
 
-══════════════════════════════════════════
-PHASE 2 — RESUME REWRITE RULES
-══════════════════════════════════════════
-RULE 1 — TITLE & HEADLINE:
-- Mirror the exact job title from the JD word for word in "job_title_headline".
+Extract and return a JSON containing:
+1. "must_haves": [list of critical required skills/tools/languages],
+2. "nice_to_haves": [list of preferred or bonus skills],
+3. "soft_skills": [list of collaboration/leadership terms],
+4. "company_domain": "e.g. fintech, cloud, tax, procurement",
+5. "company_name": "name of company",
+6. "job_title": "exact job title from JD",
+7. "exact_phrases": [3-5 key phrases used in the JD to mirror]
 
-RULE 2 — PROFESSIONAL SUMMARY (5 lines max):
-- Line 1: "[Exact JD job title] with 4+ years of experience in [top 3 MUST-HAVE keywords from JD]"
-- Line 2-3: 2 strongest quantified achievements from base resume that match the JD's priorities.
-- Line 4: Mirror 2-3 exact phrases from the JD naturally in a sentence.
-- Line 5: "Bringing value to [COMPANY NAME from JD] through [specific skill from JD]"
-- Every single MUST-HAVE keyword must appear at least once in the summary.
+Return ONLY valid JSON. Do not include markdown code block formatting."""
 
-RULE 3 — TECHNICAL SKILLS:
-- Group skills using the exact category headings from the JD if listed, or backend/frontend/cloud standard groups.
-- If JD uses specific terms (e.g. "PaaS"), include them explicitly.
-- Order skills: JD-matched first, then supporting. Remove irrelevant skill categories.
-- Include full certification names and abbreviations.
+RERANKER_SYSTEM = """You are the Reranker Agent in the JCode Multi-Agent Swarm.
+Your job is to match the candidate's skills against the JD's Must-Haves and Nice-to-Haves, performing precision reranking.
+Group the candidate's actual skills into standard categories, placing JD-matching keywords FIRST in each list, and removing irrelevant categories.
 
-RULE 4 — WORK EXPERIENCE BULLETS:
-- Write 4-6 bullets per role using: "[Strong past-tense verb] + [what I did, using JD's exact phrasing where possible] + [specific technology] + [quantified result with number]".
-- First 2 bullets of LTIMindtree (most recent) must directly use the top 2 MUST-HAVE keywords from the JD.
-- EVERY single bullet must contain a number metric (%, ms, x, users, RPS, $, hours saved).
-- If JD mentions "mentoring", add/enhance a mentoring bullet with a metric.
-- If JD mentions "architecture decisions", use "Drove architectural decisions for...".
-- If JD mentions "code reviews", add a bullet: "Conducted code reviews for [X] engineers, enforcing [standard], reducing production bugs by [%]".
-- Mirror exact verb preferences from JD. Never use generic or passive phrases.
+Allowable candidate skills to categorize:
+- Backend: .NET Core 7/8, C#, ASP.NET Web API, EF Core, CQRS, Clean Architecture, Microservices, YARP Reverse Proxy, SignalR, gRPC, WCF, Repository Pattern, Unit of Work
+- AI / ML: Azure OpenAI GPT-4, Semantic Kernel, LangChain (.NET), Vector Embeddings, pgvector, Azure AI Search, Azure Form Recognizer, GitHub Copilot, Prompt Engineering
+- Cloud: Azure App Services, Azure SQL, Azure Redis Cache, Azure DevOps, Azure Blob Storage, Application Insights, ARM Templates
+- Frontend: Angular 15+, React, TypeScript, RxJS, NgRx/Redux, Material-UI, Tailwind CSS, Vue.js, Lazy Loading, Code Splitting
+- Databases: SQL Server, PostgreSQL, MySQL, Oracle, Redis, pgvector, LINQ Optimisation, Stored Procedures, Full-Text Indexing
+- DevOps & CI/CD: Docker, Azure DevOps YAML, GitHub Actions, Git Flow, SonarQube, OpenTelemetry, Grafana K6, Serilog
+- Security: JWT, OAuth2, OIDC, AES-256 Encryption, RBAC, IP Whitelisting, X.509 Certificate Rotation, mTLS, PCI-DSS, OWASP Top 10, FIPS Compliance
+- Messaging: RabbitMQ, Redis Pub/Sub, Async Workflows, Event-Driven Architecture, Polly Circuit Breakers
+- Testing: xUnit, NUnit, Moq, Integration Testing, TDD, Grafana K6 Load Testing
+- Methodology: Agile/Scrum, Sprint Planning, Code Reviews, Architectural Decision Records (ADRs), Team Mentoring
 
-RULE 5 — EXPERIENCE GAP HANDLING:
-- Map equivalent skills explicitly (e.g., "Entity Framework Core (ORM) — equivalent to Hibernate").
-- If JD requires a skill the candidate genuinely lacks, DO NOT add it. Flag it in the gaps report. Do not invent experience or alter dates/companies.
+Return a JSON with "skills_by_category" containing lists for: Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology.
+Return ONLY valid JSON. Do not include markdown formatting."""
 
-RULE 6 — PROJECTS:
-- Keep max 3 projects, ranked by relevance. Frame stack using JD preferred terms.
-- You MUST select projects ONLY from this list of actual projects from the base resume. DO NOT fabricate or invent any other projects:
-  1. e-ProcureZen (AI-Enhanced B2B Procurement Platform)
-  2. AI Tax Document Analyser (Semantic Search & LLM Summarisation Engine (Deloitte))
-  3. Nexa Vault (Multi-Tenant Document Management System)
-  4. SSO Application (Centralised Identity & Access Management)
-  5. NEICE (US Federal Government Health Platform)
+TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm.
+Your job is to rewrite the candidate's Professional Summary and Work Experience bullets based on the Analyzer's findings and the Reranker's sorted skills.
 
-══════════════════════════════════════════
-PHASE 3 — OUTPUT JSON FORMAT
-══════════════════════════════════════════
-Return ONLY a valid JSON block containing:
+Follow these rules strictly:
+1. PROFESSIONAL SUMMARY: 5 lines max.
+   - Line 1: "[Exact JD job title] with 4+ years of experience in [top 3 MUST-HAVE keywords from JD]"
+   - Line 2-3: 2 strongest achievements from base resume matching JD's priorities.
+   - Line 4: Mirror 2-3 exact phrases from JD.
+   - Line 5: "Bringing value to [COMPANY NAME from JD] through [specific skill from JD]"
+2. WORK EXPERIENCE BULLETS:
+   - Write 4-6 bullets per role using: "[Strong past-tense verb] + [what I did, using JD's exact phrasing] + [specific tech] + [quantified result with number]".
+   - First 2 bullets of LTIMindtree must directly use the top 2 MUST-HAVE keywords from the JD.
+   - EVERY single bullet must contain a number metric (%, ms, x, users, RPS, $, hours saved).
+   - Enhance mentoring/code review/architecture bullets if mentioned in the JD must-haves.
+3. PROJECTS:
+   - Select max 3 projects from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, NEICE. Frame tech stack using JD preferred terms. Do NOT invent new projects.
+
+Return ONLY a JSON block containing:
 - "job_title_headline": "Exact Job Title from JD"
-- "professional_summary": "rewritten 5-line summary matching formula exactly"
-- "skills_by_category": {{
-     "Backend": [list of skills],
-     "Frontend": [list of skills],
-     "Cloud": [list of skills],
-     "Databases": [list of skills],
-     "DevOps": [list of skills],
-     "Security": [list of skills],
-     "Testing": [list of skills],
-     "Methodology": [list of skills]
-  }}
-- "work_experience": {{
-     "LTIMindtree": [list of 4-6 bullets with numbers],
-     "DSSI Solutions India Pvt Ltd": [list of 4-6 bullets with numbers],
-     "Nexa Office InfoSystems LLP": [list of 4-6 bullets with numbers],
-     "Kasadara Technology Solutions": [list of 4-6 bullets with numbers]
-  }}
-- "projects": [
-     Max 3 projects. Each project: {{"name": "...", "tech_stack": "...", "bullets": ["bullet 1 with metric", ...]}}
-  ]
-- "ats_report": {{
-     "match_score": estimated percentage (0-100),
-     "matched_keywords": [list of keywords matched],
-     "missing_with_equivalents": [list of equivalents used],
-     "true_gaps": [list of gaps],
-     "experience_gap_compensation": "how you compensated for year requirements",
-     "top_3_standout_points": [3 points],
-     "recruiter_weak_point": "weakest point in resume"
-  }}
+- "professional_summary": "rewritten summary"
+- "work_experience": {
+     "LTIMindtree": [bullets],
+     "DSSI Solutions India Pvt Ltd": [bullets],
+     "Nexa Office InfoSystems LLP": [bullets],
+     "Kasadara Technology Solutions": [bullets]
+  },
+- "projects": [{"name": "...", "tech_stack": "...", "bullets": [...]}]
 
-Return ONLY valid JSON. Do not include markdown code block formatting (like ```json)."""
+Return ONLY valid JSON."""
 
-VERIFY_SYSTEM = """You are a strict ATS Audit and Resume Quality Assurance system.
-Your job is to compare a tailored resume draft against the original Job Description (JD).
+VERIFIER_SYSTEM = """You are the Verifier Agent in the JCode Multi-Agent Swarm.
+Your job is to compare the draft against the original JD and enforce strict compliance.
 
 Verify and correct:
-1. Ensure the exact job title from the JD is mirrored in "job_title_headline".
-2. Check Professional Summary: max 5 lines, matches exact line-by-line formula, has top 3 must-haves, 2 achievements, exact phrases, and company value sentence.
-3. Check Skills: grouped properly, JD matched first, irrelevant removed.
-4. Check Work Experience bullets: 4-6 bullets per role, EVERY single bullet must contain a number metric, top 2 bullets for most recent role must match top 2 must-haves. Uses exact action verbs and phrasing.
-5. Verify no fabricated skills or changes to company names/dates.
-6. Verify no projects are fabricated. Projects must only be chosen from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE. If any other project is returned, replace it with one of these five.
+1. Exact Job Title mirrored in headline.
+2. Professional Summary matches 5-line formula, has top 3 must-haves, achievements, and company value sentence.
+3. Every single experience bullet contains a number metric.
+4. Top 2 bullets of LTIMindtree use top 2 must-haves.
+5. No projects or skills are fabricated (projects must strictly be from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE).
 
-If any section violates these rules, rewrite and correct it.
-Return the corrected full JSON block in the exact same format:
+If any rule is violated, correct the section.
+Return the corrected full JSON containing:
 {
   "job_title_headline": "...",
   "professional_summary": "...",
@@ -127,70 +103,123 @@ Return the corrected full JSON block in the exact same format:
      "recruiter_weak_point": "..."
   }
 }
-Return ONLY valid JSON. Do not include markdown code block formatting."""
+Return ONLY valid JSON."""
 
+# ─── MAIN COORDINATOR WORKFLOW ─────────────────────────────────────────────
 
 def extract_resume_text(docx_path: str) -> str:
     doc = Document(docx_path)
     return "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
 
+def parse_json_safely(raw: str) -> dict:
+    if "```json" in raw:
+        raw = raw.split("```json")[1].split("```")[0].strip()
+    elif "```" in raw:
+        raw = raw.split("```")[1].split("```")[0].strip()
+    return json.loads(raw.strip())
 
-def verify_and_correct(tailored: dict, jd: str, job_title: str, company: str, site: str) -> dict:
-    verify_prompt = f"""AUDIT THIS RESUME DRAFT:
+def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
+    logger.ai(f"[JCode Swarm] Starting Multi-Agent Coordinator Workflow...", site=site)
+    base_text = extract_resume_text(BASE_RESUME_DOCX)
+    
+    # ─── STEP 1: ANALYZER AGENT ───
+    logger.ai("[JCode Coordinator] Launching Analyzer Agent...", site=site)
+    try:
+        raw_analysis = ai_complete(ANALYZER_SYSTEM, f"Analyze this JD:\n{job_description[:4000]}", task="analyze", max_tokens=1000)
+        analysis = parse_json_safely(raw_analysis)
+        logger.success(f"    [Analyzer] Extracted {len(analysis.get('must_haves', []))} must-haves.", site=site)
+    except Exception as e:
+        analysis = {"must_haves": [job_title], "nice_to_haves": [], "exact_phrases": []}
+        logger.warn(f"    [Analyzer] Failed: {e}", site=site)
+
+    # ─── STEP 2: RERANKER AGENT ───
+    logger.ai("[JCode Coordinator] Launching Reranker Agent...", site=site)
+    try:
+        rerank_prompt = f"Rerank candidate skills based on Must-Haves: {analysis.get('must_haves')} and Nice-to-Haves: {analysis.get('nice_to_haves')}"
+        raw_skills = ai_complete(RERANKER_SYSTEM, rerank_prompt, task="rerank", max_tokens=1200)
+        skills_ranked = parse_json_safely(raw_skills)
+        logger.success("    [Reranker] Precision skills reranking completed.", site=site)
+    except Exception as e:
+        skills_ranked = {"skills_by_category": {}}
+        logger.warn(f"    [Reranker] Failed: {e}", site=site)
+
+    # ─── STEP 3: TAILOR AGENT ───
+    logger.ai("[JCode Coordinator] Launching Tailor Agent...", site=site)
+    try:
+        tailor_prompt = f"""Tailor candidate resume:
+<resume>
+{base_text}
+</resume>
+Analyzer Findings:
+{json.dumps(analysis)}
+Reranked Skills:
+{json.dumps(skills_ranked)}
+"""
+        raw_tailored = ai_complete(TAILOR_SYSTEM, tailor_prompt, task="tailor", max_tokens=2500)
+        draft = parse_json_safely(raw_tailored)
+        draft["skills_by_category"] = skills_ranked.get("skills_by_category", {})
+        logger.success("    [Tailor] Generated initial tailored resume draft.", site=site)
+    except Exception as e:
+        draft = {}
+        logger.error(f"    [Tailor] Failed: {e}", site=site)
+
+    # ─── STEP 4: VERIFIER AGENT (AUDIT LOOP) ───
+    logger.ai("[JCode Coordinator] Launching Verifier Agent (Audit Loop)...", site=site)
+    try:
+        verify_prompt = f"""Audit and correct this resume draft:
 Job Title: {job_title}
 Company: {company}
-
-PROPOSED PROFESSIONAL SUMMARY:
-{tailored.get("professional_summary", "")}
-
-PROPOSED KEY SKILLS:
-{json.dumps(tailored.get("skills_by_category", {}))}
-
-PROPOSED WORK EXPERIENCE:
-{json.dumps(tailored.get("work_experience", {}))}
-
-PROPOSED PROJECTS:
-{json.dumps(tailored.get("projects", []))}
-
-JOB DESCRIPTION:
-{jd[:3000]}
-
-Compare the proposed draft against the JD and our strict guidelines. Rewrite and correct any section that violates the rules (e.g. missing numbers in bullets, summary not matching formula, table headings, etc.). Return the final complete JSON."""
-
-    try:
-        logger.ai("Running Quality Control (Verification Pass)...", site=site)
-        raw = ai_complete(VERIFY_SYSTEM, verify_prompt, task="verify", max_tokens=2048)
-        
-        if "```json" in raw:
-            raw = raw.split("```json")[1].split("```")[0].strip()
-        elif "```" in raw:
-            raw = raw.split("```")[1].split("```")[0].strip()
-            
-        audit = json.loads(raw)
-        
-        # Merge verifier's revised blocks back into tailored
-        for key in ["job_title_headline", "professional_summary", "skills_by_category", "work_experience", "projects", "ats_report"]:
-            if key in audit:
-                tailored[key] = audit[key]
-        logger.ai("Corrected resume draft based on verification feedback.", site=site)
-        
+Draft Summary: {draft.get('professional_summary')}
+Draft Experience: {json.dumps(draft.get('work_experience'))}
+Draft Projects: {json.dumps(draft.get('projects'))}
+JD Details:
+{job_description[:3000]}
+"""
+        raw_verified = ai_complete(VERIFIER_SYSTEM, verify_prompt, task="verify", max_tokens=2048)
+        final_tailored = parse_json_safely(raw_verified)
+        logger.success("    [Verifier] Resume audit completed and corrections applied.", site=site)
     except Exception as e:
-        logger.error(f"QC verification failed: {e}. Proceeding with original draft.", site=site)
-        
-    return tailored
+        final_tailored = draft
+        logger.warn(f"    [Verifier] Failed, using initial draft: {e}", site=site)
 
+    # ─── STEP 5: BUILD CLEAN DOCX ───
+    filename = f"Siva_Shankar_{re.sub(r'[^\\w\\-]', '_', job_title)[:20]}_{re.sub(r'[^\\w\\-]', '_', company)[:20]}_Resume.docx"
+    out_path = os.path.join(TAILORED_TODAY, filename)
+    
+    try:
+        build_clean_resume(final_tailored, out_path)
+        logger.success(f"[JCode Coordinator] Document saved successfully to: {out_path}", site=site)
+    except Exception as e:
+        logger.error(f"[ERROR] Document creation failed: {e}", site=site)
+        doc = Document(BASE_RESUME_DOCX)
+        doc.save(out_path)
+
+    # Run ATS check on the tailored resume using HuggingFace
+    try:
+        tailored_text = extract_resume_text(out_path)
+        ats_report = check_resume_ats(tailored_text, job_description, job_title, company)
+        logger.ai(f"ATS Check: {ats_report.get('ats_score', '?')}% — "
+                  f"Missing: {ats_report.get('missing_keywords', [])[:3]}", site=site)
+    except Exception:
+        ats_report = {}
+        
+    return {
+        "resume_path": out_path,
+        "match_score": final_tailored.get("ats_report", {}).get("match_score", 90),
+        "tailored":    final_tailored,
+        "ats_report":  ats_report
+    }
 
 def build_clean_resume(tailored: dict, output_path: str):
     doc = Document()
     
-    # Set Margins to 1 inch (standard ATS friendly)
+    # Set Margins to 1 inch
     for section in doc.sections:
         section.top_margin = Inches(1.0)
         section.bottom_margin = Inches(1.0)
         section.left_margin = Inches(1.0)
         section.right_margin = Inches(1.0)
         
-    # Helper to add paragraph with styling
     def add_styled_paragraph(text="", style_name='Normal', font_name='Calibri', font_size=10.5, bold=False, italic=False, align=WD_ALIGN_PARAGRAPH.LEFT, space_before=0, space_after=3, line_spacing=1.15):
         p = doc.add_paragraph()
         p.alignment = align
@@ -205,7 +234,6 @@ def build_clean_resume(tailored: dict, output_path: str):
             run.italic = italic
         return p
         
-    # Helper to add section headings (ATS rules: standard, no special characters, no graphics)
     def add_section_heading(title):
         p = doc.add_paragraph()
         p.paragraph_format.space_before = Pt(12)
@@ -216,15 +244,11 @@ def build_clean_resume(tailored: dict, output_path: str):
         run.font.size = Pt(12)
         
     # 1. HEADER
-    # Full name (large, bold)
     add_styled_paragraph("SIVA SHANKAR", font_size=18, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    # Headline (job title mirrored from JD)
     headline = tailored.get("job_title_headline", "Senior Software Engineer")
     add_styled_paragraph(headline.upper(), font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    # Contact Details
     contact_line = "+91 6383149155   •   sivashankar.avi6@gmail.com   •   https://www.linkedin.com/in/siva-shankar-4a7849226/   •   https://github.com/shivan2603   •   https://shivan2603.github.io/sivashankar-portfolio/"
     add_styled_paragraph(contact_line, font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    # Location
     add_styled_paragraph("Chennai, India | Open to Remote/Hybrid", font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
     
     # 2. PROFESSIONAL SUMMARY
@@ -248,7 +272,6 @@ def build_clean_resume(tailored: dict, output_path: str):
                 run_cat.bold = True
                 run_cat.font.name = 'Calibri'
                 run_cat.font.size = Pt(10.5)
-                
                 run_skills = p.add_run(", ".join(skills_list))
                 run_skills.font.name = 'Calibri'
                 run_skills.font.size = Pt(10.5)
@@ -264,7 +287,6 @@ def build_clean_resume(tailored: dict, output_path: str):
                 run_cat.bold = True
                 run_cat.font.name = 'Calibri'
                 run_cat.font.size = Pt(10.5)
-                
                 run_skills = p.add_run(", ".join(skills_list))
                 run_skills.font.name = 'Calibri'
                 run_skills.font.size = Pt(10.5)
@@ -311,8 +333,6 @@ def build_clean_resume(tailored: dict, output_path: str):
         run_comp.bold = True
         run_comp.font.name = 'Calibri'
         run_comp.font.size = Pt(11)
-        
-        # Right-aligned dates
         p.paragraph_format.tab_stops.add_tab_stop(Inches(6.5), 2)
         run_date = p.add_run(f"\t{role['dates']}")
         run_date.bold = True
@@ -349,13 +369,11 @@ def build_clean_resume(tailored: dict, output_path: str):
         run_name.bold = True
         run_name.font.name = 'Calibri'
         run_name.font.size = Pt(11)
-        
         if proj_tech:
             run_t = p.add_run(f" — {proj_tech}")
             run_t.italic = True
             run_t.font.name = 'Calibri'
             run_t.font.size = Pt(10)
-            
         for b in proj_bullets:
             p = doc.add_paragraph()
             p.paragraph_format.left_indent = Pt(18)
@@ -388,7 +406,6 @@ def build_clean_resume(tailored: dict, output_path: str):
     run_deg.bold = True
     run_deg.font.name = 'Calibri'
     run_deg.font.size = Pt(11)
-    
     p.paragraph_format.tab_stops.add_tab_stop(Inches(6.5), 2)
     run_year = p.add_run("\t2018 – 2022")
     run_year.bold = True
@@ -398,74 +415,3 @@ def build_clean_resume(tailored: dict, output_path: str):
     add_styled_paragraph("Kathir College of Engineering, Coimbatore (Anna University)  |  GPA: 8.6 / 10", font_size=10.5, space_after=4)
     
     doc.save(output_path)
-
-
-def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
-    """
-    Tailor the base resume for a specific job using the best available free AI with verifier.
-    Returns: { "resume_path": str, "match_score": int, "ats_report": dict }
-    """
-    logger.ai(f"Tailoring resume for {company} - {job_title}", site=site)
-
-    safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
-    safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
-    base_text    = extract_resume_text(BASE_RESUME_DOCX)
-
-    user_prompt = f"""Tailor this resume for {job_title} at {company}:
-
-<resume>
-{base_text}
-</resume>
-
-<job_description>
-{job_description[:4000]}
-</job_description>
-
-Return ONLY the JSON matching the format instructions."""
-
-    try:
-        raw = ai_complete(TAILOR_SYSTEM, user_prompt, task="tailor", max_tokens=2500)
-
-        if "```json" in raw:
-            raw = raw.split("```json")[1].split("```")[0].strip()
-        elif "```" in raw:
-            raw = raw.split("```")[1].split("```")[0].strip()
-
-        tailored = json.loads(raw)
-        
-        # Run self-correction verification pass
-        tailored = verify_and_correct(tailored, job_description, job_title, company, site)
-        match_score = tailored.get("ats_report", {}).get("match_score", 90)
-
-        # Build tailored clean .docx
-        filename = f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx"
-        out_path = os.path.join(TAILORED_TODAY, filename)
-        
-        build_clean_resume(tailored, out_path)
-        logger.ai(f"Resume saved: {filename} ({match_score}% match)", site=site)
-
-        # Run ATS check on the tailored resume using HuggingFace
-        try:
-            tailored_text = extract_resume_text(out_path)
-            ats_report = check_resume_ats(tailored_text, job_description, job_title, company)
-            logger.ai(f"ATS Check: {ats_report.get('ats_score', '?')}% — "
-                      f"Missing: {ats_report.get('missing_keywords', [])[:3]}", site=site)
-        except Exception:
-            ats_report = {}
-
-        return {
-            "resume_path": out_path,
-            "match_score": match_score,
-            "tailored":    tailored,
-            "ats_report":  ats_report,
-        }
-
-    except Exception as e:
-        logger.error(f"Resume tailoring failed: {e}", site=site)
-        import traceback
-        traceback.print_exc()
-        out_path = os.path.join(TAILORED_TODAY, f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx")
-        # Fallback copy
-        doc = Document(BASE_RESUME_DOCX)
-        doc.save(out_path)
-        return {"resume_path": out_path, "match_score": 85, "tailored": {}, "ats_report": {}}
