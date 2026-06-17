@@ -10,16 +10,7 @@ from bot.config import GROQ_API_KEY, BASE_RESUME_DOCX, TAILORED_TODAY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 
-JCODE_PORTFOLIO = """CANDIDATE'S SYSTEMS & AGENT PROJECT PORTFOLIO (JCode):
-The candidate has worked extensively on JCode, a next-generation high-performance terminal coding agent harness built in Rust.
-Key engineering highlights from JCode to utilize:
-1. Swarm & Coordinator: Implemented recursive, depth-limited spawning of agent swarm coordinators (tree of coordinators) with root-coordinator-scoped plan operations.
-2. Memory & Reranker Optimization: Engineered precision-focused reranking (Mode-1/Mode-2 selection) and KV-reuse reranker design, implementing a cadence gate for mode-2 rerank to decrease token costs.
-3. High Performance TUI: Rebuilt TUI rendering with prefix-reuse body rebuilds using a shared renderer and message boundaries, minimizing redrawing costs. Added scrollbar optimizations for cold starts to avoid wasted body builds.
-4. Telemetry: Developed custom telemetry collection workers to track token usage, costing, and runtime metrics.
-"""
-
-TAILOR_SYSTEM = f"""You are a world-class resume writer, ATS optimization expert, and hiring manager with 15+ years of experience across tech recruitment.
+TAILOR_SYSTEM = """You are a world-class resume writer, ATS optimization expert, and hiring manager with 15+ years of experience across tech recruitment.
 Your task is to rewrite the candidate's resume so it scores as close to 100% as possible on both ATS keyword matching and human recruiter review — without fabricating any skill, title, date, company, or metric not in the base resume.
 
 ══════════════════════════════════════════
@@ -63,6 +54,12 @@ RULE 5 — EXPERIENCE GAP HANDLING:
 
 RULE 6 — PROJECTS:
 - Keep max 3 projects, ranked by relevance. Frame stack using JD preferred terms.
+- You MUST select projects ONLY from this list of actual projects from the base resume. DO NOT fabricate or invent any other projects:
+  1. e-ProcureZen (AI-Enhanced B2B Procurement Platform)
+  2. AI Tax Document Analyser (Semantic Search & LLM Summarisation Engine (Deloitte))
+  3. Nexa Vault (Multi-Tenant Document Management System)
+  4. SSO Application (Centralised Identity & Access Management)
+  5. NEICE (US Federal Government Health Platform)
 
 ══════════════════════════════════════════
 PHASE 3 — OUTPUT JSON FORMAT
@@ -109,8 +106,8 @@ Verify and correct:
 2. Check Professional Summary: max 5 lines, matches exact line-by-line formula, has top 3 must-haves, 2 achievements, exact phrases, and company value sentence.
 3. Check Skills: grouped properly, JD matched first, irrelevant removed.
 4. Check Work Experience bullets: 4-6 bullets per role, EVERY single bullet must contain a number metric, top 2 bullets for most recent role must match top 2 must-haves. Uses exact action verbs and phrasing.
-5. Check JCode: JCode Rust project is included if systems/Rust are in the JD.
-6. Verify no fabricated skills or changes to company names/dates.
+5. Verify no fabricated skills or changes to company names/dates.
+6. Verify no projects are fabricated. Projects must only be chosen from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE. If any other project is returned, replace it with one of these five.
 
 If any section violates these rules, rewrite and correct it.
 Return the corrected full JSON block in the exact same format:
@@ -157,8 +154,6 @@ PROPOSED PROJECTS:
 
 JOB DESCRIPTION:
 {jd[:3000]}
-
-{JCODE_PORTFOLIO}
 
 Compare the proposed draft against the JD and our strict guidelines. Rewrite and correct any section that violates the rules (e.g. missing numbers in bullets, summary not matching formula, table headings, etc.). Return the final complete JSON."""
 
@@ -425,8 +420,6 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
 <job_description>
 {job_description[:4000]}
 </job_description>
-
-{JCODE_PORTFOLIO}
 
 Return ONLY the JSON matching the format instructions."""
 
