@@ -225,17 +225,21 @@ def _apply_tailoring(doc: Document, tailored: dict):
             
             # We insert the projects in reverse order because we're inserting at the same index + 1
             for proj in reversed(project_injections):
-                bullets = proj.get("bullets", [])
-                tech = proj.get("tech_stack", "")
-                title = proj.get("title", "")
+                # Resilient key parsing
+                title = proj.get("title") or proj.get("project_name") or "JCode — Next-Generation Rust Coding Agent Harness & Tooling"
+                tech = proj.get("tech_stack") or proj.get("tech") or "Rust · Cargo · Multi-Agent Workflows · Telemetry · Local Vector Embeddings · WebSockets"
+                desc = proj.get("bullets") or proj.get("description") or []
+                
+                if isinstance(desc, str):
+                    desc = [desc]
                 
                 # Combine bullet paragraphs and details in reverse order to insert
                 data_list = []
                 data_list.append((title, True, False, 12))
                 if tech:
                     data_list.append((tech, False, True, 10.5))
-                for b in bullets:
-                    data_list.append((f"- {b}", False, False, 10.5))
+                for b in desc:
+                    data_list.append((f"- {b}" if not b.strip().startswith("-") else b, False, False, 10.5))
                     
                 for text, bold, italic, size in reversed(data_list):
                     p = doc.add_paragraph()
