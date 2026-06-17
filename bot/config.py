@@ -11,7 +11,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 # ─── PATHS ────────────────────────────────────────────────
 RESUME_FOLDER       = os.getenv("RESUME_FOLDER", r"E:\SivaShankar\Resume")
-TAILORED_BASE       = os.getenv("TAILORED_FOLDER_BASE", r"E:\SivaShankar\Resume\tailored")
+TAILORED_BASE       = os.getenv("TAILORED_FOLDER_BASE", r"E:\SivaShankar\aTresume")
 PROJECT_FOLDER      = os.getenv("PROJECT_FOLDER", r"E:\SivaShankar\jobbot")
 DATA_FOLDER         = os.getenv("DATA_FOLDER", r"E:\SivaShankar\jobbot\data")
 
