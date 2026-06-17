@@ -227,6 +227,7 @@ LM_STUDIO_URL  = "http://localhost:1234/v1/chat/completions"  # OpenAI-compatibl
 # Best models for Intel Iris Xe + 8GB RAM (CPU inference)
 OLLAMA_MODELS = [
     "phi3:mini",         # Microsoft Phi-3 Mini 3.8B — best for 8GB RAM, fast JSON
+    "qwen2.5-coder:1.5b", # Qwen 2.5 Coder 1.5B — fast local developer assistant
     "qwen2.5:3b",        # Qwen 2.5 3B — excellent at structured output / JSON
     "llama3.2:3b",       # Meta Llama 3.2 3B — reliable workhorse
     "gemma2:2b",         # Google Gemma 2 2B — tiny & fast

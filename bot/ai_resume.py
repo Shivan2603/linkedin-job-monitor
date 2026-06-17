@@ -183,7 +183,9 @@ JD Details:
         logger.warn(f"    [Verifier] Failed, using initial draft: {e}", site=site)
 
     # ─── STEP 5: BUILD CLEAN DOCX ───
-    filename = f"Siva_Shankar_{re.sub(r'[^\\w\\-]', '_', job_title)[:20]}_{re.sub(r'[^\\w\\-]', '_', company)[:20]}_Resume.docx"
+    safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
+    safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
+    filename = f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx"
     out_path = os.path.join(TAILORED_TODAY, filename)
     
     try:
