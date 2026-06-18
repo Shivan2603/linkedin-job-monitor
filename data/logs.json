@@ -1,5 +1,19 @@
 [
   {
+    "id": "bdf2b8b1",
+    "ts": "2026-06-18T14:34:56.526836",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Dojo | Senior .NET Developer | Remote/Various | 95% match"
+  },
+  {
+    "id": "adec3928",
+    "ts": "2026-06-18T14:34:56.422314",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Manually submitted: Dojo — Senior .NET Developer"
+  },
+  {
     "id": "1e875b44",
     "ts": "2026-06-18T14:30:33.680499",
     "level": "INFO",
@@ -3484,19 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "163d6ac5",
-    "ts": "2026-06-18T14:01:20.072163",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "0916e983",
-    "ts": "2026-06-18T14:01:15.683662",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
