@@ -1,5 +1,145 @@
 [
   {
+    "id": "6ee3c7f0",
+    "ts": "2026-06-18T13:49:03.735561",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Talentgigs | Senior Dotnet Developer - U.S Healthcare | Chennai, Tamil Nadu, India | 100% match"
+  },
+  {
+    "id": "bc5da05f",
+    "ts": "2026-06-18T13:49:03.646314",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Talentgigs — Senior Dotnet Developer - U.S Healthcare"
+  },
+  {
+    "id": "f358fc5d",
+    "ts": "2026-06-18T13:48:40.352175",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "1d8752d7",
+    "ts": "2026-06-18T13:48:40.074057",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "2fd05212",
+    "ts": "2026-06-18T13:48:40.054235",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "5f2b2fb3",
+    "ts": "2026-06-18T13:48:39.805019",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b544d562",
+    "ts": "2026-06-18T13:48:39.558510",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d6571651",
+    "ts": "2026-06-18T13:48:39.324235",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "b643c4a9",
+    "ts": "2026-06-18T13:48:39.029318",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "0974a463",
+    "ts": "2026-06-18T13:46:56.330784",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c4742937",
+    "ts": "2026-06-18T13:46:52.750306",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c39d2e54",
+    "ts": "2026-06-18T13:46:49.496958",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c9286d99",
+    "ts": "2026-06-18T13:46:45.577590",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 20 jobs on page 1"
+  },
+  {
+    "id": "df633a38",
+    "ts": "2026-06-18T13:46:35.968145",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "6201368a",
+    "ts": "2026-06-18T13:46:35.935740",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 3 jobs for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "7377caed",
+    "ts": "2026-06-18T13:46:35.832759",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "403b0977",
+    "ts": "2026-06-18T13:46:31.847241",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "27415f09",
+    "ts": "2026-06-18T13:46:26.235514",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "5ab26caa",
+    "ts": "2026-06-18T13:45:55.291885",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "6d0f6611",
+    "ts": "2026-06-18T13:45:24.466162",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
     "id": "3f6cf6b5",
     "ts": "2026-06-18T13:44:40.753465",
     "level": "SUCCESS",
@@ -3358,145 +3498,5 @@
     "level": "AI",
     "site": "naukri",
     "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "6a592794",
-    "ts": "2026-06-18T12:27:41.267633",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "4543a8e4",
-    "ts": "2026-06-18T12:27:41.192733",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4dc495e6",
-    "ts": "2026-06-18T12:27:36.104082",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "ad6b2203",
-    "ts": "2026-06-18T12:27:36.048389",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "ad15db3b",
-    "ts": "2026-06-18T12:27:31.186111",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "f7eee44e",
-    "ts": "2026-06-18T12:27:31.140294",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "07774263",
-    "ts": "2026-06-18T12:27:27.805304",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for '.NET Developer' in Bangalore"
-  },
-  {
-    "id": "1f7039c5",
-    "ts": "2026-06-18T12:27:21.279288",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: '.NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "4fc1f499",
-    "ts": "2026-06-18T12:27:21.229418",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for '.NET Developer' in Remote"
-  },
-  {
-    "id": "b7447a1f",
-    "ts": "2026-06-18T12:27:19.354853",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "254ba876",
-    "ts": "2026-06-18T12:27:19.299079",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c860604c",
-    "ts": "2026-06-18T12:27:14.345026",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "b76e90f0",
-    "ts": "2026-06-18T12:27:14.279402",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "97f70114",
-    "ts": "2026-06-18T12:27:09.307829",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "2332acd5",
-    "ts": "2026-06-18T12:27:09.250798",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "bfd90658",
-    "ts": "2026-06-18T12:27:04.414777",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a1a1ce3e",
-    "ts": "2026-06-18T12:27:04.362939",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "969759c2",
-    "ts": "2026-06-18T12:26:59.936285",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "81d0ffd7",
-    "ts": "2026-06-18T12:26:59.886605",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e0227066",
-    "ts": "2026-06-18T12:26:54.865271",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
   }
 ]
