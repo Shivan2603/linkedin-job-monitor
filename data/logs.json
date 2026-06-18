@@ -1,5 +1,12 @@
 [
   {
+    "id": "84eab7e9",
+    "ts": "2026-06-18T14:27:43.902982",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "71631cad",
     "ts": "2026-06-18T14:27:39.933119",
     "level": "SUCCESS",
@@ -3491,12 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "34db8aca",
-    "ts": "2026-06-18T13:59:42.597882",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
   }
 ]
