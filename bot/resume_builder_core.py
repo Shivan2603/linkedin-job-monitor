@@ -1144,18 +1144,13 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     # ─── RECRUITER CALIBRATION ENGINE ───
     jd_lower = jd_text.lower()
     
-    # 1. Location Fit (e.g. Coimbatore)
-    target_city = None
-    cities = ["coimbatore", "bangalore", "bengaluru", "hyderabad", "pune", "mumbai", "noida", "gurgaon", "chennai"]
-    for city in cities:
-        if city in jd_lower:
-            target_city = city.capitalize()
-            if target_city == "Bengaluru":
-                target_city = "Bangalore"
-            break
-            
-    if target_city and target_city != "Chennai":
-        candidate["location"] = f"Chennai, India | Open to relocation to {target_city} | Open to Remote/Hybrid"
+    # 1. Location Fit
+    INTERNATIONAL_COUNTRIES = ["malaysia", "singapore", "australia", "united kingdom", "uk", "london", "usa", "canada", "germany", "uae", "dubai"]
+    is_intl = any(c in jd_lower for c in INTERNATIONAL_COUNTRIES)
+    if is_intl:
+        candidate["location"] = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+    else:
+        candidate["location"] = "Chennai, India  |  Open to Remote / Hybrid"
 
     # 2. Legacy Framework / ADO.NET Fit
     has_legacy_ask = any(kw in jd_lower for kw in ["2.0", "3.5", "4.0", "4.x", "ado.net", "ajax", "legacy", "classic", ".net framework"])
