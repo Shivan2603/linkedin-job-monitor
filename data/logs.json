@@ -1,5 +1,397 @@
 [
   {
+    "id": "8e81f421",
+    "ts": "2026-06-18T15:06:28.529414",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Ocho | Full Stack Engineer | United Kingdom | 100% match"
+  },
+  {
+    "id": "44484a59",
+    "ts": "2026-06-18T15:06:28.465163",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Ocho — Full Stack Engineer"
+  },
+  {
+    "id": "a7947aab",
+    "ts": "2026-06-18T15:06:20.482856",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "29b68698",
+    "ts": "2026-06-18T15:06:20.433300",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Yes' = 'Yes'"
+  },
+  {
+    "id": "193b0dfd",
+    "ts": "2026-06-18T15:06:20.410436",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with C (Programming Language)?' = '7'"
+  },
+  {
+    "id": "24be401f",
+    "ts": "2026-06-18T15:06:20.380205",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with .NET Architecture?' = '4'"
+  },
+  {
+    "id": "d6ac4074",
+    "ts": "2026-06-18T15:06:19.688726",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "e19cf1cd",
+    "ts": "2026-06-18T15:06:19.316441",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "ef657fb0",
+    "ts": "2026-06-18T15:06:19.292343",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "57492f84",
+    "ts": "2026-06-18T15:06:19.043883",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "6570b112",
+    "ts": "2026-06-18T15:06:18.830251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "145f47b8",
+    "ts": "2026-06-18T15:06:18.555258",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "2bec7431",
+    "ts": "2026-06-18T15:06:18.300128",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "68e64cc8",
+    "ts": "2026-06-18T15:05:55.819662",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "56cd7eea",
+    "ts": "2026-06-18T15:05:55.763546",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Software_Engineer_Reggie___Cole_Resume.docx' = 'Deselect resume Siva_Shankar_Software_Engineer_Reggie___Cole_Resume.docx'"
+  },
+  {
+    "id": "6eb102a1",
+    "ts": "2026-06-18T15:05:55.725953",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'United Kingdom'"
+  },
+  {
+    "id": "abd4040b",
+    "ts": "2026-06-18T15:05:55.691062",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'Senior .NET Developer'"
+  },
+  {
+    "id": "a793e91f",
+    "ts": "2026-06-18T15:04:56.398691",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "19d4b14d",
+    "ts": "2026-06-18T15:04:00.137472",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2e33264b",
+    "ts": "2026-06-18T15:03:56.197757",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 13 jobs on page 1"
+  },
+  {
+    "id": "5bbbf7dd",
+    "ts": "2026-06-18T15:03:42.670240",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "db690f37",
+    "ts": "2026-06-18T15:03:42.595632",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "87bbaae8",
+    "ts": "2026-06-18T15:03:42.448678",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "3139a55f",
+    "ts": "2026-06-18T15:03:30.909222",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "62726602",
+    "ts": "2026-06-18T15:03:28.447156",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "38505615",
+    "ts": "2026-06-18T15:03:28.417435",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "a8700f86",
+    "ts": "2026-06-18T15:03:28.383931",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 13, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "20f363b7",
+    "ts": "2026-06-18T15:03:28.346231",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5d0b389b",
+    "ts": "2026-06-18T15:03:28.305138",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
+  },
+  {
+    "id": "a469ed71",
+    "ts": "2026-06-18T15:03:28.273582",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-18 15:03:28"
+  },
+  {
+    "id": "7f054f8c",
+    "ts": "2026-06-18T15:03:28.246266",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "241cbb88",
+    "ts": "2026-06-18T15:03:28.216934",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "56e58def",
+    "ts": "2026-06-18T15:03:28.181591",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "8fad8b26",
+    "ts": "2026-06-18T15:03:28.150167",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "8ae89bad",
+    "ts": "2026-06-18T14:54:39.196161",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "7d9f857f",
+    "ts": "2026-06-18T14:54:39.108340",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'Website' = 'https://shivan2603.github.io/sivashankar-portfolio/'"
+  },
+  {
+    "id": "0b564f3c",
+    "ts": "2026-06-18T14:54:39.061769",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'LinkedIn Profile' = 'https://www.linkedin.com/in/siva-shankar-4a7849226/'"
+  },
+  {
+    "id": "e37da070",
+    "ts": "2026-06-18T14:54:39.013522",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'Email' = 'sivashankar.avi6@gmail.com'"
+  },
+  {
+    "id": "367c5a94",
+    "ts": "2026-06-18T14:54:38.969444",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'Last Name' = 'V'"
+  },
+  {
+    "id": "1935188f",
+    "ts": "2026-06-18T14:54:38.920893",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'First Name' = 'Siva Shankar'"
+  },
+  {
+    "id": "7b718700",
+    "ts": "2026-06-18T14:54:36.785828",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 8/14 fields via AI."
+  },
+  {
+    "id": "fd565dd0",
+    "ts": "2026-06-18T14:54:33.318270",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "1c4db91f",
+    "ts": "2026-06-18T14:54:32.213163",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "4dc438f6",
+    "ts": "2026-06-18T14:54:32.168056",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "07718239",
+    "ts": "2026-06-18T14:54:31.852831",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d676a0c2",
+    "ts": "2026-06-18T14:54:31.518067",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bb4e9af1",
+    "ts": "2026-06-18T14:54:31.159003",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "6a7e0c28",
+    "ts": "2026-06-18T14:54:30.543455",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b3846a36",
+    "ts": "2026-06-18T14:54:12.780260",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields..."
+  },
+  {
+    "id": "2fcb664e",
+    "ts": "2026-06-18T14:54:11.211092",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Uploaded resume: "
+  },
+  {
+    "id": "6b0c73d7",
+    "ts": "2026-06-18T14:54:10.880697",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0e15f3ca",
+    "ts": "2026-06-18T14:54:10.807864",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring new resume for Autointegrate — Senior .NET Developer..."
+  },
+  {
+    "id": "d356411d",
+    "ts": "2026-06-18T14:54:10.722105",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Company: Autointegrate | Job Title: Senior .NET Developer"
+  },
+  {
+    "id": "eec27159",
+    "ts": "2026-06-18T14:54:06.345223",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "7c7c8e04",
+    "ts": "2026-06-18T14:54:06.301074",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://job-boards.greenhouse.io/autointegrate/jobs/5106807007?gh_src=40yppya87us"
+  },
+  {
+    "id": "bf281a8f",
+    "ts": "2026-06-18T14:54:06.249440",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
     "id": "e16cfbe4",
     "ts": "2026-06-18T14:53:57.371756",
     "level": "SUCCESS",
@@ -3106,397 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "9a75cbd2",
-    "ts": "2026-06-18T14:03:43.792153",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "44288898",
-    "ts": "2026-06-18T14:03:43.551328",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "e0e1eb3e",
-    "ts": "2026-06-18T14:03:43.143460",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "8db2e440",
-    "ts": "2026-06-18T14:03:42.864150",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "fe88270d",
-    "ts": "2026-06-18T14:03:42.158094",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f699c50f",
-    "ts": "2026-06-18T14:03:36.857807",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e0d068fa",
-    "ts": "2026-06-18T14:03:32.007031",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1cb4a270",
-    "ts": "2026-06-18T14:03:26.891035",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2ab7c846",
-    "ts": "2026-06-18T14:03:25.302912",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "66a8b3df",
-    "ts": "2026-06-18T14:03:25.059161",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "2eb97067",
-    "ts": "2026-06-18T14:03:25.011602",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "6c497a5f",
-    "ts": "2026-06-18T14:03:24.709679",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "a545eb4e",
-    "ts": "2026-06-18T14:03:24.419286",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "02780c64",
-    "ts": "2026-06-18T14:03:24.143966",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "b8e73ff9",
-    "ts": "2026-06-18T14:03:23.819112",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "d319b062",
-    "ts": "2026-06-18T14:03:21.231122",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2d3234da",
-    "ts": "2026-06-18T14:03:17.533255",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "86ff69f0",
-    "ts": "2026-06-18T14:03:10.420082",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "a8bfd66a",
-    "ts": "2026-06-18T14:03:10.380324",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "7cf7bb5b",
-    "ts": "2026-06-18T14:03:08.807468",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2e3563ca",
-    "ts": "2026-06-18T14:03:05.862193",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "0fc278b5",
-    "ts": "2026-06-18T14:03:05.585527",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "f0fb5dc3",
-    "ts": "2026-06-18T14:03:05.535521",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "3b591148",
-    "ts": "2026-06-18T14:03:05.249573",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "5a99564d",
-    "ts": "2026-06-18T14:03:05.014150",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "7e6af3b0",
-    "ts": "2026-06-18T14:03:04.581140",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "1d57ff1d",
-    "ts": "2026-06-18T14:03:04.322021",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2de010d1",
-    "ts": "2026-06-18T14:03:04.278611",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "87e62ad1",
-    "ts": "2026-06-18T14:02:59.709929",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ee17b534",
-    "ts": "2026-06-18T14:02:55.353383",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b1d9ddba",
-    "ts": "2026-06-18T14:02:50.013564",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8dd97559",
-    "ts": "2026-06-18T14:02:45.412835",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "3120a40a",
-    "ts": "2026-06-18T14:02:45.163179",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6c00b380",
-    "ts": "2026-06-18T14:02:45.021800",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "44746869",
-    "ts": "2026-06-18T14:02:44.974336",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "34d198c0",
-    "ts": "2026-06-18T14:02:44.717000",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "10d76e5b",
-    "ts": "2026-06-18T14:02:44.450981",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "72014ec4",
-    "ts": "2026-06-18T14:02:44.091758",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "a9221ecd",
-    "ts": "2026-06-18T14:02:43.796810",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "59dc5329",
-    "ts": "2026-06-18T14:02:40.096006",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "df435755",
-    "ts": "2026-06-18T14:02:34.999360",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0b419d16",
-    "ts": "2026-06-18T14:02:30.278841",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "21914be7",
-    "ts": "2026-06-18T14:02:25.672770",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8b0a102f",
-    "ts": "2026-06-18T14:02:21.996953",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "8a429dae",
-    "ts": "2026-06-18T14:02:21.694417",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "9b1b5f44",
-    "ts": "2026-06-18T14:02:21.659569",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "730b495d",
-    "ts": "2026-06-18T14:02:21.373544",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "1eaf6e11",
-    "ts": "2026-06-18T14:02:21.115066",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "c86374ca",
-    "ts": "2026-06-18T14:02:20.995681",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "768d9526",
-    "ts": "2026-06-18T14:02:20.818824",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "034a0427",
-    "ts": "2026-06-18T14:02:20.374127",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "6eb92354",
-    "ts": "2026-06-18T14:02:16.736185",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "801c369d",
-    "ts": "2026-06-18T14:02:12.348058",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "48dc6b0a",
-    "ts": "2026-06-18T14:02:06.574342",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8f50e976",
-    "ts": "2026-06-18T14:02:01.077136",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "c06501e7",
-    "ts": "2026-06-18T14:02:00.911477",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
