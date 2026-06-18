@@ -1,5 +1,327 @@
 [
   {
+    "id": "557b0150",
+    "ts": "2026-06-18T15:23:17.552797",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: EPAM Systems | Senior Developer | Bengaluru, Karnataka, India | 100% match"
+  },
+  {
+    "id": "56bb417e",
+    "ts": "2026-06-18T15:23:17.489350",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: EPAM Systems — Senior Developer"
+  },
+  {
+    "id": "0923437b",
+    "ts": "2026-06-18T15:23:08.060720",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "6ad823d5",
+    "ts": "2026-06-18T15:23:07.974283",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you hold the necessary work permit to be able to work at this location?' = 'Yes'"
+  },
+  {
+    "id": "ea06fe5f",
+    "ts": "2026-06-18T15:23:07.926992",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you willing to relocate to the specified job location? Please answer if your current location is not India.' = 'Yes'"
+  },
+  {
+    "id": "f4ff8459",
+    "ts": "2026-06-18T15:23:07.890464",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Choose preferred cities to work' = 'Bengaluru'"
+  },
+  {
+    "id": "b9f65e30",
+    "ts": "2026-06-18T15:23:07.058420",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "72d3533f",
+    "ts": "2026-06-18T15:23:06.659379",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c00034e4",
+    "ts": "2026-06-18T15:23:06.604790",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "f8aa7480",
+    "ts": "2026-06-18T15:23:06.044750",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "dda5d919",
+    "ts": "2026-06-18T15:23:05.762654",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e4744469",
+    "ts": "2026-06-18T15:23:05.433886",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "75c69312",
+    "ts": "2026-06-18T15:23:05.057928",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "0067b158",
+    "ts": "2026-06-18T15:22:44.014368",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "c075e616",
+    "ts": "2026-06-18T15:22:43.891252",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Developer_EPAM_Systems_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Developer_EPAM_Systems_Resume.docx'"
+  },
+  {
+    "id": "5f26d1b8",
+    "ts": "2026-06-18T15:22:37.626888",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "144fdab2",
+    "ts": "2026-06-18T15:22:37.532323",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Tamil Nadu, India'"
+  },
+  {
+    "id": "5c66f17e",
+    "ts": "2026-06-18T15:22:18.355635",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 69s before next site..."
+  },
+  {
+    "id": "60880a06",
+    "ts": "2026-06-18T15:22:18.314242",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "3241a00d",
+    "ts": "2026-06-18T15:22:18.265044",
+    "level": "ERROR",
+    "site": "system",
+    "message": "Company Careers crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n<launched> pid=14408\n[pid=14408][err] [14408:17876:0618/152217.637:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n[pid=14408][err] [14408:17876:0618/152217.638:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nCall log:\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n  - <launched> pid=14408\n  - [pid=14408][err] [14408:17876:0618/152217.637:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n  - [pid=14408][err] [14408:17876:0618/152217.638:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n"
+  },
+  {
+    "id": "f31d7255",
+    "ts": "2026-06-18T15:22:15.910207",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "b2a973a6",
+    "ts": "2026-06-18T15:22:15.863606",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "57120451",
+    "ts": "2026-06-18T15:22:03.460900",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "f38adc40",
+    "ts": "2026-06-18T15:22:03.385743",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'Bengaluru South, Karnataka, India'"
+  },
+  {
+    "id": "58d5a86d",
+    "ts": "2026-06-18T15:22:03.350808",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Chennai'"
+  },
+  {
+    "id": "49be3660",
+    "ts": "2026-06-18T15:22:03.309236",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Last name' = 'SHANKAR'"
+  },
+  {
+    "id": "7acdba31",
+    "ts": "2026-06-18T15:22:03.261725",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'First name' = 'SIVA'"
+  },
+  {
+    "id": "429a67ae",
+    "ts": "2026-06-18T15:20:49.026665",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 87s before next site..."
+  },
+  {
+    "id": "1f8cb2b3",
+    "ts": "2026-06-18T15:20:48.963552",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "72aa7279",
+    "ts": "2026-06-18T15:20:48.888241",
+    "level": "ERROR",
+    "site": "system",
+    "message": "LinkedIn crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_linkedin --remote-debugging-pipe about:blank\n<launched> pid=20868\n[pid=20868][out] Opening in existing browser session.\nCall log:\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_linkedin --remote-debugging-pipe about:blank\n  - <launched> pid=20868\n  - [pid=20868][out] Opening in existing browser session.\n"
+  },
+  {
+    "id": "03955f06",
+    "ts": "2026-06-18T15:20:47.271068",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "b1d58129",
+    "ts": "2026-06-18T15:20:47.231005",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "983d8a6a",
+    "ts": "2026-06-18T15:20:47.188271",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 18, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "7638ce96",
+    "ts": "2026-06-18T15:20:47.145759",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "3eaf7892",
+    "ts": "2026-06-18T15:20:47.093961",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
+  },
+  {
+    "id": "073fb55b",
+    "ts": "2026-06-18T15:20:47.046801",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-18 15:20:47"
+  },
+  {
+    "id": "b6ad0e9c",
+    "ts": "2026-06-18T15:20:46.986047",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "ff739203",
+    "ts": "2026-06-18T15:20:46.958687",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "6a43d805",
+    "ts": "2026-06-18T15:20:46.915616",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "2f61eb65",
+    "ts": "2026-06-18T15:20:46.859745",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "7ec96c8d",
+    "ts": "2026-06-18T15:20:32.719275",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1a395bcc",
+    "ts": "2026-06-18T15:20:29.348663",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 24 jobs on page 1"
+  },
+  {
+    "id": "8abe8507",
+    "ts": "2026-06-18T15:20:19.136759",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "5333659d",
+    "ts": "2026-06-18T15:20:19.104760",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 5 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "b4f99996",
+    "ts": "2026-06-18T15:20:18.968574",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6f6e2670",
+    "ts": "2026-06-18T15:20:15.239374",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "0117c1ee",
     "ts": "2026-06-18T15:19:34.433781",
     "level": "SUCCESS",
@@ -3176,327 +3498,5 @@
     "level": "AI",
     "site": "ai",
     "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "85d24de0",
-    "ts": "2026-06-18T14:11:28.436656",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "3e64b447",
-    "ts": "2026-06-18T14:11:28.392926",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "6f7da76f",
-    "ts": "2026-06-18T14:11:28.098898",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "24d73223",
-    "ts": "2026-06-18T14:11:27.792592",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "22813b74",
-    "ts": "2026-06-18T14:11:27.436906",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "eafe1e1a",
-    "ts": "2026-06-18T14:11:27.151681",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "b346f096",
-    "ts": "2026-06-18T14:11:26.210982",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c28020c1",
-    "ts": "2026-06-18T14:11:21.581917",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d360e2de",
-    "ts": "2026-06-18T14:11:16.772502",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "70b86307",
-    "ts": "2026-06-18T14:11:12.863629",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "27f6211c",
-    "ts": "2026-06-18T14:11:05.188274",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4101598b",
-    "ts": "2026-06-18T14:11:01.491820",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for '.NET Developer' in Chennai"
-  },
-  {
-    "id": "052c0756",
-    "ts": "2026-06-18T14:10:45.705275",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: '.NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "581be24c",
-    "ts": "2026-06-18T14:10:45.659857",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for '.NET Developer' in Bangalore"
-  },
-  {
-    "id": "7bf97007",
-    "ts": "2026-06-18T14:10:44.155892",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "998e6c6a",
-    "ts": "2026-06-18T14:10:35.035991",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "211774b3",
-    "ts": "2026-06-18T14:10:30.483974",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c06f2657",
-    "ts": "2026-06-18T14:10:25.969023",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "74bda348",
-    "ts": "2026-06-18T14:10:21.243842",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b0f57d27",
-    "ts": "2026-06-18T14:10:15.313701",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7af039e4",
-    "ts": "2026-06-18T14:10:10.703822",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b7faff59",
-    "ts": "2026-06-18T14:10:02.898423",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2ceb4c5d",
-    "ts": "2026-06-18T14:09:57.916472",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f0a7b77a",
-    "ts": "2026-06-18T14:09:52.452305",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "46edbed2",
-    "ts": "2026-06-18T14:09:47.844364",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "06c31430",
-    "ts": "2026-06-18T14:09:41.142147",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d1de6695",
-    "ts": "2026-06-18T14:09:36.219308",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "821fc754",
-    "ts": "2026-06-18T14:09:31.818059",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c0501608",
-    "ts": "2026-06-18T14:09:28.810992",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "11026144",
-    "ts": "2026-06-18T14:09:24.571257",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0b380841",
-    "ts": "2026-06-18T14:09:23.917787",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "84f1bc79",
-    "ts": "2026-06-18T14:09:20.015072",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8268a5c9",
-    "ts": "2026-06-18T14:09:19.938143",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for '.NET Developer' in Bangalore"
-  },
-  {
-    "id": "8cfaa013",
-    "ts": "2026-06-18T14:09:16.270907",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b79411e3",
-    "ts": "2026-06-18T14:09:03.391505",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: '.NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "8fbd4d18",
-    "ts": "2026-06-18T14:09:03.335472",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for '.NET Developer' in Remote"
-  },
-  {
-    "id": "f1491c57",
-    "ts": "2026-06-18T14:09:01.559534",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2b17acc0",
-    "ts": "2026-06-18T14:08:54.035629",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "634e62f8",
-    "ts": "2026-06-18T14:08:53.784378",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
-  },
-  {
-    "id": "945175b8",
-    "ts": "2026-06-18T14:08:49.677161",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a538211e",
-    "ts": "2026-06-18T14:08:44.484065",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "079e724c",
-    "ts": "2026-06-18T14:08:39.505477",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8eefd705",
-    "ts": "2026-06-18T14:08:34.589229",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "063cfcff",
-    "ts": "2026-06-18T14:08:30.411806",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8102ee3e",
-    "ts": "2026-06-18T14:08:25.215150",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9c28089e",
-    "ts": "2026-06-18T14:08:23.018025",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
   }
 ]
