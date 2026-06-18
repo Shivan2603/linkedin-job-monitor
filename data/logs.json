@@ -1,5 +1,565 @@
 [
   {
+    "id": "00af9682",
+    "ts": "2026-06-18T14:11:37.364935",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Platform Recruitment | Software Engineer | Cambridgeshire, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "895ac89b",
+    "ts": "2026-06-18T14:11:37.310606",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Platform Recruitment — Software Engineer"
+  },
+  {
+    "id": "6dab3df6",
+    "ts": "2026-06-18T14:11:36.899516",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3a646b30",
+    "ts": "2026-06-18T14:11:31.187174",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "86b05049",
+    "ts": "2026-06-18T14:11:28.823957",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "85d24de0",
+    "ts": "2026-06-18T14:11:28.436656",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "3e64b447",
+    "ts": "2026-06-18T14:11:28.392926",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "6f7da76f",
+    "ts": "2026-06-18T14:11:28.098898",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "24d73223",
+    "ts": "2026-06-18T14:11:27.792592",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "22813b74",
+    "ts": "2026-06-18T14:11:27.436906",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "eafe1e1a",
+    "ts": "2026-06-18T14:11:27.151681",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b346f096",
+    "ts": "2026-06-18T14:11:26.210982",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c28020c1",
+    "ts": "2026-06-18T14:11:21.581917",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d360e2de",
+    "ts": "2026-06-18T14:11:16.772502",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "70b86307",
+    "ts": "2026-06-18T14:11:12.863629",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "27f6211c",
+    "ts": "2026-06-18T14:11:05.188274",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4101598b",
+    "ts": "2026-06-18T14:11:01.491820",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for '.NET Developer' in Chennai"
+  },
+  {
+    "id": "052c0756",
+    "ts": "2026-06-18T14:10:45.705275",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: '.NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "581be24c",
+    "ts": "2026-06-18T14:10:45.659857",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied 0 jobs for '.NET Developer' in Bangalore"
+  },
+  {
+    "id": "7bf97007",
+    "ts": "2026-06-18T14:10:44.155892",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "998e6c6a",
+    "ts": "2026-06-18T14:10:35.035991",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "211774b3",
+    "ts": "2026-06-18T14:10:30.483974",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c06f2657",
+    "ts": "2026-06-18T14:10:25.969023",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "74bda348",
+    "ts": "2026-06-18T14:10:21.243842",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b0f57d27",
+    "ts": "2026-06-18T14:10:15.313701",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7af039e4",
+    "ts": "2026-06-18T14:10:10.703822",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b7faff59",
+    "ts": "2026-06-18T14:10:02.898423",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2ceb4c5d",
+    "ts": "2026-06-18T14:09:57.916472",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f0a7b77a",
+    "ts": "2026-06-18T14:09:52.452305",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "46edbed2",
+    "ts": "2026-06-18T14:09:47.844364",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "06c31430",
+    "ts": "2026-06-18T14:09:41.142147",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d1de6695",
+    "ts": "2026-06-18T14:09:36.219308",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "821fc754",
+    "ts": "2026-06-18T14:09:31.818059",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c0501608",
+    "ts": "2026-06-18T14:09:28.810992",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "11026144",
+    "ts": "2026-06-18T14:09:24.571257",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0b380841",
+    "ts": "2026-06-18T14:09:23.917787",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "84f1bc79",
+    "ts": "2026-06-18T14:09:20.015072",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8268a5c9",
+    "ts": "2026-06-18T14:09:19.938143",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for '.NET Developer' in Bangalore"
+  },
+  {
+    "id": "8cfaa013",
+    "ts": "2026-06-18T14:09:16.270907",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b79411e3",
+    "ts": "2026-06-18T14:09:03.391505",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: '.NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "8fbd4d18",
+    "ts": "2026-06-18T14:09:03.335472",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied 0 jobs for '.NET Developer' in Remote"
+  },
+  {
+    "id": "f1491c57",
+    "ts": "2026-06-18T14:09:01.559534",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2b17acc0",
+    "ts": "2026-06-18T14:08:54.035629",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "634e62f8",
+    "ts": "2026-06-18T14:08:53.784378",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "945175b8",
+    "ts": "2026-06-18T14:08:49.677161",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a538211e",
+    "ts": "2026-06-18T14:08:44.484065",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "079e724c",
+    "ts": "2026-06-18T14:08:39.505477",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8eefd705",
+    "ts": "2026-06-18T14:08:34.589229",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "063cfcff",
+    "ts": "2026-06-18T14:08:30.411806",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8102ee3e",
+    "ts": "2026-06-18T14:08:25.215150",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9c28089e",
+    "ts": "2026-06-18T14:08:23.018025",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "f14f0737",
+    "ts": "2026-06-18T14:08:21.158376",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3c274ee7",
+    "ts": "2026-06-18T14:08:16.198256",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "cd407520",
+    "ts": "2026-06-18T14:08:12.204900",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "39e3697c",
+    "ts": "2026-06-18T14:08:06.705146",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7c89a88b",
+    "ts": "2026-06-18T14:08:01.463174",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c86ad565",
+    "ts": "2026-06-18T14:07:57.405472",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "87665e8e",
+    "ts": "2026-06-18T14:07:52.259739",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "dc5c0b67",
+    "ts": "2026-06-18T14:07:52.001466",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "89cb7e43",
+    "ts": "2026-06-18T14:07:42.621120",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for '.NET Developer' in Remote"
+  },
+  {
+    "id": "fae5681d",
+    "ts": "2026-06-18T14:07:27.750459",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: '.NET Developer' in 'Remote'"
+  },
+  {
+    "id": "a118cf0e",
+    "ts": "2026-06-18T14:07:27.712742",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in UK"
+  },
+  {
+    "id": "f530181e",
+    "ts": "2026-06-18T14:07:25.710306",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "56914f60",
+    "ts": "2026-06-18T14:07:21.277781",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "1970e845",
+    "ts": "2026-06-18T14:07:20.789686",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3dc2af99",
+    "ts": "2026-06-18T14:07:16.435492",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "dd9e4d71",
+    "ts": "2026-06-18T14:07:12.215030",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c5e4518c",
+    "ts": "2026-06-18T14:07:06.943177",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "49041789",
+    "ts": "2026-06-18T14:07:02.147902",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "161ae752",
+    "ts": "2026-06-18T14:06:58.066365",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d762e723",
+    "ts": "2026-06-18T14:06:53.264625",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "154a64d5",
+    "ts": "2026-06-18T14:06:50.474864",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "bcf83c1c",
+    "ts": "2026-06-18T14:06:48.656772",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7b30672d",
+    "ts": "2026-06-18T14:06:44.063328",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "66a7068f",
+    "ts": "2026-06-18T14:06:39.365337",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "41f8336f",
+    "ts": "2026-06-18T14:06:34.355344",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1e29511c",
+    "ts": "2026-06-18T14:06:29.857058",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f5d32d84",
+    "ts": "2026-06-18T14:06:25.729734",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8f98ccea",
+    "ts": "2026-06-18T14:06:21.082836",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "415d9f23",
+    "ts": "2026-06-18T14:06:17.181859",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for 'Senior .NET Developer' in UK"
+  },
+  {
     "id": "76486a32",
     "ts": "2026-06-18T14:06:05.023915",
     "level": "SUCCESS",
@@ -2938,565 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "6e163110",
-    "ts": "2026-06-18T13:34:32.965443",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "49c72fea",
-    "ts": "2026-06-18T13:34:32.879568",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn login successful"
-  },
-  {
-    "id": "e5a87a07",
-    "ts": "2026-06-18T13:34:27.799636",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Waiting for login success... (Solve CAPTCHA manually if shown — 3 min window)"
-  },
-  {
-    "id": "22ac08cb",
-    "ts": "2026-06-18T13:34:27.759148",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Login fields not found — may already be logged in or CAPTCHA present"
-  },
-  {
-    "id": "e3090153",
-    "ts": "2026-06-18T13:34:23.684518",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "c20b258b",
-    "ts": "2026-06-18T13:34:21.468383",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "becf6a58",
-    "ts": "2026-06-18T13:34:21.434564",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "d88b3751",
-    "ts": "2026-06-18T13:34:21.403184",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 1, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
-  },
-  {
-    "id": "059c37e0",
-    "ts": "2026-06-18T13:34:21.371832",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "b3705429",
-    "ts": "2026-06-18T13:34:21.346675",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
-  },
-  {
-    "id": "0cb6b138",
-    "ts": "2026-06-18T13:34:21.308898",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-18 13:34:21"
-  },
-  {
-    "id": "176a3c42",
-    "ts": "2026-06-18T13:34:21.279462",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d12a8043",
-    "ts": "2026-06-18T13:34:21.246302",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "ec7d29e0",
-    "ts": "2026-06-18T13:34:21.214542",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
-  },
-  {
-    "id": "1620dd07",
-    "ts": "2026-06-18T13:34:21.198860",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "6302606c",
-    "ts": "2026-06-18T13:28:40.887418",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "✅ Company Careers bot finished. Applied to 0 positions."
-  },
-  {
-    "id": "035c7429",
-    "ts": "2026-06-18T13:28:39.561796",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 6 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
-  },
-  {
-    "id": "fab94083",
-    "ts": "2026-06-18T13:28:29.014431",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 10 job links: site:greenhouse.io \"senior .net developer\" OR \"senior softwa"
-  },
-  {
-    "id": "76d00820",
-    "ts": "2026-06-18T13:28:19.364192",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 10 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
-  },
-  {
-    "id": "8eacbeaf",
-    "ts": "2026-06-18T13:28:12.794166",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "8e609411",
-    "ts": "2026-06-18T13:28:12.757025",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "4073c185",
-    "ts": "2026-06-18T13:27:23.152696",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 50s before next site..."
-  },
-  {
-    "id": "bf767654",
-    "ts": "2026-06-18T13:27:23.120949",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "d84c0141",
-    "ts": "2026-06-18T13:27:23.085073",
-    "level": "ERROR",
-    "site": "system",
-    "message": "LinkedIn crashed: invalid state"
-  },
-  {
-    "id": "5084d44f",
-    "ts": "2026-06-18T13:27:23.027580",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "e35c4c69",
-    "ts": "2026-06-18T13:25:55.349624",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "de1c4ff4",
-    "ts": "2026-06-18T13:25:51.668269",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e64e1f4a",
-    "ts": "2026-06-18T13:25:48.751694",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6a09184e",
-    "ts": "2026-06-18T13:25:45.463523",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "34238c10",
-    "ts": "2026-06-18T13:25:42.215618",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 15 jobs on page 1"
-  },
-  {
-    "id": "e48acf90",
-    "ts": "2026-06-18T13:25:30.551731",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "ae01da17",
-    "ts": "2026-06-18T13:25:30.490974",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "b9e965d8",
-    "ts": "2026-06-18T13:25:30.395385",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "f6506434",
-    "ts": "2026-06-18T13:25:23.988225",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "e7dadb47",
-    "ts": "2026-06-18T13:25:21.516034",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "9406036e",
-    "ts": "2026-06-18T13:25:21.480504",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "1ca56ee8",
-    "ts": "2026-06-18T13:25:21.449039",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 1, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
-  },
-  {
-    "id": "9668f537",
-    "ts": "2026-06-18T13:25:21.425674",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "94ce6c44",
-    "ts": "2026-06-18T13:25:21.395577",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
-  },
-  {
-    "id": "0a5bf91b",
-    "ts": "2026-06-18T13:25:21.354586",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-18 13:25:21"
-  },
-  {
-    "id": "0a530c45",
-    "ts": "2026-06-18T13:25:21.338950",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "f9f49666",
-    "ts": "2026-06-18T13:25:21.311576",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "6b5763f6",
-    "ts": "2026-06-18T13:25:21.279566",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
-  },
-  {
-    "id": "894ba53f",
-    "ts": "2026-06-18T13:25:21.251101",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "4e530598",
-    "ts": "2026-06-18T13:21:01.685595",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "94747a0e",
-    "ts": "2026-06-18T13:21:01.609279",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Chennai'"
-  },
-  {
-    "id": "7ed98f48",
-    "ts": "2026-06-18T13:21:01.556948",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "824446ec",
-    "ts": "2026-06-18T13:21:01.502678",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Bangalore'"
-  },
-  {
-    "id": "e7b4ba5c",
-    "ts": "2026-06-18T13:21:01.463822",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4afdfc8d",
-    "ts": "2026-06-18T13:21:01.411372",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Remote'"
-  },
-  {
-    "id": "c914ddbe",
-    "ts": "2026-06-18T13:21:01.371454",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d89570c2",
-    "ts": "2026-06-18T13:21:01.313870",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Singapore'"
-  },
-  {
-    "id": "52375f7f",
-    "ts": "2026-06-18T13:21:01.270834",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "45c37b7a",
-    "ts": "2026-06-18T13:21:01.212559",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Malaysia'"
-  },
-  {
-    "id": "bced6d30",
-    "ts": "2026-06-18T13:21:01.173789",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "efddd1d0",
-    "ts": "2026-06-18T13:21:01.115906",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Australia'"
-  },
-  {
-    "id": "45f3e16a",
-    "ts": "2026-06-18T13:21:01.075031",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7c1957ce",
-    "ts": "2026-06-18T13:21:01.016577",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'UK'"
-  },
-  {
-    "id": "a70e38e6",
-    "ts": "2026-06-18T13:21:00.975481",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "2ff997ff",
-    "ts": "2026-06-18T13:21:00.917388",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "24144b6f",
-    "ts": "2026-06-18T13:21:00.875859",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "00c19c05",
-    "ts": "2026-06-18T13:21:00.817488",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Chennai'"
-  },
-  {
-    "id": "107dc08d",
-    "ts": "2026-06-18T13:21:00.776341",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1aeb3a8b",
-    "ts": "2026-06-18T13:21:00.715052",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Bangalore'"
-  },
-  {
-    "id": "8e210947",
-    "ts": "2026-06-18T13:21:00.661173",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "63f3ddcc",
-    "ts": "2026-06-18T13:21:00.605765",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Remote'"
-  },
-  {
-    "id": "e3a33874",
-    "ts": "2026-06-18T13:21:00.565621",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c8c4708c",
-    "ts": "2026-06-18T13:21:00.503212",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Singapore'"
-  },
-  {
-    "id": "db78c85a",
-    "ts": "2026-06-18T13:21:00.463302",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f0564ed8",
-    "ts": "2026-06-18T13:21:00.405156",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Malaysia'"
-  },
-  {
-    "id": "872be58f",
-    "ts": "2026-06-18T13:21:00.363762",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d7fa4692",
-    "ts": "2026-06-18T13:21:00.304862",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Australia'"
-  },
-  {
-    "id": "26f52ef2",
-    "ts": "2026-06-18T13:21:00.262789",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8d77c759",
-    "ts": "2026-06-18T13:21:00.206954",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'UK'"
-  },
-  {
-    "id": "3d1e822e",
-    "ts": "2026-06-18T13:21:00.166170",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "186eca05",
-    "ts": "2026-06-18T13:21:00.107068",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "208a955a",
-    "ts": "2026-06-18T13:21:00.061882",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5695e5ee",
-    "ts": "2026-06-18T13:21:00.014065",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Chennai'"
-  },
-  {
-    "id": "da79b095",
-    "ts": "2026-06-18T13:20:59.971493",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5199db91",
-    "ts": "2026-06-18T13:20:59.927415",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Bangalore'"
   }
 ]
