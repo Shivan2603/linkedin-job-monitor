@@ -1,5 +1,145 @@
 [
   {
+    "id": "6d549084",
+    "ts": "2026-06-18T15:09:01.335320",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: MK Labs | .NET Engineer | Greater London, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "7153eddb",
+    "ts": "2026-06-18T15:09:01.288912",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: MK Labs — .NET Engineer"
+  },
+  {
+    "id": "f0623f8a",
+    "ts": "2026-06-18T15:08:47.740849",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "41f0270f",
+    "ts": "2026-06-18T15:08:47.668269",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with Amazon Web Services (AWS)?' = '0'"
+  },
+  {
+    "id": "db4a1227",
+    "ts": "2026-06-18T15:08:47.632020",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with .NET Framework?' = '4'"
+  },
+  {
+    "id": "efe3bd09",
+    "ts": "2026-06-18T15:08:47.592512",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with C#?' = '4'"
+  },
+  {
+    "id": "e136e13b",
+    "ts": "2026-06-18T15:08:44.270721",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "38ff722b",
+    "ts": "2026-06-18T15:08:44.179976",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx' = 'Deselect resume Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx'"
+  },
+  {
+    "id": "5da1dcde",
+    "ts": "2026-06-18T15:08:42.784924",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "393613ad",
+    "ts": "2026-06-18T15:08:42.495537",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "0198ece3",
+    "ts": "2026-06-18T15:08:42.450175",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "753866a0",
+    "ts": "2026-06-18T15:08:42.199625",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "1d5d3b43",
+    "ts": "2026-06-18T15:08:41.948228",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "dddda9a8",
+    "ts": "2026-06-18T15:08:41.668491",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "cacbf1f9",
+    "ts": "2026-06-18T15:08:40.717130",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "964f2dec",
+    "ts": "2026-06-18T15:08:19.174589",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "5bf067c5",
+    "ts": "2026-06-18T15:08:19.123322",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Phone country code' = 'India (+91)'"
+  },
+  {
+    "id": "b35f8bca",
+    "ts": "2026-06-18T15:08:19.093807",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Email address' = 'sivashankar.avi6@gmail.com'"
+  },
+  {
+    "id": "bfa698d2",
+    "ts": "2026-06-18T15:08:19.057047",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Mobile phone number' = '6383149155'"
+  },
+  {
+    "id": "875a933c",
+    "ts": "2026-06-18T15:06:49.975951",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "8e81f421",
     "ts": "2026-06-18T15:06:28.529414",
     "level": "SUCCESS",
@@ -3358,145 +3498,5 @@
     "level": "INFO",
     "site": "naukri",
     "message": "Found 20 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "49b61e78",
-    "ts": "2026-06-18T14:04:33.704510",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "ccbdf65d",
-    "ts": "2026-06-18T14:04:33.644948",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "4f297a36",
-    "ts": "2026-06-18T14:04:32.208153",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab665151",
-    "ts": "2026-06-18T14:04:31.591485",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dce19bf8",
-    "ts": "2026-06-18T14:04:27.648611",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e088e172",
-    "ts": "2026-06-18T14:04:26.743400",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9ec19ca3",
-    "ts": "2026-06-18T14:04:23.476349",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1e3a2d41",
-    "ts": "2026-06-18T14:04:21.578098",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "971c224b",
-    "ts": "2026-06-18T14:04:16.647897",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a6c0236b",
-    "ts": "2026-06-18T14:04:11.766458",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b790982b",
-    "ts": "2026-06-18T14:04:06.789912",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "af715803",
-    "ts": "2026-06-18T14:04:01.529108",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d86e95ee",
-    "ts": "2026-06-18T14:04:01.461550",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: ASOS.com | Software Engineer (.NET, Azure) | London, England, United Kingdom | 100% match"
-  },
-  {
-    "id": "ae23acd7",
-    "ts": "2026-06-18T14:04:01.389388",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: ASOS.com — Software Engineer (.NET, Azure)"
-  },
-  {
-    "id": "30bf4110",
-    "ts": "2026-06-18T14:03:56.560355",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d099c96a",
-    "ts": "2026-06-18T14:03:51.706737",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "638c4c81",
-    "ts": "2026-06-18T14:03:46.689558",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f52a4a86",
-    "ts": "2026-06-18T14:03:44.362808",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "4e9204a6",
-    "ts": "2026-06-18T14:03:44.082387",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "311230f4",
-    "ts": "2026-06-18T14:03:44.030404",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
   }
 ]
