@@ -1,5 +1,82 @@
 [
   {
+    "id": "a4639a52",
+    "ts": "2026-06-18T14:36:33.141140",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: FinTech | Principal Software Engineer C# .Net AWS | Remote/Various | 95% match"
+  },
+  {
+    "id": "0200dbd8",
+    "ts": "2026-06-18T14:36:33.055634",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Manually submitted: FinTech — Principal Software Engineer C# .Net AWS"
+  },
+  {
+    "id": "1dc4cd27",
+    "ts": "2026-06-18T14:36:07.231322",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "9db21ab0",
+    "ts": "2026-06-18T14:36:07.162290",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields..."
+  },
+  {
+    "id": "37c39ea6",
+    "ts": "2026-06-18T14:36:07.107338",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "No file upload input found on this page."
+  },
+  {
+    "id": "ab62e792",
+    "ts": "2026-06-18T14:35:11.466588",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "24588c9e",
+    "ts": "2026-06-18T14:35:11.406326",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring new resume for FinTech — Principal Software Engineer C# .Net AWS..."
+  },
+  {
+    "id": "78ed86c4",
+    "ts": "2026-06-18T14:35:11.342578",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Company: FinTech | Job Title: Principal Software Engineer C# .Net AWS"
+  },
+  {
+    "id": "022f51e5",
+    "ts": "2026-06-18T14:35:04.877456",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "188a0378",
+    "ts": "2026-06-18T14:35:04.813720",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://www.client-server.com/job/principal-software-engineer-c-net-aws-fintech-2"
+  },
+  {
+    "id": "42be341b",
+    "ts": "2026-06-18T14:35:04.751849",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
     "id": "bdf2b8b1",
     "ts": "2026-06-18T14:34:56.526836",
     "level": "SUCCESS",
@@ -3418,83 +3495,6 @@
   {
     "id": "5ba75d8f",
     "ts": "2026-06-18T14:01:39.823631",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ee227ec7",
-    "ts": "2026-06-18T14:01:39.534446",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "e5d5dece",
-    "ts": "2026-06-18T14:01:36.111749",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e9523083",
-    "ts": "2026-06-18T14:01:30.954511",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ce5c6f6b",
-    "ts": "2026-06-18T14:01:25.958588",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e9734cfc",
-    "ts": "2026-06-18T14:01:21.429503",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "de36ff8d",
-    "ts": "2026-06-18T14:01:21.153611",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "3cea8236",
-    "ts": "2026-06-18T14:01:21.115209",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "9929f3ca",
-    "ts": "2026-06-18T14:01:20.930487",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8ee1cac9",
-    "ts": "2026-06-18T14:01:20.861999",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "77b02db0",
-    "ts": "2026-06-18T14:01:20.608733",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "92ef94c0",
-    "ts": "2026-06-18T14:01:20.346901",
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-2.0-flash quota hit, trying next..."
