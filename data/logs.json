@@ -1,5 +1,47 @@
 [
   {
+    "id": "de47c88f",
+    "ts": "2026-06-18T13:56:50.838057",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "631ceb87",
+    "ts": "2026-06-18T13:56:50.798685",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "9843ab5b",
+    "ts": "2026-06-18T13:56:50.327464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4375e350",
+    "ts": "2026-06-18T13:56:49.976122",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "b4c3ed96",
+    "ts": "2026-06-18T13:56:49.667199",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "02260469",
+    "ts": "2026-06-18T13:56:49.370618",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
     "id": "8fd9b101",
     "ts": "2026-06-18T13:56:48.155542",
     "level": "SUCCESS",
@@ -3456,47 +3498,5 @@
     "level": "INFO",
     "site": "shine",
     "message": "Searching Shine: '.NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "51987700",
-    "ts": "2026-06-18T12:34:45.747421",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "5d2b9a66",
-    "ts": "2026-06-18T12:34:41.907544",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: '.NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "c656a8a2",
-    "ts": "2026-06-18T12:34:41.840349",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "5b9d67ef",
-    "ts": "2026-06-18T12:34:37.749939",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "55620822",
-    "ts": "2026-06-18T12:34:37.616330",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine: Applied to 0 jobs"
-  },
-  {
-    "id": "6656235f",
-    "ts": "2026-06-18T12:34:33.585480",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Hyderabad'"
   }
 ]
