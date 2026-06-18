@@ -1,5 +1,1545 @@
 [
   {
+    "id": "e5547294",
+    "ts": "2026-06-18T13:39:42.387439",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Persistent Systems | Dotnet Developer | Bengaluru, Karnataka, India | 100% match"
+  },
+  {
+    "id": "cd2c6d6c",
+    "ts": "2026-06-18T13:39:42.355831",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Persistent Systems — Dotnet Developer"
+  },
+  {
+    "id": "3e1c435d",
+    "ts": "2026-06-18T13:39:35.230616",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "7ae95644",
+    "ts": "2026-06-18T13:39:34.996833",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "db57cb39",
+    "ts": "2026-06-18T13:39:34.981088",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "557f193f",
+    "ts": "2026-06-18T13:39:34.462429",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a4341c53",
+    "ts": "2026-06-18T13:39:34.211130",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "43d8bc18",
+    "ts": "2026-06-18T13:39:33.914904",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "68d75b31",
+    "ts": "2026-06-18T13:39:33.628913",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "8cc6e9b8",
+    "ts": "2026-06-18T13:39:18.302600",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "491da347",
+    "ts": "2026-06-18T13:39:18.097006",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "ab07c3b0",
+    "ts": "2026-06-18T13:39:18.073550",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "7a573f86",
+    "ts": "2026-06-18T13:39:17.801840",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "70b28cb8",
+    "ts": "2026-06-18T13:39:17.541824",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "18df9d37",
+    "ts": "2026-06-18T13:39:17.017374",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "08a3c9c1",
+    "ts": "2026-06-18T13:39:16.769663",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "0d68fc5a",
+    "ts": "2026-06-18T13:37:33.541006",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "60b83987",
+    "ts": "2026-06-18T13:37:30.276833",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "46a90a9e",
+    "ts": "2026-06-18T13:37:26.755734",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 14 jobs on page 2"
+  },
+  {
+    "id": "2b9ce72a",
+    "ts": "2026-06-18T13:37:22.620767",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b9f0935d",
+    "ts": "2026-06-18T13:37:18.799095",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a469b1d6",
+    "ts": "2026-06-18T13:37:14.915817",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "40df50b0",
+    "ts": "2026-06-18T13:37:11.198671",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "bdeea53b",
+    "ts": "2026-06-18T13:37:07.916594",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4993d351",
+    "ts": "2026-06-18T13:37:04.649547",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "af40e79e",
+    "ts": "2026-06-18T13:37:01.720559",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e76edc07",
+    "ts": "2026-06-18T13:36:57.980566",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3500ad4a",
+    "ts": "2026-06-18T13:36:54.165038",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d9a4b425",
+    "ts": "2026-06-18T13:36:50.099375",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2b9bdc21",
+    "ts": "2026-06-18T13:36:47.050880",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d7a774e8",
+    "ts": "2026-06-18T13:36:43.615025",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3302ed02",
+    "ts": "2026-06-18T13:36:39.847990",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e19dc717",
+    "ts": "2026-06-18T13:36:36.189627",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "63d56df0",
+    "ts": "2026-06-18T13:36:33.232303",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a2c6c93e",
+    "ts": "2026-06-18T13:36:29.663997",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1aea0b97",
+    "ts": "2026-06-18T13:36:25.033447",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3af20592",
+    "ts": "2026-06-18T13:36:21.630256",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fa9d21d6",
+    "ts": "2026-06-18T13:36:17.733151",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9e722c9c",
+    "ts": "2026-06-18T13:36:13.964890",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b0009a4c",
+    "ts": "2026-06-18T13:36:09.631549",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9d001020",
+    "ts": "2026-06-18T13:36:05.731892",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c1f04495",
+    "ts": "2026-06-18T13:36:01.573186",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "efc3acf0",
+    "ts": "2026-06-18T13:35:57.551396",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "db480ebb",
+    "ts": "2026-06-18T13:35:54.382106",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "67a953e0",
+    "ts": "2026-06-18T13:35:50.583192",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "64075cf7",
+    "ts": "2026-06-18T13:35:40.495828",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "e509cf27",
+    "ts": "2026-06-18T13:35:40.479814",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "f28ee732",
+    "ts": "2026-06-18T13:35:40.401933",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "33d3d43b",
+    "ts": "2026-06-18T13:35:36.652451",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "36212140",
+    "ts": "2026-06-18T13:35:33.701679",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d6f797bc",
+    "ts": "2026-06-18T13:35:29.892062",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "be6eed65",
+    "ts": "2026-06-18T13:35:26.368989",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4807a7b1",
+    "ts": "2026-06-18T13:35:21.904384",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a4fcf4e5",
+    "ts": "2026-06-18T13:35:18.105942",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "509f0596",
+    "ts": "2026-06-18T13:35:14.613715",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ed6be8a3",
+    "ts": "2026-06-18T13:35:11.087766",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7f1b2267",
+    "ts": "2026-06-18T13:35:07.532823",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "75d93b08",
+    "ts": "2026-06-18T13:35:03.631842",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0deba773",
+    "ts": "2026-06-18T13:34:59.983056",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a838ca6a",
+    "ts": "2026-06-18T13:34:56.901308",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "98bf0083",
+    "ts": "2026-06-18T13:34:52.963648",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "386dbc17",
+    "ts": "2026-06-18T13:34:49.281363",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2466118d",
+    "ts": "2026-06-18T13:34:46.117845",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6aaffcec",
+    "ts": "2026-06-18T13:34:43.022457",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 16 jobs on page 1"
+  },
+  {
+    "id": "bf15f976",
+    "ts": "2026-06-18T13:34:33.036397",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "6e163110",
+    "ts": "2026-06-18T13:34:32.965443",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "49c72fea",
+    "ts": "2026-06-18T13:34:32.879568",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn login successful"
+  },
+  {
+    "id": "e5a87a07",
+    "ts": "2026-06-18T13:34:27.799636",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Waiting for login success... (Solve CAPTCHA manually if shown — 3 min window)"
+  },
+  {
+    "id": "22ac08cb",
+    "ts": "2026-06-18T13:34:27.759148",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Login fields not found — may already be logged in or CAPTCHA present"
+  },
+  {
+    "id": "e3090153",
+    "ts": "2026-06-18T13:34:23.684518",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "c20b258b",
+    "ts": "2026-06-18T13:34:21.468383",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "becf6a58",
+    "ts": "2026-06-18T13:34:21.434564",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "d88b3751",
+    "ts": "2026-06-18T13:34:21.403184",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 1, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "059c37e0",
+    "ts": "2026-06-18T13:34:21.371832",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "b3705429",
+    "ts": "2026-06-18T13:34:21.346675",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
+  },
+  {
+    "id": "0cb6b138",
+    "ts": "2026-06-18T13:34:21.308898",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-18 13:34:21"
+  },
+  {
+    "id": "176a3c42",
+    "ts": "2026-06-18T13:34:21.279462",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d12a8043",
+    "ts": "2026-06-18T13:34:21.246302",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "ec7d29e0",
+    "ts": "2026-06-18T13:34:21.214542",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "1620dd07",
+    "ts": "2026-06-18T13:34:21.198860",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "6302606c",
+    "ts": "2026-06-18T13:28:40.887418",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "035c7429",
+    "ts": "2026-06-18T13:28:39.561796",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 6 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
+  },
+  {
+    "id": "fab94083",
+    "ts": "2026-06-18T13:28:29.014431",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 10 job links: site:greenhouse.io \"senior .net developer\" OR \"senior softwa"
+  },
+  {
+    "id": "76d00820",
+    "ts": "2026-06-18T13:28:19.364192",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 10 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
+  },
+  {
+    "id": "8eacbeaf",
+    "ts": "2026-06-18T13:28:12.794166",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "8e609411",
+    "ts": "2026-06-18T13:28:12.757025",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "4073c185",
+    "ts": "2026-06-18T13:27:23.152696",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 50s before next site..."
+  },
+  {
+    "id": "bf767654",
+    "ts": "2026-06-18T13:27:23.120949",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- LinkedIn done ---"
+  },
+  {
+    "id": "d84c0141",
+    "ts": "2026-06-18T13:27:23.085073",
+    "level": "ERROR",
+    "site": "system",
+    "message": "LinkedIn crashed: invalid state"
+  },
+  {
+    "id": "5084d44f",
+    "ts": "2026-06-18T13:27:23.027580",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "e35c4c69",
+    "ts": "2026-06-18T13:25:55.349624",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "de1c4ff4",
+    "ts": "2026-06-18T13:25:51.668269",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e64e1f4a",
+    "ts": "2026-06-18T13:25:48.751694",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6a09184e",
+    "ts": "2026-06-18T13:25:45.463523",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "34238c10",
+    "ts": "2026-06-18T13:25:42.215618",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 15 jobs on page 1"
+  },
+  {
+    "id": "e48acf90",
+    "ts": "2026-06-18T13:25:30.551731",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "ae01da17",
+    "ts": "2026-06-18T13:25:30.490974",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "b9e965d8",
+    "ts": "2026-06-18T13:25:30.395385",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "f6506434",
+    "ts": "2026-06-18T13:25:23.988225",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "e7dadb47",
+    "ts": "2026-06-18T13:25:21.516034",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "9406036e",
+    "ts": "2026-06-18T13:25:21.480504",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "1ca56ee8",
+    "ts": "2026-06-18T13:25:21.449039",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 1, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
+  },
+  {
+    "id": "9668f537",
+    "ts": "2026-06-18T13:25:21.425674",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "94ce6c44",
+    "ts": "2026-06-18T13:25:21.395577",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\18-06-2026"
+  },
+  {
+    "id": "0a5bf91b",
+    "ts": "2026-06-18T13:25:21.354586",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-18 13:25:21"
+  },
+  {
+    "id": "0a530c45",
+    "ts": "2026-06-18T13:25:21.338950",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "f9f49666",
+    "ts": "2026-06-18T13:25:21.311576",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "6b5763f6",
+    "ts": "2026-06-18T13:25:21.279566",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
+  },
+  {
+    "id": "894ba53f",
+    "ts": "2026-06-18T13:25:21.251101",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "4e530598",
+    "ts": "2026-06-18T13:21:01.685595",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "94747a0e",
+    "ts": "2026-06-18T13:21:01.609279",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Backend Developer' in 'Chennai'"
+  },
+  {
+    "id": "7ed98f48",
+    "ts": "2026-06-18T13:21:01.556948",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "824446ec",
+    "ts": "2026-06-18T13:21:01.502678",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Backend Developer' in 'Bangalore'"
+  },
+  {
+    "id": "e7b4ba5c",
+    "ts": "2026-06-18T13:21:01.463822",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4afdfc8d",
+    "ts": "2026-06-18T13:21:01.411372",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Backend Developer' in 'Remote'"
+  },
+  {
+    "id": "c914ddbe",
+    "ts": "2026-06-18T13:21:01.371454",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d89570c2",
+    "ts": "2026-06-18T13:21:01.313870",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Singapore'"
+  },
+  {
+    "id": "52375f7f",
+    "ts": "2026-06-18T13:21:01.270834",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "45c37b7a",
+    "ts": "2026-06-18T13:21:01.212559",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Malaysia'"
+  },
+  {
+    "id": "bced6d30",
+    "ts": "2026-06-18T13:21:01.173789",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "efddd1d0",
+    "ts": "2026-06-18T13:21:01.115906",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Australia'"
+  },
+  {
+    "id": "45f3e16a",
+    "ts": "2026-06-18T13:21:01.075031",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "7c1957ce",
+    "ts": "2026-06-18T13:21:01.016577",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'UK'"
+  },
+  {
+    "id": "a70e38e6",
+    "ts": "2026-06-18T13:21:00.975481",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "2ff997ff",
+    "ts": "2026-06-18T13:21:00.917388",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "24144b6f",
+    "ts": "2026-06-18T13:21:00.875859",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "00c19c05",
+    "ts": "2026-06-18T13:21:00.817488",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Chennai'"
+  },
+  {
+    "id": "107dc08d",
+    "ts": "2026-06-18T13:21:00.776341",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "1aeb3a8b",
+    "ts": "2026-06-18T13:21:00.715052",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Bangalore'"
+  },
+  {
+    "id": "8e210947",
+    "ts": "2026-06-18T13:21:00.661173",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "63f3ddcc",
+    "ts": "2026-06-18T13:21:00.605765",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior C# Developer' in 'Remote'"
+  },
+  {
+    "id": "e3a33874",
+    "ts": "2026-06-18T13:21:00.565621",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "c8c4708c",
+    "ts": "2026-06-18T13:21:00.503212",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Singapore'"
+  },
+  {
+    "id": "db78c85a",
+    "ts": "2026-06-18T13:21:00.463302",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "f0564ed8",
+    "ts": "2026-06-18T13:21:00.405156",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Malaysia'"
+  },
+  {
+    "id": "872be58f",
+    "ts": "2026-06-18T13:21:00.363762",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d7fa4692",
+    "ts": "2026-06-18T13:21:00.304862",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Australia'"
+  },
+  {
+    "id": "26f52ef2",
+    "ts": "2026-06-18T13:21:00.262789",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "8d77c759",
+    "ts": "2026-06-18T13:21:00.206954",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'UK'"
+  },
+  {
+    "id": "3d1e822e",
+    "ts": "2026-06-18T13:21:00.166170",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "186eca05",
+    "ts": "2026-06-18T13:21:00.107068",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "208a955a",
+    "ts": "2026-06-18T13:21:00.061882",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "5695e5ee",
+    "ts": "2026-06-18T13:21:00.014065",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Chennai'"
+  },
+  {
+    "id": "da79b095",
+    "ts": "2026-06-18T13:20:59.971493",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "5199db91",
+    "ts": "2026-06-18T13:20:59.927415",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Bangalore'"
+  },
+  {
+    "id": "04e3f932",
+    "ts": "2026-06-18T13:20:59.891054",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "69061c72",
+    "ts": "2026-06-18T13:20:59.850825",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Remote'"
+  },
+  {
+    "id": "faeb89c9",
+    "ts": "2026-06-18T13:20:59.808731",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "61115c3d",
+    "ts": "2026-06-18T13:20:59.758570",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Singapore'"
+  },
+  {
+    "id": "d3f9a5f8",
+    "ts": "2026-06-18T13:20:59.726069",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9f828ebc",
+    "ts": "2026-06-18T13:20:59.684068",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Malaysia'"
+  },
+  {
+    "id": "86a05330",
+    "ts": "2026-06-18T13:20:59.643849",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ca87dfad",
+    "ts": "2026-06-18T13:20:59.590224",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Australia'"
+  },
+  {
+    "id": "b6a3e091",
+    "ts": "2026-06-18T13:20:59.550265",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "44bc5e82",
+    "ts": "2026-06-18T13:20:59.501413",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'UK'"
+  },
+  {
+    "id": "31f1869b",
+    "ts": "2026-06-18T13:20:59.463859",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "c881a3f4",
+    "ts": "2026-06-18T13:20:59.402329",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "d63e2e34",
+    "ts": "2026-06-18T13:20:59.361181",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "bf9712bd",
+    "ts": "2026-06-18T13:20:59.319316",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Chennai'"
+  },
+  {
+    "id": "31da1110",
+    "ts": "2026-06-18T13:20:59.270058",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "2c9c4484",
+    "ts": "2026-06-18T13:20:59.205594",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Bangalore'"
+  },
+  {
+    "id": "ac066dcd",
+    "ts": "2026-06-18T13:20:59.147565",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ade458ef",
+    "ts": "2026-06-18T13:20:59.089758",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Remote'"
+  },
+  {
+    "id": "06435391",
+    "ts": "2026-06-18T13:20:59.037180",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "56762ed4",
+    "ts": "2026-06-18T13:20:58.950255",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "e8cba6a7",
+    "ts": "2026-06-18T13:20:58.893676",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "aee1f520",
+    "ts": "2026-06-18T13:20:58.817589",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "6d5ccd5a",
+    "ts": "2026-06-18T13:20:58.755556",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "76b160a9",
+    "ts": "2026-06-18T13:20:58.681844",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Australia'"
+  },
+  {
+    "id": "b8b8fbc2",
+    "ts": "2026-06-18T13:20:58.640291",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9243ef96",
+    "ts": "2026-06-18T13:20:58.575297",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'UK'"
+  },
+  {
+    "id": "49727584",
+    "ts": "2026-06-18T13:20:58.519417",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "1a13b6dd",
+    "ts": "2026-06-18T13:20:58.450296",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "37afc1c4",
+    "ts": "2026-06-18T13:20:58.402321",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9823c9e1",
+    "ts": "2026-06-18T13:20:58.323208",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "fb6ead9e",
+    "ts": "2026-06-18T13:20:58.269838",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "6de7c9e8",
+    "ts": "2026-06-18T13:20:58.188818",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "89dd4aff",
+    "ts": "2026-06-18T13:20:58.139415",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "34c806eb",
+    "ts": "2026-06-18T13:20:58.056315",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Remote'"
+  },
+  {
+    "id": "b3cb887c",
+    "ts": "2026-06-18T13:20:57.997261",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ab603623",
+    "ts": "2026-06-18T13:20:57.919679",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "5c121b34",
+    "ts": "2026-06-18T13:20:57.866921",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "0a715278",
+    "ts": "2026-06-18T13:20:57.791175",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "7d5b237e",
+    "ts": "2026-06-18T13:20:57.685625",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4cf0ace3",
+    "ts": "2026-06-18T13:20:57.614453",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Australia'"
+  },
+  {
+    "id": "a8e5cfa4",
+    "ts": "2026-06-18T13:20:57.539760",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "8a11d92c",
+    "ts": "2026-06-18T13:20:57.462472",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'UK'"
+  },
+  {
+    "id": "06859bec",
+    "ts": "2026-06-18T13:20:57.414636",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "80eae67b",
+    "ts": "2026-06-18T13:20:57.337887",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "5f5c65bd",
+    "ts": "2026-06-18T13:20:57.289374",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "daf88f6d",
+    "ts": "2026-06-18T13:20:57.217696",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "da7ba4b6",
+    "ts": "2026-06-18T13:20:57.153714",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "fb1039d6",
+    "ts": "2026-06-18T13:20:57.037205",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9627e742",
+    "ts": "2026-06-18T13:20:56.963302",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Target page, context or browser has been closed\nCall log:\nattempting click acti"
+  },
+  {
+    "id": "2fc5d063",
+    "ts": "2026-06-18T13:20:33.091074",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "7bb22ec6",
+    "ts": "2026-06-18T13:20:02.093611",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "f49e5a51",
+    "ts": "2026-06-18T13:19:31.235712",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "d44ee993",
+    "ts": "2026-06-18T13:19:00.209499",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "88a83c65",
+    "ts": "2026-06-18T13:18:29.371842",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "7440fc98",
+    "ts": "2026-06-18T13:17:58.466429",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "994cfe04",
+    "ts": "2026-06-18T13:14:52.522971",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5061b2f5",
+    "ts": "2026-06-18T13:14:48.127145",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8199d5e7",
+    "ts": "2026-06-18T13:13:29.130326",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "23631ce4",
+    "ts": "2026-06-18T13:13:09.644193",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "f73ec0dd",
+    "ts": "2026-06-18T13:12:38.868974",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "6aa91b3d",
+    "ts": "2026-06-18T13:12:08.020143",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "28448928",
+    "ts": "2026-06-18T13:11:37.191056",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "c82db78d",
+    "ts": "2026-06-18T13:11:06.148551",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "37d63754",
+    "ts": "2026-06-18T13:10:35.328567",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "3acb4de2",
+    "ts": "2026-06-18T13:10:04.529584",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "6ac154b3",
+    "ts": "2026-06-18T13:09:33.431402",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "c3f40997",
+    "ts": "2026-06-18T13:06:31.844926",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0b9ab451",
+    "ts": "2026-06-18T13:06:24.688819",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "dab657cc",
+    "ts": "2026-06-18T13:05:53.824444",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "2b48cc1e",
+    "ts": "2026-06-18T13:05:22.895720",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "4ba29c19",
+    "ts": "2026-06-18T13:04:51.880202",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for e"
+  },
+  {
+    "id": "e44bcb31",
+    "ts": "2026-06-18T13:01:55.335476",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7348a8f2",
+    "ts": "2026-06-18T13:01:51.031268",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "c1725da1",
+    "ts": "2026-06-18T13:01:34.857745",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "645d3721",
+    "ts": "2026-06-18T13:01:34.807517",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
     "id": "1ad129a4",
     "ts": "2026-06-18T13:01:16.534124",
     "level": "SUCCESS",
@@ -1958,1545 +3498,5 @@
     "level": "WARN",
     "site": "naukri",
     "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "c564f5c5",
-    "ts": "2026-06-18T12:26:11.044166",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "1a64a6a5",
-    "ts": "2026-06-18T12:26:07.859886",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for '.NET Developer' in Remote"
-  },
-  {
-    "id": "8c97ad3e",
-    "ts": "2026-06-18T12:26:01.325640",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: '.NET Developer' in 'Remote'"
-  },
-  {
-    "id": "1b0772c1",
-    "ts": "2026-06-18T12:26:01.284904",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in UK"
-  },
-  {
-    "id": "4ecd6dc6",
-    "ts": "2026-06-18T12:26:00.193364",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a4cbc06f",
-    "ts": "2026-06-18T12:26:00.168818",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "0b7e0c17",
-    "ts": "2026-06-18T12:25:55.309595",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9b2a7818",
-    "ts": "2026-06-18T12:25:55.243771",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "d3b6804a",
-    "ts": "2026-06-18T12:25:51.019414",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "e4c00ceb",
-    "ts": "2026-06-18T12:25:50.959344",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "8f5e58fc",
-    "ts": "2026-06-18T12:25:46.490071",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "429e6398",
-    "ts": "2026-06-18T12:25:46.446486",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "34d7d97f",
-    "ts": "2026-06-18T12:25:41.965170",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "1d11c268",
-    "ts": "2026-06-18T12:25:41.898422",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "5b4ce7d1",
-    "ts": "2026-06-18T12:25:36.619138",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "7277b105",
-    "ts": "2026-06-18T12:25:36.594554",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4c0492ad",
-    "ts": "2026-06-18T12:25:31.546762",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "0cf628ec",
-    "ts": "2026-06-18T12:25:31.505668",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "f9628928",
-    "ts": "2026-06-18T12:25:26.924718",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "e6a12cf1",
-    "ts": "2026-06-18T12:25:26.850592",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "3540e373",
-    "ts": "2026-06-18T12:25:21.858832",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "0108c0a6",
-    "ts": "2026-06-18T12:25:21.817095",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "1c448c7b",
-    "ts": "2026-06-18T12:25:17.135744",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "b408d185",
-    "ts": "2026-06-18T12:25:17.094262",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "d778a3dd",
-    "ts": "2026-06-18T12:25:13.177178",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "42e5e09f",
-    "ts": "2026-06-18T12:25:13.110088",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "3bee371b",
-    "ts": "2026-06-18T12:25:08.449064",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "7dffea2f",
-    "ts": "2026-06-18T12:25:08.407376",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "1b710a32",
-    "ts": "2026-06-18T12:25:03.557707",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "47e88a01",
-    "ts": "2026-06-18T12:25:03.489909",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "73ed5d7d",
-    "ts": "2026-06-18T12:24:58.518414",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "1f5cd3c2",
-    "ts": "2026-06-18T12:24:58.459386",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2be0cec8",
-    "ts": "2026-06-18T12:24:52.783321",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "6f4d4fba",
-    "ts": "2026-06-18T12:24:52.750136",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c45ec5a4",
-    "ts": "2026-06-18T12:24:49.050629",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in UK"
-  },
-  {
-    "id": "4f781158",
-    "ts": "2026-06-18T12:24:42.245258",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'UK'"
-  },
-  {
-    "id": "571555e5",
-    "ts": "2026-06-18T12:24:42.187192",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "63aab7bf",
-    "ts": "2026-06-18T12:24:40.614645",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "effc09c9",
-    "ts": "2026-06-18T12:24:40.548651",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "9460b43e",
-    "ts": "2026-06-18T12:24:35.812778",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "e5bf6a10",
-    "ts": "2026-06-18T12:24:35.746297",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "7a9ae680",
-    "ts": "2026-06-18T12:24:31.217645",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "7da1dd37",
-    "ts": "2026-06-18T12:24:31.160072",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2eb1cba7",
-    "ts": "2026-06-18T12:24:25.979984",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "b443d04d",
-    "ts": "2026-06-18T12:24:25.938089",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e405c690",
-    "ts": "2026-06-18T12:24:20.326712",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "6a6cec90",
-    "ts": "2026-06-18T12:24:20.267862",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "ac5d7c12",
-    "ts": "2026-06-18T12:24:15.246032",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "b8bb6232",
-    "ts": "2026-06-18T12:24:15.170840",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c8b020e5",
-    "ts": "2026-06-18T12:24:10.475554",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "b4fb8fd0",
-    "ts": "2026-06-18T12:24:10.413696",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c1c82ac1",
-    "ts": "2026-06-18T12:24:05.745530",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "378323f4",
-    "ts": "2026-06-18T12:24:05.676240",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2a08a80b",
-    "ts": "2026-06-18T12:24:00.712492",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9fb8e807",
-    "ts": "2026-06-18T12:24:00.678644",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "8683dff0",
-    "ts": "2026-06-18T12:23:56.304974",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "d58def4f",
-    "ts": "2026-06-18T12:23:56.237794",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "ea579ce4",
-    "ts": "2026-06-18T12:23:50.795019",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "59b9fa71",
-    "ts": "2026-06-18T12:23:50.736681",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2288757c",
-    "ts": "2026-06-18T12:23:45.146704",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "4483870e",
-    "ts": "2026-06-18T12:23:45.094868",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "9c5cbb4a",
-    "ts": "2026-06-18T12:23:39.580881",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "be00d7ee",
-    "ts": "2026-06-18T12:23:39.531391",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4c774825",
-    "ts": "2026-06-18T12:23:34.730016",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "24d78321",
-    "ts": "2026-06-18T12:23:34.697340",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e465fd32",
-    "ts": "2026-06-18T12:23:29.173084",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "7abf6f0e",
-    "ts": "2026-06-18T12:23:29.109829",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "6d4499f2",
-    "ts": "2026-06-18T12:23:24.940737",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "84173f43",
-    "ts": "2026-06-18T12:23:18.017687",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "7aa4d024",
-    "ts": "2026-06-18T12:23:17.974753",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "73a397c1",
-    "ts": "2026-06-18T12:23:16.045503",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "8294d85a",
-    "ts": "2026-06-18T12:23:16.012267",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "42f57d9b",
-    "ts": "2026-06-18T12:23:10.744707",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "584e84fc",
-    "ts": "2026-06-18T12:23:10.677502",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "1f7e9739",
-    "ts": "2026-06-18T12:23:06.347913",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "e1c4cbb3",
-    "ts": "2026-06-18T12:23:06.281887",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "a6bef797",
-    "ts": "2026-06-18T12:23:01.934297",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "17224dfd",
-    "ts": "2026-06-18T12:23:01.890044",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "eb4563eb",
-    "ts": "2026-06-18T12:22:57.265127",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a6b7361c",
-    "ts": "2026-06-18T12:22:57.248017",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "dc00e7e0",
-    "ts": "2026-06-18T12:22:51.612556",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "ad872b13",
-    "ts": "2026-06-18T12:22:51.548169",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "99fd1398",
-    "ts": "2026-06-18T12:22:46.324207",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "de2ca80e",
-    "ts": "2026-06-18T12:22:46.277163",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "6a3cfcfc",
-    "ts": "2026-06-18T12:22:41.167611",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "586c250f",
-    "ts": "2026-06-18T12:22:41.122859",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c015b6fa",
-    "ts": "2026-06-18T12:22:35.788258",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a007040b",
-    "ts": "2026-06-18T12:22:35.729551",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "5e5fb85e",
-    "ts": "2026-06-18T12:22:30.675567",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "812b9183",
-    "ts": "2026-06-18T12:22:30.637535",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "a4762602",
-    "ts": "2026-06-18T12:22:26.093041",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "984de3bc",
-    "ts": "2026-06-18T12:22:26.054257",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "ddf1fd68",
-    "ts": "2026-06-18T12:22:20.606113",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "f6b46b11",
-    "ts": "2026-06-18T12:22:20.564756",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "6a1722bb",
-    "ts": "2026-06-18T12:22:16.194060",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "21a60d4c",
-    "ts": "2026-06-18T12:22:16.151074",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "46b371b3",
-    "ts": "2026-06-18T12:22:12.115853",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a7637f90",
-    "ts": "2026-06-18T12:22:12.090230",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4a1a8dfd",
-    "ts": "2026-06-18T12:22:06.992389",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "c34f1a3e",
-    "ts": "2026-06-18T12:22:06.957513",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "19d7989d",
-    "ts": "2026-06-18T12:22:03.494615",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "cdc862fd",
-    "ts": "2026-06-18T12:21:56.566102",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "d092b3ac",
-    "ts": "2026-06-18T12:21:56.516648",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "73c8a3c1",
-    "ts": "2026-06-18T12:21:55.125474",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9609267e",
-    "ts": "2026-06-18T12:21:55.049934",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "3a60062a",
-    "ts": "2026-06-18T12:21:49.735718",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "60404093",
-    "ts": "2026-06-18T12:21:49.661454",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "93482246",
-    "ts": "2026-06-18T12:21:44.823368",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "c2b6e8ed",
-    "ts": "2026-06-18T12:21:44.797264",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "bfa8adf8",
-    "ts": "2026-06-18T12:21:40.364544",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "8ac7177d",
-    "ts": "2026-06-18T12:21:40.342772",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e060e615",
-    "ts": "2026-06-18T12:21:35.765924",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9793436f",
-    "ts": "2026-06-18T12:21:35.740860",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4ac5bab6",
-    "ts": "2026-06-18T12:21:30.130205",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "8e337f47",
-    "ts": "2026-06-18T12:21:30.113934",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "24c9bc94",
-    "ts": "2026-06-18T12:21:25.324725",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9f2f425d",
-    "ts": "2026-06-18T12:21:25.274944",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2ab2e217",
-    "ts": "2026-06-18T12:21:20.646986",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "481d48f1",
-    "ts": "2026-06-18T12:21:20.595639",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "726843fe",
-    "ts": "2026-06-18T12:21:15.117382",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "142a44eb",
-    "ts": "2026-06-18T12:21:15.100386",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "f3e1613f",
-    "ts": "2026-06-18T12:21:10.639133",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "181c0efa",
-    "ts": "2026-06-18T12:21:10.572472",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "35418807",
-    "ts": "2026-06-18T12:21:06.187310",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "6d97153e",
-    "ts": "2026-06-18T12:21:06.121084",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "d0bb0cae",
-    "ts": "2026-06-18T12:21:01.540169",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "6e4279aa",
-    "ts": "2026-06-18T12:21:01.522195",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "f5a497d9",
-    "ts": "2026-06-18T12:20:56.737394",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "1c8ddedf",
-    "ts": "2026-06-18T12:20:56.691369",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "d3c8239b",
-    "ts": "2026-06-18T12:20:51.429392",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "01bd3879",
-    "ts": "2026-06-18T12:20:51.388473",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "8a9617f1",
-    "ts": "2026-06-18T12:20:46.775228",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "504fcb62",
-    "ts": "2026-06-18T12:20:46.709558",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "f7c581e1",
-    "ts": "2026-06-18T12:20:43.789364",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "716816d6",
-    "ts": "2026-06-18T12:20:37.996160",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "d8593b1c",
-    "ts": "2026-06-18T12:20:37.917563",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "fa21c799",
-    "ts": "2026-06-18T12:20:36.823483",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "1f8c7002",
-    "ts": "2026-06-18T12:20:36.779165",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "9e035e89",
-    "ts": "2026-06-18T12:20:32.015585",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "8ff737ac",
-    "ts": "2026-06-18T12:20:31.950906",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "0c5594c5",
-    "ts": "2026-06-18T12:20:26.600057",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "75de8422",
-    "ts": "2026-06-18T12:20:26.538522",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "438e78d6",
-    "ts": "2026-06-18T12:20:21.493015",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "a875309c",
-    "ts": "2026-06-18T12:20:21.429249",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e3d3199b",
-    "ts": "2026-06-18T12:20:16.322660",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "09e903b6",
-    "ts": "2026-06-18T12:20:16.257718",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "0987b999",
-    "ts": "2026-06-18T12:20:11.011898",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "f9167db2",
-    "ts": "2026-06-18T12:20:10.972052",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "57d3410e",
-    "ts": "2026-06-18T12:20:05.515378",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "78a7abda",
-    "ts": "2026-06-18T12:20:05.482012",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "fdb315bc",
-    "ts": "2026-06-18T12:20:00.693082",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "0ce3f1a5",
-    "ts": "2026-06-18T12:20:00.666726",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "076c0716",
-    "ts": "2026-06-18T12:19:55.412006",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "336dce15",
-    "ts": "2026-06-18T12:19:55.350380",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "54c05689",
-    "ts": "2026-06-18T12:19:50.944922",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "016b0748",
-    "ts": "2026-06-18T12:19:50.883597",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "d57f5355",
-    "ts": "2026-06-18T12:19:46.348790",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9633c9ac",
-    "ts": "2026-06-18T12:19:46.309762",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4efff29f",
-    "ts": "2026-06-18T12:19:41.618631",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "21150bbe",
-    "ts": "2026-06-18T12:19:41.552931",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "872154b6",
-    "ts": "2026-06-18T12:19:36.360724",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "4b1baeec",
-    "ts": "2026-06-18T12:19:36.319681",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "fd274c44",
-    "ts": "2026-06-18T12:19:30.947121",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "9976b017",
-    "ts": "2026-06-18T12:19:30.908525",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "24d982c4",
-    "ts": "2026-06-18T12:19:25.914857",
-    "level": "WARN",
-    "site": "naukri",
-    "message": "Naukri URL apply error: name 'Document' is not defined"
-  },
-  {
-    "id": "2b8c2b41",
-    "ts": "2026-06-18T12:19:25.882204",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "910eafef",
-    "ts": "2026-06-18T12:19:23.008223",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 18 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "b45b2af8",
-    "ts": "2026-06-18T12:19:16.491471",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "901fe1c5",
-    "ts": "2026-06-18T12:19:16.456809",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Cookies saved for naukri"
-  },
-  {
-    "id": "65449cf6",
-    "ts": "2026-06-18T12:19:16.399099",
-    "level": "SUCCESS",
-    "site": "naukri",
-    "message": "Naukri already logged in via cookies"
-  },
-  {
-    "id": "2aba1e72",
-    "ts": "2026-06-18T12:19:12.113748",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "ec92d862",
-    "ts": "2026-06-18T12:19:10.652372",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Starting Naukri.com bot"
-  },
-  {
-    "id": "2e75343f",
-    "ts": "2026-06-18T12:19:10.589412",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "6d8ffb07",
-    "ts": "2026-06-18T12:17:45.776429",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 85s before next site..."
-  },
-  {
-    "id": "194507a0",
-    "ts": "2026-06-18T12:17:45.727353",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "3ccfb53f",
-    "ts": "2026-06-18T12:17:45.445457",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "✅ Company Careers bot finished. Applied to 0 positions."
-  },
-  {
-    "id": "99366264",
-    "ts": "2026-06-18T12:17:44.836435",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/Allata/6842c459-fd73-4a95-879d-f172dfd…: name 'Document' is not defined"
-  },
-  {
-    "id": "5ced7d9f",
-    "ts": "2026-06-18T12:17:44.796412",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "57f91b65",
-    "ts": "2026-06-18T12:17:39.011828",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/Allata/6842c459-fd73-4a95-879d-f172dfd62ee8…"
-  },
-  {
-    "id": "e47ab242",
-    "ts": "2026-06-18T12:17:38.915450",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping US Remote at PerfectServe — Job Application for Senior Software Engineer, .NET (Already applied)"
-  },
-  {
-    "id": "b109f22e",
-    "ts": "2026-06-18T12:17:34.409508",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/perfectserve/jobs/5826519004…"
-  },
-  {
-    "id": "f5293c05",
-    "ts": "2026-06-18T12:17:34.334924",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Diligentcorporation — Software Engineer (Already applied)"
-  },
-  {
-    "id": "38ee3595",
-    "ts": "2026-06-18T12:17:30.414276",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/diligentcorporation/jobs/5729895004…"
-  },
-  {
-    "id": "8b434999",
-    "ts": "2026-06-18T12:17:30.344114",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping US Remote at PerfectServe — Job Application for Senior Software Engineer, .NET (Already applied)"
-  },
-  {
-    "id": "bbdc233b",
-    "ts": "2026-06-18T12:17:25.955371",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/perfectserve/jobs/5826519004#:~:text=Senior%20So…"
-  },
-  {
-    "id": "9be76594",
-    "ts": "2026-06-18T12:17:25.879315",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://boards.greenhouse.io/captiveaire/jobs/8498041002#:~:…: name 'Document' is not defined"
-  },
-  {
-    "id": "7dbfb85e",
-    "ts": "2026-06-18T12:17:25.797945",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e230bd5f",
-    "ts": "2026-06-18T12:17:21.843821",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/captiveaire/jobs/8498041002#:~:text=Senior%20Softwa…"
-  },
-  {
-    "id": "599586be",
-    "ts": "2026-06-18T12:17:21.796129",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe…: name 'Document' is not defined"
-  },
-  {
-    "id": "db6c29ff",
-    "ts": "2026-06-18T12:17:21.759358",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "50e6756d",
-    "ts": "2026-06-18T12:17:18.055540",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e…"
-  },
-  {
-    "id": "b0802122",
-    "ts": "2026-06-18T12:17:18.020897",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/ciandt/bc2b2e59-ca0a-4b89-aeea-71bbc42…: name 'Document' is not defined"
-  },
-  {
-    "id": "fee85e36",
-    "ts": "2026-06-18T12:17:17.979136",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "cac9ab52",
-    "ts": "2026-06-18T12:17:13.267234",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ciandt/bc2b2e59-ca0a-4b89-aeea-71bbc4294d91…"
-  },
-  {
-    "id": "552111bc",
-    "ts": "2026-06-18T12:17:13.177820",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://boards.greenhouse.io/captiveaire/jobs/8498041002…: name 'Document' is not defined"
-  },
-  {
-    "id": "d3b876d3",
-    "ts": "2026-06-18T12:17:13.090620",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "4d414a70",
-    "ts": "2026-06-18T12:17:05.141549",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/captiveaire/jobs/8498041002…"
-  },
-  {
-    "id": "f54fb518",
-    "ts": "2026-06-18T12:17:05.093766",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Abbyy — Software Engineer (Already applied)"
-  },
-  {
-    "id": "dbc22b89",
-    "ts": "2026-06-18T12:17:00.080357",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101#:~:text=Senior%20Software%20E…"
-  },
-  {
-    "id": "43b49d9a",
-    "ts": "2026-06-18T12:17:00.032539",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://job-boards.greenhouse.io/leadstreams/jobs/4272901009…: name 'Document' is not defined"
-  },
-  {
-    "id": "f6207cce",
-    "ts": "2026-06-18T12:16:59.969347",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "5a58972f",
-    "ts": "2026-06-18T12:16:56.593988",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
-  },
-  {
-    "id": "77ae2709",
-    "ts": "2026-06-18T12:16:56.515062",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe…: name 'Document' is not defined"
-  },
-  {
-    "id": "7ad43923",
-    "ts": "2026-06-18T12:16:56.467212",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "c2c865f6",
-    "ts": "2026-06-18T12:16:52.864251",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e#:~:text=Senior%…"
-  },
-  {
-    "id": "0e613b12",
-    "ts": "2026-06-18T12:16:52.829283",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://job-boards.greenhouse.io/leadstreams/jobs/4272901009…: name 'Document' is not defined"
-  },
-  {
-    "id": "5eeee214",
-    "ts": "2026-06-18T12:16:52.795433",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "a0efb1f0",
-    "ts": "2026-06-18T12:16:48.218149",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.greenhouse.io/leadstreams/jobs/4272901009?gh_src=my.greenhous…"
-  },
-  {
-    "id": "87c39c58",
-    "ts": "2026-06-18T12:16:48.184977",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://jobs.lever.co/Allata/6842c459-fd73-4a95-879d-f172dfd…: name 'Document' is not defined"
-  },
-  {
-    "id": "a10ba246",
-    "ts": "2026-06-18T12:16:48.152120",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "244b0871",
-    "ts": "2026-06-18T12:16:43.391243",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/Allata/6842c459-fd73-4a95-879d-f172dfd62ee8#:~:text=Senior…"
-  },
-  {
-    "id": "e2bf29d8",
-    "ts": "2026-06-18T12:16:43.349059",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to apply at https://boards.greenhouse.io/capco/jobs/7679035…: name 'Document' is not defined"
-  },
-  {
-    "id": "153e9a47",
-    "ts": "2026-06-18T12:16:43.315465",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "2dc3718a",
-    "ts": "2026-06-18T12:16:38.960192",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/capco/jobs/7679035…"
-  },
-  {
-    "id": "0b43e886",
-    "ts": "2026-06-18T12:16:38.916256",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Abbyy — Software Engineer (Already applied)"
-  },
-  {
-    "id": "c8b38001",
-    "ts": "2026-06-18T12:16:32.972047",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/abbyy/jobs/4865136101…"
-  },
-  {
-    "id": "fdb7cddf",
-    "ts": "2026-06-18T12:16:32.930709",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Discovered 15 job URLs from Google search"
-  },
-  {
-    "id": "baeb5da2",
-    "ts": "2026-06-18T12:16:27.049161",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 15 job links: site:boards.greenhouse.io \"senior .net developer\" OR \"senior"
-  },
-  {
-    "id": "a238da75",
-    "ts": "2026-06-18T12:16:19.052499",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 18 job links: site:greenhouse.io \"senior .net developer\" OR \"senior softwa"
-  },
-  {
-    "id": "6f251c75",
-    "ts": "2026-06-18T12:16:11.226196",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Google query found 20 job links: site:lever.co \"senior .net developer\" OR \"senior software en"
   }
 ]
