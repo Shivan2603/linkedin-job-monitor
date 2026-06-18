@@ -224,7 +224,9 @@ def run_naukri_bot():
             if not _login(page, creds):
                 return
             save_cookies(context, SITE)
-            for job_title in JOB_TITLES:
+            # Overridden as requested: ONLY search for ".Net" on Naukri
+            naukri_keywords = [".Net"]
+            for job_title in naukri_keywords:
                 for location in LOCATIONS[:5]:
                     if not check_daily_limit(SITE):
                         logger.info("Naukri daily limit reached", SITE)
@@ -329,11 +331,15 @@ def _login(page: Page, creds: dict) -> bool:
 def _search_and_apply(page: Page, job_title: str, location: str):
     logger.info(f"Searching Naukri: '{job_title}' in '{location}'", SITE)
 
-    slug = job_title.lower().replace(" ", "-")
+    if job_title == ".Net":
+        slug = "dotnet"
+    else:
+        slug = job_title.lower().replace(" ", "-")
+
     search_url = (
         f"{BASE_URL}/{quote(slug)}-jobs"
         f"?k={quote(job_title)}&l={quote(location)}"
-        f"&experience=3,8&jobAge=7&sort=1"
+        f"&experience=4&jobAge=7&sort=1"
     )
 
     try:
@@ -468,14 +474,15 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
             return False
 
-        # ── RELEVANCE FILTER ────────────────────────────────────────────────
-        tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
-        resume_path   = tailor_result["resume_path"]
-        match_score   = tailor_result["match_score"]
-
-        if match_score < MIN_MATCH:
-            field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}%", SITE)
+        # If resume_path is empty, it means the job failed programmatic tech stack or experience check
+        if not resume_path:
+            field_log("skip", f"{company} — {job_title}", "Tech stack or experience mismatch", SITE)
             return False
+
+        # Match score check bypassed as requested by user
+        # if match_score < MIN_MATCH:
+        #     field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}%", SITE)
+        #     return False
 
         print(f"\n  {'─'*55}")
         print(f"  🎯 APPLYING: {company} — {job_title}")
