@@ -474,6 +474,11 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
             return False
 
+        # Tailor the resume for this job description
+        tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
+        resume_path   = tailor_result["resume_path"]
+        match_score   = tailor_result["match_score"]
+
         # If resume_path is empty, it means the job failed programmatic tech stack or experience check
         if not resume_path:
             field_log("skip", f"{company} — {job_title}", "Tech stack or experience mismatch", SITE)

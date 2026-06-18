@@ -355,7 +355,21 @@ def build_clean_resume(tailored: dict, output_path: str):
     add_styled_paragraph(headline.upper(), font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
     contact_line = "+91 6383149155   •   sivashankar.avi6@gmail.com   •   https://www.linkedin.com/in/siva-shankar-4a7849226/   •   https://github.com/shivan2603   •   https://shivan2603.github.io/sivashankar-portfolio/"
     add_styled_paragraph(contact_line, font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    add_styled_paragraph("Chennai, India | Open to Remote/Hybrid", font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
+    
+    # Build location line dynamically
+    jd_context = tailored.get("jd_context", {})
+    location_line = jd_context.get("location_line", "")
+    if not location_line:
+        is_intl = jd_context.get("is_international", False)
+        if not is_intl:
+            recruiter_wp = tailored.get("ats_report", {}).get("recruiter_weak_point", "").lower()
+            if "location is in india" in recruiter_wp:
+                is_intl = True
+        if is_intl:
+            location_line = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+        else:
+            location_line = "Chennai, India  |  Open to Remote / Hybrid"
+    add_styled_paragraph(location_line, font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
     
     # 2. PROFESSIONAL SUMMARY
     add_section_heading("Professional Summary")

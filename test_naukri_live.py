@@ -1,4 +1,8 @@
 import os, sys
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 from playwright.sync_api import sync_playwright
 from bot.utils.safety import safe_browser_context, load_cookies, save_cookies
 from bot.config import CREDENTIALS
@@ -41,26 +45,30 @@ def test_live():
         company_site_url = None
         
         for u in urls[:10]:
-            page.goto(u, wait_until="domcontentloaded")
             try:
-                page.wait_for_load_state("networkidle", timeout=5000)
-            except:
-                pass
-                
-            btn_text = ""
-            for sel in ['button[class*="apply-button"]', 'button:has-text("Apply")', 'a:has-text("Apply")']:
-                loc = page.locator(sel).first
-                if loc.is_visible(timeout=2000):
-                    btn_text = loc.inner_text().lower()
-                    break
+                page.goto(u, wait_until="domcontentloaded", timeout=20000)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=5000)
+                except:
+                    pass
                     
-            if "company" in btn_text and not company_site_url:
-                company_site_url = u
-            elif "already" not in btn_text and "save" not in btn_text and not easy_apply_url and "apply" in btn_text:
-                easy_apply_url = u
-                
-            if easy_apply_url and company_site_url:
-                break
+                btn_text = ""
+                for sel in ['button[class*="apply-button"]', 'button:has-text("Apply")', 'a:has-text("Apply")']:
+                    loc = page.locator(sel).first
+                    if loc.is_visible(timeout=2000):
+                        btn_text = loc.inner_text().lower()
+                        break
+                        
+                if "company" in btn_text and not company_site_url:
+                    company_site_url = u
+                elif "already" not in btn_text and "save" not in btn_text and not easy_apply_url and "apply" in btn_text:
+                    easy_apply_url = u
+                    
+                if easy_apply_url and company_site_url:
+                    break
+            except Exception as e:
+                print(f"Skipping {u} due to error/timeout: {e}")
+                continue
                 
         print(f"Testing Easy Apply: {easy_apply_url}")
         if easy_apply_url:
