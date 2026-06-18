@@ -205,6 +205,7 @@ def safe_browser_context(playwright, site: str):
     """
     Launch a stealth persistent browser context.
     Using a persistent profile retains Gmail/LinkedIn logins permanently!
+    headless=False + slow_mo=150 → each action is visible field-by-field.
     """
     user_data_dir = os.path.join(DATA_FOLDER, f"chrome_profile_{site}")
     os.makedirs(user_data_dir, exist_ok=True)
@@ -220,17 +221,18 @@ def safe_browser_context(playwright, site: str):
     
     context = playwright.chromium.launch_persistent_context(
         user_data_dir=user_data_dir,
-        headless=False,
+        headless=False,           # VISIBLE browser window
+        slow_mo=150,              # 150ms between every action — watch each field fill
         args=[
             "--no-sandbox",
             "--disable-blink-features=AutomationControlled",
             "--disable-dev-shm-usage",
             "--disable-infobars",
             "--start-maximized",
+            "--window-position=0,0",
         ],
-        slow_mo=random.randint(30, 80),   # Slow down ALL actions slightly
         user_agent=random_user_agent(),
-        viewport=random_viewport(),
+        viewport={"width": 1600, "height": 900},  # Fixed viewport for consistent visibility
         locale="en-IN",
         timezone_id="Asia/Kolkata",
         extra_http_headers={"Accept-Language": "en-IN,en;q=0.9"},
@@ -245,3 +247,55 @@ def safe_browser_context(playwright, site: str):
     
     # Return context as both browser and context for backwards compatibility
     return context, context
+
+
+# ─── VISIBLE FIELD-BY-FIELD LOGGER ──────────────────────────────────────────
+def field_log(action: str, field_name: str, value: str = "", site: str = "bot"):
+    """
+    Print every form field action to the console with clear markers.
+    This lets the user watch what the bot is filling in real time.
+    """
+    val_display = f"'{value[:60]}...'" if len(value) > 60 else f"'{value}'"
+    icons = {
+        "fill":     "✏️  FILL   ",
+        "select":   "🔽 SELECT ",
+        "click":    "🖱️  CLICK  ",
+        "check":    "☑️  CHECK  ",
+        "upload":   "📎 UPLOAD ",
+        "skip":     "⏭️  SKIP   ",
+        "found":    "🔍 FOUND  ",
+        "submit":   "🚀 SUBMIT ",
+        "success":  "✅ SUCCESS",
+        "error":    "❌ ERROR  ",
+        "step":     "📋 STEP   ",
+        "nav":      "➡️  NEXT   ",
+    }
+    icon = icons.get(action, "•  ")
+    if value:
+        print(f"  [{site.upper()}] {icon} | {field_name:35s} = {val_display}")
+    else:
+        print(f"  [{site.upper()}] {icon} | {field_name}")
+
+
+# ─── HUMAN FILL (visible, character-by-character) ────────────────────────────
+def human_fill(el, value: str, field_name: str = "", site: str = "bot"):
+    """
+    Fill a field character-by-character at human typing speed.
+    Clears existing value first, then types each character visibly.
+    """
+    try:
+        el.triple_click()          # Select all existing text
+        time.sleep(0.15)
+        el.fill("")                # Clear
+        time.sleep(0.1)
+        # Type char by char for visibility
+        for char in value:
+            el.press(char)
+            time.sleep(random.uniform(0.04, 0.12))
+        field_log("fill", field_name or "input", value, site)
+    except Exception:
+        try:
+            el.fill(value)
+            field_log("fill", field_name or "input", value, site)
+        except Exception:
+            field_log("error", f"Could not fill: {field_name}", "", site)

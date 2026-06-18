@@ -5,6 +5,11 @@ Safe mode: daily limits, site cooldowns, human-like pacing
 import time, random, sys, os
 from datetime import datetime
 
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from bot.config import TAILORED_TODAY

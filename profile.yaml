@@ -1,7 +1,7 @@
 # ==============================================================
-# CANDIDATE PROFILE FOR AI FORM FILLER — Claude Sonnet 4.6
-# This file is the "brain" for answering custom employer questions.
-# Update all fields to ensure accurate auto-filling on any career portal.
+# CANDIDATE PROFILE — Siva Shankar V
+# This file is the "brain" for AI form filling on any career portal.
+# All answers to custom employer questions come from here first.
 # ==============================================================
 
 personal_info:
@@ -17,16 +17,28 @@ personal_info:
   state: "Tamil Nadu"
   country: "India"
   zip_code: "600001"
-  linkedin: "https://www.linkedin.com/in/sivashankar"
-  github: "https://github.com/Shivan2603"
-  portfolio: ""
-  address: "Chennai, Tamil Nadu, India"
+  linkedin: "https://www.linkedin.com/in/siva-shankar-4a7849226/"
+  github: "https://github.com/shivan2603"
+  portfolio: "https://shivan2603.github.io/sivashankar-portfolio/"
+  address: "Chennai, Tamil Nadu, India 600001"
+  dob: "2001-03-26"
+  age: 25
+  languages:
+    - "English"
+    - "Tamil"
 
 preferences:
-  expected_salary: "Open to negotiation based on local market rates"
+  expected_salary: "20-30 LPA"
   expected_salary_inr: "20-30 LPA"
   expected_salary_usd: "80000-120000"
-  notice_period: "30 days"
+  notice_period: "Serving notice, Last Working Day: 14th August 2026"
+  lwd_date: "2026-08-14"
+  current_salary: "11.5 Lakh per annum"
+  relocation_india: "Open to all major IT hubs (Bangalore, Hyderabad, Pune, Mumbai, Gurgaon, Noida)"
+  relocation_intl: "Open to relocation worldwide (e.g. Malaysia, UK, Singapore, Europe)"
+  active_offers: "Yes"
+  gender: "Male"
+  disability: "No, I do not have a disability"
   willing_to_relocate: "Yes"
   preferred_work_type: "Hybrid / Remote"
   requires_sponsorship: "Yes"
@@ -37,54 +49,78 @@ preferences:
 
 education:
   - degree: "Bachelor of Engineering (B.E.)"
-    major: "Computer Science and Engineering"
-    field: "Computer Science"
-    university: "Anna University"
-    graduation_year: "2019"
-    gpa: "7.5 / 10"
+    major: "Electronics & Communication Engineering"
+    field: "Electronics"
+    university: "Kathir College of Engineering (Anna University)"
+    graduation_year: "2022"
+    gpa: "8.6 / 10"
     graduation_month: "May"
 
 experience_summary:
-  total_years: 5
-  total_years_text: "5 years"
+  total_years: 4
+  total_years_text: "4+ years"
   primary_stack:
-    - ".NET"
+    - ".NET Core"
     - "C#"
-    - "ASP.NET Core"
+    - "ASP.NET Web API"
+    - "ASP.NET MVC"
     - "Azure"
-    - "React"
-    - "Full Stack"
+    - "Angular"
     - "SQL Server"
     - "REST APIs"
     - "Microservices"
-    - "Rust"
-  current_role: "Senior .NET Developer"
-  current_company: "Confidential"
+    - "Entity Framework Core"
+    - "ADO.NET"
+    - "TDD"
+    - "CI/CD"
+  current_role: "Senior Software Engineer"
+  current_company: "LTIMindtree"
   industry: "Information Technology"
 
 work_history:
-  - company: "Accenture"
+  - company: "LTIMindtree"
     title: "Senior Software Engineer"
-    start_date: "2022-01"
+    start_date: "2025-06"
     end_date: "Present"
     location: "Chennai, India"
     employment_type: "Full-time"
+    client: "Deloitte — Enterprise Tax Platform"
     responsibilities:
-      - "Developed scalable microservices using .NET 6/8 and Azure Service Bus"
-      - "Led a team of 4 developers on cloud migration projects"
-      - "Built RESTful APIs consumed by React front-ends with 99.9% uptime"
-      - "Implemented CI/CD pipelines using Azure DevOps"
-  - company: "Cognizant Technology Solutions"
-    title: "Software Engineer"
-    start_date: "2019-07"
-    end_date: "2021-12"
+      - "Optimized database performance by migrating 50+ legacy tax tables, reducing query latency by 38%"
+      - "Worked across the full engineering lifecycle to improve, design, code and test 30+ ASP.NET Core microservice endpoints"
+      - "Implemented Azure OpenAI embedding pipeline to auto-suggest mappings, reducing manual effort by 60%"
+      - "Designed secure stored procedures for dynamic RBAC role mapping across 15+ enterprise tax modules"
+
+  - company: "DSSI Solutions India Pvt Ltd"
+    title: "Senior Software Engineer"
+    start_date: "2024-11"
+    end_date: "2025-05"
     location: "Chennai, India"
     employment_type: "Full-time"
     responsibilities:
-      - "Designed and developed ASP.NET MVC applications for banking clients"
-      - "Wrote unit tests using xUnit achieving 85% code coverage"
-      - "Collaborated with onshore teams in an Agile/Scrum environment"
-      - "Integrated third-party payment APIs and handled secure transactions"
+      - "Architected 12+ production-grade microservices using .NET 7, Clean Architecture, and CQRS"
+      - "Led a 7-member cross-functional team, achieving 98% CI/CD pipeline success rate"
+      - "Mentored junior engineers, reducing onboarding time from 4 weeks to 10 days"
+
+  - company: "Nexa Office InfoSystems LLP"
+    title: "Senior Software Engineer"
+    start_date: "2024-07"
+    end_date: "2024-11"
+    location: "Chennai, India"
+    employment_type: "Contract"
+    responsibilities:
+      - "Delivered enterprise-wide SSO using OAuth2/OIDC, reducing login support tickets by 40%"
+      - "Built responsive Angular SPAs with NgRx/Redux, improving UI performance by 30%"
+
+  - company: "Kasadara Technology Solutions"
+    title: "Software Engineer"
+    start_date: "2022-07"
+    end_date: "2024-06"
+    location: "Chennai, India"
+    employment_type: "Full-time"
+    responsibilities:
+      - "Engineered core modules for the NEICE US Government platform using .NET Framework 4.x and ASP.NET MVC"
+      - "Optimized SQL Server query performance by 30% through targeted Entity Framework indexes"
 
 skills:
   programming_languages:
@@ -92,114 +128,166 @@ skills:
     - ".NET"
     - "JavaScript"
     - "TypeScript"
-    - "Python"
     - "SQL"
-    - "Rust"
+    - "HTML5"
+    - "CSS"
   frameworks:
     - "ASP.NET Core"
     - "ASP.NET MVC"
-    - ".NET 6/8"
+    - ".NET Core 8 / .NET 7"
+    - ".NET Framework 4.x"
     - "Entity Framework Core"
+    - "ADO.NET"
+    - "Angular"
     - "React"
-    - "Node.js"
     - "SignalR"
-    - "Blazor"
+    - "WCF"
   cloud_devops:
     - "Microsoft Azure"
-    - "Azure App Service"
-    - "Azure Functions"
-    - "Azure Service Bus"
+    - "Azure App Services"
     - "Azure DevOps"
+    - "Azure DevOps Server"
+    - "Amazon Web Services (AWS)"
     - "Docker"
-    - "Kubernetes (basic)"
-    - "CI/CD"
+    - "CI/CD Pipelines"
     - "Git"
+    - "SVN"
     - "GitHub Actions"
+    - "IIS"
   databases:
     - "SQL Server"
+    - "MS SQL Server"
+    - "SSRS"
     - "PostgreSQL"
-    - "MySQL"
-    - "MongoDB"
     - "Redis"
+    - "Azure SQL"
   tools:
     - "Visual Studio"
     - "VS Code"
     - "Postman"
-    - "Cargo"
     - "Jira"
-    - "Confluence"
+    - "SonarQube"
     - "Azure DevOps"
+    - "OpenTelemetry"
   methodologies:
-    - "Agile"
-    - "Scrum"
-    - "TDD"
+    - "Agile / Scrum"
+    - "TDD (Test-Driven Development)"
+    - "eXtreme Programming (XP)"
+    - "Pair Programming"
     - "Microservices"
-    - "REST API Design"
     - "SOLID Principles"
+    - "Clean Architecture"
+    - "Domain-Driven Design (DDD)"
+    - "CQRS"
+    - "Section 508 / WAI-ARIA"
 
 certifications:
-  - name: "Microsoft Azure Fundamentals (AZ-900)"
-    issuer: "Microsoft"
-    year: "2022"
   - name: "Microsoft Azure Developer Associate (AZ-204)"
     issuer: "Microsoft"
-    year: "2023"
+    year: "2024"
+    credential_id: "1KA2C7-B08024"
+  - name: "Top Performer Award"
+    issuer: "Nexa Office InfoSystems LLP"
+    year: "2024"
 
 # ─── STANDARD ANSWERS FOR COMMON APPLICATION FORMS ─────────────────────────
-# Claude will use these to answer custom questions on any career portal.
 standard_answers:
   # Authorization & Visa
   "Are you legally authorized to work in the country where this job is located?":
-    "If the role is in India: Yes, I am fully authorized to work in India. If abroad: No, I would require visa sponsorship."
+    "Yes, I am fully authorized to work in India."
   "Will you now or in the future require sponsorship for employment visa status?":
     "Yes, for positions outside India I would require visa sponsorship."
   "Are you eligible to work in the United States without sponsorship?": "No"
   "Are you eligible to work in the UK without sponsorship?": "No"
   "Are you eligible to work in Australia without sponsorship?": "No"
   "Are you eligible to work in Singapore without sponsorship?": "No"
+  "Do you require visa sponsorship?": "No, for India-based roles. Yes for international."
 
   # Compensation
-  "What is your expected salary?": "Open to negotiation based on the role, location, and market rates. I am flexible and prioritize growth opportunities."
-  "What is your current salary?": "Confidential. I am open to discussing compensation based on the role requirements."
-  "Expected CTC": "Open to discussion based on the role"
-  "Current CTC": "Confidential"
+  "What is your expected salary?": "20-30 LPA"
+  "What is your current salary?": "11.5 Lakh per annum"
+  "Expected CTC": "20-30 LPA"
+  "Expected CTC (in LPA)": "20-30"
+  "Current CTC": "11.5 LPA"
+  "Current CTC (in LPA)": "11.5"
+  "What is your expected compensation?": "20-30 LPA"
 
   # Timeline
-  "Notice Period": "30 days"
-  "What is your notice period?": "30 days"
-  "When can you start?": "I can start within 30 days of receiving an offer."
+  "Notice Period": "Serving notice (LWD: 14-Aug-2026)"
+  "What is your notice period?": "Serving notice (LWD: 14-Aug-2026)"
+  "Notice period (in days)": "dynamic"
+  "When can you start?": "I can start immediately. My last working day is 14th August 2026."
   "Are you currently employed?": "Yes"
+  "Current employer": "LTIMindtree"
+  "Current company": "LTIMindtree"
 
   # Relocation
   "Are you willing to relocate?": "Yes"
   "Are you open to relocation?": "Yes, I am open to relocation both within India and internationally."
+  "Can you work from office?": "Yes"
 
   # Remote / Hybrid
-  "Are you comfortable working remotely?": "Yes, I have experience working in remote and hybrid environments."
+  "Are you comfortable working remotely?": "Yes, I have 4+ years of experience working in remote and hybrid environments."
   "What is your preferred work arrangement?": "I am comfortable with remote, hybrid, or on-site arrangements."
 
   # Background & Compliance
   "Do you have a disability?": "Prefer not to answer"
-  "Do you have any disability?": "No / Prefer not to answer"
-  "Veteran status?": "I am not a protected veteran / Prefer not to answer"
-  "Race/Ethnicity": "Asian / Prefer not to answer"
+  "Veteran status?": "Not applicable"
   "Gender": "Male"
   "Are you willing to undergo a background check?": "Yes"
-  "Are you willing to undergo a drug test?": "Yes"
 
   # Experience
-  "How many years of experience do you have?": "I have 5 years of professional software development experience."
-  "Years of experience with .NET?": "5 years"
-  "Years of experience with C#?": "5 years"
+  "How many years of experience do you have?": "I have 4+ years of professional software development experience."
+  "Total years of experience": "4"
+  "Years of experience with .NET?": "4 years"
+  "Years of experience with C#?": "4 years"
   "Years of experience with Azure?": "3 years"
-  "Years of experience with React?": "3 years"
-  "Years of experience with SQL?": "5 years"
-  "Do you have experience with Agile/Scrum?": "Yes, I have worked in Agile/Scrum teams for my entire 5-year career."
+  "Years of experience with SQL?": "4 years"
+  "Years of experience with ASP.NET?": "4 years"
+  "Years of experience with Entity Framework?": "3 years"
+  "Years of experience with Angular?": "3 years"
+  "Years of experience with TDD?": "2 years"
+  "Years of experience with Agile?": "4 years"
+  "Years of experience with Docker?": "2 years"
+  "Do you have experience with Agile/Scrum?": "Yes, I have worked in Agile/Scrum teams throughout my 4+ year career."
+  "Do you have experience with CI/CD?": "Yes, I have built and maintained CI/CD pipelines using Azure DevOps YAML and GitHub Actions."
+  "Do you have experience with TDD?": "Yes, I practice Test-Driven Development using xUnit and NUnit with Moq for mocking."
+
+  # .NET Specific
+  "Do you have experience with ASP.NET Core?": "Yes, 4+ years of professional ASP.NET Core development."
+  "Do you have .NET experience?": "Yes, I have 4+ years working with .NET Core, .NET Framework 4.x, and C#."
+  "Do you have experience with Entity Framework?": "Yes, I have 3+ years of experience with Entity Framework Core including migrations and LINQ optimization."
+  "Do you have experience with SQL Server?": "Yes, 4+ years including stored procedures, query optimization, and SSRS reporting."
+  "Do you have experience with microservices?": "Yes, I have architected and deployed 12+ production microservices."
+
+  # Cover Letter
+  "Cover Letter": >
+    Dear Hiring Manager,
+    I am a Senior .NET Developer with 4+ years of professional experience delivering scalable, cloud-native
+    applications using C#, ASP.NET Core, Azure, and Angular. At LTIMindtree, I work with Deloitte's enterprise
+    tax platform, optimizing database performance and building high-throughput microservices achieving sub-100ms
+    latency. Previously at DSSI Solutions, I led a 7-member cross-functional team delivering 12+ production
+    microservices at 99.98% uptime. My AZ-204 Azure certification and hands-on experience with TDD, CI/CD,
+    Clean Architecture, and ADO.NET make me a strong fit for this role.
+    Sincerely, Siva Shankar V
 
   # General
-  "Why do you want to work here?": "I am excited about the opportunity to contribute my .NET and Azure expertise to a forward-thinking company. I believe my background in building scalable, cloud-native applications aligns well with your team's goals."
-  "Tell us about yourself": "I am a Senior .NET Developer with 5 years of experience building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure, and React. I am passionate about clean code, microservices architecture, and continuous learning."
-  "Cover Letter": "Dear Hiring Manager, I am a Senior .NET Developer with 5 years of professional experience in C#, ASP.NET Core, Azure, and React. Throughout my career at companies including Accenture and Cognizant, I have delivered scalable, high-performance applications. I am confident that my technical expertise and collaborative approach make me an excellent fit for this role. I look forward to the opportunity to contribute to your team. Sincerely, Siva Shankar V"
+  "Why do you want to work here?": "I am excited about contributing my .NET, Azure, and microservices expertise to a forward-thinking team. My background in building scalable enterprise applications aligns well with your technical requirements."
+  "Tell us about yourself": "I am a Senior .NET Developer with 4+ years of experience building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure DevOps, Angular, and SQL Server. I specialise in TDD, CI/CD pipelines, Clean Architecture, and Agile delivery."
   "How did you hear about this job?": "Online job portal"
   "Do you agree to the terms and conditions?": "Yes"
   "Consent to data processing?": "Yes"
+
+  # Portal & Background Questions
+  "Are you 18 years of age or older?": "Yes"
+  "Date of Birth": "26-03-2001"
+  "DOB": "26-03-2001"
+  "Have you ever been employed by this company or its affiliates?": "No"
+  "What is your willingness to travel?": "Yes, willing to travel up to 50% or more."
+  "Are you willing to work night shifts or rotating shifts?": "Only standard day shifts / general shifts."
+  "Are you currently bound by a non-compete or restrictive agreement?": "No"
+  "What is your race/ethnicity?": "Asian (Indian)"
+  "What is your veteran status?": "I am not a protected veteran"
+  "What languages do you speak?": "English, Tamil"
+  "Are you able to provide professional references if requested?": "Yes, I can provide professional references upon request."
+  "Have you ever been convicted of a felony or misdemeanor?": "No"

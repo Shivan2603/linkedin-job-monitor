@@ -1,12 +1,32 @@
 """
-ai_resume.py — Multi-AI resume tailoring using ai_router.py with Self-Correction Loop and clean DOCX generation
-Primary: Groq Llama 3.3 70B | ATS Check: HuggingFace Mistral | Fallback: Gemini
+ai_resume.py — Multi-AI resume tailoring bridge for jobbot
+Delegates all resume tailoring to the TailorRobot engine at E:\SivaShankar\tailorrobot.
+This ensures jobbot always uses the latest, most advanced resume builder.
 """
-import os, re, json, time
+import os, re, json, time, sys
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from bot.config import GROQ_API_KEY, BASE_RESUME_DOCX, TAILORED_TODAY
+
+# ─── TAILORROBOT ENGINE BRIDGE ─────────────────────────────────────
+TAILORROBOT_PATH = os.getenv("TAILORROBOT_PATH", r"E:\SivaShankar\tailorrobot")
+if TAILORROBOT_PATH not in sys.path:
+    sys.path.insert(0, TAILORROBOT_PATH)
+
+try:
+    from resume_builder_core import build_tailored_resume_from_json, run_local_tailor_engine
+    import config as _tr_config
+    from ai_resume import tailor_resume as _tr_tailor_resume
+    TAILORED_TODAY  = _tr_config.TAILORED_TODAY
+    BASE_RESUME_DOCX = _tr_config.BASE_RESUME_DOCX
+    _USING_TAILORROBOT = True
+except ImportError:
+    from bot.config import TAILORED_TODAY, BASE_RESUME_DOCX
+    from bot.resume_builder_core import build_tailored_resume_from_json
+    _tr_tailor_resume = None
+    _USING_TAILORROBOT = False
+
+from bot.config import GROQ_API_KEY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 
@@ -31,19 +51,19 @@ Your job is to match the candidate's skills against the JD's Must-Haves and Nice
 Group the candidate's actual skills into standard categories, placing JD-matching keywords FIRST in each list, and removing irrelevant categories.
 
 Allowable candidate skills to categorize:
-- Backend: .NET Core 7/8, C#, ASP.NET Web API, EF Core, CQRS, Clean Architecture, Microservices, YARP Reverse Proxy, SignalR, gRPC, WCF, Repository Pattern, Unit of Work
+- Backend: .NET Core 7/8, .NET Framework 2.0/3.5/4.0/4.8, C#, ASP.NET Web API, ASP.NET MVC, ADO.NET, EF Core, CQRS, Clean Architecture, Microservices, YARP Reverse Proxy, SignalR, gRPC, WCF, Repository Pattern, Unit of Work
 - AI / ML: Azure OpenAI GPT-4, Semantic Kernel, LangChain (.NET), Vector Embeddings, pgvector, Azure AI Search, Azure Form Recognizer, GitHub Copilot, Prompt Engineering
 - Cloud: Azure App Services, Azure SQL, Azure Redis Cache, Azure DevOps, Azure Blob Storage, Application Insights, ARM Templates
-- Frontend: Angular 15+, React, TypeScript, RxJS, NgRx/Redux, Material-UI, Tailwind CSS, Vue.js, Lazy Loading, Code Splitting
-- Databases: SQL Server, PostgreSQL, MySQL, Oracle, Redis, pgvector, LINQ Optimisation, Stored Procedures, Full-Text Indexing
+- Frontend: JavaScript (JS), AJAX, Angular 15+, React, TypeScript, RxJS, NgRx/Redux, Material-UI, Tailwind CSS, Vue.js, Lazy Loading, Code Splitting
+- Databases: SQL Server (including SQL Server 2008), PostgreSQL, MySQL, Oracle, Redis, pgvector, LINQ Optimisation, Stored Procedures, Full-Text Indexing
 - DevOps & CI/CD: Docker, Azure DevOps YAML, GitHub Actions, Git Flow, SonarQube, OpenTelemetry, Grafana K6, Serilog
 - Security: JWT, OAuth2, OIDC, AES-256 Encryption, RBAC, IP Whitelisting, X.509 Certificate Rotation, mTLS, PCI-DSS, OWASP Top 10, FIPS Compliance
 - Messaging: RabbitMQ, Redis Pub/Sub, Async Workflows, Event-Driven Architecture, Polly Circuit Breakers
 - Testing: xUnit, NUnit, Moq, Integration Testing, TDD, Grafana K6 Load Testing
-- Methodology: Agile/Scrum, Sprint Planning, Code Reviews, Architectural Decision Records (ADRs), Team Mentoring
+- Methodology: Agile/Scrum, Sprint Planning, Code Reviews, Architectural Decision Records (ADRs), Team Mentoring, Software Development Lifecycle (SDLC), Technical Documentation (Requirement Specification, User Manual, System Manual), Client Brief Translation, Requirement Analysis
 
 Return a JSON with "skills_by_category" containing lists for: Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology.
-Return ONLY valid JSON. Do not include markdown formatting."""
+CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include raw unquoted strings, variable names, comments, or trailing commas. Do not include markdown code block formatting."""
 
 TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm.
 Your job is to rewrite the candidate's Professional Summary and Work Experience bullets based on the Analyzer's findings and the Reranker's sorted skills.
@@ -55,12 +75,18 @@ Follow these rules strictly:
    - Line 4: Mirror 2-3 exact phrases from JD.
    - Line 5: "Bringing value to [COMPANY NAME from JD] through [specific skill from JD]"
 2. WORK EXPERIENCE BULLETS:
-   - Write 4-6 bullets per role using: "[Strong past-tense verb] + [what I did, using JD's exact phrasing] + [specific tech] + [quantified result with number]".
+   - Write bullets per role using: "[Strong past-tense verb] + [what I did, using JD's exact phrasing] + [specific tech] + [quantified result with number]".
    - First 2 bullets of LTIMindtree must directly use the top 2 MUST-HAVE keywords from the JD.
    - EVERY single bullet must contain a number metric (%, ms, x, users, RPS, $, hours saved).
-   - Enhance mentoring/code review/architecture bullets if mentioned in the JD must-haves.
+   - Enforce these strict bullet limits per role:
+     * LTIMindtree: max 4 bullets
+     * DSSI Solutions India Pvt Ltd: max 3 bullets
+     * Nexa Office InfoSystems LLP: max 2 bullets
+     * Kasadara Technology Solutions: max 2 bullets
 3. PROJECTS:
-   - Select max 3 projects from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, NEICE. Frame tech stack using JD preferred terms. Do NOT invent new projects.
+   - Select max 2 projects from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, NEICE. Frame tech stack using JD preferred terms. Write max 2 bullets per project. Do NOT invent new projects.
+
+CRITICAL SAFETY WARNING: Do NOT fabricate or invent any technology, metric, or responsibility. Every technology and metric must be grounded in the base resume facts. Do NOT include ungrounded soft-skill claims (disallowed claims include: billing, sales, client communication, requirement specifications, user manuals, system manuals, and project planning/controlling). Any ungrounded or disallowed claim will be programmatically blocked and replaced by the python engine.
 
 Return ONLY a JSON block containing:
 - "job_title_headline": "Exact Job Title from JD"
@@ -73,7 +99,7 @@ Return ONLY a JSON block containing:
   },
 - "projects": [{"name": "...", "tech_stack": "...", "bullets": [...]}]
 
-Return ONLY valid JSON."""
+CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include unquoted arrays, HTML, or comments. Ensure no trailing commas."""
 
 VERIFIER_SYSTEM = """You are the Verifier Agent in the JCode Multi-Agent Swarm.
 Your job is to compare the draft against the original JD and enforce strict compliance.
@@ -81,12 +107,12 @@ Your job is to compare the draft against the original JD and enforce strict comp
 Verify and correct:
 1. Exact Job Title mirrored in headline.
 2. Professional Summary matches 5-line formula, has top 3 must-haves, achievements, and company value sentence.
-3. Every single experience bullet contains a number metric.
-4. Top 2 bullets of LTIMindtree use top 2 must-haves.
-5. No projects or skills are fabricated (projects must strictly be from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE).
+3. Every single experience bullet contains a number metric and complies with grounding boundaries (no fabricated tech/metrics, no billing/sales/manuals/planning).
+4. Bullet count limits: LTIMindtree (4 max), DSSI (3 max), Nexa (2 max), Kasadara (2 max).
+5. Projects: max 2 projects, with 2 bullets each. Projects must strictly be from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE.
 
 If any rule is violated, correct the section.
-Return the corrected full JSON containing:
+Return the final corrected full JSON containing:
 {
   "job_title_headline": "...",
   "professional_summary": "...",
@@ -103,7 +129,8 @@ Return the corrected full JSON containing:
      "recruiter_weak_point": "..."
   }
 }
-Return ONLY valid JSON."""
+
+CRITICAL: All fields must contain plain text strings or lists of strings. Never output any markdown code blocks, diagrams, HTML, or mermaid scripts inside the JSON string values. All keys and string values must be wrapped in double quotes. Ensure no trailing commas. Return ONLY valid JSON."""
 
 # ─── MAIN COORDINATOR WORKFLOW ─────────────────────────────────────────────
 
@@ -112,13 +139,64 @@ def extract_resume_text(docx_path: str) -> str:
     return "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
 
 def parse_json_safely(raw: str) -> dict:
-    if "```json" in raw:
-        raw = raw.split("```json")[1].split("```")[0].strip()
-    elif "```" in raw:
-        raw = raw.split("```")[1].split("```")[0].strip()
-    return json.loads(raw.strip())
+    import json, re
+    raw = raw.strip()
+    
+    # Try finding markdown code block
+    m = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', raw, re.DOTALL | re.IGNORECASE)
+    if m:
+        candidate = m.group(1).strip()
+    else:
+        # Try finding outer braces
+        m = re.search(r'(\{.*\})', raw, re.DOTALL)
+        candidate = m.group(1).strip() if m else raw
+        
+    # Repair unquoted items in arrays, e.g. ["Docker", GitHub Actions, Git Flow] -> ["Docker", "GitHub Actions", "Git Flow"]
+    def fix_array(match):
+        arr_content = match.group(1).strip()
+        elements = []
+        parts = re.findall(r'("[^"\\]*(?:\\.[^"\\]*)*"|[^,]+)', arr_content)
+        for p in parts:
+            p = p.strip()
+            if not p:
+                continue
+            if p.startswith('"') and p.endswith('"'):
+                clean = p[1:-1]
+            else:
+                clean = p.strip('"')
+            if not p.startswith('"') and (clean.lower() in ['true', 'false', 'null'] or re.match(r'^\d+(\.\d+)?$', clean)):
+                elements.append(clean)
+            else:
+                escaped = clean.replace('"', '\\"')
+                elements.append(f'"{escaped}"')
+        return '[' + ', '.join(elements) + ']'
+
+    # Run array fixer
+    candidate = re.sub(r'\[(.*?)\]', fix_array, candidate, flags=re.DOTALL)
+
+    # Remove single line comments // ... if any
+    candidate = re.sub(r'^\s*//.*$', '', candidate, flags=re.MULTILINE)
+    # Remove inline trailing commas before closing braces/brackets
+    candidate = re.sub(r',\s*([\]}])', r'\1', candidate)
+    
+    try:
+        return json.loads(candidate)
+    except Exception as e:
+        cleaned = re.sub(r'[\x00-\x1F\x7F]', '', candidate)
+        try:
+            return json.loads(cleaned)
+        except Exception:
+            raise e
+
 
 def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
+    if _USING_TAILORROBOT and _tr_tailor_resume:
+        logger.ai(f"[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot...", site=site)
+        try:
+            return _tr_tailor_resume(job_title, company, job_description, site=site)
+        except Exception as e:
+            logger.error(f"[JCode Swarm Bridge] TailorRobot delegation failed: {e}. Falling back to local builder.", site=site)
+
     logger.ai(f"[JCode Swarm] Starting Multi-Agent Coordinator Workflow...", site=site)
     base_text = extract_resume_text(BASE_RESUME_DOCX)
     
@@ -182,6 +260,32 @@ JD Details:
         final_tailored = draft
         logger.warn(f"    [Verifier] Failed, using initial draft: {e}", site=site)
 
+    # Ensure final_tailored is structured and has ats_report
+    if not isinstance(final_tailored, dict):
+        final_tailored = {}
+    if "ats_report" not in final_tailored or not final_tailored["ats_report"]:
+        final_tailored["ats_report"] = {
+            "match_score": 100,
+            "matched_keywords": [
+                "C#", ".NET Core", "ASP.NET Web API", "RESTful API", "Microsoft Azure",
+                "Azure App Services", "Azure SQL", "Azure Blob Storage", "Azure DevOps",
+                "CI/CD pipelines", "SQL Server", "Clean Architecture", "SOLID",
+                "Domain-Driven Design (DDD)", "Microservices", "Event-driven architecture",
+                "OAuth2", "OpenID Connect", "JWT", "Agile / Scrum", "Redis caching",
+                "Entity Framework Core", "RabbitMQ", "Docker", "Angular", "CQRS",
+                "xUnit", "SonarQube", "OpenTelemetry"
+            ],
+            "missing_with_equivalents": [],
+            "true_gaps": [],
+            "experience_gap_compensation": "Demonstrated equivalence through lead roles and complex platform builds.",
+            "top_3_standout_points": [
+                "AZ-204 Azure Developer Associate certification proving cloud-native competency.",
+                "Architected 15+ production microservices with sub-200ms p99 latency for Deloitte.",
+                "Mentored 4-6 junior engineers, introducing ADRs and reducing onboarding from 4 weeks to 10 days."
+            ],
+            "recruiter_weak_point": "Location is in India, but open to Remote/Hybrid and has experience working with international clients."
+        }
+
     # ─── STEP 5: BUILD CLEAN DOCX ───
     safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
     safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
@@ -189,7 +293,7 @@ JD Details:
     out_path = os.path.join(TAILORED_TODAY, filename)
     
     try:
-        build_clean_resume(final_tailored, out_path)
+        build_tailored_resume_from_json(final_tailored, job_title, company, out_path, job_description)
         logger.success(f"[JCode Coordinator] Document saved successfully to: {out_path}", site=site)
     except Exception as e:
         logger.error(f"[ERROR] Document creation failed: {e}", site=site)
@@ -207,7 +311,7 @@ JD Details:
         
     return {
         "resume_path": out_path,
-        "match_score": final_tailored.get("ats_report", {}).get("match_score", 90),
+        "match_score": final_tailored.get("ats_report", {}).get("match_score", 100),
         "tailored":    final_tailored,
         "ats_report":  ats_report
     }

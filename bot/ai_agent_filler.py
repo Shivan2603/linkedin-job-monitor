@@ -117,7 +117,16 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                     el.select_option(label=str(val))
                 elif input_type in ["checkbox", "radio"]:
                     if str(val).lower() in ["check", "true", "yes"]:
-                        el.check()
+                        try:
+                            el.check(force=True)
+                        except Exception:
+                            try:
+                                el.click(force=True)
+                            except Exception:
+                                try:
+                                    el.evaluate("el => el.click()")
+                                except Exception:
+                                    pass
                 elif input_type == "file":
                     pass  # Skip file uploads
                 elif input_type == "number":

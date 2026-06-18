@@ -14,7 +14,7 @@ Fixes:
   - Cache: saves AI responses to disk — same job never calls API twice
 """
 
-import json, os, time, hashlib, requests
+import json, os, time, hashlib, requests, subprocess
 from bot.config import (
     GROQ_API_KEY, HUGGINGFACE_TOKEN, GEMINI_API_KEY,
     GROQ_MODEL_PRIMARY, GROQ_MODEL_FAST, DATA_FOLDER
@@ -218,7 +218,25 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
                 continue
             raise
 
-    raise Exception("All Gemini models unavailable")
+    raise Exception("All Gemini models failed or hit quota limits")
+
+def jcode_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
+    combined = f"System Instruction:\n{system_prompt}\n\nUser Input:\n{user_prompt}"
+    jcode_path = r"C:\Users\SIVASHANKAR V\AppData\Local\jcode\bin\jcode.exe"
+    cmd = [jcode_path, "run", "--tool-profile", "none", combined]
+    try:
+        res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=240)
+        if res.returncode == 0:
+            output = res.stdout.strip()
+            if output:
+                return output
+        err_msg = res.stderr.strip() or f"Exit code {res.returncode}"
+        raise Exception(f"JCode CLI failed: {err_msg}")
+    except subprocess.TimeoutExpired:
+        raise Exception("JCode CLI request timed out after 240 seconds")
+    except Exception as e:
+        raise Exception(f"JCode CLI exception: {e}")
+
 
 # ─── LOCAL AI: OLLAMA + LM STUDIO (PRIMARY — ZERO COST, ZERO RATE LIMITS) ─────
 OLLAMA_URL     = "http://localhost:11434/api/generate"
@@ -330,6 +348,8 @@ def ai_complete(system_prompt: str, user_prompt: str,
     #    Order: Ollama → LM Studio → Gemini → Groq → OpenRouter
     
     local_providers = []
+    local_providers.append(
+        ("Local-JCode",     lambda: jcode_complete(system_prompt, user_prompt, max_tokens)))
     if _is_ollama_running():
         local_providers.append(
             ("Local-Ollama",    lambda: ollama_complete(system_prompt, user_prompt, max_tokens)))

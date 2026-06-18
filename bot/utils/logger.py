@@ -66,7 +66,7 @@ def git_sync():
         if not status.stdout.strip():
             return
 
-        msg = f"bot: sync {datetime.now().strftime('%Y-%m-%d %H:%M')} [skip ci]"
+        msg = f"bot: sync {datetime.now().strftime('%Y-%m-%d %H:%M')}"
         subprocess.run(["git", "commit", "-m", msg],
                        cwd=PROJECT_FOLDER, capture_output=True, timeout=15)
         result = subprocess.run(["git", "push", "origin", "main"],
