@@ -1,5 +1,131 @@
 [
   {
+    "id": "e16cfbe4",
+    "ts": "2026-06-18T14:53:57.371756",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Gramgamescareers | Senior .NET Developer | Remote/Various | 95% match"
+  },
+  {
+    "id": "a5a33e9f",
+    "ts": "2026-06-18T14:53:57.278948",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Manually submitted: Gramgamescareers — Senior .NET Developer"
+  },
+  {
+    "id": "77c9077c",
+    "ts": "2026-06-18T14:38:44.784087",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "AI Form Filler failed: Expecting value: line 88 column 9 (char 4235)"
+  },
+  {
+    "id": "54967db8",
+    "ts": "2026-06-18T14:38:44.744604",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "4a6eca24",
+    "ts": "2026-06-18T14:38:42.968604",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1c9ae30e",
+    "ts": "2026-06-18T14:38:42.922308",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "9ffa6639",
+    "ts": "2026-06-18T14:38:42.653086",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "98e89c6f",
+    "ts": "2026-06-18T14:38:42.352709",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "cf28f81b",
+    "ts": "2026-06-18T14:38:42.027320",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8961dc6f",
+    "ts": "2026-06-18T14:38:41.740149",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c338df37",
+    "ts": "2026-06-18T14:38:24.063454",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields..."
+  },
+  {
+    "id": "90d77a08",
+    "ts": "2026-06-18T14:38:22.516396",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Uploaded resume: Siva_Shankar_Senior__NET_Develope_Gramgamescareers_Resume.docx"
+  },
+  {
+    "id": "2cf2e643",
+    "ts": "2026-06-18T14:36:49.638811",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "357c4f55",
+    "ts": "2026-06-18T14:36:49.569805",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring new resume for Gramgamescareers — Senior .NET Developer..."
+  },
+  {
+    "id": "1b9638ff",
+    "ts": "2026-06-18T14:36:49.495961",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Company: Gramgamescareers | Job Title: Senior .NET Developer"
+  },
+  {
+    "id": "083c296d",
+    "ts": "2026-06-18T14:36:44.233588",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "c771f533",
+    "ts": "2026-06-18T14:36:44.171501",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://job-boards.greenhouse.io/gramgamescareers/jobs/5814448004?gh_src=503a64f04us"
+  },
+  {
+    "id": "70335257",
+    "ts": "2026-06-18T14:36:44.116196",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
     "id": "a4639a52",
     "ts": "2026-06-18T14:36:33.141140",
     "level": "SUCCESS",
@@ -3372,131 +3498,5 @@
     "level": "AI",
     "site": "naukri",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d13ce1be",
-    "ts": "2026-06-18T14:02:00.686109",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "3520a6c2",
-    "ts": "2026-06-18T14:02:00.627331",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "505eb9cd",
-    "ts": "2026-06-18T14:02:00.315973",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "e16394a3",
-    "ts": "2026-06-18T14:01:59.989520",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "83ba3fa3",
-    "ts": "2026-06-18T14:01:59.697825",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "6c588231",
-    "ts": "2026-06-18T14:01:59.399587",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "fd5aba67",
-    "ts": "2026-06-18T14:01:57.593780",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Found 20 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "3eb1c76c",
-    "ts": "2026-06-18T14:01:51.128716",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Searching Naukri: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "db8af362",
-    "ts": "2026-06-18T14:01:51.086312",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri: Applied 0 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "b59ee538",
-    "ts": "2026-06-18T14:01:49.650555",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ad5c7fd0",
-    "ts": "2026-06-18T14:01:45.832338",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0f7163a5",
-    "ts": "2026-06-18T14:01:41.312779",
-    "level": "AI",
-    "site": "naukri",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "15a24061",
-    "ts": "2026-06-18T14:01:41.166468",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "bbeb509e",
-    "ts": "2026-06-18T14:01:40.921797",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "c53a9596",
-    "ts": "2026-06-18T14:01:40.876398",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "9809f0d8",
-    "ts": "2026-06-18T14:01:40.358463",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "da2e6535",
-    "ts": "2026-06-18T14:01:40.090168",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "5ba75d8f",
-    "ts": "2026-06-18T14:01:39.823631",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
   }
 ]
