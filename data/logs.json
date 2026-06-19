@@ -1,5 +1,173 @@
 [
   {
+    "id": "fa09b6ec",
+    "ts": "2026-06-19T13:40:26.976734",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Ascentech\n3.823 Reviews | ASP .Net C# (WebForms) Professional | Remote | 100% match"
+  },
+  {
+    "id": "f5da74d7",
+    "ts": "2026-06-19T13:40:26.904480",
+    "level": "AI",
+    "site": "naukri",
+    "message": "Filled 0/5 fields via AI."
+  },
+  {
+    "id": "0a5b3771",
+    "ts": "2026-06-19T13:40:26.841505",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "5a1bd353",
+    "ts": "2026-06-19T13:40:26.098264",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "f10dc43b",
+    "ts": "2026-06-19T13:40:26.050110",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "df40b533",
+    "ts": "2026-06-19T13:40:25.788305",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "2efc8f05",
+    "ts": "2026-06-19T13:40:25.550345",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "23bb1587",
+    "ts": "2026-06-19T13:40:25.247668",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4604bbfa",
+    "ts": "2026-06-19T13:40:24.966910",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "1ea98db0",
+    "ts": "2026-06-19T13:40:07.785784",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Resume uploaded successfully to attachment"
+  },
+  {
+    "id": "3585fac3",
+    "ts": "2026-06-19T13:40:07.581420",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\19-06-2026\\Siva_Shankar_ASP__Net_C___WebForm_Ascentech_3_823_Revi_Resume.docx to input ID=, Name=attachment"
+  },
+  {
+    "id": "cee8ba8b",
+    "ts": "2026-06-19T13:40:04.621524",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "7b74c950",
+    "ts": "2026-06-19T13:39:14.033616",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fa291ef6",
+    "ts": "2026-06-19T13:39:11.071974",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for '.Net' in Remote"
+  },
+  {
+    "id": "cbe0f7a2",
+    "ts": "2026-06-19T13:39:04.330966",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: '.Net' in 'Remote'"
+  },
+  {
+    "id": "0ab24e19",
+    "ts": "2026-06-19T13:39:04.300508",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "2fb10869",
+    "ts": "2026-06-19T13:39:04.241151",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri already logged in via cookies"
+  },
+  {
+    "id": "7470cd9c",
+    "ts": "2026-06-19T13:39:01.163486",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "b1f174b8",
+    "ts": "2026-06-19T13:39:00.202791",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "4a0afe48",
+    "ts": "2026-06-19T13:39:00.166592",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "3dedd29d",
+    "ts": "2026-06-19T13:38:16.296420",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 44s before next site..."
+  },
+  {
+    "id": "7eaa40fb",
+    "ts": "2026-06-19T13:38:16.273301",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "36a12918",
+    "ts": "2026-06-19T13:38:16.227366",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 1 positions."
+  },
+  {
+    "id": "5886def6",
+    "ts": "2026-06-19T13:38:07.438011",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Jobs | Software Engineer via Ashby"
+  },
+  {
     "id": "2d211112",
     "ts": "2026-06-19T13:38:03.812712",
     "level": "SUCCESS",
@@ -3327,174 +3495,6 @@
   {
     "id": "e041a237",
     "ts": "2026-06-19T11:57:04.813516",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d98f453a",
-    "ts": "2026-06-19T11:57:01.057941",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7a7ea1c3",
-    "ts": "2026-06-19T11:56:57.865235",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5a5dc453",
-    "ts": "2026-06-19T11:56:54.535923",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "48579a82",
-    "ts": "2026-06-19T11:56:51.305214",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a23cf423",
-    "ts": "2026-06-19T11:56:47.693153",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5be05d94",
-    "ts": "2026-06-19T11:56:44.548713",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 13 jobs on page 1"
-  },
-  {
-    "id": "bcdcc699",
-    "ts": "2026-06-19T11:56:34.868887",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Singapore'"
-  },
-  {
-    "id": "786519ce",
-    "ts": "2026-06-19T11:56:34.816125",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 1 jobs for '.NET Developer' in Malaysia"
-  },
-  {
-    "id": "380eaa0a",
-    "ts": "2026-06-19T11:56:34.715453",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fe377b0e",
-    "ts": "2026-06-19T11:56:30.762804",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "55d9e9a8",
-    "ts": "2026-06-19T11:56:11.387958",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Tokio Marine Insurance Group (Asia) | IT Software Engineer (Executive) | Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia | 100% match"
-  },
-  {
-    "id": "7467bc2b",
-    "ts": "2026-06-19T11:56:11.314064",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Tokio Marine Insurance Group (Asia) — IT Software Engineer (Executive)"
-  },
-  {
-    "id": "0cf3dbfe",
-    "ts": "2026-06-19T11:56:07.602270",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "5e5621f2",
-    "ts": "2026-06-19T11:56:07.506003",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx' = 'Deselect resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx'"
-  },
-  {
-    "id": "a4707381",
-    "ts": "2026-06-19T11:56:07.450317",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Malaysia'"
-  },
-  {
-    "id": "2e9d6ad6",
-    "ts": "2026-06-19T11:54:35.753602",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "240ecf3a",
-    "ts": "2026-06-19T11:54:32.543568",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "419a06e6",
-    "ts": "2026-06-19T11:54:28.783477",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fadb90ae",
-    "ts": "2026-06-19T11:54:24.847777",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "56a1eb42",
-    "ts": "2026-06-19T11:54:21.356480",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ed7d92d0",
-    "ts": "2026-06-19T11:54:18.325338",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6e6e317e",
-    "ts": "2026-06-19T11:54:14.601442",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "61f1f4b6",
-    "ts": "2026-06-19T11:54:11.347203",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "259d163d",
-    "ts": "2026-06-19T11:54:08.169756",
     "level": "AI",
     "site": "linkedin",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
