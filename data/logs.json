@@ -1,5 +1,999 @@
 [
   {
+    "id": "87fc4e68",
+    "ts": "2026-06-19T11:31:48.622447",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Client Server | Software Engineer C# .Net Low Latency | London, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "03929c4a",
+    "ts": "2026-06-19T11:31:48.546872",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Client Server — Software Engineer C# .Net Low Latency"
+  },
+  {
+    "id": "e5cc86d7",
+    "ts": "2026-06-19T11:31:40.903021",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "7b5d1b3c",
+    "ts": "2026-06-19T11:31:40.777653",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Software_Engineer_C__Client_Server_Resume.docx' = 'Deselect resume Siva_Shankar_Software_Engineer_C__Client_Server_Resume.docx'"
+  },
+  {
+    "id": "901a73cf",
+    "ts": "2026-06-19T11:31:34.528234",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "b3088108",
+    "ts": "2026-06-19T11:31:34.445832",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'United Kingdom'"
+  },
+  {
+    "id": "19ea5640",
+    "ts": "2026-06-19T11:31:34.401459",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Middle name' = 'Middle name: Shankar'"
+  },
+  {
+    "id": "3529fb50",
+    "ts": "2026-06-19T11:31:31.354871",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "5420f743",
+    "ts": "2026-06-19T11:31:30.672844",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "b549f77a",
+    "ts": "2026-06-19T11:31:30.623413",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "59ca7f17",
+    "ts": "2026-06-19T11:31:30.308676",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d4da00a7",
+    "ts": "2026-06-19T11:31:30.042547",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "ec3d4a16",
+    "ts": "2026-06-19T11:31:29.730227",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e6e85a71",
+    "ts": "2026-06-19T11:31:29.378688",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "8063cdc5",
+    "ts": "2026-06-19T11:29:45.683804",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "00519f66",
+    "ts": "2026-06-19T11:29:41.779371",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "cd9312bd",
+    "ts": "2026-06-19T11:29:38.200049",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1082dbcc",
+    "ts": "2026-06-19T11:28:44.153802",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "76a82fdc",
+    "ts": "2026-06-19T11:28:40.625840",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f8d17eb0",
+    "ts": "2026-06-19T11:28:37.383833",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5de6c0f2",
+    "ts": "2026-06-19T11:28:34.340483",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "10269cee",
+    "ts": "2026-06-19T11:28:30.589472",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "16babd6c",
+    "ts": "2026-06-19T11:28:26.982173",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6461d34e",
+    "ts": "2026-06-19T11:28:13.578316",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "007e5b6d",
+    "ts": "2026-06-19T11:28:10.133023",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7d6c1e17",
+    "ts": "2026-06-19T11:28:00.230968",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0125c72b",
+    "ts": "2026-06-19T11:27:56.469680",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "24723628",
+    "ts": "2026-06-19T11:27:52.649621",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7961b339",
+    "ts": "2026-06-19T11:27:49.559078",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6696d4b2",
+    "ts": "2026-06-19T11:27:46.232106",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "92c80a01",
+    "ts": "2026-06-19T11:25:47.768138",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5cab514b",
+    "ts": "2026-06-19T11:25:44.380143",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f77af3fc",
+    "ts": "2026-06-19T11:25:40.545067",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "339f04d8",
+    "ts": "2026-06-19T11:25:36.598533",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "23f3879c",
+    "ts": "2026-06-19T11:25:32.734171",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "045f9aaa",
+    "ts": "2026-06-19T11:25:28.142129",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "20602851",
+    "ts": "2026-06-19T11:25:24.194252",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "6849516e",
+    "ts": "2026-06-19T11:25:12.858086",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'UK'"
+  },
+  {
+    "id": "38e99790",
+    "ts": "2026-06-19T11:25:12.777669",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Hyderabad"
+  },
+  {
+    "id": "1305674b",
+    "ts": "2026-06-19T11:25:07.398617",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ed57543d",
+    "ts": "2026-06-19T11:25:03.457221",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9c26268f",
+    "ts": "2026-06-19T11:24:59.886876",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1588b316",
+    "ts": "2026-06-19T11:24:56.698246",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f1502e7e",
+    "ts": "2026-06-19T11:24:52.964799",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0f68edb4",
+    "ts": "2026-06-19T11:24:49.670991",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1f3ff365",
+    "ts": "2026-06-19T11:24:46.452798",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "689949e2",
+    "ts": "2026-06-19T11:24:07.250599",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8aec7a13",
+    "ts": "2026-06-19T11:24:04.091981",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "be106696",
+    "ts": "2026-06-19T11:24:00.341781",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "211fbfc4",
+    "ts": "2026-06-19T11:23:56.635497",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "deb276f6",
+    "ts": "2026-06-19T11:23:52.767023",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e6b161c8",
+    "ts": "2026-06-19T11:23:49.058298",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0b3ee057",
+    "ts": "2026-06-19T11:23:45.330654",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7f3c4d71",
+    "ts": "2026-06-19T11:23:41.291019",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c8329f94",
+    "ts": "2026-06-19T11:23:37.269707",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7762fbfa",
+    "ts": "2026-06-19T11:23:33.706259",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7da64d7c",
+    "ts": "2026-06-19T11:23:30.814878",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 17 jobs on page 1"
+  },
+  {
+    "id": "6f543ddd",
+    "ts": "2026-06-19T11:23:20.163780",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "2b875875",
+    "ts": "2026-06-19T11:23:20.104298",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Chennai"
+  },
+  {
+    "id": "56b1a6bb",
+    "ts": "2026-06-19T11:23:20.009686",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4c5bfa42",
+    "ts": "2026-06-19T11:23:16.357107",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e399f234",
+    "ts": "2026-06-19T11:23:06.223609",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "33af117d",
+    "ts": "2026-06-19T11:23:02.390487",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9eccde0f",
+    "ts": "2026-06-19T11:22:58.649175",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a75c7603",
+    "ts": "2026-06-19T11:22:54.948400",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ec650267",
+    "ts": "2026-06-19T11:22:51.579519",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "46d41700",
+    "ts": "2026-06-19T11:22:48.197712",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9ca893fb",
+    "ts": "2026-06-19T11:22:45.272226",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f2032929",
+    "ts": "2026-06-19T11:22:42.322238",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 9 jobs on page 2"
+  },
+  {
+    "id": "11ad64ac",
+    "ts": "2026-06-19T11:22:38.174330",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6f8d67dc",
+    "ts": "2026-06-19T11:22:34.829518",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8af4fdbe",
+    "ts": "2026-06-19T11:22:31.670850",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0ed08a51",
+    "ts": "2026-06-19T11:22:27.630685",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5b257bf2",
+    "ts": "2026-06-19T11:22:24.353043",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "39268e87",
+    "ts": "2026-06-19T11:22:20.966654",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0dce276e",
+    "ts": "2026-06-19T11:22:17.224503",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8be38213",
+    "ts": "2026-06-19T11:22:13.519895",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4d0b7568",
+    "ts": "2026-06-19T11:22:10.565374",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0a03ec0b",
+    "ts": "2026-06-19T11:22:07.474209",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a6c6686a",
+    "ts": "2026-06-19T11:22:03.750246",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "df6fbbee",
+    "ts": "2026-06-19T11:22:00.400743",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5b034b50",
+    "ts": "2026-06-19T11:21:57.335686",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1e3c1f79",
+    "ts": "2026-06-19T11:21:53.368024",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6bcdf640",
+    "ts": "2026-06-19T11:19:04.825741",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8895838f",
+    "ts": "2026-06-19T11:19:00.901566",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7089a560",
+    "ts": "2026-06-19T11:18:57.248801",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7743def4",
+    "ts": "2026-06-19T11:18:53.350982",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1857bf70",
+    "ts": "2026-06-19T11:18:49.901879",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "86b5cddb",
+    "ts": "2026-06-19T11:18:46.651450",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2aa3accc",
+    "ts": "2026-06-19T11:18:43.539769",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6d17d31e",
+    "ts": "2026-06-19T11:18:40.282116",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ebf03865",
+    "ts": "2026-06-19T11:18:37.185103",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "40685e38",
+    "ts": "2026-06-19T11:18:33.602229",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e6a0795a",
+    "ts": "2026-06-19T11:18:30.351537",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "bbc1ceb9",
+    "ts": "2026-06-19T11:18:26.591749",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "9f48087a",
+    "ts": "2026-06-19T11:18:15.780375",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "ebc3bcc4",
+    "ts": "2026-06-19T11:18:15.735654",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for '.NET Developer' in Bangalore"
+  },
+  {
+    "id": "69b766cd",
+    "ts": "2026-06-19T11:18:15.652415",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "69ca23e3",
+    "ts": "2026-06-19T11:18:12.068228",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f8a6fff7",
+    "ts": "2026-06-19T11:18:02.545635",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "9cee5c98",
+    "ts": "2026-06-19T11:17:58.672165",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f886ba59",
+    "ts": "2026-06-19T11:17:54.887613",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "eb226478",
+    "ts": "2026-06-19T11:17:45.623653",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "cfb12888",
+    "ts": "2026-06-19T11:17:42.387588",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "eedd7879",
+    "ts": "2026-06-19T11:17:38.981051",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "41617d05",
+    "ts": "2026-06-19T11:17:35.403025",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "105332d6",
+    "ts": "2026-06-19T11:17:32.206555",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2374c7f6",
+    "ts": "2026-06-19T11:17:28.813017",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "763ca835",
+    "ts": "2026-06-19T11:17:25.047055",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "25926676",
+    "ts": "2026-06-19T11:17:21.762656",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "28a192e1",
+    "ts": "2026-06-19T11:17:18.348968",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "add083e4",
+    "ts": "2026-06-19T11:17:14.440775",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "23cf9dbb",
+    "ts": "2026-06-19T11:17:10.859477",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 15 jobs on page 3"
+  },
+  {
+    "id": "d1b53e58",
+    "ts": "2026-06-19T11:17:06.625178",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d825704e",
+    "ts": "2026-06-19T11:17:03.301727",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "291a9db5",
+    "ts": "2026-06-19T11:16:59.553540",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d60371b4",
+    "ts": "2026-06-19T11:16:55.885428",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "087eb64f",
+    "ts": "2026-06-19T11:16:52.333701",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "16160571",
+    "ts": "2026-06-19T11:16:48.701459",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "80ac6e77",
+    "ts": "2026-06-19T11:16:45.669347",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "722b02b9",
+    "ts": "2026-06-19T11:16:42.252827",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "22a45c98",
+    "ts": "2026-06-19T11:16:38.770719",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2739b89e",
+    "ts": "2026-06-19T11:16:35.482575",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8774074a",
+    "ts": "2026-06-19T11:16:31.876316",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "36339e99",
+    "ts": "2026-06-19T11:16:27.935027",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "26bbc87c",
+    "ts": "2026-06-19T11:16:24.203674",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fafa97c6",
+    "ts": "2026-06-19T11:16:20.453380",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "64cb166b",
+    "ts": "2026-06-19T11:16:16.565850",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f40a0ae9",
+    "ts": "2026-06-19T11:16:13.081635",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "71989cd3",
+    "ts": "2026-06-19T11:16:09.888986",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "95dfc176",
+    "ts": "2026-06-19T11:16:06.281022",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a3daf662",
+    "ts": "2026-06-19T11:16:03.031542",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "50d1f4ca",
+    "ts": "2026-06-19T11:15:59.071888",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "04348949",
+    "ts": "2026-06-19T11:15:55.592785",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8ce99d53",
+    "ts": "2026-06-19T11:15:51.826434",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "77926c50",
+    "ts": "2026-06-19T11:15:47.881154",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fdfb3d90",
+    "ts": "2026-06-19T11:15:44.726207",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0029e8bb",
+    "ts": "2026-06-19T11:15:40.872500",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "cff9dcb3",
+    "ts": "2026-06-19T11:15:37.682909",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "3258466a",
+    "ts": "2026-06-19T11:15:33.097089",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ba1015e3",
+    "ts": "2026-06-19T11:15:30.035451",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "dae23bdb",
+    "ts": "2026-06-19T11:15:26.196063",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "cc050dcf",
     "ts": "2026-06-19T11:15:01.702176",
     "level": "SUCCESS",
@@ -2504,999 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "e82f9e8b",
-    "ts": "2026-06-19T10:27:18.018521",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b4936c35",
-    "ts": "2026-06-19T10:27:12.967800",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "668b9622",
-    "ts": "2026-06-19T10:27:08.641222",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "033ffed1",
-    "ts": "2026-06-19T10:26:50.386000",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c2ffcc88",
-    "ts": "2026-06-19T10:26:45.986113",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0c0649d8",
-    "ts": "2026-06-19T10:26:42.199565",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3a01be6a",
-    "ts": "2026-06-19T10:26:22.929508",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Tata Consultancy Services | Software Engineer | Greater Bengaluru Area | 100% match"
-  },
-  {
-    "id": "b73d20cc",
-    "ts": "2026-06-19T10:26:22.870520",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Tata Consultancy Services — Software Engineer"
-  },
-  {
-    "id": "2eee510d",
-    "ts": "2026-06-19T10:26:13.653948",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "ff0bcd9a",
-    "ts": "2026-06-19T10:26:13.564784",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How many years of work experience do you have with Java?' = '3'"
-  },
-  {
-    "id": "439f3515",
-    "ts": "2026-06-19T10:26:13.525489",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How many years of work experience do you have with React.js?' = '4'"
-  },
-  {
-    "id": "76021b1a",
-    "ts": "2026-06-19T10:26:09.320718",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "133d2bfd",
-    "ts": "2026-06-19T10:26:09.235207",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Software_Engineer_Tata_Consultancy_Ser_Resume.docx' = 'Deselect resume Siva_Shankar_Software_Engineer_Tata_Consultancy_Ser_Resume.docx'"
-  },
-  {
-    "id": "34b87207",
-    "ts": "2026-06-19T10:26:03.144489",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "b1bbab45",
-    "ts": "2026-06-19T10:26:03.027462",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Bengaluru South, Karnataka, India'"
-  },
-  {
-    "id": "b0aa9ed2",
-    "ts": "2026-06-19T10:24:05.027906",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f2951a70",
-    "ts": "2026-06-19T10:24:00.997548",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "12eb375a",
-    "ts": "2026-06-19T10:22:47.675886",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "35f0eada",
-    "ts": "2026-06-19T10:22:44.327363",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3a3492ff",
-    "ts": "2026-06-19T10:22:40.693015",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c8f4aa91",
-    "ts": "2026-06-19T10:22:36.807069",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "10f04800",
-    "ts": "2026-06-19T10:22:33.346918",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "46d3cd3f",
-    "ts": "2026-06-19T10:22:29.861765",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "75c61ca0",
-    "ts": "2026-06-19T10:22:25.948366",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "16936193",
-    "ts": "2026-06-19T10:22:22.749957",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6dd13e2c",
-    "ts": "2026-06-19T10:22:18.807509",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "aa9958bc",
-    "ts": "2026-06-19T10:22:15.701235",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "63e8687f",
-    "ts": "2026-06-19T10:22:11.727279",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "724288fe",
-    "ts": "2026-06-19T10:22:07.106996",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0226335b",
-    "ts": "2026-06-19T10:22:03.444253",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8e43511f",
-    "ts": "2026-06-19T10:22:00.050425",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fe6de5bd",
-    "ts": "2026-06-19T10:21:56.879347",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fc1efa6d",
-    "ts": "2026-06-19T10:21:53.455206",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7809c35d",
-    "ts": "2026-06-19T10:21:49.919048",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b7ceb104",
-    "ts": "2026-06-19T10:21:46.800734",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 3"
-  },
-  {
-    "id": "bdb96ae7",
-    "ts": "2026-06-19T10:21:42.447685",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1c77d7d6",
-    "ts": "2026-06-19T10:21:38.326789",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0c09b592",
-    "ts": "2026-06-19T10:21:33.735685",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a42cbfe3",
-    "ts": "2026-06-19T10:21:29.927293",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "59e8d3bb",
-    "ts": "2026-06-19T10:21:26.551178",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "047ada77",
-    "ts": "2026-06-19T10:21:22.269599",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fb11c9ee",
-    "ts": "2026-06-19T10:21:19.043473",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1fc32d97",
-    "ts": "2026-06-19T10:21:15.363595",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "246242cc",
-    "ts": "2026-06-19T10:21:11.297888",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dd33c8c0",
-    "ts": "2026-06-19T10:21:07.674727",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "26c9cf0c",
-    "ts": "2026-06-19T10:21:04.002077",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9cd12bc8",
-    "ts": "2026-06-19T10:20:45.825573",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6789945e",
-    "ts": "2026-06-19T10:20:42.490455",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1e9bb77d",
-    "ts": "2026-06-19T10:20:38.624161",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17f8c366",
-    "ts": "2026-06-19T10:20:35.178751",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d93c30e0",
-    "ts": "2026-06-19T10:20:31.197565",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c66f83f3",
-    "ts": "2026-06-19T10:20:27.370437",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "08dedbfe",
-    "ts": "2026-06-19T10:20:08.207365",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f931098f",
-    "ts": "2026-06-19T10:20:04.698520",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b2d092ee",
-    "ts": "2026-06-19T10:20:01.492759",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5d0dec50",
-    "ts": "2026-06-19T10:19:57.683389",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c84c2a65",
-    "ts": "2026-06-19T10:19:53.911208",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab79ae12",
-    "ts": "2026-06-19T10:19:50.376131",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f86d3460",
-    "ts": "2026-06-19T10:19:47.079319",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "86bd96dd",
-    "ts": "2026-06-19T10:19:42.199937",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "373f8cb9",
-    "ts": "2026-06-19T10:19:38.374101",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "0a903b24",
-    "ts": "2026-06-19T10:19:34.048806",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "19351e45",
-    "ts": "2026-06-19T10:19:30.830931",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ac8312c6",
-    "ts": "2026-06-19T10:19:27.206354",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4a9ec0b3",
-    "ts": "2026-06-19T10:19:22.832656",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5cbf45c9",
-    "ts": "2026-06-19T10:19:19.479157",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b6a3cb82",
-    "ts": "2026-06-19T10:19:15.416029",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "49365325",
-    "ts": "2026-06-19T10:19:11.761557",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4eb4e340",
-    "ts": "2026-06-19T10:19:07.939054",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8a1fcc35",
-    "ts": "2026-06-19T10:19:04.124504",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3796ecc7",
-    "ts": "2026-06-19T10:19:00.543693",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fbf26424",
-    "ts": "2026-06-19T10:18:56.589141",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "100dd5ef",
-    "ts": "2026-06-19T10:18:52.534843",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "13ed27a2",
-    "ts": "2026-06-19T10:18:48.870007",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c346cbda",
-    "ts": "2026-06-19T10:18:45.447352",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2ae82708",
-    "ts": "2026-06-19T10:18:42.242453",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "30dfcbb6",
-    "ts": "2026-06-19T10:18:37.947004",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7b6f1db0",
-    "ts": "2026-06-19T10:18:34.607733",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "13e0664d",
-    "ts": "2026-06-19T10:18:31.337198",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17257d39",
-    "ts": "2026-06-19T10:18:27.475988",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "15cc4c9f",
-    "ts": "2026-06-19T10:18:23.779941",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9ca5d99d",
-    "ts": "2026-06-19T10:18:20.027424",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "484894a7",
-    "ts": "2026-06-19T10:18:16.493861",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "52e49b27",
-    "ts": "2026-06-19T10:18:12.709330",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "909b1619",
-    "ts": "2026-06-19T10:18:09.144335",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4aecdbc7",
-    "ts": "2026-06-19T10:18:04.394197",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d9760310",
-    "ts": "2026-06-19T10:18:00.316559",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "174b46ca",
-    "ts": "2026-06-19T10:17:46.961726",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "8ce2e7ee",
-    "ts": "2026-06-19T10:17:46.907713",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: net::ERR_ABORTED at https://www.linkedin.com/jobs/search/?keywords=Senior%20.NET%20Developer&location=Remote&f_AL=true&f_TPR=r86400&f_E=4&sortBy=DD\nCall log:\nnavigating to \"https://www.linkedin.com/jobs/search/?keywords=Senior%20.NET%20Developer&location=Remote&f_AL=true&f_TPR=r86400&f_E=4&sortBy=DD\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "ce8c389b",
-    "ts": "2026-06-19T10:17:46.248973",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "554eee7d",
-    "ts": "2026-06-19T10:17:46.196988",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "be3bdff9",
-    "ts": "2026-06-19T10:17:46.047987",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn login successful"
-  },
-  {
-    "id": "9dbd816b",
-    "ts": "2026-06-19T10:17:43.339037",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Waiting for login success... (Solve CAPTCHA manually if shown — 3 min window)"
-  },
-  {
-    "id": "fc8bf5cc",
-    "ts": "2026-06-19T10:17:43.289456",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Login fields not found — may already be logged in or CAPTCHA present"
-  },
-  {
-    "id": "81fa5311",
-    "ts": "2026-06-19T10:17:36.642774",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "e7b497aa",
-    "ts": "2026-06-19T10:17:34.228618",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "629a9ef9",
-    "ts": "2026-06-19T10:17:34.176666",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "58bb53f7",
-    "ts": "2026-06-19T10:17:34.114906",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0}"
-  },
-  {
-    "id": "3b3738d9",
-    "ts": "2026-06-19T10:17:34.064960",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "bf478643",
-    "ts": "2026-06-19T10:17:34.028692",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "3b4d8b1e",
-    "ts": "2026-06-19T10:17:33.967187",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 10:17:33"
-  },
-  {
-    "id": "7426f82f",
-    "ts": "2026-06-19T10:17:33.928491",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "302412c9",
-    "ts": "2026-06-19T10:17:33.877344",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "0cf03fd7",
-    "ts": "2026-06-19T10:17:33.832297",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50"
-  },
-  {
-    "id": "34c6f1d1",
-    "ts": "2026-06-19T10:17:33.763924",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "67d52286",
-    "ts": "2026-06-19T10:17:15.545717",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 37s before next site..."
-  },
-  {
-    "id": "7d55abec",
-    "ts": "2026-06-19T10:17:15.495355",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "07dcac06",
-    "ts": "2026-06-19T10:17:14.865966",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "f37a26b9",
-    "ts": "2026-06-19T10:17:14.793675",
-    "level": "ERROR",
-    "site": "linkedin",
-    "message": "LinkedIn bot crash: Mouse.wheel: Target page, context or browser has been closed"
-  },
-  {
-    "id": "6d4bfa63",
-    "ts": "2026-06-19T10:17:08.003755",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Chennai'"
-  },
-  {
-    "id": "7a30a9e7",
-    "ts": "2026-06-19T10:17:07.947639",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior Full Stack Developer' in Bangalore"
-  },
-  {
-    "id": "02941084",
-    "ts": "2026-06-19T10:17:07.888649",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "671bb4c2",
-    "ts": "2026-06-19T10:16:59.544449",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Bangalore'"
-  },
-  {
-    "id": "f4c1224c",
-    "ts": "2026-06-19T10:16:59.505188",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior Full Stack Developer' in Remote"
-  },
-  {
-    "id": "5296d0e7",
-    "ts": "2026-06-19T10:16:59.435355",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "bc3be60b",
-    "ts": "2026-06-19T10:16:50.997107",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Remote'"
-  },
-  {
-    "id": "faa78bad",
-    "ts": "2026-06-19T10:16:50.945794",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Singapore"
-  },
-  {
-    "id": "bcc7634e",
-    "ts": "2026-06-19T10:16:50.909309",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "4c075515",
-    "ts": "2026-06-19T10:16:44.455702",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Singapore'"
-  },
-  {
-    "id": "a8ab875e",
-    "ts": "2026-06-19T10:16:44.412598",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Malaysia"
-  },
-  {
-    "id": "12cf8102",
-    "ts": "2026-06-19T10:16:44.349178",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "2df4b18a",
-    "ts": "2026-06-19T10:16:38.526214",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Malaysia'"
-  },
-  {
-    "id": "b35dbc70",
-    "ts": "2026-06-19T10:16:38.483723",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Australia"
-  },
-  {
-    "id": "42d5a572",
-    "ts": "2026-06-19T10:16:38.421791",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "9cf7c922",
-    "ts": "2026-06-19T10:16:30.901660",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Australia'"
-  },
-  {
-    "id": "518f7c60",
-    "ts": "2026-06-19T10:16:30.858414",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in UK"
-  },
-  {
-    "id": "5312364d",
-    "ts": "2026-06-19T10:16:30.795864",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "7503da34",
-    "ts": "2026-06-19T10:16:22.676332",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'UK'"
-  },
-  {
-    "id": "b9a47805",
-    "ts": "2026-06-19T10:16:22.631814",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Hyderabad"
-  },
-  {
-    "id": "48208449",
-    "ts": "2026-06-19T10:16:22.567747",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "6982035c",
-    "ts": "2026-06-19T10:16:16.293996",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Hyderabad'"
-  },
-  {
-    "id": "386a638c",
-    "ts": "2026-06-19T10:16:16.245130",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Chennai"
-  },
-  {
-    "id": "62609f5b",
-    "ts": "2026-06-19T10:16:16.179213",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "d9886e50",
-    "ts": "2026-06-19T10:16:08.933481",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Chennai'"
-  },
-  {
-    "id": "5d7833fc",
-    "ts": "2026-06-19T10:16:08.892010",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Bangalore"
-  },
-  {
-    "id": "296c242c",
-    "ts": "2026-06-19T10:16:08.813828",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "4499b372",
-    "ts": "2026-06-19T10:16:00.775936",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Bangalore'"
-  },
-  {
-    "id": "3de5fca5",
-    "ts": "2026-06-19T10:16:00.717069",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Engineer' in Remote"
-  },
-  {
-    "id": "fa180cf2",
-    "ts": "2026-06-19T10:16:00.663656",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "2713843f",
-    "ts": "2026-06-19T10:15:53.962657",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Engineer' in 'Remote'"
-  },
-  {
-    "id": "44e65d8f",
-    "ts": "2026-06-19T10:15:53.919166",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Developer' in Singapore"
-  },
-  {
-    "id": "dc1f4d08",
-    "ts": "2026-06-19T10:15:53.859227",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
   }
 ]
