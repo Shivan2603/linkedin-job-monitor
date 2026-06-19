@@ -1,5 +1,145 @@
 [
   {
+    "id": "fa2bf7d8",
+    "ts": "2026-06-19T10:58:29.319481",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Eames Consulting | Microsoft Dynamics 365 Developer | London Area, United Kingdom | 100% match"
+  },
+  {
+    "id": "09805193",
+    "ts": "2026-06-19T10:58:29.239447",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Eames Consulting — Microsoft Dynamics 365 Developer"
+  },
+  {
+    "id": "f1eb5a0d",
+    "ts": "2026-06-19T10:58:24.940591",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "e188e06d",
+    "ts": "2026-06-19T10:58:24.532234",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d25bad91",
+    "ts": "2026-06-19T10:58:24.460975",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c04d7bdf",
+    "ts": "2026-06-19T10:58:24.179877",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "38f29b31",
+    "ts": "2026-06-19T10:58:23.757629",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "459bc453",
+    "ts": "2026-06-19T10:58:23.493016",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "aa52875c",
+    "ts": "2026-06-19T10:58:23.161970",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "7d54d4c4",
+    "ts": "2026-06-19T10:58:02.927194",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "2603c283",
+    "ts": "2026-06-19T10:58:02.834664",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Microsoft_Dynamics_3_Eames_Consulting_Resume.docx' = 'Deselect resume Siva_Shankar_Microsoft_Dynamics_3_Eames_Consulting_Resume.docx'"
+  },
+  {
+    "id": "ada27ebb",
+    "ts": "2026-06-19T10:57:57.381283",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "2056cd4d",
+    "ts": "2026-06-19T10:57:57.277013",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'United Kingdom'"
+  },
+  {
+    "id": "01e6b110",
+    "ts": "2026-06-19T10:56:29.909753",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "10b1e089",
+    "ts": "2026-06-19T10:56:26.855959",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4480bf9c",
+    "ts": "2026-06-19T10:56:23.222479",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d17095ea",
+    "ts": "2026-06-19T10:56:19.370028",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "b6b0dc2a",
+    "ts": "2026-06-19T10:56:14.860920",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b9d4bc63",
+    "ts": "2026-06-19T10:56:11.228339",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ef8a6ed2",
+    "ts": "2026-06-19T10:56:07.088523",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "0b41e0b9",
     "ts": "2026-06-19T10:55:46.869072",
     "level": "SUCCESS",
@@ -3358,145 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Australia"
-  },
-  {
-    "id": "6933c98c",
-    "ts": "2026-06-19T10:10:42.400157",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "d0925359",
-    "ts": "2026-06-19T10:10:36.244537",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Australia'"
-  },
-  {
-    "id": "9776f283",
-    "ts": "2026-06-19T10:10:36.203448",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in UK"
-  },
-  {
-    "id": "4382bae7",
-    "ts": "2026-06-19T10:10:36.136983",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "8e4b9629",
-    "ts": "2026-06-19T10:10:28.492796",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'UK'"
-  },
-  {
-    "id": "df3f2709",
-    "ts": "2026-06-19T10:10:28.441558",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Hyderabad"
-  },
-  {
-    "id": "7a197c73",
-    "ts": "2026-06-19T10:10:28.393473",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "c0f5f3a5",
-    "ts": "2026-06-19T10:10:20.882988",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "1f09d0f6",
-    "ts": "2026-06-19T10:10:20.844086",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Chennai"
-  },
-  {
-    "id": "98ece416",
-    "ts": "2026-06-19T10:10:20.780137",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "a071db2a",
-    "ts": "2026-06-19T10:10:13.770141",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Chennai'"
-  },
-  {
-    "id": "a9732b70",
-    "ts": "2026-06-19T10:10:13.724632",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Bangalore"
-  },
-  {
-    "id": "3a9deb5e",
-    "ts": "2026-06-19T10:10:13.687384",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "0704e35c",
-    "ts": "2026-06-19T10:10:06.875835",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Bangalore'"
-  },
-  {
-    "id": "1ac8fb62",
-    "ts": "2026-06-19T10:10:06.826956",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Remote"
-  },
-  {
-    "id": "739afe62",
-    "ts": "2026-06-19T10:10:06.779797",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "d55ae6cf",
-    "ts": "2026-06-19T10:09:59.787333",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Remote'"
-  },
-  {
-    "id": "3ce7fe80",
-    "ts": "2026-06-19T10:09:59.733532",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Singapore"
-  },
-  {
-    "id": "b93d6bdf",
-    "ts": "2026-06-19T10:09:59.677789",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "9979ba31",
-    "ts": "2026-06-19T10:09:51.527640",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Singapore'"
   }
 ]
