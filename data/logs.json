@@ -1,5 +1,61 @@
 [
   {
+    "id": "fda20c27",
+    "ts": "2026-06-19T20:44:16.067766",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: .Net @ Trainline | Senior Backend Engineer | Remote/Various | 100% match"
+  },
+  {
+    "id": "e6c3646a",
+    "ts": "2026-06-19T20:44:10.902195",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "d56d37e7",
+    "ts": "2026-06-19T20:43:18.632509",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8e6cc75f",
+    "ts": "2026-06-19T20:43:13.838679",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/trainline/5d5dcc6a-3bcf-431a-b011-5ea099f8ecfe#:~:text=…"
+  },
+  {
+    "id": "3bce6589",
+    "ts": "2026-06-19T20:43:13.748502",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Robinhood — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "59a99fac",
+    "ts": "2026-06-19T20:43:13.658406",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "986a83b1",
+    "ts": "2026-06-19T20:43:10.082787",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7976529?gh_src=NaN&gh_jid=7976529…"
+  },
+  {
+    "id": "78d03edd",
+    "ts": "2026-06-19T20:42:54.838524",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Cloudflare | Software Engineer via Greenhouse"
+  },
+  {
     "id": "12a79c3e",
     "ts": "2026-06-19T20:42:50.813860",
     "level": "SUCCESS",
@@ -3442,61 +3498,5 @@
     "level": "INFO",
     "site": "company_careers",
     "message": "Checking target company career portal: Cloudflare..."
-  },
-  {
-    "id": "71ff9942",
-    "ts": "2026-06-19T20:32:36.068564",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "24cf94e4",
-    "ts": "2026-06-19T20:32:34.488540",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Spotify..."
-  },
-  {
-    "id": "73af8890",
-    "ts": "2026-06-19T20:32:32.798593",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: 'Senior .NET Developer' in 'Remote' on https://in.indeed.com"
-  },
-  {
-    "id": "cc6730a7",
-    "ts": "2026-06-19T20:32:32.758444",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed login successful! Detected active session (URL: https://secure.indeed.com/postauthfunnel?newAccount=false&hl=en&userType=jobSeeker) ✅"
-  },
-  {
-    "id": "91bdce6b",
-    "ts": "2026-06-19T20:32:27.628601",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Wise..."
-  },
-  {
-    "id": "24d30174",
-    "ts": "2026-06-19T20:32:23.179365",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Still waiting for Indeed login/code... 110 seconds remaining. Current URL: https://secure.indeed.com/auth#"
-  },
-  {
-    "id": "eafdd340",
-    "ts": "2026-06-19T20:32:22.984956",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Razorpay..."
-  },
-  {
-    "id": "57bd8fb0",
-    "ts": "2026-06-19T20:32:22.926594",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Discovering jobs directly from target companies..."
   }
 ]
