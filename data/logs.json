@@ -1,5 +1,621 @@
 [
   {
+    "id": "2d211112",
+    "ts": "2026-06-19T13:38:03.812712",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Jobs | Software Engineer | Remote/Various | 100% match"
+  },
+  {
+    "id": "82dacfb2",
+    "ts": "2026-06-19T13:37:59.627647",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "19bef7f2",
+    "ts": "2026-06-19T13:37:09.794004",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "269773d6",
+    "ts": "2026-06-19T13:37:05.462301",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/1password?locationId=55f7d5b5-99cd-4474-b669-bfb35880f7…"
+  },
+  {
+    "id": "807ac919",
+    "ts": "2026-06-19T13:37:05.363897",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 2/4 fields via AI."
+  },
+  {
+    "id": "f4cdee16",
+    "ts": "2026-06-19T13:36:49.523586",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to fill field ai-form-field-2: Locator.select_option: Timeout 30000ms exceeded.\nCall log:\nw"
+  },
+  {
+    "id": "dacef1c8",
+    "ts": "2026-06-19T13:36:19.272925",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to fill field ai-form-field-1: Locator.select_option: Timeout 30000ms exceeded.\nCall log:\nw"
+  },
+  {
+    "id": "537a1cf3",
+    "ts": "2026-06-19T13:35:48.792979",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "e315cbd3",
+    "ts": "2026-06-19T13:35:48.245067",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d53ccdc8",
+    "ts": "2026-06-19T13:35:48.197665",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "364a2145",
+    "ts": "2026-06-19T13:35:47.957627",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "8759e253",
+    "ts": "2026-06-19T13:35:47.708230",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "60d29af0",
+    "ts": "2026-06-19T13:35:47.436373",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "2119ebc4",
+    "ts": "2026-06-19T13:35:47.135538",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "a3b52428",
+    "ts": "2026-06-19T13:34:41.124402",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d2de5403",
+    "ts": "2026-06-19T13:34:37.813213",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/1password?locationId=55f7d5b5-99cd-4474-b669-bfb35880f7…"
+  },
+  {
+    "id": "c8fff913",
+    "ts": "2026-06-19T13:34:37.795151",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Jobs — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "41e187d5",
+    "ts": "2026-06-19T13:34:37.777236",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0f7dfd07",
+    "ts": "2026-06-19T13:34:34.293278",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/1password/c6933be3-80a6-41f0-8e37-e70f72cae134#:~:text=…"
+  },
+  {
+    "id": "ba9f1eea",
+    "ts": "2026-06-19T13:34:34.277110",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Developers — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "351ae7c6",
+    "ts": "2026-06-19T13:34:34.260212",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "152ca792",
+    "ts": "2026-06-19T13:34:30.172365",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/developers…"
+  },
+  {
+    "id": "c6e64790",
+    "ts": "2026-06-19T13:34:30.154709",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Jobs — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "43677e25",
+    "ts": "2026-06-19T13:34:30.130733",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "180eb9f1",
+    "ts": "2026-06-19T13:34:25.895339",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/1password/c6933be3-80a6-41f0-8e37-e70f72cae134…"
+  },
+  {
+    "id": "af887fa5",
+    "ts": "2026-06-19T13:34:25.887457",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Jobs — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "a66c1d56",
+    "ts": "2026-06-19T13:34:25.863214",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "915e0d65",
+    "ts": "2026-06-19T13:34:22.506959",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.ashbyhq.com/1password…"
+  },
+  {
+    "id": "50c8f823",
+    "ts": "2026-06-19T13:34:22.490428",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Inmobi — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "0cba057c",
+    "ts": "2026-06-19T13:34:22.470958",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "afd430d8",
+    "ts": "2026-06-19T13:34:18.059008",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/inmobi/jobs/7616565…"
+  },
+  {
+    "id": "85c41ee6",
+    "ts": "2026-06-19T13:34:18.027229",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Backend at InMobi — Job Application for SDE IV (Match score 0% < 60%)"
+  },
+  {
+    "id": "ef274364",
+    "ts": "2026-06-19T13:34:18.014367",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "88746c92",
+    "ts": "2026-06-19T13:34:13.571369",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/inmobi/jobs/6919206…"
+  },
+  {
+    "id": "3688d200",
+    "ts": "2026-06-19T13:34:13.549477",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Total deduplicated job URLs to process: 8"
+  },
+  {
+    "id": "a908a9bb",
+    "ts": "2026-06-19T13:34:13.525480",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 3 job URLs directly from target companies"
+  },
+  {
+    "id": "55b3b314",
+    "ts": "2026-06-19T13:34:08.720162",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Spotify..."
+  },
+  {
+    "id": "f70beaf8",
+    "ts": "2026-06-19T13:34:03.060766",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Snowflake..."
+  },
+  {
+    "id": "ed23c431",
+    "ts": "2026-06-19T13:33:58.211518",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Zerodha..."
+  },
+  {
+    "id": "3655e117",
+    "ts": "2026-06-19T13:33:58.165961",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Revolut: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.revolut.com/positions\nCall log:\nnavigating to \"https://careers.revolut.com/positions\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "18dd4cc3",
+    "ts": "2026-06-19T13:33:57.705146",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Revolut..."
+  },
+  {
+    "id": "996473d8",
+    "ts": "2026-06-19T13:33:57.663964",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Paytm: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.paytm.com/\nCall log:\nnavigating to \"https://careers.paytm.com/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "9d410932",
+    "ts": "2026-06-19T13:33:57.235220",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Paytm..."
+  },
+  {
+    "id": "c1ea59de",
+    "ts": "2026-06-19T13:33:52.731221",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: PhonePe..."
+  },
+  {
+    "id": "ddc14aad",
+    "ts": "2026-06-19T13:33:48.362364",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Retool..."
+  },
+  {
+    "id": "8a329a1e",
+    "ts": "2026-06-19T13:33:48.334664",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Found 1 matching positions for Lyft"
+  },
+  {
+    "id": "f566de43",
+    "ts": "2026-06-19T13:33:39.328231",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Lyft..."
+  },
+  {
+    "id": "94aa8905",
+    "ts": "2026-06-19T13:33:29.913996",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Stripe..."
+  },
+  {
+    "id": "2737a91d",
+    "ts": "2026-06-19T13:33:29.899663",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Found 2 matching positions for InMobi"
+  },
+  {
+    "id": "600e3528",
+    "ts": "2026-06-19T13:33:23.612706",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: InMobi..."
+  },
+  {
+    "id": "274fba61",
+    "ts": "2026-06-19T13:33:23.581434",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovering jobs directly from target companies..."
+  },
+  {
+    "id": "ca6f6602",
+    "ts": "2026-06-19T13:33:23.546647",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 5 job URLs from Google search"
+  },
+  {
+    "id": "f63b2727",
+    "ts": "2026-06-19T13:33:18.749249",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.rippling.com OR site:app.breezy.hr \"c# developer\" "
+  },
+  {
+    "id": "3502a8ae",
+    "ts": "2026-06-19T13:33:09.950375",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.rippling.com OR site:app.breezy.hr \".net developer"
+  },
+  {
+    "id": "da0d24df",
+    "ts": "2026-06-19T13:33:02.868613",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 8 job links: site:jobs.ashbyhq.com OR site:apply.workable.com \"c# develop"
+  },
+  {
+    "id": "fad27df8",
+    "ts": "2026-06-19T13:32:53.963914",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.ashbyhq.com OR site:apply.workable.com \"c# develop"
+  },
+  {
+    "id": "c475bf3b",
+    "ts": "2026-06-19T13:32:44.184052",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.ashbyhq.com OR site:apply.workable.com \".net devel"
+  },
+  {
+    "id": "217f76fe",
+    "ts": "2026-06-19T13:32:36.471756",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.ashbyhq.com OR site:apply.workable.com \"c# develop"
+  },
+  {
+    "id": "c367ebb0",
+    "ts": "2026-06-19T13:32:27.667680",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.rippling.com OR site:app.breezy.hr \"backend engine"
+  },
+  {
+    "id": "fe15f96a",
+    "ts": "2026-06-19T13:32:18.966757",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 0 job links: site:jobs.rippling.com OR site:app.breezy.hr \"backend engine"
+  },
+  {
+    "id": "5f82293a",
+    "ts": "2026-06-19T13:32:14.444718",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "3fdefe96",
+    "ts": "2026-06-19T13:32:14.424631",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "2fafd0e6",
+    "ts": "2026-06-19T13:32:14.406553",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Skipping LinkedIn — daily limit reached"
+  },
+  {
+    "id": "a4993566",
+    "ts": "2026-06-19T13:32:14.389593",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Daily limit reached for linkedin (25/25). Skipping for today."
+  },
+  {
+    "id": "8bb21261",
+    "ts": "2026-06-19T13:32:14.369697",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "59e25ce7",
+    "ts": "2026-06-19T13:32:14.345742",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "f031e19c",
+    "ts": "2026-06-19T13:32:14.332081",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "2bf4ba32",
+    "ts": "2026-06-19T13:32:14.314638",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 13:32:14"
+  },
+  {
+    "id": "b383fc74",
+    "ts": "2026-06-19T13:32:14.294942",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "2c920041",
+    "ts": "2026-06-19T13:32:14.274843",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "f91546eb",
+    "ts": "2026-06-19T13:32:14.256893",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "003a2482",
+    "ts": "2026-06-19T13:32:14.234811",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "31cb6e25",
+    "ts": "2026-06-19T13:30:49.528002",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 71s before next site..."
+  },
+  {
+    "id": "aebcd870",
+    "ts": "2026-06-19T13:30:49.459774",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "b9ee52a9",
+    "ts": "2026-06-19T13:30:49.411907",
+    "level": "ERROR",
+    "site": "system",
+    "message": "Company Careers crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n<launched> pid=26512\n[pid=26512][err] [26512:22012:0619/133049.111:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n[pid=26512][err] [26512:22012:0619/133049.111:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nCall log:\n<launching> C:\\Users\\SIVASHANKAR V\\AppData\\Local\\ms-playwright\\chromium-1117\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n  - <launched> pid=26512\n  - [pid=26512][err] [26512:22012:0619/133049.111:ERROR:process_singleton_win.cc(418)] Lock file can not be created! Error code: 32\n  - [pid=26512][err] [26512:22012:0619/133049.111:ERROR:chrome_main_delegate.cc(592)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n"
+  },
+  {
+    "id": "3e5d6dd6",
+    "ts": "2026-06-19T13:30:47.953851",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "986cf569",
+    "ts": "2026-06-19T13:30:47.906632",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "faac4086",
+    "ts": "2026-06-19T13:30:47.859366",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Skipping LinkedIn — daily limit reached"
+  },
+  {
+    "id": "998d34dd",
+    "ts": "2026-06-19T13:30:47.812614",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Daily limit reached for linkedin (25/25). Skipping for today."
+  },
+  {
+    "id": "25f3eb35",
+    "ts": "2026-06-19T13:30:47.749280",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "6f5f0df5",
+    "ts": "2026-06-19T13:30:47.701888",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "8254db08",
+    "ts": "2026-06-19T13:30:47.654689",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "bcac2353",
+    "ts": "2026-06-19T13:30:47.606991",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 13:30:47"
+  },
+  {
+    "id": "e6daf77e",
+    "ts": "2026-06-19T13:30:47.575434",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "4c72e531",
+    "ts": "2026-06-19T13:30:47.524388",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "01c16fd8",
+    "ts": "2026-06-19T13:30:47.452420",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "ed0953a5",
+    "ts": "2026-06-19T13:30:47.404860",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "5b19abac",
+    "ts": "2026-06-19T13:23:32.566477",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "✅ Naukri applied: T3cogno — Senior .Net Developer (100%)"
+  },
+  {
     "id": "9fcdfeda",
     "ts": "2026-06-19T13:23:24.941164",
     "level": "SUCCESS",
@@ -2882,621 +3498,5 @@
     "level": "AI",
     "site": "linkedin",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "47fa8fd0",
-    "ts": "2026-06-19T11:54:05.000793",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "56f50e09",
-    "ts": "2026-06-19T11:54:02.042017",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 12 jobs on page 1"
-  },
-  {
-    "id": "4d6c5ef3",
-    "ts": "2026-06-19T11:53:50.677217",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Malaysia'"
-  },
-  {
-    "id": "f42a167a",
-    "ts": "2026-06-19T11:53:50.625612",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Australia"
-  },
-  {
-    "id": "72e90cc2",
-    "ts": "2026-06-19T11:53:50.520159",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "43e65b62",
-    "ts": "2026-06-19T11:53:46.914190",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "af79531b",
-    "ts": "2026-06-19T11:53:35.345157",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Australia'"
-  },
-  {
-    "id": "ac8e3676",
-    "ts": "2026-06-19T11:53:35.302489",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 6 jobs for '.NET Developer' in UK"
-  },
-  {
-    "id": "3d18b515",
-    "ts": "2026-06-19T11:53:35.214354",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ec0dddd7",
-    "ts": "2026-06-19T11:52:41.126273",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0deeb9f9",
-    "ts": "2026-06-19T11:52:37.585566",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4908a11f",
-    "ts": "2026-06-19T11:52:34.058815",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c1615121",
-    "ts": "2026-06-19T11:52:30.443487",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fd387e51",
-    "ts": "2026-06-19T11:52:26.749602",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "13dae3c3",
-    "ts": "2026-06-19T11:52:08.158462",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Harnham | Mid Level C# Full Stack Engineer (197637) | London Area, United Kingdom | 100% match"
-  },
-  {
-    "id": "62a30065",
-    "ts": "2026-06-19T11:52:08.094806",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Harnham — Mid Level C# Full Stack Engineer (197637)"
-  },
-  {
-    "id": "ba775a8b",
-    "ts": "2026-06-19T11:51:55.090367",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "19081a3f",
-    "ts": "2026-06-19T11:51:54.979692",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Mid_Level_C__Full_St_Harnham_Resume.docx' = 'Deselect resume Siva_Shankar_Mid_Level_C__Full_St_Harnham_Resume.docx'"
-  },
-  {
-    "id": "38ff86c6",
-    "ts": "2026-06-19T11:50:23.304958",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "718aa92c",
-    "ts": "2026-06-19T11:50:01.250835",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Harnham | Senior C# Full Stack Engineer (197637) | London Area, United Kingdom | 100% match"
-  },
-  {
-    "id": "9334578a",
-    "ts": "2026-06-19T11:50:01.175085",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Harnham — Senior C# Full Stack Engineer (197637)"
-  },
-  {
-    "id": "b361f6f5",
-    "ts": "2026-06-19T11:49:48.918625",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "ab13201e",
-    "ts": "2026-06-19T11:49:48.809007",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_C__Full_Stack_Harnham_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_C__Full_Stack_Harnham_Resume.docx'"
-  },
-  {
-    "id": "afb72903",
-    "ts": "2026-06-19T11:48:16.181855",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6f4486bd",
-    "ts": "2026-06-19T11:48:12.212090",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4a03e222",
-    "ts": "2026-06-19T11:47:52.011600",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Quanteam UK | Senior C# Developer - Commodities Trading | London Area, United Kingdom | 100% match"
-  },
-  {
-    "id": "a39c3fb9",
-    "ts": "2026-06-19T11:47:51.945135",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Quanteam UK — Senior C# Developer - Commodities Trading"
-  },
-  {
-    "id": "5bccadeb",
-    "ts": "2026-06-19T11:47:44.411691",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "7f1c59dd",
-    "ts": "2026-06-19T11:47:44.311347",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How many years of working experience do you have with designing and developing derivatives platforms?' = '4'"
-  },
-  {
-    "id": "3497d3f3",
-    "ts": "2026-06-19T11:47:38.526825",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "68437561",
-    "ts": "2026-06-19T11:47:38.433327",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx'"
-  },
-  {
-    "id": "dcb70d78",
-    "ts": "2026-06-19T11:46:06.485190",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8997344b",
-    "ts": "2026-06-19T11:46:03.198500",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3a1095ed",
-    "ts": "2026-06-19T11:45:59.474217",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "850f43e9",
-    "ts": "2026-06-19T11:45:03.426535",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8eb656e1",
-    "ts": "2026-06-19T11:44:59.944001",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0c606be7",
-    "ts": "2026-06-19T11:44:56.777196",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6b160a8e",
-    "ts": "2026-06-19T11:44:53.054508",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6a8aa523",
-    "ts": "2026-06-19T11:44:49.192724",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c0ff392c",
-    "ts": "2026-06-19T11:44:30.843712",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Noir | .NET Developer - Newcastle upon Tyne | Newcastle Upon Tyne, England, United Kingdom | 100% match"
-  },
-  {
-    "id": "57a88523",
-    "ts": "2026-06-19T11:44:30.776036",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Noir — .NET Developer - Newcastle upon Tyne"
-  },
-  {
-    "id": "678ae289",
-    "ts": "2026-06-19T11:44:27.746021",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "7fb7cdfa",
-    "ts": "2026-06-19T11:44:27.653026",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar__NET_Developer_-_New_Noir_Resume.docx' = 'Deselect resume Siva_Shankar__NET_Developer_-_New_Noir_Resume.docx'"
-  },
-  {
-    "id": "d7696439",
-    "ts": "2026-06-19T11:44:27.609471",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'UK'"
-  },
-  {
-    "id": "2681bef5",
-    "ts": "2026-06-19T11:42:58.567699",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "619b82b7",
-    "ts": "2026-06-19T11:42:55.043212",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2650396f",
-    "ts": "2026-06-19T11:42:51.170387",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9ba81948",
-    "ts": "2026-06-19T11:41:57.167805",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "85dd6775",
-    "ts": "2026-06-19T11:41:54.084223",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6b4b3ec6",
-    "ts": "2026-06-19T11:41:50.885442",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6c289aa5",
-    "ts": "2026-06-19T11:41:47.428961",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d090a4e8",
-    "ts": "2026-06-19T11:41:29.713783",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: dunnhumby | Lead Full Stack Engineer | Manchester Area, United Kingdom | 100% match"
-  },
-  {
-    "id": "f1ef03ce",
-    "ts": "2026-06-19T11:41:29.646993",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: dunnhumby — Lead Full Stack Engineer"
-  },
-  {
-    "id": "2e8aaadc",
-    "ts": "2026-06-19T11:41:22.136032",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "5cd62758",
-    "ts": "2026-06-19T11:41:22.042979",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Lead_Full_Stack_Engi_dunnhumby_Resume.docx' = 'Deselect resume Siva_Shankar_Lead_Full_Stack_Engi_dunnhumby_Resume.docx'"
-  },
-  {
-    "id": "68921adb",
-    "ts": "2026-06-19T11:39:52.498882",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "44d4fbab",
-    "ts": "2026-06-19T11:39:48.822653",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 3"
-  },
-  {
-    "id": "5845e004",
-    "ts": "2026-06-19T11:38:55.200642",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7b2e94ec",
-    "ts": "2026-06-19T11:38:04.527217",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ce38eb5a",
-    "ts": "2026-06-19T11:38:00.886096",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "36394644",
-    "ts": "2026-06-19T11:37:57.090636",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "81d4f5af",
-    "ts": "2026-06-19T11:37:53.631586",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9a9ce46c",
-    "ts": "2026-06-19T11:37:49.729989",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cf5ddbf2",
-    "ts": "2026-06-19T11:37:46.664394",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fd3519aa",
-    "ts": "2026-06-19T11:37:43.309262",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "453c5da3",
-    "ts": "2026-06-19T11:37:39.417886",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "be771904",
-    "ts": "2026-06-19T11:37:35.599550",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1d07e87a",
-    "ts": "2026-06-19T11:37:31.746002",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7148b1aa",
-    "ts": "2026-06-19T11:37:28.437079",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "15e4bf20",
-    "ts": "2026-06-19T11:37:25.136350",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1e758320",
-    "ts": "2026-06-19T11:37:21.899164",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c861c2a5",
-    "ts": "2026-06-19T11:37:18.617050",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4e5b9158",
-    "ts": "2026-06-19T11:37:15.617822",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7d118965",
-    "ts": "2026-06-19T11:36:15.261408",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "161c03cf",
-    "ts": "2026-06-19T11:36:11.445754",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a3fe7603",
-    "ts": "2026-06-19T11:35:24.745953",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c044f327",
-    "ts": "2026-06-19T11:35:20.920361",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2d3ef923",
-    "ts": "2026-06-19T11:35:17.684389",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "837b2fc9",
-    "ts": "2026-06-19T11:35:14.295694",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c2c5fb84",
-    "ts": "2026-06-19T11:34:17.590474",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "699ceb3a",
-    "ts": "2026-06-19T11:33:21.317617",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5d2b1b45",
-    "ts": "2026-06-19T11:33:17.729910",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7e875c5b",
-    "ts": "2026-06-19T11:33:14.257676",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "a8193dd2",
-    "ts": "2026-06-19T11:32:19.402498",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "67ec138c",
-    "ts": "2026-06-19T11:32:15.884456",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2df0600e",
-    "ts": "2026-06-19T11:32:12.777715",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "87fc4e68",
-    "ts": "2026-06-19T11:31:48.622447",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Client Server | Software Engineer C# .Net Low Latency | London, England, United Kingdom | 100% match"
-  },
-  {
-    "id": "03929c4a",
-    "ts": "2026-06-19T11:31:48.546872",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Client Server — Software Engineer C# .Net Low Latency"
   }
 ]
