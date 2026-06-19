@@ -1,5 +1,138 @@
 [
   {
+    "id": "7250316b",
+    "ts": "2026-06-19T20:04:33.531279",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Applied: avia technologies | Senior .NET Developer | Bangalore | 100% match"
+  },
+  {
+    "id": "62d86315",
+    "ts": "2026-06-19T20:04:28.927277",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "76953d1c",
+    "ts": "2026-06-19T20:04:28.844218",
+    "level": "AI",
+    "site": "monster",
+    "message": "Filled 17/23 fields via AI."
+  },
+  {
+    "id": "c29b61c9",
+    "ts": "2026-06-19T20:04:24.650776",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Failed to fill field ai-form-field-2: Locator.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting fo"
+  },
+  {
+    "id": "a4ac3f60",
+    "ts": "2026-06-19T20:03:54.170007",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "1e864f6b",
+    "ts": "2026-06-19T20:03:53.138994",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "189a152b",
+    "ts": "2026-06-19T20:03:53.103055",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "a3d87c2f",
+    "ts": "2026-06-19T20:03:52.462013",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5e7bbe94",
+    "ts": "2026-06-19T20:03:52.193203",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "462cd09e",
+    "ts": "2026-06-19T20:03:51.716745",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "590ac18e",
+    "ts": "2026-06-19T20:03:50.704820",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "0af04d84",
+    "ts": "2026-06-19T20:03:28.589383",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "9ac82bed",
+    "ts": "2026-06-19T20:03:28.480699",
+    "level": "INFO",
+    "site": "monster",
+    "message": "🎯 Applying to Foundit: avia technologies - Senior .NET Developer (100%)"
+  },
+  {
+    "id": "a457bcdd",
+    "ts": "2026-06-19T20:03:01.388059",
+    "level": "AI",
+    "site": "monster",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a90e2c7d",
+    "ts": "2026-06-19T20:02:55.988206",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "3b8f83a9",
+    "ts": "2026-06-19T20:02:55.840295",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Found 75 job cards on Foundit page"
+  },
+  {
+    "id": "5ba638fb",
+    "ts": "2026-06-19T20:02:50.531329",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "f2038437",
+    "ts": "2026-06-19T20:02:45.958096",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Foundit: 'Senior .NET Developer' in 'Bangalore' on https://www.foundit.in"
+  },
+  {
+    "id": "128a1829",
+    "ts": "2026-06-19T20:02:45.930003",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Foundit: Applied to 1 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
     "id": "3b3753fc",
     "ts": "2026-06-19T20:02:28.280020",
     "level": "SUCCESS",
@@ -3365,138 +3498,5 @@
     "level": "INFO",
     "site": "monster",
     "message": "Searching Foundit: '.NET Core Developer' in 'Remote' on https://www.foundit.in"
-  },
-  {
-    "id": "a48b5c84",
-    "ts": "2026-06-19T19:46:03.665133",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit: Applied to 0 jobs for '.NET Developer' in Singapore"
-  },
-  {
-    "id": "89b402cf",
-    "ts": "2026-06-19T19:46:03.633207",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quanteam (singapore) pte. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "654fcaee",
-    "ts": "2026-06-19T19:46:03.599598",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b72821e4",
-    "ts": "2026-06-19T19:45:57.588007",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "be2a5d4c",
-    "ts": "2026-06-19T19:45:57.513541",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quanteam (singapore) pte. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "72f131e7",
-    "ts": "2026-06-19T19:45:57.479002",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "14bbe944",
-    "ts": "2026-06-19T19:45:52.216539",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "ecfac651",
-    "ts": "2026-06-19T19:45:52.142042",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quanteam (singapore) pte. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "4037ab0f",
-    "ts": "2026-06-19T19:45:52.104649",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "76e3c3a1",
-    "ts": "2026-06-19T19:45:46.083171",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "fcafa953",
-    "ts": "2026-06-19T19:45:45.995870",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quanteam (singapore) pte. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "17e310d2",
-    "ts": "2026-06-19T19:45:45.961367",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7e14a666",
-    "ts": "2026-06-19T19:45:39.807971",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "72d0c276",
-    "ts": "2026-06-19T19:45:39.733997",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "2fe772c2",
-    "ts": "2026-06-19T19:45:39.702606",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7c53e903",
-    "ts": "2026-06-19T19:45:32.483143",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "7cc3dffd",
-    "ts": "2026-06-19T19:45:32.406202",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "aa1abe75",
-    "ts": "2026-06-19T19:45:32.362544",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8232b069",
-    "ts": "2026-06-19T19:45:26.189210",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
   }
 ]
