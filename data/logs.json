@@ -1,5 +1,208 @@
 [
   {
+    "id": "8c13e301",
+    "ts": "2026-06-19T11:59:26.245334",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Unison Group | .NET Developer | Singapore, Singapore | 100% match"
+  },
+  {
+    "id": "6af7178d",
+    "ts": "2026-06-19T11:59:26.179035",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Unison Group — .NET Developer"
+  },
+  {
+    "id": "18fc71dc",
+    "ts": "2026-06-19T11:59:18.302059",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "4743bb3f",
+    "ts": "2026-06-19T11:59:18.201535",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: '0-15 Days' = '0-15 Days'"
+  },
+  {
+    "id": "671d65d4",
+    "ts": "2026-06-19T11:59:16.338939",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "81d78d37",
+    "ts": "2026-06-19T11:59:16.094159",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "5cbc4a86",
+    "ts": "2026-06-19T11:59:16.059135",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "071418fe",
+    "ts": "2026-06-19T11:59:15.777395",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "8caaffb5",
+    "ts": "2026-06-19T11:59:15.530257",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0af51044",
+    "ts": "2026-06-19T11:59:15.277532",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "559ad82f",
+    "ts": "2026-06-19T11:59:14.964727",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d6f6db44",
+    "ts": "2026-06-19T11:58:45.902148",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "f347b471",
+    "ts": "2026-06-19T11:58:45.808455",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar__NET_Developer_Unison_Group_Resume.docx' = 'Deselect resume Siva_Shankar__NET_Developer_Unison_Group_Resume.docx'"
+  },
+  {
+    "id": "36262494",
+    "ts": "2026-06-19T11:58:39.898382",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "bfd46bb6",
+    "ts": "2026-06-19T11:58:39.792533",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'Singapore'"
+  },
+  {
+    "id": "6ada7800",
+    "ts": "2026-06-19T11:57:15.207698",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e2a57f48",
+    "ts": "2026-06-19T11:57:11.691718",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a8eececb",
+    "ts": "2026-06-19T11:57:08.137081",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e041a237",
+    "ts": "2026-06-19T11:57:04.813516",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d98f453a",
+    "ts": "2026-06-19T11:57:01.057941",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7a7ea1c3",
+    "ts": "2026-06-19T11:56:57.865235",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5a5dc453",
+    "ts": "2026-06-19T11:56:54.535923",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "48579a82",
+    "ts": "2026-06-19T11:56:51.305214",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a23cf423",
+    "ts": "2026-06-19T11:56:47.693153",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5be05d94",
+    "ts": "2026-06-19T11:56:44.548713",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 13 jobs on page 1"
+  },
+  {
+    "id": "bcdcc699",
+    "ts": "2026-06-19T11:56:34.868887",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "786519ce",
+    "ts": "2026-06-19T11:56:34.816125",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for '.NET Developer' in Malaysia"
+  },
+  {
+    "id": "380eaa0a",
+    "ts": "2026-06-19T11:56:34.715453",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fe377b0e",
+    "ts": "2026-06-19T11:56:30.762804",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "55d9e9a8",
     "ts": "2026-06-19T11:56:11.387958",
     "level": "SUCCESS",
@@ -3295,208 +3498,5 @@
     "level": "SUCCESS",
     "site": "linkedin",
     "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "1dbf7ac3",
-    "ts": "2026-06-19T10:40:31.608302",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'By applying for this job, Ι confirm I have read, understood and accepted the content of the Privacy Notice and consent to the processing of my data as part of this application.' = 'Yes'"
-  },
-  {
-    "id": "fb05a527",
-    "ts": "2026-06-19T10:40:18.664430",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "58270852",
-    "ts": "2026-06-19T10:40:18.564469",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Software_Engi_Civica_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Software_Engi_Civica_Resume.docx'"
-  },
-  {
-    "id": "492821a2",
-    "ts": "2026-06-19T10:40:18.520080",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Do you currently have the right to work in the UK?' = 'I require Visa sponsorship'"
-  },
-  {
-    "id": "9dd25360",
-    "ts": "2026-06-19T10:40:18.463832",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Role Preference - Civica Job Family' = 'Software Architecture, Development & Engineering'"
-  },
-  {
-    "id": "c62b0586",
-    "ts": "2026-06-19T10:40:18.426263",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Cover letter' = 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of professional experience delivering scalable, cloud-native applications using C#, ASP.NET Core, Azure, and Angular. At LTIMindtree, I work with Deloitte's enterprise tax platform, optimizing database performance and building high-throughput microservices achieving sub-100ms latency. Previously at DSSI Solutions, I led a 7-member cross-functional team delivering 12+ production microservices at 99.98% uptime. My AZ-204 Azure certification and hands-on experience with TDD, CI/CD, Clean Architecture, and ADO.NET make me a strong fit for this role. Sincerely, Siva Shankar V'"
-  },
-  {
-    "id": "b69fa883",
-    "ts": "2026-06-19T10:40:18.382658",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Current Notice Period' = 'Serving notice (LWD: 14-Aug-2026)'"
-  },
-  {
-    "id": "e0cd9047",
-    "ts": "2026-06-19T10:40:18.341246",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Salary Expectations' = '25'"
-  },
-  {
-    "id": "754cd7a6",
-    "ts": "2026-06-19T10:40:18.295824",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Headline' = 'Senior Software Engineer with 4+ years of experience in .NET development, seeking a challenging role at Civica.'"
-  },
-  {
-    "id": "73430c31",
-    "ts": "2026-06-19T10:40:17.017896",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "4eacb21c",
-    "ts": "2026-06-19T10:40:16.743696",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "499b9a58",
-    "ts": "2026-06-19T10:40:16.679178",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "c611065d",
-    "ts": "2026-06-19T10:40:16.379777",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "de0fdf27",
-    "ts": "2026-06-19T10:40:16.068044",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1df6ef6d",
-    "ts": "2026-06-19T10:40:15.726964",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "c3a747cc",
-    "ts": "2026-06-19T10:40:15.357016",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "99ace317",
-    "ts": "2026-06-19T10:39:56.535449",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "f51b3449",
-    "ts": "2026-06-19T10:39:56.246215",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d4e04be8",
-    "ts": "2026-06-19T10:39:56.206227",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "3648d929",
-    "ts": "2026-06-19T10:39:55.894459",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "41714b72",
-    "ts": "2026-06-19T10:39:55.561988",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "9b9f3785",
-    "ts": "2026-06-19T10:39:55.222633",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "6aceccba",
-    "ts": "2026-06-19T10:39:54.899593",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "6946b7b5",
-    "ts": "2026-06-19T10:39:31.830376",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "aaa7cc67",
-    "ts": "2026-06-19T10:39:31.752518",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'No' = 'No'"
-  },
-  {
-    "id": "df7577d9",
-    "ts": "2026-06-19T10:39:31.707222",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Have you been referred to this role by a Civica employee?' = 'No'"
-  },
-  {
-    "id": "dcd3bd68",
-    "ts": "2026-06-19T10:39:31.661236",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'If yes, who referred you?' = 'Yes'"
-  },
-  {
-    "id": "5a61747d",
-    "ts": "2026-06-19T10:39:30.923380",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "16affbbb",
-    "ts": "2026-06-19T10:39:30.653363",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
   }
 ]
