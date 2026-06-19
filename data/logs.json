@@ -1,5 +1,1482 @@
 [
   {
+    "id": "3b3753fc",
+    "ts": "2026-06-19T20:02:28.280020",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Applied: Tetra Computing LLC | Senior .NET Developer | Remote | 100% match"
+  },
+  {
+    "id": "2ca06c8d",
+    "ts": "2026-06-19T20:02:22.353841",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "23244736",
+    "ts": "2026-06-19T20:02:22.295931",
+    "level": "AI",
+    "site": "monster",
+    "message": "Filled 2/45 fields via AI."
+  },
+  {
+    "id": "dcb9f8c5",
+    "ts": "2026-06-19T20:02:22.130057",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Failed to fill field ai-form-field-16: Locator.select_option: Timeout 30000ms exceeded.\nCall log:\nw"
+  },
+  {
+    "id": "1a398ea5",
+    "ts": "2026-06-19T20:01:51.546836",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Failed to fill field ai-form-field-2: Locator.fill: Timeout 30000ms exceeded.\nCall log:\nwaiting fo"
+  },
+  {
+    "id": "14ce2a9a",
+    "ts": "2026-06-19T20:01:20.987971",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "72cee372",
+    "ts": "2026-06-19T20:01:19.448309",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "ab58ff79",
+    "ts": "2026-06-19T20:01:19.402932",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "451d49d0",
+    "ts": "2026-06-19T20:01:18.363435",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "901e139e",
+    "ts": "2026-06-19T20:01:17.888946",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3397b13f",
+    "ts": "2026-06-19T20:01:17.405971",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7c08dcb3",
+    "ts": "2026-06-19T20:01:17.054999",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d8344d93",
+    "ts": "2026-06-19T20:00:54.516809",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "79a5b528",
+    "ts": "2026-06-19T20:00:54.422594",
+    "level": "INFO",
+    "site": "monster",
+    "message": "🎯 Applying to Foundit: Tetra Computing LLC - Senior .NET Developer (100%)"
+  },
+  {
+    "id": "6c459973",
+    "ts": "2026-06-19T20:00:22.468308",
+    "level": "AI",
+    "site": "monster",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "057ad58c",
+    "ts": "2026-06-19T20:00:17.179888",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "cd42bfe3",
+    "ts": "2026-06-19T20:00:17.115483",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Found 6 job cards on Foundit page"
+  },
+  {
+    "id": "c0d56137",
+    "ts": "2026-06-19T20:00:13.168939",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "5320a362",
+    "ts": "2026-06-19T20:00:08.443747",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Foundit: 'Senior .NET Developer' in 'Remote' on https://www.foundit.in"
+  },
+  {
+    "id": "0a34eb6b",
+    "ts": "2026-06-19T20:00:08.405768",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
+  },
+  {
+    "id": "7e8621cf",
+    "ts": "2026-06-19T20:00:03.676031",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Logging into Foundit portal: https://www.foundit.in..."
+  },
+  {
+    "id": "fd510df0",
+    "ts": "2026-06-19T20:00:03.062112",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 0 positions."
+  },
+  {
+    "id": "6b6d8617",
+    "ts": "2026-06-19T20:00:02.951974",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Total deduplicated job URLs to process: 0"
+  },
+  {
+    "id": "d51c0c73",
+    "ts": "2026-06-19T20:00:02.855531",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 0 job URLs directly from target companies"
+  },
+  {
+    "id": "f7c44444",
+    "ts": "2026-06-19T20:00:02.768156",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Box: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "3ff1f494",
+    "ts": "2026-06-19T20:00:02.674727",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Box..."
+  },
+  {
+    "id": "c1a550fc",
+    "ts": "2026-06-19T20:00:02.596275",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Docker: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4063d5b0",
+    "ts": "2026-06-19T20:00:02.505667",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Docker..."
+  },
+  {
+    "id": "9079cadf",
+    "ts": "2026-06-19T20:00:02.429383",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Zoho: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "a5b4fec0",
+    "ts": "2026-06-19T20:00:02.343902",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Zoho..."
+  },
+  {
+    "id": "6d71c66c",
+    "ts": "2026-06-19T20:00:02.253109",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Vercel: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "fd468fe5",
+    "ts": "2026-06-19T20:00:02.199683",
+    "level": "INFO",
+    "site": "monster",
+    "message": "🚀 Starting Foundit (formerly Monster) bot"
+  },
+  {
+    "id": "4ddc782f",
+    "ts": "2026-06-19T20:00:02.168053",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Vercel..."
+  },
+  {
+    "id": "d56769e2",
+    "ts": "2026-06-19T20:00:02.127912",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Foundit ---"
+  },
+  {
+    "id": "4c19ae14",
+    "ts": "2026-06-19T20:00:02.107948",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company HubSpot: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "1f6a7be4",
+    "ts": "2026-06-19T20:00:01.998003",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "53f6f87d",
+    "ts": "2026-06-19T20:00:01.964714",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: HubSpot..."
+  },
+  {
+    "id": "4eab664b",
+    "ts": "2026-06-19T20:00:01.880145",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "e225986f",
+    "ts": "2026-06-19T20:00:01.852266",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company CRED: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "77dbbedb",
+    "ts": "2026-06-19T20:00:01.757905",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "a2f0f698",
+    "ts": "2026-06-19T20:00:01.710037",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: CRED..."
+  },
+  {
+    "id": "3ee917a0",
+    "ts": "2026-06-19T20:00:01.626010",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 20:00:01"
+  },
+  {
+    "id": "c64dc3b9",
+    "ts": "2026-06-19T20:00:01.581843",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Notion: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "dea51a96",
+    "ts": "2026-06-19T20:00:01.483244",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "b8a8cf22",
+    "ts": "2026-06-19T20:00:01.440642",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Notion..."
+  },
+  {
+    "id": "addc4899",
+    "ts": "2026-06-19T20:00:01.347843",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "e6a764d7",
+    "ts": "2026-06-19T20:00:01.311630",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Robinhood: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "fafd0e12",
+    "ts": "2026-06-19T20:00:01.209833",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "71c3ec28",
+    "ts": "2026-06-19T20:00:01.155530",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Robinhood..."
+  },
+  {
+    "id": "91ab8a7a",
+    "ts": "2026-06-19T20:00:01.115496",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "b80ecda9",
+    "ts": "2026-06-19T20:00:01.071098",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Freshworks: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "c16c18b1",
+    "ts": "2026-06-19T20:00:00.979665",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Freshworks..."
+  },
+  {
+    "id": "5745f89d",
+    "ts": "2026-06-19T20:00:00.897973",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check target company Netlify: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "069bf82b",
+    "ts": "2026-06-19T20:00:00.797793",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Checking target company career portal: Netlify..."
+  },
+  {
+    "id": "ac79e397",
+    "ts": "2026-06-19T20:00:00.719973",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovering jobs directly from target companies..."
+  },
+  {
+    "id": "247aee6a",
+    "ts": "2026-06-19T20:00:00.647738",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 0 job URLs from Google search"
+  },
+  {
+    "id": "d3570099",
+    "ts": "2026-06-19T20:00:00.547852",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4553b1f1",
+    "ts": "2026-06-19T20:00:00.480330",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "8e80efbf",
+    "ts": "2026-06-19T20:00:00.407791",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "a482d2a2",
+    "ts": "2026-06-19T20:00:00.338044",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4bd10a8c",
+    "ts": "2026-06-19T20:00:00.288108",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ff0927b2",
+    "ts": "2026-06-19T20:00:00.197936",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "71384aaf",
+    "ts": "2026-06-19T20:00:00.142252",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "8e232c0b",
+    "ts": "2026-06-19T20:00:00.077779",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.eval_on_selector_all: Target page, context or browser has been closed"
+  },
+  {
+    "id": "86ae93cf",
+    "ts": "2026-06-19T19:59:54.807804",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "3dd5ea81",
+    "ts": "2026-06-19T19:59:54.773490",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "af7ad672",
+    "ts": "2026-06-19T19:59:54.739522",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "b0442133",
+    "ts": "2026-06-19T19:59:54.707769",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "fe0f1737",
+    "ts": "2026-06-19T19:59:54.670540",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "5632be9b",
+    "ts": "2026-06-19T19:59:54.642572",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:59:54"
+  },
+  {
+    "id": "0ea7c523",
+    "ts": "2026-06-19T19:59:54.611804",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5fd251e0",
+    "ts": "2026-06-19T19:59:54.581110",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "9a0576e7",
+    "ts": "2026-06-19T19:59:54.549085",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "859986c0",
+    "ts": "2026-06-19T19:59:54.517891",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "ef590133",
+    "ts": "2026-06-19T19:59:52.788001",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "b5f3291d",
+    "ts": "2026-06-19T19:59:52.677864",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Naukri login failed: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "bdbf4f88",
+    "ts": "2026-06-19T19:59:48.802250",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "441f5a02",
+    "ts": "2026-06-19T19:59:47.259876",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "47a19311",
+    "ts": "2026-06-19T19:59:47.197838",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "fa2e8700",
+    "ts": "2026-06-19T19:59:47.140755",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "9a0b2885",
+    "ts": "2026-06-19T19:59:47.080914",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "36316fd1",
+    "ts": "2026-06-19T19:59:47.022081",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "ad809710",
+    "ts": "2026-06-19T19:59:46.965850",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:59:46"
+  },
+  {
+    "id": "3aff78fe",
+    "ts": "2026-06-19T19:59:46.906894",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "a757dbef",
+    "ts": "2026-06-19T19:59:46.841653",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "5e53066d",
+    "ts": "2026-06-19T19:59:46.789383",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "098103eb",
+    "ts": "2026-06-19T19:59:46.719890",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "144aeed5",
+    "ts": "2026-06-19T19:59:42.456249",
+    "level": "ERROR",
+    "site": "shine",
+    "message": "Shine bot crash: Page.query_selector_all: Target page, context or browser has been closed"
+  },
+  {
+    "id": "eb5e62b1",
+    "ts": "2026-06-19T19:59:38.220705",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "6d00cacd",
+    "ts": "2026-06-19T19:59:38.174004",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "26e8abe6",
+    "ts": "2026-06-19T19:59:34.079531",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "fa60d67e",
+    "ts": "2026-06-19T19:59:34.057601",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "f4f083a3",
+    "ts": "2026-06-19T19:59:30.247599",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Australia'"
+  },
+  {
+    "id": "bd1ae934",
+    "ts": "2026-06-19T19:59:30.217950",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "6ada8472",
+    "ts": "2026-06-19T19:59:26.147614",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'UK'"
+  },
+  {
+    "id": "acef5960",
+    "ts": "2026-06-19T19:59:26.098329",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "9a957b28",
+    "ts": "2026-06-19T19:59:21.762524",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "24a45c72",
+    "ts": "2026-06-19T19:59:21.703804",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "44e4826e",
+    "ts": "2026-06-19T19:59:18.282175",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "b482530d",
+    "ts": "2026-06-19T19:59:18.230168",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "bedcd644",
+    "ts": "2026-06-19T19:59:14.297899",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "2e4808fb",
+    "ts": "2026-06-19T19:59:14.240280",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine: Applied to 0 jobs"
+  },
+  {
+    "id": "d28b74f7",
+    "ts": "2026-06-19T19:59:10.336412",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "52e26b0a",
+    "ts": "2026-06-19T19:59:10.290396",
+    "level": "WARN",
+    "site": "shine",
+    "message": "Failed to update Shine profile: Timeout 30000ms exceeded while waiting for event \"filechooser\"\n=========================== logs ===========================\nwaiting for event \"filechooser\"\n============================================================"
+  },
+  {
+    "id": "d41f502b",
+    "ts": "2026-06-19T19:58:40.197988",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Clicking upload button to select file..."
+  },
+  {
+    "id": "6623eccd",
+    "ts": "2026-06-19T19:58:35.564749",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Attempting to update Shine profile and upload resume..."
+  },
+  {
+    "id": "38ca349f",
+    "ts": "2026-06-19T19:58:35.520870",
+    "level": "SUCCESS",
+    "site": "shine",
+    "message": "Shine login successful ✅"
+  },
+  {
+    "id": "a54d7b64",
+    "ts": "2026-06-19T19:58:28.128308",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine Login: Attempting direct email/password login..."
+  },
+  {
+    "id": "14f7e471",
+    "ts": "2026-06-19T19:58:23.585478",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "7657c59e",
+    "ts": "2026-06-19T19:58:22.847929",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "58427157",
+    "ts": "2026-06-19T19:58:22.826129",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "e7e70e08",
+    "ts": "2026-06-19T19:58:22.798104",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "b94d6e89",
+    "ts": "2026-06-19T19:58:22.768062",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "50bafb84",
+    "ts": "2026-06-19T19:58:22.741897",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "873311c1",
+    "ts": "2026-06-19T19:58:22.717805",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:58:22"
+  },
+  {
+    "id": "ddb695ef",
+    "ts": "2026-06-19T19:58:22.687954",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d4180619",
+    "ts": "2026-06-19T19:58:22.661903",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "39585649",
+    "ts": "2026-06-19T19:58:22.638136",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "557283d6",
+    "ts": "2026-06-19T19:58:22.607944",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "63ab455b",
+    "ts": "2026-06-19T19:58:17.761184",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 51s before next site..."
+  },
+  {
+    "id": "2c40f5b9",
+    "ts": "2026-06-19T19:58:17.735494",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Indeed India done ---"
+  },
+  {
+    "id": "a4a729c1",
+    "ts": "2026-06-19T19:58:17.426538",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed bot crash: Page.query_selector_all: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "id": "254a5865",
+    "ts": "2026-06-19T19:58:14.605172",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior .NET Developer' in 'Chennai' on https://in.indeed.com"
+  },
+  {
+    "id": "b254f358",
+    "ts": "2026-06-19T19:58:14.563781",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "dd4e61f0",
+    "ts": "2026-06-19T19:58:11.231260",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior .NET Developer' in 'Bangalore' on https://in.indeed.com"
+  },
+  {
+    "id": "7f08b7d9",
+    "ts": "2026-06-19T19:58:11.182312",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "a8370f82",
+    "ts": "2026-06-19T19:58:08.253269",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior .NET Developer' in 'Remote' on https://in.indeed.com"
+  },
+  {
+    "id": "bf1b6997",
+    "ts": "2026-06-19T19:58:08.194937",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in via active session (URL: https://secure.indeed.com/)"
+  },
+  {
+    "id": "78483611",
+    "ts": "2026-06-19T19:58:01.646157",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Logging into Indeed portal: https://in.indeed.com..."
+  },
+  {
+    "id": "daf6cfa8",
+    "ts": "2026-06-19T19:58:00.718122",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed bot"
+  },
+  {
+    "id": "aea92f87",
+    "ts": "2026-06-19T19:58:00.693945",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed India ---"
+  },
+  {
+    "id": "02e95fb5",
+    "ts": "2026-06-19T19:58:00.667784",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "c2e13769",
+    "ts": "2026-06-19T19:58:00.643141",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "f53aeed8",
+    "ts": "2026-06-19T19:58:00.617688",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "0be02f71",
+    "ts": "2026-06-19T19:58:00.589999",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:58:00"
+  },
+  {
+    "id": "5dad5a38",
+    "ts": "2026-06-19T19:58:00.557828",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "df51b8fa",
+    "ts": "2026-06-19T19:58:00.537619",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "f8ea1e56",
+    "ts": "2026-06-19T19:58:00.508016",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "1a059a43",
+    "ts": "2026-06-19T19:58:00.478053",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "8cd0b6e6",
+    "ts": "2026-06-19T19:57:55.467903",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "5c486b88",
+    "ts": "2026-06-19T19:57:54.737969",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "🚀 Starting Jooble bot"
+  },
+  {
+    "id": "66577af5",
+    "ts": "2026-06-19T19:57:54.709955",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Jooble ---"
+  },
+  {
+    "id": "7fe6ea04",
+    "ts": "2026-06-19T19:57:54.683092",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "018b1d1c",
+    "ts": "2026-06-19T19:57:54.657927",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "48bd5c82",
+    "ts": "2026-06-19T19:57:54.631810",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "914a6c79",
+    "ts": "2026-06-19T19:57:54.602947",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:57:54"
+  },
+  {
+    "id": "b8837d3f",
+    "ts": "2026-06-19T19:57:54.577701",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "10cbd3bc",
+    "ts": "2026-06-19T19:57:54.552012",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "8bf60f27",
+    "ts": "2026-06-19T19:57:54.521454",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "52b89f4d",
+    "ts": "2026-06-19T19:57:54.493563",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "aaa77422",
+    "ts": "2026-06-19T19:57:50.931867",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 70s before next site..."
+  },
+  {
+    "id": "9605bda2",
+    "ts": "2026-06-19T19:57:50.904133",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Jooble done ---"
+  },
+  {
+    "id": "fb1bd35c",
+    "ts": "2026-06-19T19:57:50.578010",
+    "level": "ERROR",
+    "site": "jooble",
+    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
+  },
+  {
+    "id": "5db235de",
+    "ts": "2026-06-19T19:57:46.698835",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "48ff0b1c",
+    "ts": "2026-06-19T19:57:45.942183",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "🚀 Starting Jooble bot"
+  },
+  {
+    "id": "4bd4f425",
+    "ts": "2026-06-19T19:57:45.907764",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Jooble ---"
+  },
+  {
+    "id": "828f37b5",
+    "ts": "2026-06-19T19:57:45.887607",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "cfe17129",
+    "ts": "2026-06-19T19:57:45.861010",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "ca968827",
+    "ts": "2026-06-19T19:57:45.833164",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "c8a39ace",
+    "ts": "2026-06-19T19:57:45.807813",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:57:45"
+  },
+  {
+    "id": "32cdaf6b",
+    "ts": "2026-06-19T19:57:45.780139",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d99d9628",
+    "ts": "2026-06-19T19:57:45.753096",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "d9d175ab",
+    "ts": "2026-06-19T19:57:45.727639",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "e11ba09d",
+    "ts": "2026-06-19T19:57:45.697986",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "4d5566a3",
+    "ts": "2026-06-19T19:57:37.855986",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "878df3a2",
+    "ts": "2026-06-19T19:57:37.832630",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "5d7ed067",
+    "ts": "2026-06-19T19:57:37.805820",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "348e4125",
+    "ts": "2026-06-19T19:57:37.779915",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "7dfe186c",
+    "ts": "2026-06-19T19:57:37.748036",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "bd695e6a",
+    "ts": "2026-06-19T19:57:37.724077",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:57:37"
+  },
+  {
+    "id": "56eef990",
+    "ts": "2026-06-19T19:57:37.698002",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "d30c9ed9",
+    "ts": "2026-06-19T19:57:37.669937",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "db77e4bf",
+    "ts": "2026-06-19T19:57:37.637620",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "7bb1ebd7",
+    "ts": "2026-06-19T19:57:37.608013",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "c6a3543d",
+    "ts": "2026-06-19T19:55:46.217914",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 31s before next site..."
+  },
+  {
+    "id": "e4bad19b",
+    "ts": "2026-06-19T19:55:46.123525",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Skipping LinkedIn — daily limit reached"
+  },
+  {
+    "id": "a71f8fec",
+    "ts": "2026-06-19T19:55:46.037851",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Daily limit reached for linkedin (25/25). Skipping for today."
+  },
+  {
+    "id": "9c495a3b",
+    "ts": "2026-06-19T19:55:45.977860",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Indeed India done ---"
+  },
+  {
+    "id": "621e23c3",
+    "ts": "2026-06-19T19:55:45.518241",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed bot crash: Page.query_selector: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "id": "3c2f5e24",
+    "ts": "2026-06-19T19:55:43.609836",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Still waiting for Indeed login/code... 40 seconds remaining. Current URL: https://secure.indeed.com/postauthfunnel?newAccount=false&hl=en&userType=jobSeeker"
+  },
+  {
+    "id": "4f49b877",
+    "ts": "2026-06-19T19:55:33.262150",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Still waiting for Indeed login/code... 50 seconds remaining. Current URL: https://secure.indeed.com/auth#"
+  },
+  {
+    "id": "83a213a3",
+    "ts": "2026-06-19T19:55:22.988239",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Login: Please complete login/OTP/verification in the browser. Waiting up to 60 seconds..."
+  },
+  {
+    "id": "154deeeb",
+    "ts": "2026-06-19T19:55:17.922158",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Login: Autofilling email..."
+  },
+  {
+    "id": "eb379278",
+    "ts": "2026-06-19T19:55:13.329462",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Logging into Indeed portal: https://in.indeed.com..."
+  },
+  {
+    "id": "a36fe179",
+    "ts": "2026-06-19T19:55:12.254670",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed bot"
+  },
+  {
+    "id": "50b83b4f",
+    "ts": "2026-06-19T19:55:12.227938",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed India ---"
+  },
+  {
+    "id": "dacc6dc3",
+    "ts": "2026-06-19T19:55:12.202932",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
+  },
+  {
+    "id": "4b8843c9",
+    "ts": "2026-06-19T19:55:12.177859",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "fe31b455",
+    "ts": "2026-06-19T19:55:12.147867",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
+  },
+  {
+    "id": "a86d1b4e",
+    "ts": "2026-06-19T19:55:12.123939",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-19 19:55:12"
+  },
+  {
+    "id": "b364eca5",
+    "ts": "2026-06-19T19:55:12.097896",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "35f5be95",
+    "ts": "2026-06-19T19:55:12.067728",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "b3a1c789",
+    "ts": "2026-06-19T19:55:12.045623",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "dcd142e0",
+    "ts": "2026-06-19T19:55:12.017714",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "3eb8ef54",
+    "ts": "2026-06-19T19:55:00.225442",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "b6f71a6e",
+    "ts": "2026-06-19T19:55:00.187863",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.jobstreet.com.my..."
+  },
+  {
+    "id": "089c426d",
+    "ts": "2026-06-19T19:55:00.157853",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet: Applied to 1 jobs for 'Senior .NET Developer' in Australia"
+  },
+  {
+    "id": "92328093",
+    "ts": "2026-06-19T19:55:00.099250",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "f3dea821",
+    "ts": "2026-06-19T19:55:00.038176",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "a4d71c63",
+    "ts": "2026-06-19T19:54:59.997872",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "228516f5",
+    "ts": "2026-06-19T19:54:59.961380",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d5386bab",
+    "ts": "2026-06-19T19:54:59.930243",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d0ae9bb9",
+    "ts": "2026-06-19T19:54:59.889235",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "a795c5b8",
+    "ts": "2026-06-19T19:54:59.861292",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "7eb0eb6e",
+    "ts": "2026-06-19T19:54:59.818015",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4a4fc155",
+    "ts": "2026-06-19T19:54:59.788017",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "48e812f4",
+    "ts": "2026-06-19T19:54:59.758686",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "fb37634a",
+    "ts": "2026-06-19T19:54:59.714010",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ad77ac2f",
+    "ts": "2026-06-19T19:54:59.658242",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "c1b3e244",
+    "ts": "2026-06-19T19:54:59.616982",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "JobStreet job error: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "541dad1b",
+    "ts": "2026-06-19T19:54:56.428032",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Skipping Global 360 - Senior Software Engineer (.NET / Angular) (Already applied)"
+  },
+  {
     "id": "c214db1a",
     "ts": "2026-06-19T19:54:38.907712",
     "level": "SUCCESS",
@@ -2018,1483 +3495,6 @@
   {
     "id": "8232b069",
     "ts": "2026-06-19T19:45:26.189210",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "71e6096d",
-    "ts": "2026-06-19T19:45:26.118646",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "78812716",
-    "ts": "2026-06-19T19:45:26.065371",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "71e49973",
-    "ts": "2026-06-19T19:45:19.593956",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "79dd8c19",
-    "ts": "2026-06-19T19:45:19.520466",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "67f94e61",
-    "ts": "2026-06-19T19:45:19.473127",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fa3da64f",
-    "ts": "2026-06-19T19:45:13.618391",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "39601e62",
-    "ts": "2026-06-19T19:45:13.534886",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "3d103bca",
-    "ts": "2026-06-19T19:45:13.495449",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e2d6b981",
-    "ts": "2026-06-19T19:45:07.394908",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "7ba64d73",
-    "ts": "2026-06-19T19:45:07.322466",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Argyll Scott - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "fad2527e",
-    "ts": "2026-06-19T19:45:07.281135",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d389f5d5",
-    "ts": "2026-06-19T19:45:00.732056",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "aceda81c",
-    "ts": "2026-06-19T19:45:00.623100",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infinite Computer Solutions Pte Ltd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "1048b0a6",
-    "ts": "2026-06-19T19:45:00.588445",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "da3ef757",
-    "ts": "2026-06-19T19:44:55.191769",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "a334752e",
-    "ts": "2026-06-19T19:44:55.081830",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Foundit job error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #1\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #54\n  -   waiting 500ms\n"
-  },
-  {
-    "id": "53e68faf",
-    "ts": "2026-06-19T19:44:22.052306",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "3c58ada1",
-    "ts": "2026-06-19T19:44:21.980053",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infinite Computer Solutions Pte Ltd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "52ccd609",
-    "ts": "2026-06-19T19:44:21.936488",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "60bd1979",
-    "ts": "2026-06-19T19:44:15.711134",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "6421ee20",
-    "ts": "2026-06-19T19:44:15.642689",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infinite Computer Solutions Pte Ltd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "117fbadf",
-    "ts": "2026-06-19T19:44:15.607791",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8cd1cb45",
-    "ts": "2026-06-19T19:44:09.687728",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "01dab157",
-    "ts": "2026-06-19T19:44:09.611661",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infinite Computer Solutions Pte Ltd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "702d070e",
-    "ts": "2026-06-19T19:44:09.562252",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d9fff9a4",
-    "ts": "2026-06-19T19:44:00.017811",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "3a4cc4ef",
-    "ts": "2026-06-19T19:43:59.919599",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Found 76 job cards on Foundit page"
-  },
-  {
-    "id": "680ca12f",
-    "ts": "2026-06-19T19:43:54.984042",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "f73c1b55",
-    "ts": "2026-06-19T19:43:45.574774",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: '.NET Developer' in 'Singapore' on https://www.foundit.sg"
-  },
-  {
-    "id": "f22811bc",
-    "ts": "2026-06-19T19:43:45.543971",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit: Applied to 0 jobs for '.NET Developer' in Malaysia"
-  },
-  {
-    "id": "c9ee6e09",
-    "ts": "2026-06-19T19:43:45.511847",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping HTC Global Services (India) Private Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "cf094359",
-    "ts": "2026-06-19T19:43:45.479639",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "abdd2e89",
-    "ts": "2026-06-19T19:43:38.912685",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "f2935472",
-    "ts": "2026-06-19T19:43:38.820023",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping HTC Global Services (India) Private Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "0fe78b8d",
-    "ts": "2026-06-19T19:43:38.787699",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "eb7e3d1d",
-    "ts": "2026-06-19T19:43:33.125401",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "ce298d33",
-    "ts": "2026-06-19T19:43:31.721597",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "4b6d73e2",
-    "ts": "2026-06-19T19:43:31.689954",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9cad3596",
-    "ts": "2026-06-19T19:43:24.654990",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "0b323ca5",
-    "ts": "2026-06-19T19:43:24.562903",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "d47cc781",
-    "ts": "2026-06-19T19:43:24.534315",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4151aedd",
-    "ts": "2026-06-19T19:43:18.275359",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "0a529e2f",
-    "ts": "2026-06-19T19:43:18.204735",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "0d6ce962",
-    "ts": "2026-06-19T19:43:18.169662",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fd27664d",
-    "ts": "2026-06-19T19:43:12.191963",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "3dbfe050",
-    "ts": "2026-06-19T19:43:10.084241",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "7932f99e",
-    "ts": "2026-06-19T19:43:10.006956",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "92307327",
-    "ts": "2026-06-19T19:43:09.968792",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b4727602",
-    "ts": "2026-06-19T19:43:04.326225",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "632bab97",
-    "ts": "2026-06-19T19:43:04.254508",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "77caa689",
-    "ts": "2026-06-19T19:43:04.216607",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab47c5c1",
-    "ts": "2026-06-19T19:42:58.484089",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "3441ddd0",
-    "ts": "2026-06-19T19:42:58.416435",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "f955b851",
-    "ts": "2026-06-19T19:42:58.385792",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "96229d48",
-    "ts": "2026-06-19T19:42:52.659856",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "9772f3a8",
-    "ts": "2026-06-19T19:42:52.592663",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Accion Labs Sdn Bhd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "ae33ef2b",
-    "ts": "2026-06-19T19:42:52.558659",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1874b92d",
-    "ts": "2026-06-19T19:42:46.964221",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "60f705e2",
-    "ts": "2026-06-19T19:42:46.849549",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Foundit job error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #1\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <button type=\"button\" class=\"inline-flex items-center ju…>Got it!</button> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #54\n  -   waiting 500ms\n"
-  },
-  {
-    "id": "a53c72dd",
-    "ts": "2026-06-19T19:42:13.852733",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "71157d9d",
-    "ts": "2026-06-19T19:42:13.738940",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Foundit job error: ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\nattempting click action\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #1\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #2\n  -   waiting 20ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #3\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #4\n  -   waiting 100ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #5\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #6\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #7\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #8\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #9\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #10\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #11\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #12\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #13\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #14\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #15\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #16\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #17\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #18\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #19\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #20\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #21\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #22\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #23\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #24\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #25\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #26\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #27\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #28\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #29\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #30\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #31\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #32\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #33\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #34\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #35\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #36\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #37\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #38\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #39\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #40\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #41\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #42\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #43\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #44\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #45\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #46\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #47\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #48\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #49\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #50\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #51\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"flex_between max-w-[1188px] px-4 md:conta…>…</div> from <header id=\"headerDefault\" class=\"pg-wrapper header-wrap\">…</header> subtree intercepts pointer events\n  - retrying click action, attempt #52\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #53\n  -   waiting 500ms\n  -   waiting for element to be visible, enabled and stable\n  -   element is visible, enabled and stable\n  -   scrolling into view if needed\n  -   done scrolling\n  -   <div class=\"toolTipBtnWrapper\">…</div> from <div class=\"cardHead\">…</div> subtree intercepts pointer events\n  - retrying click action, attempt #54\n  -   waiting 500ms\n"
-  },
-  {
-    "id": "d196efbe",
-    "ts": "2026-06-19T19:41:40.653769",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "9fc55d07",
-    "ts": "2026-06-19T19:41:40.575895",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Accion Labs Sdn Bhd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "77ff8cb6",
-    "ts": "2026-06-19T19:41:40.546438",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "50afc0ec",
-    "ts": "2026-06-19T19:41:34.878764",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "a3cef619",
-    "ts": "2026-06-19T19:41:34.812931",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Accion Labs Sdn Bhd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "0c35ed8a",
-    "ts": "2026-06-19T19:41:34.780243",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e35a8b57",
-    "ts": "2026-06-19T19:41:28.456009",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "489b664b",
-    "ts": "2026-06-19T19:41:28.390846",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Accion Labs Sdn Bhd - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "ef7d7188",
-    "ts": "2026-06-19T19:41:28.356933",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0bedf073",
-    "ts": "2026-06-19T19:41:19.619118",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "7488340e",
-    "ts": "2026-06-19T19:41:19.526183",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Found 84 job cards on Foundit page"
-  },
-  {
-    "id": "56bea6b3",
-    "ts": "2026-06-19T19:41:12.078109",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "6cb39045",
-    "ts": "2026-06-19T19:41:04.189615",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: '.NET Developer' in 'Malaysia' on https://www.foundit.my"
-  },
-  {
-    "id": "dac61021",
-    "ts": "2026-06-19T19:41:04.160796",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'Australia' — skipping location"
-  },
-  {
-    "id": "e939c394",
-    "ts": "2026-06-19T19:41:04.133247",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'UK' — skipping location"
-  },
-  {
-    "id": "4dac178a",
-    "ts": "2026-06-19T19:41:04.102693",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit: Applied to 0 jobs for '.NET Developer' in Hyderabad"
-  },
-  {
-    "id": "f76b718a",
-    "ts": "2026-06-19T19:41:04.074911",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "5446dafc",
-    "ts": "2026-06-19T19:41:04.043539",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e74e70e0",
-    "ts": "2026-06-19T19:40:57.600742",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "c708db20",
-    "ts": "2026-06-19T19:40:57.529060",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "805f22a9",
-    "ts": "2026-06-19T19:40:57.490673",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0180903b",
-    "ts": "2026-06-19T19:40:52.332266",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "c72955d5",
-    "ts": "2026-06-19T19:40:52.086577",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "b49075bd",
-    "ts": "2026-06-19T19:40:51.988401",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1bf39160",
-    "ts": "2026-06-19T19:40:14.071084",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "13a6a3e2",
-    "ts": "2026-06-19T19:40:13.897123",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "52d0f188",
-    "ts": "2026-06-19T19:40:13.850881",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1024583e",
-    "ts": "2026-06-19T19:40:06.901689",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "cf738db3",
-    "ts": "2026-06-19T19:40:06.833977",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "7ce39ee9",
-    "ts": "2026-06-19T19:40:06.805807",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "485ac2c8",
-    "ts": "2026-06-19T19:40:00.283665",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "ff9b99d7",
-    "ts": "2026-06-19T19:40:00.222997",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "8ac0c9fb",
-    "ts": "2026-06-19T19:40:00.194843",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "47bbfd4b",
-    "ts": "2026-06-19T19:39:55.147057",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "b612216f",
-    "ts": "2026-06-19T19:39:55.079241",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "63cd92fc",
-    "ts": "2026-06-19T19:39:55.044001",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b281ee02",
-    "ts": "2026-06-19T19:39:49.669750",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "0c5e132d",
-    "ts": "2026-06-19T19:39:49.549281",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "75ecb976",
-    "ts": "2026-06-19T19:39:49.518956",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ecf3c70f",
-    "ts": "2026-06-19T19:39:43.856766",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "106d4cb4",
-    "ts": "2026-06-19T19:39:43.795373",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "a83ec689",
-    "ts": "2026-06-19T19:39:43.762556",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c2422d22",
-    "ts": "2026-06-19T19:39:37.506739",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "5359d30d",
-    "ts": "2026-06-19T19:39:37.446596",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping quadrantech pvt. ltd. - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "7fd9d91d",
-    "ts": "2026-06-19T19:39:37.415995",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ce6ab251",
-    "ts": "2026-06-19T19:39:31.867138",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "da3fff22",
-    "ts": "2026-06-19T19:39:31.808402",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "0b937166",
-    "ts": "2026-06-19T19:39:31.779887",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d866d53a",
-    "ts": "2026-06-19T19:39:25.771396",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "d8fb8fba",
-    "ts": "2026-06-19T19:39:25.714384",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "69f0535b",
-    "ts": "2026-06-19T19:39:25.686498",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d40a207e",
-    "ts": "2026-06-19T19:39:19.512564",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "8e407d4c",
-    "ts": "2026-06-19T19:39:19.454625",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "95196ede",
-    "ts": "2026-06-19T19:39:19.424487",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "684d007b",
-    "ts": "2026-06-19T19:39:13.512644",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "eeef69ca",
-    "ts": "2026-06-19T19:39:13.451430",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "76c67b26",
-    "ts": "2026-06-19T19:39:13.421095",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1e7d047c",
-    "ts": "2026-06-19T19:39:07.252545",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "75ce9469",
-    "ts": "2026-06-19T19:39:07.193905",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Currenex State Street Trust Company - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "e6f28dcd",
-    "ts": "2026-06-19T19:39:07.166460",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17735554",
-    "ts": "2026-06-19T19:38:58.863341",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "d4ea7fc1",
-    "ts": "2026-06-19T19:38:58.784978",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Found 76 job cards on Foundit page"
-  },
-  {
-    "id": "5d413036",
-    "ts": "2026-06-19T19:38:53.187560",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "341e1a62",
-    "ts": "2026-06-19T19:38:48.148529",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: '.NET Developer' in 'Hyderabad' on https://www.foundit.in"
-  },
-  {
-    "id": "3ddca2b3",
-    "ts": "2026-06-19T19:38:48.121082",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit: Applied to 0 jobs for '.NET Developer' in Chennai"
-  },
-  {
-    "id": "f32141cc",
-    "ts": "2026-06-19T19:38:48.095011",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "d817cb7e",
-    "ts": "2026-06-19T19:38:48.066910",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "bf904aed",
-    "ts": "2026-06-19T19:38:42.119731",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "b8c2b0d7",
-    "ts": "2026-06-19T19:38:42.057053",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "1af69dea",
-    "ts": "2026-06-19T19:38:42.026433",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d3adeb81",
-    "ts": "2026-06-19T19:38:36.108368",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "138d07f8",
-    "ts": "2026-06-19T19:38:36.047281",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "14cffece",
-    "ts": "2026-06-19T19:38:36.018949",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e2a3726a",
-    "ts": "2026-06-19T19:38:30.733621",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "22ec8605",
-    "ts": "2026-06-19T19:38:30.641769",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Evnek - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "609fa629",
-    "ts": "2026-06-19T19:38:30.613056",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f7133684",
-    "ts": "2026-06-19T19:38:23.368486",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "c1cbddbe",
-    "ts": "2026-06-19T19:38:23.288699",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "7cc9ad1b",
-    "ts": "2026-06-19T19:38:23.260993",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "32472d84",
-    "ts": "2026-06-19T19:38:16.552798",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "e06758fb",
-    "ts": "2026-06-19T19:38:16.492906",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "77437470",
-    "ts": "2026-06-19T19:38:16.463942",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8a276417",
-    "ts": "2026-06-19T19:38:11.357361",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "60ed305a",
-    "ts": "2026-06-19T19:38:11.295976",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "fcc6da8d",
-    "ts": "2026-06-19T19:38:11.268243",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "11eaf4e3",
-    "ts": "2026-06-19T19:38:06.323401",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "6179ead3",
-    "ts": "2026-06-19T19:38:06.258531",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "8ff8200f",
-    "ts": "2026-06-19T19:38:06.229706",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1a3ac4a4",
-    "ts": "2026-06-19T19:38:00.427056",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "fd58290a",
-    "ts": "2026-06-19T19:38:00.360462",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "a1cafe45",
-    "ts": "2026-06-19T19:38:00.330123",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9911ac22",
-    "ts": "2026-06-19T19:37:54.336119",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "0cecbbb5",
-    "ts": "2026-06-19T19:37:54.274574",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping omnissa - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "44bc315b",
-    "ts": "2026-06-19T19:37:54.238070",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1ea393c0",
-    "ts": "2026-06-19T19:37:48.720086",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "e9a2173e",
-    "ts": "2026-06-19T19:37:48.651591",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping willware technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "ca620c3a",
-    "ts": "2026-06-19T19:37:48.601518",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0b544244",
-    "ts": "2026-06-19T19:37:43.457422",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "19f82490",
-    "ts": "2026-06-19T19:37:43.393888",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping willware technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "b1b2f54e",
-    "ts": "2026-06-19T19:37:43.352648",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3fcdfa80",
-    "ts": "2026-06-19T19:37:37.899274",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "99ad6cdc",
-    "ts": "2026-06-19T19:37:37.837207",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping willware technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "3909fca1",
-    "ts": "2026-06-19T19:37:37.802966",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ad6fdfe7",
-    "ts": "2026-06-19T19:37:31.783795",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "97d05671",
-    "ts": "2026-06-19T19:37:31.718404",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping willware technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "034230a2",
-    "ts": "2026-06-19T19:37:31.687800",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "32037709",
-    "ts": "2026-06-19T19:37:25.483028",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "d5649a89",
-    "ts": "2026-06-19T19:37:25.421248",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping willware technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "e74c9ed6",
-    "ts": "2026-06-19T19:37:25.388912",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2ec06af3",
-    "ts": "2026-06-19T19:37:16.058180",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "c9696108",
-    "ts": "2026-06-19T19:37:15.991351",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Found 74 job cards on Foundit page"
-  },
-  {
-    "id": "1b81a99b",
-    "ts": "2026-06-19T19:37:12.102619",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "d1c80002",
-    "ts": "2026-06-19T19:37:06.135837",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: '.NET Developer' in 'Chennai' on https://www.foundit.in"
-  },
-  {
-    "id": "0bc0643f",
-    "ts": "2026-06-19T19:37:06.108892",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit: Applied to 0 jobs for '.NET Developer' in Bangalore"
-  },
-  {
-    "id": "17ba82d6",
-    "ts": "2026-06-19T19:37:06.079316",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infosys Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "73edbc27",
-    "ts": "2026-06-19T19:37:06.048791",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "577f64c7",
-    "ts": "2026-06-19T19:36:59.886707",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "149962e3",
-    "ts": "2026-06-19T19:36:59.786408",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infosys Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "4881325f",
-    "ts": "2026-06-19T19:36:59.754578",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1a01880d",
-    "ts": "2026-06-19T19:36:54.165016",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "18531575",
-    "ts": "2026-06-19T19:36:54.102901",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infosys Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "6186d239",
-    "ts": "2026-06-19T19:36:54.072643",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ae7fdead",
-    "ts": "2026-06-19T19:36:48.562762",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "9d0c824e",
-    "ts": "2026-06-19T19:36:48.445852",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Infosys Limited - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "4ec35cf4",
-    "ts": "2026-06-19T19:36:48.413120",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b1aad798",
-    "ts": "2026-06-19T19:36:41.005614",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "54674e7b",
-    "ts": "2026-06-19T19:36:40.789595",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "07046f69",
-    "ts": "2026-06-19T19:36:40.745042",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "41130bcb",
-    "ts": "2026-06-19T19:36:33.916495",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "af5e153c",
-    "ts": "2026-06-19T19:36:33.851636",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "14d19b2e",
-    "ts": "2026-06-19T19:36:33.822771",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7d5d44df",
-    "ts": "2026-06-19T19:36:28.177419",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "65e97903",
-    "ts": "2026-06-19T19:36:28.116220",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "5f2061bd",
-    "ts": "2026-06-19T19:36:28.084684",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fc0c4335",
-    "ts": "2026-06-19T19:36:22.744901",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "1ee386e8",
-    "ts": "2026-06-19T19:36:22.687453",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "a5ac6fcf",
-    "ts": "2026-06-19T19:36:22.658862",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e033350c",
-    "ts": "2026-06-19T19:36:17.108486",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "284a750b",
-    "ts": "2026-06-19T19:36:17.053760",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "4a03a147",
-    "ts": "2026-06-19T19:36:17.025681",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "147820d1",
-    "ts": "2026-06-19T19:36:11.948875",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "0ec23cd4",
-    "ts": "2026-06-19T19:36:11.890189",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping avia technologies - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "92d0be7b",
-    "ts": "2026-06-19T19:36:11.859650",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "20bf3b6c",
-    "ts": "2026-06-19T19:36:05.923728",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "8aa521d2",
-    "ts": "2026-06-19T19:36:05.859491",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Hitachi Energy - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "b4f73aa5",
-    "ts": "2026-06-19T19:36:05.828832",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5ebf1071",
-    "ts": "2026-06-19T19:36:00.269179",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "d1022734",
-    "ts": "2026-06-19T19:36:00.209101",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Skipping Hitachi Energy - .NET Developer (Match score 0% < 60%)"
-  },
-  {
-    "id": "7c1ca67a",
-    "ts": "2026-06-19T19:36:00.180636",
-    "level": "AI",
-    "site": "monster",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0847623f",
-    "ts": "2026-06-19T19:35:54.885478",
     "level": "INFO",
     "site": "monster",
     "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
