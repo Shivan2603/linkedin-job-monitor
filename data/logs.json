@@ -1,5 +1,145 @@
 [
   {
+    "id": "ad1a2588",
+    "ts": "2026-06-19T12:24:11.080813",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Peregrine | Power Platform Developer | London Area, United Kingdom | 100% match"
+  },
+  {
+    "id": "30ac9213",
+    "ts": "2026-06-19T12:24:11.011620",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Peregrine — Power Platform Developer"
+  },
+  {
+    "id": "85ea61c6",
+    "ts": "2026-06-19T12:24:02.250665",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "83532e6b",
+    "ts": "2026-06-19T12:24:02.154008",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you hold high level SC Clearance?' = 'No'"
+  },
+  {
+    "id": "ac247282",
+    "ts": "2026-06-19T12:24:00.453617",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "4a3b3703",
+    "ts": "2026-06-19T12:24:00.161575",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "cce9bf7e",
+    "ts": "2026-06-19T12:24:00.102330",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "24991d29",
+    "ts": "2026-06-19T12:23:59.842177",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b6ea5646",
+    "ts": "2026-06-19T12:23:59.531966",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0b0ee735",
+    "ts": "2026-06-19T12:23:59.181350",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e59a1958",
+    "ts": "2026-06-19T12:23:58.858254",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "bebfe523",
+    "ts": "2026-06-19T12:23:38.432689",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "4ffe8436",
+    "ts": "2026-06-19T12:23:38.289542",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Power_Platform_Devel_Peregrine_Resume.docx' = 'Deselect resume Siva_Shankar_Power_Platform_Devel_Peregrine_Resume.docx'"
+  },
+  {
+    "id": "e037eb31",
+    "ts": "2026-06-19T12:23:32.815742",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "d063f057",
+    "ts": "2026-06-19T12:23:32.700858",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'UK'"
+  },
+  {
+    "id": "3d96baf7",
+    "ts": "2026-06-19T12:22:05.252239",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4a61540c",
+    "ts": "2026-06-19T12:22:00.675412",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "00a0a327",
+    "ts": "2026-06-19T12:21:57.587116",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a597043c",
+    "ts": "2026-06-19T12:21:53.287172",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "685434f5",
+    "ts": "2026-06-19T12:21:49.736709",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "0a1f3318",
     "ts": "2026-06-19T12:21:24.226531",
     "level": "SUCCESS",
@@ -3358,145 +3498,5 @@
     "level": "WARN",
     "site": "linkedin",
     "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "450c384e",
-    "ts": "2026-06-19T11:11:09.416084",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "f4f3393c",
-    "ts": "2026-06-19T11:11:09.149950",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "b6610322",
-    "ts": "2026-06-19T11:11:08.168942",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "36bc248f",
-    "ts": "2026-06-19T11:10:50.790823",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: HOYA Electronics | Senior Software Engineer | Singapore, Singapore | 100% match"
-  },
-  {
-    "id": "b7fdce80",
-    "ts": "2026-06-19T11:10:50.709818",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: HOYA Electronics — Senior Software Engineer"
-  },
-  {
-    "id": "e1001e68",
-    "ts": "2026-06-19T11:10:42.313378",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "2f080900",
-    "ts": "2026-06-19T11:10:42.202961",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Expected monthly salary (SGD)' = '20'"
-  },
-  {
-    "id": "bc42ca81",
-    "ts": "2026-06-19T11:10:38.045113",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "945c7bbf",
-    "ts": "2026-06-19T11:10:37.936320",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Expected monthly salary (SGD)' = '20-30 LPA'"
-  },
-  {
-    "id": "c0e5a9e0",
-    "ts": "2026-06-19T11:10:37.888257",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How many years of work experience do you have with Visual Basic .NET (VB.NET)?' = '4'"
-  },
-  {
-    "id": "6587ffdd",
-    "ts": "2026-06-19T11:10:32.362986",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "0a76ca8b",
-    "ts": "2026-06-19T11:10:32.272103",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Software_Engi_HOYA_Electronics_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Software_Engi_HOYA_Electronics_Resume.docx'"
-  },
-  {
-    "id": "a51ae847",
-    "ts": "2026-06-19T11:10:27.187000",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "8b194fd0",
-    "ts": "2026-06-19T11:10:27.101292",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Singapore'"
-  },
-  {
-    "id": "6f1d91ef",
-    "ts": "2026-06-19T11:09:00.966204",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "75dcb7b2",
-    "ts": "2026-06-19T11:08:57.499560",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 16 jobs on page 1"
-  },
-  {
-    "id": "0bfcca3d",
-    "ts": "2026-06-19T11:08:47.322562",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Singapore'"
-  },
-  {
-    "id": "8f8b3e12",
-    "ts": "2026-06-19T11:08:47.285879",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Malaysia"
-  },
-  {
-    "id": "f07448f4",
-    "ts": "2026-06-19T11:08:47.188340",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "946b3306",
-    "ts": "2026-06-19T11:08:43.249686",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
