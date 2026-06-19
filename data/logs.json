@@ -1,5 +1,1013 @@
 [
   {
+    "id": "452508a7",
+    "ts": "2026-06-19T20:52:00.138613",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Toronto, ON | Senior .NET Engineer | Remote/Various | 0% match"
+  },
+  {
+    "id": "23d2597c",
+    "ts": "2026-06-19T20:52:00.088543",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Manually submitted and recorded: Toronto, ON — Senior .NET Engineer"
+  },
+  {
+    "id": "9be536ee",
+    "ts": "2026-06-19T20:51:54.808705",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3232654d",
+    "ts": "2026-06-19T20:51:50.918746",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "87dd1d26",
+    "ts": "2026-06-19T20:51:50.870570",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'Where: city, province, or postal code' = 'Chennai'"
+  },
+  {
+    "id": "2fc5b0a7",
+    "ts": "2026-06-19T20:51:50.838598",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Learned from form: 'What: job title, keywords, or company' = 'I am a highly motivated and experienced software engineer with a strong background in .NET Core, C#, and Azure.'"
+  },
+  {
+    "id": "11be228e",
+    "ts": "2026-06-19T20:51:49.348562",
+    "level": "AI",
+    "site": "naukri",
+    "message": "ATS Check: 87% — Missing: ['agile', 'devops', 'testing']"
+  },
+  {
+    "id": "37c8f931",
+    "ts": "2026-06-19T20:51:49.266265",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (ats_check)"
+  },
+  {
+    "id": "da0ffd2e",
+    "ts": "2026-06-19T20:51:48.703132",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 2/57 fields via AI."
+  },
+  {
+    "id": "8da906bb",
+    "ts": "2026-06-19T20:51:48.481568",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "359bc4fb",
+    "ts": "2026-06-19T20:51:48.350905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "44469b22",
+    "ts": "2026-06-19T20:51:48.012145",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "6992e75c",
+    "ts": "2026-06-19T20:51:47.678746",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0d6af382",
+    "ts": "2026-06-19T20:51:47.518746",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "3c92cce2",
+    "ts": "2026-06-19T20:51:47.323182",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e37d2826",
+    "ts": "2026-06-19T20:51:46.742538",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "a44bb2b8",
+    "ts": "2026-06-19T20:51:45.378275",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "4abefc2e",
+    "ts": "2026-06-19T20:51:45.281184",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "d56bcdaa",
+    "ts": "2026-06-19T20:51:44.788743",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "532e60eb",
+    "ts": "2026-06-19T20:51:44.080643",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "418a7896",
+    "ts": "2026-06-19T20:51:43.291435",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e17f7c33",
+    "ts": "2026-06-19T20:51:42.848493",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d51ddb85",
+    "ts": "2026-06-19T20:51:29.296821",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "[ERROR] Document creation failed: [Errno 22] Invalid argument"
+  },
+  {
+    "id": "5b21e39f",
+    "ts": "2026-06-19T20:51:25.488290",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields and uploading resume via AI..."
+  },
+  {
+    "id": "f832b8e0",
+    "ts": "2026-06-19T20:51:25.422473",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e12ed077",
+    "ts": "2026-06-19T20:51:25.343222",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring resume for Toronto, ON — Senior .NET Engineer..."
+  },
+  {
+    "id": "9796cff6",
+    "ts": "2026-06-19T20:51:25.270066",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Detected Company: Toronto, ON | Job Title: Senior .NET Engineer"
+  },
+  {
+    "id": "da0083c0",
+    "ts": "2026-06-19T20:51:20.732910",
+    "level": "WARN",
+    "site": "naukri",
+    "message": "    [Verifier] Failed, using initial draft: Invalid control character at: line 17 column 18 (char 2687)"
+  },
+  {
+    "id": "3b56cb32",
+    "ts": "2026-06-19T20:51:20.654242",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (verify)"
+  },
+  {
+    "id": "bd683a39",
+    "ts": "2026-06-19T20:51:20.552112",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "5c943e26",
+    "ts": "2026-06-19T20:51:19.720902",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "09f37cd0",
+    "ts": "2026-06-19T20:51:19.688899",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://to.indeed.com/aay6c88n8nlw"
+  },
+  {
+    "id": "001e9c13",
+    "ts": "2026-06-19T20:51:19.636739",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
+    "id": "bc090d1e",
+    "ts": "2026-06-19T20:51:17.500409",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipped application for: Company — Software Engineer"
+  },
+  {
+    "id": "2051080d",
+    "ts": "2026-06-19T20:50:50.218888",
+    "level": "ERROR",
+    "site": "company_careers",
+    "message": "AI Form Filler failed: Unterminated string starting at: line 90 column 10 (char 4205)"
+  },
+  {
+    "id": "9953e671",
+    "ts": "2026-06-19T20:50:50.139326",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "24233696",
+    "ts": "2026-06-19T20:50:48.355670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7537c119",
+    "ts": "2026-06-19T20:50:48.261168",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "3dd19fb1",
+    "ts": "2026-06-19T20:50:48.115600",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "9acc6e83",
+    "ts": "2026-06-19T20:50:47.963909",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "1a57a562",
+    "ts": "2026-06-19T20:50:47.688778",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "21a957f1",
+    "ts": "2026-06-19T20:50:47.405615",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "08f58551",
+    "ts": "2026-06-19T20:50:47.022659",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b4802052",
+    "ts": "2026-06-19T20:50:46.641594",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "6e1af779",
+    "ts": "2026-06-19T20:50:46.563800",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "0915011b",
+    "ts": "2026-06-19T20:50:45.952057",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "44c2961f",
+    "ts": "2026-06-19T20:50:45.883709",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "34720487",
+    "ts": "2026-06-19T20:50:45.218977",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a821c355",
+    "ts": "2026-06-19T20:50:44.685426",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "eb827896",
+    "ts": "2026-06-19T20:50:43.991851",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7891142a",
+    "ts": "2026-06-19T20:50:43.332766",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "57f9c045",
+    "ts": "2026-06-19T20:50:29.820909",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields and uploading resume via AI..."
+  },
+  {
+    "id": "4771d10a",
+    "ts": "2026-06-19T20:50:29.791074",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d71ff2f0",
+    "ts": "2026-06-19T20:50:29.756235",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring resume for Company — Software Engineer..."
+  },
+  {
+    "id": "f230ce9c",
+    "ts": "2026-06-19T20:50:29.701023",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Detected Company: Company | Job Title: Software Engineer"
+  },
+  {
+    "id": "44ba8210",
+    "ts": "2026-06-19T20:50:26.008691",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Coordinator] Launching Verifier Agent (Audit Loop)..."
+  },
+  {
+    "id": "9e1ba03d",
+    "ts": "2026-06-19T20:50:25.892432",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "    [Tailor] Failed: Invalid control character at: line 10 column 18 (char 2186)"
+  },
+  {
+    "id": "1a3bf0d9",
+    "ts": "2026-06-19T20:50:25.798445",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "66413d59",
+    "ts": "2026-06-19T20:50:25.688815",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Coordinator] Launching Tailor Agent..."
+  },
+  {
+    "id": "557dafae",
+    "ts": "2026-06-19T20:50:25.603844",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "    [Reranker] Precision skills reranking completed."
+  },
+  {
+    "id": "ecf6e33d",
+    "ts": "2026-06-19T20:50:25.422355",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (rerank)"
+  },
+  {
+    "id": "4c7ff5b9",
+    "ts": "2026-06-19T20:50:25.326380",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "399116f4",
+    "ts": "2026-06-19T20:50:24.548775",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "6deee8b9",
+    "ts": "2026-06-19T20:50:24.512735",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://jobgether.com/offer/69ff0ccf8444a8266553daee-senior-or-middle-ai-engineer-azure-openai-rag-.net"
+  },
+  {
+    "id": "ed39a929",
+    "ts": "2026-06-19T20:50:24.434854",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
+    "id": "8e165371",
+    "ts": "2026-06-19T20:50:22.378445",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipped application for: IRIS Software, Inc. — Lead GEN AI Developer ( C#. OR .NET )"
+  },
+  {
+    "id": "18cc7b6c",
+    "ts": "2026-06-19T20:50:03.051114",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "dfa8a2ea",
+    "ts": "2026-06-19T20:50:02.252737",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "c3bc7c26",
+    "ts": "2026-06-19T20:50:02.198672",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "0c3fc32d",
+    "ts": "2026-06-19T20:50:01.914439",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "8c3b22a6",
+    "ts": "2026-06-19T20:50:01.848537",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "13befeda",
+    "ts": "2026-06-19T20:50:01.462277",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "cf211aec",
+    "ts": "2026-06-19T20:50:01.330957",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "d850314e",
+    "ts": "2026-06-19T20:50:01.216522",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields and uploading resume via AI..."
+  },
+  {
+    "id": "ffca1a74",
+    "ts": "2026-06-19T20:50:01.088950",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "94389d02",
+    "ts": "2026-06-19T20:50:00.800031",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "3c512e95",
+    "ts": "2026-06-19T20:50:00.392410",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "dc79e080",
+    "ts": "2026-06-19T20:49:43.148854",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Coordinator] Launching Reranker Agent..."
+  },
+  {
+    "id": "6c9e1923",
+    "ts": "2026-06-19T20:49:43.077581",
+    "level": "WARN",
+    "site": "naukri",
+    "message": "    [Analyzer] Failed: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "04021e20",
+    "ts": "2026-06-19T20:49:43.007025",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "14674ef2",
+    "ts": "2026-06-19T20:49:42.926718",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "d4461cb7",
+    "ts": "2026-06-19T20:49:42.265943",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "98ea3dee",
+    "ts": "2026-06-19T20:49:41.781412",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "a874e8ac",
+    "ts": "2026-06-19T20:49:40.618292",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "e9f8708c",
+    "ts": "2026-06-19T20:49:40.210548",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "44499659",
+    "ts": "2026-06-19T20:49:39.116259",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "2dacd71e",
+    "ts": "2026-06-19T20:49:38.864234",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "1758e7f3",
+    "ts": "2026-06-19T20:49:38.571769",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "05008211",
+    "ts": "2026-06-19T20:49:38.294619",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "eaa88dde",
+    "ts": "2026-06-19T20:49:37.707218",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "d3554050",
+    "ts": "2026-06-19T20:49:37.444884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "db446fb0",
+    "ts": "2026-06-19T20:49:37.236282",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "7c59cda2",
+    "ts": "2026-06-19T20:49:36.541125",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "43925f1c",
+    "ts": "2026-06-19T20:49:36.063516",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "8fbd9eb5",
+    "ts": "2026-06-19T20:49:35.192853",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "2d1f510a",
+    "ts": "2026-06-19T20:49:33.048675",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "c25abc6c",
+    "ts": "2026-06-19T20:49:32.093030",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "4b4d33a0",
+    "ts": "2026-06-19T20:49:31.974878",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "bc67fc08",
+    "ts": "2026-06-19T20:49:31.468555",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "13e65fbc",
+    "ts": "2026-06-19T20:49:31.390271",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "9973fb9b",
+    "ts": "2026-06-19T20:49:30.999513",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b67b2833",
+    "ts": "2026-06-19T20:49:30.505644",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "36dcdf6d",
+    "ts": "2026-06-19T20:49:29.781182",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "000abeec",
+    "ts": "2026-06-19T20:49:29.232801",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "4cea798e",
+    "ts": "2026-06-19T20:49:11.948388",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Coordinator] Launching Analyzer Agent..."
+  },
+  {
+    "id": "887b9595",
+    "ts": "2026-06-19T20:49:11.801307",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
+  },
+  {
+    "id": "4f92d74f",
+    "ts": "2026-06-19T20:49:11.703018",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] TailorRobot delegation failed: [Errno 22] Invalid argument. Falling back to local builder."
+  },
+  {
+    "id": "182846bd",
+    "ts": "2026-06-19T20:49:07.768694",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "8d5bcef4",
+    "ts": "2026-06-19T20:49:07.688560",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring resume for IRIS Software, Inc. — Lead GEN AI Developer ( C#. OR .NET )..."
+  },
+  {
+    "id": "a720417e",
+    "ts": "2026-06-19T20:49:07.588684",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Detected Company: IRIS Software, Inc. | Job Title: Lead GEN AI Developer ( C#. OR .NET )"
+  },
+  {
+    "id": "16d58cae",
+    "ts": "2026-06-19T20:49:00.741282",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "5d970ab6",
+    "ts": "2026-06-19T20:49:00.686037",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://www.dice.com/job-detail/92b513ac-677d-4edc-bc3b-a9eb5e0b747a?utm_source=claude-user&utm_medium=mcp"
+  },
+  {
+    "id": "54840cd4",
+    "ts": "2026-06-19T20:49:00.574828",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
+    "id": "fdc2cebd",
+    "ts": "2026-06-19T20:48:26.811483",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "653eec8c",
+    "ts": "2026-06-19T20:47:33.163392",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7d7f0459",
+    "ts": "2026-06-19T20:47:24.238767",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3b328d20",
+    "ts": "2026-06-19T20:47:19.318444",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "374dca78",
+    "ts": "2026-06-19T20:47:14.502628",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d5261808",
+    "ts": "2026-06-19T20:47:09.807528",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "162c3973",
+    "ts": "2026-06-19T20:46:17.918360",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a271b243",
+    "ts": "2026-06-19T20:46:14.441545",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Found 20 jobs for '.Net' in Remote"
+  },
+  {
+    "id": "158a2f24",
+    "ts": "2026-06-19T20:46:08.818612",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Searching Naukri: '.Net' in 'Remote'"
+  },
+  {
+    "id": "a4288c2e",
+    "ts": "2026-06-19T20:46:08.738426",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Cookies saved for naukri"
+  },
+  {
+    "id": "65164cd1",
+    "ts": "2026-06-19T20:46:08.632871",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Naukri login successful ✅"
+  },
+  {
+    "id": "5cb2f143",
+    "ts": "2026-06-19T20:45:58.855027",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No automatic Google account picker found; waiting for SSO auto-resolution..."
+  },
+  {
+    "id": "c6e8ba97",
+    "ts": "2026-06-19T20:45:55.138514",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Clicking Naukri 'Sign in with Google' button..."
+  },
+  {
+    "id": "74460eee",
+    "ts": "2026-06-19T20:45:51.801422",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "d1f79ba9",
+    "ts": "2026-06-19T20:45:50.459429",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "969aab55",
+    "ts": "2026-06-19T20:45:50.340157",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "792a2b64",
+    "ts": "2026-06-19T20:44:46.529995",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Site cooldown: 64s before next site..."
+  },
+  {
+    "id": "010eac03",
+    "ts": "2026-06-19T20:44:46.468752",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Skipping LinkedIn — daily limit reached"
+  },
+  {
+    "id": "761aa757",
+    "ts": "2026-06-19T20:44:46.400281",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Daily limit reached for linkedin (25/25). Skipping for today."
+  },
+  {
+    "id": "adbcf627",
+    "ts": "2026-06-19T20:44:46.320146",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Company Careers done ---"
+  },
+  {
+    "id": "f7c7dd75",
+    "ts": "2026-06-19T20:44:46.222762",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "✅ Company Careers bot finished. Applied to 2 positions."
+  },
+  {
+    "id": "5f61fffc",
+    "ts": "2026-06-19T20:44:45.638410",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to apply at https://boards.greenhouse.io/robinhood/jobs/7844218?gh_src=N…: [Errno 22] Invalid argument"
+  },
+  {
+    "id": "0f406254",
+    "ts": "2026-06-19T20:44:45.545311",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f33ce67f",
+    "ts": "2026-06-19T20:44:41.246299",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7844218?gh_src=NaN&gh_jid=7844218…"
+  },
+  {
+    "id": "ab52f3fd",
+    "ts": "2026-06-19T20:44:41.158145",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Robinhood — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "e732bd21",
+    "ts": "2026-06-19T20:44:41.062527",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fe990c2e",
+    "ts": "2026-06-19T20:44:37.148408",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7542965?gh_src=NaN&gh_jid=7542965…"
+  },
+  {
+    "id": "7bb0da4f",
+    "ts": "2026-06-19T20:44:37.075709",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Chainguard — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "b2f2c61f",
+    "ts": "2026-06-19T20:44:36.999689",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "688d0d2c",
+    "ts": "2026-06-19T20:44:33.282537",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/chainguard/jobs/4672901006#:~:text=Staff%20Softw…"
+  },
+  {
+    "id": "6e0f4ad2",
+    "ts": "2026-06-19T20:44:20.071052",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → .Net @ Trainline | Senior Backend Engineer via Ashby"
+  },
+  {
     "id": "fda20c27",
     "ts": "2026-06-19T20:44:16.067766",
     "level": "SUCCESS",
@@ -2490,1013 +3498,5 @@
     "level": "INFO",
     "site": "system",
     "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "d52fb31c",
-    "ts": "2026-06-19T20:35:30.859524",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "43b559cc",
-    "ts": "2026-06-19T20:35:26.026068",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 86s before next site..."
-  },
-  {
-    "id": "556fcb23",
-    "ts": "2026-06-19T20:35:25.998353",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "5e69044e",
-    "ts": "2026-06-19T20:35:25.968124",
-    "level": "ERROR",
-    "site": "system",
-    "message": "Company Careers crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n<launched> pid=24740\n[pid=24740][err] [24740:25956:0619/203525.798:ERROR:chrome\\browser\\process_singleton_win.cc:410] Lock file can not be created! Error code: 32\n[pid=24740][err] [24740:25956:0619/203525.798:ERROR:chrome\\app\\chrome_main_delegate.cc:519] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nCall log:\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n  - <launched> pid=24740\n  - [pid=24740][err] [24740:25956:0619/203525.798:ERROR:chrome\\browser\\process_singleton_win.cc:410] Lock file can not be created! Error code: 32\n  - [pid=24740][err] [24740:25956:0619/203525.798:ERROR:chrome\\app\\chrome_main_delegate.cc:519] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n"
-  },
-  {
-    "id": "9e576a92",
-    "ts": "2026-06-19T20:35:25.341021",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "5f5f4de2",
-    "ts": "2026-06-19T20:35:25.300405",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "6937511d",
-    "ts": "2026-06-19T20:35:25.263173",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "fb6df7fb",
-    "ts": "2026-06-19T20:35:25.230466",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d28891ea",
-    "ts": "2026-06-19T20:35:25.198475",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "0b17d6c1",
-    "ts": "2026-06-19T20:35:25.164425",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:35:25"
-  },
-  {
-    "id": "8aa48699",
-    "ts": "2026-06-19T20:35:25.132287",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "6c3a1fa8",
-    "ts": "2026-06-19T20:35:25.100587",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "1552ff28",
-    "ts": "2026-06-19T20:35:25.068189",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "4b1ea5ed",
-    "ts": "2026-06-19T20:35:25.009927",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "59ae101b",
-    "ts": "2026-06-19T20:35:20.568724",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 79s before next site..."
-  },
-  {
-    "id": "46147c96",
-    "ts": "2026-06-19T20:35:20.530323",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Naukri done ---"
-  },
-  {
-    "id": "34cf0e44",
-    "ts": "2026-06-19T20:35:20.492893",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri bot session ended"
-  },
-  {
-    "id": "8a24ae63",
-    "ts": "2026-06-19T20:35:20.442680",
-    "level": "ERROR",
-    "site": "naukri",
-    "message": "Naukri login failed: Page.query_selector: Target page, context or browser has been closed"
-  },
-  {
-    "id": "735b2395",
-    "ts": "2026-06-19T20:35:16.792224",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "eb654416",
-    "ts": "2026-06-19T20:35:15.912287",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Starting Naukri.com bot"
-  },
-  {
-    "id": "4e91eadb",
-    "ts": "2026-06-19T20:35:15.878873",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "5d947281",
-    "ts": "2026-06-19T20:35:15.845569",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Skipping LinkedIn — daily limit reached"
-  },
-  {
-    "id": "278492de",
-    "ts": "2026-06-19T20:35:15.815689",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Daily limit reached for linkedin (25/25). Skipping for today."
-  },
-  {
-    "id": "0e5a2172",
-    "ts": "2026-06-19T20:35:15.788026",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "22a46aae",
-    "ts": "2026-06-19T20:35:15.755739",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "34521edf",
-    "ts": "2026-06-19T20:35:15.716445",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "42fa605e",
-    "ts": "2026-06-19T20:35:15.696823",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:35:15"
-  },
-  {
-    "id": "c1aeac10",
-    "ts": "2026-06-19T20:35:15.664308",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "5a44e39a",
-    "ts": "2026-06-19T20:35:15.632928",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "a8d9d12f",
-    "ts": "2026-06-19T20:35:15.600515",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "69bd512f",
-    "ts": "2026-06-19T20:35:15.547218",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "f9285585",
-    "ts": "2026-06-19T20:35:13.818242",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Coordinator] Launching Analyzer Agent..."
-  },
-  {
-    "id": "d66809eb",
-    "ts": "2026-06-19T20:35:13.638354",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm] Starting Multi-Agent Coordinator Workflow..."
-  },
-  {
-    "id": "e2f6aecc",
-    "ts": "2026-06-19T20:35:13.548382",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] TailorRobot delegation failed: [Errno 22] Invalid argument. Falling back to local builder."
-  },
-  {
-    "id": "f57bb537",
-    "ts": "2026-06-19T20:35:13.441654",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a716934b",
-    "ts": "2026-06-19T20:35:10.463771",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/hugeinc/jobs/7811930…"
-  },
-  {
-    "id": "282ed100",
-    "ts": "2026-06-19T20:35:10.388414",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping .Net @ Trainline — Senior Backend Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "93e9ba82",
-    "ts": "2026-06-19T20:35:10.305462",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "75c2dcc9",
-    "ts": "2026-06-19T20:35:07.772499",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 53s before next site..."
-  },
-  {
-    "id": "0f328ab3",
-    "ts": "2026-06-19T20:35:07.716327",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Company Careers done ---"
-  },
-  {
-    "id": "5402eac3",
-    "ts": "2026-06-19T20:35:07.661842",
-    "level": "ERROR",
-    "site": "system",
-    "message": "Company Careers crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n<launched> pid=28532\n[pid=28532][err] [28532:14872:0619/203507.348:ERROR:chrome\\browser\\process_singleton_win.cc:410] Lock file can not be created! Error code: 32\n[pid=28532][err] [28532:14872:0619/203507.348:ERROR:chrome\\app\\chrome_main_delegate.cc:519] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nCall log:\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_company_careers --remote-debugging-pipe about:blank\n  - <launched> pid=28532\n  - [pid=28532][err] [28532:14872:0619/203507.348:ERROR:chrome\\browser\\process_singleton_win.cc:410] Lock file can not be created! Error code: 32\n  - [pid=28532][err] [28532:14872:0619/203507.348:ERROR:chrome\\app\\chrome_main_delegate.cc:519] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\n"
-  },
-  {
-    "id": "633fe8e1",
-    "ts": "2026-06-19T20:35:07.152348",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.ashbyhq.com/trainline/5d5dcc6a-3bcf-431a-b011-5ea099f8ecfe…"
-  },
-  {
-    "id": "36584cb9",
-    "ts": "2026-06-19T20:35:07.063977",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Robinhood — Software Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "0458c8be",
-    "ts": "2026-06-19T20:35:06.980079",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "20f694a3",
-    "ts": "2026-06-19T20:35:06.678312",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "🏢 Starting Universal Company Career Pages bot"
-  },
-  {
-    "id": "b8a2a4c8",
-    "ts": "2026-06-19T20:35:06.650472",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Company Careers ---"
-  },
-  {
-    "id": "89018c7d",
-    "ts": "2026-06-19T20:35:06.608276",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "6fb1e45d",
-    "ts": "2026-06-19T20:35:06.578247",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "ea122eba",
-    "ts": "2026-06-19T20:35:06.544357",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "739a141f",
-    "ts": "2026-06-19T20:35:06.512210",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:35:06"
-  },
-  {
-    "id": "01409ce0",
-    "ts": "2026-06-19T20:35:06.468562",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "b7b5e872",
-    "ts": "2026-06-19T20:35:06.438693",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "ef8335e7",
-    "ts": "2026-06-19T20:35:06.408553",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "2a6c7798",
-    "ts": "2026-06-19T20:35:06.374076",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "0c17514e",
-    "ts": "2026-06-19T20:35:03.160004",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7960680?gh_src=NaN&gh_jid=7960680…"
-  },
-  {
-    "id": "3b597cf3",
-    "ts": "2026-06-19T20:35:03.094474",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "AI form fill failed for Hugeinc — Software Engineer"
-  },
-  {
-    "id": "1ee57d74",
-    "ts": "2026-06-19T20:35:03.028305",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "AI Form Filler failed: Unterminated string starting at: line 88 column 4 (char 4195)"
-  },
-  {
-    "id": "b86d2b10",
-    "ts": "2026-06-19T20:35:02.925515",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "962b568c",
-    "ts": "2026-06-19T20:35:02.864743",
-    "level": "WARN",
-    "site": "shine",
-    "message": "Failed to navigate to Shine login: 'dict' object has no attribute '_object'"
-  },
-  {
-    "id": "7c412697",
-    "ts": "2026-06-19T20:35:01.514016",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "565e78d7",
-    "ts": "2026-06-19T20:35:01.070024",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "caa6a127",
-    "ts": "2026-06-19T20:35:01.007737",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "9fcb3d06",
-    "ts": "2026-06-19T20:35:00.535760",
-    "level": "INFO",
-    "site": "shine",
-    "message": "🚀 Starting Shine.com bot"
-  },
-  {
-    "id": "7c3b8809",
-    "ts": "2026-06-19T20:35:00.520071",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "fb2c2500",
-    "ts": "2026-06-19T20:35:00.504211",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Shine ---"
-  },
-  {
-    "id": "e0c4753b",
-    "ts": "2026-06-19T20:35:00.472222",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "6bf21f92",
-    "ts": "2026-06-19T20:35:00.444614",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "59fe6bed",
-    "ts": "2026-06-19T20:35:00.411052",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "c4c5e611",
-    "ts": "2026-06-19T20:35:00.378199",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:35:00"
-  },
-  {
-    "id": "8401c876",
-    "ts": "2026-06-19T20:35:00.348467",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "6c86038f",
-    "ts": "2026-06-19T20:35:00.315365",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "6ed57790",
-    "ts": "2026-06-19T20:35:00.281511",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "ed7e95ca",
-    "ts": "2026-06-19T20:35:00.251397",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "c4443ed9",
-    "ts": "2026-06-19T20:35:00.188581",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "0fa0b739",
-    "ts": "2026-06-19T20:34:59.588658",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ebe26a8f",
-    "ts": "2026-06-19T20:34:59.276255",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "1278f747",
-    "ts": "2026-06-19T20:34:55.581150",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to navigate to JobStreet login: Page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\nnavigating to \"https://www.jobstreet.com.sg/oauth/login?returnUrl=%2F\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "6082ff85",
-    "ts": "2026-06-19T20:34:54.041682",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "352b9b39",
-    "ts": "2026-06-19T20:34:53.158258",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "🚀 Starting JobStreet/SEEK bot"
-  },
-  {
-    "id": "2e055d10",
-    "ts": "2026-06-19T20:34:53.123027",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting JobStreet ---"
-  },
-  {
-    "id": "56205958",
-    "ts": "2026-06-19T20:34:53.094483",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "cc87bd4d",
-    "ts": "2026-06-19T20:34:53.063855",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "bcb72b93",
-    "ts": "2026-06-19T20:34:53.030949",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "193f8493",
-    "ts": "2026-06-19T20:34:52.998216",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:34:52"
-  },
-  {
-    "id": "3c06c902",
-    "ts": "2026-06-19T20:34:52.968390",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "ca656a3a",
-    "ts": "2026-06-19T20:34:52.938623",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "ce876f73",
-    "ts": "2026-06-19T20:34:52.901381",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "d3e2bd57",
-    "ts": "2026-06-19T20:34:52.869959",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "d133127e",
-    "ts": "2026-06-19T20:34:49.304047",
-    "level": "WARN",
-    "site": "shine",
-    "message": "Failed to navigate to Shine login: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.shine.com/login/\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "00cd94eb",
-    "ts": "2026-06-19T20:34:47.644220",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "00b9beac",
-    "ts": "2026-06-19T20:34:46.602756",
-    "level": "INFO",
-    "site": "shine",
-    "message": "🚀 Starting Shine.com bot"
-  },
-  {
-    "id": "126b8fdc",
-    "ts": "2026-06-19T20:34:46.572107",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Shine ---"
-  },
-  {
-    "id": "3ff24d8b",
-    "ts": "2026-06-19T20:34:46.530366",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "f2218a3c",
-    "ts": "2026-06-19T20:34:46.502019",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "9c20c056",
-    "ts": "2026-06-19T20:34:46.470246",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "7fdc3f31",
-    "ts": "2026-06-19T20:34:46.428402",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:34:46"
-  },
-  {
-    "id": "116549ab",
-    "ts": "2026-06-19T20:34:46.389720",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "4f29a89e",
-    "ts": "2026-06-19T20:34:46.350984",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "99a48623",
-    "ts": "2026-06-19T20:34:46.308136",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "34325d46",
-    "ts": "2026-06-19T20:34:46.275324",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "ed1697d1",
-    "ts": "2026-06-19T20:34:41.843832",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Resume uploaded successfully to resume"
-  },
-  {
-    "id": "d7682375",
-    "ts": "2026-06-19T20:34:41.568136",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\19-06-2026\\Siva_Shankar_Software_Engineer_Hugeinc_Resume.docx to input ID=resume, Name="
-  },
-  {
-    "id": "9d4a5887",
-    "ts": "2026-06-19T20:34:37.502714",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 86s before next site..."
-  },
-  {
-    "id": "ce8efd5a",
-    "ts": "2026-06-19T20:34:37.430579",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- JobStreet done ---"
-  },
-  {
-    "id": "d685196e",
-    "ts": "2026-06-19T20:34:37.058295",
-    "level": "ERROR",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK bot crash: Page.query_selector_all: Target page, context or browser has been closed"
-  },
-  {
-    "id": "754a9445",
-    "ts": "2026-06-19T20:34:29.615129",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Searching JobStreet: 'Senior .NET Developer' in 'Remote' on https://www.jobstreet.com.sg"
-  },
-  {
-    "id": "2652ba98",
-    "ts": "2026-06-19T20:34:29.526573",
-    "level": "SUCCESS",
-    "site": "jobstreet",
-    "message": "JobStreet already logged in via active session"
-  },
-  {
-    "id": "9715b6e3",
-    "ts": "2026-06-19T20:34:24.158163",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "164d7930",
-    "ts": "2026-06-19T20:34:22.708656",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "🚀 Starting JobStreet/SEEK bot"
-  },
-  {
-    "id": "0b50f2bd",
-    "ts": "2026-06-19T20:34:22.592440",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting JobStreet ---"
-  },
-  {
-    "id": "514a4302",
-    "ts": "2026-06-19T20:33:54.254984",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8f07ad1b",
-    "ts": "2026-06-19T20:33:50.221518",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/hugeinc/jobs/7811930#:~:text=Senior%20Software%2…"
-  },
-  {
-    "id": "2cb3e03a",
-    "ts": "2026-06-19T20:33:50.156704",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Cloudflare — Software Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "6757e013",
-    "ts": "2026-06-19T20:33:50.106876",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17ba6476",
-    "ts": "2026-06-19T20:33:45.848475",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://boards.greenhouse.io/cloudflare/jobs/8007032?gh_jid=8007032…"
-  },
-  {
-    "id": "f6275452",
-    "ts": "2026-06-19T20:33:45.818318",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Nice — Software Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "5ce91476",
-    "ts": "2026-06-19T20:33:45.790223",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1f2b6498",
-    "ts": "2026-06-19T20:33:41.611745",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://job-boards.eu.greenhouse.io/nice/jobs/4778645101?gh_jid=4778645101…"
-  },
-  {
-    "id": "c8bd498c",
-    "ts": "2026-06-19T20:33:41.551096",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Jobs — Software Engineer (Already applied)"
-  },
-  {
-    "id": "ff73cc90",
-    "ts": "2026-06-19T20:33:38.394286",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.ashbyhq.com/ideals…"
-  },
-  {
-    "id": "172fba61",
-    "ts": "2026-06-19T20:33:38.365713",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Chainguard — Software Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "6b1e6dd1",
-    "ts": "2026-06-19T20:33:38.333344",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "765812a2",
-    "ts": "2026-06-19T20:33:35.461154",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: http://job-boards.greenhouse.io/chainguard/jobs/4672901006…"
-  },
-  {
-    "id": "074da1ec",
-    "ts": "2026-06-19T20:33:35.429153",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Jobgether — Software Engineer (Match score 0% < 60%)"
-  },
-  {
-    "id": "7140fd17",
-    "ts": "2026-06-19T20:33:35.392753",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d2147130",
-    "ts": "2026-06-19T20:33:31.818237",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.lever.co/jobgether/?department=Security+%26+IT#:~:text=Senior%20Bac…"
-  },
-  {
-    "id": "0fb492cb",
-    "ts": "2026-06-19T20:33:31.780521",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipping Jobs — Software Engineer (Already applied)"
-  },
-  {
-    "id": "87078252",
-    "ts": "2026-06-19T20:33:29.471104",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Site cooldown: 53s before next site..."
-  },
-  {
-    "id": "bfd0e55b",
-    "ts": "2026-06-19T20:33:29.410629",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Indeed India done ---"
-  },
-  {
-    "id": "5da740e8",
-    "ts": "2026-06-19T20:33:29.323480",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed bot crash: Page.query_selector_all: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1aa43828",
-    "ts": "2026-06-19T20:33:27.178172",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing: https://jobs.ashbyhq.com/ideals#:~:text=Customer%20Success,Senior%20Backend%20En…"
-  },
-  {
-    "id": "ae8854a9",
-    "ts": "2026-06-19T20:33:27.148277",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Total deduplicated job URLs to process: 21"
-  },
-  {
-    "id": "c1394b7d",
-    "ts": "2026-06-19T20:33:27.118295",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Discovered 8 job URLs directly from target companies"
-  },
-  {
-    "id": "13086fd5",
-    "ts": "2026-06-19T20:33:27.062807",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to check target company Paytm: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.paytm.com/\nCall log:\nnavigating to \"https://careers.paytm.com/\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "07d4c0ed",
-    "ts": "2026-06-19T20:33:26.630516",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Paytm..."
-  },
-  {
-    "id": "718fa19b",
-    "ts": "2026-06-19T20:33:26.600345",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Found 78 matching positions for Robinhood"
-  },
-  {
-    "id": "89f8f9ae",
-    "ts": "2026-06-19T20:33:17.879737",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Robinhood..."
-  },
-  {
-    "id": "36889826",
-    "ts": "2026-06-19T20:33:12.082710",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Sentry..."
-  },
-  {
-    "id": "8c35bc4b",
-    "ts": "2026-06-19T20:33:12.028536",
-    "level": "WARN",
-    "site": "company_careers",
-    "message": "Failed to check target company Atlassian: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.atlassian.com/jobs\nCall log:\nnavigating to \"https://careers.atlassian.com/jobs\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "aef90db8",
-    "ts": "2026-06-19T20:33:11.613745",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Atlassian..."
-  },
-  {
-    "id": "c96c6272",
-    "ts": "2026-06-19T20:33:06.202936",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Klarna..."
-  },
-  {
-    "id": "b4c4b832",
-    "ts": "2026-06-19T20:33:00.552890",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Docker..."
-  },
-  {
-    "id": "a78c4193",
-    "ts": "2026-06-19T20:33:00.481803",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Found 150 matching positions for Cloudflare"
-  },
-  {
-    "id": "08c11d22",
-    "ts": "2026-06-19T20:32:38.812136",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Checking target company career portal: Cloudflare..."
   }
 ]
