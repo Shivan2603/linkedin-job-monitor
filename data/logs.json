@@ -1,5 +1,61 @@
 [
   {
+    "id": "a821db8a",
+    "ts": "2026-06-19T13:42:58.114136",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "Applied: Vertex Software | Fullstack Software Engineer- C# (.NET / .NET Core) and React | Remote | 100% match"
+  },
+  {
+    "id": "54161648",
+    "ts": "2026-06-19T13:42:58.051877",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "b4c5e800",
+    "ts": "2026-06-19T13:42:51.365675",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "41cce774",
+    "ts": "2026-06-19T13:41:57.347142",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "fa1c1bbd",
+    "ts": "2026-06-19T13:41:52.492494",
+    "level": "WARN",
+    "site": "naukri",
+    "message": "Naukri URL apply error: Timeout 15000ms exceeded.\n=========================== logs ===========================\n\"domcontentlo"
+  },
+  {
+    "id": "6d350811",
+    "ts": "2026-06-19T13:41:36.791258",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri: 'Apply on Company Site' detected — opening ATS..."
+  },
+  {
+    "id": "f93dd2b4",
+    "ts": "2026-06-19T13:40:43.388400",
+    "level": "AI",
+    "site": "naukri",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6a88ad6e",
+    "ts": "2026-06-19T13:40:30.548136",
+    "level": "SUCCESS",
+    "site": "naukri",
+    "message": "✅ Naukri applied: Ascentech\n3.823 Reviews — ASP .Net C# (WebForms) Professional (100%)"
+  },
+  {
     "id": "fa09b6ec",
     "ts": "2026-06-19T13:40:26.976734",
     "level": "SUCCESS",
@@ -3442,61 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "d6f6db44",
-    "ts": "2026-06-19T11:58:45.902148",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "f347b471",
-    "ts": "2026-06-19T11:58:45.808455",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar__NET_Developer_Unison_Group_Resume.docx' = 'Deselect resume Siva_Shankar__NET_Developer_Unison_Group_Resume.docx'"
-  },
-  {
-    "id": "36262494",
-    "ts": "2026-06-19T11:58:39.898382",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "bfd46bb6",
-    "ts": "2026-06-19T11:58:39.792533",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Singapore'"
-  },
-  {
-    "id": "6ada7800",
-    "ts": "2026-06-19T11:57:15.207698",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e2a57f48",
-    "ts": "2026-06-19T11:57:11.691718",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a8eececb",
-    "ts": "2026-06-19T11:57:08.137081",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e041a237",
-    "ts": "2026-06-19T11:57:04.813516",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
