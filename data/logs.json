@@ -1,5 +1,117 @@
 [
   {
+    "id": "57dfba25",
+    "ts": "2026-06-19T10:43:08.572881",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: YourPrime | Senior Software Engineer | United Kingdom | 100% match"
+  },
+  {
+    "id": "079e48ce",
+    "ts": "2026-06-19T10:43:08.500388",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: YourPrime — Senior Software Engineer"
+  },
+  {
+    "id": "251281cb",
+    "ts": "2026-06-19T10:43:00.553918",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "7c854c90",
+    "ts": "2026-06-19T10:43:00.471815",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you currently based in the UK and authorised to work in the UK without sponsorship?' = 'No'"
+  },
+  {
+    "id": "be368c55",
+    "ts": "2026-06-19T10:43:00.433245",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have commercial experience developing applications using both C#/.NET and React?' = 'No'"
+  },
+  {
+    "id": "bf1ea7f7",
+    "ts": "2026-06-19T10:42:59.036120",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "159e4c07",
+    "ts": "2026-06-19T10:42:58.632407",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "44ca96c7",
+    "ts": "2026-06-19T10:42:58.557830",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "1860621f",
+    "ts": "2026-06-19T10:42:58.177972",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "9850911c",
+    "ts": "2026-06-19T10:42:57.877461",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "2ded67fb",
+    "ts": "2026-06-19T10:42:57.589309",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "88f2fc33",
+    "ts": "2026-06-19T10:42:57.226656",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "224c8532",
+    "ts": "2026-06-19T10:42:36.203974",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "76e4aaa7",
+    "ts": "2026-06-19T10:42:36.096255",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Software_Engi_YourPrime_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Software_Engi_YourPrime_Resume.docx'"
+  },
+  {
+    "id": "740eb2c4",
+    "ts": "2026-06-19T10:41:02.468349",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2a8e4877",
+    "ts": "2026-06-19T10:40:58.716316",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "49d2877b",
     "ts": "2026-06-19T10:40:40.342825",
     "level": "SUCCESS",
@@ -3386,117 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "No more jobs on page 1"
-  },
-  {
-    "id": "980d23e1",
-    "ts": "2026-06-19T10:07:07.785396",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "ec145d09",
-    "ts": "2026-06-19T10:07:07.742550",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Remote"
-  },
-  {
-    "id": "bbdd928a",
-    "ts": "2026-06-19T10:07:07.693253",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "4905f1c4",
-    "ts": "2026-06-19T10:06:59.247789",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Remote'"
-  },
-  {
-    "id": "6ffc59fb",
-    "ts": "2026-06-19T10:06:59.190744",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Singapore"
-  },
-  {
-    "id": "8a30cd7a",
-    "ts": "2026-06-19T10:06:59.126338",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "8cc5b58f",
-    "ts": "2026-06-19T10:06:51.870121",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Singapore'"
-  },
-  {
-    "id": "b2758e0c",
-    "ts": "2026-06-19T10:06:51.825708",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Malaysia"
-  },
-  {
-    "id": "982f0d41",
-    "ts": "2026-06-19T10:06:51.748288",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "8832aa76",
-    "ts": "2026-06-19T10:06:44.910923",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Malaysia'"
-  },
-  {
-    "id": "c46f34b3",
-    "ts": "2026-06-19T10:06:44.867203",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Australia"
-  },
-  {
-    "id": "44c06ad8",
-    "ts": "2026-06-19T10:06:44.820393",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "3c2841df",
-    "ts": "2026-06-19T10:06:37.941729",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Australia'"
-  },
-  {
-    "id": "9c1dc3eb",
-    "ts": "2026-06-19T10:06:37.895478",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in UK"
-  },
-  {
-    "id": "a7a2deb0",
-    "ts": "2026-06-19T10:06:37.847040",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "4fd0a479",
-    "ts": "2026-06-19T10:06:31.281024",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'UK'"
   }
 ]
