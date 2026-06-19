@@ -1,5 +1,75 @@
 [
   {
+    "id": "6f167934",
+    "ts": "2026-06-19T20:52:29.888875",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Company | Software Engineer | Remote/Various | 0% match"
+  },
+  {
+    "id": "6261b329",
+    "ts": "2026-06-19T20:52:29.833786",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Manually submitted and recorded: Company — Software Engineer"
+  },
+  {
+    "id": "5c828ee9",
+    "ts": "2026-06-19T20:52:11.999563",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "6cd09454",
+    "ts": "2026-06-19T20:52:11.926717",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Filling form fields and uploading resume via AI..."
+  },
+  {
+    "id": "e41666e9",
+    "ts": "2026-06-19T20:52:11.853060",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3feb593a",
+    "ts": "2026-06-19T20:52:11.773374",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Tailoring resume for Company — Software Engineer..."
+  },
+  {
+    "id": "d210814f",
+    "ts": "2026-06-19T20:52:11.697862",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Detected Company: Company | Job Title: Software Engineer"
+  },
+  {
+    "id": "ac9ac014",
+    "ts": "2026-06-19T20:52:06.926321",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "=================================================="
+  },
+  {
+    "id": "7a7da6ff",
+    "ts": "2026-06-19T20:52:06.893774",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing URL: https://to.indeed.com/aa6ws9sqlm7t"
+  },
+  {
+    "id": "58036120",
+    "ts": "2026-06-19T20:52:06.856446",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "\n=================================================="
+  },
+  {
     "id": "452508a7",
     "ts": "2026-06-19T20:52:00.138613",
     "level": "SUCCESS",
@@ -3428,75 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "c0bb2281",
-    "ts": "2026-06-19T20:35:31.158126",
-    "level": "INFO",
-    "site": "shine",
-    "message": "🚀 Starting Shine.com bot"
-  },
-  {
-    "id": "c48665c4",
-    "ts": "2026-06-19T20:35:31.126023",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Shine ---"
-  },
-  {
-    "id": "7034181d",
-    "ts": "2026-06-19T20:35:31.126023",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "cd9eefaa",
-    "ts": "2026-06-19T20:35:31.083993",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 6, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 2, 'jobstreet': 1, 'jooble': 0}"
-  },
-  {
-    "id": "3887489b",
-    "ts": "2026-06-19T20:35:31.048276",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "ac8f0f52",
-    "ts": "2026-06-19T20:35:31.018354",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\19-06-2026"
-  },
-  {
-    "id": "e7795a3d",
-    "ts": "2026-06-19T20:35:30.978395",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-19 20:35:30"
-  },
-  {
-    "id": "7676ca40",
-    "ts": "2026-06-19T20:35:30.948115",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "31f79908",
-    "ts": "2026-06-19T20:35:30.918399",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "1e364d5e",
-    "ts": "2026-06-19T20:35:30.889080",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
   }
 ]
