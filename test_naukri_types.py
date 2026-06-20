@@ -44,7 +44,7 @@ def run_test():
             btn = None
             for sel in ['button[class*="apply-button"]', 'button:has-text("Apply")', 'a:has-text("Apply")']:
                 loc = page.locator(sel).first
-                if loc.is_visible(timeout=2000):
+                if loc.is_visible():
                     btn_text = loc.inner_text().lower()
                     btn = loc
                     break

@@ -531,7 +531,7 @@ def _apply_to_career_page(page, url: str) -> bool:
         ]:
             try:
                 el = page.locator(sel).first
-                if el.is_visible(timeout=2000):
+                if el.is_visible():
                     submit_btn = el
                     break
             except Exception:

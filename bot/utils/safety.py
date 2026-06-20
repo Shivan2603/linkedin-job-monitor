@@ -327,7 +327,7 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
         for sel in ['input[name="identifier"]', 'input[type="email"]']:
             try:
                 loc = auth_page.locator(sel).first
-                if loc.is_visible(timeout=200):
+                if loc.is_visible():
                     selector_type = 'email_input'
                     target_locator = loc
                     break
@@ -340,7 +340,7 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
         for sel in [f'[data-email="{email}"]', f'[data-identifier="{email}"]', 'div.auth-select-account', '#profileIdentifier']:
             try:
                 loc = auth_page.locator(sel).first
-                if loc.is_visible(timeout=200):
+                if loc.is_visible():
                     selector_type = 'account_picker'
                     target_locator = loc
                     break
@@ -352,7 +352,7 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
         # Check for direct email text
         try:
             loc = auth_page.locator(f'text={email}').first
-            if loc.is_visible(timeout=200):
+            if loc.is_visible():
                 selector_type = 'account_picker'
                 target_locator = loc
                 break
@@ -386,7 +386,7 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
             human_fill(target_locator, email, "Google Email", "safety")
             time.sleep(1)
             next_btn = auth_page.locator('#identifierNext, button:has-text("Next"), button:has-text("Next step")').first
-            if next_btn.is_visible(timeout=1000):
+            if next_btn.is_visible():
                 next_btn.click()
             else:
                 target_locator.press("Enter")
@@ -399,12 +399,12 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
     # Wait for password input if it appears
     try:
         pass_input = auth_page.locator('input[type="password"]').first
-        if pass_input.is_visible(timeout=4000):
+        if pass_input.is_visible():
             logger.info("Google SSO: Entering password...", "safety")
             human_fill(pass_input, password, "Google Password", "safety")
             time.sleep(1)
             next_btn2 = auth_page.locator('#passwordNext, button:has-text("Next"), button:has-text("Next step")').first
-            if next_btn2.is_visible(timeout=1500):
+            if next_btn2.is_visible():
                 next_btn2.click()
             else:
                 pass_input.press("Enter")
@@ -415,7 +415,7 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
     # Check if there is a confirmation/submit/allow button to consent
     try:
         consent_btn = auth_page.locator('button:has-text("Continue"), button:has-text("Confirm"), button:has-text("Allow")').first
-        if consent_btn.is_visible(timeout=3000):
+        if consent_btn.is_visible():
             logger.info("Google SSO: Clicking consent/continue button...", "safety")
             consent_btn.click()
             time.sleep(3)

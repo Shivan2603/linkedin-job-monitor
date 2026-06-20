@@ -124,7 +124,7 @@ def _login(page: Page, creds: dict) -> bool:
                 logger.success("LinkedIn: already logged in via persistent session (URL check)", SITE)
                 return True
             for sel in [".global-nav", "#global-nav", "a[href*='/feed/']", "button[aria-label*='Primary Navigation']"]:
-                if page.locator(sel).first.is_visible(timeout=1000):
+                if page.locator(sel).first.is_visible():
                     logger.success("LinkedIn: already logged in via persistent session (selector check)", SITE)
                     return True
         except Exception:
@@ -132,13 +132,13 @@ def _login(page: Page, creds: dict) -> bool:
 
         # Fill credentials
         email_loc = page.locator('#username, #session_key, input[name="session_key"], [autocomplete="username"]').first
-        if email_loc.is_visible(timeout=5000):
+        if email_loc.is_visible():
             field_log("fill", "Email", creds["email"], SITE)
             email_loc.fill(creds["email"])
             _delay(0.6, 1.2)
 
             pass_loc = page.locator('#password, #session_password, input[name="session_password"], [autocomplete="current-password"]').first
-            if pass_loc.is_visible(timeout=5000):
+            if pass_loc.is_visible():
                 field_log("fill", "Password", "***", SITE)
                 pass_loc.fill(creds["password"])
             _delay(0.5, 1.0)
@@ -178,7 +178,7 @@ def _login(page: Page, creds: dict) -> bool:
                     success = True
                     break
                 for sel in [".global-nav", "#global-nav", "a[href*='/feed/']", "button[aria-label*='Primary Navigation']"]:
-                    if page.locator(sel).first.is_visible(timeout=500):
+                    if page.locator(sel).first.is_visible():
                         success = True
                         break
                 if success:
@@ -262,7 +262,7 @@ def _search_and_apply(page: Page, job_title: str, location: str):
         # Navigate to next page
         try:
             next_btn = page.get_by_role("button", name="View next page")
-            if next_btn.is_visible(timeout=3000):
+            if next_btn.is_visible():
                 next_btn.click()
                 _delay(2, 4)
             else:
@@ -339,7 +339,7 @@ def _apply_to_job(page: Page, job_el) -> bool:
             page.locator("button:has-text('easy apply')"),
         ]:
             try:
-                if btn_locator.first.is_visible(timeout=1000):
+                if btn_locator.first.is_visible():
                     easy_btn = btn_locator.first
                     break
             except Exception:
@@ -452,7 +452,7 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
         # Submit
         try:
             submit = page.get_by_role("button", name="Submit application")
-            if submit.is_visible(timeout=2000):
+            if submit.is_visible():
                 field_log("submit", "Submit application", "", SITE)
                 submit.click()
                 _delay(1.5, 2.5)
@@ -468,7 +468,7 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
         # Review
         try:
             review = page.get_by_role("button", name="Review your application")
-            if review.is_visible(timeout=1000):
+            if review.is_visible():
                 field_log("nav", "Review application", "", SITE)
                 review.click()
                 _delay(1, 2)
@@ -479,7 +479,7 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
         # Next
         try:
             nxt = page.get_by_role("button", name="Continue to next step")
-            if nxt.is_visible(timeout=1000):
+            if nxt.is_visible():
                 field_log("nav", "Next step", "", SITE)
                 nxt.click()
                 _delay(1, 2)
@@ -535,7 +535,7 @@ def _fill_phone(page: Page, phone: str, phone_local: str):
         # Playwright locator fallback
         try:
             ph = page.get_by_label("Phone number")
-            if ph.is_visible(timeout=1000) and not ph.input_value().strip():
+            if ph.is_visible() and not ph.input_value().strip():
                 human_fill(ph, phone_local, "Phone number", SITE)
         except Exception:
             pass

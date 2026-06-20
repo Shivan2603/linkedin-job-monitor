@@ -59,7 +59,7 @@ def _login_portal(page, creds) -> bool:
         email_field = page.locator('#id_email_login').first
         pass_field = page.locator('#id_password').first
         
-        if email_field.is_visible(timeout=5000) and pass_field.is_visible(timeout=5000):
+        if email_field.is_visible() and pass_field.is_visible():
             logger.info("Shine Login: Attempting direct email/password login...", SITE)
             from bot.utils.safety import human_fill
             human_fill(email_field, creds["email"], "Shine Email", SITE)
@@ -80,7 +80,7 @@ def _login_portal(page, creds) -> bool:
         # Google SSO Fallback
         logger.info("Shine Login: Falling back to Google SSO...", SITE)
         google_btn = page.locator('button:has-text("Google"), .google-login-btn, a[href*="google"]').first
-        if google_btn.is_visible(timeout=2000):
+        if google_btn.is_visible():
             popup = None
             try:
                 with page.context.expect_page(timeout=5000) as popup_info:
@@ -125,14 +125,14 @@ def _update_shine_profile(page):
         from bot.config import BASE_RESUME_DOCX
         if os.path.exists(BASE_RESUME_DOCX):
             upload_input = page.locator('input[type="file"], input[id*="resume"], input[name*="resume"]').first
-            if upload_input.is_visible(timeout=4000):
+            if upload_input.is_visible():
                 logger.info(f"Uploading base resume to Shine: {BASE_RESUME_DOCX}...", SITE)
                 upload_input.set_input_files(BASE_RESUME_DOCX)
                 _human_delay(4, 5)
                 logger.success("Base resume uploaded successfully to Shine profile ✅", SITE)
             else:
                 upload_btn = page.locator('button:has-text("Upload"), a:has-text("Upload"), [class*="upload"]').first
-                if upload_btn.is_visible(timeout=2000):
+                if upload_btn.is_visible():
                     logger.info("Clicking upload button to select file...", SITE)
                     with page.expect_file_chooser() as fc_info:
                         upload_btn.click()

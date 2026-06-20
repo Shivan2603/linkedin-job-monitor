@@ -136,7 +136,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
     if creds["email"] and creds["password"]:
         try:
             email_input = page.locator('input[type="email"], input[name="__email"]').first
-            if email_input.is_visible(timeout=3000):
+            if email_input.is_visible():
                 from bot.utils.safety import human_fill
                 human_fill(email_input, creds["email"], "Indeed Email", SITE)
                 _human_delay(1, 1.5)
@@ -145,7 +145,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                 check_and_handle_cloudflare(page)
                 
                 pass_input = page.locator('input[type="password"]').first
-                if pass_input.is_visible(timeout=3000):
+                if pass_input.is_visible():
                     human_fill(pass_input, creds["password"], "Indeed Password", SITE)
                     _human_delay(1, 1.5)
                     page.locator('button[type="submit"]').first.click()

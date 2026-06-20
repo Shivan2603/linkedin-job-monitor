@@ -202,7 +202,7 @@ def fill_otp_on_page(page, site: str = "any", timeout: int = 60) -> bool:
     for selector in otp_selectors:
         try:
             el = page.locator(selector).first
-            if el.is_visible(timeout=2000):
+            if el.is_visible():
                 el.fill(otp)
                 logger.info(f"OTP {otp} auto-filled successfully!", "otp")
                 # Try to click submit/verify button

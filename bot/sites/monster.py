@@ -82,14 +82,14 @@ def _login_portal(page, creds, base_url: str) -> bool:
     try:
         logger.info("Foundit Login: Attempting login via OTP / Login Code...", SITE)
         email_field = page.locator('input[name="userName"], input[name="emailAddress"], input[type="email"]').first
-        if email_field.is_visible(timeout=4000):
+        if email_field.is_visible():
             from bot.utils.safety import human_fill
             human_fill(email_field, creds["email"], "Foundit Email", SITE)
             _human_delay(1, 2)
             
             # Click Send OTP button (which is button#loginSubmit on the default OTP view)
             send_otp_btn = page.locator('button#loginSubmit, #loginSubmit, button:has-text("Send OTP"), .send-otp-btn').first
-            if send_otp_btn.is_visible(timeout=3000):
+            if send_otp_btn.is_visible():
                 send_otp_btn.click()
                 logger.info("Foundit Login: Sent OTP to email. Waiting for code...", SITE)
                 _human_delay(3, 4)
@@ -143,14 +143,14 @@ def _login_portal(page, creds, base_url: str) -> bool:
         _human_delay(3, 4)
         
         pwd_toggle = page.locator('text="Login via Password", text="Login with Password", .login-pwd-btn, span:has-text("Password")').first
-        if pwd_toggle.is_visible(timeout=5000):
+        if pwd_toggle.is_visible():
             pwd_toggle.click()
             _human_delay(2, 3)
             
         email_field = page.locator('input[name="userName"], input[name="emailAddress"], input[type="email"]').first
         pass_field = page.locator('input[name="password"], input[type="password"]').first
         
-        if email_field.is_visible(timeout=3000) and pass_field.is_visible(timeout=3000):
+        if email_field.is_visible() and pass_field.is_visible():
             from bot.utils.safety import human_fill
             human_fill(email_field, creds["email"], "Foundit Email", SITE)
             # Use the requested password "Shiva26@" as fallback
@@ -175,7 +175,7 @@ def _login_portal(page, creds, base_url: str) -> bool:
         _human_delay(3, 4)
         
         google_btn = page.locator('button:has-text("Google"), a:has-text("Google"), .google-login-btn').first
-        if google_btn.is_visible(timeout=3000):
+        if google_btn.is_visible():
             popup = None
             try:
                 with page.context.expect_page(timeout=5000) as popup_info:
@@ -216,7 +216,7 @@ def _dismiss_foundit_popups(page):
         ]:
             try:
                 el = page.locator(sel).first
-                if el.is_visible(timeout=300):
+                if el.is_visible():
                     logger.info(f"Dismissing Foundit popup via button click: '{sel}'", SITE)
                     el.click()
                     _human_delay(1, 2)
@@ -359,7 +359,7 @@ def _apply_monster_jobs(page, job_title: str, location: str, base_url: str):
 
             if success:
                 submit_btn = page.locator('button[type="submit"], button:has-text("Submit"), button:has-text("Apply Now")').first
-                if submit_btn.is_visible(timeout=3000):
+                if submit_btn.is_visible():
                     _dismiss_foundit_popups(page)
                     submit_btn.click()
                     _human_delay(2, 3)

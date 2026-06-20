@@ -171,7 +171,7 @@ standard_answers:
   Can you work from office?: 'Yes'
   Choose preferred cities to work: Bengaluru
   City: Avinashi, Tiruppur, Tamilnadu
-  City, state, or zip code: India
+  City, state, or zip code: Malaysia
   Consent to data processing?: 'Yes'
   Cover Letter: 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of
     professional experience delivering scalable, cloud-native applications using C#,
@@ -247,10 +247,14 @@ standard_answers:
     resume Siva_Shankar_Power_Platform_Devel_Peregrine_Resume.docx
   Deselect resume Siva_Shankar_Principal_C__Full_St_Harnham_Resume.docx: Deselect
     resume Siva_Shankar_Principal_C__Full_St_Harnham_Resume.docx
+  Deselect resume Siva_Shankar_Senior_.NET_Developer_Collabera_Resume.docx: Deselect
+    resume Siva_Shankar_Senior_.NET_Developer_Collabera_Resume.docx
   Deselect resume Siva_Shankar_Senior_.NET_Developer_DNA_Technology_Services_Resume.docx: Deselect
     resume Siva_Shankar_Senior_.NET_Developer_DNA_Technology_Services_Resume.docx
   Deselect resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Haystack_Resume.docx: Deselect
     resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Haystack_Resume.docx
+  Deselect resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Matchtech_Resume.docx: Deselect
+    resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Matchtech_Resume.docx
   Deselect resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx: Deselect
     resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx
   Deselect resume Siva_Shankar_Senior_C__Full_Stack_Harnham_Resume.docx: Deselect
@@ -297,6 +301,8 @@ standard_answers:
     resume Siva_Shankar_Software_Engineer_Workplace_Options_Resume.docx
   Deselect resume Siva_Shankar_Staff_Software_Engin_Programmers_io_Resume.docx: Deselect
     resume Siva_Shankar_Staff_Software_Engin_Programmers_io_Resume.docx
+  Deselect resume Siva_Shankar_VB.Net_Developer_HCLTech_Resume.docx: Deselect resume
+    Siva_Shankar_VB.Net_Developer_HCLTech_Resume.docx
   Deselect resume Siva_Shankar__NET_Developer_-_Blo_Noir_Resume.docx: Deselect resume
     Siva_Shankar__NET_Developer_-_Blo_Noir_Resume.docx
   Deselect resume Siva_Shankar__NET_Developer_-_Bur_Noir_Resume.docx: Deselect resume
@@ -341,6 +347,7 @@ standard_answers:
   Enter keyword / designation / companies: .NET FSD React JS
   Enter location: Chennai
   Expected CTC: 20-30 LPA
+  Expected CTC (in INR Lakh/Annum): '22'
   Expected CTC (in LPA): 20-30
   Expected Salary: 20-30 LPA
   Expected monthly salary (SGD): '20'
@@ -354,6 +361,7 @@ standard_answers:
   ? Have you personally configured and developed Service Catalog and Flow Designer
     solutions in ServiceNow? Please can you show on your CV.
   : 'No'
+  Have you used Azure DevOps or GitHub for source control and CI/CD pipeline management in production projects?: 'Yes'
   ? Have you worked as a Senior ServiceNow Developer on a global or multi-country
     ServiceNow implementation or rollout programme? Please show this in your CV.
   : 'No'
@@ -374,6 +382,7 @@ standard_answers:
   How Many years of Expereince in Web API?: '4'
   How did you hear about this job?: Online job portal
   How many years .Net experience do you have?: '4'
+  How many years of experience do you have working with React and JavaScript-based front-end development?: '4'
   How many years of experience do you have?: I have 4+ years of professional software
     development experience.
   How many years of total professional experience do you have?: '4'
@@ -409,6 +418,7 @@ standard_answers:
   'No': 'No'
   Notice Period: 'Serving notice (LWD: 14-Aug-2026)'
   Notice period (in days): dynamic
+  Offical Notice Period (Looking for only immediate joiner): '15'
   Phone: '6383149155'
   Phone country code: India (+91)
   Please enter your current ctc in INR: '1150000'
@@ -421,7 +431,7 @@ standard_answers:
   Postal: '641654'
   Role Preference - Civica Job Family: Software Architecture, Development & Engineering
   Salary Expectations: '25'
-  Search by title, skill, or company: C# Developer
+  Search by title, skill, or company: Senior Backend Engineer
   State: TamilNadu
   Tell us about yourself: I am a Senior .NET Developer with 4+ years of experience
     building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure
@@ -432,6 +442,7 @@ standard_answers:
   Website: https://shivan2603.github.io/sivashankar-portfolio/
   What is the current Variable pay/Performance bonus?: '0'
   What is the stock/RSU value yearly?: '100'
+  What is your Notice period (in days)?: '50'
   What is your current CTC?: '11.5'
   What is your current fixed compensation?: '1150000'
   What is your current location?: Chennai
@@ -468,6 +479,7 @@ standard_answers:
   Years of experience with Entity Framework?: 3 years
   Years of experience with SQL?: 4 years
   Years of experience with TDD?: 2 years
+  Years of hands-on experience in .NET development (ASP.NET MVC/Core, C#, Entity Framework)?: '4'
   'Yes': 'Yes'
   any years of hands-on AWS cloud experience do you have (deploying .NET applications)?: '4'
   ave you designed and built microservices using .NET, DDD, and Clean Architecture?: 'Yes'

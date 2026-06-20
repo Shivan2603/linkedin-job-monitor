@@ -78,7 +78,7 @@ def _login_portal(page, creds, base_url: str) -> bool:
     # Click Continue with Email if visible on first screen
     try:
         email_continue = page.locator('button:has-text("Continue with Email"), a:has-text("Continue with Email"), [data-automation="email-signin"]').first
-        if email_continue.is_visible(timeout=3000):
+        if email_continue.is_visible():
             email_continue.click()
             _human_delay(1.5, 2)
     except Exception:
@@ -87,7 +87,7 @@ def _login_portal(page, creds, base_url: str) -> bool:
     try:
         # Fill email
         email_field = page.locator('input[type="email"], #emailAddress, input[name="emailAddress"]').first
-        if email_field.is_visible(timeout=4000):
+        if email_field.is_visible():
             from bot.utils.safety import human_fill
             human_fill(email_field, creds["email"], "JobStreet Email", SITE)
             _human_delay(1, 2)
@@ -99,7 +99,7 @@ def _login_portal(page, creds, base_url: str) -> bool:
         # 1. Try OTP / Sign-in Code Login first
         try:
             code_login_btn = page.locator('button:has-text("Email me a sign in code"), span:has-text("Email me a sign in code")').first
-            if code_login_btn.is_visible(timeout=4000):
+            if code_login_btn.is_visible():
                 logger.info("JobStreet Login: Clicking 'Email me a sign in code'...", SITE)
                 code_login_btn.click()
                 logger.info("JobStreet Login: Sent sign-in code to email. Waiting for code...", SITE)
@@ -156,12 +156,12 @@ def _login_portal(page, creds, base_url: str) -> bool:
                 
             # Click Continue with Email if visible
             email_continue = page.locator('button:has-text("Continue with Email"), a:has-text("Continue with Email"), [data-automation="email-signin"]').first
-            if email_continue.is_visible(timeout=2000):
+            if email_continue.is_visible():
                 email_continue.click()
                 _human_delay(1, 2)
                 
             email_field = page.locator('input[type="email"], #emailAddress, input[name="emailAddress"]').first
-            if email_field.is_visible(timeout=3000):
+            if email_field.is_visible():
                 from bot.utils.safety import human_fill
                 human_fill(email_field, creds["email"], "JobStreet Email", SITE)
                 _human_delay(1, 2)
@@ -170,7 +170,7 @@ def _login_portal(page, creds, base_url: str) -> bool:
                 _human_delay(3, 4)
                 
             pass_field = page.locator('input[type="password"], #password, input[name="password"]').first
-            if pass_field.is_visible(timeout=4000):
+            if pass_field.is_visible():
                 from bot.utils.safety import human_fill
                 password_to_use = "Shiva26@" if "Shiva26@" not in creds["password"] else creds["password"]
                 human_fill(pass_field, password_to_use, "JobStreet Password", SITE)

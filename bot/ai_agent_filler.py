@@ -192,7 +192,7 @@ def _handle_workday_entry_options(page: Page, site: str) -> bool:
     try:
         # Check if there is an Autofill with Resume button
         autofill_btn = page.query_selector('[data-automation-id="applyWithResume"], button:has-text("Autofill with Resume"), button:has-text("Autofill with CV")')
-        if autofill_btn and autofill_btn.is_visible(timeout=1000):
+        if autofill_btn and autofill_btn.is_visible():
             logger.info("AI Filler: Workday landing options detected. Clicking 'Autofill with Resume'...", site)
             autofill_btn.click()
             time.sleep(3)
@@ -200,7 +200,7 @@ def _handle_workday_entry_options(page: Page, site: str) -> bool:
             
         # Or Apply Manually
         manual_btn = page.query_selector('[data-automation-id="applyManually"], button:has-text("Apply Manually")')
-        if manual_btn and manual_btn.is_visible(timeout=1000):
+        if manual_btn and manual_btn.is_visible():
             logger.info("AI Filler: Workday landing options detected. Clicking 'Apply Manually'...", site)
             manual_btn.click()
             time.sleep(3)
@@ -303,7 +303,7 @@ def _find_next_or_submit_button(page: Page):
     for sel in submit_selectors:
         try:
             el = page.locator(sel).first
-            if el.is_visible(timeout=1000):
+            if el.is_visible():
                 return el
         except Exception:
             continue
@@ -323,7 +323,7 @@ def _find_next_or_submit_button(page: Page):
     for sel in nav_selectors:
         try:
             el = page.locator(sel).first
-            if el.is_visible(timeout=1000):
+            if el.is_visible():
                 return el
         except Exception:
             continue
@@ -350,7 +350,7 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
         
         # Check for standard "Apply" buttons on description pages to enter the application
         apply_btn = page.query_selector('[data-automation-id="adventureButton"], button:has-text("Apply"), button:has-text("Apply Now")')
-        if apply_btn and apply_btn.is_visible(timeout=1000) and not page.query_selector('input, textarea, select'):
+        if apply_btn and apply_btn.is_visible() and not page.query_selector('input, textarea, select'):
             logger.info("AI Filler: Job description page detected. Clicking 'Apply' to enter application form...", site)
             apply_btn.click()
             time.sleep(3)
@@ -451,7 +451,7 @@ Return JSON array: [{"id": "ai-form-field-N", "value": "answer"}]"""
                 selector = f'[data-ai-id="{field_id}"]'
                 try:
                     el = page.locator(selector).first
-                    if not el.is_visible(timeout=2000):
+                    if not el.is_visible():
                         continue
                     
                     # Resolve element characteristics
@@ -491,7 +491,7 @@ Return JSON array: [{"id": "ai-form-field-N", "value": "answer"}]"""
                         for opt_sel in option_selectors:
                             try:
                                 matches = page.locator(opt_sel).all()
-                                visible_matches = [m for m in matches if m.is_visible(timeout=500)]
+                                visible_matches = [m for m in matches if m.is_visible()]
                                 if visible_matches:
                                     options_found = visible_matches
                                     break
@@ -518,7 +518,7 @@ Return JSON array: [{"id": "ai-form-field-N", "value": "answer"}]"""
                             # Try typing inside search input of combobox
                             try:
                                 search_input = el.locator('input').first
-                                if search_input.is_visible(timeout=500):
+                                if search_input.is_visible():
                                     search_input.fill(str(val))
                                     time.sleep(0.5)
                                     search_input.press("Enter")

@@ -582,7 +582,7 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
         for sel in apply_selectors:
             try:
                 el_loc = page.locator(sel).first
-                if el_loc.is_visible(timeout=3000):
+                if el_loc.is_visible():
                     btn_text = el_loc.inner_text().lower()
                     if "already" in btn_text or "save" in btn_text:
                         field_log("skip", f"{company} — {job_title}", "Already applied on Naukri", SITE)
@@ -973,7 +973,7 @@ def _handle_application(page: Page, resume_path: str, job_title: str,
         for ind in success_indicators:
             try:
                 el = page.query_selector(ind)
-                if el and el.is_visible(timeout=1000):
+                if el and el.is_visible():
                     field_log("success", "Application submitted!", "", SITE)
                     return True
             except Exception:
@@ -1005,7 +1005,7 @@ def _handle_application(page: Page, resume_path: str, job_title: str,
             for ind in success_indicators:
                 try:
                     el = page.query_selector(ind)
-                    if el and el.is_visible(timeout=3000):
+                    if el and el.is_visible():
                         field_log("success", "Application submitted successfully!", "", SITE)
                         return True
                 except Exception:
