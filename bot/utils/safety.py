@@ -227,13 +227,12 @@ def safe_browser_context(playwright, site: str):
         except Exception:
             pass
     
-    context = playwright.chromium.launch_persistent_context(
-        user_data_dir=user_data_dir,
-        headless=False,           # VISIBLE browser window
-        slow_mo=150,              # 150ms between every action — watch each field fill
-        channel="chrome",         # Use official Google Chrome to bypass security blocks
-        ignore_default_args=["--enable-automation"],  # Hide automation flags to bypass Cloudflare loops
-        args=[
+    launch_kwargs = {
+        "user_data_dir": user_data_dir,
+        "headless": False,
+        "slow_mo": 150,
+        "ignore_default_args": ["--enable-automation"],
+        "args": [
             "--no-sandbox",
             "--disable-blink-features=AutomationControlled",
             "--disable-dev-shm-usage",
@@ -241,11 +240,16 @@ def safe_browser_context(playwright, site: str):
             "--start-maximized",
             "--window-position=0,0",
         ],
-        viewport={"width": 1600, "height": 900},  # Fixed viewport for consistent visibility
-        locale="en-IN",
-        timezone_id="Asia/Kolkata",
-        extra_http_headers={"Accept-Language": "en-IN,en;q=0.9"},
-    )
+        "viewport": {"width": 1600, "height": 900},
+        "locale": "en-IN",
+        "timezone_id": "Asia/Kolkata",
+        "extra_http_headers": {"Accept-Language": "en-IN,en;q=0.9"},
+    }
+
+    if site != "company_careers":
+        launch_kwargs["channel"] = "chrome"  # Use official Google Chrome for main job boards
+
+    context = playwright.chromium.launch_persistent_context(**launch_kwargs)
     
     # Remove navigator.webdriver flag
     context.add_init_script("""
