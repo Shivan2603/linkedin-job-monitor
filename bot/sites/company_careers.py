@@ -313,6 +313,10 @@ def _apply_to_career_page(page, url: str) -> bool:
         resume_path   = tailor_result["resume_path"]
         match_score   = tailor_result["match_score"]
 
+        if not resume_path:
+            logger.info(f"Skipping {company} — {job_t} (Tech stack or experience mismatch)", SITE)
+            return False
+
         if match_score < MIN_MATCH:
             logger.info(f"Skipping {company} — {job_t} (Match score {match_score}% < {MIN_MATCH}%)", SITE)
             return False

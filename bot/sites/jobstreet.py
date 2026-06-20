@@ -339,6 +339,10 @@ def _apply_jobstreet_jobs(page, job_title: str, location: str, base_url: str):
             resume_path = tailor_result["resume_path"]
             match_score = tailor_result["match_score"]
 
+            if not resume_path:
+                logger.info(f"Skipping {company} - {job_t} (Tech stack or experience mismatch)", SITE)
+                continue
+
             if match_score < MIN_MATCH:
                 logger.info(f"Skipping {company} - {job_t} (Match score {match_score}% < {MIN_MATCH}%)", SITE)
                 continue

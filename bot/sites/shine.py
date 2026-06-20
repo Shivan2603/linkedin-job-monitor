@@ -183,6 +183,11 @@ def _apply_shine_jobs(page, job_title: str, location: str):
                 continue
 
             tailor_result = tailor_resume(job_t, company, desc, site=SITE)
+            resume_path = tailor_result.get("resume_path", "")
+            if not resume_path:
+                logger.info(f"Skipping {company} - {job_t} (Tech stack or experience mismatch)", SITE)
+                continue
+
             apply_btn.click()
             _human_delay(2, 3)
 

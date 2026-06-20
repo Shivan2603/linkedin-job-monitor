@@ -354,6 +354,10 @@ def _apply_to_job(page: Page, job_el) -> bool:
         resume_path   = tailor_result["resume_path"]
         match_score   = tailor_result["match_score"]
 
+        if not resume_path:
+            field_log("skip", f"{company} — {job_title}", "Tech stack or experience mismatch", SITE)
+            return False
+
         if match_score < MIN_MATCH:
             field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}% threshold", SITE)
             return False

@@ -167,10 +167,11 @@ standard_answers:
     accurate information is essential, as any dishonesty may lead to rejection of
     an application or termination.
   : 'Yes'
+  Can you commute to the office location? Which Orion Innovation location would you perfer?: 'No'
   Can you work from office?: 'Yes'
   Choose preferred cities to work: Bengaluru
   City: Avinashi, Tiruppur, Tamilnadu
-  City, state, or zip code: UK
+  City, state, or zip code: India
   Consent to data processing?: 'Yes'
   Cover Letter: 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of
     professional experience delivering scalable, cloud-native applications using C#,
@@ -208,10 +209,14 @@ standard_answers:
     resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx
   Deselect resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx: Deselect
     resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx
+  Deselect resume Siva_Shankar_Freelance_contract_work:_Kentico_Developer_8+_Experience_Qzensys_Solutions_Resume.docx: Deselect
+    resume Siva_Shankar_Freelance_contract_work:_Kentico_Developer_8+_Experience_Qzensys_Solutions_Resume.docx
   Deselect resume Siva_Shankar_Full-Stack__NET_Deve_Montash_Resume.docx: Deselect
     resume Siva_Shankar_Full-Stack__NET_Deve_Montash_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx: Deselect
     resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx
+  Deselect resume Siva_Shankar_Full_Stack_Engineer_Insight_Global_Resume.docx: Deselect
+    resume Siva_Shankar_Full_Stack_Engineer_Insight_Global_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx: Deselect resume
     Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx
   Deselect resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx: Deselect
@@ -220,6 +225,10 @@ standard_answers:
     resume Siva_Shankar_Lead_DevOps_Engineer_Prism_Digital_Resume.docx
   Deselect resume Siva_Shankar_Lead_Full_Stack_Engi_dunnhumby_Resume.docx: Deselect
     resume Siva_Shankar_Lead_Full_Stack_Engi_dunnhumby_Resume.docx
+  Deselect resume Siva_Shankar_Lead_Senior_.NET_Developer_Orion_Innovation_Resume.docx: Deselect
+    resume Siva_Shankar_Lead_Senior_.NET_Developer_Orion_Innovation_Resume.docx
+  Deselect resume Siva_Shankar_Lead_Software_Engineer_Reggie___Cole_Resume.docx: Deselect
+    resume Siva_Shankar_Lead_Software_Engineer_Reggie___Cole_Resume.docx
   Deselect resume Siva_Shankar_Lead__Net_Developer_Halian___Managed_Ser_Resume.docx: Deselect
     resume Siva_Shankar_Lead__Net_Developer_Halian___Managed_Ser_Resume.docx
   Deselect resume Siva_Shankar_Microsoft_Dynamics_3_Eames_Consulting_Resume.docx: Deselect
@@ -367,6 +376,7 @@ standard_answers:
   How many years .Net experience do you have?: '4'
   How many years of experience do you have?: I have 4+ years of professional software
     development experience.
+  How many years of total professional experience do you have?: '4'
   How many years of work experience do you have with .NET Architecture?: '4'
   How many years of work experience do you have with .NET Core?: '4'
   How many years of work experience do you have with .NET Framework?: '4'
@@ -384,6 +394,7 @@ standard_answers:
   How many years of work experience do you have with ServiceNow?: '0'
   How many years of work experience do you have with Visual Basic .NET (VB.NET)?: '4'
   How many years of work experience do you have with Windows Presentation Foundation (WPF)?: '4'
+  How many years of work experience do you have with Xamarin Products?: '4'
   How many years of working experience do you have with designing and developing derivatives platforms?: '4'
   How soon can you join our team if selected? Answer in how many months?: I am currently
     serving a notice period, with my last working day on 14th August 2026. Therefore,
@@ -402,12 +413,15 @@ standard_answers:
   Phone country code: India (+91)
   Please enter your current ctc in INR: '1150000'
   Please enter your expected ctc in INR: '22000'
+  Please list your key skills relevant to this role.: C#, .NET Core 7/8, ASP.NET Web
+    API, Azure App Services, Azure SQL, SQL Server, Entity Framework Core, Microservices,
+    CQRS, Docker, RabbitMQ, JWT, OAuth2, Angular 15+
   'Please select your total additional months of experience:': 0 month
   'Please select your total years of professional experience:': 4 years
   Postal: '641654'
   Role Preference - Civica Job Family: Software Architecture, Development & Engineering
   Salary Expectations: '25'
-  Search by title, skill, or company: .NET Developer
+  Search by title, skill, or company: C# Developer
   State: TamilNadu
   Tell us about yourself: I am a Senior .NET Developer with 4+ years of experience
     building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure
@@ -418,8 +432,11 @@ standard_answers:
   Website: https://shivan2603.github.io/sivashankar-portfolio/
   What is the current Variable pay/Performance bonus?: '0'
   What is the stock/RSU value yearly?: '100'
+  What is your current CTC?: '11.5'
   What is your current fixed compensation?: '1150000'
+  What is your current location?: Chennai
   What is your current salary?: 11.5 Lakh per annum
+  What is your desired salary?: '22'
   What is your expected compensation?: 20-30 LPA
   What is your expected salary?: 20-30 LPA
   What is your notice period?: 'Serving notice (LWD: 14-Aug-2026)'
