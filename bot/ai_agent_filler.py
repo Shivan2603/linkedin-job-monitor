@@ -348,8 +348,8 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
         # Check if we are on a Workday landing page with Apply or entry options
         _handle_workday_entry_options(page, site)
         
-        # Check for standard "Apply" buttons on description pages to enter the application
-        apply_btn = page.query_selector('[data-automation-id="adventureButton"], button:has-text("Apply"), button:has-text("Apply Now")')
+        # Check for standard "Apply" buttons or links on description pages to enter the application
+        apply_btn = page.query_selector('[data-automation-id="adventureButton"], button:has-text("Apply"), button:has-text("Apply Now"), a:has-text("Apply"), a:has-text("Apply Now"), a:has-text("Apply for this job"), a.template-btn-submit')
         if apply_btn and apply_btn.is_visible() and not page.query_selector('input, textarea, select'):
             logger.info("AI Filler: Job description page detected. Clicking 'Apply' to enter application form...", site)
             apply_btn.click()
@@ -403,7 +403,7 @@ Fill each field from the profile. Rules:
 4. Cover letter: professional 2-3 sentences
 5. Skip CAPTCHA and file upload fields (type=file)
 
-Return JSON array: [{"id": "ai-form-field-N", "value": "answer"}]"""
+Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
 
         try:
             raw = ai_complete(system, user, task="form_fill", max_tokens=1500)

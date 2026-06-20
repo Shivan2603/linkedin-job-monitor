@@ -541,13 +541,13 @@ def _apply_to_career_page(page, url: str) -> bool:
             submit_btn.click()
             _human_delay(3, 5)
 
-            record_application(
-                site=SITE, company=company, role=job_t, location="Remote/Various",
-                job_url=url, match_score=match_score, resume_used=resume_path,
-            )
-            git_sync()
-            logger.success(f"✅ Applied → {company} | {job_t} via {_detect_portal(url)}", SITE)
-            return True
+        record_application(
+            site=SITE, company=company, role=job_t, location="Remote/Various",
+            job_url=url, match_score=match_score, resume_used=resume_path,
+        )
+        git_sync()
+        logger.success(f"✅ Applied → {company} | {job_t} via {_detect_portal(url)}", SITE)
+        return True
 
     except PWTimeout:
         logger.warn(f"Timeout loading {url[:60]}…", SITE)
