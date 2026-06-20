@@ -1,5 +1,110 @@
 [
   {
+    "id": "c2efc17b",
+    "ts": "2026-06-20T12:18:22.414302",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Senior Software Engineer (.NET Developer) | Ippon Technologies | Remote/Various | 100% match"
+  },
+  {
+    "id": "fd696211",
+    "ts": "2026-06-20T12:18:18.606596",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 8/13 fields via AI."
+  },
+  {
+    "id": "c366918a",
+    "ts": "2026-06-20T12:18:16.358798",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "679c31fc",
+    "ts": "2026-06-20T12:18:15.257109",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "166e0f3a",
+    "ts": "2026-06-20T12:18:15.145427",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "97d9e0c3",
+    "ts": "2026-06-20T12:18:14.795995",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "465a3ae4",
+    "ts": "2026-06-20T12:18:14.321193",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "f4cab05a",
+    "ts": "2026-06-20T12:18:13.976081",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "5e771e6d",
+    "ts": "2026-06-20T12:18:13.572064",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c8c75be1",
+    "ts": "2026-06-20T12:17:56.194225",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check/upload to file input: Locator.get_attribute: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\""
+  },
+  {
+    "id": "bf1ffbd3",
+    "ts": "2026-06-20T12:17:26.136204",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Resume uploaded successfully to resume"
+  },
+  {
+    "id": "b754b45f",
+    "ts": "2026-06-20T12:17:25.871985",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\20-06-2026\\Siva_Shankar_Ippon_Technologies_Senior_Software_Engi_Resume.docx to input ID=resume, Name="
+  },
+  {
+    "id": "fa14658b",
+    "ts": "2026-06-20T12:16:35.712786",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "cf30de17",
+    "ts": "2026-06-20T12:16:31.148956",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/ippon/5df10dd9-b4ab-4548-b258-2445d1fe2d1e#:~:text=Senior%…"
+  },
+  {
+    "id": "c12776fe",
+    "ts": "2026-06-20T12:16:17.546076",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Starrez | Software Engineer via Greenhouse"
+  },
+  {
     "id": "ee84735e",
     "ts": "2026-06-20T12:16:13.378981",
     "level": "SUCCESS",
@@ -3393,110 +3498,5 @@
     "level": "SUCCESS",
     "site": "jobstreet",
     "message": "JobStreet already logged in via active session"
-  },
-  {
-    "id": "c5256193",
-    "ts": "2026-06-20T11:13:22.717219",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "720c64ef",
-    "ts": "2026-06-20T11:13:18.082446",
-    "level": "ERROR",
-    "site": "shine",
-    "message": "Shine bot crash: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "fbbfb831",
-    "ts": "2026-06-20T11:13:17.994946",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Searching Shine: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "5d017425",
-    "ts": "2026-06-20T11:13:17.923868",
-    "level": "WARN",
-    "site": "shine",
-    "message": "Failed to update Shine profile: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1f60b224",
-    "ts": "2026-06-20T11:13:17.803626",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Attempting to update Shine profile and upload resume..."
-  },
-  {
-    "id": "7f441883",
-    "ts": "2026-06-20T11:13:17.786424",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "96d50221",
-    "ts": "2026-06-20T11:13:17.668600",
-    "level": "SUCCESS",
-    "site": "shine",
-    "message": "Shine already logged in via cookies"
-  },
-  {
-    "id": "cd5119ac",
-    "ts": "2026-06-20T11:13:16.896296",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "🚀 Starting JobStreet/SEEK bot"
-  },
-  {
-    "id": "a253debb",
-    "ts": "2026-06-20T11:13:16.867554",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting JobStreet ---"
-  },
-  {
-    "id": "49544ae3",
-    "ts": "2026-06-20T11:13:16.830086",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "5efe1046",
-    "ts": "2026-06-20T11:13:16.798460",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "dbc66b20",
-    "ts": "2026-06-20T11:13:16.782688",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "87964562",
-    "ts": "2026-06-20T11:13:16.748348",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 11:13:16"
-  },
-  {
-    "id": "c7e50f93",
-    "ts": "2026-06-20T11:13:16.704588",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d18a5d6e",
-    "ts": "2026-06-20T11:13:16.684029",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
   }
 ]
