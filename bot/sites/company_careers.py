@@ -1,11 +1,11 @@
 """
 sites/company_careers.py — Universal Company Career Website Automation
-Discovers jobs on Lever, Greenhouse, Workday, and direct career portals.
+Discovers jobs on Lever, Greenhouse, Workday, Ashby, Workable, SuccessFactors, Taleo, iCIMS, Breezy, Recruitee, and direct career portals.
 Uses ai_agent_filler to dynamically navigate and submit applications.
 Applies broadly to any matching position — no salary/visa filter.
 """
-import time, random, re, os
-from urllib.parse import quote, urljoin
+import time, random, re, os, json
+from urllib.parse import quote, urljoin, urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 from bot.config import JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
@@ -28,18 +28,86 @@ def _build_search_queries() -> list:
     for loc in LOCATIONS:
         for title in JOB_TITLES:
             role = f'"{title}"'
-            # Greenhouse & Lever search
-            queries.append(f'site:lever.co OR site:greenhouse.io {role} "{loc}" "apply"')
+            # Greenhouse, Lever & Workday search
+            queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "{loc}" "apply"')
             # Ashby & Workable search
             queries.append(f'site:jobs.ashbyhq.com OR site:apply.workable.com {role} "{loc}"')
-            # SmartRecruiters search
-            queries.append(f'site:jobs.smartrecruiters.com {role} "{loc}"')
-            # Rippling & Breezy search
-            queries.append(f'site:jobs.rippling.com OR site:app.breezy.hr {role} "{loc}"')
+            # SuccessFactors & Taleo & iCIMS search
+            queries.append(f'site:jobs.sap.com OR site:taleo.net OR site:icims.com {role} "{loc}"')
+            # SmartRecruiters, Recruitee, Rippling & Breezy search
+            queries.append(f'site:jobs.smartrecruiters.com OR site:recruitee.com OR site:jobs.rippling.com OR site:app.breezy.hr {role} "{loc}"')
             # Direct company career site search (excluding aggregators)
             queries.append(f'{role} "careers" "{loc}" -site:linkedin.com -site:indeed.com -site:naukri.com -site:glassdoor.com -site:monster.com -site:foundit.in -site:shine.com -site:jobstreet.com')
 
     return list(set(queries))
+
+
+def _ai_generate_search_queries() -> list:
+    """Use AI to generate highly dynamic, hyper-targeted Google search queries for career sites."""
+    try:
+        from bot.ai_router import ai_complete
+        from bot.config import JOB_TITLES, LOCATIONS
+        
+        system = (
+            "You are an AI recruitment crawler. Generate 20-25 highly effective, advanced Google search queries "
+            "to find direct job application links or career portals for software engineers. "
+            "Focus on major ATS platforms: lever.co, greenhouse.io, myworkdayjobs.com, ashbyhq.com, workable.com, smartrecruiters.com, sap.com, taleo.net, icims.com, breezy.hr, recruitee.com. "
+            "Focus on the candidate's stack: .NET, C#, .NET Core, ASP.NET Core, Azure, Microservices, Angular.\n\n"
+            "CRITICAL RULES FOR GOOGLE SEARCH OPERATORS:\n"
+            "1. The 'site:' operator must ONLY be used for ATS domains (e.g. site:lever.co, site:greenhouse.io, site:myworkdayjobs.com).\n"
+            "2. NEVER use 'site:' for location names, company names, or job titles (e.g. NEVER write 'site:bangalore' or 'site:uk'). Locations and titles must be standard quoted text, e.g. \"Kuala Lumpur\" OR \"Singapore\" OR \"remote\".\n"
+            "3. Ensure the syntax is valid for Google Search (use OR in uppercase, group terms with parentheses correctly)."
+        )
+        user = (
+            f"Configured Job Titles: {JOB_TITLES}\n"
+            f"Configured Locations: {LOCATIONS}\n\n"
+            f"Rules:\n"
+            f"1. Output ONLY a clean list of queries, one per line. Do not number them or add markdown formatting.\n"
+            f"2. Make them highly targeted to direct career pages. Exclude general job aggregators (e.g. -site:linkedin.com -site:indeed.com)."
+        )
+        raw = ai_complete(system, user, task="form_fill", max_tokens=1000)
+        lines = [line.strip() for line in raw.split("\n") if line.strip()]
+        cleaned_lines = []
+        for line in lines:
+            line = re.sub(r'^\d+[\.\-\s]+', '', line)
+            line = re.sub(r'^[\*\-\s]+', '', line)
+            if line:
+                cleaned_lines.append(line)
+        return cleaned_lines
+    except Exception as e:
+        logger.warn(f"AI search query generation failed: {e}", SITE)
+        return []
+
+
+def _ai_generate_target_companies() -> list:
+    """Use AI to dynamically generate target companies and their career page search query terms"""
+    try:
+        from bot.ai_router import ai_complete
+        from bot.config import LOCATIONS
+        
+        system = (
+            "You are an AI recruitment researcher. Generate 10 prominent product/technology companies "
+            "that hire .NET / C# / Angular developers in these locations. "
+            "For each company, provide its name and the google search query to find its career page. "
+            "Return EXACTLY a JSON array of objects: [{\"company\": \"Name\", \"search_query\": \"query\"}]"
+        )
+        user = f"Locations: {LOCATIONS}"
+        raw = ai_complete(system, user, task="form_fill", max_tokens=600)
+        
+        raw = raw.strip()
+        if "```json" in raw:
+            raw = raw.split("```json")[1].split("```")[0].strip()
+        elif "```" in raw:
+            raw = raw.split("```")[1].split("```")[0].strip()
+        else:
+            m = re.search(r'(\[.*?\])', raw, re.DOTALL)
+            raw = m.group(1).strip() if m else raw
+            
+        return json.loads(raw)
+    except Exception as e:
+        logger.warn(f"AI target company generation failed: {e}", SITE)
+        return []
+
 
 SEARCH_QUERIES = _build_search_queries()
 
@@ -118,6 +186,7 @@ TARGET_COMPANIES = [
 def _human_delay(a=2.0, b=4.0):
     time.sleep(random.uniform(a, b))
 
+
 def run_company_careers_bot():
     """Main entry — discovers and applies to jobs on company career portals"""
     logger.info("🏢 Starting Universal Company Career Pages bot", SITE)
@@ -130,21 +199,43 @@ def run_company_careers_bot():
         job_urls = []
 
         try:
-            # Step 1: Discover job URLs via Google
+            # Step 1: Discover job URLs via search engines
             discovered = _discover_jobs_from_google(page)
             job_urls.extend(discovered)
-            logger.info(f"Discovered {len(discovered)} job URLs from Google search", SITE)
+            logger.info(f"Discovered {len(discovered)} job URLs from search engines", SITE)
 
-            # Step 2: Discover jobs directly from target company boards
+            # Step 2: Discover jobs directly from static target company boards
             direct_discovered = _discover_jobs_from_target_companies(page)
             job_urls.extend(direct_discovered)
             logger.info(f"Discovered {len(direct_discovered)} job URLs directly from target companies", SITE)
+
+            # Step 3: Discover jobs dynamically from AI-generated target companies
+            ai_target_companies = _ai_generate_target_companies()
+            if ai_target_companies:
+                logger.info(f"AI: Generated {len(ai_target_companies)} dynamic target companies to explore.", SITE)
+                for tc in ai_target_companies:
+                    try:
+                        q = tc.get("search_query")
+                        if not q: continue
+                        logger.info(f"AI Target Company Query: {q}", SITE)
+                        google_url = f"https://www.google.com/search?q={quote(q)}&num=5"
+                        page.goto(google_url, wait_until="domcontentloaded", timeout=20000)
+                        _human_delay(2, 4)
+                        links = page.evaluate("""
+                            () => Array.from(document.querySelectorAll('a[href]'))
+                                       .map(el => el.href)
+                                       .filter(href => href.includes('lever.co') || href.includes('greenhouse.io') || href.includes('myworkdayjobs.com') || href.includes('jobs') || href.includes('career'));
+                        """)
+                        if links:
+                            job_urls.extend(links[:2])
+                    except Exception as e:
+                        logger.warn(f"Failed to crawl AI target company {tc.get('company')}: {e}", SITE)
 
             # De-duplicate
             job_urls = list(set(job_urls))
             logger.info(f"Total deduplicated job URLs to process: {len(job_urls)}", SITE)
 
-            # Step 3: Apply to each discovered URL
+            # Step 4: Apply to each discovered URL
             for url in job_urls:
                 if not check_daily_limit(SITE):
                     logger.info("Company Careers daily limit reached", SITE)
@@ -168,65 +259,100 @@ def run_company_careers_bot():
                 pass
             logger.info(f"✅ Company Careers bot finished. Applied to {applied} positions.", SITE)
 
+
 def _discover_jobs_from_google(page) -> list:
-    """Search Google for job listings on known ATS platforms"""
+    """Search Google and DuckDuckGo for job listings using dynamic queries and pagination"""
     urls = []
-    # Query 8 random search queries per session for broad randomized coverage without Google rate limits
-    queries_to_run = random.sample(SEARCH_QUERIES, min(8, len(SEARCH_QUERIES)))
     
-    for query in queries_to_run:
-        try:
-            google_url = f"https://www.google.com/search?q={quote(query)}&num=15"
-            page.goto(google_url, wait_until="domcontentloaded", timeout=20000)
-            _human_delay(2, 4)
-
-            # Extract result links dynamically (filtering out aggregators and keeping ATS/Careers/Apply links)
-            links = page.eval_on_selector_all(
-                "a[href]",
-                """els => els.map(el => {
-                    const href = el.href;
-                    try {
-                        const url = new URL(href);
-                        const host = url.hostname.toLowerCase();
-                        const path = url.pathname.toLowerCase();
-                        
-                        // Exclude search engines & major aggregators
-                        const blacklist = [
-                            'google.', 'youtube.', 'github.', 'facebook.', 'twitter.', 'x.com', 'instagram.', 'pinterest.',
-                            'linkedin.com', 'indeed.com', 'glassdoor.', 'naukri.com', 'monster.com', 'foundit.', 'shine.com',
-                            'jooble.', 'jobstreet.', 'seek.com', 'simplyhired', 'ziprecruiter', 'careerbuilder',
-                            'talent.com', 'neuvoo', 'upwork', 'fiverr', 'freelancer', 'ambitionbox', 'levels.fyi'
-                        ];
-                        if (blacklist.some(domain => host.includes(domain))) return null;
-                        
-                        // Check if it matches major ATS or has job/career terms in URL or link text
-                        const isAts = host.includes('lever.co') || host.includes('greenhouse.io') || 
-                                      host.includes('workday.com') || host.includes('ashbyhq.com') || 
-                                      host.includes('smartrecruiters.com') || host.includes('breezy.hr') ||
-                                      host.includes('rippling.com') || host.includes('workable.com') ||
-                                      host.includes('recruitee.com');
-                                      
-                        const hasJobTerm = path.includes('job') || path.includes('career') || 
-                                           path.includes('apply') || path.includes('position') || 
-                                           path.includes('opening') || host.includes('careers.');
-                                           
-                        if (isAts || hasJobTerm) {
-                            return href;
-                        }
-                    } catch (err) {}
-                    return null;
-                }).filter(h => h !== null)"""
-            )
-            # Filter to apply pages and de-duplicate
-            apply_links = list(set([l for l in links if "/apply" in l or "job" in l.lower() or "career" in l.lower()]))
-            urls.extend(apply_links[:5])  # Max 5 per query
-            logger.info(f"Google query found {len(apply_links)} job links: {query[:60]}", SITE)
-            _human_delay(3, 5)
-
-        except Exception as e:
-            logger.warn(f"Google discovery failed for query: {e}", SITE)
-
+    # Generate queries dynamically using AI
+    ai_queries = _ai_generate_search_queries()
+    if ai_queries:
+        logger.info(f"AI: Generated {len(ai_queries)} dynamic search queries.", SITE)
+        queries_to_run = ai_queries[:15]  # Run up to 15 queries
+    else:
+        # Fallback to random queries
+        queries_to_run = random.sample(SEARCH_QUERIES, min(8, len(SEARCH_QUERIES)))
+        
+    for i, query in enumerate(queries_to_run):
+        # Alternate search engines: Google (even indexes) and DuckDuckGo (odd indexes)
+        engine = "google" if i % 2 == 0 else "duckduckgo"
+        
+        # Paging: Crawl 2 pages per query (e.g. Page 1 and Page 2)
+        for page_num in range(2):
+            try:
+                if engine == "google":
+                    # Google pagination: start=0, start=10
+                    start = page_num * 10
+                    search_url = f"https://www.google.com/search?q={quote(query)}&start={start}"
+                else:
+                    search_url = f"https://duckduckgo.com/?q={quote(query)}"
+                    
+                logger.info(f"Searching {engine} (Page {page_num + 1}): {query[:60]}...", SITE)
+                page.goto(search_url, wait_until="domcontentloaded", timeout=25000)
+                _human_delay(2, 4)
+                
+                if engine == "duckduckgo" and page_num > 0:
+                    page.keyboard.press("End")
+                    _human_delay(1.5, 2.5)
+                    page.keyboard.press("End")
+                    _human_delay(1.5, 2.5)
+                
+                # Extract links dynamically (filtering out aggregators and keeping ATS/Careers/Apply links)
+                links = page.evaluate("""
+                    () => {
+                        const els = document.querySelectorAll('a[href]');
+                        return Array.from(els).map(el => {
+                            const href = el.href;
+                            try {
+                                const url = new URL(href);
+                                const host = url.hostname.toLowerCase();
+                                const path = url.pathname.toLowerCase();
+                                
+                                // Exclude search engines & major aggregators
+                                const blacklist = [
+                                    'google.', 'youtube.', 'github.', 'facebook.', 'twitter.', 'x.com', 'instagram.', 'pinterest.',
+                                    'linkedin.com', 'indeed.com', 'glassdoor.', 'naukri.com', 'monster.com', 'foundit.', 'shine.com',
+                                    'jooble.', 'jobstreet.', 'seek.com', 'simplyhired', 'ziprecruiter', 'careerbuilder',
+                                    'talent.com', 'neuvoo', 'upwork', 'fiverr', 'freelancer', 'ambitionbox', 'levels.fyi',
+                                    'duckduckgo.com', 'bing.com', 'yahoo.com', 'wikipedia.org', 'support.google'
+                                ];
+                                if (blacklist.some(domain => host.includes(domain))) return null;
+                                
+                                // Check if it matches major ATS or has job/career terms in URL or link text
+                                const isAts = host.includes('lever.co') || host.includes('greenhouse.io') || 
+                                              host.includes('myworkdayjobs.com') || host.includes('ashbyhq.com') || 
+                                              host.includes('smartrecruiters.com') || host.includes('breezy.hr') ||
+                                              host.includes('rippling.com') || host.includes('workable.com') ||
+                                              host.includes('recruitee.com') || host.includes('sap.com') ||
+                                              host.includes('taleo.net') || host.includes('icims.com');
+                                              
+                                const hasJobTerm = path.includes('/job') || path.includes('/career') || 
+                                                   path.includes('/apply') || path.includes('/position') || 
+                                                   path.includes('/opening') || host.includes('careers.');
+                                                   
+                                if (isAts || hasJobTerm) {
+                                    return href;
+                                }
+                            } catch (err) {}
+                            return null;
+                        }).filter(h => h !== null);
+                    }
+                """)
+                # Filter to apply pages and de-duplicate
+                apply_links = list(set([l for l in links if "/apply" in l or "job" in l.lower() or "career" in l.lower()]))
+                urls.extend(apply_links[:10])  # Max 10 per query page
+                logger.info(f"Found {len(apply_links)} job links: {query[:50]}", SITE)
+                _human_delay(2, 4)
+                
+                # DuckDuckGo handles paging via scroll/infinite loading, so stop loop
+                if engine == "duckduckgo":
+                    break
+                    
+            except Exception as e:
+                logger.warn(f"Search discovery failed for query: {e}", SITE)
+                
     return list(set(urls))
+
 
 def _discover_jobs_from_target_companies(page) -> list:
     """Discover jobs directly by crawling target company job portals"""
@@ -273,6 +399,7 @@ def _discover_jobs_from_target_companies(page) -> list:
             
     return list(set(urls))
 
+
 def _apply_to_career_page(page, url: str) -> bool:
     """Navigate to a career page URL and attempt to apply using AI form filler"""
     logger.info(f"Processing: {url[:80]}…", SITE)
@@ -308,6 +435,12 @@ def _apply_to_career_page(page, url: str) -> bool:
         except Exception:
             pass
 
+        # Tech stack pre-check: JD must mention .net or c# to save API time
+        desc_lower = desc.lower()
+        if not (any(k in desc_lower for k in [".net", "c#", "dotnet"])):
+            logger.info(f"Skipping {company} — {job_t} (Job description does not mention .NET or C# keywords)", SITE)
+            return False
+
         # Tailor resume
         tailor_result = tailor_resume(job_t, company, desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
@@ -332,7 +465,7 @@ def _apply_to_career_page(page, url: str) -> bool:
         submit_btn = None
         for sel in [
             'button[type="submit"]', 'input[type="submit"]',
-            'button:has-text("Submit")', button_text_match("Submit Application"),
+            'button:has-text("Submit Application")', button_text_match("Submit Application"),
             'button:has-text("Apply")', 'button:has-text("Send Application")'
         ]:
             try:
@@ -362,8 +495,10 @@ def _apply_to_career_page(page, url: str) -> bool:
 
     return False
 
+
 def button_text_match(text: str) -> str:
     return f'button:has-text("{text}")'
+
 
 def _detect_portal(url: str) -> str:
     """Detect which ATS portal a URL belongs to"""
@@ -373,6 +508,7 @@ def _detect_portal(url: str) -> str:
     if "ashbyhq.com" in url:    return "Ashby"
     if "smartrecruiters" in url: return "SmartRecruiters"
     return "Direct"
+
 
 def _extract_company_from_url(url: str) -> str:
     """Best-effort company name from URL"""
