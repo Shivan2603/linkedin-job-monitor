@@ -1,5 +1,47 @@
 [
   {
+    "id": "950b5a46",
+    "ts": "2026-06-20T16:26:18.517263",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Noir | .NET Developer - Headington | Oxford, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "a5ce898a",
+    "ts": "2026-06-20T16:26:18.355326",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Noir — .NET Developer - Headington"
+  },
+  {
+    "id": "6d7847dd",
+    "ts": "2026-06-20T16:26:12.683040",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "a03db62c",
+    "ts": "2026-06-20T16:26:12.524963",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_NET_Developer_Headington_Noir_Resume.docx' = 'Deselect resume Siva_Shankar_NET_Developer_Headington_Noir_Resume.docx'"
+  },
+  {
+    "id": "100c9acf",
+    "ts": "2026-06-20T16:26:12.448927",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'United Kingdom'"
+  },
+  {
+    "id": "95d268f3",
+    "ts": "2026-06-20T16:26:12.305157",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = '.NET Developer'"
+  },
+  {
     "id": "912ee500",
     "ts": "2026-06-20T16:24:09.513971",
     "level": "AI",
@@ -3456,47 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "8266d2bb",
-    "ts": "2026-06-20T15:40:52.045401",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "520deff8",
-    "ts": "2026-06-20T15:40:30.434315",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "275ed74f",
-    "ts": "2026-06-20T15:40:30.184379",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Developer_Shotscope™_Husky_Technologies_Resume.docx' = 'Deselect resume Siva_Shankar_Developer_Shotscope™_Husky_Technologies_Resume.docx'"
-  },
-  {
-    "id": "f0cd6675",
-    "ts": "2026-06-20T15:40:24.074159",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "5d1f4f9f",
-    "ts": "2026-06-20T15:40:23.884107",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Chennai, Tamil Nadu, India'"
-  },
-  {
-    "id": "3fce7ef5",
-    "ts": "2026-06-20T15:38:13.120368",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
