@@ -1188,16 +1188,22 @@ def clean_job_title(title: str) -> str:
         
     # Replace abbreviations
     t = re.sub(r'\bsr\b\.?\s*', 'Senior ', t, flags=re.IGNORECASE)
-    t = re.sub(r'\bdot\s*net\b', '.NET', t, flags=re.IGNORECASE)
-    t = re.sub(r'\basp\b\.?(?!\s*\.net)', 'ASP', t, flags=re.IGNORECASE)
     
     # [NEW] Normalize title case for common patterns
-    # e.g. "SOFTWARE ENGINEER" → "Software Engineer" (only if ALL CAPS)
-    if t == t.upper() and len(t) > 3:
+    # e.g. "SOFTWARE ENGINEER" → "Software Engineer" (if all uppercase or all lowercase)
+    if (t == t.upper() or t == t.lower()) and len(t) > 3:
         t = t.title()
-        # Fix known acronyms that title() breaks: .NET, C#, etc.
-        t = re.sub(r'\.Net\b', '.NET', t)
-        t = re.sub(r'\bC#\b', 'C#', t, flags=re.IGNORECASE)
+
+    # Normalize dot net / dotnet / net / .net variations to .NET
+    t = re.sub(r'\bdot\s*net\b', '.NET', t, flags=re.IGNORECASE)
+    t = re.sub(r'(?<!\.)\bnet\b', '.NET', t, flags=re.IGNORECASE)
+    t = re.sub(r'\.Net\b', '.NET', t)
+    t = re.sub(r'\.{2,}NET', '.NET', t, flags=re.IGNORECASE)
+
+    # Normalize C# and ASP.NET capitalization
+    t = re.sub(r'\bC#\b', 'C#', t, flags=re.IGNORECASE)
+    t = re.sub(r'\basp\.net\b', 'ASP.NET', t, flags=re.IGNORECASE)
+    t = re.sub(r'\basp\b\.?(?!\s*net)', 'ASP', t, flags=re.IGNORECASE)
     
     # Clean up whitespace
     t = re.sub(r'\s+', ' ', t).strip()
