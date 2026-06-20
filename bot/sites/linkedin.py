@@ -342,25 +342,8 @@ def _apply_to_job(page: Page, job_el) -> bool:
             except Exception:
                 continue
 
-        apply_btn = None
         if not easy_btn:
-            # Check for external apply button
-            for btn_locator in [
-                page.locator(".jobs-apply-button--top-card a"),
-                page.locator("a.jobs-apply-button"),
-                page.locator("a[aria-label*='Apply to']"),
-                page.get_by_role("link", name="Apply"),
-                page.get_by_role("button", name="Apply"),
-            ]:
-                try:
-                    if btn_locator.first.is_visible(timeout=1000):
-                        apply_btn = btn_locator.first
-                        break
-                except Exception:
-                    continue
-
-        if not easy_btn and not apply_btn:
-            field_log("skip", f"{company} — {job_title}", "No Easy Apply or Apply button found", SITE)
+            field_log("skip", f"{company} — {job_title}", "No Easy Apply button found", SITE)
             return False
 
         print(f"\n  {'─'*55}")
@@ -368,50 +351,13 @@ def _apply_to_job(page: Page, job_el) -> bool:
         print(f"     Match: {match_score}% | Location: {location}")
         print(f"  {'─'*55}")
 
-        if easy_btn:
-            easy_btn.scroll_into_view_if_needed()
-            _delay(0.3, 0.6)
-            field_log("click", "Easy Apply button", "", SITE)
-            easy_btn.click()
-            _delay(1.5, 2.5)
+        easy_btn.scroll_into_view_if_needed()
+        _delay(0.3, 0.6)
+        field_log("click", "Easy Apply button", "", SITE)
+        easy_btn.click()
+        _delay(1.5, 2.5)
 
-            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
-        else:
-            # External apply - Capture URL and save to bulk_urls.txt
-            apply_btn.scroll_into_view_if_needed()
-            _delay(0.3, 0.6)
-            field_log("click", "External Apply button to capture URL", "", SITE)
-            try:
-                with page.context.expect_page(timeout=15000) as new_page_info:
-                    apply_btn.click()
-                new_page = new_page_info.value
-                new_page.wait_for_load_state("domcontentloaded", timeout=15000)
-                
-                ext_url = new_page.url
-                logger.info(f"Captured external apply URL: {ext_url}", SITE)
-                
-                bulk_file_path = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
-                already_exists = False
-                if os.path.exists(bulk_file_path):
-                    with open(bulk_file_path, "r", encoding="utf-8") as f:
-                        if ext_url in f.read():
-                            already_exists = True
-                            
-                if not already_exists:
-                    with open(bulk_file_path, "a", encoding="utf-8") as f:
-                        f.write(f"\n{ext_url}")
-                    logger.success(f"Saved external URL to bulk apply queue: {ext_url}", SITE)
-                else:
-                    logger.info("External URL already exists in bulk apply queue.", SITE)
-                    
-                try:
-                    new_page.close()
-                except Exception:
-                    pass
-                success = False
-            except Exception as ex:
-                logger.warn(f"Failed to capture external apply URL: {ex}", SITE)
-                success = False
+        success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
 
         if success:
             record_application(
