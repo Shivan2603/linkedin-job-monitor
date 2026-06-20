@@ -469,7 +469,7 @@ def _apply_to_career_page(page, url: str) -> bool:
         # Fallback if AI fails
         if not job_t or not company:
             if " - " in page_title:
-                parts = page_title.split(" - ")
+                parts = re.split(r'(?<!\d)\s*-\s*(?!\d)', page_title)
                 job_t = job_t or parts[0].strip()
                 company = company or (parts[1].strip() if len(parts) > 1 else "Unknown Company")
             elif " | " in page_title:

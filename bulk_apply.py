@@ -168,7 +168,7 @@ def apply_to_url(page, url: str) -> bool:
 
             if not job_title or not company:
                 if " - " in page_title:
-                    parts = page_title.split(" - ")
+                    parts = re.split(r'(?<!\d)\s*-\s*(?!\d)', page_title)
                     job_title = job_title or parts[0].strip()
                     company = company or (parts[1].strip() if len(parts) > 1 else "")
                 elif " | " in page_title:
