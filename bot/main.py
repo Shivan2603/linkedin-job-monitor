@@ -23,14 +23,18 @@ from bot.sites.indeed          import run_indeed_bot
 from bot.sites.shine           import run_shine_bot
 from bot.sites.monster         import run_monster_bot
 from bot.sites.company_careers import run_company_careers_bot
+from bot.sites.jobstreet       import run_jobstreet_bot
+from bot.sites.jooble          import run_jooble_bot
 
 SITE_BOTS = [
     ("linkedin",        "LinkedIn",        run_linkedin_bot),
     ("company_careers", "Company Careers", run_company_careers_bot),
     ("naukri",          "Naukri",          run_naukri_bot),
-    ("indeed",          "Indeed India",    run_indeed_bot),
+    ("indeed",          "Indeed Multi-Country", run_indeed_bot),
     ("shine",           "Shine",           run_shine_bot),
-    ("monster",         "Monster India",   run_monster_bot),
+    ("monster",         "Foundit",         run_monster_bot),
+    ("jobstreet",       "JobStreet",       run_jobstreet_bot),
+    ("jooble",          "Jooble",          run_jooble_bot),
 ]
 
 def run_all_sites():
@@ -42,8 +46,12 @@ def run_all_sites():
     stats = get_daily_stats()
     logger.info(f"Today's applications so far: {stats}")
 
+    # Shuffle the bots list to randomize execution order on each run cycle
+    shuffled_bots = list(SITE_BOTS)
+    random.shuffle(shuffled_bots)
+
     first_site = True
-    for site_key, site_name, bot_fn in SITE_BOTS:
+    for site_key, site_name, bot_fn in shuffled_bots:
         if not check_daily_limit(site_key):
             logger.info(f"Skipping {site_name} — daily limit reached", site_key)
             continue
@@ -66,7 +74,7 @@ def run_all_sites():
 
 def main():
     logger.info("Job Bot Starting — Safe Mode Active")
-    logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50")
+    logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30")
     logger.info("Anti-ban: random delays, cookie persistence, stealth browser")
 
     run_all_sites()

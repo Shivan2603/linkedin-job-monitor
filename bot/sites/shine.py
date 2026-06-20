@@ -1,8 +1,9 @@
 """
 sites/shine.py — Shine.com automation
 """
-import time, random
+import time, random, os
 from playwright.sync_api import sync_playwright
+from bot.utils.safety import safe_browser_context
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.utils import logger
@@ -21,33 +22,132 @@ def run_shine_bot():
     logger.info("🚀 Starting Shine.com bot", SITE)
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, args=["--no-sandbox"])
-        page = browser.new_page()
+        browser, context = safe_browser_context(p, SITE)
+        page = context.new_page()
 
         try:
-            _login(page, creds)
-            for job_title in JOB_TITLES[:4]:  # Shine has less jobs, limit
-                for location in ["Bangalore", "Chennai", "Hyderabad", "Remote"]:
-                    _apply_shine_jobs(page, job_title, location)
+            if _login_portal(page, creds):
+                # Update profile / upload resume
+                _update_shine_profile(page)
+                
+                # Apply for jobs
+                for job_title in JOB_TITLES[:4]:  # Shine has less jobs, limit
+                    for location in LOCATIONS:
+                        _apply_shine_jobs(page, job_title, location)
         except Exception as e:
             logger.error(f"Shine bot crash: {e}", SITE)
         finally:
-            browser.close()
+            try:
+                browser.close()
+            except Exception:
+                pass
 
-def _login(page, creds) -> bool:
+def _login_portal(page, creds) -> bool:
     logger.info("Logging into Shine...", SITE)
-    page.goto("https://www.shine.com/login/", wait_until="domcontentloaded")
-    _human_delay(2, 3)
     try:
-        page.fill('input[name="email"]', creds["email"])
-        page.fill('input[name="password"]', creds["password"])
-        page.click('button[type="submit"]')
-        _human_delay(3, 4)
-        logger.success("Shine login successful ✅", SITE)
+        page.goto("https://www.shine.com/login/", wait_until="domcontentloaded", timeout=30000)
+    except Exception as e:
+        logger.warn(f"Failed to navigate to Shine login: {e}", SITE)
+    _human_delay(3, 4)
+    
+    # Check if already logged in (redirected to dashboard/profile)
+    if "login" not in page.url or page.query_selector('.profile_Name, a[href*="myprofile"], a[href*="logout"]'):
+        logger.success("Shine already logged in via cookies", SITE)
         return True
+        
+    try:
+        email_field = page.locator('#id_email_login').first
+        pass_field = page.locator('#id_password').first
+        
+        if email_field.is_visible(timeout=5000) and pass_field.is_visible(timeout=5000):
+            logger.info("Shine Login: Attempting direct email/password login...", SITE)
+            from bot.utils.safety import human_fill
+            human_fill(email_field, creds["email"], "Shine Email", SITE)
+            human_fill(pass_field, creds["password"], "Shine Password", SITE)
+            _human_delay(1, 2)
+            
+            submit_btn = page.locator('button:has-text("Login"), .cls_login_btn, button[type="submit"]').first
+            submit_btn.click()
+            _human_delay(5, 7)
+            
+            # Verify redirection/success
+            for _ in range(10):
+                if "login" not in page.url or page.query_selector('.profile_Name, a[href*="myprofile"]'):
+                    logger.success("Shine login successful ✅", SITE)
+                    return True
+                time.sleep(1)
+                
+        # Google SSO Fallback
+        logger.info("Shine Login: Falling back to Google SSO...", SITE)
+        google_btn = page.locator('button:has-text("Google"), .google-login-btn, a[href*="google"]').first
+        if google_btn.is_visible(timeout=2000):
+            popup = None
+            try:
+                with page.context.expect_page(timeout=5000) as popup_info:
+                    google_btn.click()
+                popup = popup_info.value
+            except Exception:
+                pass
+                
+            auth_page = popup if popup else page
+            try:
+                auth_page.wait_for_load_state("networkidle", timeout=10000)
+            except Exception:
+                pass
+            _human_delay(2, 3)
+            
+            if not auth_page.is_closed() and "accounts.google.com" in auth_page.url:
+                from bot.utils.safety import handle_google_sso
+                gmail_pass = os.getenv("GMAIL_PASSWORD") or creds.get("password")
+                handle_google_sso(auth_page, "sivashankar.avi6@gmail.com", gmail_pass)
+                
+            # Verify login status
+            for _ in range(15):
+                if "login" not in page.url or page.query_selector('.profile_Name, a[href*="myprofile"]'):
+                    logger.success("Shine login successful via SSO ✅", SITE)
+                    return True
+                time.sleep(1)
+                
+        logger.error("Shine login verification failed", SITE)
+        return False
     except Exception as e:
         logger.error(f"Shine login failed: {e}", SITE)
         return False
+
+def _update_shine_profile(page):
+    logger.info("Attempting to update Shine profile and upload resume...", SITE)
+    try:
+        profile_url = "https://www.shine.com/myshine/myprofile/"
+        page.goto(profile_url, wait_until="domcontentloaded", timeout=30000)
+        _human_delay(3, 4)
+        
+        # Upload Latest Base Resume
+        from bot.config import BASE_RESUME_DOCX
+        if os.path.exists(BASE_RESUME_DOCX):
+            upload_input = page.locator('input[type="file"], input[id*="resume"], input[name*="resume"]').first
+            if upload_input.is_visible(timeout=4000):
+                logger.info(f"Uploading base resume to Shine: {BASE_RESUME_DOCX}...", SITE)
+                upload_input.set_input_files(BASE_RESUME_DOCX)
+                _human_delay(4, 5)
+                logger.success("Base resume uploaded successfully to Shine profile ✅", SITE)
+            else:
+                upload_btn = page.locator('button:has-text("Upload"), a:has-text("Upload"), [class*="upload"]').first
+                if upload_btn.is_visible(timeout=2000):
+                    logger.info("Clicking upload button to select file...", SITE)
+                    with page.expect_file_chooser() as fc_info:
+                        upload_btn.click()
+                    file_chooser = fc_info.value
+                    file_chooser.set_files(BASE_RESUME_DOCX)
+                    _human_delay(4, 5)
+                    logger.success("Base resume uploaded successfully via file chooser ✅", SITE)
+        else:
+            logger.warn(f"Base resume not found at {BASE_RESUME_DOCX} — skipping upload", SITE)
+            
+        page.screenshot(path="shine_profile_updated.png")
+        logger.info("Saved profile update confirmation screenshot to shine_profile_updated.png", SITE)
+        
+    except Exception as e:
+        logger.warn(f"Failed to update Shine profile: {e}", SITE)
 
 def _apply_shine_jobs(page, job_title: str, location: str):
     from urllib.parse import quote

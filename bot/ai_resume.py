@@ -1,7 +1,6 @@
 """
 ai_resume.py — Multi-AI resume tailoring bridge for jobbot
 Delegates all resume tailoring to the TailorRobot engine at E:\SivaShankar\tailorrobot.
-This ensures jobbot always uses the latest, most advanced resume builder.
 """
 import os, re, json, time, sys
 from docx import Document
@@ -19,9 +18,10 @@ try:
     from ai_resume import tailor_resume as _tr_tailor_resume
     TAILORED_TODAY  = _tr_config.TAILORED_TODAY
     BASE_RESUME_DOCX = _tr_config.BASE_RESUME_DOCX
+    DATA_FOLDER = _tr_config.DATA_FOLDER
     _USING_TAILORROBOT = True
 except ImportError:
-    from bot.config import TAILORED_TODAY, BASE_RESUME_DOCX
+    from bot.config import TAILORED_TODAY, BASE_RESUME_DOCX, DATA_FOLDER
     from bot.resume_builder_core import build_tailored_resume_from_json
     _tr_tailor_resume = None
     _USING_TAILORROBOT = False
@@ -30,7 +30,78 @@ from bot.config import GROQ_API_KEY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 
+# ─── LOCAL SWARM IMPLEMENTATION (FALLBACK) ─────────────────────────
+
+TELEMETRY_FILE = os.path.join(DATA_FOLDER, "telemetry.json")
+
 # ─── AGENT SYSTEM PROMPTS ──────────────────────────────────────────────────
+
+JD_INTELLIGENCE_SYSTEM = """You are the JD Intelligence Agent — the first and most critical agent in the resume-tailoring pipeline.
+Your job is to DEEPLY analyse the Job Description and extract strategic intelligence that will drive EVERY section of the resume.
+
+Think like a senior recruiter AND like the candidate trying to stand out. Analyse:
+
+1. LOCATION INTELLIGENCE:
+   - What city/country is the job in? (e.g. "Kuala Lumpur, Malaysia" or "London, UK" or "Remote")
+   - Does it require relocation? (look for: "must be based in", "onsite", "relocation package", location being non-India)
+   - Is visa sponsorship mentioned or implied?
+   - What is the ideal location_line for the resume header?
+   - For international: "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+   - For India-based jobs (whether remote, hybrid, or onsite): "Chennai, India  |  Open to Remote / Hybrid"
+
+2. DOMAIN INTELLIGENCE:
+   - What industry/domain is the company in? (fintech, government, e-commerce, healthcare, SaaS, logistics, banking, telecom, consulting, insurance, tax)
+   - What domain power words does the JD use? (e.g. "core banking", "digital transformation", "regulatory compliance", "citizen-facing", "high-frequency trading")
+   - What domain-specific tech is prioritised? (e.g. fintech → PCI-DSS, JWT, Redis, high-throughput; gov → FIPS, Section 508, WCF, federal; cloud-native → Docker, Kubernetes, microservices)
+
+3. SENIORITY INTELLIGENCE:
+   - Is this a team lead / tech lead / architect role? (look for: "lead", "mentor", "architect", "design decisions", "team of", "drive technical")
+   - Or is it individual contributor? (look for: "hands-on", "implement", "develop", "engineer")
+   - What bullet style fits best: "achievement" (team lead → metrics + team) or "technical" (IC → deep stack + performance)?
+
+4. CULTURE INTELLIGENCE:
+   - What 3-5 culture keywords describe this company? (e.g. "collaborative", "fast-paced", "innovation-driven", "mission-critical", "customer-first")
+   - What exact phrases from the JD should be mirrored in the summary? (pick 2-3 most distinctive phrases)
+
+5. SUMMARY CLOSING (Line 5):
+   - Write the EXACT last line of the professional summary.
+   - Format: "[Eager to / Excited to / Committed to] [join/contribute to] [Company]'s [domain keyword] team in [City] [, bringing / and deliver] [top relevant skill from JD]."
+   - If remote: "Bringing [top skill] to [Company]'s [domain] mission, delivering results across distributed international teams."
+   - If India-based: "Bringing scalable [top skill] expertise to [Company] to [deliver JD's stated outcome]."
+
+6. CERTIFICATIONS RELEVANCE:
+   - Which of our certs should be highlighted? (AZ-204 if Azure in JD; NEICE if gov/federal; AZ-204 with [HIGHLY RELEVANT] suffix if Azure is the primary cloud)
+
+7. EXPERIENCE INTELLIGENCE:
+   - Carefully read the years of experience required by the JD.
+   - The candidate has exactly 4 years of experience.
+   - The job is a MATCH if it requires EXACTLY 4 years, or 4+ years (e.g. "4+ years", "minimum 4 years", "4-6 years", "4-7 years", "4-8 years").
+   - The job is NOT a match if it requires 5 years or more (e.g. "5+ years", "5-8 years", "6 years", "8+ years"), or if it requires a range starting below 4 (e.g. "3-4 years", "2-4 years", "2-5 years", "3+ years", "2+ years").
+   - Set "is_experience_matching" to true if it matches exactly 4 or 4+ years. Set to false if it requires less than 4 (e.g. 2, 3) or more than 4 (e.g. 5, 6).
+
+Return ONLY valid JSON (no markdown, no code blocks):
+{
+  "job_location_city": "Kuala Lumpur",
+  "job_location_country": "Malaysia",
+  "job_location_type": "Hybrid",
+  "requires_relocation": true,
+  "visa_sponsorship_mentioned": true,
+  "location_line": "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required",
+  "company_domain": "fintech",
+  "domain_power_words": ["digital banking", "core banking", "financial services"],
+  "domain_priority_skills": ["PCI-DSS", "JWT", "Redis", "OAuth2", "high-throughput APIs"],
+  "domain_priority_category": "Security & Messaging",
+  "seniority_level": "Senior",
+  "is_team_lead_role": false,
+  "bullet_style": "technical",
+  "culture_keywords": ["collaborative", "innovation", "agile"],
+  "jd_mirror_phrases": ["deliver scalable financial solutions", "cloud-native microservices"],
+  "summary_closing_line": "Excited to relocate to Kuala Lumpur and bring 4+ years of PCI-DSS compliant .NET expertise to CIMB's digital banking platform.",
+  "cert_highlight": "AZ-204 (HIGHLY RELEVANT — Azure is primary cloud)",
+  "is_india_remote": false,
+  "is_international": true,
+  "is_experience_matching": true
+}"""
 
 ANALYZER_SYSTEM = """You are the Analyzer Agent in the JCode Multi-Agent Swarm.
 Your job is to perform a deep analysis of the Job Description (JD).
@@ -45,6 +116,7 @@ Extract and return a JSON containing:
 7. "exact_phrases": [3-5 key phrases used in the JD to mirror]
 
 Return ONLY valid JSON. Do not include markdown code block formatting."""
+
 
 RERANKER_SYSTEM = """You are the Reranker Agent in the JCode Multi-Agent Swarm.
 Your job is to match the candidate's skills against the JD's Must-Haves and Nice-to-Haves, performing precision reranking.
@@ -66,71 +138,232 @@ Return a JSON with "skills_by_category" containing lists for: Backend, Frontend,
 CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include raw unquoted strings, variable names, comments, or trailing commas. Do not include markdown code block formatting."""
 
 TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm.
-Your job is to rewrite the candidate's Professional Summary and Work Experience bullets based on the Analyzer's findings and the Reranker's sorted skills.
+You will receive the candidate's base resume, Analyzer findings, Reranker-sorted skills, AND the JD Intelligence report.
+Your job is to dynamically rewrite EVERY section of the resume (the professional summary, work experience, projects, skills, certifications) to build a perfect resume specifically tailored for the target Job Description.
 
-Follow these rules strictly:
-1. PROFESSIONAL SUMMARY: 5 lines max.
-   - Line 1: "[Exact JD job title] with 4+ years of experience in [top 3 MUST-HAVE keywords from JD]"
-   - Line 2-3: 2 strongest achievements from base resume matching JD's priorities.
-   - Line 4: Mirror 2-3 exact phrases from JD.
-   - Line 5: "Bringing value to [COMPANY NAME from JD] through [specific skill from JD]"
-2. WORK EXPERIENCE BULLETS:
-   - Write bullets per role using: "[Strong past-tense verb] + [what I did, using JD's exact phrasing] + [specific tech] + [quantified result with number]".
-   - First 2 bullets of LTIMindtree must directly use the top 2 MUST-HAVE keywords from the JD.
-   - EVERY single bullet must contain a number metric (%, ms, x, users, RPS, $, hours saved).
-   - Enforce these strict bullet limits per role:
-     * LTIMindtree: max 4 bullets
-     * DSSI Solutions India Pvt Ltd: max 3 bullets
-     * Nexa Office InfoSystems LLP: max 2 bullets
-     * Kasadara Technology Solutions: max 2 bullets
+CRITICAL: You must strictly adhere to the Candidate Base Facts below. Never fabricate, invent, or extrapolate any experience, technology, or metric. All rewrites must be 100% grounded in these base facts.
+
+=========================================
+CANDIDATE BASE FACTS (Grounded Database)
+=========================================
+1. HEADER:
+   - Name: SIVA SHANKAR
+   - Contact: +91 6383149155 | sivashankar.avi6@gmail.com
+   - Links: LinkedIn: https://www.linkedin.com/in/siva-shankar-4a7849226/ | GitHub: https://github.com/shivan2603 | Portfolio: https://shivan2603.github.io/sivashankar-portfolio/
+   - Location Line Options:
+     * If international / relocation required: "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+     * If India-based (remote / onsite / hybrid): "Chennai, India  |  Open to Remote / Hybrid"
+
+2. WORK EXPERIENCE:
+   * Role 1: LTIMindtree (Jun 2025 – Present)
+     - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior Backend Developer", "Senior .NET Developer" depending on JD)
+     - Deloitte Enterprise Tax Client context: Client: Deloitte — Enterprise Tax Platform
+     - Allowed Technologies: C#, .NET Core 8, ASP.NET Web API, Angular, Azure OpenAI GPT-4, Microservices, CQRS, pgvector, OpenTelemetry, Redis, SQL Server, Entity Framework Core
+     - Grounded Achievements/Metrics to reframe:
+       * Migrated 50+ legacy tax tables to QRP structures, reducing query latency by 38%.
+       * Deployed Azure OpenAI embedding pipeline for dynamic schema mapping, saving 60% manual effort.
+       * Developed secure stored procedures for dynamic RBAC role mapping across 15+ tax modules.
+       * Profiled and refactored 30+ ASP.NET Web API endpoints to solve N+1 query loops, achieving sub-100ms p99 latency.
+       * Configured Redis-based API response caching, reducing database query load by 45%.
+       * Instrumented OpenTelemetry distributed tracing across microservices, reducing MTTR by 50%.
+       * Secured 30+ RESTful APIs with OAuth2 + JWT authentication for OWASP compliance.
+       * Integrated Azure OpenAI GPT-4 for automated tax document summarization, speeding up weekly triages by 35%.
+       * Built a semantic search engine using pgvector for sub-200ms document lookups.
+       * Leveraged GitHub Copilot prompt engineering for unit tests, raising coverage to 85% with xUnit.
+
+   * Role 2: DSSI Solutions India Pvt Ltd (Nov 2024 – May 2025)
+     - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior .NET Developer", "Senior Backend Engineer" depending on JD)
+     - Procurement Client context: Financial Procurement Platform
+     - Allowed Technologies: C#, .NET 7, Clean Architecture, CQRS, YARP Reverse Proxy, Docker, Azure App Services, RabbitMQ, Redis, JWT, AES-256, Agile/Scrum
+     - Grounded Achievements/Metrics to reframe:
+       * Engineered 12+ procurement microservices using .NET 7, CQRS, and Clean Architecture.
+       * Configured RabbitMQ async messaging, increasing message processing throughput by 3x.
+       * Mentored 4 junior software engineers on CQRS and Git Flow, reducing post-deployment bugs by 40%.
+       * Containerized all 12 microservices using Docker, decreasing container image sizes by 65%.
+       * Implemented Azure Form Recognizer for automated invoice data extraction, saving 100+ manual hours.
+       * Configured YARP Reverse Proxy for path-based routing, maintaining a 99.98% system uptime SLA.
+
+   * Role 3: Nexa Office InfoSystems LLP (Jul 2024 – Nov 2024)
+     - Core Title: Senior Software Engineer — Contract / Consultant (can tailor to "Senior Software Engineer", "Senior Full-Stack Developer", ".NET Consultant")
+     - Document Management Client context: Enterprise Document Management
+     - Allowed Technologies: C#, .NET Core, ASP.NET Web API, Angular, Redux/NgRx, Docker, SQL Server, OAuth2/OIDC, Material-UI, mTLS, X.509
+     - Grounded Achievements/Metrics to reframe:
+       * Designed modular UI components in Angular, improving page load speeds by 35% across forms.
+       * Secured document repository with AES-256 encryption and OAuth2 OpenID Connect integration.
+       * Profiled SQL Server queries and rebuilt indexes, accelerating search lookup performance by 25%.
+       * Configured secure service-to-service communication using mTLS and X.509 certificate rotations.
+
+   * Role 4: Kasadara Technology Solutions (Jul 2022 – Jun 2024)
+     - Core Title: Software Engineer (can tailor to "Software Engineer", ".NET Developer", "Backend Developer")
+     - US Gov SaaS Client context: US Government & SaaS Enterprise Platforms
+     - Allowed Technologies: C#, .NET Framework 4.x, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
+     - Grounded Achievements/Metrics to reframe:
+       * Migrated legacy modules from .NET Framework to .NET Core, achieving a 40% memory usage reduction.
+       * Developed high-throughput background processing services in Go, doubling processing speeds.
+       * Refactored application UI to ensure strict compliance with US Federal Section 508 and WCAG accessibility standards.
+       * Optimized legacy WCF and ADO.NET data access layers, reducing web page transaction times by 20%.
+
 3. PROJECTS:
-   - Select max 2 projects from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, NEICE. Frame tech stack using JD preferred terms. Write max 2 bullets per project. Do NOT invent new projects.
+   - Select max 2 projects that match the JD's domain:
+     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI • pgvector • Semantic Kernel. (Extracts tax data using Semantic Kernel, pgvector search, Azure OpenAI).
+     * e-ProcureZen: C# • .NET 7 • Clean Architecture • YARP • Redis. (Financial procurement platform with YARP reverse proxy and RabbitMQ messaging).
+     * Nexa Vault: .NET Core • Angular • AES-256 • Docker. (Secure document vault using AES-256 encryption and OAuth2 OIDC).
+     * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT. (Centralized SSO using OpenID Connect and mTLS).
+     * NEICE: .NET Framework • WCF • SQL Server • FIPS. (US National Electronic Interstate Compact Enterprise platform, FIPS-compliant, WCF SOAP services).
 
-CRITICAL SAFETY WARNING: Do NOT fabricate or invent any technology, metric, or responsibility. Every technology and metric must be grounded in the base resume facts. Do NOT include ungrounded soft-skill claims (disallowed claims include: billing, sales, client communication, requirement specifications, user manuals, system manuals, and project planning/controlling). Any ungrounded or disallowed claim will be programmatically blocked and replaced by the python engine.
+4. CERTIFICATIONS:
+   - Microsoft Azure Developer Associate (AZ-204) | Microsoft | March 18, 2024
+   - Top Performer Award | Nexa Office InfoSystems LLP | 2024
+   - US Government Platform (NEICE) | FIPS Compliance & Federal Security Standards | Kasadara Technology Solutions | 2022–2024 (include only for government/defense JDs)
 
-Return ONLY a JSON block containing:
-- "job_title_headline": "Exact Job Title from JD"
-- "professional_summary": "rewritten summary"
-- "work_experience": {
-     "LTIMindtree": [bullets],
-     "DSSI Solutions India Pvt Ltd": [bullets],
-     "Nexa Office InfoSystems LLP": [bullets],
-     "Kasadara Technology Solutions": [bullets]
-  },
-- "projects": [{"name": "...", "tech_stack": "...", "bullets": [...]}]
+5. EDUCATION:
+   - B.E. Electronics & Communication Engineering | Kathir College of Engineering, Coimbatore (Anna University) | 2018 – 2022 | GPA: 8.6 / 10
 
-CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include unquoted arrays, HTML, or comments. Ensure no trailing commas."""
+=========================================
+DYNAMIC TAILORING RULES
+=========================================
+1. HEADER:
+   - Set "job_title_headline" to the target job title (Title Case, no location).
+   - Set "location_line" based on the relocation/country context in JD Intelligence.
+2. PROFESSIONAL SUMMARY (5 sentences only):
+   - Sentence 1: Start with the EXACT job_title_headline (e.g. "[job_title_headline] with 4+ years..."). No pronouns.
+   - Sentences 2-3: Frame candidate achievements mapping the JD's primary cloud/framework/lead requirements.
+   - Sentence 4: Include exact phrases from jd_mirror_phrases.
+   - Sentence 5: Append the exact "summary_closing_line" from JD Intelligence.
+3. SKILLS CATEGORIES:
+   - Return skills grouped under Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology. Place matching technologies first in each category.
+4. WORK EXPERIENCE:
+   - Return a list of dicts. For each company, tailor:
+     * "role_title": Incorporate relevant JD tech keywords. e.g. "Senior .NET Developer" instead of plain "Senior Software Engineer" if .NET is the primary keyword, but keep Deloitte client context.
+     * "tech_stack_line": Group technologies actually used in that role. Highlight ones matching the JD.
+     * "bullets": Write metrics-driven bullets matching the allowed metrics for that role. First 2 bullets of LTIMindtree must prioritize must-have skills from JD. Limit bullets per role: LTIMindtree (4 max), DSSI (3 max), Nexa (2 max), Kasadara (2 max).
+5. PROJECTS:
+   - Select 2 projects. Write name, tech_stack, and 2 tailored bullets detailing architecture decisions.
+6. CERTIFICATIONS:
+   - List the 2-3 certifications relevant to this JD (e.g., adding AZ-204 highlight or NEICE as appropriate).
 
-VERIFIER_SYSTEM = """You are the Verifier Agent in the JCode Multi-Agent Swarm.
-Your job is to compare the draft against the original JD and enforce strict compliance.
-
-Verify and correct:
-1. Exact Job Title mirrored in headline.
-2. Professional Summary matches 5-line formula, has top 3 must-haves, achievements, and company value sentence.
-3. Every single experience bullet contains a number metric and complies with grounding boundaries (no fabricated tech/metrics, no billing/sales/manuals/planning).
-4. Bullet count limits: LTIMindtree (4 max), DSSI (3 max), Nexa (2 max), Kasadara (2 max).
-5. Projects: max 2 projects, with 2 bullets each. Projects must strictly be from: e-ProcureZen, AI Tax Document Analyser, Nexa Vault, SSO Application, or NEICE.
-
-If any rule is violated, correct the section.
-Return the final corrected full JSON containing:
+Return ONLY a JSON block structured as:
 {
-  "job_title_headline": "...",
+  "job_title_headline": "Title Case Job Title",
+  "location_line": "Chennai, India | ...",
   "professional_summary": "...",
-  "skills_by_category": { ... },
-  "work_experience": { ... },
-  "projects": [ ... ],
-  "ats_report": {
-     "match_score": 98,
-     "matched_keywords": [...],
-     "missing_with_equivalents": [...],
-     "true_gaps": [...],
-     "experience_gap_compensation": "...",
-     "top_3_standout_points": [...],
-     "recruiter_weak_point": "..."
+  "skills_by_category": {
+    "Backend": [...],
+    ...
+  },
+  "work_experience": [
+    {
+      "company": "LTIMindtree",
+      "dates": "Jun 2025 – Present",
+      "role_title": "Senior Software Engineer | Client: Deloitte — Enterprise Tax Platform",
+      "tech_stack_line": ".NET Core 8 • ASP.NET Web API • Angular • Azure OpenAI GPT-4 • Microservices",
+      "bullets": ["...", "...", "...", "..."],
+      "key": "LTIMindtree"
+    },
+    ...
+  ],
+  "projects": [
+    {
+      "name": "AI Tax Document Analyser",
+      "tech_stack": "C# • .NET Core • Azure OpenAI • pgvector",
+      "bullets": ["...", "..."]
+    },
+    ...
+  ],
+  "certifications": [
+    "...", "..."
+  ],
+  "education": {
+    "degree": "B.E. Electronics & Communication Engineering",
+    "institution": "Kathir College of Engineering, Coimbatore (Anna University)",
+    "years": "2018 – 2022",
+    "gpa": "8.6 / 10"
   }
 }
+CRITICAL: All keys and string values must be in double quotes. Do not include unquoted arrays, comments, or trailing commas. No orphaned brackets."""
 
-CRITICAL: All fields must contain plain text strings or lists of strings. Never output any markdown code blocks, diagrams, HTML, or mermaid scripts inside the JSON string values. All keys and string values must be wrapped in double quotes. Ensure no trailing commas. Return ONLY valid JSON."""
+
+VERIFIER_SYSTEM = """You are the Verifier Agent in the JCode Multi-Agent Swarm.
+Your job is to compare the tailored resume draft against the JD, original candidate facts, and JD Intelligence, then correct any formatting or compliance violations.
+
+Check and enforce:
+1. Header Location Line: Match is_international/relocation requirements ( Chennai, India | ... ).
+2. Job Title Headline: Must be Title Case, with no locations or parentheticals.
+3. Summary 5-Sentence Formula:
+   - Starts with the exact job_title_headline (no pronouns, no cities).
+   - Ends with the exact summary_closing_line from JD Intelligence.
+   - Punctuation clean: no double periods, no orphaned parentheses.
+4. Work Experience:
+   - Dynamic role titles and tech stack lines must remain factually grounded (only technologies used in that company are allowed).
+   - Mentoring/team lead bullet must be position 1 in LTIMindtree if lead role is true.
+   - First 2 bullets of LTIMindtree must use MUST-HAVE skills.
+   - Experience bullet limits: LTIMindtree (4), DSSI (3), Nexa (2), Kasadara (2).
+5. Projects: Max 2 projects, with 2 bullets each. Projects selected must match domain priority.
+6. Certifications: Dynamic certs list has 2-3 items matching JD.
+
+If any rule is violated, rewrite that section.
+Return the final corrected full JSON matching this schema:
+{
+  "job_title_headline": "...",
+  "location_line": "...",
+  "professional_summary": "...",
+  "skills_by_category": { ... },
+  "work_experience": [
+    {
+      "company": "...",
+      "dates": "...",
+      "role_title": "...",
+      "tech_stack_line": "...",
+      "bullets": [...],
+      "key": "..."
+    },
+    ...
+  ],
+  "projects": [
+    {
+      "name": "...",
+      "tech_stack": "...",
+      "bullets": [...]
+    },
+    ...
+  ],
+  "certifications": [...],
+  "education": { ... },
+  "ats_report": {
+    "match_score": 98,
+    "matched_keywords": [...],
+    "missing_with_equivalents": [...],
+    "true_gaps": [...],
+    "experience_gap_compensation": "...",
+    "top_3_standout_points": [...],
+    "recruiter_weak_point": "..."
+  }
+}
+CRITICAL: All fields must contain plain text strings or lists of strings. Never output any markdown code blocks, HTML, or mermaid scripts inside the JSON string values. All keys and string values must be wrapped in double quotes. Return ONLY valid JSON."""
+
+
+# ─── TELEMETRY LOGGER ───────────────────────────────────────────────────────
+def log_telemetry(agent_name: str, duration: float, status: str, provider: str = "Groq"):
+    try:
+        telemetry = []
+        if os.path.exists(TELEMETRY_FILE):
+            with open(TELEMETRY_FILE, "r", encoding="utf-8") as f:
+                telemetry = json.load(f)
+        
+        telemetry.append({
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "agent": agent_name,
+            "duration_seconds": round(duration, 3),
+            "provider": provider,
+            "status": status
+        })
+        
+        # Keep last 100 logs
+        telemetry = telemetry[-100:]
+        with open(TELEMETRY_FILE, "w", encoding="utf-8") as f:
+            json.dump(telemetry, f, indent=2)
+    except Exception:
+        pass
 
 # ─── MAIN COORDINATOR WORKFLOW ─────────────────────────────────────────────
 
@@ -189,6 +422,94 @@ def parse_json_safely(raw: str) -> dict:
             raise e
 
 
+
+def check_experience_relevance(jd_text: str, job_title: str = "") -> tuple[bool, str]:
+    """
+    Programmatic filter for the user's experience requirement:
+    - Candidate has 4 years of experience.
+    - Match if 4 falls within the required range (e.g. 0-4, 1-4, 2-4, 3-4, 4-5, 4-6, 4-8, etc.).
+    - Reject if the range does not cover 4 years, or if min required is > 4.
+    """
+    text = f"{jd_text}\n{job_title}".lower().replace("-", " ")
+    import re
+    
+    # 1. Match patterns like: "3-4 years", "2-4 years", "3 to 4 years", "5-8 years", "5 to 8 years"
+    for match in re.finditer(r'(\d+)\s*(?:-|to)\s*(\d+)\s*(?:years|yrs|year|yr)', text):
+        low = int(match.group(1))
+        high = int(match.group(2))
+        if low > 4:
+            return False, f"Minimum required experience ({low} years) is greater than candidate's 4 years of experience"
+            
+    # 2. Match patterns like: "5+ years", "6+ years", "3+ yrs", "5+ year"
+    for match in re.finditer(r'(\d+)\+\s*(?:years|yrs|year|yr)', text):
+        val = int(match.group(1))
+        if val > 4:
+            return False, f"Requires {val}+ years (greater than candidate's 4 years)"
+            
+    # 3. Match patterns like: "minimum of 5 years", "at least 5 years", "5 years of experience"
+    for match in re.finditer(r'(?:min|minimum|at least|require|requires|of|have)\s*(\d+)\s*(?:years|yrs|year|yr)', text):
+        val = int(match.group(1))
+        if val > 4:
+            # Check if this is preceded by a range (e.g. "3 to " or "4-") already handled
+            start_idx = max(0, match.start() - 10)
+            context = text[start_idx:match.start()]
+            if not re.search(r'\d+\s*(?:-|to)\s*$', context):
+                return False, f"Requires minimum of {val} years (greater than candidate's 4 years)"
+                
+    return True, "Passed programmatic checks"
+
+
+def check_tech_stack_relevance(job_title: str, jd_text: str) -> tuple[bool, str]:
+    """
+    Programmatic filter to ensure the job is relevant to the candidate's core stack (.NET / C#).
+    Rejects Java, Python, PHP, C++, Android, iOS, SAP, Salesforce, QA, Scrum Master, etc. roles
+    unless they explicitly mention C# or .NET.
+    Also ensures the JD contains at least one of '.net', 'c#', 'dotnet', 'csharp'.
+    """
+    title_lower = job_title.lower()
+    jd_lower = jd_text.lower()
+    import re
+    
+    # 1. Blacklisted titles (if they don't contain .NET/C#)
+    blacklist_titles = [
+        'java', 'python', 'php', 'c++', 'cobol', 'golang', 'go developer', 
+        'ruby', 'rails', 'android', 'ios', 'swift', 'kotlin', 'flutter', 
+        'sap', 'salesforce', 'qa engineer', 'tester', 'scrum master', 
+        'product manager', 'project manager', 'business analyst'
+    ]
+    
+    # If title contains target stack, approve immediately
+    has_net = '.net' in title_lower or 'dotnet' in title_lower or 'c#' in title_lower or 'csharp' in title_lower
+    if has_net:
+        return True, "Passed technology stack check (matched title)"
+        
+    for blacklisted in blacklist_titles:
+        if blacklisted in title_lower:
+            return False, f"Job title contains blacklisted keyword: {blacklisted}"
+                
+    # 2. Tech stack check (must mention .net, c#, or dotnet in the job description)
+    keywords = ['.net', 'dotnet', 'c#', 'csharp', 'wcf']
+    has_keyword = False
+    for kw in keywords:
+        if kw == '.net':
+            if '.net' in jd_lower or 'dotnet' in jd_lower:
+                has_keyword = True
+                break
+        elif kw == 'c#':
+            if 'c#' in jd_lower or 'csharp' in jd_lower:
+                has_keyword = True
+                break
+        else:
+            if kw in jd_lower:
+                has_keyword = True
+                break
+                
+    if not has_keyword:
+        return False, "Job description does not mention .NET or C# keywords"
+        
+    return True, "Passed technology stack check"
+
+
 def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
     if _USING_TAILORROBOT and _tr_tailor_resume:
         logger.ai(f"[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot...", site=site)
@@ -196,35 +517,138 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
             return _tr_tailor_resume(job_title, company, job_description, site=site)
         except Exception as e:
             logger.error(f"[JCode Swarm Bridge] TailorRobot delegation failed: {e}. Falling back to local builder.", site=site)
+    # Globally clean job title using unified cleaner (strips location suffixes, ALL CAPS, etc.)
+    from bot.resume_builder_core import clean_job_title as _clean_title
+    job_title = _clean_title(job_title)
 
-    logger.ai(f"[JCode Swarm] Starting Multi-Agent Coordinator Workflow...", site=site)
-    base_text = extract_resume_text(BASE_RESUME_DOCX)
+    print(f"\n[JCode Swarm] Starting Multi-Agent Coordinator Workflow...")
+
     
+    # Run programmatic tech stack relevance check
+    is_tech_ok, tech_reason = check_tech_stack_relevance(job_title, job_description)
+    if not is_tech_ok:
+        print(f"    [JD Intel] Tech stack mismatch: {tech_reason}. Skipping...")
+        return {
+            "resume_path": "",
+            "match_score": 0,
+            "tailored": {},
+            "ats_report": {
+                "match_score": 0,
+                "true_gaps": [f"Tech stack mismatch: {tech_reason}"]
+            }
+        }
+
+    # Run programmatic experience check
+    is_programmatic_ok, reason = check_experience_relevance(job_description, job_title)
+    if not is_programmatic_ok:
+        print(f"    [JD Intel] Programmatic experience mismatch: {reason}. Skipping...")
+        return {
+            "resume_path": "",
+            "match_score": 0,
+            "tailored": {
+                "jd_context": {
+                    "is_experience_matching": False,
+                    "location_line": "Chennai, India  |  Open to Remote/Hybrid",
+                    "summary_closing_line": f"Bringing scalable .NET and cloud expertise to {company}."
+                }
+            },
+            "ats_report": {
+                "match_score": 0,
+                "true_gaps": [f"Experience mismatch: {reason}"]
+            }
+        }
+
+    base_text = extract_resume_text(BASE_RESUME_DOCX)
+
+    # ─── STEP 0: JD INTELLIGENCE AGENT (NEW) ───
+    print("[JCode Coordinator] Launching JD Intelligence Agent...")
+    t0 = time.time()
+    jd_context = {}
+    try:
+        intel_prompt = (
+            f"Job Title: {job_title}\nCompany: {company}\n\n"
+            f"Full JD:\n{job_description[:4000]}"
+        )
+        raw_intel = ai_complete(JD_INTELLIGENCE_SYSTEM, intel_prompt, task="analyze", max_tokens=1200)
+        jd_context = parse_json_safely(raw_intel)
+        log_telemetry("JDIntelligenceAgent", time.time() - t0, "success")
+        
+        # Check experience matching from AI
+        is_ai_exp_ok = jd_context.get("is_experience_matching", True)
+        if isinstance(is_ai_exp_ok, str):
+            is_ai_exp_ok = is_ai_exp_ok.lower() == "true"
+            
+        if is_ai_exp_ok is False:
+            print(f"    [JD Intel] AI experience mismatch detected: Job does not require 4 / 4+ years. Skipping...")
+            return {
+                "resume_path": "",
+                "match_score": 0,
+                "tailored": {"jd_context": jd_context},
+                "ats_report": {
+                    "match_score": 0,
+                    "true_gaps": ["Experience mismatch: AI analyzed JD requires non-matching experience profile."]
+                }
+            }
+
+        loc = jd_context.get('job_location_city', 'Unknown')
+        domain = jd_context.get('company_domain', 'general')
+        lead = jd_context.get('is_team_lead_role', False)
+        intl = jd_context.get('is_international', False)
+        print(f"    [JD Intel] Location: {loc} | Domain: {domain} | Lead role: {lead} | International: {intl}")
+        print(f"    [JD Intel] Location line: {jd_context.get('location_line', 'N/A')}")
+    except Exception as e:
+        log_telemetry("JDIntelligenceAgent", time.time() - t0, f"failed: {e}")
+        jd_context = {
+            "job_location_city": "Unknown", "job_location_country": "India",
+            "requires_relocation": False, "is_international": False,
+            "company_domain": "technology", "is_team_lead_role": False,
+            "location_line": "Chennai, India  |  Open to Remote/Hybrid",
+            "summary_closing_line": f"Bringing scalable .NET and cloud expertise to {company} to deliver high-quality enterprise software.",
+            "jd_mirror_phrases": [], "domain_power_words": [], "domain_priority_skills": [],
+            "cert_highlight": "AZ-204", "bullet_style": "achievement"
+        }
+        print(f"    [JD Intel] Failed (using defaults): {e}")
+
     # ─── STEP 1: ANALYZER AGENT ───
-    logger.ai("[JCode Coordinator] Launching Analyzer Agent...", site=site)
+    print("[JCode Coordinator] Launching Analyzer Agent...")
+    t0 = time.time()
     try:
         raw_analysis = ai_complete(ANALYZER_SYSTEM, f"Analyze this JD:\n{job_description[:4000]}", task="analyze", max_tokens=1000)
         analysis = parse_json_safely(raw_analysis)
-        logger.success(f"    [Analyzer] Extracted {len(analysis.get('must_haves', []))} must-haves.", site=site)
+        log_telemetry("AnalyzerAgent", time.time() - t0, "success")
+        print(f"    [Analyzer] Extracted {len(analysis.get('must_haves', []))} must-haves.")
     except Exception as e:
+        log_telemetry("AnalyzerAgent", time.time() - t0, f"failed: {e}")
         analysis = {"must_haves": [job_title], "nice_to_haves": [], "exact_phrases": []}
-        logger.warn(f"    [Analyzer] Failed: {e}", site=site)
+        print(f"    [Analyzer] Failed, using fallbacks: {e}")
 
     # ─── STEP 2: RERANKER AGENT ───
-    logger.ai("[JCode Coordinator] Launching Reranker Agent...", site=site)
+    print("[JCode Coordinator] Launching Reranker Agent...")
+    t0 = time.time()
     try:
-        rerank_prompt = f"Rerank candidate skills based on Must-Haves: {analysis.get('must_haves')} and Nice-to-Haves: {analysis.get('nice_to_haves')}"
+        rerank_prompt = (
+            f"Rerank candidate skills based on Must-Haves: {analysis.get('must_haves')} "
+            f"and Nice-to-Haves: {analysis.get('nice_to_haves')}. "
+            f"Domain: {jd_context.get('company_domain', 'technology')}. "
+            f"Prioritise skills in domain_priority_skills: {jd_context.get('domain_priority_skills', [])}"
+        )
         raw_skills = ai_complete(RERANKER_SYSTEM, rerank_prompt, task="rerank", max_tokens=1200)
         skills_ranked = parse_json_safely(raw_skills)
-        logger.success("    [Reranker] Precision skills reranking completed.", site=site)
+        log_telemetry("RerankerAgent", time.time() - t0, "success")
+        print("    [Reranker] Precision skills reranking completed.")
     except Exception as e:
+        log_telemetry("RerankerAgent", time.time() - t0, f"failed: {e}")
         skills_ranked = {"skills_by_category": {}}
-        logger.warn(f"    [Reranker] Failed: {e}", site=site)
+        print(f"    [Reranker] Failed, using default categories: {e}")
 
     # ─── STEP 3: TAILOR AGENT ───
-    logger.ai("[JCode Coordinator] Launching Tailor Agent...", site=site)
+    print("[JCode Coordinator] Launching Tailor Agent...")
+    t0 = time.time()
     try:
-        tailor_prompt = f"""Tailor candidate resume:
+        tailor_prompt = f"""Tailor candidate resume with full JD context:
+<jd_intelligence>
+{json.dumps(jd_context, indent=2)}
+</jd_intelligence>
 <resume>
 {base_text}
 </resume>
@@ -232,37 +656,51 @@ Analyzer Findings:
 {json.dumps(analysis)}
 Reranked Skills:
 {json.dumps(skills_ranked)}
+
+IMPORTANT: The summary Line 5 MUST be exactly: "{jd_context.get('summary_closing_line', '')}"
+IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('domain_priority_skills', [])}
 """
         raw_tailored = ai_complete(TAILOR_SYSTEM, tailor_prompt, task="tailor", max_tokens=2500)
         draft = parse_json_safely(raw_tailored)
         draft["skills_by_category"] = skills_ranked.get("skills_by_category", {})
-        logger.success("    [Tailor] Generated initial tailored resume draft.", site=site)
+        draft["jd_context"] = jd_context
+        log_telemetry("TailorAgent", time.time() - t0, "success")
+        print("    [Tailor] Generated initial tailored resume draft.")
     except Exception as e:
-        draft = {}
-        logger.error(f"    [Tailor] Failed: {e}", site=site)
+        log_telemetry("TailorAgent", time.time() - t0, f"failed: {e}")
+        draft = {"jd_context": jd_context}
+        print(f"    [Tailor] Failed: {e}")
 
     # ─── STEP 4: VERIFIER AGENT (AUDIT LOOP) ───
-    logger.ai("[JCode Coordinator] Launching Verifier Agent (Audit Loop)...", site=site)
+    print("[JCode Coordinator] Launching Verifier Agent (Audit Loop)...")
+    t0 = time.time()
     try:
-        verify_prompt = f"""Audit and correct this resume draft:
+        verify_prompt = f"""Audit and correct this resume draft using JD Intelligence:
+JD Intelligence:
+{json.dumps(jd_context, indent=2)}
 Job Title: {job_title}
 Company: {company}
 Draft Summary: {draft.get('professional_summary')}
 Draft Experience: {json.dumps(draft.get('work_experience'))}
 Draft Projects: {json.dumps(draft.get('projects'))}
-JD Details:
+JD:
 {job_description[:3000]}
 """
         raw_verified = ai_complete(VERIFIER_SYSTEM, verify_prompt, task="verify", max_tokens=2048)
         final_tailored = parse_json_safely(raw_verified)
-        logger.success("    [Verifier] Resume audit completed and corrections applied.", site=site)
+        final_tailored["jd_context"] = jd_context
+        log_telemetry("VerifierAgent", time.time() - t0, "success")
+        print("    [Verifier] Resume audit completed and corrections applied.")
     except Exception as e:
+        log_telemetry("VerifierAgent", time.time() - t0, f"failed: {e}")
         final_tailored = draft
-        logger.warn(f"    [Verifier] Failed, using initial draft: {e}", site=site)
+        print(f"    [Verifier] Failed, using initial draft: {e}")
 
     # Ensure final_tailored is structured and has ats_report
     if not isinstance(final_tailored, dict):
         final_tailored = {}
+    final_tailored["jd_context"] = jd_context
+
     if "ats_report" not in final_tailored or not final_tailored["ats_report"]:
         final_tailored["ats_report"] = {
             "match_score": 100,
@@ -287,33 +725,34 @@ JD Details:
         }
 
     # ─── STEP 5: BUILD CLEAN DOCX ───
-    safe_company = re.sub(r'[^\w\-]', '_', company)[:20]
-    safe_role    = re.sub(r'[^\w\-]', '_', job_title)[:20]
+    # [FIX BUG 2] Use AI-produced job_title_headline if available (properly cased, no location)
+    ai_headline = final_tailored.get("job_title_headline", "").strip()
+    if ai_headline and len(ai_headline) > 3:
+        from bot.resume_builder_core import clean_job_title as _clean
+        ai_headline_cleaned = _clean(ai_headline)
+        if ai_headline_cleaned and len(ai_headline_cleaned) > 3:
+            print(f"    [JCode] Using AI headline: '{ai_headline_cleaned}' (was: '{job_title}')")
+            job_title = ai_headline_cleaned
+
+    cleaned_title = re.sub(r'[\s\-,\/\|\(\)]+', '_', job_title).strip('_')
+    safe_company = re.sub(r'[^\w\-]', '_', company)[:60]
+    safe_role    = cleaned_title[:60]
     filename = f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx"
     out_path = os.path.join(TAILORED_TODAY, filename)
     
     try:
         build_tailored_resume_from_json(final_tailored, job_title, company, out_path, job_description)
-        logger.success(f"[JCode Coordinator] Document saved successfully to: {out_path}", site=site)
+        print(f"[JCode Coordinator] Document saved successfully to: {out_path}")
     except Exception as e:
-        logger.error(f"[ERROR] Document creation failed: {e}", site=site)
+        print(f"[ERROR] Document creation failed: {e}")
+        # Fallback copy
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
-
-    # Run ATS check on the tailored resume using HuggingFace
-    try:
-        tailored_text = extract_resume_text(out_path)
-        ats_report = check_resume_ats(tailored_text, job_description, job_title, company)
-        logger.ai(f"ATS Check: {ats_report.get('ats_score', '?')}% — "
-                  f"Missing: {ats_report.get('missing_keywords', [])[:3]}", site=site)
-    except Exception:
-        ats_report = {}
         
     return {
         "resume_path": out_path,
         "match_score": final_tailored.get("ats_report", {}).get("match_score", 100),
-        "tailored":    final_tailored,
-        "ats_report":  ats_report
+        "tailored":    final_tailored
     }
 
 def build_clean_resume(tailored: dict, output_path: str):
@@ -526,6 +965,7 @@ def build_clean_resume(tailored: dict, output_path: str):
     run_deg.bold = True
     run_deg.font.name = 'Calibri'
     run_deg.font.size = Pt(11)
+    
     p.paragraph_format.tab_stops.add_tab_stop(Inches(6.5), 2)
     run_year = p.add_run("\t2018 – 2022")
     run_year.bold = True

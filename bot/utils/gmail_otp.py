@@ -27,6 +27,9 @@ OTP_SENDERS = [
     "indeed",
     "shine",
     "monster",
+    "foundit",
+    "jobstreet",
+    "seek",
     "security",
     "verify",
     "noreply",
@@ -134,9 +137,15 @@ def wait_for_otp(site: str = "any", timeout_seconds: int = 60) -> str | None:
                 subject = str(msg.get("Subject", "")).lower()
 
                 # Filter: must be from a known OTP sender or related to our sites
+                site_terms = [site.lower()]
+                if site.lower() == "monster":
+                    site_terms.extend(["foundit", "foundit.in", "foundit.sg", "monster"])
+                elif site.lower() == "jobstreet":
+                    site_terms.extend(["seek", "seek.com", "jobstreet"])
+
                 is_relevant = (
                     any(s in sender for s in OTP_SENDERS) or
-                    any(s in subject for s in ["otp", "code", "verify", "verification", "pin", site.lower()])
+                    any(s in subject for s in ["otp", "code", "verify", "verification", "pin"] + site_terms)
                 )
 
                 if not is_relevant:

@@ -195,10 +195,10 @@ def _search_and_apply(page: Page, job_title: str, location: str):
     search_url = (
         f"{BASE_URL}/jobs/search/?keywords={_encode(job_title)}"
         f"&location={_encode(location)}"
-        f"&f_AL=true"       # Easy Apply only
         f"&f_TPR=r86400"    # Last 24 hours
         f"&f_E=4"           # Mid-Senior level
         f"&sortBy=DD"       # Most recent first
+        f"&f_EA=true"       # Strictly Easy Apply only
     )
 
     try:
@@ -287,6 +287,12 @@ def _apply_to_job(page: Page, job_el) -> bool:
             ".jobs-unified-top-card__job-title",
         ]) or "Unknown Role"
 
+        # Clean job title (remove location keywords)
+        job_title = re.sub(r'\s+', ' ', job_title).strip()
+        job_title = re.sub(r'\b(Job\s+)?in\s+.*$', '', job_title, flags=re.IGNORECASE).strip()
+        job_title = re.sub(r'\b(Johor|Selangor|Kuala Lumpur|Shah Alam|Subang|Bangalore|Chennai|Remote|Singapore|Malaysia|India).*$', '', job_title, flags=re.IGNORECASE).strip()
+        job_title = re.sub(r'[\s\-,\/\|\(\)]+$', '', job_title).strip()
+
         company = _text([
             ".job-details-jobs-unified-top-card__company-name a",
             ".jobs-unified-top-card__company-name a",
@@ -308,6 +314,10 @@ def _apply_to_job(page: Page, job_el) -> bool:
 
         job_url = page.url
 
+        if is_already_applied(SITE, company, job_title):
+            field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
+            return False
+
         # ── RELEVANCE FILTER ────────────────────────────────────────────────
         tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
@@ -326,18 +336,31 @@ def _apply_to_job(page: Page, job_el) -> bool:
             page.locator("button[aria-label*='Easy Apply']"),
         ]:
             try:
-                if btn_locator.first.is_visible(timeout=2000):
+                if btn_locator.first.is_visible(timeout=1000):
                     easy_btn = btn_locator.first
                     break
             except Exception:
                 continue
 
+        apply_btn = None
         if not easy_btn:
-            field_log("skip", f"{company} — {job_title}", "No Easy Apply button", SITE)
-            return False
+            # Check for external apply button
+            for btn_locator in [
+                page.locator(".jobs-apply-button--top-card a"),
+                page.locator("a.jobs-apply-button"),
+                page.locator("a[aria-label*='Apply to']"),
+                page.get_by_role("link", name="Apply"),
+                page.get_by_role("button", name="Apply"),
+            ]:
+                try:
+                    if btn_locator.first.is_visible(timeout=1000):
+                        apply_btn = btn_locator.first
+                        break
+                except Exception:
+                    continue
 
-        if is_already_applied(SITE, company, job_title):
-            field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
+        if not easy_btn and not apply_btn:
+            field_log("skip", f"{company} — {job_title}", "No Easy Apply or Apply button found", SITE)
             return False
 
         print(f"\n  {'─'*55}")
@@ -345,13 +368,50 @@ def _apply_to_job(page: Page, job_el) -> bool:
         print(f"     Match: {match_score}% | Location: {location}")
         print(f"  {'─'*55}")
 
-        easy_btn.scroll_into_view_if_needed()
-        _delay(0.3, 0.6)
-        field_log("click", "Easy Apply button", "", SITE)
-        easy_btn.click()
-        _delay(1.5, 2.5)
+        if easy_btn:
+            easy_btn.scroll_into_view_if_needed()
+            _delay(0.3, 0.6)
+            field_log("click", "Easy Apply button", "", SITE)
+            easy_btn.click()
+            _delay(1.5, 2.5)
 
-        success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
+            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
+        else:
+            # External apply - Capture URL and save to bulk_urls.txt
+            apply_btn.scroll_into_view_if_needed()
+            _delay(0.3, 0.6)
+            field_log("click", "External Apply button to capture URL", "", SITE)
+            try:
+                with page.context.expect_page(timeout=15000) as new_page_info:
+                    apply_btn.click()
+                new_page = new_page_info.value
+                new_page.wait_for_load_state("domcontentloaded", timeout=15000)
+                
+                ext_url = new_page.url
+                logger.info(f"Captured external apply URL: {ext_url}", SITE)
+                
+                bulk_file_path = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
+                already_exists = False
+                if os.path.exists(bulk_file_path):
+                    with open(bulk_file_path, "r", encoding="utf-8") as f:
+                        if ext_url in f.read():
+                            already_exists = True
+                            
+                if not already_exists:
+                    with open(bulk_file_path, "a", encoding="utf-8") as f:
+                        f.write(f"\n{ext_url}")
+                    logger.success(f"Saved external URL to bulk apply queue: {ext_url}", SITE)
+                else:
+                    logger.info("External URL already exists in bulk apply queue.", SITE)
+                    
+                try:
+                    new_page.close()
+                except Exception:
+                    pass
+                success = False
+            except Exception as ex:
+                logger.warn(f"Failed to capture external apply URL: {ex}", SITE)
+                success = False
 
         if success:
             record_application(

@@ -60,26 +60,42 @@ MAX_JOBS_PER_SITE   = int(os.getenv("MAX_JOBS_PER_SITE", "500"))
 APPLY_DELAY_SECONDS = int(os.getenv("APPLY_DELAY_SECONDS", "8"))
 
 # ─── CREDENTIALS ──────────────────────────────────────────
+def _get_cred(key, is_pass=False):
+    env_key = f"{key.upper()}_PASSWORD" if is_pass else f"{key.upper()}_EMAIL"
+    val = os.getenv(env_key, "").strip()
+    if not val:
+        fallback_env = "LINKEDIN_PASSWORD" if is_pass else "LINKEDIN_EMAIL"
+        val = os.getenv(fallback_env, "").strip()
+    return val
+
 CREDENTIALS = {
     "linkedin": {
-        "email":    os.getenv("LINKEDIN_EMAIL", ""),
-        "password": os.getenv("LINKEDIN_PASSWORD", ""),
+        "email":    _get_cred("linkedin"),
+        "password": _get_cred("linkedin", True),
     },
     "naukri": {
-        "email":    os.getenv("NAUKRI_EMAIL", ""),
-        "password": os.getenv("NAUKRI_PASSWORD", ""),
+        "email":    _get_cred("naukri"),
+        "password": _get_cred("naukri", True),
     },
     "indeed": {
-        "email":    os.getenv("INDEED_EMAIL", ""),
-        "password": os.getenv("INDEED_PASSWORD", ""),
+        "email":    _get_cred("indeed"),
+        "password": _get_cred("indeed", True),
     },
     "shine": {
-        "email":    os.getenv("SHINE_EMAIL", ""),
-        "password": os.getenv("SHINE_PASSWORD", ""),
+        "email":    _get_cred("shine"),
+        "password": _get_cred("shine", True),
     },
     "monster": {
-        "email":    os.getenv("MONSTER_EMAIL", ""),
-        "password": os.getenv("MONSTER_PASSWORD", ""),
+        "email":    _get_cred("monster"),
+        "password": _get_cred("monster", True),
+    },
+    "jobstreet": {
+        "email":    _get_cred("jobstreet"),
+        "password": _get_cred("jobstreet", True),
+    },
+    "jooble": {
+        "email":    _get_cred("jooble"),
+        "password": _get_cred("jooble", True),
     },
 }
 

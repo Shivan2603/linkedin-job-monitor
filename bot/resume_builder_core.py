@@ -124,9 +124,42 @@ def enforce_four_verb_phrase(bullets: List[str]) -> List[str]:
     return result
 
 
+def clean_text_punctuation(text: str) -> str:
+    """Fix orphaned brackets, double periods, and trailing punctuation issues."""
+    if not text:
+        return text
+    # Fix double periods
+    text = re.sub(r'\.{2,}', '.', text)
+    # Fix space before period (but not for names like .NET or extensions)
+    text = re.sub(r'\s+\.(?![a-zA-Z])', '.', text)
+    # Fix period-comma
+    text = re.sub(r'\.\s*,', '.', text)
+    # Fix orphaned closing parenthesis not preceded by opening
+    parts = list(text)
+    depth = 0
+    result = []
+    for ch in parts:
+        if ch == '(':
+            depth += 1
+            result.append(ch)
+        elif ch == ')':
+            if depth > 0:
+                depth -= 1
+                result.append(ch)
+            # else skip the orphaned ')'
+        else:
+            result.append(ch)
+    # Close any unclosed brackets
+    result.extend([')'] * depth)
+    text = ''.join(result)
+    # Remove trailing whitespace before punctuation (excluding period to protect .NET)
+    text = re.sub(r'\s+([,;:])', r'\1', text)
+    return text.strip()
+
+
 def enforce_international_phrase(summary: str) -> str:
     """[F7] Ensure 'international team environment' exact phrase is in summary."""
-    if "international team" in summary.lower():
+    if "international team" in summary.lower() or "cross-functional" in summary.lower():
         return summary
     # Append to last sentence
     if summary.endswith("."):
@@ -135,26 +168,80 @@ def enforce_international_phrase(summary: str) -> str:
 
 
 def enforce_company_closing(summary: str, company: str, jd_value: str) -> str:
-    """[F8] Ensure summary ends with company-specific closing line."""
+    """[F8] Ensure summary ends with a company-specific closing line."""
     if company.lower() in summary.lower():
         return summary
     closing = (
-        f" Bringing scalable .NET and cloud expertise to {company} to help build "
-        f"world-class ERP and accounting software used by businesses globally."
+        f"Bringing scalable .NET and cloud expertise to {company} "
+        f"to deliver high-quality, reliable enterprise software solutions."
     )
-    if summary.endswith("."):
-        return summary.rstrip(".") + closing
-    return summary + closing
+    summary = summary.strip()
+    if not summary.endswith("."):
+        summary += "."
+    return summary + " " + closing
+
+
+def enforce_summary_formula(summary: str, job_title: str) -> str:
+    """[F4+] Enforce 5-line formula: Line 1 must start with exact job title.
+    Remove pronouns. Fix double closing. Ensure proper sentence boundaries."""
+    if not summary or not job_title:
+        return summary
+
+    # Remove first-person pronouns
+    summary = re.sub(r'\bI am\b', '', summary)
+    summary = re.sub(r'\bI have\b', 'having', summary)
+    summary = re.sub(r'\bmy\b', '', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'\bI\b', '', summary)
+    summary = re.sub(r'\s+', ' ', summary).strip()
+
+    # Ensure summary starts with exact job title (full match, not just 20 chars)
+    jt_lower = job_title.lower().strip()
+    sum_lower = summary.lower().strip()
+
+    # Check if summary starts with the job title (allow minor prefix variation)
+    if not sum_lower.startswith(jt_lower[:len(jt_lower)]):
+        # Does it start with a different capitalization of the title?
+        first_words = sum_lower.split()[:len(jt_lower.split())]
+        title_words = jt_lower.split()
+        overlap = sum(1 for a, b in zip(first_words, title_words) if a == b)
+        if overlap < max(1, len(title_words) // 2):
+            # Genuinely doesn't start with title — prepend
+            # But avoid doubling if summary starts with "with" or "having" after we'd insert title
+            if sum_lower.startswith('with ') or sum_lower.startswith('having '):
+                summary = f"{job_title} {summary}"
+            else:
+                # Check if a connector word like "with" is needed
+                summary = f"{job_title} with " + summary.lstrip()
+            print(f"  [ATS-GUARD][FORMULA] Prepended job title to summary: '{job_title}'")
+
+    # Clean up any double 'with with' artifacts
+    summary = re.sub(r'\b(with)\s+\1\b', 'with', summary, flags=re.IGNORECASE)
+    summary = clean_text_punctuation(summary)
+    return summary
 
 
 def validate_summary(summary: str, job_title: str, company: str) -> str:
     """[F3][F7][F8] Run all summary safety checks and return clean summary."""
     summary = strip_emojis(summary)
-    # [F4] Ensure first sentence uses exact job title
-    if not summary.lower().startswith(job_title.lower()[:20].lower()):
-        summary = f"{job_title} with " + summary.lstrip()
+    
+    # Safety: remove any domain-like prefix (e.g. 'monster.com with 4+ years')
+    domain_prefix = re.match(
+        r'^(?:[\w.-]+\.(?:com|in|co\.uk|au|net|org)|monster|naukri|glassdoor|indeed|linkedin|shine|foundit|hirist|wellfound|seek|reed|totaljobs|jobstreet)\s*(?:with|having)?\s*',
+        summary, re.IGNORECASE
+    )
+    if domain_prefix:
+        summary = job_title + " with " + summary[domain_prefix.end():].lstrip()
+        print(f"  [ATS-GUARD][F4] Fixed domain/job-board prefix in summary → starts with: '{job_title}'")
+    
+    # [F4+] Enforce formula (full title match, not just [:20])
+    summary = enforce_summary_formula(summary, job_title)
+
+    # [F7] International phrase — run BEFORE company closing to avoid duplication
     summary = enforce_international_phrase(summary)
+    # [F8] Company closing — only append if not already there
     summary = enforce_company_closing(summary, company, "scalable .NET and cloud expertise")
+    # Final punctuation cleanup
+    summary = clean_text_punctuation(summary)
     return summary
 
 
@@ -564,26 +651,29 @@ except Exception as e:
 
 DEFAULT_SKILLS = {
     "Backend": [
-        ".NET Core 8 / .NET 7", "C#", "ASP.NET Web API", "RESTful APIs",
-        "ASP.NET MVC", "ADO.NET",
+        ".NET Core 8 / .NET 7", ".NET Framework 4.x", "C#", "ASP.NET Web API", "ASP.NET Core",
+        "RESTful APIs", "ASP.NET MVC", "ADO.NET", "HTML5", "CSS",
         "CQRS", "Clean Architecture", "Domain-Driven Design (DDD)", "SOLID Principles",
         "Microservices", "Entity Framework Core", "YARP Reverse Proxy",
-        "SignalR", "gRPC", "WCF"
+        "SignalR", "gRPC", "WCF", "IIS (Internet Information Services)"
     ],
     "Cloud & DevOps": [
-        "Microsoft Azure", "Azure App Services",
-        "Azure Blob Storage", "Azure DevOps (CI/CD YAML)",
-        "GitHub Actions", "Docker",
-        "SonarQube", "OpenTelemetry", "Application Insights"
+        "Microsoft Azure", "Amazon Web Services (AWS)", "Azure App Services",
+        "Azure Blob Storage", "Azure DevOps (CI/CD YAML)", "Azure DevOps Server",
+        "GitHub Actions", "Docker", "CI/CD Pipelines", "Continuous Integration",
+        "Continuous Deployment", "SonarQube", "OpenTelemetry", "Application Insights",
+        "Git", "SVN (Subversion)", "Source Control Management (SCM)"
     ],
     "Databases": [
-        "SQL Server", "PostgreSQL", "Azure SQL", "Redis (Distributed Cache)",
-        "LINQ Optimisation", "Stored Procedures", "Full-Text Indexing"
+        "SQL Server", "MS SQL Server", "PostgreSQL", "Azure SQL", "Redis (Distributed Cache)",
+        "SSRS (SQL Server Reporting Services)", "LINQ Optimisation",
+        "Stored Procedures", "Full-Text Indexing"
     ],
     "Security": [
         "OAuth2", "OpenID Connect (OIDC)", "JWT", "RBAC",
         "AES-256 Encryption", "PCI-DSS", "FIPS Compliance",
-        "OWASP Top 10", "IP Whitelisting"
+        "OWASP Top 10", "IP Whitelisting",
+        "Section 508 Compliance", "WAI-ARIA", "Web Content Accessibility Guidelines (WCAG)"
     ],
     "Messaging & Architecture": [
         "RabbitMQ", "Azure Service Bus", "Redis Pub/Sub",
@@ -595,15 +685,17 @@ DEFAULT_SKILLS = {
     ],
     "Testing": [
         "xUnit", "NUnit", "Moq", "Integration Testing",
-        "TDD", "Grafana K6 Load Testing"
+        "TDD (Test-Driven Development)", "Unit Testing", "Grafana K6 Load Testing",
+        "Pair Programming", "eXtreme Programming (XP)"
     ],
     "AI / ML": [
         "Azure OpenAI GPT-4", "Semantic Kernel", "Vector Embeddings",
         "pgvector", "Azure AI Search", "Prompt Engineering", "Azure Form Recognizer"
     ],
     "Methodology": [
-        "Agile / Scrum", "Git Flow", "Code Reviews",
-        "Architectural Decision Records (ADRs)", "Team Mentoring", "Sprint Planning"
+        "Agile / Scrum", "eXtreme Programming (XP)", "Git Flow", "Code Reviews",
+        "Architectural Decision Records (ADRs)", "Team Mentoring", "Sprint Planning",
+        "Software Development Life Cycle (SDLC)", "ISO Standards", "CMMI"
     ],
 }
 
@@ -690,17 +782,32 @@ STOPWORDS = {
 KNOWN_TECH_KEYWORDS = {
     "c#", ".net", "asp.net", "mvc", "api", "restful", "apis", "azure", "devops", "sql", "server", "postgresql",
     "redis", "rabbitmq", "docker", "angular", "react", "vue.js", "typescript", "rxjs", "ngrx", "redux", "material-ui",
-    "tailwind", "css", "html", "javascript", "js", "ajax", "wcf", "grpc", "signalr", "yarp", "proxy", "pgvector",
-    "opentelemetry", "sonarqube", "git", "jwt", "oauth2", "oidc", "rbac", "aes-256", "pci-dss", "fips", "owasp",
-    "cqrs", "ddd", "solid", "microservices"
+    "tailwind", "css", "html", "html5", "javascript", "js", "ajax", "wcf", "grpc", "signalr", "yarp", "proxy", "pgvector",
+    "opentelemetry", "sonarqube", "git", "svn", "subversion", "jwt", "oauth2", "oidc", "rbac", "aes-256", "pci-dss",
+    "fips", "owasp", "cqrs", "ddd", "solid", "microservices",
+    # Newly added for JD coverage
+    "tdd", "xp", "ssrs", "iis", "aws", "section508", "wai-aria", "wcag", "scm", "ci", "cd",
+    "adfs", "ldap", "cmmi", "iso", "sdlc", "xunit", "nunit", "moq"
 }
 
 SYNONYMS = {
-    "asp.net": {".net", "asp.net", "c#", "asp.net web api", "asp.net mvc"},
-    ".net": {"c#", ".net", "asp.net", ".net core", ".net core 8", ".net 7", "asp.net web api", "asp.net mvc"},
-    "c#": {".net", "c#", "c#.net"},
-    "sql": {"sql", "sql server", "sql server 2008", "azure sql"},
-    "sql server": {"sql", "sql server", "sql server 2008", "azure sql"},
+    "asp.net": {".net", "asp.net", "c#", "asp.net web api", "asp.net mvc", "asp.net core"},
+    ".net": {"c#", ".net", "asp.net", ".net core", ".net core 8", ".net 7", ".net framework", "asp.net web api", "asp.net mvc"},
+    "c#": {".net", "c#", "c#.net", "c# .net"},
+    "sql": {"sql", "sql server", "ms sql", "ms sql server", "sql server 2008", "azure sql", "ssrs"},
+    "sql server": {"sql", "sql server", "ms sql server", "sql server 2008", "azure sql"},
+    "ssrs": {"ssrs", "sql server reporting services", "sql reporting"},
+    "iis": {"iis", "internet information services", "iis management"},
+    "tdd": {"tdd", "test-driven development", "test driven development", "unit test", "unit testing"},
+    "html5": {"html", "html5"},
+    "html": {"html", "html5"},
+    "git": {"git", "git flow", "github", "github actions"},
+    "svn": {"svn", "subversion", "source control", "scm", "version control"},
+    "aws": {"aws", "amazon web services"},
+    "section508": {"section 508", "section508", "508 compliance", "wai-aria", "wcag", "accessibility"},
+    "xp": {"xp", "extreme programming", "extreme programming (xp)", "pair programming"},
+    "ci": {"ci", "continuous integration", "ci/cd"},
+    "cd": {"cd", "continuous deployment", "continuous delivery", "ci/cd"},
     "azure": {"azure", "microsoft azure", "azure sql", "azure devops", "azure app services", "azure blob storage"},
     "oauth2": {"oauth2", "oidc", "openid connect"},
     "oidc": {"oauth2", "oidc", "openid connect"},
@@ -791,6 +898,21 @@ def tokenize_skills_list(skills_dict: dict) -> set:
                     tokens.add(p_clean)
     return tokens
 
+# Generic/noise tokens from skill tokenization that should NEVER be injected as standalone labels.
+# e.g. "Software Engineering" tokenizes to 'software', 'engineering' — both too vague as standalone skills.
+_SKILLS_NOISE_BLOCKLIST = {
+    "engineering", "ui", "application", "css", "html", "web", "software",
+    "development", "design", "quality", "management", "platform", "service",
+    "services", "system", "systems", "technology", "technologies", "solution",
+    "solutions", "based", "driven", "core", "data", "code", "testing",
+    "test", "build", "deployment", "integration", "delivery", "technical",
+    "business", "level", "high", "best", "team", "tools", "standard",
+    "standards", "customer", "support", "client", "project", "performance",
+    "process", "monitoring", "control", "security", "network", "server",
+    "backend", "frontend", "full", "stack", "cloud", "framework",
+    "frameworks", "architecture", "pattern", "patterns", "library",
+}
+
 def verify_no_keywords_dropped(original_skills: dict, consolidated_skills: dict, jd_text: str = "") -> bool:
     orig_tokens = tokenize_skills_list(original_skills)
     cons_tokens = tokenize_skills_list(consolidated_skills)
@@ -801,7 +923,11 @@ def verify_no_keywords_dropped(original_skills: dict, consolidated_skills: dict,
             critical_dropped = dropped.intersection(jd_keywords)
         else:
             critical_dropped = dropped
-            
+
+        # Filter out noise tokens — these are word fragments from multi-word skills
+        # (e.g. 'UI', 'Engineering') that would pollute the skills section as standalone labels
+        critical_dropped = {d for d in critical_dropped if d.lower() not in _SKILLS_NOISE_BLOCKLIST}
+
         if critical_dropped:
             print(f"  [WARN] Skills Keyword Diff failed! Dropped tokens: {critical_dropped}")
             if "Methodology & Tools" not in consolidated_skills:
@@ -835,6 +961,23 @@ def extract_metrics_with_context(bullet: str) -> list:
             if w == val or w == val_str or val in w:
                 idx = i
                 break
+        
+        # Check if the number is part of a version or technology name (e.g. GPT-4, OAuth2, AES-256)
+        if idx != -1:
+            matching_word = words[idx]
+            is_tech_ver = False
+            # Check for known tech-related prefixes in the token itself
+            if any(tech_prefix in matching_word for tech_prefix in ["gpt", "oauth", "aes", "sha", "ipv", "tls", "az-", "sec-", "section", "fips"]):
+                is_tech_ver = True
+            elif matching_word.startswith("v") and len(matching_word) > 1 and matching_word[1:].isdigit():
+                is_tech_ver = True  # e.g., v1, v2
+            # Check if the preceding token is a known tech brand/framework/version context
+            if idx > 0 and words[idx-1] in ["net", "core", "angular", "java", "python", "c#", "version", "framework", "server", "tls", "ssl", "oracle", "windows", "win", "node", "react", "vue"]:
+                is_tech_ver = True
+            
+            if is_tech_ver:
+                continue
+
         context = ""
         if idx != -1:
             start = max(0, idx - 3)
@@ -1018,25 +1161,53 @@ def clean_job_title(title: str) -> str:
     
     t = title.strip()
     
+    # Remove URLs, domain names, and job board site names that bleed into title
+    t = re.sub(r'\b(?:monster\.com|naukri\.com|indeed\.co[m.in/]+|glassdoor\.co[m.in/]+|linkedin\.com\S*|foundit\.in|shine\.com|timesjobs\.com|hirist\.com|wellfound\.com|seek\.com\.au|reed\.co\.uk|totaljobs\.com|jobstreet\.com|indeed\.com|simplyhired\.com|ziprecruiter\.com)\S*', '', t, flags=re.IGNORECASE)
+    
     # Remove junk/job board words
-    t = re.sub(r'\b(jobs|job|vacancy|vacancies|hiring|recruitment|opening|openings)\b', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\b(jobs|job|vacancy|vacancies|hiring|recruitment|opening|openings|monster|naukri|glassdoor|indeed|linkedin|shine|foundit|hirist|wellfound|seek|reed|totaljobs|jobstreet)\b', '', t, flags=re.IGNORECASE)
+    
+    # [NEW] Remove parenthetical location suffixes like "(Shah Alam/Subang)" or "(Kuala Lumpur, Malaysia)"
+    t = re.sub(r'\s*\([^)]*(?:Shah Alam|Subang|Selangor|Kuala Lumpur|Malaysia|Singapore|Chennai|Bangalore|Mumbai|India|Remote|Hybrid|Onsite|KL|KLCC)[^)]*\)', '', t, flags=re.IGNORECASE)
+    
+    # [NEW] Remove trailing location text after dash/pipe like "- Shah Alam/Subang" or "| KL"
+    t = re.sub(r'\s*[-|/]\s*(?:Shah Alam|Subang|Selangor|Kuala Lumpur|Malaysia|Singapore|Chennai|Bangalore|Mumbai|India|Remote|Hybrid|Onsite|KL|KLCC).*$', '', t, flags=re.IGNORECASE)
+    
+    # [NEW] Remove trailing " IN CITY/LOCATION" pattern (e.g. "SOFTWARE ENGINEER IN SHAH ALAM/SUBANG")
+    t = re.sub(r'\s+\bIN\b\s+.+$', '', t, flags=re.IGNORECASE)
     
     # Remove trailing/leading punctuation or spaces
-    t = re.sub(r'^[-\s/•|]+|[-\s/•|]+$', '', t)
+    t = re.sub(r'^[-\s/•|.]+|[-\s/•|.]+$', '', t)
     t = re.sub(r'\s+', ' ', t).strip()
     
     # Normalize generic titles
     t_lower = t.lower()
-    if t_lower in ["", "developer", "engineer", "software developer", "software engineer"]:
+    if t_lower in ["", "developer", "engineer", "software developer", "software engineer",
+                   ".com", ".net", "com"]:
         return "Senior .NET Full Stack Engineer"
         
     # Replace abbreviations
     t = re.sub(r'\bsr\b\.?\s*', 'Senior ', t, flags=re.IGNORECASE)
     t = re.sub(r'\bdot\s*net\b', '.NET', t, flags=re.IGNORECASE)
-    t = re.sub(r'\basp\b\.?', 'ASP', t, flags=re.IGNORECASE)
+    t = re.sub(r'\basp\b\.?(?!\s*\.net)', 'ASP', t, flags=re.IGNORECASE)
+    
+    # [NEW] Normalize title case for common patterns
+    # e.g. "SOFTWARE ENGINEER" → "Software Engineer" (only if ALL CAPS)
+    if t == t.upper() and len(t) > 3:
+        t = t.title()
+        # Fix known acronyms that title() breaks: .NET, C#, etc.
+        t = re.sub(r'\.Net\b', '.NET', t)
+        t = re.sub(r'\bC#\b', 'C#', t, flags=re.IGNORECASE)
     
     # Clean up whitespace
     t = re.sub(r'\s+', ' ', t).strip()
+    
+    # Final safety: if title still looks like a domain or garbage, return generic
+    if re.match(r'^[\w.-]+\.(com|in|co\.uk|au|net|org)$', t, re.IGNORECASE):
+        return "Senior .NET Full Stack Engineer"
+    
+    # Run punctuation cleanup to fix unclosed parentheses or brackets
+    t = clean_text_punctuation(t)
     return t
 
 def run_local_tailor_engine(jd_text: str, job_title: str, company: str) -> dict:
@@ -1114,11 +1285,43 @@ def run_local_tailor_engine(jd_text: str, job_title: str, company: str) -> dict:
 
 def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str, output_file: str, jd_text: str = "") -> str:
     job_title = clean_job_title(job_title)
+    jd_lower = jd_text.lower() if jd_text else ""
     """
     Helper function to dynamically map an AI agent's JSON output to the 
     universal ATS resume builder config and generate the DOCX with strict 
     fact grounding, redundancy checks, and page count escalation loops.
     """
+    # ─── CONSUME JD INTELLIGENCE CONTEXT ───────────────────────────────
+    jd_context = tailored.get("jd_context", {})
+    jd_loc_line     = jd_context.get("location_line", "")
+    jd_domain       = jd_context.get("company_domain", "technology").lower()
+    jd_is_intl      = jd_context.get("is_international", False)
+    jd_lead_role    = jd_context.get("is_team_lead_role", False)
+    jd_cert_hint    = jd_context.get("cert_highlight", "")
+    jd_dom_priority = jd_context.get("domain_priority_skills", [])
+    jd_dom_cat      = jd_context.get("domain_priority_category", "")
+    jd_mirror_phrases = jd_context.get("jd_mirror_phrases", [])
+
+    if jd_context:
+        print(f"  [JD Intel] Domain: {jd_domain} | International: {jd_is_intl} | Lead: {jd_lead_role}")
+        print(f"  [JD Intel] Location line: {jd_loc_line or '(using default)'}")
+
+    # ─── CANDIDATE HEADER ──────────────────────────────────────────────
+    # Build location line dynamically
+    location_line = tailored.get("location_line", "").strip()
+    if not location_line:
+        is_intl = jd_is_intl
+        
+        # Fallback/additional check for international countries
+        INTERNATIONAL_COUNTRIES = ["malaysia", "singapore", "australia", "united kingdom", "uk", "london", "usa", "canada", "germany", "uae", "dubai"]
+        if not is_intl:
+            is_intl = any(c in jd_lower for c in INTERNATIONAL_COUNTRIES)
+            
+        if is_intl:
+            location_line = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+        else:
+            location_line = "Chennai, India  |  Open to Remote / Hybrid"
+
     candidate = {
         "name": "SIVA SHANKAR",
         "phone": "+91 6383149155",
@@ -1126,7 +1329,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         "linkedin": "https://www.linkedin.com/in/siva-shankar-4a7849226/",
         "github": "https://github.com/shivan2603",
         "portfolio": "https://shivan2603.github.io/sivashankar-portfolio/",
-        "location": "Chennai, India | Open to Remote/Hybrid",
+        "location": location_line,
     }
 
     education = {
@@ -1136,21 +1339,29 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         "gpa": "8.6 / 10"
     }
 
-    certifications = [
-        "Microsoft Azure Developer Associate (AZ-204)  |  Microsoft  |  March 18, 2024",
-        "Top Performer Award  |  Nexa Office InfoSystems LLP  |  2024",
-    ]
+    # ─── DOMAIN-AWARE CERTIFICATIONS ──────────────────────────────────
+    certifications = tailored.get("certifications", [])
+    if not certifications or not isinstance(certifications, list):
+        az204_cert = "Microsoft Azure Developer Associate (AZ-204)  |  Microsoft  |  March 18, 2024"
+        top_perf   = "Top Performer Award  |  Nexa Office InfoSystems LLP  |  2024"
 
-    # ─── RECRUITER CALIBRATION ENGINE ───
-    jd_lower = jd_text.lower()
-    
-    # 1. Location Fit
-    INTERNATIONAL_COUNTRIES = ["malaysia", "singapore", "australia", "united kingdom", "uk", "london", "usa", "canada", "germany", "uae", "dubai"]
-    is_intl = any(c in jd_lower for c in INTERNATIONAL_COUNTRIES)
-    if is_intl:
-        candidate["location"] = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
-    else:
-        candidate["location"] = "Chennai, India  |  Open to Remote / Hybrid"
+        # Highlight AZ-204 as HIGHLY RELEVANT if Azure is the primary cloud in JD
+        if jd_cert_hint and "highly relevant" in jd_cert_hint.lower():
+            az204_cert += "  (HIGHLY RELEVANT)"
+        elif any(kw in jd_lower for kw in ["azure", "az-204", "microsoft cloud", "azure devops"]):
+            az204_cert += "  (Directly Applicable)"
+
+        # For government/federal jobs — highlight the NEICE project cert line
+        if any(d in jd_domain for d in ["government", "federal", "public sector", "defense", "defence"]):
+            certifications = [
+                az204_cert,
+                top_perf,
+                "US Government Platform (NEICE)  |  FIPS Compliance & Federal Security Standards  |  Kasadara Technology Solutions  |  2022–2024"
+            ]
+        else:
+            certifications = [az204_cert, top_perf]
+
+
 
     # 2. Legacy Framework / ADO.NET Fit
     has_legacy_ask = any(kw in jd_lower for kw in ["2.0", "3.5", "4.0", "4.x", "ado.net", "ajax", "legacy", "classic", ".net framework"])
@@ -1176,12 +1387,15 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         tailored = {**local_tailored, **(tailored if tailored else {})}
 
     summary = tailored.get("professional_summary", "").strip()
-    if not summary or len(summary) < 50 or mid_level_mode:
+    # [FIX BUG 3] Only use fallback if AI summary is truly empty or trivially short.
+    # Do NOT override a quality AI-generated summary just because mid_level_mode is True.
+    ai_summary_quality = summary and len(summary) >= 80
+    if not ai_summary_quality:
         if mid_level_mode:
             summary = (
                 f"{job_title} with 4+ years of professional experience in C#, .NET Core, "
                 "ASP.NET MVC, and SQL Server database design. Proven track record of full-stack "
-                "application delivery, technical documentation, and team collaboration."
+                "application delivery, technical documentation, and team collaboration in Agile teams."
             )
         else:
             summary = (
@@ -1189,191 +1403,318 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "Clean Architecture, and Microsoft Azure. Architected 15+ production "
                 "microservices achieving sub-200ms p99 latency. AZ-204 certified."
             )
+    else:
+        # AI generated a good summary — still ensure it starts with the correct job title
+        summary = enforce_summary_formula(summary, job_title)
 
     raw_work = tailored.get("work_experience", {})
-    roles_meta = [
-        {
-            "company": "LTIMindtree",
-            "dates": "Jun 2025 – Present",
-            "title": "Senior Software Engineer  |  Client: Deloitte — Enterprise Tax Platform",
-            "tech": ".NET Core 8  •  ASP.NET Web API  •  Angular  •  Azure OpenAI GPT-4  •  Microservices" if not mid_level_mode else ".NET Core 8  •  ASP.NET Web API  •  Angular  •  SQL Server",
-            "key": "LTIMindtree",
-            "limit": 4
-        },
-        {
-            "company": "DSSI Solutions India Pvt Ltd",
-            "dates": "Nov 2024 – May 2025",
-            "title": "Senior Software Engineer  |  Financial Procurement Platform",
-            "tech": ".NET 7  •  Clean Architecture  •  CQRS  •  YARP Reverse Proxy  •  Docker  •  Azure",
-            "key": "DSSI Solutions India Pvt Ltd",
-            "limit": 3
-        },
-        {
-            "company": "Nexa Office InfoSystems LLP",
-            "dates": "Jul 2024 – Nov 2024",
-            "title": "Senior Software Engineer — Contract / Consultant  |  Enterprise Document Management",
-            "tech": ".NET Core  •  ASP.NET Web API  •  Angular  •  Docker  •  SQL Server  •  OAuth2",
-            "key": "Nexa Office InfoSystems LLP",
-            "limit": 2
-        },
-        {
-            "company": "Kasadara Technology Solutions",
-            "dates": "Jul 2022 – Jun 2024",
-            "title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
-            "tech": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
-            "key": "Kasadara Technology Solutions",
-            "limit": 2
-        }
-    ]
-
-    # Map, validate, and cap work experience
     jobs = []
-    for role in roles_meta:
-        bullets = raw_work.get(role["key"]) or raw_work.get(role["company"]) or []
-        if not bullets:
-            bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
-            
-        allowed = extract_allowed_facts(role["key"])
-        validated_bullets = []
+    
+    # Check if the AI returned the new dynamic work experience list format
+    if isinstance(raw_work, list) and len(raw_work) > 0 and isinstance(raw_work[0], dict):
+        # Ensure all 4 standard roles are present, auto-filling any missing ones
+        standard_roles_meta = [
+            {
+                "company": "LTIMindtree",
+                "dates": "Jun 2025 – Present",
+                "role_title": "Senior Software Engineer  |  Client: Deloitte — Enterprise Tax Platform",
+                "tech_stack_line": ".NET Core 8  •  ASP.NET Web API  •  Angular  •  Azure OpenAI GPT-4  •  Microservices" if not mid_level_mode else ".NET Core 8  •  ASP.NET Web API  •  Angular  •  SQL Server",
+                "key": "LTIMindtree",
+                "bullets": DEFAULT_JOBS.get("LTIMindtree") or []
+            },
+            {
+                "company": "DSSI Solutions India Pvt Ltd",
+                "dates": "Nov 2024 – May 2025",
+                "role_title": "Senior Software Engineer  |  Financial Procurement Platform",
+                "tech_stack_line": ".NET 7  •  Clean Architecture  •  CQRS  •  YARP Reverse Proxy  •  Docker  •  Azure App Services" if not mid_level_mode else ".NET 7  •  Clean Architecture  •  CQRS  •  SQL Server",
+                "key": "DSSI Solutions India Pvt Ltd",
+                "bullets": DEFAULT_JOBS.get("DSSI Solutions India Pvt Ltd") or []
+            },
+            {
+                "company": "Nexa Office InfoSystems LLP",
+                "dates": "Jul 2024 – Nov 2024",
+                "role_title": "Senior Software Engineer — Contract / Consultant  |  Enterprise Document Management",
+                "tech_stack_line": ".NET Core  •  ASP.NET Web API  •  Angular  •  Docker  •  SQL Server  •  OAuth2",
+                "key": "Nexa Office InfoSystems LLP",
+                "bullets": DEFAULT_JOBS.get("Nexa Office InfoSystems LLP") or []
+            },
+            {
+                "company": "Kasadara Technology Solutions",
+                "dates": "Jul 2022 – Jun 2024",
+                "role_title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
+                "tech_stack_line": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
+                "key": "Kasadara Technology Solutions",
+                "bullets": [
+                    "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
+                    "Optimised SQL Server architecture via Entity Framework migrations, LINQ tuning, and indexed stored procedures — achieving 30% retrieval speed."
+                ] if has_legacy_ask else (DEFAULT_JOBS.get("Kasadara Technology Solutions") or [])
+            }
+        ]
         
-        # Recruiter prioritization: Intercept bullets for legacy frameworks & documentation
-        if role["key"] == "Kasadara Technology Solutions" and has_legacy_ask:
-            bullets = [
-                "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
-                "Optimised SQL Server architecture via Entity Framework migrations, LINQ tuning, and indexed stored procedures — achieving 30% retrieval speed."
-            ]
-        
-        for idx, b in enumerate(bullets):
-            # Apply Clean Bullets Mapping for readability and single-metric enforcement
-            bullet_lower = b.lower()
-            for key, clean_val in CLEAN_BULLETS_MAPPING.items():
-                if key in bullet_lower:
-                    b = clean_val
-                    # Dynamic documentation/SRS adjustments
-                    if has_srs_ask:
-                        if "secured 30+ restful apis" in key:
-                            b = "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
-                        elif "connecting 3 third-party services" in key:
-                            b = "Developed integration endpoints for 3 third-party services, authoring detailed system and user manuals."
+        ordered_raw_work = []
+        for std in standard_roles_meta:
+            std_key = std["key"]
+            matched_role = None
+            for r in raw_work:
+                r_key = r.get("key", r.get("company", "")).strip()
+                if std_key.lower() in r_key.lower() or r_key.lower() in std_key.lower():
+                    matched_role = r
                     break
-
-            # Check soft skills boundary
-            ok_soft, err_soft = verify_soft_skills(b)
-            if not ok_soft:
-                print(f"  [ATS-GUARD] Soft-skill violation in {role['key']} bullet {idx+1}: {err_soft}. Falling back to base bullet.")
-                fallback_bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
-                if idx < len(fallback_bullets):
-                    b = fallback_bullets[idx]
-                else:
-                    b = fallback_bullets[-1] if fallback_bullets else b
-                    
-            # Check fact grounding
-            ok_ground, err_ground = verify_fact_grounding(role["key"], b, allowed)
-            if not ok_ground:
-                print(f"  [ATS-GUARD] Fact-grounding violation in {role['key']} bullet {idx+1}: {err_ground}. Falling back to base bullet.")
-                fallback_bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
-                if idx < len(fallback_bullets):
-                    b = fallback_bullets[idx]
-                else:
-                    b = fallback_bullets[-1] if fallback_bullets else b
-                    
-            validated_bullets.append(b)
+            if matched_role:
+                ordered_raw_work.append(matched_role)
+            else:
+                ordered_raw_work.append(std)
+        raw_work = ordered_raw_work
+        for role_entry in raw_work:
+            role_company = role_entry.get("company", "").strip()
+            dates = role_entry.get("dates", "").strip()
+            title = role_entry.get("role_title", "").strip()
+            tech = role_entry.get("tech_stack_line", "").strip()
+            bullets = role_entry.get("bullets", [])
+            key = role_entry.get("key", role_company).strip()
             
-        # Apply bullet limit/cap
-        limit = role.get("limit", 4)
-        jobs.append({
-            "company": role["company"],
-            "dates": role["dates"],
-            "title": role["title"],
-            "tech": role["tech"],
-            "bullets": validated_bullets[:limit]
-        })
+            if not role_company or not title:
+                continue
+                
+            limit = 4
+            if "ltimindtree" in key.lower():
+                limit = 4
+            elif "dssi" in key.lower():
+                limit = 3
+            elif "nexa" in key.lower():
+                limit = 2
+            elif "kasadara" in key.lower():
+                limit = 2
+                
+            allowed = extract_allowed_facts(key)
+            validated_bullets = []
+            
+            for idx, b in enumerate(bullets):
+                bullet_lower = b.lower()
+                for k, clean_val in CLEAN_BULLETS_MAPPING.items():
+                    if k in bullet_lower:
+                        b = clean_val
+                        if has_srs_ask:
+                            if "secured 30+ restful apis" in k:
+                                b = "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
+                            elif "connecting 3 third-party services" in k:
+                                b = "Developed integration endpoints for 3 third-party services, authoring detailed system and user manuals."
+                        break
+                
+                # Verify soft skills and grounding
+                ok_soft, err_soft = verify_soft_skills(b)
+                if not ok_soft:
+                    print(f"  [ATS-GUARD] Soft-skill violation in {role_company} bullet {idx+1}: {err_soft}. Falling back.")
+                    fallback_bullets = DEFAULT_JOBS.get(key) or DEFAULT_JOBS.get(role_company) or []
+                    b = fallback_bullets[idx] if idx < len(fallback_bullets) else (fallback_bullets[-1] if fallback_bullets else b)
+                    
+                ok_ground, err_ground = verify_fact_grounding(key, b, allowed)
+                if not ok_ground:
+                    print(f"  [ATS-GUARD] Fact-grounding violation in {role_company} bullet {idx+1}: {err_ground}. Falling back.")
+                    fallback_bullets = DEFAULT_JOBS.get(key) or DEFAULT_JOBS.get(role_company) or []
+                    b = fallback_bullets[idx] if idx < len(fallback_bullets) else (fallback_bullets[-1] if fallback_bullets else b)
+                    
+                validated_bullets.append(b)
+                
+            jobs.append({
+                "company": role_company,
+                "dates": dates,
+                "title": title,
+                "tech": tech,
+                "bullets": validated_bullets[:limit]
+            })
+    else:
+        # Fallback to programmatic roles_meta if AI format is missing or old dict
+        roles_meta = [
+            {
+                "company": "LTIMindtree",
+                "dates": "Jun 2025 – Present",
+                "title": "Senior Software Engineer  |  Client: Deloitte — Enterprise Tax Platform",
+                "tech": ".NET Core 8  •  ASP.NET Web API  •  Angular  •  Azure OpenAI GPT-4  •  Microservices" if not mid_level_mode else ".NET Core 8  •  ASP.NET Web API  •  Angular  •  SQL Server",
+                "key": "LTIMindtree",
+                "limit": 4
+            },
+            {
+                "company": "DSSI Solutions India Pvt Ltd",
+                "dates": "Nov 2024 – May 2025",
+                "title": "Senior Software Engineer  |  Financial Procurement Platform",
+                "tech": ".NET 7  •  Clean Architecture  •  CQRS  •  YARP Reverse Proxy  •  Docker  •  Azure App Services" if not mid_level_mode else ".NET 7  •  Clean Architecture  •  CQRS  •  SQL Server",
+                "key": "DSSI Solutions India Pvt Ltd",
+                "limit": 3
+            },
+            {
+                "company": "Nexa Office InfoSystems LLP",
+                "dates": "Jul 2024 – Nov 2024",
+                "title": "Senior Software Engineer — Contract / Consultant  |  Enterprise Document Management",
+                "tech": ".NET Core  •  ASP.NET Web API  •  Angular  •  Docker  •  SQL Server  •  OAuth2",
+                "key": "Nexa Office InfoSystems LLP",
+                "limit": 2
+            },
+            {
+                "company": "Kasadara Technology Solutions",
+                "dates": "Jul 2022 – Jun 2024",
+                "title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
+                "tech": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
+                "key": "Kasadara Technology Solutions",
+                "limit": 2
+            }
+        ]
+        
+        # Check dict format mapping company key -> list of bullets
+        bullets_dict = raw_work if isinstance(raw_work, dict) else {}
+        for role in roles_meta:
+            bullets = bullets_dict.get(role["key"]) or bullets_dict.get(role["company"]) or []
+            if not bullets:
+                bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
+                
+            allowed = extract_allowed_facts(role["key"])
+            validated_bullets = []
+            
+            if role["key"] == "Kasadara Technology Solutions" and has_legacy_ask:
+                bullets = [
+                    "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
+                    "Optimised SQL Server architecture via Entity Framework migrations, LINQ tuning, and indexed stored procedures — achieving 30% retrieval speed."
+                ]
+            
+            for idx, b in enumerate(bullets):
+                bullet_lower = b.lower()
+                for key_map, clean_val in CLEAN_BULLETS_MAPPING.items():
+                    if key_map in bullet_lower:
+                        b = clean_val
+                        if has_srs_ask:
+                            if "secured 30+ restful apis" in key_map:
+                                b = "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
+                            elif "connecting 3 third-party services" in key_map:
+                                b = "Developed integration endpoints for 3 third-party services, authoring detailed system and user manuals."
+                        break
+                
+                ok_soft, err_soft = verify_soft_skills(b)
+                if not ok_soft:
+                    fallback_bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
+                    b = fallback_bullets[idx] if idx < len(fallback_bullets) else (fallback_bullets[-1] if fallback_bullets else b)
+                    
+                ok_ground, err_ground = verify_fact_grounding(role["key"], b, allowed)
+                if not ok_ground:
+                    fallback_bullets = DEFAULT_JOBS.get(role["key"]) or DEFAULT_JOBS.get(role["company"]) or []
+                    b = fallback_bullets[idx] if idx < len(fallback_bullets) else (fallback_bullets[-1] if fallback_bullets else b)
+                    
+                validated_bullets.append(b)
+                
+            jobs.append({
+                "company": role["company"],
+                "dates": role["dates"],
+                "title": role["title"],
+                "tech": role["tech"],
+                "bullets": validated_bullets[:role["limit"]]
+            })
 
     # Collect all job bullets for project redundancy check
     all_job_bullets = []
     for j in jobs:
         all_job_bullets.extend(j["bullets"])
 
-    # Map, validate, cap, and filter projects
+    # Map, validate, cap, and filter projects dynamically
     raw_projects = tailored.get("projects", [])
-    if not raw_projects:
-        raw_projects = [
-            {"name": p["name"], "tech": p["tech"], "bullets": p["bullets"]} 
-            for p in DEFAULT_PROJECTS_POOL
-        ]
-        
     projects = []
-    # Cap at 2 projects maximum
-    for idx, p in enumerate(raw_projects[:2]):
-        name = p.get("name") or p.get("title") or ""
-        tech = p.get("tech_stack") or p.get("tech") or ""
-        bullets = p.get("bullets") or p.get("description") or []
-        if isinstance(bullets, str):
-            bullets = [bullets]
+    
+    # Check if the AI returned structured project objects
+    if isinstance(raw_projects, list) and len(raw_projects) > 0 and isinstance(raw_projects[0], dict) and "bullets" in raw_projects[0]:
+        for p in raw_projects[:2]:
+            name = p.get("name") or p.get("title") or ""
+            tech = p.get("tech_stack") or p.get("tech") or ""
+            bullets = p.get("bullets") or p.get("description") or []
+            if isinstance(bullets, str):
+                bullets = [bullets]
+                
+            if not name:
+                continue
+                
+            allowed = extract_allowed_facts(name)
+            validated_proj_bullets = []
             
-        if not name:
-            continue
-
-        if not bullets and name:
-            for dp in DEFAULT_PROJECTS_POOL:
-                if dp["name"].lower()[:15] in name.lower() or name.lower()[:15] in dp["name"].lower():
-                    bullets = dp["bullets"]
-                    if not tech:
-                        tech = dp["tech"]
-                    break
-
-        # Overwrite with technical decisions/tradeoffs to avoid work experience duplication
-        name_lower = name.lower()
-        matched_decisions = None
-        for k, bullets_list in PROJECTS_TECHNICAL_DECISIONS.items():
-            if k in name_lower:
-                matched_decisions = bullets_list
-                break
-        if matched_decisions:
-            bullets = matched_decisions
-            
-        # Validate project bullets
-        allowed = extract_allowed_facts(name)
-        validated_proj_bullets = []
-        # Cap at 2 bullets per project
-        for p_idx, pb in enumerate(bullets[:2]):
-            # Check soft skills
-            ok_soft, err_soft = verify_soft_skills(pb)
-            if not ok_soft:
-                print(f"  [ATS-GUARD] Soft-skill violation in project '{name}' bullet {p_idx+1}: {err_soft}. Falling back.")
-                dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
-                if dp_match and p_idx < len(dp_match["bullets"]):
-                    pb = dp_match["bullets"][p_idx]
-                else:
-                    pb = PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
-            
-            # Check fact grounding
-            ok_ground, err_ground = verify_fact_grounding(name, pb, allowed)
-            if not ok_ground:
-                print(f"  [ATS-GUARD] Fact-grounding violation in project '{name}' bullet {p_idx+1}: {err_ground}. Falling back.")
-                dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
-                if dp_match and p_idx < len(dp_match["bullets"]):
-                    pb = dp_match["bullets"][p_idx]
-                else:
-                    pb = PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
+            for p_idx, pb in enumerate(bullets[:2]):
+                ok_soft, err_soft = verify_soft_skills(pb)
+                if not ok_soft:
+                    print(f"  [ATS-GUARD] Soft-skill violation in project '{name}' bullet {p_idx+1}: {err_soft}. Falling back.")
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
-            # Check redundancy Jaccard similarity filter
-            checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
-            if checked_pb != pb:
-                if checked_pb is None:
-                    print(f"  [ATS-GUARD] Redundancy check failed for project '{name}' bullet {p_idx+1}. Dropping.")
-                    continue
-                else:
-                    print(f"  [ATS-GUARD] Redundancy check failed for project '{name}' bullet {p_idx+1}. Replaced with fallback.")
+                ok_ground, err_ground = verify_fact_grounding(name, pb, allowed)
+                if not ok_ground:
+                    print(f"  [ATS-GUARD] Fact-grounding violation in project '{name}' bullet {p_idx+1}: {err_ground}. Falling back.")
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
+                    
+                checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
+                if checked_pb != pb:
+                    if checked_pb is None:
+                        continue
                     pb = checked_pb
+                validated_proj_bullets.append(pb)
+                
+            projects.append({
+                "name": name,
+                "tech": tech,
+                "bullets": validated_proj_bullets
+            })
+    else:
+        # Fallback to old project generation logic if missing or old format
+        if not raw_projects:
+            raw_projects = [
+                {"name": p["name"], "tech": p["tech"], "bullets": p["bullets"]} 
+                for p in DEFAULT_PROJECTS_POOL
+            ]
+        for idx, p in enumerate(raw_projects[:2]):
+            name = p.get("name") or p.get("title") or ""
+            tech = p.get("tech_stack") or p.get("tech") or ""
+            bullets = p.get("bullets") or p.get("description") or []
+            if isinstance(bullets, str):
+                bullets = [bullets]
+                
+            if not name:
+                continue
+                
+            if not bullets and name:
+                for dp in DEFAULT_PROJECTS_POOL:
+                    if dp["name"].lower()[:15] in name.lower() or name.lower()[:15] in dp["name"].lower():
+                        bullets = dp["bullets"]
+                        if not tech:
+                            tech = dp["tech"]
+                        break
+                        
+            name_lower = name.lower()
+            matched_decisions = None
+            for k, bullets_list in PROJECTS_TECHNICAL_DECISIONS.items():
+                if k in name_lower:
+                    matched_decisions = bullets_list
+                    break
+            if matched_decisions:
+                bullets = matched_decisions
+                
+            allowed = extract_allowed_facts(name)
+            validated_proj_bullets = []
+            for p_idx, pb in enumerate(bullets[:2]):
+                ok_soft, err_soft = verify_soft_skills(pb)
+                if not ok_soft:
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
+                ok_ground, err_ground = verify_fact_grounding(name, pb, allowed)
+                if not ok_ground:
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
-            validated_proj_bullets.append(pb)
-            
-        projects.append({
-            "name": name,
-            "tech": tech,
-            "bullets": validated_proj_bullets
-        })
+                checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
+                if checked_pb != pb:
+                    if checked_pb is None:
+                        continue
+                    pb = checked_pb
+                validated_proj_bullets.append(pb)
+                
+            projects.append({
+                "name": name,
+                "tech": tech,
+                "bullets": validated_proj_bullets
+            })
 
     # Map skills with normalization and keyword preservation check
     skills = tailored.get("skills_by_category", {})
@@ -1455,21 +1796,40 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         print(f"  [ATS-GUARD] Page count after Step 5: {pages}")
 
     # ─── PROGRAMMATIC ATS SCORER & OPTIMIZER ───
+    # These are generic tokens that appear in JD text but are too vague to show as standalone skill labels.
+    # Injecting them creates noise like "Engineering", "Ui", "Application" in the skills section.
+    NOISE_INJECTION_BLOCKLIST = {
+        "engineering", "ui", "application", "css", "html", "web", "software",
+        "development", "design", "quality", "management", "platform", "service",
+        "services", "system", "systems", "technology", "technologies", "solution",
+        "solutions", "based", "driven", "core", "data", "code", "testing",
+        "test", "build", "deployment", "integration", "delivery", "technical",
+        "business", "level", "high", "best", "team", "tools", "standard",
+        "standards", "customer", "support", "client", "project", "performance",
+        "process", "monitoring", "control", "security", "network", "server",
+        "backend", "frontend", "full", "stack", "stack", "cloud", "framework",
+        "frameworks", "architecture", "pattern", "patterns", "library",
+    }
     score, missing = analyze_and_optimize_resume_score(output_file, jd_text)
     if score < 95.0 and missing:
-        print(f"  [ATS-GUARD] Keyword match score {score:.1f}% is below 95%. Injecting {len(missing)} missing keywords and rebuilding.")
-        if "Methodology & Tools" not in config.skills:
-            config.skills["Methodology & Tools"] = []
-        for kw in missing:
-            formatted_kw = kw.upper() if len(kw) <= 3 else kw.capitalize()
-            if formatted_kw not in config.skills["Methodology & Tools"]:
-                config.skills["Methodology & Tools"].append(formatted_kw)
-        build_resume_docx(config)
-        pages = verify_docx_pages(output_file)
-        if pages > 2:
-            print("  [ATS-GUARD] Spacing check: Optimized resume exceeded 2 pages. Tightening spacing.")
-            config.tighten_spacing = True
+        # Filter out noise tokens before injection
+        meaningful_missing = {kw for kw in missing if kw.lower() not in NOISE_INJECTION_BLOCKLIST}
+        if meaningful_missing:
+            print(f"  [ATS-GUARD] Keyword match score {score:.1f}% is below 95%. Injecting {len(meaningful_missing)} meaningful missing keywords and rebuilding.")
+            if "Methodology & Tools" not in config.skills:
+                config.skills["Methodology & Tools"] = []
+            for kw in meaningful_missing:
+                formatted_kw = kw.upper() if len(kw) <= 3 else kw.capitalize()
+                if formatted_kw not in config.skills["Methodology & Tools"]:
+                    config.skills["Methodology & Tools"].append(formatted_kw)
             build_resume_docx(config)
+            pages = verify_docx_pages(output_file)
+            if pages > 2:
+                print("  [ATS-GUARD] Spacing check: Optimized resume exceeded 2 pages. Tightening spacing.")
+                config.tighten_spacing = True
+                build_resume_docx(config)
+        else:
+            print(f"  [ATS-GUARD] Keyword match score {score:.1f}% — all missing tokens are generic noise, skipping injection.")
 
     # Final post-build ATS checks report
     ats_self_check(config, output_file)

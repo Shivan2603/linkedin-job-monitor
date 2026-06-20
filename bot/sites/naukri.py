@@ -227,7 +227,7 @@ def run_naukri_bot():
             # Overridden as requested: ONLY search for ".Net" on Naukri
             naukri_keywords = [".Net"]
             for job_title in naukri_keywords:
-                for location in LOCATIONS[:5]:
+                for location in LOCATIONS:
                     if not check_daily_limit(SITE):
                         logger.info("Naukri daily limit reached", SITE)
                         return
@@ -260,68 +260,118 @@ def _login(page: Page, creds: dict) -> bool:
         return True
 
     try:
-        for email_sel in [
-            'input[placeholder*="Email" i]',
-            'input[type="email"]',
-            '#usernameField',
-            'input[name="username"]',
-        ]:
-            el = page.query_selector(email_sel)
+        # Google SSO Sign in
+        google_btn = None
+        for sel in ["a.socialbtn.google", "a:has-text('Sign in with Google')", "button:has-text('Google')"]:
+            el = page.query_selector(sel)
             if el and el.is_visible():
-                el.click()
-                _delay(0.3, 0.6)
-                human_fill(el, creds["email"], "Email", SITE)
+                google_btn = el
                 break
-
-        _delay(0.5, 1)
-
-        for pass_sel in [
-            'input[type="password"]',
-            '#passwordField',
-            'input[placeholder*="Password" i]',
-        ]:
-            el = page.query_selector(pass_sel)
-            if el and el.is_visible():
-                el.click()
-                _delay(0.3, 0.5)
-                human_fill(el, creds["password"], "Password (hidden)", SITE)
-                break
-
-        _delay(0.5, 1)
-
-        for btn_sel in [
-            'button[type="submit"]',
-            'button.loginButton',
-            'button:has-text("Login")',
-            'button:has-text("Sign in")',
-        ]:
-            el = page.query_selector(btn_sel)
-            if el and el.is_visible():
-                field_log("click", "Login button", "", SITE)
-                el.click()
-                break
-
-        _delay(4, 6)
-
-        # OTP check
-        otp_el = page.query_selector(
-            'input[placeholder*="OTP" i], input[placeholder*="code" i], input[maxlength="6"]'
-        )
-        if otp_el and otp_el.is_visible():
-            logger.info("Naukri OTP required — checking Gmail...", SITE)
+                
+        if google_btn:
+            logger.info("Clicking Naukri 'Sign in with Google' button...", SITE)
+            with page.context.expect_page(timeout=15000) as popup_info:
+                google_btn.click()
+            popup = popup_info.value
             try:
-                from bot.utils.gmail_otp import wait_for_otp
-                otp = wait_for_otp(site="naukri", timeout_seconds=60)
-                if otp:
-                    human_fill(otp_el, otp, "OTP code", SITE)
-                    _delay(0.5, 1)
-                    page.query_selector('button[type="submit"]').click()
-                    _delay(3, 4)
+                popup.wait_for_load_state("domcontentloaded", timeout=15000)
             except Exception:
                 pass
+                
+            _delay(2, 3)
+            # Google account picker selectors
+            picker_selectors = [
+                '[data-email="sivashankar.avi6@gmail.com"]',
+                'div[data-email*="@gmail.com"]',
+                'div:has-text("sivashankar.avi6@gmail.com")',
+                'div:has-text("Siva Shankar")',
+                'div.auth-select-account',
+                '#profileIdentifier',
+            ]
+            
+            clicked = False
+            for sel in picker_selectors:
+                el = popup.query_selector(sel)
+                if el and el.is_visible():
+                    logger.info(f"Selecting Google account using {sel}...", SITE)
+                    el.click()
+                    clicked = True
+                    break
+                    
+            if not clicked:
+                logger.info("No automatic Google account picker found; waiting for SSO auto-resolution...", SITE)
+                
+            _delay(5, 7)
+        else:
+            logger.warn("Naukri Google SSO button not found, trying traditional login...", SITE)
+            for email_sel in [
+                'input[placeholder*="Email" i]',
+                'input[type="email"]',
+                '#usernameField',
+                'input[name="username"]',
+            ]:
+                el = page.query_selector(email_sel)
+                if el and el.is_visible():
+                    el.click()
+                    _delay(0.3, 0.6)
+                    human_fill(el, creds["email"], "Email", SITE)
+                    break
 
-        logger.success("Naukri login successful", SITE)
-        return True
+            _delay(0.5, 1)
+
+            for pass_sel in [
+                'input[type="password"]',
+                '#passwordField',
+                'input[placeholder*="Password" i]',
+            ]:
+                el = page.query_selector(pass_sel)
+                if el and el.is_visible():
+                    el.click()
+                    _delay(0.3, 0.5)
+                    human_fill(el, creds["password"], "Password (hidden)", SITE)
+                    break
+
+            _delay(0.5, 1)
+
+            for btn_sel in [
+                'button[type="submit"]',
+                'button.loginButton',
+                'button:has-text("Login")',
+                'button:has-text("Sign in")',
+            ]:
+                el = page.query_selector(btn_sel)
+                if el and el.is_visible():
+                    field_log("click", "Login button", "", SITE)
+                    el.click()
+                    break
+
+            _delay(4, 6)
+
+            # OTP check
+            otp_el = page.query_selector(
+                'input[placeholder*="OTP" i], input[placeholder*="code" i], input[maxlength="6"]'
+            )
+            if otp_el and otp_el.is_visible():
+                logger.info("Naukri OTP required — checking Gmail...", SITE)
+                try:
+                    from bot.utils.gmail_otp import wait_for_otp
+                    otp = wait_for_otp(site="naukri", timeout_seconds=60)
+                    if otp:
+                        human_fill(otp_el, otp, "OTP code", SITE)
+                        _delay(0.5, 1)
+                        page.query_selector('button[type="submit"]').click()
+                        _delay(3, 4)
+                except Exception:
+                    pass
+
+        # Verify login
+        _delay(3, 4)
+        if any(x in page.url for x in ["mnjuser", "myhome", "/dashboard"]) or page.query_selector(".nI-gNb-header__logo"):
+            logger.success("Naukri login successful ✅", SITE)
+            return True
+        else:
+            logger.error("Naukri login verification failed", SITE)
+            return False
 
     except Exception as e:
         logger.error(f"Naukri login failed: {e}", SITE)
@@ -452,6 +502,12 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             ".styles_jd-header-title__rZwM1",
         ]) or default_title
 
+        # Clean job title (remove location keywords)
+        job_title = re.sub(r'\s+', ' ', job_title).strip()
+        job_title = re.sub(r'\b(Job\s+)?in\s+.*$', '', job_title, flags=re.IGNORECASE).strip()
+        job_title = re.sub(r'\b(Johor|Selangor|Kuala Lumpur|Shah Alam|Subang|Bangalore|Chennai|Remote|Singapore|Malaysia|India).*$', '', job_title, flags=re.IGNORECASE).strip()
+        job_title = re.sub(r'[\s\-,\/\|\(\)]+$', '', job_title).strip()
+
         company = _text([
             ".jd-header-comp-name a",
             ".comp-name-link",
@@ -462,6 +518,9 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
         ]) or "Company"
 
         job_desc = _text([
+            "section[class*='job-desc-container']",
+            "div[class*='dang-inner-html']",
+            "div[class*='job-desc']",
             ".jd-desc",
             ".job-desc",
             "#job-description",
@@ -551,7 +610,7 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             new_page = new_page_info.value
             new_page.wait_for_load_state("networkidle", timeout=15000)
             from bot.ai_agent_filler import fill_form_with_ai
-            success = fill_form_with_ai(new_page, site=SITE)
+            success = fill_form_with_ai(new_page, site=SITE, resume_path=resume_path)
             try:
                 new_page.close()
             except Exception:

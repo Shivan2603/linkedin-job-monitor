@@ -2,7 +2,7 @@
 bot/ai_agent_filler.py — AI-Powered Web Form Filler
 Primary: Groq Llama 3.1 8B (fast) | Fallback: Groq 70B → Gemini → HuggingFace
 """
-import json, os, yaml
+import json, os, yaml, re
 from playwright.sync_api import Page
 from bot.config import GROQ_API_KEY, PROJECT_FOLDER
 from bot.utils import logger
@@ -52,11 +52,52 @@ def extract_form_fields(page: Page) -> list:
     """)
 
 
-def fill_form_with_ai(page: Page, site: str = "ai") -> bool:
+def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> bool:
     """
     Extracts form fields, asks AI for answers (via ai_router), and fills the form.
-    Uses fast Groq model (Llama 3.1 8B) for speed.
+    Uses fast Groq model (Llama 3.1 8B) for speed. Also uploads resume if provided.
     """
+    # 1. Programmatically upload resume if provided
+    if resume_path and os.path.exists(resume_path):
+        try:
+            file_inputs = page.locator('input[type="file"]').all()
+            for file_in in file_inputs:
+                try:
+                    inp_id = file_in.get_attribute("id") or ""
+                    inp_name = file_in.get_attribute("name") or ""
+                    inp_class = file_in.get_attribute("class") or ""
+                    
+                    is_resume_input = file_in.evaluate("""
+                        (el) => {
+                            const id = el.id || '';
+                            const name = el.name || '';
+                            const className = el.className || '';
+                            const aria = el.getAttribute('aria-label') || '';
+                            const placeholder = el.placeholder || '';
+                            const term = (id + ' ' + name + ' ' + className + ' ' + aria + ' ' + placeholder).toLowerCase();
+                            if (term.includes('resume') || term.includes('cv') || term.includes('profile') || term.includes('document') || term.includes('upload')) return true;
+                            
+                            if (el.labels && el.labels.length > 0) {
+                                const lblText = el.labels[0].innerText.toLowerCase();
+                                if (lblText.includes('resume') || lblText.includes('cv') || lblText.includes('profile') || lblText.includes('document')) return true;
+                            }
+                            let parent = el.closest('div, label, section, fieldset');
+                            if (parent) {
+                                const parentText = parent.innerText.toLowerCase();
+                                if (parentText.includes('resume') || parentText.includes('cv') || parentText.includes('profile') || parentText.includes('document')) return true;
+                            }
+                            return false;
+                        }
+                    """)
+                    if is_resume_input:
+                        logger.info(f"AI Filler: Uploading resume {resume_path} to input ID={inp_id}, Name={inp_name}", site)
+                        file_in.set_input_files(resume_path)
+                        logger.success(f"Resume uploaded successfully to {inp_name or inp_id or 'file input'}", site)
+                except Exception as ex:
+                    logger.warn(f"Failed to check/upload to file input: {str(ex)[:80]}", site)
+        except Exception as e:
+            logger.warn(f"Failed to process file inputs: {str(e)[:80]}", site)
+
     fields = extract_form_fields(page)
     if not fields:
         logger.info("No form fields found to fill.", site)
@@ -70,12 +111,12 @@ Return ONLY a valid JSON array, no other text."""
 
     user = f"""User profile:
 ```json
-{json.dumps(profile, indent=2)[:3000]}
+{json.dumps(profile, indent=2)}
 ```
 
 Form fields:
 ```json
-{json.dumps(fields, indent=2)[:2000]}
+{json.dumps(fields, indent=2)}
 ```
 
 Fill each field from the profile. Rules:
@@ -85,17 +126,50 @@ Fill each field from the profile. Rules:
 4. Cover letter: professional 2-3 sentences
 5. Skip CAPTCHA and file upload fields (type=file)
 
-Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
+Return JSON array: [{"id": "ai-form-field-N", "value": "answer"}]"""
 
     try:
         raw = ai_complete(system, user, task="form_fill", max_tokens=1500)
 
+        # Robust JSON cleaning and parsing
+        raw = raw.strip()
         if "```json" in raw:
-            raw = raw.split("```json")[1].split("```")[0].strip()
+            candidate = raw.split("```json")[1].split("```")[0].strip()
         elif "```" in raw:
-            raw = raw.split("```")[1].split("```")[0].strip()
+            candidate = raw.split("```")[1].split("```")[0].strip()
+        else:
+            # Try to find array brackets
+            m = re.search(r'(\[.*?\])', raw, re.DOTALL)
+            candidate = m.group(1).strip() if m else raw
 
-        actions = json.loads(raw)
+        # 1. Escape raw newlines/tabs inside double-quoted string values
+        pattern = re.compile(r'"(?:[^"\\]|\\.)*"')
+        def repl(match):
+            s = match.group(0)
+            return s.replace('\n', '\\n').replace('\r', '\\r').replace('\t', '\\t')
+        candidate = pattern.sub(repl, candidate)
+
+        # 2. Strip any raw control characters that are not properly escaped
+        candidate = re.sub(r'[\x00-\x1F\x7F]', '', candidate)
+
+        # 3. Clean up trailing commas
+        candidate = re.sub(r',\s*([\]}])', r'\1', candidate)
+
+        try:
+            actions = json.loads(candidate)
+        except Exception as e:
+            # Basic fallback attempt to auto-close quotes/brackets
+            try:
+                quotes = candidate.count('"')
+                if quotes % 2 != 0:
+                    candidate += '"'
+                brackets = candidate.count('[') - candidate.count(']')
+                braces = candidate.count('{') - candidate.count('}')
+                candidate += '}' * braces
+                candidate += ']' * brackets
+                actions = json.loads(candidate)
+            except Exception:
+                raise e
         filled = 0
 
         for action in actions:
@@ -128,7 +202,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                                 except Exception:
                                     pass
                 elif input_type == "file":
-                    pass  # Skip file uploads
+                    pass  # Skip file uploads as handled separately
                 elif input_type == "number":
                     num_val = ''.join(c for c in str(val) if c.isdigit() or c == '.')
                     if num_val:

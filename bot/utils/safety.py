@@ -26,6 +26,8 @@ DAILY_LIMITS = {
     "shine":          50,
     "monster":        50,
     "company_careers": 60,
+    "jobstreet":      30,
+    "jooble":         30,
 }
 
 DAILY_COUNT_FILE = os.path.join(DATA_FOLDER, "daily_counts.json")
@@ -205,9 +207,15 @@ def safe_browser_context(playwright, site: str):
     """
     Launch a stealth persistent browser context.
     Using a persistent profile retains Gmail/LinkedIn logins permanently!
-    headless=False + slow_mo=150 → each action is visible field-by-field.
+    headless=False + slow_mo=150 -> each action is visible field-by-field.
     """
-    user_data_dir = os.path.join(DATA_FOLDER, f"chrome_profile_{site}")
+    # Use a shared Chrome profile for all main sites (retaining active Google SSO / LinkedIn sessions globally)
+    if site in ["indeed", "naukri", "monster", "jobstreet", "jooble", "linkedin", "shine"]:
+        profile_name = "chrome_profile_shared"
+    else:
+        profile_name = f"chrome_profile_{site}"
+        
+    user_data_dir = os.path.join(DATA_FOLDER, profile_name)
     os.makedirs(user_data_dir, exist_ok=True)
     
     # Clean up stale lock files from crashed previous sessions (prevents Error Code 32)
@@ -223,6 +231,8 @@ def safe_browser_context(playwright, site: str):
         user_data_dir=user_data_dir,
         headless=False,           # VISIBLE browser window
         slow_mo=150,              # 150ms between every action — watch each field fill
+        channel="chrome",         # Use official Google Chrome to bypass security blocks
+        ignore_default_args=["--enable-automation"],  # Hide automation flags to bypass Cloudflare loops
         args=[
             "--no-sandbox",
             "--disable-blink-features=AutomationControlled",
@@ -231,7 +241,6 @@ def safe_browser_context(playwright, site: str):
             "--start-maximized",
             "--window-position=0,0",
         ],
-        user_agent=random_user_agent(),
         viewport={"width": 1600, "height": 900},  # Fixed viewport for consistent visibility
         locale="en-IN",
         timezone_id="Asia/Kolkata",
@@ -299,3 +308,124 @@ def human_fill(el, value: str, field_name: str = "", site: str = "bot"):
             field_log("fill", field_name or "input", value, site)
         except Exception:
             field_log("error", f"Could not fill: {field_name}", "", site)
+
+
+# ─── GOOGLE SSO LOGIN FLOW ──────────────────────────────────────────────────
+def handle_google_sso(auth_page, email: str, password: str) -> bool:
+    """
+    Handles Google SSO flow on the given Playwright page (could be a popup or redirect page).
+    """
+    logger.info(f"Handling Google SSO on page: {auth_page.url}", "safety")
+    
+    # Wait up to 12 seconds for either the email field, account picker, or email text to be visible
+    start_time = time.time()
+    selector_type = None  # 'email_input' or 'account_picker'
+    target_locator = None
+    
+    while time.time() - start_time < 12:
+        # Check for email inputs first
+        for sel in ['input[name="identifier"]', 'input[type="email"]']:
+            try:
+                loc = auth_page.locator(sel).first
+                if loc.is_visible(timeout=200):
+                    selector_type = 'email_input'
+                    target_locator = loc
+                    break
+            except Exception:
+                pass
+        if selector_type:
+            break
+            
+        # Check for account pickers
+        for sel in [f'[data-email="{email}"]', f'[data-identifier="{email}"]', 'div.auth-select-account', '#profileIdentifier']:
+            try:
+                loc = auth_page.locator(sel).first
+                if loc.is_visible(timeout=200):
+                    selector_type = 'account_picker'
+                    target_locator = loc
+                    break
+            except Exception:
+                pass
+        if selector_type:
+            break
+            
+        # Check for direct email text
+        try:
+            loc = auth_page.locator(f'text={email}').first
+            if loc.is_visible(timeout=200):
+                selector_type = 'account_picker'
+                target_locator = loc
+                break
+        except Exception:
+            pass
+            
+        time.sleep(0.5)
+
+    if not selector_type:
+        logger.warn("Timeout waiting for Google login selectors. Taking diagnostic screenshot.", "safety")
+        try:
+            auth_page.screenshot(path="data/google_sso_error.png")
+            logger.info("Saved Google SSO error screenshot to data/google_sso_error.png", "safety")
+        except Exception as se:
+            logger.error(f"Failed to take Google SSO error screenshot: {se}", "safety")
+        return False
+
+    clicked = False
+    if selector_type == 'account_picker' and target_locator:
+        try:
+            logger.info("Google SSO: Account picker detected. Clicking account...", "safety")
+            target_locator.click()
+            clicked = True
+            time.sleep(3)
+        except Exception as e:
+            logger.error(f"Failed to click Google account picker: {e}", "safety")
+
+    elif selector_type == 'email_input' and target_locator:
+        try:
+            logger.info("Google SSO: Email input field detected. Entering email...", "safety")
+            human_fill(target_locator, email, "Google Email", "safety")
+            time.sleep(1)
+            next_btn = auth_page.locator('#identifierNext, button:has-text("Next"), button:has-text("Next step")').first
+            if next_btn.is_visible(timeout=1000):
+                next_btn.click()
+            else:
+                target_locator.press("Enter")
+            clicked = True
+            time.sleep(3)
+        except Exception as e:
+            logger.error(f"Failed to fill email or click Next: {e}", "safety")
+
+    # Now check if password input is visible (either after email click or picker click)
+    # Wait for password input if it appears
+    try:
+        pass_input = auth_page.locator('input[type="password"]').first
+        if pass_input.is_visible(timeout=4000):
+            logger.info("Google SSO: Entering password...", "safety")
+            human_fill(pass_input, password, "Google Password", "safety")
+            time.sleep(1)
+            next_btn2 = auth_page.locator('#passwordNext, button:has-text("Next"), button:has-text("Next step")').first
+            if next_btn2.is_visible(timeout=1500):
+                next_btn2.click()
+            else:
+                pass_input.press("Enter")
+            time.sleep(3)
+    except Exception:
+        pass
+
+    # Check if there is a confirmation/submit/allow button to consent
+    try:
+        consent_btn = auth_page.locator('button:has-text("Continue"), button:has-text("Confirm"), button:has-text("Allow")').first
+        if consent_btn.is_visible(timeout=3000):
+            logger.info("Google SSO: Clicking consent/continue button...", "safety")
+            consent_btn.click()
+            time.sleep(3)
+    except Exception:
+        pass
+
+    try:
+        auth_page.screenshot(path="data/google_sso_final.png")
+        logger.info("Saved final Google SSO screenshot to data/google_sso_final.png", "safety")
+    except Exception as e:
+        logger.warn(f"Failed to take final Google SSO screenshot: {e}", "safety")
+
+    return True
