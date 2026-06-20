@@ -95,6 +95,38 @@ def _extract_company_from_url(url: str) -> str:
         pass
     return "Unknown Company"
 
+def _ai_parse_job_and_company(page_title: str, url: str) -> tuple:
+    """Uses AI to accurately split the page title or URL into (job_title, company_name) without locations or extensions."""
+    try:
+        from bot.ai_router import ai_complete
+        import json
+        
+        system = (
+            "You are a recruitment scraping assistant. Given a web page title and URL, "
+            "extract the clean Job Title and Company Name.\n"
+            "Rules:\n"
+            "1. Remove experience ranges (e.g. '4-7 years', 'with 4-7 Years of Experience').\n"
+            "2. Remove locations (e.g. 'in Philippines', 'Bangalore', 'Remote').\n"
+            "3. Remove job board names or tags (e.g. 'foundit', 'JobStreet', 'LinkedIn', 'Careers').\n"
+            "4. Return EXACTLY a JSON object: {\"job_title\": \"clean title\", \"company\": \"clean company\"}"
+        )
+        user = f"Page Title: {page_title}\nURL: {url}"
+        raw = ai_complete(system, user, task="form_fill", max_tokens=200)
+        
+        raw = raw.strip()
+        if "```json" in raw:
+            raw = raw.split("```json")[1].split("```")[0].strip()
+        elif "```" in raw:
+            raw = raw.split("```")[1].split("```")[0].strip()
+        else:
+            m = re.search(r'(\{.*?\})', raw, re.DOTALL)
+            raw = m.group(1).strip() if m else raw
+            
+        data = json.loads(raw)
+        return data.get("job_title", "").strip(), data.get("company", "").strip()
+    except Exception:
+        return "", ""
+
 def apply_to_url(page, url: str) -> bool:
     logger.info(f"\n==================================================", SITE)
     logger.info(f"Processing URL: {url}", SITE)
@@ -112,41 +144,43 @@ def apply_to_url(page, url: str) -> bool:
 
         # Get Page Title & Metadata
         page_title = page.title()
-        job_title = ""
-        company = ""
+        
+        # Try AI-powered title extraction first
+        job_title, company = _ai_parse_job_and_company(page_title, url)
 
-        if "jobstreet" in url.lower():
-            # Extract job title using JobStreet selectors
-            for sel in ['[data-automation="job-detail-title"]', 'h1[data-automation="job-title"]', 'h1']:
-                el = page.query_selector(sel)
-                if el:
-                    job_title = el.inner_text().strip()
-                    if job_title:
-                        break
-            # Extract company name using JobStreet selectors
-            for sel in ['[data-automation="advertiser-name"]', 'span[data-automation="company-name"]', '.company-name']:
-                el = page.query_selector(sel)
-                if el:
-                    company = el.inner_text().strip()
-                    if company:
-                        break
-
-        # Fallback to page title parsing
+        # Fallback to page title parsing if AI failed
         if not job_title or not company:
-            if " - " in page_title:
-                parts = page_title.split(" - ")
-                job_title = job_title or parts[0].strip()
-                company = company or (parts[1].strip() if len(parts) > 1 else "")
-            elif " | " in page_title:
-                parts = page_title.split(" | ")
-                job_title = job_title or parts[0].strip()
-                company = company or parts[-1].strip()
-            else:
-                job_title = job_title or "Software Engineer"
-                company = company or _extract_company_from_url(url)
-                
-            if not company:
-                company = _extract_company_from_url(url)
+            if "jobstreet" in url.lower():
+                # Extract job title using JobStreet selectors
+                for sel in ['[data-automation="job-detail-title"]', 'h1[data-automation="job-title"]', 'h1']:
+                    el = page.query_selector(sel)
+                    if el:
+                        job_title = el.inner_text().strip()
+                        if job_title:
+                            break
+                # Extract company name using JobStreet selectors
+                for sel in ['[data-automation="advertiser-name"]', 'span[data-automation="company-name"]', '.company-name']:
+                    el = page.query_selector(sel)
+                    if el:
+                        company = el.inner_text().strip()
+                        if company:
+                            break
+
+            if not job_title or not company:
+                if " - " in page_title:
+                    parts = page_title.split(" - ")
+                    job_title = job_title or parts[0].strip()
+                    company = company or (parts[1].strip() if len(parts) > 1 else "")
+                elif " | " in page_title:
+                    parts = page_title.split(" | ")
+                    job_title = job_title or parts[0].strip()
+                    company = company or parts[-1].strip()
+                else:
+                    job_title = job_title or "Software Engineer"
+                    company = company or _extract_company_from_url(url)
+                    
+                if not company:
+                    company = _extract_company_from_url(url)
 
         # Clean job title (remove location keywords)
         job_title = re.sub(r'\s+', ' ', job_title).strip()

@@ -415,6 +415,38 @@ def is_block_page(page) -> bool:
         pass
     return False
 
+def _ai_parse_job_and_company(page_title: str, url: str) -> tuple:
+    """Uses AI to accurately split the page title or URL into (job_title, company_name) without locations or extensions."""
+    try:
+        from bot.ai_router import ai_complete
+        import json
+        
+        system = (
+            "You are a recruitment scraping assistant. Given a web page title and URL, "
+            "extract the clean Job Title and Company Name.\n"
+            "Rules:\n"
+            "1. Remove experience ranges (e.g. '4-7 years', 'with 4-7 Years of Experience').\n"
+            "2. Remove locations (e.g. 'in Philippines', 'Bangalore', 'Remote').\n"
+            "3. Remove job board names or tags (e.g. 'foundit', 'JobStreet', 'LinkedIn', 'Careers').\n"
+            "4. Return EXACTLY a JSON object: {\"job_title\": \"clean title\", \"company\": \"clean company\"}"
+        )
+        user = f"Page Title: {page_title}\nURL: {url}"
+        raw = ai_complete(system, user, task="form_fill", max_tokens=200)
+        
+        raw = raw.strip()
+        if "```json" in raw:
+            raw = raw.split("```json")[1].split("```")[0].strip()
+        elif "```" in raw:
+            raw = raw.split("```")[1].split("```")[0].strip()
+        else:
+            m = re.search(r'(\{.*?\})', raw, re.DOTALL)
+            raw = m.group(1).strip() if m else raw
+            
+        data = json.loads(raw)
+        return data.get("job_title", "").strip(), data.get("company", "").strip()
+    except Exception:
+        return "", ""
+
 def _apply_to_career_page(page, url: str) -> bool:
     """Navigate to a career page URL and attempt to apply using AI form filler"""
     logger.info(f"Processing: {url[:80]}…", SITE)
@@ -430,17 +462,26 @@ def _apply_to_career_page(page, url: str) -> bool:
 
         # Extract company & job title from page
         page_title = page.title()
-        if " - " in page_title:
-            parts = page_title.split(" - ")
-            job_t = parts[0].strip()
-            company = parts[1].strip() if len(parts) > 1 else "Unknown Company"
-        elif " | " in page_title:
-            parts = page_title.split(" | ")
-            job_t = parts[0].strip()
-            company = parts[-1].strip()
-        else:
-            job_t = "Software Engineer"
-            company = _extract_company_from_url(url)
+        
+        # Try AI-powered title extraction first
+        job_t, company = _ai_parse_job_and_company(page_title, url)
+
+        # Fallback if AI fails
+        if not job_t or not company:
+            if " - " in page_title:
+                parts = page_title.split(" - ")
+                job_t = job_t or parts[0].strip()
+                company = company or (parts[1].strip() if len(parts) > 1 else "Unknown Company")
+            elif " | " in page_title:
+                parts = page_title.split(" | ")
+                job_t = job_t or parts[0].strip()
+                company = company or parts[-1].strip()
+            else:
+                job_t = job_t or "Software Engineer"
+                company = company or _extract_company_from_url(url)
+                
+            if not company:
+                company = _extract_company_from_url(url)
 
         # Skip if already applied
         if is_already_applied(SITE, company, job_t):
