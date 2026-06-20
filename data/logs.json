@@ -1,5 +1,1545 @@
 [
   {
+    "id": "eaaacb5c",
+    "ts": "2026-06-20T16:04:53.543548",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Singapore'"
+  },
+  {
+    "id": "0962282b",
+    "ts": "2026-06-20T16:04:53.462433",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "17aa0868",
+    "ts": "2026-06-20T16:04:53.384543",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Malaysia'"
+  },
+  {
+    "id": "dacd8a86",
+    "ts": "2026-06-20T16:04:53.245152",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "39686806",
+    "ts": "2026-06-20T16:04:53.152216",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Australia'"
+  },
+  {
+    "id": "e3a7b036",
+    "ts": "2026-06-20T16:04:53.106503",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "00453ed2",
+    "ts": "2026-06-20T16:04:53.006833",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'UK'"
+  },
+  {
+    "id": "25279fea",
+    "ts": "2026-06-20T16:04:52.912592",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "b456c8d3",
+    "ts": "2026-06-20T16:04:52.810928",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "330fbc94",
+    "ts": "2026-06-20T16:04:52.718839",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "12203ed2",
+    "ts": "2026-06-20T16:04:52.624891",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Chennai'"
+  },
+  {
+    "id": "892a33c6",
+    "ts": "2026-06-20T16:04:52.569783",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "e15fd0ce",
+    "ts": "2026-06-20T16:04:52.454774",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Bangalore'"
+  },
+  {
+    "id": "fd8f02dd",
+    "ts": "2026-06-20T16:04:52.382064",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "70af1a72",
+    "ts": "2026-06-20T16:04:52.307792",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Remote'"
+  },
+  {
+    "id": "b0dc955a",
+    "ts": "2026-06-20T16:04:52.237270",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "77431ee7",
+    "ts": "2026-06-20T16:04:52.162899",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "2c92bbff",
+    "ts": "2026-06-20T16:04:52.094536",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "57d1d6f2",
+    "ts": "2026-06-20T16:04:51.996550",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "ee6729e4",
+    "ts": "2026-06-20T16:04:51.905911",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "3377b632",
+    "ts": "2026-06-20T16:04:51.813793",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Australia'"
+  },
+  {
+    "id": "a590520c",
+    "ts": "2026-06-20T16:04:51.724406",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "7166527b",
+    "ts": "2026-06-20T16:04:51.620999",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'UK'"
+  },
+  {
+    "id": "547cc681",
+    "ts": "2026-06-20T16:04:51.521525",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "890066a8",
+    "ts": "2026-06-20T16:04:51.421483",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "55f8ae2c",
+    "ts": "2026-06-20T16:04:51.334733",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "eafb9e49",
+    "ts": "2026-06-20T16:04:51.224905",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "e2760f47",
+    "ts": "2026-06-20T16:04:51.116827",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "46a3f498",
+    "ts": "2026-06-20T16:04:50.999957",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "e16e92f9",
+    "ts": "2026-06-20T16:04:50.897333",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d1de7b1c",
+    "ts": "2026-06-20T16:04:50.789354",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Remote'"
+  },
+  {
+    "id": "c8b362db",
+    "ts": "2026-06-20T16:04:50.692392",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "e3fe3670",
+    "ts": "2026-06-20T16:04:50.589854",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "7548733a",
+    "ts": "2026-06-20T16:04:50.485009",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9b5cdac8",
+    "ts": "2026-06-20T16:04:50.359645",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "41445435",
+    "ts": "2026-06-20T16:04:50.262099",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "176ebd85",
+    "ts": "2026-06-20T16:04:50.154642",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Australia'"
+  },
+  {
+    "id": "d7d55d5b",
+    "ts": "2026-06-20T16:04:50.038588",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "b0029489",
+    "ts": "2026-06-20T16:04:49.914003",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'UK'"
+  },
+  {
+    "id": "f17753ab",
+    "ts": "2026-06-20T16:04:49.796998",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4a050a9c",
+    "ts": "2026-06-20T16:04:49.674784",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "c486e667",
+    "ts": "2026-06-20T16:04:49.584541",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ed1e6cc6",
+    "ts": "2026-06-20T16:04:49.464581",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "b037a961",
+    "ts": "2026-06-20T16:04:49.376816",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
+  },
+  {
+    "id": "0838edc3",
+    "ts": "2026-06-20T16:04:49.269394",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has been closed"
+  },
+  {
+    "id": "be3759db",
+    "ts": "2026-06-20T16:04:49.160876",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5eb19af4",
+    "ts": "2026-06-20T16:04:45.420175",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "bc12d21c",
+    "ts": "2026-06-20T16:04:41.884645",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "181bd389",
+    "ts": "2026-06-20T16:03:17.553266",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7bb6454a",
+    "ts": "2026-06-20T16:03:14.643853",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d2a61ecf",
+    "ts": "2026-06-20T16:03:10.707503",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3039b8bd",
+    "ts": "2026-06-20T16:03:07.913482",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "401b381d",
+    "ts": "2026-06-20T16:03:01.914995",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0c04568b",
+    "ts": "2026-06-20T16:02:58.435505",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7e09f2d7",
+    "ts": "2026-06-20T16:01:33.001841",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6b13ee50",
+    "ts": "2026-06-20T16:01:29.523928",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 12 jobs on page 1"
+  },
+  {
+    "id": "20587c85",
+    "ts": "2026-06-20T16:01:21.366693",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "395c002d",
+    "ts": "2026-06-20T16:01:21.299035",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "f9e8875e",
+    "ts": "2026-06-20T16:01:21.203888",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "53543fbc",
+    "ts": "2026-06-20T16:01:14.901618",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0e6042d8",
+    "ts": "2026-06-20T16:01:12.079950",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "80466003",
+    "ts": "2026-06-20T16:01:08.650443",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "c49da86e",
+    "ts": "2026-06-20T16:00:58.579058",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "c21f16a6",
+    "ts": "2026-06-20T16:00:58.455609",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "221cbb71",
+    "ts": "2026-06-20T16:00:58.196709",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "b7483600",
+    "ts": "2026-06-20T16:00:53.546158",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Discovered 5 job URLs from Google search"
+  },
+  {
+    "id": "cc0be86e",
+    "ts": "2026-06-20T16:00:53.509720",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "0a0a0342",
+    "ts": "2026-06-20T16:00:53.415048",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "6211aa5f",
+    "ts": "2026-06-20T16:00:53.331235",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "39555f71",
+    "ts": "2026-06-20T16:00:53.288039",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "f3546d43",
+    "ts": "2026-06-20T16:00:53.190713",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "c7f24bdb",
+    "ts": "2026-06-20T16:00:53.090443",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "4142f9a6",
+    "ts": "2026-06-20T16:00:52.981784",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Google discovery failed for query: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "5d13aca2",
+    "ts": "2026-06-20T16:00:52.479413",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "ea95234b",
+    "ts": "2026-06-20T16:00:51.564681",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "c52b3611",
+    "ts": "2026-06-20T16:00:51.531030",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "cd844fc9",
+    "ts": "2026-06-20T16:00:51.492404",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "a7765ddb",
+    "ts": "2026-06-20T16:00:51.458675",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "30edf785",
+    "ts": "2026-06-20T16:00:51.426525",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "6e94b5d8",
+    "ts": "2026-06-20T16:00:51.391729",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:51"
+  },
+  {
+    "id": "3e86f8bc",
+    "ts": "2026-06-20T16:00:51.354409",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "fa9dc2d3",
+    "ts": "2026-06-20T16:00:51.318559",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "c46995c2",
+    "ts": "2026-06-20T16:00:51.283651",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "ec698d20",
+    "ts": "2026-06-20T16:00:51.242638",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "3245dd4d",
+    "ts": "2026-06-20T16:00:47.986497",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Google query found 18 job links: site:jobs.ashbyhq.com OR site:apply.workable.com \"Azure Engi"
+  },
+  {
+    "id": "bc17991e",
+    "ts": "2026-06-20T16:00:43.346777",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "727b29cd",
+    "ts": "2026-06-20T16:00:43.311293",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "82589413",
+    "ts": "2026-06-20T16:00:43.273314",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "f15a2f0b",
+    "ts": "2026-06-20T16:00:43.234726",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "fd50816b",
+    "ts": "2026-06-20T16:00:43.201745",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "d9bf6b3d",
+    "ts": "2026-06-20T16:00:43.162083",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:43"
+  },
+  {
+    "id": "7cb5dbe0",
+    "ts": "2026-06-20T16:00:43.121151",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "c4f17cdc",
+    "ts": "2026-06-20T16:00:43.084273",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "c33a0528",
+    "ts": "2026-06-20T16:00:43.037256",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "ea061216",
+    "ts": "2026-06-20T16:00:42.974642",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "e3c193e1",
+    "ts": "2026-06-20T16:00:41.768521",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "b4275d6e",
+    "ts": "2026-06-20T16:00:41.726380",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Naukri login failed: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "29c793b2",
+    "ts": "2026-06-20T16:00:38.784442",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "ef13d16b",
+    "ts": "2026-06-20T16:00:38.037016",
+    "level": "ERROR",
+    "site": "shine",
+    "message": "Shine bot crash: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "8be581fd",
+    "ts": "2026-06-20T16:00:37.679159",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "59d8d18e",
+    "ts": "2026-06-20T16:00:37.641760",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "a45f6760",
+    "ts": "2026-06-20T16:00:37.604868",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "d8c30712",
+    "ts": "2026-06-20T16:00:37.572051",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "6a786aab",
+    "ts": "2026-06-20T16:00:37.534706",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "708bb642",
+    "ts": "2026-06-20T16:00:37.494838",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:37"
+  },
+  {
+    "id": "d5cd3fc1",
+    "ts": "2026-06-20T16:00:37.464560",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "8970a80c",
+    "ts": "2026-06-20T16:00:37.430464",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "2747eeca",
+    "ts": "2026-06-20T16:00:37.397685",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "3136c549",
+    "ts": "2026-06-20T16:00:37.334832",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "c5d5ae24",
+    "ts": "2026-06-20T16:00:34.321907",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.seek.com.au..."
+  },
+  {
+    "id": "89adf097",
+    "ts": "2026-06-20T16:00:34.214567",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'UK' — skipping location"
+  },
+  {
+    "id": "b388b8de",
+    "ts": "2026-06-20T16:00:34.132284",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Hyderabad' — skipping location"
+  },
+  {
+    "id": "cdbf3dba",
+    "ts": "2026-06-20T16:00:34.041757",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Chennai' — skipping location"
+  },
+  {
+    "id": "fcfa5098",
+    "ts": "2026-06-20T16:00:33.954403",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Bangalore' — skipping location"
+  },
+  {
+    "id": "9bd2fb62",
+    "ts": "2026-06-20T16:00:33.867633",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "Failed to load JobStreet search results: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "095fc339",
+    "ts": "2026-06-20T16:00:33.767673",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Searching JobStreet: 'Senior .NET Developer' in 'Remote' on https://www.jobstreet.com.sg"
+  },
+  {
+    "id": "e3589cca",
+    "ts": "2026-06-20T16:00:33.636533",
+    "level": "SUCCESS",
+    "site": "jobstreet",
+    "message": "JobStreet already logged in via active session"
+  },
+  {
+    "id": "29795765",
+    "ts": "2026-06-20T16:00:33.163534",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "38f84e10",
+    "ts": "2026-06-20T16:00:32.164895",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "672bdfff",
+    "ts": "2026-06-20T16:00:32.128016",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "0fc310f3",
+    "ts": "2026-06-20T16:00:32.098401",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "857e52bd",
+    "ts": "2026-06-20T16:00:32.054460",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "7e6f8d51",
+    "ts": "2026-06-20T16:00:32.029873",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "4eb2966c",
+    "ts": "2026-06-20T16:00:31.994366",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:31"
+  },
+  {
+    "id": "ffb4bf4c",
+    "ts": "2026-06-20T16:00:31.956089",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "b7e6340a",
+    "ts": "2026-06-20T16:00:31.924704",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "7eb9843d",
+    "ts": "2026-06-20T16:00:31.884554",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "fdf60a02",
+    "ts": "2026-06-20T16:00:31.846665",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "4a3445c8",
+    "ts": "2026-06-20T16:00:29.625367",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.jobstreet.com.sg/oauth/login?returnUrl=%2F\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "874547b5",
+    "ts": "2026-06-20T16:00:28.296721",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
+  },
+  {
+    "id": "91884637",
+    "ts": "2026-06-20T16:00:27.264564",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "🚀 Starting JobStreet/SEEK bot"
+  },
+  {
+    "id": "c3f19347",
+    "ts": "2026-06-20T16:00:27.225725",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting JobStreet ---"
+  },
+  {
+    "id": "eaa86421",
+    "ts": "2026-06-20T16:00:27.184329",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "40babd4e",
+    "ts": "2026-06-20T16:00:27.154335",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "3eedd8c1",
+    "ts": "2026-06-20T16:00:27.122031",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "08f81331",
+    "ts": "2026-06-20T16:00:27.086069",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:27"
+  },
+  {
+    "id": "2d58114a",
+    "ts": "2026-06-20T16:00:27.051215",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "a2a87ce3",
+    "ts": "2026-06-20T16:00:27.016852",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "cb818ec4",
+    "ts": "2026-06-20T16:00:26.980588",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "9c751073",
+    "ts": "2026-06-20T16:00:26.940690",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "a1954979",
+    "ts": "2026-06-20T16:00:24.451787",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Naukri bot session ended"
+  },
+  {
+    "id": "b5d8b2a9",
+    "ts": "2026-06-20T16:00:24.384481",
+    "level": "ERROR",
+    "site": "naukri",
+    "message": "Naukri login failed: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "ad52165f",
+    "ts": "2026-06-20T16:00:23.334466",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "874eca35",
+    "ts": "2026-06-20T16:00:22.092819",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "d22da135",
+    "ts": "2026-06-20T16:00:22.038256",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "3c64e335",
+    "ts": "2026-06-20T16:00:21.998665",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "3d909bb9",
+    "ts": "2026-06-20T16:00:21.955693",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "c78c6b90",
+    "ts": "2026-06-20T16:00:21.914355",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "179a77bd",
+    "ts": "2026-06-20T16:00:21.869785",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:21"
+  },
+  {
+    "id": "7fdf7f5f",
+    "ts": "2026-06-20T16:00:21.829604",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "3c5f38b6",
+    "ts": "2026-06-20T16:00:21.784624",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "3b9df78e",
+    "ts": "2026-06-20T16:00:21.747544",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "a41faa8d",
+    "ts": "2026-06-20T16:00:21.714438",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "d35e5262",
+    "ts": "2026-06-20T16:00:18.936708",
+    "level": "ERROR",
+    "site": "shine",
+    "message": "Shine bot crash: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "7fbe71a7",
+    "ts": "2026-06-20T16:00:17.674238",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "e205a7e1",
+    "ts": "2026-06-20T16:00:17.634560",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "fa261886",
+    "ts": "2026-06-20T16:00:17.596617",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "ad311e69",
+    "ts": "2026-06-20T16:00:17.555484",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "a524e82a",
+    "ts": "2026-06-20T16:00:17.524431",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "89421283",
+    "ts": "2026-06-20T16:00:17.489100",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:17"
+  },
+  {
+    "id": "9da483ba",
+    "ts": "2026-06-20T16:00:17.440267",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "55c9e59f",
+    "ts": "2026-06-20T16:00:17.401845",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "4c26c6f2",
+    "ts": "2026-06-20T16:00:17.354684",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "848f9770",
+    "ts": "2026-06-20T16:00:17.320704",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "e3b6e596",
+    "ts": "2026-06-20T16:00:14.979967",
+    "level": "WARN",
+    "site": "shine",
+    "message": "Failed to navigate to Shine login: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.shine.com/login/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "964dda77",
+    "ts": "2026-06-20T16:00:13.826552",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "ee1b012d",
+    "ts": "2026-06-20T16:00:13.634681",
+    "level": "ERROR",
+    "site": "shine",
+    "message": "Shine bot crash: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "9ad81bb1",
+    "ts": "2026-06-20T16:00:12.831164",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "8aa7decc",
+    "ts": "2026-06-20T16:00:12.799905",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "d54a5ae5",
+    "ts": "2026-06-20T16:00:12.759893",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "2b108c45",
+    "ts": "2026-06-20T16:00:12.714606",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5bede2e4",
+    "ts": "2026-06-20T16:00:12.679808",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "4289154e",
+    "ts": "2026-06-20T16:00:12.629585",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:12"
+  },
+  {
+    "id": "ae051dbb",
+    "ts": "2026-06-20T16:00:12.586529",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "483fe49b",
+    "ts": "2026-06-20T16:00:12.554582",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "f079a02e",
+    "ts": "2026-06-20T16:00:12.514861",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "f9db2998",
+    "ts": "2026-06-20T16:00:12.423022",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "8ff49d15",
+    "ts": "2026-06-20T16:00:10.094314",
+    "level": "WARN",
+    "site": "shine",
+    "message": "Failed to navigate to Shine login: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.shine.com/login/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "e91ec5e3",
+    "ts": "2026-06-20T16:00:08.788242",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "e8f1aca8",
+    "ts": "2026-06-20T16:00:07.764649",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "53fa03d8",
+    "ts": "2026-06-20T16:00:07.730408",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "1a0da336",
+    "ts": "2026-06-20T16:00:07.695534",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "27341329",
+    "ts": "2026-06-20T16:00:07.654666",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5b6dc49f",
+    "ts": "2026-06-20T16:00:07.615465",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "8491a50b",
+    "ts": "2026-06-20T16:00:07.584497",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:07"
+  },
+  {
+    "id": "cb95c000",
+    "ts": "2026-06-20T16:00:07.554379",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "24021165",
+    "ts": "2026-06-20T16:00:07.519986",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "0d9429e9",
+    "ts": "2026-06-20T16:00:07.483680",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "e6fd6bb7",
+    "ts": "2026-06-20T16:00:07.380107",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "1f41c005",
+    "ts": "2026-06-20T16:00:04.262388",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "d2035e6a",
+    "ts": "2026-06-20T16:00:04.189335",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.seek.com.au..."
+  },
+  {
+    "id": "28336194",
+    "ts": "2026-06-20T16:00:04.134345",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'UK' — skipping location"
+  },
+  {
+    "id": "04706a11",
+    "ts": "2026-06-20T16:00:04.064282",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Hyderabad' — skipping location"
+  },
+  {
+    "id": "261e40a9",
+    "ts": "2026-06-20T16:00:04.010498",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Chennai' — skipping location"
+  },
+  {
+    "id": "cb045b83",
+    "ts": "2026-06-20T16:00:03.952170",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "JobStreet/SEEK does not operate in 'Bangalore' — skipping location"
+  },
+  {
+    "id": "9aeb22c3",
+    "ts": "2026-06-20T16:00:03.852536",
+    "level": "WARN",
+    "site": "jobstreet",
+    "message": "Failed to load JobStreet search results: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "7da4e9b4",
+    "ts": "2026-06-20T16:00:03.764507",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "67f79dfc",
+    "ts": "2026-06-20T16:00:03.732828",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Searching JobStreet: 'Senior .NET Developer' in 'Remote' on https://www.jobstreet.com.sg"
+  },
+  {
+    "id": "ff04b908",
+    "ts": "2026-06-20T16:00:03.634464",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed Multi-Country ---"
+  },
+  {
+    "id": "c09ec946",
+    "ts": "2026-06-20T16:00:03.615417",
+    "level": "SUCCESS",
+    "site": "jobstreet",
+    "message": "JobStreet already logged in via active session"
+  },
+  {
+    "id": "5e6f22b1",
+    "ts": "2026-06-20T16:00:03.604643",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "ec827c2b",
+    "ts": "2026-06-20T16:00:03.574404",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "85214609",
+    "ts": "2026-06-20T16:00:03.544559",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "c5c07670",
+    "ts": "2026-06-20T16:00:03.514816",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 16:00:03"
+  },
+  {
+    "id": "53fc8330",
+    "ts": "2026-06-20T16:00:03.474664",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "10d01d08",
+    "ts": "2026-06-20T16:00:03.446162",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "72a83922",
+    "ts": "2026-06-20T16:00:03.414460",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "a490abbe",
+    "ts": "2026-06-20T16:00:03.376510",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "1b2dc2da",
+    "ts": "2026-06-20T15:59:58.939407",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
+  },
+  {
+    "id": "cde20793",
+    "ts": "2026-06-20T15:59:57.704297",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "🚀 Starting JobStreet/SEEK bot"
+  },
+  {
+    "id": "4726ec61",
+    "ts": "2026-06-20T15:59:57.674704",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting JobStreet ---"
+  },
+  {
+    "id": "9071057d",
+    "ts": "2026-06-20T15:59:57.624207",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 11, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "fe4a926d",
+    "ts": "2026-06-20T15:59:57.582021",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "46bb42fc",
+    "ts": "2026-06-20T15:59:57.540607",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "0f78a61a",
+    "ts": "2026-06-20T15:59:57.500628",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:59:57"
+  },
+  {
+    "id": "8e62d9d7",
+    "ts": "2026-06-20T15:59:57.464510",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "4f98f373",
+    "ts": "2026-06-20T15:59:57.424667",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "3170ac39",
+    "ts": "2026-06-20T15:59:57.388341",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "3ab82519",
+    "ts": "2026-06-20T15:59:57.344530",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "4acf7dfc",
+    "ts": "2026-06-20T15:57:20.134770",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Remote'"
+  },
+  {
     "id": "df63fead",
     "ts": "2026-06-20T15:57:20.016391",
     "level": "WARN",
@@ -1958,1545 +3498,5 @@
     "level": "INFO",
     "site": "monster",
     "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "b5105a9e",
-    "ts": "2026-06-20T15:25:49.661394",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Found 6 job cards on Foundit page"
-  },
-  {
-    "id": "5e75cea3",
-    "ts": "2026-06-20T15:25:43.742630",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
-  },
-  {
-    "id": "e36c9476",
-    "ts": "2026-06-20T15:25:38.566442",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Remote' on https://www.foundit.in"
-  },
-  {
-    "id": "92936cc7",
-    "ts": "2026-06-20T15:25:38.435241",
-    "level": "SUCCESS",
-    "site": "monster",
-    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
-  },
-  {
-    "id": "fba89bcf",
-    "ts": "2026-06-20T15:25:32.990107",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.in..."
-  },
-  {
-    "id": "bf20ce8f",
-    "ts": "2026-06-20T15:25:22.081499",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Foundit (formerly Monster) bot"
-  },
-  {
-    "id": "f0e1dc7b",
-    "ts": "2026-06-20T15:25:22.034649",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Foundit ---"
-  },
-  {
-    "id": "3c5ee084",
-    "ts": "2026-06-20T15:25:21.988313",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "ddb10c82",
-    "ts": "2026-06-20T15:25:21.935639",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "11ae97be",
-    "ts": "2026-06-20T15:25:21.884810",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "4ec2fd4a",
-    "ts": "2026-06-20T15:25:21.846459",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 15:25:21"
-  },
-  {
-    "id": "6920944f",
-    "ts": "2026-06-20T15:25:21.794945",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "efc455c7",
-    "ts": "2026-06-20T15:25:21.744280",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "e86e81bf",
-    "ts": "2026-06-20T15:25:21.706106",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "5a10d01d",
-    "ts": "2026-06-20T15:25:21.659121",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "9874ed68",
-    "ts": "2026-06-20T15:01:53.637345",
-    "level": "INFO",
-    "site": "test",
-    "message": "Shine Final URL: https://www.shine.com/myshine/registration/details/parser/"
-  },
-  {
-    "id": "db5a3aee",
-    "ts": "2026-06-20T15:01:53.603467",
-    "level": "INFO",
-    "site": "test",
-    "message": "Shine Login Test Success: True"
-  },
-  {
-    "id": "dcd5fbf6",
-    "ts": "2026-06-20T15:01:53.441729",
-    "level": "SUCCESS",
-    "site": "shine",
-    "message": "Shine already logged in via cookies"
-  },
-  {
-    "id": "013fc8ed",
-    "ts": "2026-06-20T15:01:48.148571",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "8c1394d2",
-    "ts": "2026-06-20T15:01:47.129259",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Shine Login ---"
-  },
-  {
-    "id": "5f7fe81f",
-    "ts": "2026-06-20T15:01:46.779825",
-    "level": "INFO",
-    "site": "test",
-    "message": "JobStreet Final URL: https://sg.jobstreet.com/"
-  },
-  {
-    "id": "c4e82a41",
-    "ts": "2026-06-20T15:01:46.720686",
-    "level": "INFO",
-    "site": "test",
-    "message": "JobStreet Login Test Success: True"
-  },
-  {
-    "id": "aa78ed1d",
-    "ts": "2026-06-20T15:01:45.872422",
-    "level": "SUCCESS",
-    "site": "jobstreet",
-    "message": "JobStreet already logged in via active session"
-  },
-  {
-    "id": "cc9eb51b",
-    "ts": "2026-06-20T15:01:41.210032",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "1b3287c9",
-    "ts": "2026-06-20T15:01:40.507160",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing JobStreet Login ---"
-  },
-  {
-    "id": "683cace9",
-    "ts": "2026-06-20T15:01:40.164713",
-    "level": "INFO",
-    "site": "test",
-    "message": "Foundit Final URL: https://www.foundit.in/home/user"
-  },
-  {
-    "id": "f3cc26ec",
-    "ts": "2026-06-20T15:01:40.130720",
-    "level": "INFO",
-    "site": "test",
-    "message": "Foundit Login Test Success: True"
-  },
-  {
-    "id": "4e1ca55c",
-    "ts": "2026-06-20T15:01:39.237113",
-    "level": "SUCCESS",
-    "site": "monster",
-    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
-  },
-  {
-    "id": "88ff8203",
-    "ts": "2026-06-20T15:01:34.336092",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.in..."
-  },
-  {
-    "id": "5d5ee02f",
-    "ts": "2026-06-20T15:01:33.610781",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Foundit Login ---"
-  },
-  {
-    "id": "beecb2d5",
-    "ts": "2026-06-20T15:01:33.282534",
-    "level": "INFO",
-    "site": "test",
-    "message": "Indeed Final URL: https://in.indeed.com/"
-  },
-  {
-    "id": "f5265c68",
-    "ts": "2026-06-20T15:01:33.243901",
-    "level": "INFO",
-    "site": "test",
-    "message": "Indeed Login Test Success: True"
-  },
-  {
-    "id": "76d05867",
-    "ts": "2026-06-20T15:01:33.078027",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://in.indeed.com ✅"
-  },
-  {
-    "id": "8d568a2e",
-    "ts": "2026-06-20T15:01:32.996527",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Timed out waiting for Cloudflare challenge resolution."
-  },
-  {
-    "id": "0dbbefd3",
-    "ts": "2026-06-20T14:58:32.939987",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "23a507c5",
-    "ts": "2026-06-20T14:58:30.275378",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://in.indeed.com..."
-  },
-  {
-    "id": "3c345a1a",
-    "ts": "2026-06-20T14:58:28.810895",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Indeed Login ---"
-  },
-  {
-    "id": "a5c1aef0",
-    "ts": "2026-06-20T14:07:09.096123",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "11166f54",
-    "ts": "2026-06-20T14:07:04.886232",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 4 jobs on page 1"
-  },
-  {
-    "id": "78f1a250",
-    "ts": "2026-06-20T14:06:53.283085",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "8ccc1d44",
-    "ts": "2026-06-20T14:06:53.185058",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "4b58ecc3",
-    "ts": "2026-06-20T14:06:52.949596",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "a5a61edb",
-    "ts": "2026-06-20T14:06:47.162643",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "75c0dc58",
-    "ts": "2026-06-20T14:06:47.071767",
-    "level": "ERROR",
-    "site": "jooble",
-    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5b8d9417",
-    "ts": "2026-06-20T14:06:46.514170",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "c76e872c",
-    "ts": "2026-06-20T14:06:46.481817",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "755d1f46",
-    "ts": "2026-06-20T14:06:46.450319",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "abd6f2a9",
-    "ts": "2026-06-20T14:06:46.421869",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "e8a6eb2e",
-    "ts": "2026-06-20T14:06:46.387939",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "3c291878",
-    "ts": "2026-06-20T14:06:46.360304",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 14:06:46"
-  },
-  {
-    "id": "5e9fc1ca",
-    "ts": "2026-06-20T14:06:46.330468",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "96ffa4ae",
-    "ts": "2026-06-20T14:06:46.298260",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "b578a15b",
-    "ts": "2026-06-20T14:06:46.266078",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "5da29c5a",
-    "ts": "2026-06-20T14:06:46.236376",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "c0d7b6df",
-    "ts": "2026-06-20T14:06:42.658455",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "b981979c",
-    "ts": "2026-06-20T14:06:41.814227",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "🚀 Starting Jooble bot"
-  },
-  {
-    "id": "79ec294a",
-    "ts": "2026-06-20T14:06:41.776050",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Jooble ---"
-  },
-  {
-    "id": "563f3ff9",
-    "ts": "2026-06-20T14:06:41.746065",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "d9b30f53",
-    "ts": "2026-06-20T14:06:41.709598",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "7cec035d",
-    "ts": "2026-06-20T14:06:41.677821",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "151a97cc",
-    "ts": "2026-06-20T14:06:41.648136",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 14:06:41"
-  },
-  {
-    "id": "b9bb055a",
-    "ts": "2026-06-20T14:06:41.616300",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "6b9bce22",
-    "ts": "2026-06-20T14:06:41.585949",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "71df8a9b",
-    "ts": "2026-06-20T14:06:41.551458",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "8b9d6c6e",
-    "ts": "2026-06-20T14:06:41.519203",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "4e32d262",
-    "ts": "2026-06-20T14:06:25.356297",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed bot session ended"
-  },
-  {
-    "id": "32a8fe7a",
-    "ts": "2026-06-20T14:06:25.236202",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed bot crash: Page.query_selector_all: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b35f4cc5",
-    "ts": "2026-06-20T14:06:10.990481",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "8346a682",
-    "ts": "2026-06-20T14:06:07.644785",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: 'Senior .NET Developer' in 'Remote' on https://in.indeed.com"
-  },
-  {
-    "id": "b96f2d81",
-    "ts": "2026-06-20T14:06:07.574954",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://in.indeed.com ✅"
-  },
-  {
-    "id": "eba8d6a0",
-    "ts": "2026-06-20T14:06:04.305001",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Cloudflare challenge resolved! Resuming bot..."
-  },
-  {
-    "id": "b0d04b1c",
-    "ts": "2026-06-20T14:05:55.596413",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "1a91ea8f",
-    "ts": "2026-06-20T14:05:52.693828",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://in.indeed.com..."
-  },
-  {
-    "id": "28259ebf",
-    "ts": "2026-06-20T14:05:51.376376",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "63afdd65",
-    "ts": "2026-06-20T14:05:51.338058",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Indeed Multi-Country ---"
-  },
-  {
-    "id": "33a8a786",
-    "ts": "2026-06-20T14:05:51.310039",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "6a889308",
-    "ts": "2026-06-20T14:05:51.268216",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "be6f7c02",
-    "ts": "2026-06-20T14:05:51.232768",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "d4d5c4fb",
-    "ts": "2026-06-20T14:05:51.197386",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 14:05:51"
-  },
-  {
-    "id": "dd06320e",
-    "ts": "2026-06-20T14:05:51.163795",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "69001020",
-    "ts": "2026-06-20T14:05:51.127914",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "8187ab3d",
-    "ts": "2026-06-20T14:05:51.094890",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "74b44800",
-    "ts": "2026-06-20T14:05:51.026259",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "1f78b097",
-    "ts": "2026-06-20T13:39:16.104504",
-    "level": "INFO",
-    "site": "test",
-    "message": "Shine Final URL: https://www.shine.com/myshine/registration/details/parser/"
-  },
-  {
-    "id": "35f1d077",
-    "ts": "2026-06-20T13:39:16.070666",
-    "level": "INFO",
-    "site": "test",
-    "message": "Shine Login Test Success: True"
-  },
-  {
-    "id": "f83d0bff",
-    "ts": "2026-06-20T13:39:15.873798",
-    "level": "SUCCESS",
-    "site": "shine",
-    "message": "Shine login successful ✅"
-  },
-  {
-    "id": "e1d67b28",
-    "ts": "2026-06-20T13:39:06.852775",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Shine Login: Attempting direct email/password login..."
-  },
-  {
-    "id": "68891cbb",
-    "ts": "2026-06-20T13:39:01.576499",
-    "level": "INFO",
-    "site": "shine",
-    "message": "Logging into Shine..."
-  },
-  {
-    "id": "c7b92757",
-    "ts": "2026-06-20T13:38:59.752899",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Shine Login ---"
-  },
-  {
-    "id": "eb8218c8",
-    "ts": "2026-06-20T13:38:59.192302",
-    "level": "INFO",
-    "site": "test",
-    "message": "JobStreet Final URL: https://sg.jobstreet.com/"
-  },
-  {
-    "id": "a6a3d15b",
-    "ts": "2026-06-20T13:38:59.093923",
-    "level": "INFO",
-    "site": "test",
-    "message": "JobStreet Login Test Success: True"
-  },
-  {
-    "id": "31ab0258",
-    "ts": "2026-06-20T13:38:57.909345",
-    "level": "SUCCESS",
-    "site": "jobstreet",
-    "message": "JobStreet already logged in via active session"
-  },
-  {
-    "id": "d6f5a6ff",
-    "ts": "2026-06-20T13:38:52.295338",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "3232e9c8",
-    "ts": "2026-06-20T13:38:51.037791",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing JobStreet Login ---"
-  },
-  {
-    "id": "0e7ab18b",
-    "ts": "2026-06-20T13:38:50.558410",
-    "level": "INFO",
-    "site": "test",
-    "message": "Foundit Final URL: https://www.foundit.in/home/user"
-  },
-  {
-    "id": "c8840b3a",
-    "ts": "2026-06-20T13:38:50.483254",
-    "level": "INFO",
-    "site": "test",
-    "message": "Foundit Login Test Success: True"
-  },
-  {
-    "id": "1bb48a79",
-    "ts": "2026-06-20T13:38:49.184376",
-    "level": "SUCCESS",
-    "site": "monster",
-    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
-  },
-  {
-    "id": "c2c4bae7",
-    "ts": "2026-06-20T13:38:43.408170",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.in..."
-  },
-  {
-    "id": "091be4c8",
-    "ts": "2026-06-20T13:38:42.731493",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Foundit Login ---"
-  },
-  {
-    "id": "595a5ef8",
-    "ts": "2026-06-20T13:38:42.509133",
-    "level": "ERROR",
-    "site": "test",
-    "message": "Indeed Login Test Exception: cannot import name '_login_portal' from 'bot.sites.indeed' (E:\\SivaShankar\\jobbot\\bot\\sites\\indeed.py)"
-  },
-  {
-    "id": "56fc4c40",
-    "ts": "2026-06-20T13:38:41.258135",
-    "level": "INFO",
-    "site": "test",
-    "message": "--- Testing Indeed Login ---"
-  },
-  {
-    "id": "86fa3518",
-    "ts": "2026-06-20T13:33:38.864510",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e872cfa7",
-    "ts": "2026-06-20T13:33:35.439552",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3bc03282",
-    "ts": "2026-06-20T13:33:31.764434",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e4a27141",
-    "ts": "2026-06-20T13:33:28.544136",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "64cd6a97",
-    "ts": "2026-06-20T13:33:24.954256",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3413f67a",
-    "ts": "2026-06-20T13:33:17.657431",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "56dc5001",
-    "ts": "2026-06-20T13:33:07.145653",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "0ef9c49e",
-    "ts": "2026-06-20T13:33:07.106772",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "56e39486",
-    "ts": "2026-06-20T13:33:07.053229",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "5d64c7dc",
-    "ts": "2026-06-20T13:33:06.833658",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "6bb455ea",
-    "ts": "2026-06-20T13:33:06.614987",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "a43ddb7f",
-    "ts": "2026-06-20T13:33:06.396504",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "f0c0ad60",
-    "ts": "2026-06-20T13:33:06.161149",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "76e4272a",
-    "ts": "2026-06-20T13:33:05.944200",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "972ed2ae",
-    "ts": "2026-06-20T13:33:05.719657",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "de2101e9",
-    "ts": "2026-06-20T13:33:05.487897",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "a0379d70",
-    "ts": "2026-06-20T13:33:05.211514",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "c3953f1a",
-    "ts": "2026-06-20T13:33:04.949206",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "ff134103",
-    "ts": "2026-06-20T13:33:04.669872",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "118c28ee",
-    "ts": "2026-06-20T13:33:04.452099",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "bb1ea00a",
-    "ts": "2026-06-20T13:33:04.237566",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "4ef53fc5",
-    "ts": "2026-06-20T13:33:04.001764",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "ee910670",
-    "ts": "2026-06-20T13:33:03.734566",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "170fea1a",
-    "ts": "2026-06-20T13:33:03.422840",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "6ab0ada2",
-    "ts": "2026-06-20T13:32:00.508058",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a884218a",
-    "ts": "2026-06-20T13:30:16.337656",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f54c0192",
-    "ts": "2026-06-20T13:30:12.663635",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c0aecc7a",
-    "ts": "2026-06-20T13:30:08.620058",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b2016175",
-    "ts": "2026-06-20T13:30:04.058244",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3ccd6fec",
-    "ts": "2026-06-20T13:29:59.719816",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 21 jobs on page 2"
-  },
-  {
-    "id": "7a75edbd",
-    "ts": "2026-06-20T13:29:55.749361",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1075a66f",
-    "ts": "2026-06-20T13:29:52.971643",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "49c49087",
-    "ts": "2026-06-20T13:29:50.408668",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7b1d4b5b",
-    "ts": "2026-06-20T13:29:46.748843",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "24b9a18f",
-    "ts": "2026-06-20T13:29:43.950922",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d93bc257",
-    "ts": "2026-06-20T13:29:40.703452",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1c14c642",
-    "ts": "2026-06-20T13:29:37.557082",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0573156b",
-    "ts": "2026-06-20T13:29:30.874372",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1cbbdd82",
-    "ts": "2026-06-20T13:29:28.038548",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dbd4b442",
-    "ts": "2026-06-20T13:29:24.474251",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "635bba82",
-    "ts": "2026-06-20T13:29:21.523646",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d040dab2",
-    "ts": "2026-06-20T13:29:17.790866",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a5d34701",
-    "ts": "2026-06-20T13:29:10.940829",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0c281f57",
-    "ts": "2026-06-20T13:29:08.057204",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d38804aa",
-    "ts": "2026-06-20T13:29:04.545753",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1aee6731",
-    "ts": "2026-06-20T13:29:01.820594",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "301a8da5",
-    "ts": "2026-06-20T13:28:58.951191",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d27b9b16",
-    "ts": "2026-06-20T13:28:56.149974",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7c6ce869",
-    "ts": "2026-06-20T13:28:51.582357",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "279de2d4",
-    "ts": "2026-06-20T13:27:18.158217",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e56fa078",
-    "ts": "2026-06-20T13:27:14.462207",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "399ddd96",
-    "ts": "2026-06-20T13:27:10.609662",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ae8bf0a1",
-    "ts": "2026-06-20T13:26:52.667376",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: NKRS HealthCare | Dotnet Developer | India | 100% match"
-  },
-  {
-    "id": "17eb6eb4",
-    "ts": "2026-06-20T13:26:52.545957",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: NKRS HealthCare — Dotnet Developer"
-  },
-  {
-    "id": "d65e2997",
-    "ts": "2026-06-20T13:26:48.973789",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "071d0f3a",
-    "ts": "2026-06-20T13:26:48.908288",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx' = 'Deselect resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx'"
-  },
-  {
-    "id": "138d8143",
-    "ts": "2026-06-20T13:26:48.851885",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'India'"
-  },
-  {
-    "id": "c23a00a7",
-    "ts": "2026-06-20T13:24:48.923697",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4a7e5c0b",
-    "ts": "2026-06-20T13:24:45.898538",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "2096c452",
-    "ts": "2026-06-20T13:24:34.741195",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "a2c67fe9",
-    "ts": "2026-06-20T13:24:34.648362",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "8dd9cc4b",
-    "ts": "2026-06-20T13:24:34.430392",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "1a6a1382",
-    "ts": "2026-06-20T13:24:28.295038",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "aa4dcfb5",
-    "ts": "2026-06-20T13:24:27.233587",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "a7b48eb3",
-    "ts": "2026-06-20T13:24:27.181028",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "c466cd64",
-    "ts": "2026-06-20T13:24:27.130993",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "06cc382d",
-    "ts": "2026-06-20T13:24:27.079419",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "8f68f8a2",
-    "ts": "2026-06-20T13:24:27.029820",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "c318b274",
-    "ts": "2026-06-20T13:24:26.980127",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 13:24:26"
-  },
-  {
-    "id": "3424fbc9",
-    "ts": "2026-06-20T13:24:26.931960",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "be7558f7",
-    "ts": "2026-06-20T13:24:26.883483",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "ebd773a3",
-    "ts": "2026-06-20T13:24:26.723410",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "b5430f08",
-    "ts": "2026-06-20T13:24:26.683563",
-    "level": "ERROR",
-    "site": "jooble",
-    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
-  },
-  {
-    "id": "390b9923",
-    "ts": "2026-06-20T13:24:26.673390",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "f7adcd7e",
-    "ts": "2026-06-20T13:24:22.985758",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "33bf59f6",
-    "ts": "2026-06-20T13:24:22.246717",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "🚀 Starting Jooble bot"
-  },
-  {
-    "id": "d7954547",
-    "ts": "2026-06-20T13:24:22.214927",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Jooble ---"
-  },
-  {
-    "id": "7bf77ee9",
-    "ts": "2026-06-20T13:24:22.183439",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "83984b09",
-    "ts": "2026-06-20T13:24:22.153417",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "c97fb7f2",
-    "ts": "2026-06-20T13:24:22.119643",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "3ed2ebe9",
-    "ts": "2026-06-20T13:24:22.089654",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 13:24:22"
-  },
-  {
-    "id": "64fdc602",
-    "ts": "2026-06-20T13:24:22.060902",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "003dbfea",
-    "ts": "2026-06-20T13:24:22.026442",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "7ff422a6",
-    "ts": "2026-06-20T13:24:21.998260",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "919ed095",
-    "ts": "2026-06-20T13:24:21.965851",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "47ed1c68",
-    "ts": "2026-06-20T13:24:19.893737",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Naukri bot session ended"
-  },
-  {
-    "id": "26b09898",
-    "ts": "2026-06-20T13:24:19.774031",
-    "level": "ERROR",
-    "site": "naukri",
-    "message": "Naukri login failed: Page.query_selector: Target page, context or browser has been closed"
-  },
-  {
-    "id": "115beeeb",
-    "ts": "2026-06-20T13:24:17.313822",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to navigate to Foundit login page: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "76b96efe",
-    "ts": "2026-06-20T13:24:17.203524",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.my..."
-  },
-  {
-    "id": "1311a7aa",
-    "ts": "2026-06-20T13:24:17.113389",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'Australia' — skipping location"
-  },
-  {
-    "id": "aa285eba",
-    "ts": "2026-06-20T13:24:17.023374",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'UK' — skipping location"
-  },
-  {
-    "id": "777a7450",
-    "ts": "2026-06-20T13:24:16.960302",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "889ac4ac",
-    "ts": "2026-06-20T13:24:16.860618",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Hyderabad' on https://www.foundit.in"
-  },
-  {
-    "id": "296e2306",
-    "ts": "2026-06-20T13:24:16.750662",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d8cf1c66",
-    "ts": "2026-06-20T13:24:16.648274",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Chennai' on https://www.foundit.in"
-  },
-  {
-    "id": "dd2771e9",
-    "ts": "2026-06-20T13:24:16.573774",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "75a80760",
-    "ts": "2026-06-20T13:24:16.476375",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Bangalore' on https://www.foundit.in"
-  },
-  {
-    "id": "44b1eba9",
-    "ts": "2026-06-20T13:24:16.386372",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "19b3342f",
-    "ts": "2026-06-20T13:24:16.207341",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Remote' on https://www.foundit.in"
-  },
-  {
-    "id": "133f3640",
-    "ts": "2026-06-20T13:24:16.193488",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Logging into Naukri..."
-  },
-  {
-    "id": "dae2e6e3",
-    "ts": "2026-06-20T13:24:16.109730",
-    "level": "SUCCESS",
-    "site": "monster",
-    "message": "Foundit already logged in on https://www.foundit.in (URL: about:blank)"
-  },
-  {
-    "id": "169247cb",
-    "ts": "2026-06-20T13:24:15.316001",
-    "level": "INFO",
-    "site": "naukri",
-    "message": "Starting Naukri.com bot"
-  },
-  {
-    "id": "c68088c8",
-    "ts": "2026-06-20T13:24:15.273566",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Naukri ---"
-  },
-  {
-    "id": "06f28d23",
-    "ts": "2026-06-20T13:24:15.233647",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "e05f2468",
-    "ts": "2026-06-20T13:24:15.203582",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "fb7a2923",
-    "ts": "2026-06-20T13:24:15.166617",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "8c7a4f75",
-    "ts": "2026-06-20T13:24:15.128082",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 13:24:15"
-  },
-  {
-    "id": "1ecf301e",
-    "ts": "2026-06-20T13:24:15.093576",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a4406d08",
-    "ts": "2026-06-20T13:24:15.058622",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "1ffc383a",
-    "ts": "2026-06-20T13:24:15.023658",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "ad8b477f",
-    "ts": "2026-06-20T13:24:14.989807",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "2c44b2c1",
-    "ts": "2026-06-20T13:24:12.689490",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to navigate to Foundit login page: Page.goto: net::ERR_ABORTED at https://www.foundit.in/rio/login/seeker?return_url=/user\nCall log:\nnavigating to \"https://www.foundit.in/rio/login/seeker?return_url=/user\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "51891784",
-    "ts": "2026-06-20T13:24:11.369473",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.in..."
-  },
-  {
-    "id": "36678951",
-    "ts": "2026-06-20T13:24:10.905670",
-    "level": "ERROR",
-    "site": "jooble",
-    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f7af6734",
-    "ts": "2026-06-20T13:24:10.428773",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Foundit (formerly Monster) bot"
-  },
-  {
-    "id": "7bfaf2cd",
-    "ts": "2026-06-20T13:24:10.384933",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Foundit ---"
-  },
-  {
-    "id": "74ae4e2b",
-    "ts": "2026-06-20T13:24:10.353671",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "51407b27",
-    "ts": "2026-06-20T13:24:10.313918",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "3ad608c2",
-    "ts": "2026-06-20T13:24:10.278880",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
   }
 ]

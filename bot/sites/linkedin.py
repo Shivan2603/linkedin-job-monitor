@@ -83,8 +83,20 @@ def run_linkedin_bot():
                 return
             save_cookies(context, SITE)
 
+            # Prioritize abroad/global locations first, then Indian locations
+            india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
+            abroad_locations = []
+            india_locations = []
+            for loc in LOCATIONS:
+                if any(k in loc.lower() for k in india_keywords):
+                    india_locations.append(loc)
+                else:
+                    abroad_locations.append(loc)
+            sorted_locations = abroad_locations + india_locations
+            logger.info(f"Prioritized location order: {sorted_locations}", SITE)
+
             for job_title in JOB_TITLES:
-                for location in LOCATIONS:
+                for location in sorted_locations:
                     if not check_daily_limit(SITE):
                         logger.info("LinkedIn daily limit (25) reached — stopping", SITE)
                         return
@@ -318,16 +330,7 @@ def _apply_to_job(page: Page, job_el) -> bool:
             field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
             return False
 
-        # ── RELEVANCE FILTER ────────────────────────────────────────────────
-        tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
-        resume_path   = tailor_result["resume_path"]
-        match_score   = tailor_result["match_score"]
-
-        if match_score < MIN_MATCH:
-            field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}% threshold", SITE)
-            return False
-
-        # Check Easy Apply button
+        # Check Easy Apply button FIRST before tailoring the resume
         easy_btn = None
         for btn_locator in [
             page.get_by_role("button", name="Easy Apply"),
@@ -344,6 +347,15 @@ def _apply_to_job(page: Page, job_el) -> bool:
 
         if not easy_btn:
             field_log("skip", f"{company} — {job_title}", "No Easy Apply button found", SITE)
+            return False
+
+        # ── RELEVANCE FILTER ────────────────────────────────────────────────
+        tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
+        resume_path   = tailor_result["resume_path"]
+        match_score   = tailor_result["match_score"]
+
+        if match_score < MIN_MATCH:
+            field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}% threshold", SITE)
             return False
 
         print(f"\n  {'─'*55}")
