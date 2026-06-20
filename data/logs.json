@@ -1,5 +1,537 @@
 [
   {
+    "id": "4b254691",
+    "ts": "2026-06-20T21:26:31.687037",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Corasps | Software Engineer | Remote/Various | 100% match"
+  },
+  {
+    "id": "d653bbee",
+    "ts": "2026-06-20T21:26:06.055353",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking final submit button..."
+  },
+  {
+    "id": "7706fb64",
+    "ts": "2026-06-20T21:26:05.879852",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Step 1: Filled 8/12 fields via AI."
+  },
+  {
+    "id": "1d2e2df5",
+    "ts": "2026-06-20T21:26:05.049797",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking option 'No'"
+  },
+  {
+    "id": "73dec510",
+    "ts": "2026-06-20T21:26:00.884652",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Interacting with custom combobox 'ai-form-field-11' for value 'No'"
+  },
+  {
+    "id": "381f5090",
+    "ts": "2026-06-20T21:25:59.907448",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking option 'Yes'"
+  },
+  {
+    "id": "9850b5de",
+    "ts": "2026-06-20T21:25:55.892108",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Interacting with custom combobox 'ai-form-field-9' for value 'Yes'"
+  },
+  {
+    "id": "55899a50",
+    "ts": "2026-06-20T21:25:54.975171",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking option 'No'"
+  },
+  {
+    "id": "2716ce5b",
+    "ts": "2026-06-20T21:25:50.442788",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Interacting with custom combobox 'ai-form-field-7' for value 'No'"
+  },
+  {
+    "id": "5e99ddf4",
+    "ts": "2026-06-20T21:25:49.110078",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking option 'British Indian Ocean Territory +246'"
+  },
+  {
+    "id": "620f109f",
+    "ts": "2026-06-20T21:25:41.595278",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Interacting with custom combobox 'ai-form-field-3' for value 'India'"
+  },
+  {
+    "id": "c5058060",
+    "ts": "2026-06-20T21:25:40.331909",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (form_fill)"
+  },
+  {
+    "id": "0e987257",
+    "ts": "2026-06-20T21:25:40.265935",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "06cb8a87",
+    "ts": "2026-06-20T21:25:29.655961",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "3b431c6d",
+    "ts": "2026-06-20T21:25:28.188285",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "b29e85d6",
+    "ts": "2026-06-20T21:25:28.005642",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "82dfd84e",
+    "ts": "2026-06-20T21:25:27.950756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "5e5979b3",
+    "ts": "2026-06-20T21:25:27.607178",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "9489f33e",
+    "ts": "2026-06-20T21:25:27.088446",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "af3e3bf0",
+    "ts": "2026-06-20T21:25:26.368282",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "50191f9a",
+    "ts": "2026-06-20T21:25:25.686115",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "bfe9d83a",
+    "ts": "2026-06-20T21:25:13.336290",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Resume uploaded successfully to resume"
+  },
+  {
+    "id": "a8fb03a0",
+    "ts": "2026-06-20T21:25:13.061829",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\20-06-2026\\Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Corasps_Resume.docx to input ID=resume, Name="
+  },
+  {
+    "id": "f9038ae9",
+    "ts": "2026-06-20T21:23:52.568556",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "05c69c40",
+    "ts": "2026-06-20T21:23:52.482040",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "a70f26ff",
+    "ts": "2026-06-20T21:23:52.007159",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "fd6ce5aa",
+    "ts": "2026-06-20T21:23:51.955390",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "81acf1a5",
+    "ts": "2026-06-20T21:23:51.657063",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "f1f3989c",
+    "ts": "2026-06-20T21:23:51.333957",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "41656d9e",
+    "ts": "2026-06-20T21:23:51.024532",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "f07d3297",
+    "ts": "2026-06-20T21:23:50.732736",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "30d837e1",
+    "ts": "2026-06-20T21:23:30.028704",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/corasps/jobs/5131342007#:~:text=You%20will%20hav…"
+  },
+  {
+    "id": "00143872",
+    "ts": "2026-06-20T21:23:29.942266",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Timeout loading https://jobs.lever.co/aerostrat/0ac68edb-2163-4080-9871-e92b…"
+  },
+  {
+    "id": "0d42a9a1",
+    "ts": "2026-06-20T21:22:55.410255",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Clicking final submit button..."
+  },
+  {
+    "id": "8fa947ee",
+    "ts": "2026-06-20T21:22:55.252753",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Step 2: Filled 13/13 fields via AI."
+  },
+  {
+    "id": "e8bf2b24",
+    "ts": "2026-06-20T21:22:49.557016",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (form_fill)"
+  },
+  {
+    "id": "d9ff8c5b",
+    "ts": "2026-06-20T21:22:49.433529",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gemma-4-31b-it:free)"
+  },
+  {
+    "id": "9c0f715f",
+    "ts": "2026-06-20T21:22:34.710183",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "0081b73c",
+    "ts": "2026-06-20T21:22:33.539740",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "8fc72cf4",
+    "ts": "2026-06-20T21:22:33.302784",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1a72bf5f",
+    "ts": "2026-06-20T21:22:33.180619",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c8d90101",
+    "ts": "2026-06-20T21:22:32.610092",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "347827fe",
+    "ts": "2026-06-20T21:22:32.182255",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "198ea9eb",
+    "ts": "2026-06-20T21:22:31.768763",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d4a4fbcb",
+    "ts": "2026-06-20T21:22:31.306165",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "41824bf9",
+    "ts": "2026-06-20T21:22:18.971124",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Resume uploaded successfully to resume"
+  },
+  {
+    "id": "ead1f503",
+    "ts": "2026-06-20T21:22:18.691622",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\20-06-2026\\Siva_Shankar_Senior_Software_Engineer_Full_Stack_Aerostrat_Resume.docx to input ID=resume-upload-input, Name=resume"
+  },
+  {
+    "id": "2f8111e9",
+    "ts": "2026-06-20T21:22:12.655673",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Job description page detected. Clicking 'Apply' to enter application form..."
+  },
+  {
+    "id": "b2ca9868",
+    "ts": "2026-06-20T21:20:50.727836",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2f45040b",
+    "ts": "2026-06-20T21:20:50.647555",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "c832bda1",
+    "ts": "2026-06-20T21:20:50.127687",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1b45ec17",
+    "ts": "2026-06-20T21:20:50.054341",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "08ba2da2",
+    "ts": "2026-06-20T21:20:49.728717",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "9e34ef57",
+    "ts": "2026-06-20T21:20:49.449819",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "80845a96",
+    "ts": "2026-06-20T21:20:49.012353",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "fea53acd",
+    "ts": "2026-06-20T21:20:48.621152",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "e0319f33",
+    "ts": "2026-06-20T21:20:26.489997",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/aerostrat/0ac68edb-2163-4080-9871-e92b091a7689#:~:text=5%2…"
+  },
+  {
+    "id": "15968192",
+    "ts": "2026-06-20T21:20:26.380468",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Perch Energy — Senior Data Engineer (Job description does not mention .NET or C# keywords)"
+  },
+  {
+    "id": "57bb6e66",
+    "ts": "2026-06-20T21:20:26.244621",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "7cb06303",
+    "ts": "2026-06-20T21:20:25.777802",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1a053b1d",
+    "ts": "2026-06-20T21:20:25.679793",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "ff6c95f0",
+    "ts": "2026-06-20T21:20:25.345712",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "c2622eca",
+    "ts": "2026-06-20T21:20:25.030099",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8ecbb5ca",
+    "ts": "2026-06-20T21:20:24.669834",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ea6c4550",
+    "ts": "2026-06-20T21:20:24.349673",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "e5a615f6",
+    "ts": "2026-06-20T21:20:02.336013",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://job-boards.greenhouse.io/perchenergycareers/jobs/8373943002…"
+  },
+  {
+    "id": "e66ba508",
+    "ts": "2026-06-20T21:20:02.290360",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Senior Full — Sprinto (Job description does not mention .NET or C# keywords)"
+  },
+  {
+    "id": "87bdb318",
+    "ts": "2026-06-20T21:20:02.200744",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "2289c60c",
+    "ts": "2026-06-20T21:20:01.685835",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "3f440c13",
+    "ts": "2026-06-20T21:20:01.595687",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "f4f5c9c0",
+    "ts": "2026-06-20T21:20:01.200373",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "852b095b",
+    "ts": "2026-06-20T21:20:00.883470",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "eefd6c56",
+    "ts": "2026-06-20T21:20:00.500171",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "510a4a22",
+    "ts": "2026-06-20T21:20:00.022079",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "5733ec7f",
+    "ts": "2026-06-20T21:19:39.640737",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://jobs.lever.co/Sprinto/cc9fc7a2-b2c7-4181-a9cf-4e00d64927d5…"
+  },
+  {
+    "id": "bcc94fd4",
+    "ts": "2026-06-20T21:19:29.313355",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Salary Finance | Senior Software Engineer via Greenhouse"
+  },
+  {
     "id": "f5875bdf",
     "ts": "2026-06-20T21:19:25.548540",
     "level": "SUCCESS",
@@ -2966,537 +3498,5 @@
     "level": "INFO",
     "site": "system",
     "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "b7aba31c",
-    "ts": "2026-06-20T21:04:09.663022",
-    "level": "ERROR",
-    "site": "jooble",
-    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3c36e51d",
-    "ts": "2026-06-20T21:04:05.210970",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "099219e1",
-    "ts": "2026-06-20T21:04:04.265536",
-    "level": "INFO",
-    "site": "jooble",
-    "message": "🚀 Starting Jooble bot"
-  },
-  {
-    "id": "4266c72d",
-    "ts": "2026-06-20T21:04:04.221658",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Jooble ---"
-  },
-  {
-    "id": "672cdc03",
-    "ts": "2026-06-20T21:04:04.177083",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "3f7a15a5",
-    "ts": "2026-06-20T21:04:04.131996",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "22c4ab87",
-    "ts": "2026-06-20T21:04:04.087582",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "babb0d5f",
-    "ts": "2026-06-20T21:04:04.039340",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 21:04:04"
-  },
-  {
-    "id": "c40da52d",
-    "ts": "2026-06-20T21:04:03.995474",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "77537b47",
-    "ts": "2026-06-20T21:04:03.949662",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "bbaa53fb",
-    "ts": "2026-06-20T21:04:03.903516",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "f178e5d8",
-    "ts": "2026-06-20T21:04:03.855251",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "1f0944f0",
-    "ts": "2026-06-20T21:04:02.581595",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0620577f",
-    "ts": "2026-06-20T21:04:02.465667",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.seek.com.au..."
-  },
-  {
-    "id": "69d03f0c",
-    "ts": "2026-06-20T21:04:02.367092",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'UK' — skipping location"
-  },
-  {
-    "id": "9531ce2b",
-    "ts": "2026-06-20T21:04:02.263035",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Hyderabad' — skipping location"
-  },
-  {
-    "id": "e321dc2d",
-    "ts": "2026-06-20T21:04:02.159174",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Chennai' — skipping location"
-  },
-  {
-    "id": "b8de20ed",
-    "ts": "2026-06-20T21:04:02.035662",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Bangalore' — skipping location"
-  },
-  {
-    "id": "f120fe9b",
-    "ts": "2026-06-20T21:04:01.938192",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to load JobStreet search results: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4664674c",
-    "ts": "2026-06-20T21:04:01.819090",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Searching JobStreet: 'Senior .NET Developer' in 'Remote' on https://www.jobstreet.com.sg"
-  },
-  {
-    "id": "9c7bde00",
-    "ts": "2026-06-20T21:04:01.701116",
-    "level": "SUCCESS",
-    "site": "jobstreet",
-    "message": "JobStreet already logged in via active session"
-  },
-  {
-    "id": "f448ebdb",
-    "ts": "2026-06-20T21:04:00.743311",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "8c7bb2f0",
-    "ts": "2026-06-20T21:04:00.695321",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Indeed Multi-Country ---"
-  },
-  {
-    "id": "5c16ac43",
-    "ts": "2026-06-20T21:04:00.645366",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "3c9aeeb5",
-    "ts": "2026-06-20T21:04:00.608929",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "0c4e64b2",
-    "ts": "2026-06-20T21:04:00.561463",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "ecf7c506",
-    "ts": "2026-06-20T21:04:00.515217",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 21:04:00"
-  },
-  {
-    "id": "298d031c",
-    "ts": "2026-06-20T21:04:00.475516",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "c8489708",
-    "ts": "2026-06-20T21:04:00.431068",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "98476474",
-    "ts": "2026-06-20T21:04:00.385649",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "7bdd9425",
-    "ts": "2026-06-20T21:04:00.340728",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "aa5b5457",
-    "ts": "2026-06-20T21:03:58.169747",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed\nCall log:\nnavigating to \"https://www.jobstreet.com.sg/oauth/login?returnUrl=%2F\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "4ebd7f1e",
-    "ts": "2026-06-20T21:03:57.844497",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to navigate to Foundit login page: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "773b9dea",
-    "ts": "2026-06-20T21:03:57.690367",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.my..."
-  },
-  {
-    "id": "e57b6243",
-    "ts": "2026-06-20T21:03:57.597733",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'Australia' — skipping location"
-  },
-  {
-    "id": "f4103d73",
-    "ts": "2026-06-20T21:03:57.503801",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Foundit does not operate in 'UK' — skipping location"
-  },
-  {
-    "id": "aff4f9d7",
-    "ts": "2026-06-20T21:03:57.390427",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "2674b47a",
-    "ts": "2026-06-20T21:03:57.288963",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Hyderabad' on https://www.foundit.in"
-  },
-  {
-    "id": "f91f005f",
-    "ts": "2026-06-20T21:03:57.174413",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8abf3ad6",
-    "ts": "2026-06-20T21:03:56.937693",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Chennai' on https://www.foundit.in"
-  },
-  {
-    "id": "be0268e2",
-    "ts": "2026-06-20T21:03:56.870352",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
-  },
-  {
-    "id": "2562f15a",
-    "ts": "2026-06-20T21:03:56.827345",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "582cd527",
-    "ts": "2026-06-20T21:03:56.707454",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Bangalore' on https://www.foundit.in"
-  },
-  {
-    "id": "abc7140b",
-    "ts": "2026-06-20T21:03:56.598489",
-    "level": "WARN",
-    "site": "monster",
-    "message": "Failed to load Foundit SRP URL: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "98b67ed5",
-    "ts": "2026-06-20T21:03:56.497288",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Searching Foundit: 'Senior .NET Developer' in 'Remote' on https://www.foundit.in"
-  },
-  {
-    "id": "7dafb6b3",
-    "ts": "2026-06-20T21:03:56.403676",
-    "level": "SUCCESS",
-    "site": "monster",
-    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
-  },
-  {
-    "id": "4eedf036",
-    "ts": "2026-06-20T21:03:55.847964",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "🚀 Starting JobStreet/SEEK bot"
-  },
-  {
-    "id": "c702dd64",
-    "ts": "2026-06-20T21:03:55.803000",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting JobStreet ---"
-  },
-  {
-    "id": "843670a9",
-    "ts": "2026-06-20T21:03:55.755327",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "403102c9",
-    "ts": "2026-06-20T21:03:55.705377",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "489e16e8",
-    "ts": "2026-06-20T21:03:55.665557",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "b9927bcb",
-    "ts": "2026-06-20T21:03:55.615410",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 21:03:55"
-  },
-  {
-    "id": "edc53c62",
-    "ts": "2026-06-20T21:03:55.573501",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "1db11631",
-    "ts": "2026-06-20T21:03:55.530129",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "5038c7fb",
-    "ts": "2026-06-20T21:03:55.485491",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "809e9a39",
-    "ts": "2026-06-20T21:03:55.443437",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "3d28f472",
-    "ts": "2026-06-20T21:03:50.578642",
-    "level": "INFO",
-    "site": "monster",
-    "message": "Logging into Foundit portal: https://www.foundit.in..."
-  },
-  {
-    "id": "01fc7dd8",
-    "ts": "2026-06-20T21:03:49.725771",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Foundit (formerly Monster) bot"
-  },
-  {
-    "id": "8f238ee2",
-    "ts": "2026-06-20T21:03:49.585822",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Foundit ---"
-  },
-  {
-    "id": "e1526682",
-    "ts": "2026-06-20T21:03:49.565577",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to navigate to JobStreet login: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3d8ccf3f",
-    "ts": "2026-06-20T21:03:49.439866",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 25, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "ac91eb4b",
-    "ts": "2026-06-20T21:03:49.409026",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Logging into JobStreet portal https://www.seek.com.au..."
-  },
-  {
-    "id": "1cdf72aa",
-    "ts": "2026-06-20T21:03:49.301064",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "5996ea87",
-    "ts": "2026-06-20T21:03:49.256886",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'UK' — skipping location"
-  },
-  {
-    "id": "cdb98e08",
-    "ts": "2026-06-20T21:03:49.162403",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "84f7819c",
-    "ts": "2026-06-20T21:03:49.115797",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Hyderabad' — skipping location"
-  },
-  {
-    "id": "7d5599f7",
-    "ts": "2026-06-20T21:03:49.019299",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 21:03:49"
-  },
-  {
-    "id": "84871a82",
-    "ts": "2026-06-20T21:03:48.971088",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Chennai' — skipping location"
-  },
-  {
-    "id": "08b15ed8",
-    "ts": "2026-06-20T21:03:48.865730",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "b32635ee",
-    "ts": "2026-06-20T21:03:48.835814",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "JobStreet/SEEK does not operate in 'Bangalore' — skipping location"
-  },
-  {
-    "id": "13e552c9",
-    "ts": "2026-06-20T21:03:48.729683",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "67b13510",
-    "ts": "2026-06-20T21:03:48.685798",
-    "level": "WARN",
-    "site": "jobstreet",
-    "message": "Failed to load JobStreet search results: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "72ec54cc",
-    "ts": "2026-06-20T21:03:48.572975",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "8362c3b3",
-    "ts": "2026-06-20T21:03:48.515699",
-    "level": "INFO",
-    "site": "jobstreet",
-    "message": "Searching JobStreet: 'Senior .NET Developer' in 'Remote' on https://www.jobstreet.com.sg"
-  },
-  {
-    "id": "10101877",
-    "ts": "2026-06-20T21:03:48.424150",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "30f778ae",
-    "ts": "2026-06-20T21:03:48.413489",
-    "level": "SUCCESS",
-    "site": "jobstreet",
-    "message": "JobStreet already logged in via active session"
   }
 ]
