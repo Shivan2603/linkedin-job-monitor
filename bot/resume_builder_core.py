@@ -1348,14 +1348,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     # ─── DOMAIN-AWARE CERTIFICATIONS ──────────────────────────────────
     certifications = tailored.get("certifications", [])
     if not certifications or not isinstance(certifications, list):
-        az204_cert = "Microsoft Azure Developer Associate (AZ-204)  |  Microsoft  |  March 18, 2024"
+        az204_cert = "Microsoft Azure Developer Associate (AZ-204)  |  Microsoft  |  Issued: March 18, 2024"
         top_perf   = "Top Performer Award  |  Nexa Office InfoSystems LLP  |  2024"
-
-        # Highlight AZ-204 as HIGHLY RELEVANT if Azure is the primary cloud in JD
-        if jd_cert_hint and "highly relevant" in jd_cert_hint.lower():
-            az204_cert += "  (HIGHLY RELEVANT)"
-        elif any(kw in jd_lower for kw in ["azure", "az-204", "microsoft cloud", "azure devops"]):
-            az204_cert += "  (Directly Applicable)"
 
         # For government/federal jobs — highlight the NEICE project cert line
         if any(d in jd_domain for d in ["government", "federal", "public sector", "defense", "defence"]):
