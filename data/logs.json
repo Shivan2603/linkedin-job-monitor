@@ -1,5 +1,194 @@
 [
   {
+    "id": "e2bcab7e",
+    "ts": "2026-06-20T12:26:11.099210",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Applied: Harborglobal | Software Engineer | Remote/Various | 100% match"
+  },
+  {
+    "id": "c51f37b5",
+    "ts": "2026-06-20T12:26:05.728717",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "Filled 7/11 fields via AI."
+  },
+  {
+    "id": "14b8998b",
+    "ts": "2026-06-20T12:26:03.727833",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "0c99d7ca",
+    "ts": "2026-06-20T12:26:02.306224",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c60f0855",
+    "ts": "2026-06-20T12:26:02.211229",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "d7225fd9",
+    "ts": "2026-06-20T12:26:01.876976",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b452cdc0",
+    "ts": "2026-06-20T12:26:01.486404",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8fe34897",
+    "ts": "2026-06-20T12:26:01.118405",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "40ce68df",
+    "ts": "2026-06-20T12:26:00.718636",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "0a8f101c",
+    "ts": "2026-06-20T12:25:43.334145",
+    "level": "WARN",
+    "site": "company_careers",
+    "message": "Failed to check/upload to file input: Locator.get_attribute: Timeout 30000ms exceeded.\nCall log:\nwaiting for locator(\""
+  },
+  {
+    "id": "f3040087",
+    "ts": "2026-06-20T12:25:13.226160",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "Resume uploaded successfully to resume"
+  },
+  {
+    "id": "d2f9b9ef",
+    "ts": "2026-06-20T12:25:12.965305",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "AI Filler: Uploading resume E:\\SivaShankar\\aTresume\\20-06-2026\\Siva_Shankar_Software_Engineer_Harborglobal_Resume.docx to input ID=resume, Name="
+  },
+  {
+    "id": "3ce0d8ee",
+    "ts": "2026-06-20T12:24:22.912782",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f896e9ad",
+    "ts": "2026-06-20T12:24:19.850076",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: http://job-boards.greenhouse.io/harborglobal/jobs/5089906007…"
+  },
+  {
+    "id": "5eb3b8ef",
+    "ts": "2026-06-20T12:24:19.695790",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "No form fields found to fill."
+  },
+  {
+    "id": "605abb73",
+    "ts": "2026-06-20T12:23:44.445629",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "df723184",
+    "ts": "2026-06-20T12:23:41.232507",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://apply.workable.com/two95-international-inc-3/j/67E26D56C5/#:~:text=Senio…"
+  },
+  {
+    "id": "55bc1dce",
+    "ts": "2026-06-20T12:23:41.144160",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping North Sydney, New South Wales, Australia — Associate Transmission Lines Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "1910d328",
+    "ts": "2026-06-20T12:23:41.051267",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "03631b1f",
+    "ts": "2026-06-20T12:23:34.397792",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://careers.jacobs.com/en_US/careers/JobDetail/Technical-Lead-Transmission-L…"
+  },
+  {
+    "id": "eb4c9fb5",
+    "ts": "2026-06-20T12:23:34.342515",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Robinhood — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "661f93d3",
+    "ts": "2026-06-20T12:23:34.285918",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "051f8a83",
+    "ts": "2026-06-20T12:23:30.599776",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7976529?gh_src=NaN&gh_jid=7976529…"
+  },
+  {
+    "id": "a9c312ba",
+    "ts": "2026-06-20T12:23:30.538200",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Skipping Robinhood — Software Engineer (Match score 0% < 60%)"
+  },
+  {
+    "id": "7f028c96",
+    "ts": "2026-06-20T12:23:30.480795",
+    "level": "AI",
+    "site": "company_careers",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ee75f1df",
+    "ts": "2026-06-20T12:23:26.474769",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "Processing: https://boards.greenhouse.io/robinhood/jobs/7844218?gh_src=NaN&gh_jid=7844218…"
+  },
+  {
+    "id": "c09f392d",
+    "ts": "2026-06-20T12:23:15.772272",
+    "level": "SUCCESS",
+    "site": "company_careers",
+    "message": "✅ Applied → Resorts World Genting | Senior Software Engineer Job Details via Direct"
+  },
+  {
     "id": "ad01fbd8",
     "ts": "2026-06-20T12:23:11.381425",
     "level": "SUCCESS",
@@ -3306,195 +3495,6 @@
   {
     "id": "e45a91cb",
     "ts": "2026-06-20T11:26:24.008532",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b1434ed0",
-    "ts": "2026-06-20T11:26:19.745512",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "f925d861",
-    "ts": "2026-06-20T11:26:06.439889",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "badf069e",
-    "ts": "2026-06-20T11:26:06.406057",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 2 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "8afee327",
-    "ts": "2026-06-20T11:26:06.326983",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9f6c7827",
-    "ts": "2026-06-20T11:26:02.687013",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "379da579",
-    "ts": "2026-06-20T11:25:59.394423",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "21c7c074",
-    "ts": "2026-06-20T11:25:55.857477",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ffd0375c",
-    "ts": "2026-06-20T11:25:52.739399",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b4a7e8a7",
-    "ts": "2026-06-20T11:25:49.379805",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f5f83c7b",
-    "ts": "2026-06-20T11:25:46.259420",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "230276b0",
-    "ts": "2026-06-20T11:25:42.596954",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "bf1fb895",
-    "ts": "2026-06-20T11:25:17.107836",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Noir | .NET Developer - Cowes | Cowes, England, United Kingdom | 100% match"
-  },
-  {
-    "id": "a749d287",
-    "ts": "2026-06-20T11:25:17.009435",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Noir — .NET Developer - Cowes"
-  },
-  {
-    "id": "a2597d38",
-    "ts": "2026-06-20T11:25:14.522709",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "807980cf",
-    "ts": "2026-06-20T11:25:14.385397",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar__NET_Developer_-_Cow_Noir_Resume.docx' = 'Deselect resume Siva_Shankar__NET_Developer_-_Cow_Noir_Resume.docx'"
-  },
-  {
-    "id": "3e112b19",
-    "ts": "2026-06-20T11:23:17.705673",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9b3a19c9",
-    "ts": "2026-06-20T11:23:12.223725",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a40e81a5",
-    "ts": "2026-06-20T11:21:38.691760",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c05359d1",
-    "ts": "2026-06-20T11:21:35.675272",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 12 jobs on page 2"
-  },
-  {
-    "id": "323d805d",
-    "ts": "2026-06-20T11:21:32.327576",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d4bfa183",
-    "ts": "2026-06-20T11:21:28.768082",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0981745d",
-    "ts": "2026-06-20T11:21:25.702517",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5c0e6dc6",
-    "ts": "2026-06-20T11:21:22.039465",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "923a2a89",
-    "ts": "2026-06-20T11:21:19.006272",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "639a5af0",
-    "ts": "2026-06-20T11:21:15.507679",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e12b538b",
-    "ts": "2026-06-20T11:21:12.301847",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a6b8f263",
-    "ts": "2026-06-20T11:21:09.399504",
     "level": "AI",
     "site": "linkedin",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
