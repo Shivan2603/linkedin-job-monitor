@@ -1728,6 +1728,20 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         skills = DEFAULT_SKILLS
     consolidated_skills = normalize_skills_categories(skills, jd_text)
     verify_no_keywords_dropped(skills, consolidated_skills, jd_text)
+    # Clean up punctuation in all sections to prevent unclosed parentheses, spacing bugs, or double periods
+    summary = clean_text_punctuation(summary)
+    for j in jobs:
+        j["title"] = clean_text_punctuation(j.get("title", ""))
+        j["tech"] = clean_text_punctuation(j.get("tech", ""))
+        j["bullets"] = [clean_text_punctuation(b) for b in j.get("bullets", [])]
+        
+    for p in projects:
+        p["name"] = clean_text_punctuation(p.get("name", ""))
+        p["tech"] = clean_text_punctuation(p.get("tech", ""))
+        p["bullets"] = [clean_text_punctuation(b) for b in p.get("bullets", [])]
+        
+    certifications = [clean_text_punctuation(c) for c in certifications]
+
     skills = consolidated_skills
 
     # Create builder config

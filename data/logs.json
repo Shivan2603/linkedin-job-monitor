@@ -1,5 +1,19 @@
 [
   {
+    "id": "dc3a6c9c",
+    "ts": "2026-06-20T16:31:32.764783",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Australia'"
+  },
+  {
+    "id": "a2eeaf01",
+    "ts": "2026-06-20T16:31:32.699441",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 3 jobs for '.NET Developer' in UK"
+  },
+  {
     "id": "6ca09e0c",
     "ts": "2026-06-20T16:31:05.362816",
     "level": "SUCCESS",
@@ -3484,19 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "196f932c",
-    "ts": "2026-06-20T15:41:15.673368",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "040adbf0",
-    "ts": "2026-06-20T15:41:14.375300",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
   }
 ]
