@@ -170,7 +170,7 @@ standard_answers:
   Can you work from office?: 'Yes'
   Choose preferred cities to work: Bengaluru
   City: Avinashi, Tiruppur, Tamilnadu
-  City, state, or zip code: Chennai, Tamil Nadu, India
+  City, state, or zip code: United Kingdom
   Consent to data processing?: 'Yes'
   Cover Letter: 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of
     professional experience delivering scalable, cloud-native applications using C#,
@@ -228,6 +228,8 @@ standard_answers:
     resume Siva_Shankar_Power_Platform_Devel_Peregrine_Resume.docx
   Deselect resume Siva_Shankar_Principal_C__Full_St_Harnham_Resume.docx: Deselect
     resume Siva_Shankar_Principal_C__Full_St_Harnham_Resume.docx
+  Deselect resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Haystack_Resume.docx: Deselect
+    resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Haystack_Resume.docx
   Deselect resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx: Deselect
     resume Siva_Shankar_Senior_C__Developer__Quanteam_UK_Resume.docx
   Deselect resume Siva_Shankar_Senior_C__Full_Stack_Harnham_Resume.docx: Deselect
@@ -328,6 +330,12 @@ standard_answers:
   Have you been referred to this role by a Civica employee?: 'No'
   Have you ever been convicted of a felony or misdemeanor?: 'No'
   Have you ever been employed by this company or its affiliates?: 'No'
+  ? Have you personally configured and developed Service Catalog and Flow Designer
+    solutions in ServiceNow? Please can you show on your CV.
+  : 'No'
+  ? Have you worked as a Senior ServiceNow Developer on a global or multi-country
+    ServiceNow implementation or rollout programme? Please show this in your CV.
+  : 'No'
   Have you worked directly with cellular modems (AT Commands, QMI, Qualcomm SDKs, Sierra Wireless, Quectel, Telit, etc.)?: 'No'
   Headline: Senior Software Engineer with 4+ years of experience in .NET development,
     seeking a challenging role at Civica.
@@ -361,6 +369,7 @@ standard_answers:
   How many years of work experience do you have with React.js?: '4'
   How many years of work experience do you have with SQL Server Integration Services (SSIS)?: '4'
   How many years of work experience do you have with SQL?: '4'
+  How many years of work experience do you have with ServiceNow?: '0'
   How many years of work experience do you have with Visual Basic .NET (VB.NET)?: '4'
   How many years of work experience do you have with Windows Presentation Foundation (WPF)?: '4'
   How many years of working experience do you have with designing and developing derivatives platforms?: '4'

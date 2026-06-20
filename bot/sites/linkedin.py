@@ -331,9 +331,9 @@ def _apply_to_job(page: Page, job_el) -> bool:
         easy_btn = None
         for btn_locator in [
             page.get_by_role("button", name="Easy Apply"),
-            page.locator(".jobs-apply-button--top-card button"),
-            page.locator("button.jobs-apply-button"),
-            page.locator("button[aria-label*='Easy Apply']"),
+            page.locator("button[aria-label*='Easy Apply' i]"),
+            page.locator("button:has-text('Easy Apply')"),
+            page.locator("button:has-text('easy apply')"),
         ]:
             try:
                 if btn_locator.first.is_visible(timeout=1000):
