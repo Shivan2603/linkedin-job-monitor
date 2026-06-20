@@ -1,5 +1,40 @@
 [
   {
+    "id": "6ca09e0c",
+    "ts": "2026-06-20T16:31:05.362816",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Noir | .NET Developer - Hemel Hempstead | Hemel Hempstead, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "4eeb179b",
+    "ts": "2026-06-20T16:31:05.244286",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Noir — .NET Developer - Hemel Hempstead"
+  },
+  {
+    "id": "4af3d406",
+    "ts": "2026-06-20T16:31:02.468486",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "7ee341a7",
+    "ts": "2026-06-20T16:31:02.337201",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_NET_Developer_Hemel_Hempstead_Noir_Resume.docx' = 'Deselect resume Siva_Shankar_NET_Developer_Hemel_Hempstead_Noir_Resume.docx'"
+  },
+  {
+    "id": "1f470132",
+    "ts": "2026-06-20T16:29:05.314186",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "e613602d",
     "ts": "2026-06-20T16:28:48.295046",
     "level": "SUCCESS",
@@ -3463,40 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "ddec2713",
-    "ts": "2026-06-20T15:41:14.254246",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "470b35f7",
-    "ts": "2026-06-20T15:41:13.947308",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "79119e97",
-    "ts": "2026-06-20T15:41:13.209166",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "3fb9699e",
-    "ts": "2026-06-20T15:41:12.856233",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "7cdcfd88",
-    "ts": "2026-06-20T15:41:12.506361",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
   }
 ]
