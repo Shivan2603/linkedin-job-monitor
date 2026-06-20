@@ -1,5 +1,1699 @@
 [
   {
+    "id": "46967323",
+    "ts": "2026-06-20T15:31:06.085725",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Unknown Company | Senior Full Stack Engineer (.NET Core, ReactJS, Python | India | 100% match"
+  },
+  {
+    "id": "8ac4f78e",
+    "ts": "2026-06-20T15:31:05.984225",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Unknown Company — Senior Full Stack Engineer (.NET Core, ReactJS, Python"
+  },
+  {
+    "id": "bca2b65e",
+    "ts": "2026-06-20T15:31:02.986401",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "88585e2f",
+    "ts": "2026-06-20T15:31:02.871888",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Full_Stack_En_Unknown_Company_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Full_Stack_En_Unknown_Company_Resume.docx'"
+  },
+  {
+    "id": "b2332914",
+    "ts": "2026-06-20T15:29:15.826450",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7ceb551e",
+    "ts": "2026-06-20T15:29:09.644927",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "74f180a3",
+    "ts": "2026-06-20T15:29:03.036534",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "52def90b",
+    "ts": "2026-06-20T15:27:18.398621",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7cfb0d57",
+    "ts": "2026-06-20T15:27:14.351504",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2cb66ef8",
+    "ts": "2026-06-20T15:27:10.560990",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 6 jobs on page 1"
+  },
+  {
+    "id": "67ee5e8c",
+    "ts": "2026-06-20T15:26:58.262920",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "178df084",
+    "ts": "2026-06-20T15:26:58.144487",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "fadf94e5",
+    "ts": "2026-06-20T15:26:57.656520",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "35dcfef9",
+    "ts": "2026-06-20T15:26:50.824864",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "8289584f",
+    "ts": "2026-06-20T15:26:49.328231",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "83ed9f84",
+    "ts": "2026-06-20T15:26:49.256237",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "fe44134d",
+    "ts": "2026-06-20T15:26:49.184435",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "9d087c71",
+    "ts": "2026-06-20T15:26:49.109102",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "b98bea96",
+    "ts": "2026-06-20T15:26:49.041293",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "903d2f9f",
+    "ts": "2026-06-20T15:26:48.970222",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:48"
+  },
+  {
+    "id": "7498f073",
+    "ts": "2026-06-20T15:26:48.901624",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "01418759",
+    "ts": "2026-06-20T15:26:48.815417",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "d8735f6d",
+    "ts": "2026-06-20T15:26:48.747769",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "1d52b49e",
+    "ts": "2026-06-20T15:26:48.665597",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "b5c48609",
+    "ts": "2026-06-20T15:26:44.600623",
+    "level": "INFO",
+    "site": "shine",
+    "message": "🚀 Starting Shine.com bot"
+  },
+  {
+    "id": "bd7c6ef7",
+    "ts": "2026-06-20T15:26:44.538017",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Shine ---"
+  },
+  {
+    "id": "6ce82809",
+    "ts": "2026-06-20T15:26:44.479562",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "600b943c",
+    "ts": "2026-06-20T15:26:44.415432",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "2e16188f",
+    "ts": "2026-06-20T15:26:44.347990",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "49410a20",
+    "ts": "2026-06-20T15:26:44.285060",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:44"
+  },
+  {
+    "id": "77331bae",
+    "ts": "2026-06-20T15:26:44.223593",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "47238961",
+    "ts": "2026-06-20T15:26:44.158575",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "a44ae379",
+    "ts": "2026-06-20T15:26:44.096479",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "6d9167a2",
+    "ts": "2026-06-20T15:26:44.032080",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "2e125f04",
+    "ts": "2026-06-20T15:26:37.655476",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Logging into Naukri..."
+  },
+  {
+    "id": "fab883c6",
+    "ts": "2026-06-20T15:26:36.168258",
+    "level": "INFO",
+    "site": "naukri",
+    "message": "Starting Naukri.com bot"
+  },
+  {
+    "id": "f6fd3657",
+    "ts": "2026-06-20T15:26:36.097917",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Naukri ---"
+  },
+  {
+    "id": "1931d0fa",
+    "ts": "2026-06-20T15:26:36.024313",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "79bc1654",
+    "ts": "2026-06-20T15:26:35.954941",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5c0be726",
+    "ts": "2026-06-20T15:26:35.881707",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "7aed10c9",
+    "ts": "2026-06-20T15:26:35.818001",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:35"
+  },
+  {
+    "id": "c4035480",
+    "ts": "2026-06-20T15:26:35.744257",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "5799833b",
+    "ts": "2026-06-20T15:26:35.682549",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "f3a4ec06",
+    "ts": "2026-06-20T15:26:35.611256",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "fbd58edb",
+    "ts": "2026-06-20T15:26:35.517797",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "20a316cc",
+    "ts": "2026-06-20T15:26:31.902227",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "Failed to navigate to auth page: Page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "id": "b2ec0be8",
+    "ts": "2026-06-20T15:26:31.834885",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed login required. Opening auth portal: https://in.indeed.com/auth..."
+  },
+  {
+    "id": "e2f96392",
+    "ts": "2026-06-20T15:26:28.911675",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://in.indeed.com..."
+  },
+  {
+    "id": "517b2f75",
+    "ts": "2026-06-20T15:26:27.537800",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "28fe522c",
+    "ts": "2026-06-20T15:26:27.464836",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed Multi-Country ---"
+  },
+  {
+    "id": "ed946414",
+    "ts": "2026-06-20T15:26:27.401215",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "296b2355",
+    "ts": "2026-06-20T15:26:27.331711",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "9cb7d867",
+    "ts": "2026-06-20T15:26:27.265280",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "376de05d",
+    "ts": "2026-06-20T15:26:27.201178",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:27"
+  },
+  {
+    "id": "a306f61c",
+    "ts": "2026-06-20T15:26:27.135008",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "6d32ed6b",
+    "ts": "2026-06-20T15:26:27.069482",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "2c4930a9",
+    "ts": "2026-06-20T15:26:27.010288",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "f44a93e0",
+    "ts": "2026-06-20T15:26:26.937585",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "8920a616",
+    "ts": "2026-06-20T15:26:22.849584",
+    "level": "INFO",
+    "site": "company_careers",
+    "message": "🏢 Starting Universal Company Career Pages bot"
+  },
+  {
+    "id": "d6ea533d",
+    "ts": "2026-06-20T15:26:22.786397",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Company Careers ---"
+  },
+  {
+    "id": "f3d77b95",
+    "ts": "2026-06-20T15:26:22.722686",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "fa61e8b5",
+    "ts": "2026-06-20T15:26:22.662097",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "1c632fc8",
+    "ts": "2026-06-20T15:26:22.596031",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "a805dc20",
+    "ts": "2026-06-20T15:26:22.535226",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:22"
+  },
+  {
+    "id": "cb4ab397",
+    "ts": "2026-06-20T15:26:22.470126",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "4e94c643",
+    "ts": "2026-06-20T15:26:22.413248",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "16eddaa0",
+    "ts": "2026-06-20T15:26:22.344106",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "4aeaf32d",
+    "ts": "2026-06-20T15:26:22.287847",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "96f5cd4e",
+    "ts": "2026-06-20T15:26:16.442992",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "45035d87",
+    "ts": "2026-06-20T15:26:14.931547",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "🚀 Starting Jooble bot"
+  },
+  {
+    "id": "9346fe74",
+    "ts": "2026-06-20T15:26:14.861269",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Jooble ---"
+  },
+  {
+    "id": "c68663d6",
+    "ts": "2026-06-20T15:26:14.784809",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "f48c3d0f",
+    "ts": "2026-06-20T15:26:14.704374",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "99f96258",
+    "ts": "2026-06-20T15:26:14.641958",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "6791cf8c",
+    "ts": "2026-06-20T15:26:14.574046",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:26:14"
+  },
+  {
+    "id": "e0153b63",
+    "ts": "2026-06-20T15:26:14.504936",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "cfeedc8a",
+    "ts": "2026-06-20T15:26:14.435182",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "173baf20",
+    "ts": "2026-06-20T15:26:14.372488",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "b660d667",
+    "ts": "2026-06-20T15:26:14.310559",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "bd2ba1d5",
+    "ts": "2026-06-20T15:26:07.349598",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Foundit: Applied to 0 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "d6de69a0",
+    "ts": "2026-06-20T15:26:07.268440",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Foundit job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "2a6b37e6",
+    "ts": "2026-06-20T15:26:07.118398",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Foundit job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "06dc4442",
+    "ts": "2026-06-20T15:26:06.908005",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Foundit job error: ElementHandle.is_visible: Target page, context or browser has been closed"
+  },
+  {
+    "id": "99f6edb6",
+    "ts": "2026-06-20T15:26:06.681685",
+    "level": "WARN",
+    "site": "monster",
+    "message": "Foundit job error: Page.query_selector: Target page, context or browser has been closed"
+  },
+  {
+    "id": "504e7f03",
+    "ts": "2026-06-20T15:26:01.895339",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "0233236e",
+    "ts": "2026-06-20T15:26:01.690428",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Skipping Tetra Computing LLC - Senior .NET Developer (Already applied)"
+  },
+  {
+    "id": "acb50ec5",
+    "ts": "2026-06-20T15:25:56.229524",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "19107dd8",
+    "ts": "2026-06-20T15:25:56.091449",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Skipping Tetra Computing LLC - Senior .NET Developer (Already applied)"
+  },
+  {
+    "id": "754bdf51",
+    "ts": "2026-06-20T15:25:49.860200",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "b5105a9e",
+    "ts": "2026-06-20T15:25:49.661394",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Found 6 job cards on Foundit page"
+  },
+  {
+    "id": "5e75cea3",
+    "ts": "2026-06-20T15:25:43.742630",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Dismissing Foundit popup via button click: 'button:has-text(\"x\")'"
+  },
+  {
+    "id": "e36c9476",
+    "ts": "2026-06-20T15:25:38.566442",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Searching Foundit: 'Senior .NET Developer' in 'Remote' on https://www.foundit.in"
+  },
+  {
+    "id": "92936cc7",
+    "ts": "2026-06-20T15:25:38.435241",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
+  },
+  {
+    "id": "fba89bcf",
+    "ts": "2026-06-20T15:25:32.990107",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Logging into Foundit portal: https://www.foundit.in..."
+  },
+  {
+    "id": "bf20ce8f",
+    "ts": "2026-06-20T15:25:22.081499",
+    "level": "INFO",
+    "site": "monster",
+    "message": "🚀 Starting Foundit (formerly Monster) bot"
+  },
+  {
+    "id": "f0e1dc7b",
+    "ts": "2026-06-20T15:25:22.034649",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Foundit ---"
+  },
+  {
+    "id": "3c5ee084",
+    "ts": "2026-06-20T15:25:21.988313",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "ddb10c82",
+    "ts": "2026-06-20T15:25:21.935639",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "11ae97be",
+    "ts": "2026-06-20T15:25:21.884810",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "4ec2fd4a",
+    "ts": "2026-06-20T15:25:21.846459",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 15:25:21"
+  },
+  {
+    "id": "6920944f",
+    "ts": "2026-06-20T15:25:21.794945",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "efc455c7",
+    "ts": "2026-06-20T15:25:21.744280",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "e86e81bf",
+    "ts": "2026-06-20T15:25:21.706106",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "5a10d01d",
+    "ts": "2026-06-20T15:25:21.659121",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "9874ed68",
+    "ts": "2026-06-20T15:01:53.637345",
+    "level": "INFO",
+    "site": "test",
+    "message": "Shine Final URL: https://www.shine.com/myshine/registration/details/parser/"
+  },
+  {
+    "id": "db5a3aee",
+    "ts": "2026-06-20T15:01:53.603467",
+    "level": "INFO",
+    "site": "test",
+    "message": "Shine Login Test Success: True"
+  },
+  {
+    "id": "dcd5fbf6",
+    "ts": "2026-06-20T15:01:53.441729",
+    "level": "SUCCESS",
+    "site": "shine",
+    "message": "Shine already logged in via cookies"
+  },
+  {
+    "id": "013fc8ed",
+    "ts": "2026-06-20T15:01:48.148571",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "8c1394d2",
+    "ts": "2026-06-20T15:01:47.129259",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Shine Login ---"
+  },
+  {
+    "id": "5f7fe81f",
+    "ts": "2026-06-20T15:01:46.779825",
+    "level": "INFO",
+    "site": "test",
+    "message": "JobStreet Final URL: https://sg.jobstreet.com/"
+  },
+  {
+    "id": "c4e82a41",
+    "ts": "2026-06-20T15:01:46.720686",
+    "level": "INFO",
+    "site": "test",
+    "message": "JobStreet Login Test Success: True"
+  },
+  {
+    "id": "aa78ed1d",
+    "ts": "2026-06-20T15:01:45.872422",
+    "level": "SUCCESS",
+    "site": "jobstreet",
+    "message": "JobStreet already logged in via active session"
+  },
+  {
+    "id": "cc9eb51b",
+    "ts": "2026-06-20T15:01:41.210032",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
+  },
+  {
+    "id": "1b3287c9",
+    "ts": "2026-06-20T15:01:40.507160",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing JobStreet Login ---"
+  },
+  {
+    "id": "683cace9",
+    "ts": "2026-06-20T15:01:40.164713",
+    "level": "INFO",
+    "site": "test",
+    "message": "Foundit Final URL: https://www.foundit.in/home/user"
+  },
+  {
+    "id": "f3cc26ec",
+    "ts": "2026-06-20T15:01:40.130720",
+    "level": "INFO",
+    "site": "test",
+    "message": "Foundit Login Test Success: True"
+  },
+  {
+    "id": "4e1ca55c",
+    "ts": "2026-06-20T15:01:39.237113",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
+  },
+  {
+    "id": "88ff8203",
+    "ts": "2026-06-20T15:01:34.336092",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Logging into Foundit portal: https://www.foundit.in..."
+  },
+  {
+    "id": "5d5ee02f",
+    "ts": "2026-06-20T15:01:33.610781",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Foundit Login ---"
+  },
+  {
+    "id": "beecb2d5",
+    "ts": "2026-06-20T15:01:33.282534",
+    "level": "INFO",
+    "site": "test",
+    "message": "Indeed Final URL: https://in.indeed.com/"
+  },
+  {
+    "id": "f5265c68",
+    "ts": "2026-06-20T15:01:33.243901",
+    "level": "INFO",
+    "site": "test",
+    "message": "Indeed Login Test Success: True"
+  },
+  {
+    "id": "76d05867",
+    "ts": "2026-06-20T15:01:33.078027",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://in.indeed.com ✅"
+  },
+  {
+    "id": "8d568a2e",
+    "ts": "2026-06-20T15:01:32.996527",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Timed out waiting for Cloudflare challenge resolution."
+  },
+  {
+    "id": "0dbbefd3",
+    "ts": "2026-06-20T14:58:32.939987",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "23a507c5",
+    "ts": "2026-06-20T14:58:30.275378",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://in.indeed.com..."
+  },
+  {
+    "id": "3c345a1a",
+    "ts": "2026-06-20T14:58:28.810895",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Indeed Login ---"
+  },
+  {
+    "id": "a5c1aef0",
+    "ts": "2026-06-20T14:07:09.096123",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "11166f54",
+    "ts": "2026-06-20T14:07:04.886232",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "78f1a250",
+    "ts": "2026-06-20T14:06:53.283085",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "8ccc1d44",
+    "ts": "2026-06-20T14:06:53.185058",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "4b58ecc3",
+    "ts": "2026-06-20T14:06:52.949596",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "a5a61edb",
+    "ts": "2026-06-20T14:06:47.162643",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "75c0dc58",
+    "ts": "2026-06-20T14:06:47.071767",
+    "level": "ERROR",
+    "site": "jooble",
+    "message": "Jooble bot crash: Mouse.wheel: Target page, context or browser has been closed"
+  },
+  {
+    "id": "5b8d9417",
+    "ts": "2026-06-20T14:06:46.514170",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "c76e872c",
+    "ts": "2026-06-20T14:06:46.481817",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "755d1f46",
+    "ts": "2026-06-20T14:06:46.450319",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "abd6f2a9",
+    "ts": "2026-06-20T14:06:46.421869",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "e8a6eb2e",
+    "ts": "2026-06-20T14:06:46.387939",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "3c291878",
+    "ts": "2026-06-20T14:06:46.360304",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 14:06:46"
+  },
+  {
+    "id": "5e9fc1ca",
+    "ts": "2026-06-20T14:06:46.330468",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "96ffa4ae",
+    "ts": "2026-06-20T14:06:46.298260",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "b578a15b",
+    "ts": "2026-06-20T14:06:46.266078",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "5da29c5a",
+    "ts": "2026-06-20T14:06:46.236376",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "c0d7b6df",
+    "ts": "2026-06-20T14:06:42.658455",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "Searching Jooble: 'Senior .NET Developer' in 'Remote'"
+  },
+  {
+    "id": "b981979c",
+    "ts": "2026-06-20T14:06:41.814227",
+    "level": "INFO",
+    "site": "jooble",
+    "message": "🚀 Starting Jooble bot"
+  },
+  {
+    "id": "79ec294a",
+    "ts": "2026-06-20T14:06:41.776050",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Jooble ---"
+  },
+  {
+    "id": "563f3ff9",
+    "ts": "2026-06-20T14:06:41.746065",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "d9b30f53",
+    "ts": "2026-06-20T14:06:41.709598",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "7cec035d",
+    "ts": "2026-06-20T14:06:41.677821",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "151a97cc",
+    "ts": "2026-06-20T14:06:41.648136",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 14:06:41"
+  },
+  {
+    "id": "b9bb055a",
+    "ts": "2026-06-20T14:06:41.616300",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "6b9bce22",
+    "ts": "2026-06-20T14:06:41.585949",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "71df8a9b",
+    "ts": "2026-06-20T14:06:41.551458",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "8b9d6c6e",
+    "ts": "2026-06-20T14:06:41.519203",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "4e32d262",
+    "ts": "2026-06-20T14:06:25.356297",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed bot session ended"
+  },
+  {
+    "id": "32a8fe7a",
+    "ts": "2026-06-20T14:06:25.236202",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed bot crash: Page.query_selector_all: Target page, context or browser has been closed"
+  },
+  {
+    "id": "b35f4cc5",
+    "ts": "2026-06-20T14:06:10.990481",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "8346a682",
+    "ts": "2026-06-20T14:06:07.644785",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior .NET Developer' in 'Remote' on https://in.indeed.com"
+  },
+  {
+    "id": "b96f2d81",
+    "ts": "2026-06-20T14:06:07.574954",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://in.indeed.com ✅"
+  },
+  {
+    "id": "eba8d6a0",
+    "ts": "2026-06-20T14:06:04.305001",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Cloudflare challenge resolved! Resuming bot..."
+  },
+  {
+    "id": "b0d04b1c",
+    "ts": "2026-06-20T14:05:55.596413",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "1a91ea8f",
+    "ts": "2026-06-20T14:05:52.693828",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://in.indeed.com..."
+  },
+  {
+    "id": "28259ebf",
+    "ts": "2026-06-20T14:05:51.376376",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "63afdd65",
+    "ts": "2026-06-20T14:05:51.338058",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting Indeed Multi-Country ---"
+  },
+  {
+    "id": "33a8a786",
+    "ts": "2026-06-20T14:05:51.310039",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 9, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "6a889308",
+    "ts": "2026-06-20T14:05:51.268216",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "be6f7c02",
+    "ts": "2026-06-20T14:05:51.232768",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
+  },
+  {
+    "id": "d4d5c4fb",
+    "ts": "2026-06-20T14:05:51.197386",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-20 14:05:51"
+  },
+  {
+    "id": "dd06320e",
+    "ts": "2026-06-20T14:05:51.163795",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "69001020",
+    "ts": "2026-06-20T14:05:51.127914",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "8187ab3d",
+    "ts": "2026-06-20T14:05:51.094890",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "74b44800",
+    "ts": "2026-06-20T14:05:51.026259",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "1f78b097",
+    "ts": "2026-06-20T13:39:16.104504",
+    "level": "INFO",
+    "site": "test",
+    "message": "Shine Final URL: https://www.shine.com/myshine/registration/details/parser/"
+  },
+  {
+    "id": "35f1d077",
+    "ts": "2026-06-20T13:39:16.070666",
+    "level": "INFO",
+    "site": "test",
+    "message": "Shine Login Test Success: True"
+  },
+  {
+    "id": "f83d0bff",
+    "ts": "2026-06-20T13:39:15.873798",
+    "level": "SUCCESS",
+    "site": "shine",
+    "message": "Shine login successful ✅"
+  },
+  {
+    "id": "e1d67b28",
+    "ts": "2026-06-20T13:39:06.852775",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Shine Login: Attempting direct email/password login..."
+  },
+  {
+    "id": "68891cbb",
+    "ts": "2026-06-20T13:39:01.576499",
+    "level": "INFO",
+    "site": "shine",
+    "message": "Logging into Shine..."
+  },
+  {
+    "id": "c7b92757",
+    "ts": "2026-06-20T13:38:59.752899",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Shine Login ---"
+  },
+  {
+    "id": "eb8218c8",
+    "ts": "2026-06-20T13:38:59.192302",
+    "level": "INFO",
+    "site": "test",
+    "message": "JobStreet Final URL: https://sg.jobstreet.com/"
+  },
+  {
+    "id": "a6a3d15b",
+    "ts": "2026-06-20T13:38:59.093923",
+    "level": "INFO",
+    "site": "test",
+    "message": "JobStreet Login Test Success: True"
+  },
+  {
+    "id": "31ab0258",
+    "ts": "2026-06-20T13:38:57.909345",
+    "level": "SUCCESS",
+    "site": "jobstreet",
+    "message": "JobStreet already logged in via active session"
+  },
+  {
+    "id": "d6f5a6ff",
+    "ts": "2026-06-20T13:38:52.295338",
+    "level": "INFO",
+    "site": "jobstreet",
+    "message": "Logging into JobStreet portal https://www.jobstreet.com.sg..."
+  },
+  {
+    "id": "3232e9c8",
+    "ts": "2026-06-20T13:38:51.037791",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing JobStreet Login ---"
+  },
+  {
+    "id": "0e7ab18b",
+    "ts": "2026-06-20T13:38:50.558410",
+    "level": "INFO",
+    "site": "test",
+    "message": "Foundit Final URL: https://www.foundit.in/home/user"
+  },
+  {
+    "id": "c8840b3a",
+    "ts": "2026-06-20T13:38:50.483254",
+    "level": "INFO",
+    "site": "test",
+    "message": "Foundit Login Test Success: True"
+  },
+  {
+    "id": "1bb48a79",
+    "ts": "2026-06-20T13:38:49.184376",
+    "level": "SUCCESS",
+    "site": "monster",
+    "message": "Foundit already logged in on https://www.foundit.in (URL: https://www.foundit.in/home/user)"
+  },
+  {
+    "id": "c2c4bae7",
+    "ts": "2026-06-20T13:38:43.408170",
+    "level": "INFO",
+    "site": "monster",
+    "message": "Logging into Foundit portal: https://www.foundit.in..."
+  },
+  {
+    "id": "091be4c8",
+    "ts": "2026-06-20T13:38:42.731493",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Foundit Login ---"
+  },
+  {
+    "id": "595a5ef8",
+    "ts": "2026-06-20T13:38:42.509133",
+    "level": "ERROR",
+    "site": "test",
+    "message": "Indeed Login Test Exception: cannot import name '_login_portal' from 'bot.sites.indeed' (E:\\SivaShankar\\jobbot\\bot\\sites\\indeed.py)"
+  },
+  {
+    "id": "56fc4c40",
+    "ts": "2026-06-20T13:38:41.258135",
+    "level": "INFO",
+    "site": "test",
+    "message": "--- Testing Indeed Login ---"
+  },
+  {
+    "id": "86fa3518",
+    "ts": "2026-06-20T13:33:38.864510",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e872cfa7",
+    "ts": "2026-06-20T13:33:35.439552",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3bc03282",
+    "ts": "2026-06-20T13:33:31.764434",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e4a27141",
+    "ts": "2026-06-20T13:33:28.544136",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "64cd6a97",
+    "ts": "2026-06-20T13:33:24.954256",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3413f67a",
+    "ts": "2026-06-20T13:33:17.657431",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "56dc5001",
+    "ts": "2026-06-20T13:33:07.145653",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "0ef9c49e",
+    "ts": "2026-06-20T13:33:07.106772",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Remote"
+  },
+  {
+    "id": "56e39486",
+    "ts": "2026-06-20T13:33:07.053229",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "5d64c7dc",
+    "ts": "2026-06-20T13:33:06.833658",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "6bb455ea",
+    "ts": "2026-06-20T13:33:06.614987",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "a43ddb7f",
+    "ts": "2026-06-20T13:33:06.396504",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "f0c0ad60",
+    "ts": "2026-06-20T13:33:06.161149",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "76e4272a",
+    "ts": "2026-06-20T13:33:05.944200",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "972ed2ae",
+    "ts": "2026-06-20T13:33:05.719657",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "de2101e9",
+    "ts": "2026-06-20T13:33:05.487897",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "a0379d70",
+    "ts": "2026-06-20T13:33:05.211514",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "c3953f1a",
+    "ts": "2026-06-20T13:33:04.949206",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "ff134103",
+    "ts": "2026-06-20T13:33:04.669872",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "118c28ee",
+    "ts": "2026-06-20T13:33:04.452099",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "bb1ea00a",
+    "ts": "2026-06-20T13:33:04.237566",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "4ef53fc5",
+    "ts": "2026-06-20T13:33:04.001764",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "ee910670",
+    "ts": "2026-06-20T13:33:03.734566",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "170fea1a",
+    "ts": "2026-06-20T13:33:03.422840",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
+  },
+  {
+    "id": "6ab0ada2",
+    "ts": "2026-06-20T13:32:00.508058",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a884218a",
+    "ts": "2026-06-20T13:30:16.337656",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f54c0192",
+    "ts": "2026-06-20T13:30:12.663635",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "c0aecc7a",
+    "ts": "2026-06-20T13:30:08.620058",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "b2016175",
+    "ts": "2026-06-20T13:30:04.058244",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "3ccd6fec",
+    "ts": "2026-06-20T13:29:59.719816",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 21 jobs on page 2"
+  },
+  {
+    "id": "7a75edbd",
+    "ts": "2026-06-20T13:29:55.749361",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1075a66f",
+    "ts": "2026-06-20T13:29:52.971643",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "49c49087",
+    "ts": "2026-06-20T13:29:50.408668",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7b1d4b5b",
+    "ts": "2026-06-20T13:29:46.748843",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "24b9a18f",
+    "ts": "2026-06-20T13:29:43.950922",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d93bc257",
+    "ts": "2026-06-20T13:29:40.703452",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1c14c642",
+    "ts": "2026-06-20T13:29:37.557082",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0573156b",
+    "ts": "2026-06-20T13:29:30.874372",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1cbbdd82",
+    "ts": "2026-06-20T13:29:28.038548",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "dbd4b442",
+    "ts": "2026-06-20T13:29:24.474251",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "635bba82",
+    "ts": "2026-06-20T13:29:21.523646",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d040dab2",
+    "ts": "2026-06-20T13:29:17.790866",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a5d34701",
+    "ts": "2026-06-20T13:29:10.940829",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0c281f57",
+    "ts": "2026-06-20T13:29:08.057204",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d38804aa",
+    "ts": "2026-06-20T13:29:04.545753",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1aee6731",
+    "ts": "2026-06-20T13:29:01.820594",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "301a8da5",
+    "ts": "2026-06-20T13:28:58.951191",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "d27b9b16",
+    "ts": "2026-06-20T13:28:56.149974",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7c6ce869",
+    "ts": "2026-06-20T13:28:51.582357",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "279de2d4",
+    "ts": "2026-06-20T13:27:18.158217",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e56fa078",
+    "ts": "2026-06-20T13:27:14.462207",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "399ddd96",
+    "ts": "2026-06-20T13:27:10.609662",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "ae8bf0a1",
     "ts": "2026-06-20T13:26:52.667376",
     "level": "SUCCESS",
@@ -1804,1699 +3498,5 @@
     "level": "INFO",
     "site": "system",
     "message": "--- Foundit done ---"
-  },
-  {
-    "id": "5e857f0e",
-    "ts": "2026-06-20T13:19:36.055606",
-    "level": "ERROR",
-    "site": "system",
-    "message": "Foundit crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_shared --remote-debugging-pipe about:blank\n<launched> pid=10528\n[pid=10528][out] Opening in existing browser session.\nCall log:\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_shared --remote-debugging-pipe about:blank\n  - <launched> pid=10528\n  - [pid=10528][out] Opening in existing browser session.\n"
-  },
-  {
-    "id": "8a97afcd",
-    "ts": "2026-06-20T13:19:33.636232",
-    "level": "INFO",
-    "site": "monster",
-    "message": "🚀 Starting Foundit (formerly Monster) bot"
-  },
-  {
-    "id": "b2667bd2",
-    "ts": "2026-06-20T13:19:33.558201",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting Foundit ---"
-  },
-  {
-    "id": "951e95b2",
-    "ts": "2026-06-20T13:19:33.474494",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "022d78dc",
-    "ts": "2026-06-20T13:19:33.385757",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a331c405",
-    "ts": "2026-06-20T13:19:33.305002",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "e24dba7a",
-    "ts": "2026-06-20T13:19:33.223542",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 13:19:33"
-  },
-  {
-    "id": "7298090a",
-    "ts": "2026-06-20T13:19:33.140519",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "e6ff60ec",
-    "ts": "2026-06-20T13:19:33.060689",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "682e5525",
-    "ts": "2026-06-20T13:19:32.979578",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "d9c901f4",
-    "ts": "2026-06-20T13:19:32.896403",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "262d3661",
-    "ts": "2026-06-20T13:18:16.135972",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "eb8c9fa3",
-    "ts": "2026-06-20T13:18:12.637597",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "502e15d9",
-    "ts": "2026-06-20T13:18:05.534797",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 13 jobs on page 2"
-  },
-  {
-    "id": "a2e67d0b",
-    "ts": "2026-06-20T13:17:59.845820",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "34ed9fd1",
-    "ts": "2026-06-20T13:16:25.523461",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cd9183c0",
-    "ts": "2026-06-20T13:16:20.162827",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6ef66c10",
-    "ts": "2026-06-20T13:16:15.761031",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "beda9d3c",
-    "ts": "2026-06-20T13:16:11.327659",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "53fea094",
-    "ts": "2026-06-20T13:16:05.659141",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "38006fff",
-    "ts": "2026-06-20T13:16:01.549609",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ed71d42a",
-    "ts": "2026-06-20T13:15:57.460490",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "72f812f0",
-    "ts": "2026-06-20T13:15:53.088842",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e3052b91",
-    "ts": "2026-06-20T13:15:46.687879",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fa0dd26f",
-    "ts": "2026-06-20T13:15:34.381486",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "53fc0224",
-    "ts": "2026-06-20T13:15:28.228819",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ca9b86fe",
-    "ts": "2026-06-20T13:15:20.580756",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c9db4f80",
-    "ts": "2026-06-20T13:15:14.545766",
-    "level": "AI",
-    "site": "company_careers",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b7620862",
-    "ts": "2026-06-20T13:15:14.347609",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Tailoring resume for .NET with React & Azure | Top Projects At EPAM India — Lead Software Engineer..."
-  },
-  {
-    "id": "0f866490",
-    "ts": "2026-06-20T13:15:14.256719",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Detected Company: .NET with React & Azure | Top Projects At EPAM India | Job Title: Lead Software Engineer"
-  },
-  {
-    "id": "b1495681",
-    "ts": "2026-06-20T13:15:09.868752",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "=================================================="
-  },
-  {
-    "id": "c54f3b10",
-    "ts": "2026-06-20T13:15:09.750366",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing URL: https://jobs.welcome.epam.in/vacancy/blthuc11a27ty5xmfyq"
-  },
-  {
-    "id": "438c3642",
-    "ts": "2026-06-20T13:15:09.581985",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "\n=================================================="
-  },
-  {
-    "id": "fb9da252",
-    "ts": "2026-06-20T13:15:07.676085",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cfb491d9",
-    "ts": "2026-06-20T13:15:00.518218",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "edd94311",
-    "ts": "2026-06-20T13:14:53.873422",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "38969caa",
-    "ts": "2026-06-20T13:14:48.514186",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "34b741ed",
-    "ts": "2026-06-20T13:14:42.220678",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d95af992",
-    "ts": "2026-06-20T13:14:35.612486",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ee528537",
-    "ts": "2026-06-20T13:14:29.970751",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cd6bdf70",
-    "ts": "2026-06-20T13:14:23.541930",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "295c4efb",
-    "ts": "2026-06-20T13:12:43.416766",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "eff54db7",
-    "ts": "2026-06-20T13:12:37.118539",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1526d814",
-    "ts": "2026-06-20T13:12:31.917827",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "94d50f27",
-    "ts": "2026-06-20T13:12:18.057601",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "9da23545",
-    "ts": "2026-06-20T13:12:17.926430",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "5491c9ea",
-    "ts": "2026-06-20T13:12:17.664745",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "05e0effd",
-    "ts": "2026-06-20T13:12:10.835535",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1094b675",
-    "ts": "2026-06-20T13:12:06.038254",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c935af52",
-    "ts": "2026-06-20T13:11:59.832311",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "11e566fc",
-    "ts": "2026-06-20T13:11:54.824009",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dae23520",
-    "ts": "2026-06-20T13:11:48.437526",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "50b511fb",
-    "ts": "2026-06-20T13:11:44.531000",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e3c0078d",
-    "ts": "2026-06-20T13:11:40.739376",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2b88a4bf",
-    "ts": "2026-06-20T13:11:37.688897",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "04fe921e",
-    "ts": "2026-06-20T13:11:35.129428",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5b25184c",
-    "ts": "2026-06-20T13:11:31.598593",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3030e96e",
-    "ts": "2026-06-20T13:11:28.621235",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5c65764b",
-    "ts": "2026-06-20T13:11:25.497214",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0f10ee22",
-    "ts": "2026-06-20T13:11:22.332309",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4e98e180",
-    "ts": "2026-06-20T13:11:18.724913",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c1d3aa0a",
-    "ts": "2026-06-20T13:11:13.221823",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 15 jobs on page 3"
-  },
-  {
-    "id": "d6a53568",
-    "ts": "2026-06-20T13:11:06.758851",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f5191aba",
-    "ts": "2026-06-20T13:10:59.203532",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "33bedb2d",
-    "ts": "2026-06-20T13:10:50.672630",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "24fb97e3",
-    "ts": "2026-06-20T13:10:43.952610",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e77159af",
-    "ts": "2026-06-20T13:10:38.342460",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "269abb62",
-    "ts": "2026-06-20T13:10:31.676362",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ca591df1",
-    "ts": "2026-06-20T13:10:25.512608",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1d26ba34",
-    "ts": "2026-06-20T13:10:17.275427",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d637c754",
-    "ts": "2026-06-20T13:10:10.693731",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8d43b3f9",
-    "ts": "2026-06-20T13:10:04.858169",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9db1b19e",
-    "ts": "2026-06-20T13:09:58.638200",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dd548e14",
-    "ts": "2026-06-20T13:09:52.610661",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f4fd2c03",
-    "ts": "2026-06-20T13:09:37.754365",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "91943c1c",
-    "ts": "2026-06-20T13:08:13.232044",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "065c186a",
-    "ts": "2026-06-20T13:08:09.760518",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c6e54f97",
-    "ts": "2026-06-20T13:08:06.674934",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b56efa1d",
-    "ts": "2026-06-20T13:08:03.744716",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "57cb9681",
-    "ts": "2026-06-20T13:08:00.823684",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6225aab6",
-    "ts": "2026-06-20T13:07:57.559147",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "03d668e8",
-    "ts": "2026-06-20T13:07:54.462137",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9107fb5c",
-    "ts": "2026-06-20T13:07:50.877470",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e8254a50",
-    "ts": "2026-06-20T13:07:44.818695",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4d53f9b1",
-    "ts": "2026-06-20T13:06:05.439014",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6ac3e6eb",
-    "ts": "2026-06-20T13:04:26.774129",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1b84e277",
-    "ts": "2026-06-20T13:04:20.450616",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "5e9371b2",
-    "ts": "2026-06-20T13:02:42.606225",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a1ddf594",
-    "ts": "2026-06-20T13:02:36.190445",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c0aa60b1",
-    "ts": "2026-06-20T13:02:29.837614",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d45f98f4",
-    "ts": "2026-06-20T13:02:23.860062",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c3cb9cdd",
-    "ts": "2026-06-20T13:02:17.374468",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8aa05905",
-    "ts": "2026-06-20T13:00:38.602071",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "adc6bdd4",
-    "ts": "2026-06-20T13:00:32.440170",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8584dc2a",
-    "ts": "2026-06-20T13:00:26.274208",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "98162035",
-    "ts": "2026-06-20T13:00:13.970369",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "13b1a47f",
-    "ts": "2026-06-20T13:00:08.123638",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1ae182bd",
-    "ts": "2026-06-20T13:00:01.819207",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e608e6f5",
-    "ts": "2026-06-20T12:59:49.384979",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d8db90d8",
-    "ts": "2026-06-20T12:59:43.613916",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab0d964f",
-    "ts": "2026-06-20T12:59:37.293622",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3f21f80c",
-    "ts": "2026-06-20T12:59:31.237256",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5b7f698a",
-    "ts": "2026-06-20T12:59:24.925475",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "433f2dcc",
-    "ts": "2026-06-20T12:57:44.059386",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c344f7f2",
-    "ts": "2026-06-20T12:57:36.804913",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c31956c4",
-    "ts": "2026-06-20T12:57:30.339665",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f985c44f",
-    "ts": "2026-06-20T12:57:23.798146",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c2412b45",
-    "ts": "2026-06-20T12:55:41.804177",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9c9f3a6d",
-    "ts": "2026-06-20T12:55:30.980370",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "13e69fa4",
-    "ts": "2026-06-20T12:55:27.227496",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "3782a901",
-    "ts": "2026-06-20T12:55:14.388216",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Chennai'"
-  },
-  {
-    "id": "156c5fe2",
-    "ts": "2026-06-20T12:55:14.348033",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Bangalore"
-  },
-  {
-    "id": "a435161f",
-    "ts": "2026-06-20T12:55:07.906413",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a26dadbd",
-    "ts": "2026-06-20T12:55:02.039321",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "feafe9f9",
-    "ts": "2026-06-20T12:54:55.274766",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "20b8806b",
-    "ts": "2026-06-20T12:54:48.361050",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "110216e9",
-    "ts": "2026-06-20T12:53:12.694538",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1fca2c58",
-    "ts": "2026-06-20T12:53:08.696584",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "03f0b275",
-    "ts": "2026-06-20T12:53:05.095019",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "41ab9d3c",
-    "ts": "2026-06-20T12:53:01.400659",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d17091af",
-    "ts": "2026-06-20T12:52:57.621730",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "65cb790c",
-    "ts": "2026-06-20T12:52:53.536252",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e3a8202b",
-    "ts": "2026-06-20T12:52:49.871473",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6aa827df",
-    "ts": "2026-06-20T12:52:47.038942",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "76e1040c",
-    "ts": "2026-06-20T12:52:42.028165",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ed7e4852",
-    "ts": "2026-06-20T12:52:33.441783",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9009b409",
-    "ts": "2026-06-20T12:52:26.549573",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "feeb0c65",
-    "ts": "2026-06-20T12:52:23.450403",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9f175e37",
-    "ts": "2026-06-20T12:52:20.086557",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c2c586e0",
-    "ts": "2026-06-20T12:52:14.733833",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "85b20ef3",
-    "ts": "2026-06-20T12:52:09.568639",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "54c38684",
-    "ts": "2026-06-20T12:52:04.536355",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b2ca341f",
-    "ts": "2026-06-20T12:51:59.269719",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9a142efb",
-    "ts": "2026-06-20T12:51:53.541048",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ebf3a2d7",
-    "ts": "2026-06-20T12:51:48.231493",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4c0f9015",
-    "ts": "2026-06-20T12:51:41.039174",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "30b8c703",
-    "ts": "2026-06-20T12:51:34.701355",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "687f00b4",
-    "ts": "2026-06-20T12:51:28.112939",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 3"
-  },
-  {
-    "id": "21e9aad7",
-    "ts": "2026-06-20T12:51:22.315200",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "edc55b54",
-    "ts": "2026-06-20T12:51:15.537113",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8c956a80",
-    "ts": "2026-06-20T12:49:36.269347",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2ce8b025",
-    "ts": "2026-06-20T12:49:32.540699",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "bdca0f9e",
-    "ts": "2026-06-20T12:49:28.928100",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "741186d4",
-    "ts": "2026-06-20T12:49:25.253522",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0e90108d",
-    "ts": "2026-06-20T12:49:22.087437",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7439e938",
-    "ts": "2026-06-20T12:49:18.461176",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "715ef612",
-    "ts": "2026-06-20T12:49:15.122100",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b4ed3897",
-    "ts": "2026-06-20T12:49:11.025088",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab6cbf55",
-    "ts": "2026-06-20T12:48:59.542353",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5f88affb",
-    "ts": "2026-06-20T12:48:55.586469",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5747c6eb",
-    "ts": "2026-06-20T12:48:52.044439",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "84ead948",
-    "ts": "2026-06-20T12:48:46.558749",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "714ef7ff",
-    "ts": "2026-06-20T12:48:42.613905",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "25424bce",
-    "ts": "2026-06-20T12:48:38.418544",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "559c1808",
-    "ts": "2026-06-20T12:48:34.929308",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "96d64790",
-    "ts": "2026-06-20T12:48:32.187396",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "00d2d278",
-    "ts": "2026-06-20T12:48:29.172447",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "eabf2b7c",
-    "ts": "2026-06-20T12:48:25.868414",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "966ff3a3",
-    "ts": "2026-06-20T12:48:23.233814",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c4700724",
-    "ts": "2026-06-20T12:48:19.368109",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "351f7599",
-    "ts": "2026-06-20T12:48:15.807537",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ed272120",
-    "ts": "2026-06-20T12:48:12.318301",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "4776579c",
-    "ts": "2026-06-20T12:48:07.481355",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2720de5e",
-    "ts": "2026-06-20T12:48:04.227019",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6fd1023a",
-    "ts": "2026-06-20T12:48:00.831820",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8b2f86e5",
-    "ts": "2026-06-20T12:47:57.040542",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f4f4c14d",
-    "ts": "2026-06-20T12:47:53.632180",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cb0b045b",
-    "ts": "2026-06-20T12:47:44.578964",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7e22ece5",
-    "ts": "2026-06-20T12:47:32.114378",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "196aa251",
-    "ts": "2026-06-20T12:47:25.930397",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "89e7db8f",
-    "ts": "2026-06-20T12:47:20.031372",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fe76a9fd",
-    "ts": "2026-06-20T12:47:13.317683",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d38bb3cf",
-    "ts": "2026-06-20T12:47:06.522527",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d04d82c7",
-    "ts": "2026-06-20T12:45:31.190188",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "afcf7965",
-    "ts": "2026-06-20T12:45:28.035376",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e9ac9bc1",
-    "ts": "2026-06-20T12:45:24.148982",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e5f66c11",
-    "ts": "2026-06-20T12:45:20.496129",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "61095285",
-    "ts": "2026-06-20T12:45:17.276653",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "12201e61",
-    "ts": "2026-06-20T12:43:41.744850",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "498fccf9",
-    "ts": "2026-06-20T12:43:38.640774",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4f1349bf",
-    "ts": "2026-06-20T12:43:34.911831",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "820702a1",
-    "ts": "2026-06-20T12:43:31.226486",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "70e867e0",
-    "ts": "2026-06-20T12:43:28.052338",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4bf31851",
-    "ts": "2026-06-20T12:43:24.979558",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dd679b38",
-    "ts": "2026-06-20T12:43:21.576450",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "dd9afb97",
-    "ts": "2026-06-20T12:43:18.785620",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "dd9b9589",
-    "ts": "2026-06-20T12:43:09.961922",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Bangalore'"
-  },
-  {
-    "id": "fa941fd6",
-    "ts": "2026-06-20T12:43:09.879665",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Remote"
-  },
-  {
-    "id": "5d479c26",
-    "ts": "2026-06-20T12:43:09.789208",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2aed7bcc",
-    "ts": "2026-06-20T12:43:06.364300",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "fa4fa59a",
-    "ts": "2026-06-20T12:42:59.505097",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "479ca0a4",
-    "ts": "2026-06-20T12:42:52.805260",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "709ac2d3",
-    "ts": "2026-06-20T12:42:48.931255",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "23d56596",
-    "ts": "2026-06-20T12:42:45.478328",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8f43c3b3",
-    "ts": "2026-06-20T12:42:42.603148",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "19deb594",
-    "ts": "2026-06-20T12:42:39.398843",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "eaba9861",
-    "ts": "2026-06-20T12:42:36.038184",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "775e67ea",
-    "ts": "2026-06-20T12:42:33.153765",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "01658f86",
-    "ts": "2026-06-20T12:42:30.329095",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f312e74c",
-    "ts": "2026-06-20T12:42:27.039975",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d256b741",
-    "ts": "2026-06-20T12:42:24.222238",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2f563f9c",
-    "ts": "2026-06-20T12:40:52.560812",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "60dc817e",
-    "ts": "2026-06-20T12:40:48.676696",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "bbc80b9b",
-    "ts": "2026-06-20T12:40:42.450286",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 17 jobs on page 2"
-  },
-  {
-    "id": "4de7c87c",
-    "ts": "2026-06-20T12:39:02.244558",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3f1f90ca",
-    "ts": "2026-06-20T12:38:58.900758",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "46ddb939",
-    "ts": "2026-06-20T12:38:55.584679",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "67e8d847",
-    "ts": "2026-06-20T12:38:52.448494",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0d98280a",
-    "ts": "2026-06-20T12:38:49.384588",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4682d8c5",
-    "ts": "2026-06-20T12:38:46.233604",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "06fb182c",
-    "ts": "2026-06-20T12:38:42.629819",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "296bb876",
-    "ts": "2026-06-20T12:38:39.028449",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "25bac6f8",
-    "ts": "2026-06-20T12:38:35.755356",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e9254d04",
-    "ts": "2026-06-20T12:38:32.667359",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ce83e6cc",
-    "ts": "2026-06-20T12:38:25.728022",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b895f356",
-    "ts": "2026-06-20T12:38:21.628169",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a651a0f1",
-    "ts": "2026-06-20T12:38:17.674095",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "50dce63f",
-    "ts": "2026-06-20T12:38:11.116449",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f199cd4b",
-    "ts": "2026-06-20T12:38:07.364761",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d3d9dc07",
-    "ts": "2026-06-20T12:38:03.734814",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e23db0a3",
-    "ts": "2026-06-20T12:37:57.801293",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "65aaa510",
-    "ts": "2026-06-20T12:37:51.682012",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "79f7b1d4",
-    "ts": "2026-06-20T12:37:45.627759",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "451316da",
-    "ts": "2026-06-20T12:37:39.550682",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a737f88d",
-    "ts": "2026-06-20T12:35:54.519741",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e996eba0",
-    "ts": "2026-06-20T12:35:51.347855",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6f708e0b",
-    "ts": "2026-06-20T12:35:47.384287",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "31ef5152",
-    "ts": "2026-06-20T12:35:43.557942",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "019cd916",
-    "ts": "2026-06-20T12:35:33.080143",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Remote'"
-  },
-  {
-    "id": "ac80273b",
-    "ts": "2026-06-20T12:35:32.981724",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "3284f02e",
-    "ts": "2026-06-20T12:35:32.728921",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "48f5e10d",
-    "ts": "2026-06-20T12:35:26.751476",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "03c5dac1",
-    "ts": "2026-06-20T12:35:25.526096",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "2364bd88",
-    "ts": "2026-06-20T12:35:25.456483",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "fdd632f0",
-    "ts": "2026-06-20T12:35:25.378077",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 8, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 4, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "b36c5313",
-    "ts": "2026-06-20T12:35:25.316275",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "19639edc",
-    "ts": "2026-06-20T12:35:25.257090",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\20-06-2026"
-  },
-  {
-    "id": "d972c6e8",
-    "ts": "2026-06-20T12:35:25.186418",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-20 12:35:25"
-  },
-  {
-    "id": "f33a0089",
-    "ts": "2026-06-20T12:35:25.129711",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "13503fdd",
-    "ts": "2026-06-20T12:35:25.067174",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "65e0a712",
-    "ts": "2026-06-20T12:35:24.998476",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "c48b8b3c",
-    "ts": "2026-06-20T12:35:24.928987",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
   }
 ]
