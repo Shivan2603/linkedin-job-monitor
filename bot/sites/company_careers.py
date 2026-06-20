@@ -400,6 +400,21 @@ def _discover_jobs_from_target_companies(page) -> list:
     return list(set(urls))
 
 
+def is_block_page(page) -> bool:
+    """Returns True if the page displays a Cloudflare block, Access Denied, or 403/404 error."""
+    try:
+        title = page.title().lower()
+        if any(term in title for term in ["access denied", "cloudflare", "attention required", "security check", "forbidden", "403"]):
+            return True
+        body_text = page.inner_text("body").lower()
+        if "cloudflare" in body_text and ("ray id" in body_text or "enable javascript" in body_text or "security check" in body_text):
+            return True
+        if "access denied" in body_text and "error code 1020" in body_text:
+            return True
+    except Exception:
+        pass
+    return False
+
 def _apply_to_career_page(page, url: str) -> bool:
     """Navigate to a career page URL and attempt to apply using AI form filler"""
     logger.info(f"Processing: {url[:80]}…", SITE)
@@ -407,6 +422,11 @@ def _apply_to_career_page(page, url: str) -> bool:
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=30000)
         _human_delay(2, 4)
+
+        # Check for Cloudflare / Access Denied block
+        if is_block_page(page):
+            logger.warn(f"Skipping {url[:60]}... — Access Denied / Cloudflare block page detected", SITE)
+            return False
 
         # Extract company & job title from page
         page_title = page.title()
@@ -511,14 +531,38 @@ def _detect_portal(url: str) -> str:
 
 
 def _extract_company_from_url(url: str) -> str:
-    """Best-effort company name from URL"""
+    """Extracts company name from URL, handling subdomains, country codes, and ATS domains."""
     try:
-        m = re.search(r'lever\.co/([^/]+)', url)
-        if m: return m.group(1).title()
-        m = re.search(r'greenhouse\.io/([^/]+)', url)
-        if m: return m.group(1).title()
-        m = re.search(r'https?://(?:www\.|careers\.)?([^./]+)', url)
-        if m: return m.group(1).title()
+        parsed = urlparse(url)
+        domain = parsed.netloc.lower()
+        path = parsed.path.lower()
+        
+        # 1. Handle ATS domains where company is in path or subdomain
+        if "lever.co" in domain:
+            parts = [p for p in path.split("/") if p]
+            if parts:
+                return parts[0].title()
+        if "greenhouse.io" in domain:
+            parts = [p for p in path.split("/") if p]
+            if parts:
+                return parts[0].title()
+        if "myworkdayjobs.com" in domain:
+            parts = domain.split(".")
+            if parts and parts[0] != "www":
+                return parts[0].title()
+                
+        # 2. Strip common prefixes
+        domain = domain.replace("www.", "").replace("careers.", "").replace("jobs.", "")
+        
+        # 3. Handle country codes (e.g. company.com.my, company.co.uk)
+        parts = domain.split(".")
+        if len(parts) >= 3 and parts[-2] in ["com", "co", "org", "net", "edu", "gov"]:
+            return parts[-3].capitalize()
+            
+        if len(parts) >= 2:
+            return parts[-2].capitalize()
+            
+        return parts[0].capitalize()
     except Exception:
         pass
     return "Unknown Company"

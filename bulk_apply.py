@@ -45,6 +45,56 @@ def remove_url_from_file(url: str):
             if line.strip() != url:
                 f.write(line)
 
+def is_block_page(page) -> bool:
+    try:
+        title = page.title().lower()
+        if any(term in title for term in ["access denied", "cloudflare", "attention required", "security check", "forbidden", "403"]):
+            return True
+        body_text = page.inner_text("body").lower()
+        if "cloudflare" in body_text and ("ray id" in body_text or "enable javascript" in body_text or "security check" in body_text):
+            return True
+        if "access denied" in body_text and "error code 1020" in body_text:
+            return True
+    except Exception:
+        pass
+    return False
+
+def _extract_company_from_url(url: str) -> str:
+    try:
+        parsed = urlparse(url)
+        domain = parsed.netloc.lower()
+        path = parsed.path.lower()
+        
+        # 1. Handle ATS domains where company is in path or subdomain
+        if "lever.co" in domain:
+            parts = [p for p in path.split("/") if p]
+            if parts:
+                return parts[0].title()
+        if "greenhouse.io" in domain:
+            parts = [p for p in path.split("/") if p]
+            if parts:
+                return parts[0].title()
+        if "myworkdayjobs.com" in domain:
+            parts = domain.split(".")
+            if parts and parts[0] != "www":
+                return parts[0].title()
+                
+        # 2. Strip common prefixes
+        domain = domain.replace("www.", "").replace("careers.", "").replace("jobs.", "")
+        
+        # 3. Handle country codes (e.g. company.com.my, company.co.uk)
+        parts = domain.split(".")
+        if len(parts) >= 3 and parts[-2] in ["com", "co", "org", "net", "edu", "gov"]:
+            return parts[-3].capitalize()
+            
+        if len(parts) >= 2:
+            return parts[-2].capitalize()
+            
+        return parts[0].capitalize()
+    except Exception:
+        pass
+    return "Unknown Company"
+
 def apply_to_url(page, url: str) -> bool:
     logger.info(f"\n==================================================", SITE)
     logger.info(f"Processing URL: {url}", SITE)
@@ -53,6 +103,12 @@ def apply_to_url(page, url: str) -> bool:
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
         time.sleep(3)
+
+        # Check for Cloudflare / Access Denied block
+        if is_block_page(page):
+            logger.warn(f"Skipping {url[:60]}... — Access Denied / Cloudflare block page detected", SITE)
+            remove_url_from_file(url)
+            return False
 
         # Get Page Title & Metadata
         page_title = page.title()
@@ -80,21 +136,17 @@ def apply_to_url(page, url: str) -> bool:
             if " - " in page_title:
                 parts = page_title.split(" - ")
                 job_title = job_title or parts[0].strip()
-                company = company or (parts[1].strip() if len(parts) > 1 else "Unknown Company")
+                company = company or (parts[1].strip() if len(parts) > 1 else "")
             elif " | " in page_title:
                 parts = page_title.split(" | ")
                 job_title = job_title or parts[0].strip()
                 company = company or parts[-1].strip()
             else:
                 job_title = job_title or "Software Engineer"
-                company = company or "Company"
+                company = company or _extract_company_from_url(url)
                 
-                # Extract company from URL as fallback
-                m = re.search(r'lever\.co/([^/]+)', url)
-                if m: company = m.group(1).title()
-                else:
-                    m = re.search(r'greenhouse\.io/([^/]+)', url)
-                    if m: company = m.group(1).title()
+            if not company:
+                company = _extract_company_from_url(url)
 
         # Clean job title (remove location keywords)
         job_title = re.sub(r'\s+', ' ', job_title).strip()
