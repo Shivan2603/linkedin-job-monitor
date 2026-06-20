@@ -1,5 +1,47 @@
 [
   {
+    "id": "e613602d",
+    "ts": "2026-06-20T16:28:48.295046",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Noir | .NET Developer - Exeter | Exeter, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "244e0bad",
+    "ts": "2026-06-20T16:28:48.142088",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Noir — .NET Developer - Exeter"
+  },
+  {
+    "id": "9c6bbd32",
+    "ts": "2026-06-20T16:28:44.664826",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "0afb6382",
+    "ts": "2026-06-20T16:28:44.519563",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_NET_Developer_Exeter_Noir_Resume.docx' = 'Deselect resume Siva_Shankar_NET_Developer_Exeter_Noir_Resume.docx'"
+  },
+  {
+    "id": "aa6feddf",
+    "ts": "2026-06-20T16:28:44.420831",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'UK'"
+  },
+  {
+    "id": "c53a75a3",
+    "ts": "2026-06-20T16:26:49.796017",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "950b5a46",
     "ts": "2026-06-20T16:26:18.517263",
     "level": "SUCCESS",
@@ -3456,47 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "baf34243",
-    "ts": "2026-06-20T15:40:54.139898",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "21209743",
-    "ts": "2026-06-20T15:40:53.780556",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "59061822",
-    "ts": "2026-06-20T15:40:53.664429",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "2638aed6",
-    "ts": "2026-06-20T15:40:53.314291",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "60a3fe3b",
-    "ts": "2026-06-20T15:40:52.961558",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "b45ca310",
-    "ts": "2026-06-20T15:40:52.604103",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
   }
 ]
