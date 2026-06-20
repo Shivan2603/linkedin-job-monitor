@@ -2,12 +2,13 @@
 bot/ai_agent_filler.py — AI-Powered Web Form Filler
 Primary: Groq Llama 3.1 8B (fast) | Fallback: Groq 70B → Gemini → HuggingFace
 """
-import json, os, yaml, re, time
+import json, os, yaml, re, time, random
 from urllib.parse import urlparse
 from playwright.sync_api import Page
 from bot.config import GROQ_API_KEY, PROJECT_FOLDER, DATA_FOLDER
 from bot.utils import logger
 from bot.ai_router import ai_complete
+from bot.utils.safety import human_fill
 
 ACCOUNTS_FILE = os.path.join(DATA_FOLDER, "workday_accounts.json")
 
@@ -384,6 +385,8 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
 
         system = """You are an AI job application assistant filling web forms.
 Be precise. Match dropdown values EXACTLY from the options list.
+CRITICAL: The candidate has exactly 4 years (4+ years) of total professional software engineering experience.
+If any question asks for years of experience (overall, or with specific technologies like .NET, C#, Angular, SQL Server, etc.), prioritize answering '4' or '4+' or the closest match aligning with this 4-year experience profile. Never fabricate higher numbers.
 Return ONLY a valid JSON array, no other text."""
 
         user = f"""User profile:
@@ -466,10 +469,14 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                         "dropdown" in el.evaluate("el => (el.getAttribute('data-automation-id') || '').toLowerCase()", timeout=2000) or
                         "select" in el.evaluate("el => (el.getAttribute('data-automation-id') || '').toLowerCase()", timeout=2000)
                     )
+                    
+                    # Resolve element label for human-like typing log
+                    label = next((f.get("label") for f in fields if f.get("id") == field_id), "input")
 
                     if tag_name == "select":
                         el.select_option(label=str(val))
                         filled += 1
+                        time.sleep(random.uniform(1.0, 2.5))
                     elif is_combobox:
                         # Interact with custom combobox
                         logger.info(f"AI Filler: Interacting with custom combobox '{field_id}' for value '{val}'", site)
@@ -543,6 +550,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                             page.mouse.click(10, 10)
                         else:
                             filled += 1
+                            time.sleep(random.uniform(1.0, 2.5))
                             
                     elif input_type in ["checkbox", "radio"] or role in ["checkbox", "radio"]:
                         if str(val).lower() in ["check", "true", "yes", "1"]:
@@ -554,16 +562,19 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                                 except Exception:
                                     el.evaluate("el => el.click()")
                             filled += 1
+                            time.sleep(random.uniform(1.0, 2.5))
                     elif input_type == "file":
                         pass
                     elif input_type == "number":
                         num_val = ''.join(c for c in str(val) if c.isdigit() or c == '.')
                         if num_val:
-                            el.fill(num_val)
+                            human_fill(el, num_val, label, site)
                             filled += 1
+                            time.sleep(random.uniform(1.0, 2.5))
                     else:
-                        el.fill(str(val))
+                        human_fill(el, str(val), label, site)
                         filled += 1
+                        time.sleep(random.uniform(1.0, 2.5))
                 except Exception as ex:
                     pass
 
