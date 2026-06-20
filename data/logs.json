@@ -1,5 +1,243 @@
 [
   {
+    "id": "90e3ba62",
+    "ts": "2026-06-20T16:36:42.957226",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Reggie & Cole | Lead Software Engineer | Egham, England, United Kingdom | 100% match"
+  },
+  {
+    "id": "ffdac7d9",
+    "ts": "2026-06-20T16:36:42.805432",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Reggie & Cole — Lead Software Engineer"
+  },
+  {
+    "id": "76b06072",
+    "ts": "2026-06-20T16:36:39.409377",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "1cc3a981",
+    "ts": "2026-06-20T16:36:39.259893",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Lead_Software_Engineer_Reggie___Cole_Resume.docx' = 'Deselect resume Siva_Shankar_Lead_Software_Engineer_Reggie___Cole_Resume.docx'"
+  },
+  {
+    "id": "0140d69d",
+    "ts": "2026-06-20T16:36:39.096695",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'United Kingdom'"
+  },
+  {
+    "id": "87d0a443",
+    "ts": "2026-06-20T16:36:39.013805",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = '.NET Core Developer'"
+  },
+  {
+    "id": "866da9d5",
+    "ts": "2026-06-20T16:34:40.426213",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "2cbea1d5",
+    "ts": "2026-06-20T16:34:03.564081",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 24 jobs on page 1"
+  },
+  {
+    "id": "559771a8",
+    "ts": "2026-06-20T16:33:56.268915",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'UK'"
+  },
+  {
+    "id": "fd388214",
+    "ts": "2026-06-20T16:33:56.177297",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Remote"
+  },
+  {
+    "id": "4a66a6eb",
+    "ts": "2026-06-20T16:33:56.057939",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.click: Element is not attached to the DOM\nCall log:\nattempting click action\n  -   wait"
+  },
+  {
+    "id": "bc19397c",
+    "ts": "2026-06-20T16:33:51.641522",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ec70e44c",
+    "ts": "2026-06-20T16:33:44.580369",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "42feafdc",
+    "ts": "2026-06-20T16:33:37.735128",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Core Developer' in 'Remote'"
+  },
+  {
+    "id": "48d53db4",
+    "ts": "2026-06-20T16:33:37.646051",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Hyderabad"
+  },
+  {
+    "id": "57d810dc",
+    "ts": "2026-06-20T16:33:31.215242",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "158351ab",
+    "ts": "2026-06-20T16:33:27.980316",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 3 jobs on page 1"
+  },
+  {
+    "id": "91a4d9a2",
+    "ts": "2026-06-20T16:33:19.463772",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Hyderabad'"
+  },
+  {
+    "id": "afbe0a11",
+    "ts": "2026-06-20T16:33:19.375218",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Chennai"
+  },
+  {
+    "id": "a14a0015",
+    "ts": "2026-06-20T16:33:12.815249",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "a9ef58d6",
+    "ts": "2026-06-20T16:33:09.341370",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 3 jobs on page 1"
+  },
+  {
+    "id": "67e6898f",
+    "ts": "2026-06-20T16:33:01.887226",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Chennai'"
+  },
+  {
+    "id": "0fccbcc1",
+    "ts": "2026-06-20T16:33:01.807542",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Bangalore"
+  },
+  {
+    "id": "af374946",
+    "ts": "2026-06-20T16:32:43.051631",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "6d499737",
+    "ts": "2026-06-20T16:32:40.135092",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 7 jobs on page 1"
+  },
+  {
+    "id": "596efafb",
+    "ts": "2026-06-20T16:32:32.420161",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Bangalore'"
+  },
+  {
+    "id": "07d6ae00",
+    "ts": "2026-06-20T16:32:32.307325",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Singapore"
+  },
+  {
+    "id": "4a772782",
+    "ts": "2026-06-20T16:32:29.148439",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
+    "id": "c460f02a",
+    "ts": "2026-06-20T16:32:21.215262",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Singapore'"
+  },
+  {
+    "id": "7f750e6f",
+    "ts": "2026-06-20T16:32:21.135439",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Malaysia"
+  },
+  {
+    "id": "99d7cba6",
+    "ts": "2026-06-20T16:31:55.455481",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "e029b1e5",
+    "ts": "2026-06-20T16:31:46.325038",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'Malaysia'"
+  },
+  {
+    "id": "4aacd432",
+    "ts": "2026-06-20T16:31:46.285373",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Australia"
+  },
+  {
+    "id": "fdcc4fb0",
+    "ts": "2026-06-20T16:31:43.058983",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
     "id": "dc3a6c9c",
     "ts": "2026-06-20T16:31:32.764783",
     "level": "INFO",
@@ -3260,243 +3498,5 @@
     "level": "AI",
     "site": "linkedin",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2a7d8a15",
-    "ts": "2026-06-20T15:43:55.430686",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "71cbf84e",
-    "ts": "2026-06-20T15:43:50.164094",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ebb0cf62",
-    "ts": "2026-06-20T15:43:42.067330",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3e534365",
-    "ts": "2026-06-20T15:43:35.735951",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f420d8ac",
-    "ts": "2026-06-20T15:43:32.019604",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d4f7e05f",
-    "ts": "2026-06-20T15:43:27.753915",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cd063266",
-    "ts": "2026-06-20T15:43:23.316807",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "91c33d5e",
-    "ts": "2026-06-20T15:43:20.325686",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4c1e505b",
-    "ts": "2026-06-20T15:43:16.554904",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "90da0597",
-    "ts": "2026-06-20T15:43:12.072537",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "0d02b017",
-    "ts": "2026-06-20T15:43:03.657581",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'UK'"
-  },
-  {
-    "id": "f2df48c8",
-    "ts": "2026-06-20T15:43:03.535474",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Hyderabad"
-  },
-  {
-    "id": "6cf9a271",
-    "ts": "2026-06-20T15:43:03.395594",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "5a9e3aae",
-    "ts": "2026-06-20T15:43:03.012305",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "12c9f193",
-    "ts": "2026-06-20T15:43:01.962908",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "75aa6d3b",
-    "ts": "2026-06-20T15:43:01.589699",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "d07b2f28",
-    "ts": "2026-06-20T15:43:01.282287",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5860d1c8",
-    "ts": "2026-06-20T15:42:53.736324",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 5 jobs on page 1"
-  },
-  {
-    "id": "2d9a070c",
-    "ts": "2026-06-20T15:42:44.603213",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Hyderabad'"
-  },
-  {
-    "id": "2cabc235",
-    "ts": "2026-06-20T15:42:44.477013",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Chennai"
-  },
-  {
-    "id": "b0751a06",
-    "ts": "2026-06-20T15:42:44.222001",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCall log:\nattempting sc"
-  },
-  {
-    "id": "54f2a0de",
-    "ts": "2026-06-20T15:41:37.201687",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "1b7248cc",
-    "ts": "2026-06-20T15:41:37.038505",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Have you worked directly with cellular modems (AT Commands, QMI, Qualcomm SDKs, Sierra Wireless, Quectel, Telit, etc.)?' = 'No'"
-  },
-  {
-    "id": "11ea50e0",
-    "ts": "2026-06-20T15:41:36.938492",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Expereince in telecom protocols or signaling layers (e.g., SIP, RRC, NAS) ?' = 'No'"
-  },
-  {
-    "id": "3779aacd",
-    "ts": "2026-06-20T15:41:36.838442",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Do you have hands-on experience with mobile network technologies (4G/LTE, 5G, IMS/VoLTE, IoT)?' = 'No'"
-  },
-  {
-    "id": "5bf3445d",
-    "ts": "2026-06-20T15:41:36.745540",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How soon can you join our team if selected? Answer in how many months?' = 'I am currently serving a notice period, with my last working day on 14th August 2026. Therefore, I can join the team approximately 2 months after my last working day.'"
-  },
-  {
-    "id": "6f60d2eb",
-    "ts": "2026-06-20T15:41:36.644963",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'How many years of work experience do you have with C++?' = '0'"
-  },
-  {
-    "id": "5576af64",
-    "ts": "2026-06-20T15:41:35.794463",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq-Fast (form_fill)"
-  },
-  {
-    "id": "a26dd380",
-    "ts": "2026-06-20T15:41:35.480312",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "6632279b",
-    "ts": "2026-06-20T15:41:35.356222",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "dca6b288",
-    "ts": "2026-06-20T15:41:35.012102",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "f03409ad",
-    "ts": "2026-06-20T15:41:34.496185",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "c6fc5c7d",
-    "ts": "2026-06-20T15:41:34.112266",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "a40982e7",
-    "ts": "2026-06-20T15:41:33.534054",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
   }
 ]
