@@ -43,6 +43,14 @@ def check_and_handle_cloudflare(page, timeout_seconds=180) -> bool:
     
     if is_cf:
         logger.warn("⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window.", SITE)
+        # Audible beep warning to get the user's attention
+        try:
+            import winsound
+            for _ in range(3):
+                winsound.Beep(1000, 500)
+                time.sleep(0.2)
+        except Exception:
+            pass
         
         # Poll the page until the challenge is resolved or timeout
         start = time.time()
@@ -66,10 +74,33 @@ def check_and_handle_cloudflare(page, timeout_seconds=180) -> bool:
     return True
 
 def is_indeed_logged_in(page) -> bool:
+    if page.is_closed():
+        return False
     url = page.url.lower()
     if "accounts.google.com" in url or "appleid.apple.com" in url:
         return False
     if "/auth" in url or "/passkey" in url or "/mfa" in url:
+        return False
+        
+    cf_indicators = [
+        "additional verification required",
+        "please verify you are a human",
+        "verify you are human",
+        "ray id:",
+        "cf-challenge",
+        "cloudflare-challenge",
+        "just a moment...",
+        "checking your browser",
+        "enable cookies and javascript"
+    ]
+    try:
+        title = page.title().lower()
+        content = page.content().lower()
+    except Exception:
+        return False
+
+    # If currently encountering Cloudflare, we are NOT considered logged in!
+    if any(ind in title or ind in content for ind in cf_indicators):
         return False
         
     logged_in_selectors = [
@@ -114,7 +145,8 @@ def _ensure_logged_in(page, base_url: str) -> bool:
         logger.warn(f"Failed to navigate to {base_url}: {e}", SITE)
         
     _human_delay(2, 3)
-    check_and_handle_cloudflare(page)
+    if not check_and_handle_cloudflare(page):
+        return False
     
     if is_indeed_logged_in(page):
         logger.success(f"Indeed already logged in on {base_url} ✅", SITE)
@@ -129,7 +161,8 @@ def _ensure_logged_in(page, base_url: str) -> bool:
         logger.warn(f"Failed to navigate to auth page: {e}", SITE)
         
     _human_delay(2, 3)
-    check_and_handle_cloudflare(page)
+    if not check_and_handle_cloudflare(page):
+        return False
 
     # Try email/pwd autofill to assist
     creds = CREDENTIALS["indeed"]
@@ -142,7 +175,8 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                 _human_delay(1, 1.5)
                 page.locator('button[type="submit"]').first.click()
                 _human_delay(2, 3)
-                check_and_handle_cloudflare(page)
+                if not check_and_handle_cloudflare(page):
+                    return False
                 
                 pass_input = page.locator('input[type="password"]').first
                 if pass_input.is_visible():
@@ -150,7 +184,8 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                     _human_delay(1, 1.5)
                     page.locator('button[type="submit"]').first.click()
                     _human_delay(2, 3)
-                    check_and_handle_cloudflare(page)
+                    if not check_and_handle_cloudflare(page):
+                        return False
         except Exception:
             pass
 
@@ -164,7 +199,8 @@ def _ensure_logged_in(page, base_url: str) -> bool:
     while time.time() - start_time < timeout_sec:
         if page.is_closed():
             return False
-        check_and_handle_cloudflare(page)
+        if not check_and_handle_cloudflare(page):
+            return False
         
         # Auto-dismiss Indeed's passkey setup prompt if it appears
         try:
@@ -214,7 +250,8 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
         return
         
     _human_delay(2, 3)
-    check_and_handle_cloudflare(page)
+    if not check_and_handle_cloudflare(page):
+        return
 
     applied = 0
     cards = page.query_selector_all(".job_seen_beacon, .tapItem")
@@ -225,12 +262,14 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             return
             
         try:
-            check_and_handle_cloudflare(page)
+            if not check_and_handle_cloudflare(page):
+                return
             card.scroll_into_view_if_needed()
             _human_delay(0.3, 0.6)
             card.click()
             _human_delay(1.5, 2.5)
-            check_and_handle_cloudflare(page)
+            if not check_and_handle_cloudflare(page):
+                return
 
             title_el   = page.query_selector(".jobsearch-JobInfoHeader-title span:first-child")
             company_el = page.query_selector('[data-company-name="true"]')
@@ -259,12 +298,14 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
 
             apply_btn.click()
             _human_delay(2, 3)
-            check_and_handle_cloudflare(page)
+            if not check_and_handle_cloudflare(page):
+                return
 
             # Handle Indeed Apply flow
             for _ in range(8):
                 _human_delay(1, 2)
-                check_and_handle_cloudflare(page)
+                if not check_and_handle_cloudflare(page):
+                    return
                 next_b = page.query_selector('button[type="submit"]')
                 if next_b:
                     upload = page.query_selector('input[type="file"]')

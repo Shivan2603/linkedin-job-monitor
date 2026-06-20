@@ -251,11 +251,68 @@ def safe_browser_context(playwright, site: str):
 
     context = playwright.chromium.launch_persistent_context(**launch_kwargs)
     
-    # Remove navigator.webdriver flag
+    # Remove navigator.webdriver flag and add advanced anti-fingerprinting overrides
     context.add_init_script("""
-        Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-        Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
-        window.chrome = { runtime: {} };
+        // 1. Delete the navigator.webdriver property descriptor
+        const newProto = navigator.__proto__;
+        delete newProto.webdriver;
+        navigator.__proto__ = newProto;
+
+        // 2. Mock languages and plugins
+        Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+        Object.defineProperty(navigator, 'plugins', {
+            get: () => {
+                const mockPluginArray = [
+                    { name: 'PDF Viewer', filename: 'internal-pdf-viewer', description: 'Portable Document Format' },
+                    { name: 'Chrome PDF Viewer', filename: 'mhjfbgojdegpeflyipianaadaegdfegg', description: 'Google Chrome PDF Viewer' },
+                    { name: 'Chromium PDF Viewer', filename: 'internal-pdf-viewer', description: 'Chromium PDF Viewer' }
+                ];
+                mockPluginArray.item = function(index) { return this[index]; };
+                mockPluginArray.namedItem = function(name) { return this.find(p => p.name === name); };
+                return mockPluginArray;
+            }
+        });
+
+        // 3. Mock standard window.chrome object
+        window.chrome = {
+            app: {
+                isInstalled: false,
+                InstallState: { DISABLED: 'Disabled', INSTALLED: 'Installed', NOT_INSTALLED: 'NotInstalled' },
+                RunningState: { CANNOT_RUN: 'CannotRun', RUNNING: 'Running', SUGGESTED_SAVING: 'SuggestedSaving' }
+            },
+            csi: function() { return {}; },
+            loadTimes: function() { return {}; },
+            runtime: {
+                OnInstalledReason: { CHROME_UPDATE: 'chrome_update', INSTALL: 'install', SHARED_MODULE_UPDATE: 'shared_module_update', UPDATE: 'update' },
+                OnRestartRequiredReason: { APP_UPDATE: 'app_update', OS_UPDATE: 'os_update', PERIODIC: 'periodic' },
+                PlatformArch: { ARM: 'arm', ARM64: 'arm64', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
+                PlatformNaclArch: { ARM: 'arm', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
+                PlatformOs: { ANDROID: 'android', CROS: 'cros', LINUX: 'linux', MAC: 'mac', OPENBSD: 'openbsd', WIN: 'win' },
+                RequestUpdateCheckStatus: { NO_UPDATE: 'no_update', THROTTLED: 'throttled', UPDATE_AVAILABLE: 'update_available' }
+            }
+        };
+
+        // 4. Mock permissions query
+        const originalQuery = window.navigator.permissions.query;
+        window.navigator.permissions.query = (parameters) => (
+            parameters.name === 'notifications' ?
+                Promise.resolve({ state: Notification.permission, onchange: null }) :
+                originalQuery(parameters)
+        );
+
+        // 5. Mock WebGL vendor/renderer to standard integrated/discrete graphics card
+        const getParameter = WebGLRenderingContext.prototype.getParameter;
+        WebGLRenderingContext.prototype.getParameter = function(parameter) {
+            // UNMASKED_VENDOR_WEBGL
+            if (parameter === 37445) {
+                return 'Intel Open Source Technology Center';
+            }
+            // UNMASKED_RENDERER_WEBGL
+            if (parameter === 37446) {
+                return 'Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2)';
+            }
+            return getParameter.apply(this, arguments);
+        };
     """)
     
     # Return context as both browser and context for backwards compatibility
