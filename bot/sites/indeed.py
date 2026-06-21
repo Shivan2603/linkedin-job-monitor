@@ -270,7 +270,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
 
     from urllib.parse import quote
     logger.info(f"Searching Indeed: '{job_title}' in '{location}' on {base_url}", SITE)
-    url = f"{base_url}/jobs?q={quote(job_title)}&l={quote(location)}&iafilter=1"
+    url = f"{base_url}/jobs?q={quote(job_title)}&l={quote(location)}"
     
     try:
         page.goto(url, wait_until="domcontentloaded")
@@ -291,11 +291,17 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     for card in cards:
         try:
             # Check if indeed apply tag or button is present
-            indeed_apply = card.query_selector('[data-testid="indeedApply"], .ia-continueButton, [id*="indeedApplyButton"]')
-            if not indeed_apply:
+            indeed_apply = card.query_selector('[data-testid="indeedApply"], .ia-continueButton, [id*="indeedApplyButton"], .iaIcon')
+            is_indeed_apply = True if indeed_apply else False
+            if not is_indeed_apply:
                 card_text = card.inner_text().lower()
-                if "indeed apply" not in card_text and "candidature simplifiée" not in card_text:
-                    continue
+                indeed_apply_keywords = [
+                    "easily apply", "indeed apply", "candidature simplifiée", 
+                    "einfach bewerben", "postularse fácilmente", "candidatura semplice", 
+                    "solliciteer eenvoudig", "szybkie aplikowanie", "apply from your phone",
+                    "apply now"
+                ]
+                is_indeed_apply = any(kw in card_text for kw in indeed_apply_keywords)
             
             # Find the job title and link
             link_el = card.query_selector('a.jcs-JobTitle, a[id*="job_"]')
@@ -318,19 +324,25 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             jobs_to_process.append({
                 "url": job_url,
                 "title": job_t,
-                "company": company
+                "company": company,
+                "is_indeed_apply": is_indeed_apply
             })
         except Exception as e:
             logger.warn(f"Error parsing job card metadata: {e}", SITE)
 
-    logger.info(f"Found {len(jobs_to_process)} Indeed Apply jobs to process on search page", SITE)
+    logger.info(f"Found {len(jobs_to_process)} Indeed jobs to process on search page", SITE)
+    # Sort to process Indeed Apply (Easy Apply) jobs first, then External Apply
+    jobs_to_process.sort(key=lambda j: j.get("is_indeed_apply", False), reverse=True)
     applied = 0
     from bot.utils.logger import record_application, is_already_applied, git_sync
 
     for job in jobs_to_process:
-        if not check_daily_limit(SITE):
-            logger.info("Indeed daily limit reached — stopping", SITE)
-            return
+        is_apply = job["is_indeed_apply"]
+        
+        # Only check Indeed Apply daily limit if this is an Indeed Apply job
+        if is_apply and not check_daily_limit(SITE):
+            logger.info("Indeed daily limit reached — skipping Indeed Apply job", SITE)
+            continue
             
         job_url = job["url"]
         job_t = job["title"]
@@ -340,7 +352,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             logger.info(f"Skipping {company} - {job_t} (Already applied)", SITE)
             continue
             
-        logger.info(f"Opening job page: {company} - {job_t}...", SITE)
+        logger.info(f"Opening job page: {company} - {job_t} ({'Indeed Apply' if is_apply else 'External Apply'})...", SITE)
         
         # Open in a fresh page context to prevent split-pane overlay bugs
         job_page = page.context.new_page()
@@ -351,68 +363,177 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 job_page.close()
                 continue
                 
-            desc_el = job_page.query_selector("#jobDescriptionText")
-            desc = desc_el.inner_text().strip() if desc_el else ""
-            
-            # Match tech stack and experience
-            tailor_result = tailor_resume(job_t, company, desc, site=SITE)
-            resume_path = tailor_result.get("resume_path", "")
-            if not resume_path:
-                logger.info(f"Skipping {company} - {job_t} (Tech stack or experience mismatch)", SITE)
-                job_page.close()
-                continue
+            if is_apply:
+                # ─── INDEED APPLY (EASY APPLY) FLOW ───
+                desc_el = job_page.query_selector("#jobDescriptionText")
+                desc = desc_el.inner_text().strip() if desc_el else ""
                 
-            # Locate the indeed apply button
-            apply_btn = None
-            for _ in range(5):
-                # 1. Custom styled classes (e.g. css-1ebo7dz)
-                apply_btn = job_page.query_selector('button:has(span[class*="css-1ebo7dz"]), button[class*="css-1ebo7dz"]')
+                # Match tech stack and experience
+                tailor_result = tailor_resume(job_t, company, desc, site=SITE)
+                resume_path = tailor_result.get("resume_path", "")
+                if not resume_path:
+                    logger.info(f"Skipping {company} - {job_t} (Tech stack or experience mismatch)", SITE)
+                    job_page.close()
+                    continue
+                    
+                # Locate the indeed apply button
+                apply_btn = None
+                for _ in range(5):
+                    # 1. Custom styled classes (e.g. css-1ebo7dz)
+                    apply_btn = job_page.query_selector('button:has(span[class*="css-1ebo7dz"]), button[class*="css-1ebo7dz"]')
+                    if not apply_btn:
+                        apply_btn = job_page.query_selector('button[id*="indeedApplyButton"], button.ia-continueButton')
+                    # 2. Text fallbacks
+                    if not apply_btn:
+                        apply_btn = job_page.query_selector('button:visible:has-text("Apply"), button:visible:has-text("Apply Now"), button:visible:has-text("Postuler")')
+                    # 3. Visible button heuristic
+                    if not apply_btn:
+                        btns = job_page.query_selector_all('button:visible')
+                        for btn in btns:
+                            text = (btn.inner_text() or "").lower()
+                            if "apply" in text or "postuler" in text:
+                                apply_btn = btn
+                                break
+                    if apply_btn:
+                        break
+                    time.sleep(1)
+                    
                 if not apply_btn:
-                    apply_btn = job_page.query_selector('button[id*="indeedApplyButton"], button.ia-continueButton')
-                # 2. Text fallbacks
-                if not apply_btn:
-                    apply_btn = job_page.query_selector('button:visible:has-text("Apply"), button:visible:has-text("Apply Now"), button:visible:has-text("Postuler")')
-                # 3. Visible button heuristic
-                if not apply_btn:
-                    btns = job_page.query_selector_all('button:visible')
+                    logger.warn(f"No Indeed Apply button found for job page: {job_url}", SITE)
+                    job_page.close()
+                    continue
+                    
+                # Click 'Apply' and handle either popup or same-page navigation
+                logger.info("Clicking 'Apply' to enter application wizard...", SITE)
+                wizard_page = job_page
+                try:
+                    with job_page.context.expect_popup(timeout=8000) as popup_info:
+                        apply_btn.click()
+                    popup = popup_info.value
+                    popup.wait_for_load_state("domcontentloaded")
+                    logger.info("Indeed Apply: Opened in popup window.", SITE)
+                    wizard_page = popup
+                except Exception:
+                    logger.info("Indeed Apply: No popup opened, assuming same-page navigation or modal.", SITE)
+                
+                _human_delay(3, 4)
+                if not check_and_handle_cloudflare(wizard_page):
+                    if wizard_page != job_page:
+                        wizard_page.close()
+                    job_page.close()
+                    continue
+                    
+                # Dynamically fill out the multi-step form wizard using our AI Form Filler
+                # Pass resume_path=None because the user wants to upload the resume manually!
+                from bot.ai_agent_filler import fill_form_with_ai
+                success = fill_form_with_ai(wizard_page, site=SITE, resume_path=None)
+                
+                if success:
+                    print("\n" + "*" * 70)
+                    print("ACTION REQUIRED:")
+                    print(f"Indeed Apply wizard is open for: {company} — {job_t}")
+                    print("Please manually upload your resume, solve CAPTCHAs, and click Submit in the browser.")
+                    print("When you are done:")
+                    print("  - Press ENTER to record this application as successful.")
+                    print("  - Type 's' and press Enter to SKIP recording this job.")
+                    print("*" * 70 + "\n")
+                    user_choice = input("Your choice (Enter / s): ").strip().lower()
+                    
+                    if user_choice != 's':
+                        logger.success(f"Successfully recorded application to {company} - {job_t} ✅", SITE)
+                        record_application(
+                            site=SITE, company=company, role=job_t, location=location,
+                            job_url=job_url, match_score=tailor_result["match_score"],
+                            resume_used=resume_path,
+                        )
+                        increment_daily_count(SITE)
+                        git_sync()
+                        applied += 1
+                        _human_delay(3, 5)
+                    else:
+                        logger.info(f"Skipped recording application for: {company} — {job_t}", SITE)
+                else:
+                    logger.warn(f"Failed to fill application wizard for {company} - {job_t}", SITE)
+                    
+                if wizard_page != job_page:
+                    try:
+                        wizard_page.close()
+                    except Exception:
+                        pass
+            else:
+                # ─── EXTERNAL APPLY FLOW ───
+                external_btn = None
+                external_selectors = [
+                    'a[data-testid="indeedApplyButton-applyButton"]',
+                    'a[href*="clk?"]',
+                    'a:has-text("Apply on company site")',
+                    'button:has-text("Apply on company site")',
+                    'a:has-text("Apply on Company Site")',
+                    'button:has-text("Apply on Company Site")',
+                    'a:has-text("Apply Now")',
+                    'button:has-text("Apply Now")',
+                    'a:has-text("Postuler sur le site")',
+                ]
+                for sel in external_selectors:
+                    try:
+                        el = job_page.query_selector(sel)
+                        if el and el.is_visible():
+                            external_btn = el
+                            break
+                    except Exception:
+                        pass
+                
+                if not external_btn:
+                    # Fallback to any visible button/link on the page that has "apply" or "postuler" in text but not close/cancel
+                    btns = job_page.query_selector_all('a:visible, button:visible')
                     for btn in btns:
                         text = (btn.inner_text() or "").lower()
-                        if "apply" in text or "postuler" in text:
-                            apply_btn = btn
+                        if ("apply" in text or "postuler" in text) and not any(x in text for x in ["close", "cancel", "fermer", "annuler"]):
+                            external_btn = btn
                             break
-                if apply_btn:
-                    break
-                time.sleep(1)
-                
-            if not apply_btn:
-                logger.warn(f"No Apply button found for job page: {job_url}", SITE)
-                job_page.close()
-                continue
-                
-            logger.info("Clicking 'Apply' to enter application wizard...", SITE)
-            apply_btn.click()
-            _human_delay(3, 4)
-            if not check_and_handle_cloudflare(job_page):
-                job_page.close()
-                continue
-                
-            # Dynamically fill out the multi-step form wizard using our AI Form Filler
-            from bot.ai_agent_filler import fill_form_with_ai
-            success = fill_form_with_ai(job_page, site=SITE, resume_path=resume_path)
-            
-            if success:
-                logger.success(f"Successfully applied to {company} - {job_t} ✅", SITE)
-                record_application(
-                    site=SITE, company=company, role=job_t, location=location,
-                    job_url=job_url, match_score=tailor_result["match_score"],
-                    resume_used=resume_path,
-                )
-                increment_daily_count(SITE)
-                git_sync()
-                applied += 1
-                _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 5)
-            else:
-                logger.warn(f"Failed to submit application wizard for {company} - {job_t}", SITE)
+                            
+                if external_btn:
+                    logger.info("Clicking external apply link to capture redirection...", SITE)
+                    external_url = None
+                    try:
+                        with job_page.expect_popup(timeout=12000) as popup_info:
+                            external_btn.click()
+                        popup = popup_info.value
+                        popup.wait_for_load_state("domcontentloaded")
+                        external_url = popup.url
+                        popup.close()
+                    except Exception:
+                        try:
+                            href = external_btn.get_attribute("href")
+                            if href:
+                                if href.startswith("/"):
+                                    href = f"{base_url}{href}"
+                                external_url = href
+                            else:
+                                external_url = job_page.url
+                        except Exception:
+                            external_url = job_page.url
+                    
+                    if external_url and external_url != job_url:
+                        from bot.config import DATA_FOLDER
+                        bulk_file = os.path.join(DATA_FOLDER, "bulk_urls.txt")
+                        os.makedirs(DATA_FOLDER, exist_ok=True)
+                        
+                        existing = set()
+                        if os.path.exists(bulk_file):
+                            with open(bulk_file, "r") as bf:
+                                existing = {line.strip() for line in bf if line.strip()}
+                        
+                        if external_url not in existing:
+                            with open(bulk_file, "a") as bf:
+                                bf.write(external_url + "\n")
+                            logger.success(f"Captured external apply URL for {company} - {job_t} ➡️ Saved to data/bulk_urls.txt", SITE)
+                        else:
+                            logger.info(f"External apply URL for {company} - {job_t} already captured in bulk_urls.txt", SITE)
+                    else:
+                        logger.warn("Could not resolve a valid external redirect URL", SITE)
+                else:
+                    logger.warn("No external apply button found", SITE)
                 
         except Exception as e:
             logger.error(f"Error applying to job {company} - {job_t}: {e}", SITE)
@@ -440,9 +561,8 @@ def run_indeed_bot():
             logged_in_domains = set()
             failed_domains = set()
             
-            # List of all indeed country base domains and target locations
+            # List of all indeed country base domains and target locations (excluding India)
             indeed_countries = [
-                ("https://in.indeed.com", ["Remote", "Bangalore", "Chennai", "Hyderabad"]),
                 ("https://sg.indeed.com", ["Remote", "Singapore"]),
                 ("https://malaysia.indeed.com", ["Remote", "Malaysia", "Kuala Lumpur"]),
                 ("https://uk.indeed.com", ["Remote", "London", "United Kingdom"]),
@@ -455,7 +575,15 @@ def run_indeed_bot():
                 ("https://de.indeed.com", ["Remote", "Germany"]),
                 ("https://nl.indeed.com", ["Remote", "Netherlands"]),
                 ("https://se.indeed.com", ["Remote", "Sweden"]),
-                ("https://dk.indeed.com", ["Remote", "Denmark"])
+                ("https://dk.indeed.com", ["Remote", "Denmark"]),
+                ("https://fr.indeed.com", ["Remote", "Paris", "France"]),
+                ("https://be.indeed.com", ["Remote", "Brussels", "Belgium"]),
+                ("https://ch.indeed.com", ["Remote", "Zurich", "Switzerland"]),
+                ("https://at.indeed.com", ["Remote", "Vienna", "Austria"]),
+                ("https://fi.indeed.com", ["Remote", "Helsinki", "Finland"]),
+                ("https://no.indeed.com", ["Remote", "Oslo", "Norway"]),
+                ("https://za.indeed.com", ["Remote", "Johannesburg", "South Africa"]),
+                ("https://hk.indeed.com", ["Remote", "Hong Kong"])
             ]
 
             for base_url, locations in indeed_countries:

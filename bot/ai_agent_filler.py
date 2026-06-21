@@ -147,6 +147,9 @@ def extract_form_fields(page: Page) -> list:
 
 
 def _upload_resume_if_needed(page: Page, resume_path: str, site: str):
+    if site == "indeed":
+        # User wants to manually take care of file upload
+        return
     if resume_path and os.path.exists(resume_path):
         try:
             file_inputs = page.locator('input[type="file"]').all()
@@ -431,8 +434,11 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
             # Check if there is a next/submit button to click even if no visible input fields
             next_btn = _find_next_or_submit_button(page)
             if next_btn:
-                logger.info(f"AI Filler: No fields found on step {step + 1}, clicking next/submit button...", site)
                 btn_text = next_btn.inner_text().lower()
+                if site == "indeed" and ("submit" in btn_text or "apply" in btn_text):
+                    logger.info("AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving.", site)
+                    return True
+                logger.info(f"AI Filler: No fields found on step {step + 1}, clicking next/submit button...", site)
                 next_btn.click()
                 did_something = True
                 if "submit" in btn_text or "apply" in btn_text:
