@@ -30,7 +30,7 @@ SITE_BOTS = [
     ("linkedin",        "LinkedIn",        run_linkedin_bot),
     ("company_careers", "Company Careers", run_company_careers_bot),
     ("naukri",          "Naukri",          run_naukri_bot),
-    ("indeed",          "Indeed Multi-Country", run_indeed_bot),
+    ("indeed",          "Indeed Multi-Country", lambda: run_indeed_bot(interactive=False)),
     ("shine",           "Shine",           run_shine_bot),
     ("monster",         "Foundit",         run_monster_bot),
     ("jobstreet",       "JobStreet",       run_jobstreet_bot),

@@ -1,7 +1,7 @@
 """
 sites/indeed.py — Indeed Multi-Country Automation with Login Detection
 """
-import time, random, os
+import time, random, os, sys
 from playwright.sync_api import sync_playwright
 from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file, human_click, browser_manager
 from bot.config import CREDENTIALS, JOB_TITLES, APPLY_DELAY_SECONDS
@@ -582,12 +582,119 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     logger.info(f"Applied to {applied} jobs on Indeed for '{job_title}' in {location}", SITE)
     return page
 
-def run_indeed_bot():
+def run_indeed_bot(interactive: bool = True):
     if not check_daily_limit(SITE):
         logger.info("Indeed daily limit reached — skipping bot execution", SITE)
         return
 
     logger.info("🚀 Starting Indeed Multi-Country bot", SITE)
+
+    # Full list of indeed countries
+    indeed_countries = [
+        ("https://sg.indeed.com", ["Remote", "Singapore"]),
+        ("https://malaysia.indeed.com", ["Remote", "Malaysia", "Kuala Lumpur"]),
+        ("https://uk.indeed.com", ["Remote", "London", "United Kingdom"]),
+        ("https://au.indeed.com", ["Remote", "Sydney", "Australia"]),
+        ("https://ca.indeed.com", ["Remote", "Toronto", "Canada"]),
+        ("https://www.indeed.com", ["Remote", "United States"]),
+        ("https://ae.indeed.com", ["Remote", "Dubai", "UAE"]),
+        ("https://ie.indeed.com", ["Remote", "Dublin", "Ireland"]),
+        ("https://nz.indeed.com", ["Remote", "Auckland", "New Zealand"]),
+        ("https://de.indeed.com", ["Remote", "Germany"]),
+        ("https://nl.indeed.com", ["Remote", "Netherlands"]),
+        ("https://se.indeed.com", ["Remote", "Sweden"]),
+        ("https://dk.indeed.com", ["Remote", "Denmark"]),
+        ("https://fr.indeed.com", ["Remote", "Paris", "France"]),
+        ("https://be.indeed.com", ["Remote", "Brussels", "Belgium"]),
+        ("https://ch.indeed.com", ["Remote", "Zurich", "Switzerland"]),
+        ("https://at.indeed.com", ["Remote", "Vienna", "Austria"]),
+        ("https://fi.indeed.com", ["Remote", "Helsinki", "Finland"]),
+        ("https://no.indeed.com", ["Remote", "Oslo", "Norway"]),
+        ("https://za.indeed.com", ["Remote", "Johannesburg", "South Africa"]),
+        ("https://hk.indeed.com", ["Remote", "Hong Kong"])
+    ]
+
+    target_countries = indeed_countries
+
+    if interactive and sys.stdin.isatty():
+        print("\n" + "=" * 60)
+        print("                 INDEED COUNTRY SELECTOR")
+        print("=" * 60)
+        print("  1. All Countries (Singapore, Malaysia, UK, US, etc.)")
+        print("  2. Singapore")
+        print("  3. Malaysia")
+        print("  4. United Kingdom")
+        print("  5. Australia")
+        print("  6. Canada")
+        print("  7. United States")
+        print("  8. View other available countries (UAE, Europe, HK, etc.)")
+        print("=" * 60 + "\n")
+        
+        try:
+            choice = input("Select Indeed search scope (1-8): ").strip()
+        except (KeyboardInterrupt, SystemExit, EOFError):
+            logger.info("Country selection skipped. Defaulting to all countries.", SITE)
+            choice = "1"
+            
+        country_options = {
+            "1": ("All Countries", indeed_countries),
+            "2": ("Singapore", [("https://sg.indeed.com", ["Remote", "Singapore"])]),
+            "3": ("Malaysia", [("https://malaysia.indeed.com", ["Remote", "Malaysia", "Kuala Lumpur"])]),
+            "4": ("United Kingdom", [("https://uk.indeed.com", ["Remote", "London", "United Kingdom"])]),
+            "5": ("Australia", [("https://au.indeed.com", ["Remote", "Sydney", "Australia"])]),
+            "6": ("Canada", [("https://ca.indeed.com", ["Remote", "Toronto", "Canada"])]),
+            "7": ("United States", [("https://www.indeed.com", ["Remote", "United States"])]),
+        }
+        
+        other_countries = {
+            "8": ("UAE", [("https://ae.indeed.com", ["Remote", "Dubai", "UAE"])]),
+            "9": ("Ireland", [("https://ie.indeed.com", ["Remote", "Dublin", "Ireland"])]),
+            "10": ("New Zealand", [("https://nz.indeed.com", ["Remote", "Auckland", "New Zealand"])]),
+            "11": ("Germany", [("https://de.indeed.com", ["Remote", "Germany"])]),
+            "12": ("Netherlands", [("https://nl.indeed.com", ["Remote", "Netherlands"])]),
+            "13": ("Sweden", [("https://se.indeed.com", ["Remote", "Sweden"])]),
+            "14": ("Denmark", [("https://dk.indeed.com", ["Remote", "Denmark"])]),
+            "15": ("France", [("https://fr.indeed.com", ["Remote", "Paris", "France"])]),
+            "16": ("Belgium", [("https://be.indeed.com", ["Remote", "Brussels", "Belgium"])]),
+            "17": ("Switzerland", [("https://ch.indeed.com", ["Remote", "Zurich", "Switzerland"])]),
+            "18": ("Austria", [("https://at.indeed.com", ["Remote", "Vienna", "Austria"])]),
+            "19": ("Finland", [("https://fi.indeed.com", ["Remote", "Helsinki", "Finland"])]),
+            "20": ("Norway", [("https://no.indeed.com", ["Remote", "Oslo", "Norway"])]),
+            "21": ("South Africa", [("https://za.indeed.com", ["Remote", "Johannesburg", "South Africa"])]),
+            "22": ("Hong Kong", [("https://hk.indeed.com", ["Remote", "Hong Kong"])]),
+        }
+
+        if choice == "8":
+            print("\n" + "=" * 60)
+            print("                 OTHER AVAILABLE COUNTRIES")
+            print("=" * 60)
+            print("  8. UAE (Dubai)")
+            print("  9. Ireland (Dublin)")
+            print("  10. New Zealand (Auckland)")
+            print("  11. Germany")
+            print("  12. Netherlands")
+            print("  13. Sweden")
+            print("  14. Denmark")
+            print("  15. France")
+            print("  16. Belgium")
+            print("  17. Switzerland")
+            print("  18. Austria")
+            print("  19. Finland")
+            print("  20. Norway")
+            print("  21. South Africa")
+            print("  22. Hong Kong")
+            print("=" * 60 + "\n")
+            try:
+                choice = input("Select country code (8-22): ").strip()
+            except (KeyboardInterrupt, SystemExit, EOFError):
+                choice = "1"
+
+        all_options = {**country_options, **other_countries}
+        if choice in all_options:
+            name, target_countries = all_options[choice]
+            logger.info(f"Indeed search scope set to: {name}", SITE)
+        else:
+            logger.info("Invalid selection. Defaulting to all countries.", SITE)
 
     with sync_playwright() as p:
         browser, context = safe_browser_context(p, SITE)
@@ -597,32 +704,7 @@ def run_indeed_bot():
             logged_in_domains = set()
             failed_domains = set()
             
-            # List of all indeed country base domains and target locations (excluding India)
-            indeed_countries = [
-                ("https://sg.indeed.com", ["Remote", "Singapore"]),
-                ("https://malaysia.indeed.com", ["Remote", "Malaysia", "Kuala Lumpur"]),
-                ("https://uk.indeed.com", ["Remote", "London", "United Kingdom"]),
-                ("https://au.indeed.com", ["Remote", "Sydney", "Australia"]),
-                ("https://ca.indeed.com", ["Remote", "Toronto", "Canada"]),
-                ("https://www.indeed.com", ["Remote", "United States"]),
-                ("https://ae.indeed.com", ["Remote", "Dubai", "UAE"]),
-                ("https://ie.indeed.com", ["Remote", "Dublin", "Ireland"]),
-                ("https://nz.indeed.com", ["Remote", "Auckland", "New Zealand"]),
-                ("https://de.indeed.com", ["Remote", "Germany"]),
-                ("https://nl.indeed.com", ["Remote", "Netherlands"]),
-                ("https://se.indeed.com", ["Remote", "Sweden"]),
-                ("https://dk.indeed.com", ["Remote", "Denmark"]),
-                ("https://fr.indeed.com", ["Remote", "Paris", "France"]),
-                ("https://be.indeed.com", ["Remote", "Brussels", "Belgium"]),
-                ("https://ch.indeed.com", ["Remote", "Zurich", "Switzerland"]),
-                ("https://at.indeed.com", ["Remote", "Vienna", "Austria"]),
-                ("https://fi.indeed.com", ["Remote", "Helsinki", "Finland"]),
-                ("https://no.indeed.com", ["Remote", "Oslo", "Norway"]),
-                ("https://za.indeed.com", ["Remote", "Johannesburg", "South Africa"]),
-                ("https://hk.indeed.com", ["Remote", "Hong Kong"])
-            ]
-
-            for base_url, locations in indeed_countries:
+            for base_url, locations in target_countries:
                 if not check_daily_limit(SITE):
                     logger.info("Indeed daily limit reached — stopping", SITE)
                     return

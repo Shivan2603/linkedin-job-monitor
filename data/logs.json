@@ -1,5 +1,817 @@
 [
   {
+    "id": "1edaa8b3",
+    "ts": "2026-06-22T00:08:38.358757",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: HTTPSConnectionPool(host='api.groq.com', port=443): Max retries exceeded with url: /openai/v1/chat/c"
+  },
+  {
+    "id": "5a23cf86",
+    "ts": "2026-06-22T00:07:56.211985",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "35103301",
+    "ts": "2026-06-22T00:07:56.132758",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "088e7002",
+    "ts": "2026-06-22T00:07:55.639406",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "ac30adbf",
+    "ts": "2026-06-22T00:07:55.143946",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "a4db7cf0",
+    "ts": "2026-06-22T00:07:54.313841",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7276311d",
+    "ts": "2026-06-22T00:07:52.686728",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "2cc11165",
+    "ts": "2026-06-22T00:07:35.038636",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "cee75cfb",
+    "ts": "2026-06-22T00:07:34.986943",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "3bf2829b",
+    "ts": "2026-06-22T00:06:22.569581",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "7a8140a1",
+    "ts": "2026-06-22T00:06:22.477317",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for MCSB SYSTEMS(M) SDN BHD. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "6f0a9403",
+    "ts": "2026-06-22T00:06:18.161874",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: MCSB SYSTEMS(M) SDN BHD - Internship in IT Software Specialist (External Apply)..."
+  },
+  {
+    "id": "69cca162",
+    "ts": "2026-06-22T00:06:08.290983",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping EcoVadis - Senior .NET Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "b427be0e",
+    "ts": "2026-06-22T00:06:08.222023",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1bf5880d",
+    "ts": "2026-06-22T00:06:08.129207",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for EcoVadis. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "6bd1b02c",
+    "ts": "2026-06-22T00:06:04.606804",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: EcoVadis - Senior .NET Developer (External Apply)..."
+  },
+  {
+    "id": "5bc20e43",
+    "ts": "2026-06-22T00:05:58.254296",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Luxoft - C#/.Net Developer ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "375a6eb1",
+    "ts": "2026-06-22T00:05:52.442545",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "707be935",
+    "ts": "2026-06-22T00:05:48.838854",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Luxoft - C#/.Net Developer (External Apply)..."
+  },
+  {
+    "id": "a451a517",
+    "ts": "2026-06-22T00:05:48.807010",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "212c14fc",
+    "ts": "2026-06-22T00:05:23.410108",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'Malaysia' on https://malaysia.indeed.com"
+  },
+  {
+    "id": "0648ee7e",
+    "ts": "2026-06-22T00:05:23.329500",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "Failed to navigate to job list: Page.goto: Timeout 30000ms exceeded.\nCall log:\nnavigating to \"https://malaysia.indeed.com/jobs?q=.Net&l=Remote\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "id": "12aa2f75",
+    "ts": "2026-06-22T00:04:53.239145",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'Remote' on https://malaysia.indeed.com"
+  },
+  {
+    "id": "f840bf92",
+    "ts": "2026-06-22T00:04:53.175200",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://malaysia.indeed.com ✅"
+  },
+  {
+    "id": "1eda6676",
+    "ts": "2026-06-22T00:04:49.549688",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://malaysia.indeed.com..."
+  },
+  {
+    "id": "2e84ba86",
+    "ts": "2026-06-22T00:04:49.479898",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for '.Net' in Singapore"
+  },
+  {
+    "id": "4f4a829a",
+    "ts": "2026-06-22T00:04:37.423681",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for VGTag iN-Solutions Pte Ltd - Full Stack Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "5895e6ad",
+    "ts": "2026-06-22T00:04:35.875105",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "bef6a898",
+    "ts": "2026-06-22T00:04:31.796899",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: VGTag iN-Solutions Pte Ltd - Full Stack Developer (External Apply)..."
+  },
+  {
+    "id": "c5427a55",
+    "ts": "2026-06-22T00:04:21.803230",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for AG Polytronics Pte Ltd - Software Engineer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "0f5bfa1d",
+    "ts": "2026-06-22T00:04:20.118137",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "70532dc0",
+    "ts": "2026-06-22T00:04:16.714272",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: AG Polytronics Pte Ltd - Software Engineer (External Apply)..."
+  },
+  {
+    "id": "cb699c96",
+    "ts": "2026-06-22T00:04:08.696283",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Titansoft Singapore - Software Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "0ab1d8ce",
+    "ts": "2026-06-22T00:04:06.598398",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "d38474ba",
+    "ts": "2026-06-22T00:04:02.540461",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Titansoft Singapore - Software Developer (External Apply)..."
+  },
+  {
+    "id": "26d97709",
+    "ts": "2026-06-22T00:03:56.165822",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Netrust - Software Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "de6946f4",
+    "ts": "2026-06-22T00:03:53.760000",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "f3ccaf1d",
+    "ts": "2026-06-22T00:03:49.911672",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Netrust - Software Developer (External Apply)..."
+  },
+  {
+    "id": "1b4ae72c",
+    "ts": "2026-06-22T00:03:39.653295",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for WhiteWave Media Group - Web Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "46ad18e8",
+    "ts": "2026-06-22T00:03:38.159007",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "9a3e82d8",
+    "ts": "2026-06-22T00:03:33.976677",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: WhiteWave Media Group - Web Developer (External Apply)..."
+  },
+  {
+    "id": "35253438",
+    "ts": "2026-06-22T00:03:22.462401",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Ashford Benjamin Ltd. - C# Developer (All Levels) already captured in bulk_urls.txt"
+  },
+  {
+    "id": "64939d9d",
+    "ts": "2026-06-22T00:03:19.558041",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "768896ec",
+    "ts": "2026-06-22T00:03:15.728713",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Ashford Benjamin Ltd. - C# Developer (All Levels) (External Apply)..."
+  },
+  {
+    "id": "bfad6f58",
+    "ts": "2026-06-22T00:03:08.093139",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Solderfield Pte Ltd - ASP.NET Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "f02c1b07",
+    "ts": "2026-06-22T00:03:05.847167",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "8175d95f",
+    "ts": "2026-06-22T00:03:02.418329",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Solderfield Pte Ltd - ASP.NET Developer (External Apply)..."
+  },
+  {
+    "id": "19d80987",
+    "ts": "2026-06-22T00:02:51.173180",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Tejasco Techsoft Pte. Ltd. - Dot Net Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "f60849db",
+    "ts": "2026-06-22T00:02:49.988534",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "671f8412",
+    "ts": "2026-06-22T00:02:46.620360",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Tejasco Techsoft Pte. Ltd. - Dot Net Developer (External Apply)..."
+  },
+  {
+    "id": "0cfe8671",
+    "ts": "2026-06-22T00:02:35.440209",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Zenika Singapore - Senior C#.NET Developer ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "dfb2d6e8",
+    "ts": "2026-06-22T00:02:32.370775",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "1ebc5c4f",
+    "ts": "2026-06-22T00:02:28.682750",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Zenika Singapore - Senior C#.NET Developer (External Apply)..."
+  },
+  {
+    "id": "536795d6",
+    "ts": "2026-06-22T00:02:16.973894",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for ADERA AI Pte Ltd - Full-stack (Angular and .net) Engineer/ Senior Engineer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "21062202",
+    "ts": "2026-06-22T00:02:15.435010",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "73006e5c",
+    "ts": "2026-06-22T00:02:11.573828",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: ADERA AI Pte Ltd - Full-stack (Angular and .net) Engineer/ Senior Engineer (External Apply)..."
+  },
+  {
+    "id": "f571e09d",
+    "ts": "2026-06-22T00:02:03.469205",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for ADERA AI Pte Ltd - Software Engineer (C#.Net) already captured in bulk_urls.txt"
+  },
+  {
+    "id": "dc8b11aa",
+    "ts": "2026-06-22T00:02:00.898889",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "e2db3082",
+    "ts": "2026-06-22T00:01:56.866533",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: ADERA AI Pte Ltd - Software Engineer (C#.Net) (External Apply)..."
+  },
+  {
+    "id": "6ac08e57",
+    "ts": "2026-06-22T00:01:48.056212",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for StreamOn Technologies - Dot Net Senior Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "608b3f9c",
+    "ts": "2026-06-22T00:01:46.415517",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "2f3ed4f3",
+    "ts": "2026-06-22T00:01:42.769880",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: StreamOn Technologies - Dot Net Senior Developer (External Apply)..."
+  },
+  {
+    "id": "3c8f7fb1",
+    "ts": "2026-06-22T00:01:33.560185",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Websparks Pte Ltd - Software Engineer / Web Developer - .NET already captured in bulk_urls.txt"
+  },
+  {
+    "id": "7e9d8a20",
+    "ts": "2026-06-22T00:01:31.505230",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "42a4c98d",
+    "ts": "2026-06-22T00:01:27.927914",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Websparks Pte Ltd - Software Engineer / Web Developer - .NET (External Apply)..."
+  },
+  {
+    "id": "c6c6ab77",
+    "ts": "2026-06-22T00:01:21.361142",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for percept-solutions - .NET Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "3bf23ce1",
+    "ts": "2026-06-22T00:01:19.404717",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "bf4b8c16",
+    "ts": "2026-06-22T00:01:16.027629",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: percept-solutions - .NET Developer (External Apply)..."
+  },
+  {
+    "id": "30221663",
+    "ts": "2026-06-22T00:01:09.390489",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for PATH INFOTECH PTE. LTD. - Full‑Stack .NET Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "35eb1cbd",
+    "ts": "2026-06-22T00:01:07.788547",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "95932d62",
+    "ts": "2026-06-22T00:01:04.491071",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: PATH INFOTECH PTE. LTD. - Full‑Stack .NET Developer (External Apply)..."
+  },
+  {
+    "id": "f16a85da",
+    "ts": "2026-06-22T00:01:04.425701",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "b59b5342",
+    "ts": "2026-06-22T00:00:58.867649",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'Singapore' on https://sg.indeed.com"
+  },
+  {
+    "id": "edb880bd",
+    "ts": "2026-06-22T00:00:58.804538",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for '.Net' in Remote"
+  },
+  {
+    "id": "dbf18681",
+    "ts": "2026-06-22T00:00:52.316718",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for EPAM Systems, Inc. - Applied Senior Software Engineer (AI Native Development) already captured in bulk_urls.txt"
+  },
+  {
+    "id": "9af4d387",
+    "ts": "2026-06-22T00:00:48.820802",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "d7aac9bf",
+    "ts": "2026-06-22T00:00:44.722678",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: EPAM Systems, Inc. - Applied Senior Software Engineer (AI Native Development) (External Apply)..."
+  },
+  {
+    "id": "b29fde06",
+    "ts": "2026-06-22T00:00:32.756029",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "f8aff757",
+    "ts": "2026-06-22T00:00:32.689245",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "693abf50",
+    "ts": "2026-06-22T00:00:32.581661",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Oneness M&C Pte Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "2be5ad5e",
+    "ts": "2026-06-22T00:00:29.351310",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote (External Apply)..."
+  },
+  {
+    "id": "7665daad",
+    "ts": "2026-06-22T00:00:18.798702",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "f0f9e894",
+    "ts": "2026-06-22T00:00:18.734881",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "ced00da5",
+    "ts": "2026-06-22T00:00:18.639858",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Oneness M&C Pte Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "ecda1407",
+    "ts": "2026-06-22T00:00:14.697113",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
+  },
+  {
+    "id": "8e0f6b45",
+    "ts": "2026-06-22T00:00:04.606798",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Peraton - .Net CAD Developer already captured in bulk_urls.txt"
+  },
+  {
+    "id": "c7499a6e",
+    "ts": "2026-06-22T00:00:01.462456",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "8fb9608e",
+    "ts": "2026-06-21T23:59:57.730114",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
+  },
+  {
+    "id": "a6131bc5",
+    "ts": "2026-06-21T23:59:57.655118",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 4 Indeed jobs to process on search page"
+  },
+  {
+    "id": "03cf4c40",
+    "ts": "2026-06-21T23:59:54.898731",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Cloudflare challenge resolved! Resuming bot..."
+  },
+  {
+    "id": "9fb9a3a8",
+    "ts": "2026-06-21T23:59:48.567499",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "e0be7c21",
+    "ts": "2026-06-21T23:59:45.540098",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
+  },
+  {
+    "id": "8c94bddb",
+    "ts": "2026-06-21T23:59:45.456650",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://sg.indeed.com ✅"
+  },
+  {
+    "id": "a09787a1",
+    "ts": "2026-06-21T23:59:43.321922",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Cloudflare challenge resolved! Resuming bot..."
+  },
+  {
+    "id": "3610f46e",
+    "ts": "2026-06-21T23:59:24.526199",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "068d0b43",
+    "ts": "2026-06-21T23:59:21.288154",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
+  },
+  {
+    "id": "1cbbaee2",
+    "ts": "2026-06-21T23:59:21.095552",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "af7a0cfa",
+    "ts": "2026-06-21T23:59:20.861080",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "ca63a61c",
+    "ts": "2026-06-21T23:59:20.291805",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Launching native Chrome via subprocess on port 9222..."
+  },
+  {
+    "id": "164b3117",
+    "ts": "2026-06-21T23:59:17.925453",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "6f1d70e1",
+    "ts": "2026-06-21T23:59:17.876801",
+    "level": "INFO",
+    "site": "main",
+    "message": "Running Indeed Bot only..."
+  },
+  {
+    "id": "0a75cf8d",
+    "ts": "2026-06-21T23:59:11.719390",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed bot session ended"
+  },
+  {
+    "id": "f265a266",
+    "ts": "2026-06-21T23:59:11.507357",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Terminating Chrome subprocess..."
+  },
+  {
+    "id": "9d6e5c95",
+    "ts": "2026-06-21T23:59:11.405825",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "Indeed bot crash: Page.query_selector_all: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "id": "3014c89c",
+    "ts": "2026-06-21T23:59:09.041381",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Cloudflare challenge resolved! Resuming bot..."
+  },
+  {
+    "id": "2f4e72ee",
+    "ts": "2026-06-21T23:58:58.526442",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "6ac2619d",
+    "ts": "2026-06-21T23:58:55.760664",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
+  },
+  {
+    "id": "af6eefce",
+    "ts": "2026-06-21T23:58:55.696913",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://sg.indeed.com ✅"
+  },
+  {
+    "id": "a03772c4",
+    "ts": "2026-06-21T23:58:53.585036",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Cloudflare challenge resolved! Resuming bot..."
+  },
+  {
+    "id": "5005714c",
+    "ts": "2026-06-21T23:58:49.316533",
+    "level": "WARN",
+    "site": "indeed",
+    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
+  },
+  {
+    "id": "0d5b6cd5",
+    "ts": "2026-06-21T23:58:44.807283",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
+  },
+  {
+    "id": "1435350e",
+    "ts": "2026-06-21T23:58:44.610172",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "2628f930",
+    "ts": "2026-06-21T23:58:44.401145",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "f3f67625",
+    "ts": "2026-06-21T23:58:43.796280",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Launching native Chrome via subprocess on port 9222..."
+  },
+  {
+    "id": "2d0cf357",
+    "ts": "2026-06-21T23:58:41.406650",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "83b63b29",
+    "ts": "2026-06-21T23:58:41.354947",
+    "level": "INFO",
+    "site": "main",
+    "message": "Running Indeed Bot only..."
+  },
+  {
     "id": "63c01f58",
     "ts": "2026-06-21T23:57:03.493727",
     "level": "INFO",
@@ -2683,818 +3495,6 @@
   {
     "id": "2660849b",
     "ts": "2026-06-21T23:11:54.751890",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "3f99ea29",
-    "ts": "2026-06-21T23:11:50.711797",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
-  },
-  {
-    "id": "eadfec5a",
-    "ts": "2026-06-21T23:11:50.657161",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 5 Indeed jobs to process on search page"
-  },
-  {
-    "id": "136943bb",
-    "ts": "2026-06-21T23:11:47.054519",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "58eb014e",
-    "ts": "2026-06-21T23:11:47.010150",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://sg.indeed.com ✅"
-  },
-  {
-    "id": "47a64172",
-    "ts": "2026-06-21T23:11:43.639192",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
-  },
-  {
-    "id": "e135902e",
-    "ts": "2026-06-21T23:11:43.475041",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Successfully initialized playwright-stealth on browser context."
-  },
-  {
-    "id": "c2e37c75",
-    "ts": "2026-06-21T23:11:42.595529",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "c5220ecd",
-    "ts": "2026-06-21T23:11:42.542866",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "5c978feb",
-    "ts": "2026-06-21T23:10:04.147056",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed bot session ended"
-  },
-  {
-    "id": "0317f912",
-    "ts": "2026-06-21T23:10:04.043141",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed bot crash: BrowserContext.new_page: Target page, context or browser has been closed"
-  },
-  {
-    "id": "02409e7d",
-    "ts": "2026-06-21T23:10:03.914951",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: EPAM Systems, Inc. - Applied Senior Software Engineer (AI Native Development) (External Apply)..."
-  },
-  {
-    "id": "df8d700c",
-    "ts": "2026-06-21T23:10:02.327630",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Error applying to job Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote: Page.goto: net::ERR_ABORTED at https://sg.indeed.com/rc/clk?jk=fe7da331822071e8&bb=5mU6MjyRBFqctBk93YSvKDDuVWuqWdE6QeTi9dwoCmXkjX7kKqQxgn9l8_UIxNy5J1jQofm30Ax_LH3VnZ9b3nAqM_5WGihuVvvwRUBBjOEA0OHWfnNZ60v-65FAatr5QGTKN8ahpUuqg4r0e37VNDVew3wDl-Om&xkcb=SoD867M3i1gvVsSxlx0JbzkdCdPP&fccid=f5001a037c8f899a&cmp=Oneness-M%2526C-Pte-Ltd&ti=Full+Stack+Developer&vjs=3\nCall log:\nnavigating to \"https://sg.indeed.com/rc/clk?jk=fe7da331822071e8&bb=5mU6MjyRBFqctBk93YSvKDDuVWuqWdE6QeTi9dwoCmXkjX7kKqQxgn9l8_UIxNy5J1jQofm30Ax_LH3VnZ9b3nAqM_5WGihuVvvwRUBBjOEA0OHWfnNZ60v-65FAatr5QGTKN8ahpUuqg4r0e37VNDVew3wDl-Om&xkcb=SoD867M3i1gvVsSxlx0JbzkdCdPP&fccid=f5001a037c8f899a&cmp=Oneness-M%2526C-Pte-Ltd&ti=Full+Stack+Developer&vjs=3\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "3210009e",
-    "ts": "2026-06-21T23:10:01.446687",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote (External Apply)..."
-  },
-  {
-    "id": "71815602",
-    "ts": "2026-06-21T23:09:56.941328",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "a6a71685",
-    "ts": "2026-06-21T23:09:54.665598",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "74a8f735",
-    "ts": "2026-06-21T23:09:42.591002",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "418b973f",
-    "ts": "2026-06-21T23:09:39.179377",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "8e66542a",
-    "ts": "2026-06-21T23:09:37.008867",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Peraton - .Net CAD Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "0c815fc3",
-    "ts": "2026-06-21T23:09:35.504805",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "5e901700",
-    "ts": "2026-06-21T23:09:31.493363",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
-  },
-  {
-    "id": "357a4596",
-    "ts": "2026-06-21T23:09:31.377246",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 5 Indeed jobs to process on search page"
-  },
-  {
-    "id": "2160f93d",
-    "ts": "2026-06-21T23:09:27.207643",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "0cb50b6e",
-    "ts": "2026-06-21T23:09:27.147644",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://sg.indeed.com ✅"
-  },
-  {
-    "id": "d69069e8",
-    "ts": "2026-06-21T23:09:23.626217",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
-  },
-  {
-    "id": "7141439f",
-    "ts": "2026-06-21T23:09:23.481447",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Successfully initialized playwright-stealth on browser context."
-  },
-  {
-    "id": "b35011a1",
-    "ts": "2026-06-21T23:09:22.600470",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "7b5a77a4",
-    "ts": "2026-06-21T23:09:22.539577",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "42aa4242",
-    "ts": "2026-06-21T23:06:27.020898",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed bot session ended"
-  },
-  {
-    "id": "b66a518e",
-    "ts": "2026-06-21T23:06:26.883708",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed bot crash: BrowserContext.new_page: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ffd4ea1d",
-    "ts": "2026-06-21T23:06:26.748942",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: ADERA AI Pte Ltd - Full-stack (Angular and .net) Engineer/ Senior Engineer (External Apply)..."
-  },
-  {
-    "id": "f2a2d0a1",
-    "ts": "2026-06-21T23:06:24.292483",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Error applying to job StreamOn Technologies - Dot Net Senior Developer: Page.query_selector_all: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c2f90270",
-    "ts": "2026-06-21T23:06:20.517316",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: StreamOn Technologies - Dot Net Senior Developer (External Apply)..."
-  },
-  {
-    "id": "f9083403",
-    "ts": "2026-06-21T23:06:18.868339",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for percept-solutions - .NET Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "06b0f6c3",
-    "ts": "2026-06-21T23:06:17.366259",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "592f8535",
-    "ts": "2026-06-21T23:06:13.430173",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: percept-solutions - .NET Developer (External Apply)..."
-  },
-  {
-    "id": "761d3cb3",
-    "ts": "2026-06-21T23:06:11.092799",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Websparks Pte Ltd - Software Engineer / Web Developer - .NET already captured in bulk_urls.txt"
-  },
-  {
-    "id": "5bafa281",
-    "ts": "2026-06-21T23:06:09.325947",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "fd35b7ff",
-    "ts": "2026-06-21T23:06:06.019695",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Websparks Pte Ltd - Software Engineer / Web Developer - .NET (External Apply)..."
-  },
-  {
-    "id": "07717422",
-    "ts": "2026-06-21T23:06:03.812244",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for PATH INFOTECH PTE. LTD. - Full‑Stack .NET Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "79455456",
-    "ts": "2026-06-21T23:06:02.597358",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "81decfe6",
-    "ts": "2026-06-21T23:05:58.914053",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: PATH INFOTECH PTE. LTD. - Full‑Stack .NET Developer (External Apply)..."
-  },
-  {
-    "id": "b78d325f",
-    "ts": "2026-06-21T23:05:58.867672",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 16 Indeed jobs to process on search page"
-  },
-  {
-    "id": "9c525acc",
-    "ts": "2026-06-21T23:05:54.780524",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Singapore' on https://sg.indeed.com"
-  },
-  {
-    "id": "c9034e94",
-    "ts": "2026-06-21T23:05:54.708967",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 0 jobs on Indeed for '.Net' in Remote"
-  },
-  {
-    "id": "840be223",
-    "ts": "2026-06-21T23:05:52.096665",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for EPAM Systems, Inc. - Applied Senior Software Engineer (AI Native Development) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "162cbdd3",
-    "ts": "2026-06-21T23:05:48.546594",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "00143a50",
-    "ts": "2026-06-21T23:05:45.261781",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: EPAM Systems, Inc. - Applied Senior Software Engineer (AI Native Development) (External Apply)..."
-  },
-  {
-    "id": "cb8627ca",
-    "ts": "2026-06-21T23:05:43.257362",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote already captured in bulk_urls.txt"
-  },
-  {
-    "id": "9fa2ea6d",
-    "ts": "2026-06-21T23:05:31.181477",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "f6474d3a",
-    "ts": "2026-06-21T23:05:27.290613",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote (External Apply)..."
-  },
-  {
-    "id": "122bd229",
-    "ts": "2026-06-21T23:05:25.113180",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "No external apply button found"
-  },
-  {
-    "id": "455b6d86",
-    "ts": "2026-06-21T23:05:22.888741",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Verification challenge resolved! Resuming..."
-  },
-  {
-    "id": "a6723f5f",
-    "ts": "2026-06-21T23:05:16.584210",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare / Verification block detected! Please solve it in the browser window."
-  },
-  {
-    "id": "4db3b340",
-    "ts": "2026-06-21T23:05:13.577692",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "edd38206",
-    "ts": "2026-06-21T23:05:11.366316",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "f6932f85",
-    "ts": "2026-06-21T23:04:59.281772",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "35820b02",
-    "ts": "2026-06-21T23:04:54.877399",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "8926217d",
-    "ts": "2026-06-21T23:04:53.091338",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Peraton - .Net CAD Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "9ea43a92",
-    "ts": "2026-06-21T23:04:51.195645",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "0b965b80",
-    "ts": "2026-06-21T23:04:47.519348",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
-  },
-  {
-    "id": "ee3bec2f",
-    "ts": "2026-06-21T23:04:47.408202",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 5 Indeed jobs to process on search page"
-  },
-  {
-    "id": "ceef8fdc",
-    "ts": "2026-06-21T23:04:43.195011",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "98c4dc35",
-    "ts": "2026-06-21T23:04:43.128400",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://sg.indeed.com ✅"
-  },
-  {
-    "id": "930193f4",
-    "ts": "2026-06-21T23:04:39.628682",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
-  },
-  {
-    "id": "721c5537",
-    "ts": "2026-06-21T23:04:39.485860",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Successfully initialized playwright-stealth on browser context."
-  },
-  {
-    "id": "e3bc5b8a",
-    "ts": "2026-06-21T23:04:38.474449",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "5e904425",
-    "ts": "2026-06-21T23:04:38.375201",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "5deb5329",
-    "ts": "2026-06-21T23:02:07.684394",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer (Team Lead)WFH/Remote (External Apply)..."
-  },
-  {
-    "id": "700c8357",
-    "ts": "2026-06-21T23:01:59.869533",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "c6c05014",
-    "ts": "2026-06-21T23:01:56.565883",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "7fc3beb7",
-    "ts": "2026-06-21T23:01:54.098289",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "d5badb1c",
-    "ts": "2026-06-21T23:01:42.024925",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "44357d16",
-    "ts": "2026-06-21T23:01:37.372310",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "8f573f64",
-    "ts": "2026-06-21T23:01:34.407368",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Peraton - .Net CAD Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "41cc2346",
-    "ts": "2026-06-21T23:01:32.859097",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "b035700c",
-    "ts": "2026-06-21T23:01:28.741587",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
-  },
-  {
-    "id": "a367ae65",
-    "ts": "2026-06-21T23:01:28.700249",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 5 Indeed jobs to process on search page"
-  },
-  {
-    "id": "6c4b0540",
-    "ts": "2026-06-21T23:01:24.367137",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "e05f511b",
-    "ts": "2026-06-21T23:01:24.325742",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://sg.indeed.com ✅"
-  },
-  {
-    "id": "4c1e61b3",
-    "ts": "2026-06-21T23:01:20.479768",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
-  },
-  {
-    "id": "1352ff90",
-    "ts": "2026-06-21T23:01:20.335994",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Successfully initialized playwright-stealth on browser context."
-  },
-  {
-    "id": "4e382619",
-    "ts": "2026-06-21T23:01:19.363721",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "de756434",
-    "ts": "2026-06-21T23:01:19.299115",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "7aed10bb",
-    "ts": "2026-06-21T23:00:25.185401",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "fbb24915",
-    "ts": "2026-06-21T23:00:22.516619",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "45d5fc34",
-    "ts": "2026-06-21T23:00:19.713095",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "e7a9c638",
-    "ts": "2026-06-21T23:00:07.649983",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "4f0f383e",
-    "ts": "2026-06-21T23:00:03.775921",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Oneness M&C Pte Ltd - Full Stack Developer(Remote/WFH) (External Apply)..."
-  },
-  {
-    "id": "4ac839b0",
-    "ts": "2026-06-21T23:00:00.815212",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Peraton - .Net CAD Developer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "87450ff8",
-    "ts": "2026-06-21T22:59:58.641851",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "7f504ca5",
-    "ts": "2026-06-21T22:59:55.494477",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Peraton - .Net CAD Developer (External Apply)..."
-  },
-  {
-    "id": "35def349",
-    "ts": "2026-06-21T22:59:55.462737",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 5 Indeed jobs to process on search page"
-  },
-  {
-    "id": "3f2cc251",
-    "ts": "2026-06-21T22:59:51.100104",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "462d6866",
-    "ts": "2026-06-21T22:59:51.037643",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://sg.indeed.com ✅"
-  },
-  {
-    "id": "0559f7ce",
-    "ts": "2026-06-21T22:59:47.248210",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
-  },
-  {
-    "id": "267d7780",
-    "ts": "2026-06-21T22:59:47.109095",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Successfully initialized playwright-stealth on browser context."
-  },
-  {
-    "id": "2c31dae0",
-    "ts": "2026-06-21T22:59:46.348993",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "3ef78191",
-    "ts": "2026-06-21T22:59:46.287410",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "90bf0e16",
-    "ts": "2026-06-21T22:58:51.363498",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Titansoft Singapore - Senior Software Developer (External Apply)..."
-  },
-  {
-    "id": "4bd2de31",
-    "ts": "2026-06-21T22:58:49.475509",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Cantier Systems - Senior Software Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "5a1ed02b",
-    "ts": "2026-06-21T22:58:44.122550",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "f20ef07c",
-    "ts": "2026-06-21T22:58:40.863904",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Cantier Systems - Senior Software Developer (External Apply)..."
-  },
-  {
-    "id": "b13e17c7",
-    "ts": "2026-06-21T22:58:38.873842",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for VGTag iN-Solutions Pte Ltd - Full Stack Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "5d0efbde",
-    "ts": "2026-06-21T22:58:37.426311",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "3e16e048",
-    "ts": "2026-06-21T22:58:33.108932",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: VGTag iN-Solutions Pte Ltd - Full Stack Developer (External Apply)..."
-  },
-  {
-    "id": "8444d459",
-    "ts": "2026-06-21T22:58:30.710918",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Solderfield Pte Ltd - ASP.NET Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "edea0c80",
-    "ts": "2026-06-21T22:58:29.059751",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "3b413123",
-    "ts": "2026-06-21T22:58:25.427145",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Solderfield Pte Ltd - ASP.NET Developer (External Apply)..."
-  },
-  {
-    "id": "a1cac345",
-    "ts": "2026-06-21T22:58:23.040571",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for AG Polytronics Pte Ltd - Software Engineer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "1ce57369",
-    "ts": "2026-06-21T22:58:21.263678",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "f2f83cea",
-    "ts": "2026-06-21T22:58:17.378641",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: AG Polytronics Pte Ltd - Software Engineer (External Apply)..."
-  },
-  {
-    "id": "d9576cbd",
-    "ts": "2026-06-21T22:58:15.146839",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for WhiteWave Media Group - Web Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "a17cf184",
-    "ts": "2026-06-21T22:58:12.979893",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "45dab543",
-    "ts": "2026-06-21T22:58:09.446674",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: WhiteWave Media Group - Web Developer (External Apply)..."
-  },
-  {
-    "id": "8f389208",
-    "ts": "2026-06-21T22:58:06.810888",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Ashford Benjamin Ltd. - C# Developer (All Levels) ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "046a42b6",
-    "ts": "2026-06-21T22:58:03.825496",
     "level": "INFO",
     "site": "indeed",
     "message": "Clicking external apply link to capture redirection..."
