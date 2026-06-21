@@ -84,10 +84,35 @@ def test_experience_relevance():
         
     print("[PASS] Experience relevance verified successfully.")
 
+def test_salary_estimation():
+    print("\nTesting salary estimation logic...")
+    from bot.sites.linkedin import _estimate_expected_salary
+    
+    # Test case 1: UK location, text field
+    res_uk = _estimate_expected_salary("What is your expected salary?", "Senior .Net Developer", "Awesome Corp", "We need a Senior .NET Developer", "London, United Kingdom", is_number_field=False)
+    print(f"UK Expected (text): {res_uk}")
+    assert any(symbol in res_uk for symbol in ["£", "GBP", "65,000", "70,000", "75,000", "80,000", "90,000", "85,000"]), f"Failed to detect GBP currency or amount in: {res_uk}"
+
+    # Test case 2: US location, numeric field
+    res_us = _estimate_expected_salary("Expected salary in USD", "Senior .Net Developer", "Awesome Corp", "We need a Senior .NET Developer", "San Francisco, CA, USA", is_number_field=True)
+    print(f"US Expected (numeric): {res_us}")
+    import re
+    digits = re.sub(r'[^\d]', '', res_us)
+    assert digits.isdigit(), f"Expected numeric digits only for numeric field, got: {res_us}"
+    assert int(digits) > 0, f"Expected a positive salary amount, got: {digits}"
+
+    # Test case 3: Malaysia location, text field
+    res_my = _estimate_expected_salary("Expected monthly salary", "Senior .Net Developer", "Awesome Corp", "We need a Senior .NET Developer", "Kuala Lumpur, Malaysia", is_number_field=False)
+    print(f"Malaysia Expected (text): {res_my}")
+    assert any(symbol in res_my for symbol in ["RM", "MYR", "10,000", "12,000", "15,000", "96,000", "120,000", "80,000"]), f"Failed to detect MYR currency/amount in: {res_my}"
+
+    print("[PASS] Salary estimation verified successfully.")
+
 if __name__ == "__main__":
     test_config()
     test_india_filtering()
     test_query_generation()
     test_stack_relevance()
     test_experience_relevance()
+    test_salary_estimation()
     print("\nAll unit tests passed successfully!")

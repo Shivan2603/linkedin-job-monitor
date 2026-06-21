@@ -477,7 +477,7 @@ def _apply_to_job(page: Page, job_el) -> bool:
             easy_btn.click()
             _delay(1.5, 2.5)
 
-            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
+            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc, location)
 
             if success:
                 record_application(
@@ -558,7 +558,7 @@ def _apply_to_job(page: Page, job_el) -> bool:
 
 # ─── EASY APPLY MODAL (PRODUCTION GRADE) ────────────────────────────────────
 def _fill_easy_apply_modal(page: Page, resume_path: str,
-                            job_title: str, company: str, job_desc: str) -> bool:
+                            job_title: str, company: str, job_desc: str, location: str = "Worldwide") -> bool:
     """
     Step through LinkedIn Easy Apply modal with FULL field coverage.
     Handles: resume upload, phone, text, number, textarea,
@@ -594,7 +594,7 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
         _fill_phone(page, phone, phone_local)
 
         # ── 3. Handle ALL form fields on this step ────────────────────────────
-        _fill_all_form_fields(page, job_title, company, job_desc)
+        _fill_all_form_fields(page, job_title, company, job_desc, location)
 
         # ── 3.5 Learn from filled fields (including user manual inputs) ───────
         try:
@@ -711,7 +711,7 @@ def _fill_phone(page: Page, phone: str, phone_local: str):
         pass
 
 # ─── ALL FORM FIELDS HANDLER (FULL COVERAGE) ─────────────────────────────────
-def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: str):
+def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: str, location: str = "Worldwide"):
     """
     Detect and fill ALL form fields on the current modal step.
     Uses profile.yaml first, then AI for unknown questions.
@@ -754,9 +754,9 @@ def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: st
                     label = "Question field"
 
             is_num = el.get_attribute("type") == "number" or "number" in label.lower() or "digit" in label.lower() or el.get_attribute("inputmode") == "numeric"
-            answer = _answer_for(label, job_title, company, job_desc, standard, is_number_field=is_num)
+            answer = _answer_for(label, job_title, company, job_desc, standard, location=location, is_number_field=is_num)
             if not answer:
-                answer = _ai_answer(label, [], job_title, company, job_desc)
+                answer = _ai_answer(label, [], job_title, company, job_desc, location=location)
                 
             if answer:
                 # If it is a combobox, type and select the suggestion
@@ -787,7 +787,7 @@ def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: st
             if not label:
                 label = "dropdown selection"
             options = sel.evaluate("e => Array.from(e.options).map(o => o.text)")
-            answer  = _answer_for_dropdown(label, options, job_title, company, job_desc, standard)
+            answer  = _answer_for_dropdown(label, options, job_title, company, job_desc, standard, location=location)
             if answer:
                 try:
                     sel.select_option(label=answer)
@@ -858,9 +858,9 @@ def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: st
                     labels_map.append((r, label_el.as_element(), label_text))
 
             options = [lbl_txt for _, _, lbl_txt in labels_map]
-            answer = _answer_for(q_text, job_title, company, job_desc, standard)
+            answer = _answer_for(q_text, job_title, company, job_desc, standard, location=location)
             if not answer:
-                answer = _ai_answer(q_text, options, job_title, company, job_desc)
+                answer = _ai_answer(q_text, options, job_title, company, job_desc, location=location)
 
             clicked = False
             for r_el, lbl_el, lbl_txt in labels_map:
@@ -907,9 +907,9 @@ def _fill_all_form_fields(page: Page, job_title: str, company: str, job_desc: st
                     field_log("check", label_text, "checked (agreement)", SITE)
             else:
                 # Ask AI if we should check it
-                answer = _answer_for(label_text, job_title, company, job_desc, standard)
+                answer = _answer_for(label_text, job_title, company, job_desc, standard, location=location)
                 if not answer:
-                    answer = _ai_answer(label_text, ["Yes", "No"], job_title, company, job_desc)
+                    answer = _ai_answer(label_text, ["Yes", "No"], job_title, company, job_desc, location=location)
                 
                 should_check = False
                 if answer.lower() in ["check", "true", "yes", "checked", "y"]:
@@ -981,9 +981,109 @@ def _get_field_label(page: Page, el) -> str:
     except Exception:
         return ""
 
+def _estimate_expected_salary(question_label: str, job_title: str, company: str,
+                              job_desc: str, location: str, is_number_field: bool = False) -> str:
+    """
+    Uses AI or rules to estimate the expected salary in the correct currency and format
+    based on the job description, location, company, and candidate's 4 years of experience.
+    """
+    try:
+        loc_lower = location.lower()
+        # Fallback values
+        currency = "USD"
+        currency_symbol = "$"
+        
+        # Comprehensive country mapping for fallback
+        if any(x in loc_lower for x in ["united kingdom", "uk", "london", "england", "scotland", "wales", "great britain"]):
+            currency = "GBP"
+            currency_symbol = "£"
+        elif any(x in loc_lower for x in ["australia", "sydney", "melbourne", "brisbane", "perth"]):
+            currency = "AUD"
+            currency_symbol = "A$"
+        elif any(x in loc_lower for x in ["singapore"]):
+            currency = "SGD"
+            currency_symbol = "S$"
+        elif any(x in loc_lower for x in ["malaysia", "kuala lumpur", "selangor", "johor", "shah alam"]):
+            currency = "MYR"
+            currency_symbol = "RM"
+        elif any(x in loc_lower for x in ["canada", "toronto", "vancouver", "montreal", "ottawa"]):
+            currency = "CAD"
+            currency_symbol = "C$"
+        elif any(x in loc_lower for x in ["united states", "us", "usa", "america", "new york", "california", "texas"]):
+            currency = "USD"
+            currency_symbol = "$"
+        elif any(x in loc_lower for x in ["europe", "germany", "netherlands", "romania", "portugal", "ireland", "spain", "france", "italy", "poland", "sweden", "belgium", "austria"]):
+            currency = "EUR"
+            currency_symbol = "€"
+        elif any(x in loc_lower for x in ["switzerland", "zurich", "geneva"]):
+            currency = "CHF"
+            currency_symbol = "CHF"
+        elif any(x in loc_lower for x in ["japan", "tokyo"]):
+            currency = "JPY"
+            currency_symbol = "¥"
+        elif any(x in loc_lower for x in ["india", "bangalore", "bengaluru", "chennai", "hyderabad", "pune", "mumbai", "delhi"]):
+            currency = "INR"
+            currency_symbol = "₹"
+            
+        system = (
+            "You are an expert compensation analyst and recruiter. Your job is to estimate the expected annual salary "
+            "for a candidate applying to the specified job. The candidate is a Software Engineer with exactly 4 years of "
+            "experience in C#, .NET, Azure, and Angular.\n\n"
+            "Rules:\n"
+            "1. Read the Job Description carefully. If the JD explicitly mentions a salary range, extract it and suggest a value/range near the mid-to-high end of that range.\n"
+            "2. If the JD does not mention a salary, estimate the fair market value for a 4-year experience .NET developer at this company and location.\n"
+            "3. Identify the expected currency from the Job Location, Job Description, or the Question Label. Correct the currency accordingly:\n"
+            "   - USA/Remote/Worldwide: Format in USD ($), e.g. '110000' (numeric) or '$100,000 - $120,000 per year' (text).\n"
+            "   - UK: Format in GBP (£), e.g. '70000' (numeric) or '£65,000 - £75,000 per year' (text).\n"
+            "   - Europe (Germany, Netherlands, etc.): Format in EUR (€), e.g. '70000' (numeric) or '€65,000 - €75,000 per year' (text).\n"
+            "   - Canada: Format in CAD (C$), e.g. '100000' (numeric) or 'C$90,000 - C$110,000 per year' (text).\n"
+            "   - Australia: Format in AUD (A$), e.g. '120000' (numeric) or 'A$110,000 - A$130,000 per year' (text).\n"
+            "   - Singapore: Format in SGD (S$), e.g. '90000' (numeric) or 'S$80,000 - S$95,000 per year' (text).\n"
+            "   - Malaysia: Format in MYR (RM), e.g. '100000' (numeric) or 'RM96,000 - RM120,000 per year' (text).\n"
+            "   - India: Format in INR (₹), e.g. '2200000' (numeric) or '20-25 LPA' (text).\n"
+            "4. If the question label explicitly specifies a currency (e.g. 'in USD', 'in CAD', 'in EUR'), you MUST return the estimate in that requested currency, converting if necessary.\n"
+            "5. If is_number_field is true, return ONLY a single integer representing the annual salary amount (e.g. '110000') without symbols, commas, spaces, or words. Do NOT output the years of experience or any other number.\n"
+            "6. If is_number_field is false, return ONLY the formatted salary range/expression (e.g. '$110,000 - $120,000 per year' or '20-25 LPA') without explanations or extra words.\n"
+            "CRITICAL: Do NOT include any introduction, conversational fluff, markdown fences, notes, or explanations. Just output the final value itself."
+        )
+        
+        user = (
+            f"Job Title: {job_title}\n"
+            f"Company: {company}\n"
+            f"Location: {location} (Inferred Default Currency: {currency} {currency_symbol})\n"
+            f"Field Label: {question_label}\n"
+            f"Is Numeric Field Only: {is_number_field}\n\n"
+            f"Job Description Snippet:\n{job_desc[:2000]}\n"
+        )
+        
+        from bot.ai_router import ai_complete
+        result = ai_complete(system, user, task="form_fill", max_tokens=100).strip()
+        
+        if is_number_field:
+            # Extract numbers
+            nums = re.findall(r'\d+', result.replace(',', ''))
+            if nums:
+                # Filter out numbers that look like years (e.g. 4) or standard text numbers
+                # Let's sort or find a number that matches a reasonable salary scale
+                # e.g., > 10000
+                valid_salaries = [n for n in nums if int(n) >= 1000]
+                if valid_salaries:
+                    return valid_salaries[0]
+                return nums[0]
+            # Fallback regex search
+            digits = re.sub(r'[^\d\.]', '', result)
+            if digits:
+                return digits
+        return result
+    except Exception as e:
+        logger.warn(f"Failed to estimate expected salary: {e}", SITE)
+        if is_number_field:
+            return "2200000" if currency == "INR" else "90000"
+        return "20-25 LPA" if currency == "INR" else f"{currency_symbol}80,000 - {currency_symbol}100,000 per year"
+
 # ─── ANSWER ENGINE ────────────────────────────────────────────────────────────
 def _answer_for(question: str, job_title: str, company: str,
-                job_desc: str, standard: dict, is_number_field: bool = False) -> str:
+                job_desc: str, standard: dict, location: str = "Worldwide", is_number_field: bool = False) -> str:
     """Find best answer: profile standard_answers → profile fields → AI."""
     if not question:
         return ""
@@ -1046,9 +1146,7 @@ def _answer_for(question: str, job_title: str, company: str,
                 return "11.5"
             return "11.5 Lakh per annum"
         # Expected
-        if is_number_field or any(n in q_lower for n in ["lpa", "lakh", "number", "digit", "in lakhs"]):
-            return "20"
-        return "20-30 LPA"
+        return _estimate_expected_salary(question, job_title, company, job_desc, location, is_number_field)
     if any(x in q_lower for x in ["relocat"]):
         return "Yes"
     if any(x in q_lower for x in ["sponsor", "visa", "work authoriz"]):
@@ -1074,14 +1172,14 @@ def _answer_for(question: str, job_title: str, company: str,
     return ""  # Let AI handle it
 
 def _answer_for_dropdown(question: str, options: list, job_title: str,
-                          company: str, job_desc: str, standard: dict) -> str:
+                          company: str, job_desc: str, standard: dict, location: str = "Worldwide") -> str:
     """Find the best dropdown option."""
-    answer = _answer_for(question, job_title, company, job_desc, standard, is_number_field=False)
+    answer = _answer_for(question, job_title, company, job_desc, standard, location, is_number_field=False)
     if answer:
         for opt in options:
             if answer.lower() in opt.lower() or opt.lower() in answer.lower():
                 return opt
-    return _ai_answer_dropdown(question, options, job_title, company, job_desc)
+    return _ai_answer_dropdown(question, options, job_title, company, job_desc, location)
 
 def _get_candidate_context() -> str:
     """Generate a compact but complete text representation of the candidate profile for the AI."""
@@ -1130,7 +1228,7 @@ def safe_check_input(page: Page, el, lbl_el) -> bool:
     return False
 
 def _ai_answer(question: str, options: list, job_title: str,
-               company: str, job_desc: str) -> str:
+               company: str, job_desc: str, location: str = "Worldwide") -> str:
     """Use AI to answer an unknown question."""
     try:
         candidate_context = _get_candidate_context()
@@ -1141,7 +1239,7 @@ def _ai_answer(question: str, options: list, job_title: str,
         )
         user = (
             f"Candidate Profile:\n{candidate_context}\n\n"
-            f"Job: {job_title} at {company}\n"
+            f"Job: {job_title} at {company} (Location: {location})\n"
             f"Question: {question}\n"
             f"Options (if multiple choice): {options}\n\n"
             f"Rules:\n"
@@ -1154,7 +1252,7 @@ def _ai_answer(question: str, options: list, job_title: str,
         return options[0] if options else "Yes"
 
 def _ai_answer_dropdown(question: str, options: list, job_title: str,
-                         company: str, job_desc: str) -> str:
+                         company: str, job_desc: str, location: str = "Worldwide") -> str:
     """Use AI to pick the best dropdown option."""
     try:
         candidate_context = _get_candidate_context()
@@ -1164,6 +1262,7 @@ def _ai_answer_dropdown(question: str, options: list, job_title: str,
         )
         user = (
             f"Candidate Profile:\n{candidate_context}\n\n"
+            f"Job: {job_title} at {company} (Location: {location})\n"
             f"Question: {question}\n"
             f"Options: {options}\n"
         )
