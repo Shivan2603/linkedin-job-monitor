@@ -261,17 +261,19 @@ def _search_and_apply(page: Page, job_title: str, location: str):
 
     india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
     
-    # If international location, append visa sponsorship boolean criteria
+    # If international location, append visa sponsorship criteria and expand time range to past week
     if not any(k in location.lower() for k in india_keywords):
-        search_query = f'"{job_title}" AND ("sponsorship" OR "visa" OR "relocation")'
-        logger.info(f"Applying Boolean Search for Visa Sponsorship: {search_query}", SITE)
+        search_query = f'{job_title} (sponsorship OR visa OR relocation)'
+        time_range = "r604800"  # Past week (to find more opportunities)
+        logger.info(f"Applying Visa Sponsorship Search filter: {search_query} (Past Week)", SITE)
     else:
         search_query = job_title
+        time_range = "r86400"   # Past 24 hours for local India searches
 
     search_url = (
         f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
         f"&location={_encode(location)}"
-        f"&f_TPR=r86400"    # Last 24 hours
+        f"&f_TPR={time_range}"
         f"&f_E=4"           # Mid-Senior level
         f"&sortBy=DD"       # Most recent first
         f"&f_EA=true"       # Strictly Easy Apply only
