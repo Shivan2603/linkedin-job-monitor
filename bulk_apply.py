@@ -213,8 +213,33 @@ def apply_to_url(page, url: str) -> bool:
 
         # Fill the form using AI (which handles resume upload automatically)
         logger.info("Filling form fields and uploading resume via AI...", SITE)
-        fill_form_with_ai(page, site=SITE, resume_path=resume_path)
+        filled = fill_form_with_ai(page, site=SITE, resume_path=resume_path)
         time.sleep(2)
+
+        if not filled:
+            logger.error(f"Failed to load form or pre-fill fields for {company} — {job_title}", SITE)
+            print("\n" + "*" * 70)
+            print("ERROR: The bot could not find or load the application form fields.")
+            print("Please check the browser (it may be stuck on description page or captcha block).")
+            print("When you are done:")
+            print("  - Type 's' and press Enter to SKIP/DISCARD this job.")
+            print("  - Type 'd' and press Enter if you manually completed and submitted it yourself.")
+            print("*" * 70 + "\n")
+            user_choice = input("Your choice (s / d): ").strip().lower()
+            
+            if user_choice == 'd':
+                logger.success(f"Manually submitted and recorded: {company} — {job_title}", SITE)
+                record_application(
+                    site=SITE, company=company, role=job_title, location="Remote/Various",
+                    job_url=url, match_score=tailor_result["match_score"], resume_used=resume_path
+                )
+                git_sync()
+                remove_url_from_file(url)
+                return True
+            else:
+                logger.info(f"Skipped application for: {company} — {job_title}", SITE)
+                remove_url_from_file(url)
+                return False
 
         # Learn from filled form BEFORE manual intervention
         try:
@@ -259,8 +284,9 @@ def apply_to_url(page, url: str) -> bool:
         # Click submit button on behalf of user
         submit_btn = page.query_selector(
             'button[type="submit"], input[type="submit"], '
-            '#submit_app, button:has-text("Submit"), button:has-text("Apply"), '
-            'button:has-text("Send Application")'
+            '#submit_app, button:has-text("Submit Application"), '
+            'button:has-text("Submit"), button:has-text("Send Application"), '
+            'button:has-text("Apply")'
         )
         if submit_btn:
             try:

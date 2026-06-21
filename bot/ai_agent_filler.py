@@ -341,17 +341,25 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
         logger.error("Profile configuration not loaded.", site)
         return False
 
+    did_something = False
+    apply_clicks = 0
+
     # Loop up to 8 steps for multi-page forms (Workday, SuccessFactors, direct portals)
     for step in range(8):
         # Wait a moment for the step to load
         time.sleep(2)
         
         # Check if we are on a Workday landing page with Apply or entry options
-        _handle_workday_entry_options(page, site)
+        if _handle_workday_entry_options(page, site):
+            did_something = True
         
         # Check for standard "Apply" buttons or links on description pages to enter the application
         apply_btn = page.query_selector('[data-automation-id="adventureButton"], button:has-text("Apply"), button:has-text("Apply Now"), a:has-text("Apply"), a:has-text("Apply Now"), a:has-text("Apply for this job"), a.template-btn-submit')
         if apply_btn and apply_btn.is_visible() and not page.query_selector('input, textarea, select'):
+            apply_clicks += 1
+            if apply_clicks > 2:
+                logger.warn("AI Filler: Clicked 'Apply' multiple times but no form fields loaded. Stopping loop to prevent stuck session.", site)
+                break
             logger.info("AI Filler: Job description page detected. Clicking 'Apply' to enter application form...", site)
             apply_btn.click()
             time.sleep(3)
@@ -361,6 +369,7 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
         if page.query_selector('input[type="password"]') and not page.query_selector('span:has-text("Apply"), [data-automation-id="genderDropdown"]'):
             logger.info("AI Filler: Login/Registration screen detected.", site)
             if _handle_registration_or_signin(page, site):
+                did_something = True
                 time.sleep(3)
                 continue
 
@@ -369,13 +378,16 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
 
         # Extract fields visible on current page/tab
         fields = extract_form_fields(page)
-        if not fields:
+        if fields:
+            did_something = True
+        else:
             # Check if there is a next/submit button to click even if no visible input fields
             next_btn = _find_next_or_submit_button(page)
             if next_btn:
                 logger.info(f"AI Filler: No fields found on step {step + 1}, clicking next/submit button...", site)
                 btn_text = next_btn.inner_text().lower()
                 next_btn.click()
+                did_something = True
                 if "submit" in btn_text or "apply" in btn_text:
                     time.sleep(4)
                     return True
@@ -597,4 +609,4 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
             next_btn.click()
             time.sleep(2)
 
-    return True
+    return did_something
