@@ -210,7 +210,7 @@ def safe_browser_context(playwright, site: str):
     headless=False + slow_mo=150 -> each action is visible field-by-field.
     """
     # Use a shared Chrome profile for all main sites (retaining active Google SSO / LinkedIn sessions globally)
-    if site in ["indeed", "naukri", "monster", "jobstreet", "jooble", "linkedin", "shine"]:
+    if site in ["indeed", "naukri", "monster", "jobstreet", "jooble", "linkedin", "shine", "company_careers"]:
         profile_name = "chrome_profile_shared"
     else:
         profile_name = f"chrome_profile_{site}"
@@ -240,6 +240,7 @@ def safe_browser_context(playwright, site: str):
             "--start-maximized",
             "--window-position=0,0",
         ],
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
         "viewport": {"width": 1600, "height": 900},
         "locale": "en-IN",
         "timezone_id": "Asia/Kolkata",

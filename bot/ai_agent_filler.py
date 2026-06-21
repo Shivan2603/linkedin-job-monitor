@@ -590,9 +590,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
 
         btn_text = next_btn.inner_text().lower()
         if "submit" in btn_text or "apply" in btn_text:
-            logger.info("AI Filler: Clicking final submit button...", site)
-            next_btn.click()
-            time.sleep(4)
+            logger.info("AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving.", site)
             return True
         else:
             logger.info(f"AI Filler: Moving to next page via '{next_btn.inner_text().strip()}'", site)
