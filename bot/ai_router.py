@@ -326,12 +326,41 @@ def ollama_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048
     raise Exception("All Ollama local models unavailable")
 
 
+def openrouter_claude_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
+    if not OPENROUTER_API_KEY or len(OPENROUTER_API_KEY) < 10:
+        raise ValueError("OPENROUTER_API_KEY not configured")
+
+    headers = {
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://github.com/Shivan2603/linkedin-job-monitor",
+        "X-Title": "Universal Job Bot",
+    }
+    
+    # Cap max_tokens to prevent "can only afford X tokens" errors on low credits
+    capped_tokens = min(max_tokens, 2048)
+    
+    payload = {
+        "model": "anthropic/claude-sonnet-4.6",
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user",   "content": user_prompt},
+        ],
+        "max_tokens":  capped_tokens,
+        "temperature": 0.3,
+    }
+    
+    resp = requests.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=60)
+    resp.raise_for_status()
+    return resp.json()["choices"][0]["message"]["content"].strip()
+
+
 # ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
 def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
     """
     Intelligent AI routing with caching.
-    Order: Cache → Gemini (1500 req/day) → Groq → OpenRouter → Error
+    Order: Cache → Claude-Sonnet-4.6 (for resume tasks) → Local AI → Gemini (1500 req/day) → Groq → OpenRouter → Error
     """
     combined = f"{system_prompt}\n\n{user_prompt}"
 
@@ -345,38 +374,37 @@ def ai_complete(system_prompt: str, user_prompt: str,
 
     # 2. Build provider chain — LOCAL FIRST, then cloud fallback
     #    This guarantees AI never fails due to rate limits or API issues.
-    #    Order: Ollama → LM Studio → Gemini → Groq → OpenRouter
     
-    local_providers = []
-    local_providers.append(
-        ("Local-JCode",     lambda: jcode_complete(system_prompt, user_prompt, max_tokens)))
+    providers = []
+    
+    # Prioritize Claude Sonnet 4.6 for resume-related tasks
+    if task in ["tailor", "analyze", "rerank", "verify", "ats_check"]:
+        providers.append(("Claude-Sonnet-4.6", lambda: openrouter_claude_complete(system_prompt, user_prompt, max_tokens)))
+    
+    providers.append(("Local-JCode", lambda: jcode_complete(system_prompt, user_prompt, max_tokens)))
     if _is_ollama_running():
-        local_providers.append(
-            ("Local-Ollama",    lambda: ollama_complete(system_prompt, user_prompt, max_tokens)))
+        providers.append(("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)))
     if _is_lm_studio_running():
-        local_providers.append(
-            ("Local-LMStudio",  lambda: lm_studio_complete(system_prompt, user_prompt, max_tokens)))
+        providers.append(("Local-LMStudio", lambda: lm_studio_complete(system_prompt, user_prompt, max_tokens)))
     
     if task == "form_fill":
-        cloud_providers = [
+        providers.extend([
             ("Gemini-Fast",  lambda: gemini_complete(combined, max_tokens)),
             ("Groq-Fast",    lambda: groq_complete(system_prompt, user_prompt,
                                                    model=GROQ_MODEL_FAST,
                                                    max_tokens=max_tokens)),
             ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
                                                          max_tokens=max_tokens)),
-        ]
+        ])
     else:
-        cloud_providers = [
+        providers.extend([
             ("Gemini",       lambda: gemini_complete(combined, max_tokens)),
             ("Groq",         lambda: groq_complete(system_prompt, user_prompt,
                                                    max_tokens=max_tokens)),
             ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
                                                          max_tokens=max_tokens)),
-        ]
+        ])
     
-    providers = local_providers + cloud_providers
-
     last_error = None
     for name, fn in providers:
         try:
@@ -396,6 +424,7 @@ def ai_complete(system_prompt: str, user_prompt: str,
             continue
 
     raise Exception(f"All AI providers failed (Cloud + Local). Last: {last_error}")
+
 
 # ─── ATS CHECKER ─────────────────────────────────────────────────────────────
 def check_resume_ats(resume_text: str, job_description: str,

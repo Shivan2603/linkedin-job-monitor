@@ -58,6 +58,7 @@ BOT_START_HOUR      = int(os.getenv("BOT_START_HOUR", "0"))    # 12 AM
 BOT_END_HOUR        = int(os.getenv("BOT_END_HOUR", "23"))     # 11 PM
 MAX_JOBS_PER_SITE   = int(os.getenv("MAX_JOBS_PER_SITE", "500"))
 APPLY_DELAY_SECONDS = int(os.getenv("APPLY_DELAY_SECONDS", "8"))
+ONLY_LINKEDIN       = os.getenv("ONLY_LINKEDIN", "True").strip().lower() == "true"
 
 # ─── CREDENTIALS ──────────────────────────────────────────
 def _get_cred(key, is_pass=False):

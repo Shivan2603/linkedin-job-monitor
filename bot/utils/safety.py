@@ -20,7 +20,7 @@ from bot.utils import logger
 
 # ─── DAILY LIMITS (safe thresholds per site) ─────────────────────────────────
 DAILY_LIMITS = {
-    "linkedin":       25,   # LinkedIn flags >30 Easy Apply/day
+    "linkedin":       1000, # Increased limit per user request (was 25)
     "naukri":         40,
     "indeed":         30,
     "shine":          50,

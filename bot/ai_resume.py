@@ -413,11 +413,11 @@ def parse_json_safely(raw: str) -> dict:
     candidate = re.sub(r',\s*([\]}])', r'\1', candidate)
     
     try:
-        return json.loads(candidate)
+        return json.loads(candidate, strict=False)
     except Exception as e:
         cleaned = re.sub(r'[\x00-\x1F\x7F]', '', candidate)
         try:
-            return json.loads(cleaned)
+            return json.loads(cleaned, strict=False)
         except Exception:
             raise e
 

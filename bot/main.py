@@ -12,7 +12,7 @@ except Exception:
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from bot.config import TAILORED_TODAY
+from bot.config import TAILORED_TODAY, BOT_START_HOUR, BOT_END_HOUR, ONLY_LINKEDIN
 from bot.utils import logger
 from bot.utils.safety import site_cooldown, get_daily_stats, check_daily_limit
 
@@ -37,7 +37,23 @@ SITE_BOTS = [
     ("jooble",          "Jooble",          run_jooble_bot),
 ]
 
+def is_in_running_window() -> bool:
+    now = datetime.now()
+    hour = now.hour
+    return BOT_START_HOUR <= hour < BOT_END_HOUR
+
+def wait_for_running_window():
+    first_msg = True
+    while not is_in_running_window():
+        now = datetime.now()
+        if first_msg:
+            logger.info(f"Current time ({now.strftime('%H:%M:%S')}) is outside the running window ({BOT_START_HOUR}:00 - {BOT_END_HOUR}:00). Sleeping until active...")
+            first_msg = False
+        time.sleep(300) # Check every 5 minutes
+
 def run_all_sites():
+    wait_for_running_window()
+    
     logger.info("=" * 60)
     logger.info(f"Job Bot Session Started — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     logger.info(f"Tailored resumes: {TAILORED_TODAY}")
@@ -46,9 +62,13 @@ def run_all_sites():
     stats = get_daily_stats()
     logger.info(f"Today's applications so far: {stats}")
 
-    # Shuffle the bots list to randomize execution order on each run cycle
     shuffled_bots = list(SITE_BOTS)
-    random.shuffle(shuffled_bots)
+    if ONLY_LINKEDIN:
+        shuffled_bots = [b for b in shuffled_bots if b[0] == "linkedin"]
+        logger.info("Filtering run for LinkedIn ONLY per configuration.")
+    else:
+        # Shuffle the bots list to randomize execution order on each run cycle
+        random.shuffle(shuffled_bots)
 
     first_site = True
     for site_key, site_name, bot_fn in shuffled_bots:
@@ -74,8 +94,9 @@ def run_all_sites():
 
 def main():
     logger.info("Job Bot Starting — Safe Mode Active")
-    logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30")
+    logger.info(f"Daily limits: LinkedIn=1000 (Unlimited requested), Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30")
     logger.info("Anti-ban: random delays, cookie persistence, stealth browser")
+    logger.info(f"Time window restriction active: {BOT_START_HOUR}:00 to {BOT_END_HOUR}:00")
 
     run_all_sites()
 
@@ -83,7 +104,13 @@ def main():
     while True:
         wait_mins = random.randint(60, 90)
         logger.info(f"Next cycle in {wait_mins} minutes...")
-        time.sleep(wait_mins * 60)
+        
+        # Sleep in chunks of 5 minutes so we can check the time window and not overrun
+        slept = 0
+        while slept < wait_mins * 60:
+            time.sleep(300)
+            slept += 300
+            
         run_all_sites()
 
 if __name__ == "__main__":
