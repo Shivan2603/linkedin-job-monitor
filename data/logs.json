@@ -1,5 +1,166 @@
 [
   {
+    "id": "33529158",
+    "ts": "2026-06-21T15:48:14.412727",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Beagle | Azure Developer (C# .Net | Poland | 100% match"
+  },
+  {
+    "id": "03526cac",
+    "ts": "2026-06-21T15:48:14.158286",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Beagle — Azure Developer (C# .Net"
+  },
+  {
+    "id": "dc806091",
+    "ts": "2026-06-21T15:48:08.180142",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "4a3eafda",
+    "ts": "2026-06-21T15:48:08.000750",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you based in Poland and able to work remotely on a B2B basis?' = 'No'"
+  },
+  {
+    "id": "fe8968e6",
+    "ts": "2026-06-21T15:48:07.904014",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you proficient in C# and .NET?' = 'Yes'"
+  },
+  {
+    "id": "7162b86c",
+    "ts": "2026-06-21T15:48:07.807850",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have strong working knowledge of Azure services including Azure Active Directory / Entra, App Services, Event Grid & Service Bus, API Management, Azure SQL Database and Azure Functions?' = 'No'"
+  },
+  {
+    "id": "45390aab",
+    "ts": "2026-06-21T15:48:07.072074",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "3b429bd1",
+    "ts": "2026-06-21T15:48:06.760786",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d2e099e1",
+    "ts": "2026-06-21T15:48:06.656603",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "ce427f31",
+    "ts": "2026-06-21T15:48:06.344117",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "24398f77",
+    "ts": "2026-06-21T15:48:05.995096",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "17020a2c",
+    "ts": "2026-06-21T15:48:05.521785",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8bd0f3ad",
+    "ts": "2026-06-21T15:48:05.138817",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d12fe3ad",
+    "ts": "2026-06-21T15:47:47.317262",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "185bc40d",
+    "ts": "2026-06-21T15:47:46.986306",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "00e5d52e",
+    "ts": "2026-06-21T15:47:46.875222",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "10f895b6",
+    "ts": "2026-06-21T15:47:46.560977",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "513ddd96",
+    "ts": "2026-06-21T15:47:46.223603",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "046e58bb",
+    "ts": "2026-06-21T15:47:45.854602",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7b3ee503",
+    "ts": "2026-06-21T15:47:45.436935",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "17d8a622",
+    "ts": "2026-06-21T15:47:23.820845",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "56964e31",
+    "ts": "2026-06-21T15:47:23.662674",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Azure_Developer_C#_.NET_Beagle_Resume.pdf' = 'Deselect resume Siva_Shankar_Azure_Developer_C#_.NET_Beagle_Resume.pdf'"
+  },
+  {
+    "id": "fcb0bc03",
+    "ts": "2026-06-21T15:45:27.032567",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "9342918a",
     "ts": "2026-06-21T15:45:05.823672",
     "level": "SUCCESS",
@@ -3337,166 +3498,5 @@
     "level": "WARN",
     "site": "linkedin",
     "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "99a92574",
-    "ts": "2026-06-21T11:58:02.909261",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "6785f04d",
-    "ts": "2026-06-21T11:58:02.799455",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Bahamas'"
-  },
-  {
-    "id": "d4246289",
-    "ts": "2026-06-21T11:58:02.682622",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d9de912f",
-    "ts": "2026-06-21T11:58:02.561800",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "e240ffca",
-    "ts": "2026-06-21T11:58:02.451887",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Azerbaijan'"
-  },
-  {
-    "id": "93dd8328",
-    "ts": "2026-06-21T11:58:02.406448",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7454fc29",
-    "ts": "2026-06-21T11:58:02.292308",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "c58606a1",
-    "ts": "2026-06-21T11:58:02.191989",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Austria'"
-  },
-  {
-    "id": "c097ef1c",
-    "ts": "2026-06-21T11:58:02.083479",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7661af29",
-    "ts": "2026-06-21T11:58:01.963192",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "81bbfc21",
-    "ts": "2026-06-21T11:58:01.857246",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Armenia'"
-  },
-  {
-    "id": "9372c0a0",
-    "ts": "2026-06-21T11:58:01.753348",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0b6a517f",
-    "ts": "2026-06-21T11:58:01.622368",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "69951377",
-    "ts": "2026-06-21T11:58:01.509896",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Argentina'"
-  },
-  {
-    "id": "83e6d6a6",
-    "ts": "2026-06-21T11:58:01.399124",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "6cc46892",
-    "ts": "2026-06-21T11:58:01.268307",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Engineer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "f13bc07d",
-    "ts": "2026-06-21T11:58:01.154814",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "54c178bf",
-    "ts": "2026-06-21T11:58:01.051659",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "30317c55",
-    "ts": "2026-06-21T11:58:00.938574",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "64525bf8",
-    "ts": "2026-06-21T11:58:00.831040",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Bangladesh'"
-  },
-  {
-    "id": "3b6c236b",
-    "ts": "2026-06-21T11:58:00.731932",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5c6aa7aa",
-    "ts": "2026-06-21T11:58:00.626555",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "6f962e86",
-    "ts": "2026-06-21T11:58:00.522391",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Bahrain'"
   }
 ]
