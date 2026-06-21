@@ -1,5 +1,173 @@
 [
   {
+    "id": "56f77663",
+    "ts": "2026-06-21T15:42:34.450150",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Scalian | Developpeur Full-stack Angular / C#.Net H/F | Le Haillan, Nouvelle-Aquitaine, France | 100% match"
+  },
+  {
+    "id": "9272cfaf",
+    "ts": "2026-06-21T15:42:34.288716",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Scalian — Developpeur Full-stack Angular / C#.Net H/F"
+  },
+  {
+    "id": "a9ac503d",
+    "ts": "2026-06-21T15:42:30.332093",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "0434dab6",
+    "ts": "2026-06-21T15:42:30.007880",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "f43e4878",
+    "ts": "2026-06-21T15:42:29.875967",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "7071cad8",
+    "ts": "2026-06-21T15:42:29.517188",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a72bf42a",
+    "ts": "2026-06-21T15:42:29.108275",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e57d3fb6",
+    "ts": "2026-06-21T15:42:28.697472",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "5cf44dcf",
+    "ts": "2026-06-21T15:42:28.327940",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "9be53160",
+    "ts": "2026-06-21T15:42:07.700594",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "b79d66b6",
+    "ts": "2026-06-21T15:42:07.079036",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "0ede62dd",
+    "ts": "2026-06-21T15:42:06.957477",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "4c60d1c6",
+    "ts": "2026-06-21T15:42:06.633662",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "83e8c24e",
+    "ts": "2026-06-21T15:42:06.272099",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "ab8e695a",
+    "ts": "2026-06-21T15:42:05.904226",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "edfde086",
+    "ts": "2026-06-21T15:42:05.421197",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "db1896d5",
+    "ts": "2026-06-21T15:41:31.763268",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "36fef725",
+    "ts": "2026-06-21T15:41:31.610376",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Developpeur_Full_stack_Angular_C#.NET_H_F_Scalian_Resume.pdf' = 'Deselect resume Siva_Shankar_Developpeur_Full_stack_Angular_C#.NET_H_F_Scalian_Resume.pdf'"
+  },
+  {
+    "id": "5005c070",
+    "ts": "2026-06-21T15:41:26.424097",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "9e261271",
+    "ts": "2026-06-21T15:41:26.251984",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Tamil Nadu, India'"
+  },
+  {
+    "id": "79b43b14",
+    "ts": "2026-06-21T15:40:52.189042",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "153896fd",
+    "ts": "2026-06-21T15:40:52.005996",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Avinashi, Tiruppur, Tamilnadu'"
+  },
+  {
+    "id": "a5cf5a28",
+    "ts": "2026-06-21T15:38:57.064707",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "1d7d6485",
+    "ts": "2026-06-21T15:38:40.500388",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for PT Adicipta Inovasi Teknologi — Supervisor Application Developer .Net to bulk_urls.txt"
+  },
+  {
     "id": "b1a35962",
     "ts": "2026-06-21T15:38:10.483472",
     "level": "SUCCESS",
@@ -3330,173 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "5756dd81",
-    "ts": "2026-06-21T11:57:59.895025",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Azerbaijan'"
-  },
-  {
-    "id": "1884721a",
-    "ts": "2026-06-21T11:57:59.852459",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d11db768",
-    "ts": "2026-06-21T11:57:59.742272",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "c8b1ac6f",
-    "ts": "2026-06-21T11:57:59.632723",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Austria'"
-  },
-  {
-    "id": "e6e42ec2",
-    "ts": "2026-06-21T11:57:59.525860",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d3733f7d",
-    "ts": "2026-06-21T11:57:59.404481",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "5ca31b31",
-    "ts": "2026-06-21T11:57:59.291189",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Armenia'"
-  },
-  {
-    "id": "c6940cfd",
-    "ts": "2026-06-21T11:57:59.180115",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "41b73e6f",
-    "ts": "2026-06-21T11:57:59.054877",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "513a416c",
-    "ts": "2026-06-21T11:57:58.956139",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Argentina'"
-  },
-  {
-    "id": "9b255b83",
-    "ts": "2026-06-21T11:57:58.864696",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior Backend Developer' in Antigua and Barbuda"
-  },
-  {
-    "id": "695cde08",
-    "ts": "2026-06-21T11:57:58.747575",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3a7fed03",
-    "ts": "2026-06-21T11:57:58.624898",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7fe3d490",
-    "ts": "2026-06-21T11:57:55.097427",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "6481c7da",
-    "ts": "2026-06-21T11:57:52.320013",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3e643257",
-    "ts": "2026-06-21T11:57:49.272684",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "cb1779bf",
-    "ts": "2026-06-21T11:57:39.655202",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "fea93bc5",
-    "ts": "2026-06-21T11:57:31.478557",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "72cdbaeb",
-    "ts": "2026-06-21T11:57:31.416848",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "b92143fe",
-    "ts": "2026-06-21T11:57:31.355788",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Bangladesh"
-  },
-  {
-    "id": "ede3cd95",
-    "ts": "2026-06-21T11:57:18.661727",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7a00e188",
-    "ts": "2026-06-21T11:57:15.263845",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3a2e8fb0",
-    "ts": "2026-06-21T11:57:06.472975",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "6e298cc4",
-    "ts": "2026-06-21T11:56:59.665939",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
   }
 ]
