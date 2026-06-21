@@ -556,14 +556,8 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
             
     if res:
         docx_path = res.get("resume_path")
-        if docx_path and os.path.exists(docx_path):
-            try:
-                print(f"[PDF Builder] Converting delegated '{os.path.basename(docx_path)}' to PDF...")
-                pdf_path = convert_docx_to_pdf_win32(docx_path)
-                res["resume_pdf_path"] = pdf_path
-                print(f"[PDF Builder] PDF saved successfully: {pdf_path}")
-            except Exception as pdf_err:
-                print(f"[PDF Builder] Warning: PDF conversion failed: {pdf_err}")
+        if docx_path:
+            res["resume_pdf_path"] = docx_path.replace(".docx", ".pdf")
         return res
 
     # Globally clean job title using unified cleaner (strips location suffixes, ALL CAPS, etc.)
@@ -800,18 +794,10 @@ JD:
         
     res = {
         "resume_path": out_path,
+        "resume_pdf_path": out_path.replace(".docx", ".pdf") if out_path else "",
         "match_score": final_tailored.get("ats_report", {}).get("match_score", 100),
         "tailored":    final_tailored
     }
-    
-    if out_path and os.path.exists(out_path):
-        try:
-            print(f"[PDF Builder] Converting '{os.path.basename(out_path)}' to PDF...")
-            pdf_path = convert_docx_to_pdf_win32(out_path)
-            res["resume_pdf_path"] = pdf_path
-            print(f"[PDF Builder] PDF saved successfully: {pdf_path}")
-        except Exception as pdf_err:
-            print(f"[PDF Builder] Warning: PDF conversion failed: {pdf_err}")
             
     return res
 

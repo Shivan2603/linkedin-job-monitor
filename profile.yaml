@@ -138,9 +138,11 @@ standard_answers:
   0-15 Days: 0-15 Days
   1 Month: 1 Month
   Address: sivashankar.avi6@gmail.com
+  Adresse e-mail: sivashankar.avi6@gmail.com
   Are you 18 years of age or older?: 'Yes'
   Are you able to provide professional references if requested?: Yes, I can provide
     professional references upon request.
+  Are you based in Poland and able to work remotely on a B2B basis?: 'No'
   Are you comfortable working remotely?: Yes, I have 4+ years of experience working
     in remote and hybrid environments.
   Are you currently based in the UK and authorised to work in the UK without sponsorship?: 'No'
@@ -150,10 +152,14 @@ standard_answers:
   Are you eligible to work in Singapore without sponsorship?: 'No'
   Are you eligible to work in the UK without sponsorship?: 'No'
   Are you eligible to work in the United States without sponsorship?: 'No'
+  Are you flexible to work in any shift?: 'No'
   Are you legally authorized to work in the country where this job is located?: Yes,
     I am fully authorized to work in India.
   Are you open to relocation?: Yes, I am open to relocation both within India and
     internationally.
+  Are you open to working day shift?: 'Yes'
+  Are you open to working in a hybrid setup?: 'Yes'
+  Are you proficient in C# and .NET?: 'Yes'
   Are you willing to relocate to the specified job location? Please answer if your current location is not India.: 'Yes'
   Are you willing to relocate?: 'Yes'
   Are you willing to undergo a background check?: 'Yes'
@@ -172,6 +178,7 @@ standard_answers:
   Choose preferred cities to work: Bengaluru
   City: Avinashi, Tiruppur, Tamilnadu
   City, state, or zip code: Worldwide
+  Code pays: Inde (+91)
   Consent to data processing?: 'Yes'
   Cover Letter: 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of
     professional experience delivering scalable, cloud-native applications using C#,
@@ -200,32 +207,77 @@ standard_answers:
   Código do país: Índia (+91)
   DOB: 26-03-2001
   Date of Birth: 26-03-2001
+  Depuis combien d’années utilisez-vous .NET framework ?: '4'
+  Depuis combien d’années utilisez-vous Microsoft Azure ?: '3'
+  ? Describe a situation where you had to design or refactor a backend system to improve
+    scalability or performance. What decisions did you make, what tradeoffs did you
+    consider, and what was the outcome?
+  : "At LTIMindtree, I was working on a project that involved a monolithic .NET application\
+    \ handling multiple microservices. The application was experiencing performance\
+    \ issues due to high traffic and increasing data storage. \n\nTo improve scalability\
+    \ and performance, I decided to refactor the application into a microservices\
+    \ architecture using CQRS and Event Sourcing patterns. I also implemented load\
+    \ balancing using NGINX and caching using Redis.\n\nThe tradeoffs considered were\
+    \ the increased complexity of the system and the need for additional infrastructure.\
+    \ However"
+  ? Describe an API or data-intensive feature you built using .NET and MySQL. How
+    did you design the API, optimize database interactions, and ensure performance
+    and reliability at scale?
+  : "I'd like to highlight a project I worked on as a Senior .NET Developer at LTIMindtree,\
+    \ where I designed and implemented a data-intensive feature using .NET and MySQL.\
+    \ \n\nThe feature was a high-traffic e-commerce platform that required efficient\
+    \ data retrieval and manipulation. I designed the API using ASP.NET Web API and\
+    \ Entity Framework Core to interact with the MySQL database. \n\nTo optimize database\
+    \ interactions, I implemented pagination, caching, and lazy loading to reduce\
+    \ the load on the database and improve"
   Deselect resume Siva_Shankar_.NET_Developer_KCS_iT_Resume.docx: Deselect resume
     Siva_Shankar_.NET_Developer_KCS_iT_Resume.docx
   Deselect resume Siva_Shankar_.NET_Developer_Lateetud_Resume.docx: Deselect resume
     Siva_Shankar_.NET_Developer_Lateetud_Resume.docx
+  Deselect resume Siva_Shankar_.NET_Engineer_Great_Value_Hiring_Resume.pdf: Deselect
+    resume Siva_Shankar_.NET_Engineer_Great_Value_Hiring_Resume.pdf
+  Deselect resume Siva_Shankar_Angular_C#_.NET_Software_Developer_RedRock_Resourcing_Resume.docx: Deselect
+    resume Siva_Shankar_Angular_C#_.NET_Software_Developer_RedRock_Resourcing_Resume.docx
+  Deselect resume Siva_Shankar_Azure_Developer_C#_.NET_Beagle_Resume.pdf: Deselect
+    resume Siva_Shankar_Azure_Developer_C#_.NET_Beagle_Resume.pdf
   Deselect resume Siva_Shankar_Back_End_Developer_Celstream_Technologi_Resume.docx: Deselect
     resume Siva_Shankar_Back_End_Developer_Celstream_Technologi_Resume.docx
+  Deselect resume Siva_Shankar_C#.NET_Angular_Application_Lead_Manager_Hands_On_Development_Broad_Reach_Partners_Resume.docx: Deselect
+    resume Siva_Shankar_C#.NET_Angular_Application_Lead_Manager_Hands_On_Development_Broad_Reach_Partners_Resume.docx
   Deselect resume Siva_Shankar_Creative_Tech_PowerBuilder_Developer_Devoteam_Resume.docx: Deselect
     resume Siva_Shankar_Creative_Tech_PowerBuilder_Developer_Devoteam_Resume.docx
   Deselect resume Siva_Shankar_Developer_Shotscope™_Husky_Technologies_Resume.docx: Deselect
     resume Siva_Shankar_Developer_Shotscope™_Husky_Technologies_Resume.docx
+  Deselect resume Siva_Shankar_Developpeur_Full_stack_Angular_C#.NET_H_F_Scalian_Resume.pdf: Deselect
+    resume Siva_Shankar_Developpeur_Full_stack_Angular_C#.NET_H_F_Scalian_Resume.pdf
   Deselect resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx: Deselect
     resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx
   Deselect resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx: Deselect
     resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx
+  Deselect resume Siva_Shankar_Développeur_Fullstack_.NET_C#_Angular_Senior_INGELINE_TECHNOLOGIES_Resume.pdf: Deselect
+    resume Siva_Shankar_Développeur_Fullstack_.NET_C#_Angular_Senior_INGELINE_TECHNOLOGIES_Resume.pdf
   Deselect resume Siva_Shankar_Freelance_contract_work:_Kentico_Developer_8+_Experience_Qzensys_Solutions_Resume.docx: Deselect
     resume Siva_Shankar_Freelance_contract_work:_Kentico_Developer_8+_Experience_Qzensys_Solutions_Resume.docx
+  ? Deselect resume Siva_Shankar_Front_Office_C#_.NET_Developer_ETRM_Integration_Azure_Energy_VirtueTech_Recruitment_Group_Resume.docx
+  : Deselect resume Siva_Shankar_Front_Office_C#_.NET_Developer_ETRM_Integration_Azure_Energy_VirtueTech_Recruitment_Group_Resume.docx
   Deselect resume Siva_Shankar_Frontend_Developer_Angular_+_.NET_act_digital_Resume.docx: Deselect
     resume Siva_Shankar_Frontend_Developer_Angular_+_.NET_act_digital_Resume.docx
   Deselect resume Siva_Shankar_Full-Stack__NET_Deve_Montash_Resume.docx: Deselect
     resume Siva_Shankar_Full-Stack__NET_Deve_Montash_Resume.docx
+  Deselect resume Siva_Shankar_Full_Stack_.NET_Developer_C#_.NET_Angular_Comrise_Resume.docx: Deselect
+    resume Siva_Shankar_Full_Stack_.NET_Developer_C#_.NET_Angular_Comrise_Resume.docx
+  Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.docx: Deselect
+    resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.docx
+  Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf: Deselect
+    resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf
   Deselect resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx: Deselect
     resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_Insight_Global_Resume.docx: Deselect
     resume Siva_Shankar_Full_Stack_Engineer_Insight_Global_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx: Deselect resume
     Siva_Shankar_Full_Stack_Engineer_Ocho_Resume.docx
+  Deselect resume Siva_Shankar_Full_Stack_Software_Engineer_C#_.NET_&_Angular_Spacebackend_Resume.pdf: Deselect
+    resume Siva_Shankar_Full_Stack_Software_Engineer_C#_.NET_&_Angular_Spacebackend_Resume.pdf
   Deselect resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx: Deselect
     resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx
   Deselect resume Siva_Shankar_Lead_DevOps_Engineer_Prism_Digital_Resume.docx: Deselect
@@ -346,8 +398,13 @@ standard_answers:
   Do you have experience with microservices?: Yes, I have architected and deployed
     12+ production microservices.
   Do you have hands-on experience with mobile network technologies (4G/LTE, 5G, IMS/VoLTE, IoT)?: 'No'
+  ? Do you have strong working knowledge of Azure services including Azure Active
+    Directory / Entra, App Services, Event Grid & Service Bus, API Management, Azure
+    SQL Database and Azure Functions?
+  : 'No'
   Do you hold high level SC Clearance?: 'No'
   Do you hold the necessary work permit to be able to work at this location?: 'Yes'
+  Do you live in Luxembourg?: 'No'
   Do you require visa sponsorship?: No, for India-based roles. Yes for international.
   Email: sivashankar.avi6@gmail.com
   Email address: sivashankar.avi6@gmail.com
@@ -373,6 +430,11 @@ standard_answers:
     ServiceNow implementation or rollout programme? Please show this in your CV.
   : 'No'
   Have you worked directly with cellular modems (AT Commands, QMI, Qualcomm SDKs, Sierra Wireless, Quectel, Telit, etc.)?: 'No'
+  ? Have you worked with .NET/C# and Angular (preferred) or React in the same project?
+    Walk us through a specific integration you built between the frontend and a .NET
+    backend, including how you handled API contracts, state management, authentication/authorization,
+    and error handling.
+  : TamilNadu
   Headline: Senior Software Engineer with 4+ years of experience in .NET development,
     seeking a challenging role at Civica.
   How Many years of Expereince in Angular?: '3'
@@ -389,6 +451,11 @@ standard_answers:
   How Many years of Expereince in Web API?: '4'
   How did you hear about this job?: Online job portal
   How many years .Net experience do you have?: '4'
+  How many years of Software Development experience do you currently have?: '4'
+  How many years of experience do you have in .NET?: '4'
+  How many years of experience do you have in Angular?: '4'
+  How many years of experience do you have in C# .Net?: '4'
+  How many years of experience do you have in SQL?: '4'
   How many years of experience do you have working with React and JavaScript-based front-end development?: '4'
   How many years of experience do you have?: I have 4+ years of professional software
     development experience.
@@ -397,7 +464,9 @@ standard_answers:
   How many years of work experience do you have with .NET Core?: '4'
   How many years of work experience do you have with .NET Framework?: '4'
   How many years of work experience do you have with Amazon Web Services (AWS)?: '0'
+  How many years of work experience do you have with Angular?: '4'
   How many years of work experience do you have with C (Programming Language)?: '7'
+  How many years of work experience do you have with C# in .NET?: '4'
   How many years of work experience do you have with C#?: '4'
   How many years of work experience do you have with C++?: '0'
   How many years of work experience do you have with Databases?: '4'
@@ -426,6 +495,7 @@ standard_answers:
   'No': 'No'
   Notice Period: 'Serving notice (LWD: 14-Aug-2026)'
   Notice period (in days): dynamic
+  Numéro de téléphone portable: '6383149155'
   Offical Notice Period (Looking for only immediate joiner): '15'
   Phone: '6383149155'
   Phone country code: India (+91)
@@ -440,16 +510,52 @@ standard_answers:
   Qual seu nível de proficiência em Inglês?: Proficiente
   Role Preference - Civica Job Family: Software Architecture, Development & Engineering
   Salary Expectations: '25'
-  Search by title, skill, or company: .Net
+  Search by title, skill, or company: ("C#") AND (".NET") AND ("Azure" OR "Angular"
+    OR "SQL Server") NOT ("QA" OR "Tester" OR "Scrum Master" OR "Java" OR "Python"
+    OR "PHP" OR "Android" OR "iOS")
   State: TamilNadu
+  Summary: 'Summary:
+
+    Highly skilled and experienced .NET developer with 4 years of experience in designing
+    and developing scalable, secure, and efficient backend systems using C#, .NET
+    Core, ASP.NET Web API, and Azure services. Proficient in Angular and Entity Framework
+    Core for frontend development. Possesses strong knowledge of microservices architecture,
+    CQRS, Docker, RabbitMQ, JWT, and OAuth2. Seeking a challenging role as a Full
+    Stack Backend Engineer at DaCodes, utilizing my technical expertise to drive business'
+  ? Tell us about a full stack web application you built end-to-end. What was the
+    tech stack (frontend and backend), what was your individual contribution, and
+    what challenges did you face in production?
+  : "I worked on a project for a client of LTIMindtree, where I was the lead developer\
+    \ for a full stack web application. The tech stack included .NET Core 7 for the\
+    \ backend, Angular 15 for the frontend, and Azure SQL for the database. \n\nMy\
+    \ individual contribution was designing and implementing the backend API using\
+    \ ASP.NET Web API, Azure App Services, and Entity Framework Core. I also implemented\
+    \ authentication and authorization using JWT and OAuth2.\n\nIn production, I faced\
+    \ challenges with scalability"
+  ? Tell us about a time you proactively identified a quality or reliability issue
+    in a codebase and drove the fix without being asked. What did you find, what did
+    you do, and what was the result?
+  : "I'd like to provide a detailed answer to the question as per the candidate's\
+    \ profile.\n\nWhile working as a Senior .NET Developer at LTIMindtree (client:\
+    \ Deloitte), I identified a performance issue in our application's API due to\
+    \ the inefficient use of Entity Framework Core. \n\nI noticed that the application\
+    \ was experiencing slow response times and high memory usage, which was impacting\
+    \ the overall user experience. Upon further investigation, I found that the issue\
+    \ was caused by the repeated execution of database queries"
   Tell us about yourself: I am a Senior .NET Developer with 4+ years of experience
     building enterprise-grade, cloud-native applications using C#, ASP.NET Core, Azure
     DevOps, Angular, and SQL Server. I specialise in TDD, CI/CD pipelines, Clean Architecture,
     and Agile delivery.
+  This is a 6-month contract position. Are you comfortable with a contract engagement of this duration?: 'Yes'
+  ? This position is fully onsite in Fremont, CA (5 days per week) and does not provide
+    relocation support. Are you currently located in Fremont, CA or the surrounding
+    Bay Area? Please confirm your city, state, and whether you can work onsite daily.
+  : I can relocate and needs visa sponsorship
   Total years of experience: '4'
   Veteran status?: Not applicable
   Website: https://shivan2603.github.io/sivashankar-portfolio/
   What is the current Variable pay/Performance bonus?: '0'
+  What is the minimum total monthly compensation you would be willing to accept for this opportunity?: '2'
   What is the stock/RSU value yearly?: '100'
   What is your Notice period (in days)?: '50'
   What is your current CTC?: '11.5'
@@ -458,6 +564,8 @@ standard_answers:
   What is your current salary?: 11.5 Lakh per annum
   What is your desired salary?: '22'
   What is your expected compensation?: 20-30 LPA
+  What is your expected hourly rate? Please specify your minimum acceptable rate and your preferred rate.: $140,000
+    - $160,000 per year
   What is your expected salary?: 20-30 LPA
   What is your level of proficiency in English?: Professional
   What is your notice period?: 'Serving notice (LWD: 14-Aug-2026)'

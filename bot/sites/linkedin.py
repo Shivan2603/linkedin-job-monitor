@@ -115,7 +115,7 @@ def run_linkedin_bot():
         logger.warn("LinkedIn credentials not set — skipping", SITE)
         return
     if not check_daily_limit(SITE):
-        return
+        logger.warn("LinkedIn Easy Apply daily limit reached — starting/continuing in External Apply Capture mode", SITE)
 
     logger.info("Starting LinkedIn Easy Apply bot — Production Mode", SITE)
     print(f"\n{'='*60}")
@@ -134,8 +134,7 @@ def run_linkedin_bot():
 
             for job_title in JOB_TITLES:
                 if not check_daily_limit(SITE):
-                    logger.info("LinkedIn daily limit (25) reached — stopping", SITE)
-                    return
+                    logger.warn("LinkedIn Easy Apply daily limit reached — continuing in External Apply Capture mode", SITE)
                 _search_and_apply(page, job_title, "Worldwide")
         except Exception as e:
             logger.error(f"LinkedIn bot crash: {e}", SITE)

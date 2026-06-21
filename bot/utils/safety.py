@@ -20,7 +20,7 @@ from bot.utils import logger
 
 # ─── DAILY LIMITS (safe thresholds per site) ─────────────────────────────────
 DAILY_LIMITS = {
-    "linkedin":       1000, # Increased limit per user request (was 25)
+    "linkedin":       25, # Easy Apply daily limit (reverted to 25)
     "naukri":         40,
     "indeed":         30,
     "shine":          50,
@@ -491,35 +491,50 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
 
     return True
 
-def select_best_resume_file(page, file_input_el, docx_path: str, pdf_path: str) -> str:
+def select_best_resume_file(page, file_input_el, docx_path: str, pdf_path: str = "") -> str:
     """
     Looks at the file input's accept attribute or surrounding text to decide whether
     to upload the PDF resume or the DOCX resume.
-    Defaults to PDF if PDF is accepted or requested, as it is universally preferred.
+    Converts DOCX to PDF on-demand ONLY if strictly needed (i.e. if PDF is required and DOCX is not accepted).
     """
     import os
-    if not pdf_path or not os.path.exists(pdf_path):
-        return docx_path
     if not docx_path or not os.path.exists(docx_path):
-        return pdf_path
+        return docx_path
         
+    abs_docx_path = os.path.abspath(docx_path)
+    abs_pdf_path = os.path.abspath(pdf_path) if pdf_path else abs_docx_path.replace(".docx", ".pdf")
+    
     try:
         accept = (file_input_el.get_attribute("accept") or "").lower()
         
-        # If the input explicitly requires doc/docx and doesn't accept pdf
-        if any(x in accept for x in ["doc", "docx"]) and "pdf" not in accept:
-            return docx_path
-            
-        # If surrounding text explicitly asks for doc/docx only
+        # Check surrounding text for requirements
         parent_text = file_input_el.evaluate("""el => {
             let container = el.closest('.jobs-easy-apply-form-element, .fb-form-element, div[class*="upload"], label, div');
             return container ? container.innerText.toLowerCase() : '';
         }""")
-        if any(x in parent_text for x in ["doc only", "docx only", "word format", "word document"]):
-            if "pdf" not in parent_text:
-                return docx_path
-    except Exception:
-        pass
         
-    # Default to PDF as it is the industry standard
-    return pdf_path
+        pdf_required = False
+        
+        # 1. If accept attribute strictly contains pdf but NOT doc/docx
+        if "pdf" in accept and not any(x in accept for x in ["doc", "docx"]):
+            pdf_required = True
+            
+        # 2. If surrounding text says "pdf only", "must be pdf", etc.
+        if any(x in parent_text for x in ["pdf only", "only pdf", "must be pdf", "must be a pdf", "pdf format"]):
+            if not any(x in parent_text for x in ["docx", "doc", "word"]):
+                pdf_required = True
+                
+        if pdf_required:
+            if os.path.exists(abs_pdf_path):
+                return abs_pdf_path
+            # If not, convert it on-demand!
+            print(f"[PDF Builder] PDF strictly required. Converting '{os.path.basename(docx_path)}' on-demand...")
+            # Local import to avoid circular dependencies
+            from bot.ai_resume import convert_docx_to_pdf_win32
+            return convert_docx_to_pdf_win32(abs_docx_path)
+            
+    except Exception as e:
+        print(f"[PDF Builder] Warning in select_best_resume_file: {e}")
+        
+    # Default to DOCX to avoid unnecessary PDF conversion
+    return abs_docx_path
