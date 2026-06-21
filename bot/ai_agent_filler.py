@@ -179,8 +179,14 @@ def _upload_resume_if_needed(page: Page, resume_path: str, site: str):
                         }
                     """)
                     if is_resume_input:
-                        logger.info(f"AI Filler: Uploading resume {resume_path} to input ID={inp_id}, Name={inp_name}", site)
-                        file_in.set_input_files(resume_path)
+                        from bot.utils.safety import select_best_resume_file
+                        best_resume = select_best_resume_file(
+                            page, file_in,
+                            docx_path=resume_path,
+                            pdf_path=resume_path.replace(".docx", ".pdf")
+                        )
+                        logger.info(f"AI Filler: Uploading resume {best_resume} to input ID={inp_id}, Name={inp_name}", site)
+                        file_in.set_input_files(best_resume)
                         logger.success(f"Resume uploaded successfully to {inp_name or inp_id or 'file input'}", site)
                 except Exception as ex:
                     logger.warn(f"Failed to check/upload to file input: {str(ex)[:80]}", site)
@@ -300,6 +306,14 @@ def _find_next_or_submit_button(page: Page):
         'button:has-text("Submit")',
         'button:has-text("Apply")',
         'button:has-text("Submit application")',
+        'button:has-text("Postuler")',
+        'button:has-text("Déposer ma candidature")',
+        'button:has-text("Soumettre")',
+        'button:has-text("Bewerben")',
+        'button:has-text("Postular")',
+        'button:has-text("Candidatar-se")',
+        'button:has-text("Solliciteren")',
+        'button:has-text("Invia la candidatura")',
     ]
     for sel in submit_selectors:
         try:
@@ -318,6 +332,11 @@ def _find_next_or_submit_button(page: Page):
         'button:has-text("Continue")',
         'button:has-text("Review")',
         'button:has-text("Next Step")',
+        'button:has-text("Continuer")',
+        'button:has-text("Weiter")',
+        'button:has-text("Continuar")',
+        'button:has-text("Doorgaan")',
+        'button:has-text("Avanti")',
         'input[type="button"][value="Next"]',
         'input[type="submit"][value="Next"]',
     ]
@@ -371,6 +390,34 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
             if _handle_registration_or_signin(page, site):
                 did_something = True
                 time.sleep(3)
+                continue
+
+        # Check for Indeed-specific resume selection cards
+        resume_card = page.query_selector('[data-testid="FileResumeCardHeader-title"]')
+        if resume_card and resume_card.is_visible():
+            logger.info("AI Filler: Indeed resume card detected. Clicking to select...", site)
+            try:
+                resume_card.click()
+            except Exception:
+                try:
+                    parent = resume_card.evaluate_handle('node => node.parentElement')
+                    if parent:
+                        parent.click()
+                except Exception:
+                    pass
+            time.sleep(1)
+            # Find and click continue/next button
+            continuer_btn = None
+            btns = page.query_selector_all('button:visible')
+            for btn in btns:
+                text = (btn.inner_text() or "").lower()
+                if "continuer" in text or "continue" in text or "next" in text:
+                    continuer_btn = btn
+                    break
+            if continuer_btn:
+                continuer_btn.click()
+                time.sleep(3)
+                did_something = True
                 continue
 
         # Upload resume to file inputs if any are visible on this step

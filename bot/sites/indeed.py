@@ -76,6 +76,16 @@ def check_and_handle_cloudflare(page, timeout_seconds=180) -> bool:
 def is_indeed_logged_in(page) -> bool:
     if page.is_closed():
         return False
+        
+    # Check for PPID cookie (Indeed persistent authenticated user token)
+    try:
+        cookies = page.context.cookies()
+        ppid_cookie = next((c for c in cookies if c['name'] == 'PPID'), None)
+        if ppid_cookie:
+            return True
+    except Exception:
+        pass
+        
     url = page.url.lower()
     if "accounts.google.com" in url or "appleid.apple.com" in url:
         return False
@@ -253,88 +263,147 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     if not check_and_handle_cloudflare(page):
         return
 
-    applied = 0
-    cards = page.query_selector_all(".job_seen_beacon, .tapItem")
+    # Extract all job cards matching standard or test ID elements
+    cards = page.query_selector_all('div[data-testid="slider_item"]')
+    if not cards:
+        cards = page.query_selector_all(".job_seen_beacon, .tapItem")
 
+    jobs_to_process = []
     for card in cards:
+        try:
+            # Check if indeed apply tag or button is present
+            indeed_apply = card.query_selector('[data-testid="indeedApply"], .ia-continueButton, [id*="indeedApplyButton"]')
+            if not indeed_apply:
+                card_text = card.inner_text().lower()
+                if "indeed apply" not in card_text and "candidature simplifiée" not in card_text:
+                    continue
+            
+            # Find the job title and link
+            link_el = card.query_selector('a.jcs-JobTitle, a[id*="job_"]')
+            if not link_el:
+                continue
+                
+            job_url = link_el.get_attribute('href')
+            if not job_url:
+                continue
+                
+            if job_url.startswith('/'):
+                job_url = f"{base_url}{job_url}"
+                
+            title_el = card.query_selector(".jobTitle, a.jcs-JobTitle")
+            company_el = card.query_selector('.companyName, [data-company-name="true"], [data-testid="company-name"]')
+            
+            job_t = title_el.inner_text().strip() if title_el else job_title
+            company = company_el.inner_text().strip() if company_el else "Company"
+            
+            jobs_to_process.append({
+                "url": job_url,
+                "title": job_t,
+                "company": company
+            })
+        except Exception as e:
+            logger.warn(f"Error parsing job card metadata: {e}", SITE)
+
+    logger.info(f"Found {len(jobs_to_process)} Indeed Apply jobs to process on search page", SITE)
+    applied = 0
+    from bot.utils.logger import record_application, is_already_applied, git_sync
+
+    for job in jobs_to_process:
         if not check_daily_limit(SITE):
             logger.info("Indeed daily limit reached — stopping", SITE)
             return
             
+        job_url = job["url"]
+        job_t = job["title"]
+        company = job["company"]
+        
+        if is_already_applied(SITE, company, job_t):
+            logger.info(f"Skipping {company} - {job_t} (Already applied)", SITE)
+            continue
+            
+        logger.info(f"Opening job page: {company} - {job_t}...", SITE)
+        
+        # Open in a fresh page context to prevent split-pane overlay bugs
+        job_page = page.context.new_page()
         try:
-            if not check_and_handle_cloudflare(page):
-                return
-            card.scroll_into_view_if_needed()
-            _human_delay(0.3, 0.6)
-            card.click()
-            _human_delay(1.5, 2.5)
-            if not check_and_handle_cloudflare(page):
-                return
-
-            title_el   = page.query_selector(".jobsearch-JobInfoHeader-title span:first-child")
-            company_el = page.query_selector('[data-company-name="true"]')
-            desc_el    = page.query_selector("#jobDescriptionText")
-
-            job_t   = title_el.inner_text().strip()   if title_el   else job_title
-            company = company_el.inner_text().strip()  if company_el else "Company"
-            desc    = desc_el.inner_text().strip()     if desc_el    else ""
-
-            # Indeed Apply button
-            apply_btn = page.query_selector('.ia-continueButton, [id*="indeedApplyButton"]')
-            if not apply_btn:
+            job_page.goto(job_url, wait_until="domcontentloaded", timeout=45000)
+            _human_delay(2, 3)
+            if not check_and_handle_cloudflare(job_page):
+                job_page.close()
                 continue
-
-            from bot.utils.logger import record_application, is_already_applied, git_sync
-
-            if is_already_applied(SITE, company, job_t):
-                logger.info(f"Skipping {company} - {job_t} (Already applied)", SITE)
-                continue
-
+                
+            desc_el = job_page.query_selector("#jobDescriptionText")
+            desc = desc_el.inner_text().strip() if desc_el else ""
+            
+            # Match tech stack and experience
             tailor_result = tailor_resume(job_t, company, desc, site=SITE)
             resume_path = tailor_result.get("resume_path", "")
             if not resume_path:
                 logger.info(f"Skipping {company} - {job_t} (Tech stack or experience mismatch)", SITE)
+                job_page.close()
                 continue
-
-            apply_btn.click()
-            _human_delay(2, 3)
-            if not check_and_handle_cloudflare(page):
-                return
-
-            # Handle Indeed Apply flow
-            for _ in range(8):
-                _human_delay(1, 2)
-                if not check_and_handle_cloudflare(page):
-                    return
-                next_b = page.query_selector('button[type="submit"]')
-                if next_b:
-                    upload = page.query_selector('input[type="file"]')
-                    if upload:
-                        best_resume = select_best_resume_file(
-                            page, upload,
-                            tailor_result.get("resume_path", ""),
-                            tailor_result.get("resume_pdf_path", "")
-                        )
-                        upload.set_input_files(best_resume)
-                        _human_delay(1, 2)
-                    next_b.click()
-                else:
+                
+            # Locate the indeed apply button
+            apply_btn = None
+            for _ in range(5):
+                # 1. Custom styled classes (e.g. css-1ebo7dz)
+                apply_btn = job_page.query_selector('button:has(span[class*="css-1ebo7dz"]), button[class*="css-1ebo7dz"]')
+                if not apply_btn:
+                    apply_btn = job_page.query_selector('button[id*="indeedApplyButton"], button.ia-continueButton')
+                # 2. Text fallbacks
+                if not apply_btn:
+                    apply_btn = job_page.query_selector('button:visible:has-text("Apply"), button:visible:has-text("Apply Now"), button:visible:has-text("Postuler")')
+                # 3. Visible button heuristic
+                if not apply_btn:
+                    btns = job_page.query_selector_all('button:visible')
+                    for btn in btns:
+                        text = (btn.inner_text() or "").lower()
+                        if "apply" in text or "postuler" in text:
+                            apply_btn = btn
+                            break
+                if apply_btn:
                     break
-
-            record_application(
-                site=SITE, company=company, role=job_t, location=location,
-                job_url=page.url, match_score=tailor_result["match_score"],
-                resume_used=tailor_result["resume_path"],
-            )
-            increment_daily_count(SITE)
-            git_sync()
-            applied += 1
-            _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 5)
-
+                time.sleep(1)
+                
+            if not apply_btn:
+                logger.warn(f"No Apply button found for job page: {job_url}", SITE)
+                job_page.close()
+                continue
+                
+            logger.info("Clicking 'Apply' to enter application wizard...", SITE)
+            apply_btn.click()
+            _human_delay(3, 4)
+            if not check_and_handle_cloudflare(job_page):
+                job_page.close()
+                continue
+                
+            # Dynamically fill out the multi-step form wizard using our AI Form Filler
+            from bot.ai_agent_filler import fill_form_with_ai
+            success = fill_form_with_ai(job_page, site=SITE, resume_path=resume_path)
+            
+            if success:
+                logger.success(f"Successfully applied to {company} - {job_t} ✅", SITE)
+                record_application(
+                    site=SITE, company=company, role=job_t, location=location,
+                    job_url=job_url, match_score=tailor_result["match_score"],
+                    resume_used=resume_path,
+                )
+                increment_daily_count(SITE)
+                git_sync()
+                applied += 1
+                _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 5)
+            else:
+                logger.warn(f"Failed to submit application wizard for {company} - {job_t}", SITE)
+                
         except Exception as e:
-            logger.warn(f"Indeed job error: {e}", SITE)
-            continue
-
+            logger.error(f"Error applying to job {company} - {job_t}: {e}", SITE)
+        finally:
+            try:
+                job_page.close()
+            except Exception:
+                pass
+            _human_delay(1.5, 3.0)
+            
     logger.info(f"Applied to {applied} jobs on Indeed for '{job_title}' in {location}", SITE)
 
 def run_indeed_bot():
