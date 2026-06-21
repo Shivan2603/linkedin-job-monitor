@@ -1,5 +1,75 @@
 [
   {
+    "id": "61e12a62",
+    "ts": "2026-06-21T16:09:38.938715",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Aarorn Technologies Inc | .NET Developer (Power BI Focus | Toronto, ON | 100% match"
+  },
+  {
+    "id": "5051a63b",
+    "ts": "2026-06-21T16:09:38.804486",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Aarorn Technologies Inc — .NET Developer (Power BI Focus"
+  },
+  {
+    "id": "eb3d452e",
+    "ts": "2026-06-21T16:09:21.589837",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "737c4bee",
+    "ts": "2026-06-21T16:09:21.190140",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9d848261",
+    "ts": "2026-06-21T16:09:21.111286",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "8b1cd0f5",
+    "ts": "2026-06-21T16:09:20.811934",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5aa8b209",
+    "ts": "2026-06-21T16:09:20.318804",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "6306470a",
+    "ts": "2026-06-21T16:09:19.975251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "b3c7eeda",
+    "ts": "2026-06-21T16:09:19.491720",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "f5172fec",
+    "ts": "2026-06-21T16:07:06.183875",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "0f1ae061",
     "ts": "2026-06-21T16:06:40.161488",
     "level": "SUCCESS",
@@ -3428,75 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn: Applied 0 jobs for '.Net' in Worldwide"
-  },
-  {
-    "id": "e9665994",
-    "ts": "2026-06-21T12:40:28.508385",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4b0c635d",
-    "ts": "2026-06-21T12:39:49.665019",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2fb4979c",
-    "ts": "2026-06-21T12:39:46.494876",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1850fafa",
-    "ts": "2026-06-21T12:39:30.976410",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 3"
-  },
-  {
-    "id": "f2f6ac83",
-    "ts": "2026-06-21T12:39:21.290167",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "924c9338",
-    "ts": "2026-06-21T12:39:15.188548",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e4a08677",
-    "ts": "2026-06-21T12:39:11.558905",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8795197f",
-    "ts": "2026-06-21T12:38:21.956379",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2afbb3f0",
-    "ts": "2026-06-21T12:38:08.365969",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "d9991940",
-    "ts": "2026-06-21T12:37:38.723557",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
   }
 ]
