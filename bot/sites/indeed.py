@@ -21,25 +21,33 @@ def check_and_handle_cloudflare(page, timeout_seconds=180) -> bool:
     if page.is_closed():
         return False
         
-    cf_indicators = [
+    cf_title_indicators = [
+        "additional verification required",
+        "please verify you are a human",
+        "verify you are human",
+        "just a moment...",
+        "checking your browser",
+        "attention required"
+    ]
+    
+    cf_body_indicators = [
         "additional verification required",
         "please verify you are a human",
         "verify you are human",
         "ray id:",
-        "cf-challenge",
-        "cloudflare-challenge",
-        "just a moment...",
-        "checking your browser",
-        "enable cookies and javascript"
+        "checking your browser before accessing"
     ]
     
     try:
         title = page.title().lower()
-        content = page.content().lower()
+        body_text = page.locator("body").inner_text().lower()
     except Exception:
         return False
         
-    is_cf = any(ind in title or ind in content for ind in cf_indicators)
+    is_cf = (
+        any(ind in title for ind in cf_title_indicators) or
+        any(ind in body_text for ind in cf_body_indicators)
+    )
     
     if is_cf:
         logger.warn("⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window.", SITE)
@@ -60,8 +68,11 @@ def check_and_handle_cloudflare(page, timeout_seconds=180) -> bool:
                 return False
             try:
                 current_title = page.title().lower()
-                current_content = page.content().lower()
-                still_cf = any(ind in current_title or ind in current_content for ind in cf_indicators)
+                current_body = page.locator("body").inner_text().lower()
+                still_cf = (
+                    any(ind in current_title for ind in cf_title_indicators) or
+                    any(ind in current_body for ind in cf_body_indicators)
+                )
                 if not still_cf:
                     logger.success("Cloudflare challenge resolved! Resuming bot...", SITE)
                     time.sleep(2)  # short delay for page to settle
@@ -92,25 +103,33 @@ def is_indeed_logged_in(page) -> bool:
     if "/auth" in url or "/passkey" in url or "/mfa" in url:
         return False
         
-    cf_indicators = [
+    cf_title_indicators = [
+        "additional verification required",
+        "please verify you are a human",
+        "verify you are human",
+        "just a moment...",
+        "checking your browser",
+        "attention required"
+    ]
+    cf_body_indicators = [
         "additional verification required",
         "please verify you are a human",
         "verify you are human",
         "ray id:",
-        "cf-challenge",
-        "cloudflare-challenge",
-        "just a moment...",
-        "checking your browser",
-        "enable cookies and javascript"
+        "checking your browser before accessing"
     ]
     try:
         title = page.title().lower()
-        content = page.content().lower()
+        body_text = page.locator("body").inner_text().lower()
     except Exception:
         return False
 
     # If currently encountering Cloudflare, we are NOT considered logged in!
-    if any(ind in title or ind in content for ind in cf_indicators):
+    is_cf = (
+        any(ind in title for ind in cf_title_indicators) or
+        any(ind in body_text for ind in cf_body_indicators)
+    )
+    if is_cf:
         return False
         
     logged_in_selectors = [
