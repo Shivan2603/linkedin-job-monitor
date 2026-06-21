@@ -3,7 +3,7 @@ sites/indeed.py — Indeed Multi-Country Automation with Login Detection
 """
 import time, random, os
 from playwright.sync_api import sync_playwright
-from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file
+from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file, human_click
 from bot.config import CREDENTIALS, JOB_TITLES, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.utils import logger
@@ -202,7 +202,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                 from bot.utils.safety import human_fill
                 human_fill(email_input, creds["email"], "Indeed Email", SITE)
                 _human_delay(1, 1.5)
-                page.locator('button[type="submit"]').first.click()
+                human_click(page, page.locator('button[type="submit"]').first)
                 _human_delay(2, 3)
                 if not check_and_handle_cloudflare(page):
                     return False
@@ -211,7 +211,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                 if pass_input.is_visible():
                     human_fill(pass_input, creds["password"], "Indeed Password", SITE)
                     _human_delay(1, 1.5)
-                    page.locator('button[type="submit"]').first.click()
+                    human_click(page, page.locator('button[type="submit"]').first)
                     _human_delay(2, 3)
                     if not check_and_handle_cloudflare(page):
                         return False
@@ -245,7 +245,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
                 el = page.query_selector(selector)
                 if el and el.is_visible():
                     logger.info(f"Indeed Login: Auto-dismissing passkey/skip prompt using selector '{selector}'", SITE)
-                    el.click()
+                    human_click(page, el)
                     _human_delay(1.5, 2.5)
                     break
         except Exception:
@@ -287,6 +287,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     if not cards:
         cards = page.query_selector_all(".job_seen_beacon, .tapItem")
 
+    seen_jobs = set()
     jobs_to_process = []
     for card in cards:
         try:
@@ -321,6 +322,12 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             job_t = title_el.inner_text().strip() if title_el else job_title
             company = company_el.inner_text().strip() if company_el else "Company"
             
+            # Deduplicate by company name and job title to filter sponsored/organic duplicates
+            job_key = (company.lower(), job_t.lower())
+            if job_key in seen_jobs:
+                continue
+            seen_jobs.add(job_key)
+            
             jobs_to_process.append({
                 "url": job_url,
                 "title": job_t,
@@ -333,6 +340,9 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     logger.info(f"Found {len(jobs_to_process)} Indeed jobs to process on search page", SITE)
     applied = 0
     from bot.utils.logger import record_application, is_already_applied, git_sync
+
+    # Prioritize Indeed Apply (Easy Apply) jobs first
+    jobs_to_process.sort(key=lambda x: not x["is_indeed_apply"])
 
     for job in jobs_to_process:
         is_apply = job["is_indeed_apply"]
@@ -406,7 +416,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 wizard_page = job_page
                 try:
                     with job_page.context.expect_popup(timeout=8000) as popup_info:
-                        apply_btn.click()
+                        human_click(job_page, apply_btn)
                     popup = popup_info.value
                     popup.wait_for_load_state("domcontentloaded")
                     logger.info("Indeed Apply: Opened in popup window.", SITE)
@@ -424,9 +434,10 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 # Dynamically fill out the multi-step form wizard using our AI Form Filler
                 # Pass resume_path=None because the user wants to upload the resume manually!
                 from bot.ai_agent_filler import fill_form_with_ai
-                success = fill_form_with_ai(wizard_page, site=SITE, resume_path=None)
+                fill_form_with_ai(wizard_page, site=SITE, resume_path=None)
                 
-                if success:
+                # Check if the wizard page is still open (even if fill_form_with_ai returned False or completed)
+                if not wizard_page.is_closed():
                     print("\n" + "*" * 70)
                     print("ACTION REQUIRED:")
                     print(f"Indeed Apply wizard is open for: {company} — {job_t}")
@@ -451,7 +462,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                     else:
                         logger.info(f"Skipped recording application for: {company} — {job_t}", SITE)
                 else:
-                    logger.warn(f"Failed to fill application wizard for {company} - {job_t}", SITE)
+                    logger.warn(f"Failed to fill or keep open application wizard for {company} - {job_t}", SITE)
                     
                 if wizard_page != job_page:
                     try:
@@ -495,7 +506,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                     external_url = None
                     try:
                         with job_page.expect_popup(timeout=12000) as popup_info:
-                            external_btn.click()
+                            human_click(job_page, external_btn)
                         popup = popup_info.value
                         popup.wait_for_load_state("domcontentloaded")
                         external_url = popup.url
@@ -540,7 +551,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 job_page.close()
             except Exception:
                 pass
-            _human_delay(1.5, 3.0)
+            _human_delay(6.0, 12.0)
             
     logger.info(f"Applied to {applied} jobs on Indeed for '{job_title}' in {location}", SITE)
 

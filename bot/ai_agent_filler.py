@@ -8,7 +8,7 @@ from playwright.sync_api import Page
 from bot.config import GROQ_API_KEY, PROJECT_FOLDER, DATA_FOLDER
 from bot.utils import logger
 from bot.ai_router import ai_complete
-from bot.utils.safety import human_fill
+from bot.utils.safety import human_fill, human_click
 
 ACCOUNTS_FILE = os.path.join(DATA_FOLDER, "workday_accounts.json")
 
@@ -204,7 +204,7 @@ def _handle_workday_entry_options(page: Page, site: str) -> bool:
         autofill_btn = page.query_selector('[data-automation-id="applyWithResume"], button:has-text("Autofill with Resume"), button:has-text("Autofill with CV")')
         if autofill_btn and autofill_btn.is_visible():
             logger.info("AI Filler: Workday landing options detected. Clicking 'Autofill with Resume'...", site)
-            autofill_btn.click()
+            human_click(page, autofill_btn)
             time.sleep(3)
             return True
             
@@ -212,7 +212,7 @@ def _handle_workday_entry_options(page: Page, site: str) -> bool:
         manual_btn = page.query_selector('[data-automation-id="applyManually"], button:has-text("Apply Manually")')
         if manual_btn and manual_btn.is_visible():
             logger.info("AI Filler: Workday landing options detected. Clicking 'Apply Manually'...", site)
-            manual_btn.click()
+            human_click(page, manual_btn)
             time.sleep(3)
             return True
     except Exception as e:
@@ -235,7 +235,7 @@ def _handle_registration_or_signin(page: Page, site: str) -> bool:
         create_account_btn = page.query_selector('button:has-text("Create Account"), a:has-text("Create Account"), [data-automation-id="createAccountLink"]')
         if create_account_btn and not has_account:
             logger.info("AI Filler: No cached account for this domain. Clicking 'Create Account'...", site)
-            create_account_btn.click()
+            human_click(page, create_account_btn)
             time.sleep(2)
             # Check if registration form is loaded
             password_input = page.query_selector('input[type="password"]')
@@ -265,13 +265,13 @@ def _handle_registration_or_signin(page: Page, site: str) -> bool:
                             cb.check(force=True)
                     except Exception:
                         try:
-                            cb.click(force=True)
+                            human_click(page, cb)
                         except Exception:
                             pass
                 
                 btn = page.query_selector('button[type="submit"], button:has-text("Create Account"), button:has-text("Register"), [data-automation-id="registerButton"]')
                 if btn:
-                    btn.click()
+                    human_click(page, btn)
                     _save_workday_account(domain, email)
                     logger.success("AI Filler: Submitted registration. Saved credentials.", site)
                     return True
@@ -279,7 +279,7 @@ def _handle_registration_or_signin(page: Page, site: str) -> bool:
                 logger.info("AI Filler: Logging in with credentials...", site)
                 btn = page.query_selector('button[type="submit"], button:has-text("Sign In"), button:has-text("Log In"), [data-automation-id="signInButton"]')
                 if btn:
-                    btn.click()
+                    human_click(page, btn)
                     _save_workday_account(domain, email)
                     return True
                     
@@ -291,7 +291,7 @@ def _handle_registration_or_signin(page: Page, site: str) -> bool:
                 logger.warn(f"AI Filler: Login failed ({err_text}). Attempting registration...", site)
                 create_account_btn = page.query_selector('button:has-text("Create Account"), a:has-text("Create Account"), [data-automation-id="createAccountLink"]')
                 if create_account_btn:
-                    create_account_btn.click()
+                    human_click(page, create_account_btn)
                     time.sleep(2)
                     return True
                     
@@ -383,7 +383,7 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
                 logger.warn("AI Filler: Clicked 'Apply' multiple times but no form fields loaded. Stopping loop to prevent stuck session.", site)
                 break
             logger.info("AI Filler: Job description page detected. Clicking 'Apply' to enter application form...", site)
-            apply_btn.click()
+            human_click(page, apply_btn)
             time.sleep(3)
             continue
         
@@ -400,12 +400,12 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
         if resume_card and resume_card.is_visible():
             logger.info("AI Filler: Indeed resume card detected. Clicking to select...", site)
             try:
-                resume_card.click()
+                human_click(page, resume_card)
             except Exception:
                 try:
                     parent = resume_card.evaluate_handle('node => node.parentElement')
                     if parent:
-                        parent.click()
+                        human_click(page, parent)
                 except Exception:
                     pass
             time.sleep(1)
@@ -418,7 +418,7 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
                     continuer_btn = btn
                     break
             if continuer_btn:
-                continuer_btn.click()
+                human_click(page, continuer_btn)
                 time.sleep(3)
                 did_something = True
                 continue
@@ -439,7 +439,7 @@ def fill_form_with_ai(page: Page, site: str = "ai", resume_path: str = None) -> 
                     logger.info("AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving.", site)
                     return True
                 logger.info(f"AI Filler: No fields found on step {step + 1}, clicking next/submit button...", site)
-                next_btn.click()
+                human_click(page, next_btn)
                 did_something = True
                 if "submit" in btn_text or "apply" in btn_text:
                     time.sleep(4)
@@ -546,7 +546,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                         # Interact with custom combobox
                         logger.info(f"AI Filler: Interacting with custom combobox '{field_id}' for value '{val}'", site)
                         el.scroll_into_view_if_needed()
-                        el.click()
+                        human_click(page, el)
                         time.sleep(1) # wait for listbox/options
                         
                         # Find the options on the page
@@ -582,7 +582,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                             
                             if best_match:
                                 logger.info(f"AI Filler: Clicking option '{best_match.inner_text().strip()}'", site)
-                                best_match.click()
+                                human_click(page, best_match)
                                 clicked_option = True
                                 time.sleep(0.5)
                         
@@ -623,7 +623,7 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                                 el.check(force=True)
                             except Exception:
                                 try:
-                                    el.click(force=True)
+                                    human_click(page, el)
                                 except Exception:
                                     el.evaluate("el => el.click()")
                             filled += 1
@@ -642,24 +642,24 @@ Return JSON array: [{{"id": "ai-form-field-N", "value": "answer"}}]"""
                         time.sleep(random.uniform(1.0, 2.5))
                 except Exception as ex:
                     pass
-
+ 
             logger.ai(f"Step {step + 1}: Filled {filled}/{len(actions)} fields via AI.", site)
-
+ 
         except Exception as e:
             logger.error(f"AI Form Filler error on step {step + 1}: {e}", site)
-
+ 
         # Click navigation (Next / Continue) or final Submit button
         next_btn = _find_next_or_submit_button(page)
         if not next_btn:
             break
-
+ 
         btn_text = next_btn.inner_text().lower()
         if "submit" in btn_text or "apply" in btn_text:
             logger.info("AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving.", site)
             return True
         else:
             logger.info(f"AI Filler: Moving to next page via '{next_btn.inner_text().strip()}'", site)
-            next_btn.click()
+            human_click(page, next_btn)
             time.sleep(2)
 
     return did_something

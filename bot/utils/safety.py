@@ -49,9 +49,10 @@ def _save_counts(counts: dict):
 
 def check_daily_limit(site: str) -> bool:
     """Returns True if we are still under the daily limit for this site."""
+    from bot.config import MAX_JOBS_PER_SITE
     counts = _load_counts()
     used = counts.get(site, 0)
-    limit = DAILY_LIMITS.get(site, 30)
+    limit = MAX_JOBS_PER_SITE if site == "linkedin" else DAILY_LIMITS.get(site, 30)
     if used >= limit:
         logger.warn(f"Daily limit reached for {site} ({used}/{limit}). Skipping for today.", site)
         return False
@@ -116,28 +117,53 @@ def human_scroll(page: Page, direction: str = "down", amount: int = None):
     page.mouse.wheel(0, amount)
     time.sleep(random.uniform(0.3, 0.8))
 
-def human_click(page: Page, selector: str):
+def human_click(page: Page, target):
     """
-    Click with slight position randomness + pre-scroll into view.
-    Mimics a human moving mouse to an element.
+    Clicks a target (can be a selector string, Locator, or ElementHandle) with:
+      1. Scrolling into view
+      2. Simulated mouse movement with steps
+      3. Random off-center click coordinates
     """
     try:
-        el = page.locator(selector).first
-        el.scroll_into_view_if_needed()
-        time.sleep(random.uniform(0.2, 0.5))
-        box = el.bounding_box()
+        # Resolve target to a Locator if it's a string
+        if isinstance(target, str):
+            el = page.locator(target).first
+        else:
+            el = target
+
+        # Scroll into view if needed
+        try:
+            el.scroll_into_view_if_needed()
+        except Exception:
+            pass
+
+        time.sleep(random.uniform(0.1, 0.3))
+        
+        # Try to get bounding box to simulate mouse trajectory
+        box = None
+        try:
+            box = el.bounding_box()
+        except Exception:
+            pass
+
         if box:
             # Click slightly off-center (humans don't click pixel-perfect)
-            x = box["x"] + box["width"]  * random.uniform(0.3, 0.7)
-            y = box["y"] + box["height"] * random.uniform(0.3, 0.7)
-            page.mouse.move(x, y, steps=random.randint(5, 15))
-            time.sleep(random.uniform(0.1, 0.3))
+            x = box["x"] + box["width"]  * random.uniform(0.2, 0.8)
+            y = box["y"] + box["height"] * random.uniform(0.2, 0.8)
+            # Move mouse smoothly to target
+            page.mouse.move(x, y, steps=random.randint(4, 12))
+            time.sleep(random.uniform(0.1, 0.2))
             page.mouse.click(x, y)
         else:
+            # Fallback to direct click
             el.click()
-    except Exception:
+    except Exception as e:
+        # Ultimate fallback
         try:
-            page.click(selector)
+            if isinstance(target, str):
+                page.click(target)
+            else:
+                target.click()
         except Exception:
             pass
 
@@ -251,71 +277,76 @@ def safe_browser_context(playwright, site: str):
 
     context = playwright.chromium.launch_persistent_context(**launch_kwargs)
     
-    # Apply advanced playwright-stealth to bypass Cloudflare Turnstile / Akamai
-    try:
-        from playwright_stealth import Stealth
-        Stealth().apply_stealth_sync(context)
-        logger.info("Successfully initialized playwright-stealth on browser context.", "safety")
-    except Exception as e:
-        logger.warn(f"Failed to initialize playwright-stealth: {e}", "safety")
-        
-        # Fallback to custom anti-fingerprinting overrides if playwright-stealth fails
-        context.add_init_script("""
-            // 1. Delete the navigator.webdriver property descriptor
-            const newProto = navigator.__proto__;
-            delete newProto.webdriver;
-            navigator.__proto__ = newProto;
-
-            // 2. Mock languages and plugins
-            Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
-            Object.defineProperty(navigator, 'plugins', {
-                get: () => {
-                    const mockPluginArray = [
-                        { name: 'PDF Viewer', filename: 'internal-pdf-viewer', description: 'Portable Document Format' },
-                        { name: 'Chrome PDF Viewer', filename: 'mhjfbgojdegpeflyipianaadaegdfegg', description: 'Google Chrome PDF Viewer' },
-                        { name: 'Chromium PDF Viewer', filename: 'internal-pdf-viewer', description: 'Chromium PDF Viewer' }
-                    ];
-                    mockPluginArray.item = function(index) { return this[index]; };
-                    mockPluginArray.namedItem = function(name) { return this.find(p => p.name === name); };
-                    return mockPluginArray;
-                }
-            });
-
-            // 3. Mock standard window.chrome object
-            window.chrome = {
-                app: {
-                    isInstalled: false,
-                    InstallState: { DISABLED: 'Disabled', INSTALLED: 'Installed', NOT_INSTALLED: 'NotInstalled' },
-                    RunningState: { CANNOT_RUN: 'CannotRun', RUNNING: 'Running', SUGGESTED_SAVING: 'SuggestedSaving' }
-                },
-                csi: function() { return {}; },
-                loadTimes: function() { return {}; },
-                runtime: {
-                    OnInstalledReason: { CHROME_UPDATE: 'chrome_update', INSTALL: 'install', SHARED_MODULE_UPDATE: 'shared_module_update', UPDATE: 'update' },
-                    OnRestartRequiredReason: { APP_UPDATE: 'app_update', OS_UPDATE: 'os_update', PERIODIC: 'periodic' },
-                    PlatformArch: { ARM: 'arm', ARM64: 'arm64', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
-                    PlatformNaclArch: { ARM: 'arm', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
-                    PlatformOs: { ANDROID: 'android', CROS: 'cros', LINUX: 'linux', MAC: 'mac', OPENBSD: 'openbsd', WIN: 'win' },
-                    RequestUpdateCheckStatus: { NO_UPDATE: 'no_update', THROTTLED: 'throttled', UPDATE_AVAILABLE: 'update_available' }
-                }
-            };
-
-            // 4. Mock permissions query
-            const originalQuery = window.navigator.permissions.query;
-            window.navigator.permissions.query = (parameters) => (
-                parameters.name === 'notifications' ?
-                    Promise.resolve({ state: Notification.permission, onchange: null }) :
-                    originalQuery(parameters)
-            );
-
-            // 5. Mock WebGL vendor/renderer to standard integrated/discrete graphics card
-            const getParameter = WebGLRenderingContext.prototype.getParameter;
-            WebGLRenderingContext.prototype.getParameter = function(parameter) {
-                if (parameter === 37445) return 'Intel Open Source Technology Center';
-                if (parameter === 37446) return 'Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2)';
-                return getParameter.apply(this, arguments);
-            };
-        """)
+    # Only apply stealth overrides if running in headless mode!
+    # Headful official Chrome with AutomationControlled already passes sannysoft without any JS injection.
+    # Overriding these on a real Chrome browser causes fingerprint mismatches that trigger anti-bot detections.
+    if launch_kwargs.get("headless", False):
+        try:
+            from playwright_stealth import Stealth
+            Stealth().apply_stealth_sync(context)
+            logger.info("Successfully initialized playwright-stealth on browser context in headless mode.", "safety")
+        except Exception as e:
+            logger.warn(f"Failed to initialize playwright-stealth: {e}", "safety")
+            
+            # Fallback to custom anti-fingerprinting overrides if playwright-stealth fails
+            context.add_init_script("""
+                // 1. Delete the navigator.webdriver property descriptor
+                const newProto = navigator.__proto__;
+                delete newProto.webdriver;
+                navigator.__proto__ = newProto;
+    
+                // 2. Mock languages and plugins
+                Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+                Object.defineProperty(navigator, 'plugins', {
+                    get: () => {
+                        const mockPluginArray = [
+                            { name: 'PDF Viewer', filename: 'internal-pdf-viewer', description: 'Portable Document Format' },
+                            { name: 'Chrome PDF Viewer', filename: 'mhjfbgojdegpeflyipianaadaegdfegg', description: 'Google Chrome PDF Viewer' },
+                            { name: 'Chromium PDF Viewer', filename: 'internal-pdf-viewer', description: 'Chromium PDF Viewer' }
+                        ];
+                        mockPluginArray.item = function(index) { return this[index]; };
+                        mockPluginArray.namedItem = function(name) { return this.find(p => p.name === name); };
+                        return mockPluginArray;
+                    }
+                });
+    
+                // 3. Mock standard window.chrome object
+                window.chrome = {
+                    app: {
+                        isInstalled: false,
+                        InstallState: { DISABLED: 'Disabled', INSTALLED: 'Installed', NOT_INSTALLED: 'NotInstalled' },
+                        RunningState: { CANNOT_RUN: 'CannotRun', RUNNING: 'Running', SUGGESTED_SAVING: 'SuggestedSaving' }
+                    },
+                    csi: function() { return {}; },
+                    loadTimes: function() { return {}; },
+                    runtime: {
+                        OnInstalledReason: { CHROME_UPDATE: 'chrome_update', INSTALL: 'install', SHARED_MODULE_UPDATE: 'shared_module_update', UPDATE: 'update' },
+                        OnRestartRequiredReason: { APP_UPDATE: 'app_update', OS_UPDATE: 'os_update', PERIODIC: 'periodic' },
+                        PlatformArch: { ARM: 'arm', ARM64: 'arm64', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
+                        PlatformNaclArch: { ARM: 'arm', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
+                        PlatformOs: { ANDROID: 'android', CROS: 'cros', LINUX: 'linux', MAC: 'mac', OPENBSD: 'openbsd', WIN: 'win' },
+                        RequestUpdateCheckStatus: { NO_UPDATE: 'no_update', THROTTLED: 'throttled', UPDATE_AVAILABLE: 'update_available' }
+                    }
+                };
+    
+                // 4. Mock permissions query
+                const originalQuery = window.navigator.permissions.query;
+                window.navigator.permissions.query = (parameters) => (
+                    parameters.name === 'notifications' ?
+                        Promise.resolve({ state: Notification.permission, onchange: null }) :
+                        originalQuery(parameters)
+                );
+    
+                // 5. Mock WebGL vendor/renderer to standard integrated/discrete graphics card
+                const getParameter = WebGLRenderingContext.prototype.getParameter;
+                WebGLRenderingContext.prototype.getParameter = function(parameter) {
+                    if (parameter === 37445) return 'Intel Open Source Technology Center';
+                    if (parameter === 37446) return 'Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2)';
+                    return getParameter.apply(this, arguments);
+                };
+            """)
+    else:
+        logger.info("Running in headful mode with native Chrome. Bypassing JS fingerprint overrides to prevent anti-bot mismatch.", "safety")
     
     # Return context as both browser and context for backwards compatibility
     return context, context
