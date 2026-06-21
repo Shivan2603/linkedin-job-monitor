@@ -100,25 +100,64 @@ def run_all_sites():
     logger.info("Waiting 60-90 minutes before next cycle...")
 
 def main():
-    logger.info("Job Bot Starting — Safe Mode Active")
-    logger.info(f"Daily limits: LinkedIn=1000 (Unlimited requested), Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30")
-    logger.info("Anti-ban: random delays, cookie persistence, stealth browser")
-    logger.info(f"Time window restriction active: {BOT_START_HOUR}:00 to {BOT_END_HOUR}:00")
-
-    run_all_sites()
-
-    # Randomize cycle time (60–90 min) to avoid pattern detection
     while True:
-        wait_mins = random.randint(60, 90)
-        logger.info(f"Next cycle in {wait_mins} minutes...")
+        print("\n" + "=" * 60)
+        print("                UNIVERSAL JOB BOT CONTROL PANEL")
+        print("=" * 60)
+        print("  1. Run LinkedIn Bot only (Easy Apply + External Link Capturing)")
+        print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
+        print("  3. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
+        print("  4. Exit")
+        print("=" * 60 + "\n")
         
-        # Sleep in chunks of 5 minutes so we can check the time window and not overrun
-        slept = 0
-        while slept < wait_mins * 60:
-            time.sleep(300)
-            slept += 300
+        try:
+            choice = input("Select an option (1-4): ").strip()
+        except (KeyboardInterrupt, SystemExit):
+            print("\nExiting.")
+            break
+
+        if choice == "1":
+            logger.info("Running LinkedIn Bot only...", "main")
+            try:
+                from bot.sites.linkedin import run_linkedin_bot
+                run_linkedin_bot()
+            except Exception as e:
+                logger.error(f"LinkedIn Bot error: {e}", "main")
+                
+        elif choice == "2":
+            logger.info("Running Careers Bot (Bulk Apply)...", "main")
+            try:
+                from bulk_apply import main as run_bulk_apply
+                run_bulk_apply()
+            except Exception as e:
+                logger.error(f"Careers Bot error: {e}", "main")
             
-        run_all_sites()
+        elif choice == "3":
+            logger.info("Starting All Sites standard loop...", "main")
+            logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30", "main")
+            logger.info("Anti-ban: random delays, cookie persistence, stealth browser", "main")
+            logger.info(f"Time window restriction active: {BOT_START_HOUR}:00 to {BOT_END_HOUR}:00", "main")
+            
+            try:
+                run_all_sites()
+                
+                # Cycle wait loop
+                while True:
+                    wait_mins = random.randint(60, 90)
+                    logger.info(f"Next cycle in {wait_mins} minutes...", "main")
+                    slept = 0
+                    while slept < wait_mins * 60:
+                        time.sleep(300)
+                        slept += 300
+                    run_all_sites()
+            except (KeyboardInterrupt, SystemExit):
+                logger.info("All Sites cycle interrupted by user.", "main")
+                
+        elif choice == "4":
+            print("Exiting.")
+            break
+        else:
+            print("Invalid selection. Please choose 1, 2, 3, or 4.")
 
 if __name__ == "__main__":
     main()
