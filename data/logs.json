@@ -1,5 +1,124 @@
 [
   {
+    "id": "1c45dbf5",
+    "ts": "2026-06-21T15:53:11.906238",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Spacebackend | Full-Stack Software Engineer - C# .NET & Angular | Luxembourg, Luxembourg, Luxembourg | 100% match"
+  },
+  {
+    "id": "cfb24176",
+    "ts": "2026-06-21T15:53:11.789426",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Spacebackend — Full-Stack Software Engineer - C# .NET & Angular"
+  },
+  {
+    "id": "a7357af5",
+    "ts": "2026-06-21T15:53:02.083632",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "5fdbe003",
+    "ts": "2026-06-21T15:53:01.873043",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you live in Luxembourg?' = 'No'"
+  },
+  {
+    "id": "45998055",
+    "ts": "2026-06-21T15:53:01.741185",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of Software Development experience do you currently have?' = '4'"
+  },
+  {
+    "id": "4800e4da",
+    "ts": "2026-06-21T15:53:01.614065",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with C# in .NET?' = '4'"
+  },
+  {
+    "id": "9df8e5f5",
+    "ts": "2026-06-21T15:53:01.502972",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with Angular?' = '4'"
+  },
+  {
+    "id": "fbafb34e",
+    "ts": "2026-06-21T15:53:00.584572",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "125bb8d5",
+    "ts": "2026-06-21T15:53:00.172592",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "6143e7f5",
+    "ts": "2026-06-21T15:53:00.052087",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "323f3cac",
+    "ts": "2026-06-21T15:52:59.657773",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "ca9e1106",
+    "ts": "2026-06-21T15:52:59.321588",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "44a7813c",
+    "ts": "2026-06-21T15:52:58.955409",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e61d5b67",
+    "ts": "2026-06-21T15:52:58.464159",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b5826554",
+    "ts": "2026-06-21T15:50:34.213913",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "e1186ff9",
+    "ts": "2026-06-21T15:50:34.033582",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Full_Stack_Software_Engineer_C#_.NET_&_Angular_Spacebackend_Resume.pdf' = 'Deselect resume Siva_Shankar_Full_Stack_Software_Engineer_C#_.NET_&_Angular_Spacebackend_Resume.pdf'"
+  },
+  {
+    "id": "cae40625",
+    "ts": "2026-06-21T15:48:38.578055",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "33529158",
     "ts": "2026-06-21T15:48:14.412727",
     "level": "SUCCESS",
@@ -3379,124 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn search: '.Net' in 'Worldwide'"
-  },
-  {
-    "id": "a2b16542",
-    "ts": "2026-06-21T12:03:27.762847",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "3126dc6a",
-    "ts": "2026-06-21T12:03:27.550159",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "f9e52894",
-    "ts": "2026-06-21T12:03:21.556451",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "25d41e6b",
-    "ts": "2026-06-21T12:03:20.687253",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "8aa696f9",
-    "ts": "2026-06-21T12:03:20.651152",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "19dbb13f",
-    "ts": "2026-06-21T12:03:20.613515",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "62a85a0f",
-    "ts": "2026-06-21T12:03:20.577895",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "1aefcd2a",
-    "ts": "2026-06-21T12:03:20.542755",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "1aedf892",
-    "ts": "2026-06-21T12:03:20.507564",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\21-06-2026"
-  },
-  {
-    "id": "fb272542",
-    "ts": "2026-06-21T12:03:20.474070",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-21 12:03:20"
-  },
-  {
-    "id": "a3d5fc1c",
-    "ts": "2026-06-21T12:03:20.439341",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "2fe49f69",
-    "ts": "2026-06-21T12:03:20.404684",
-    "level": "INFO",
-    "site": "system",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "29232995",
-    "ts": "2026-06-21T12:03:20.369356",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "926ad0a9",
-    "ts": "2026-06-21T12:03:20.330007",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=1000 (Unlimited requested), Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "19b10564",
-    "ts": "2026-06-21T12:03:20.294210",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "ef48d19a",
-    "ts": "2026-06-21T11:58:03.143247",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Engineer' in 'Bahrain'"
-  },
-  {
-    "id": "76c1a4c0",
-    "ts": "2026-06-21T11:58:03.029688",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
   }
 ]
