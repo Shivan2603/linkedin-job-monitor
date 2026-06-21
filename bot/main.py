@@ -62,13 +62,20 @@ def run_all_sites():
     stats = get_daily_stats()
     logger.info(f"Today's applications so far: {stats}")
 
-    shuffled_bots = list(SITE_BOTS)
     if ONLY_LINKEDIN:
-        shuffled_bots = [b for b in shuffled_bots if b[0] == "linkedin"]
+        shuffled_bots = [b for b in SITE_BOTS if b[0] == "linkedin"]
         logger.info("Filtering run for LinkedIn ONLY per configuration.")
     else:
-        # Shuffle the bots list to randomize execution order on each run cycle
-        random.shuffle(shuffled_bots)
+        # Careers page first, LinkedIn second, then other sites shuffled
+        careers_bot = [b for b in SITE_BOTS if b[0] == "company_careers"]
+        linkedin_bot = [b for b in SITE_BOTS if b[0] == "linkedin"]
+        others = [b for b in SITE_BOTS if b[0] not in ["company_careers", "linkedin"]]
+        
+        random.shuffle(others)
+        shuffled_bots = careers_bot + linkedin_bot + others
+        
+        order_names = [b[1] for b in shuffled_bots]
+        logger.info(f"Execution order for this cycle: {', '.join(order_names)}")
 
     first_site = True
     for site_key, site_name, bot_fn in shuffled_bots:
