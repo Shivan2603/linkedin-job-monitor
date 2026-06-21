@@ -1,5 +1,1335 @@
 [
   {
+    "id": "c9390f79",
+    "ts": "2026-06-21T15:35:17.714344",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: DaCodes. | Full Stack Backend Engineer - .NET/C#/Angular (Onsite Fremont, CA | Fremont, CA | 100% match"
+  },
+  {
+    "id": "7cba960f",
+    "ts": "2026-06-21T15:35:17.503006",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: DaCodes. — Full Stack Backend Engineer - .NET/C#/Angular (Onsite Fremont, CA"
+  },
+  {
+    "id": "5541858a",
+    "ts": "2026-06-21T15:35:10.506644",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "512607da",
+    "ts": "2026-06-21T15:35:10.328041",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Have you worked with .NET/C# and Angular (preferred) or React in the same project? Walk us through a specific integration you built between the frontend and a .NET backend, including how you handled API contracts, state management, authentication/authorization, and error handling.' = 'TamilNadu'"
+  },
+  {
+    "id": "073a9f81",
+    "ts": "2026-06-21T15:35:06.262699",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "e9769d05",
+    "ts": "2026-06-21T15:35:06.064332",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Describe an API or data-intensive feature you built using .NET and MySQL. How did you design the API, optimize database interactions, and ensure performance and reliability at scale?' = 'I'd like to highlight a project I worked on as a Senior .NET Developer at LTIMindtree, where I designed and implemented a data-intensive feature using .NET and MySQL. \n\nThe feature was a high-traffic e-commerce platform that required efficient data retrieval and manipulation. I designed the API using ASP.NET Web API and Entity Framework Core to interact with the MySQL database. \n\nTo optimize database interactions, I implemented pagination, caching, and lazy loading to reduce the load on the database and improve'"
+  },
+  {
+    "id": "6c05bc4b",
+    "ts": "2026-06-21T15:35:05.922229",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Tell us about a time you proactively identified a quality or reliability issue in a codebase and drove the fix without being asked. What did you find, what did you do, and what was the result?' = 'I'd like to provide a detailed answer to the question as per the candidate's profile.\n\nWhile working as a Senior .NET Developer at LTIMindtree (client: Deloitte), I identified a performance issue in our application's API due to the inefficient use of Entity Framework Core. \n\nI noticed that the application was experiencing slow response times and high memory usage, which was impacting the overall user experience. Upon further investigation, I found that the issue was caused by the repeated execution of database queries'"
+  },
+  {
+    "id": "bf9550b5",
+    "ts": "2026-06-21T15:35:05.764063",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Describe a situation where you had to design or refactor a backend system to improve scalability or performance. What decisions did you make, what tradeoffs did you consider, and what was the outcome?' = 'At LTIMindtree, I was working on a project that involved a monolithic .NET application handling multiple microservices. The application was experiencing performance issues due to high traffic and increasing data storage. \n\nTo improve scalability and performance, I decided to refactor the application into a microservices architecture using CQRS and Event Sourcing patterns. I also implemented load balancing using NGINX and caching using Redis.\n\nThe tradeoffs considered were the increased complexity of the system and the need for additional infrastructure. However'"
+  },
+  {
+    "id": "2cc1a40a",
+    "ts": "2026-06-21T15:35:05.643211",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Tell us about a full stack web application you built end-to-end. What was the tech stack (frontend and backend), what was your individual contribution, and what challenges did you face in production?' = 'I worked on a project for a client of LTIMindtree, where I was the lead developer for a full stack web application. The tech stack included .NET Core 7 for the backend, Angular 15 for the frontend, and Azure SQL for the database. \n\nMy individual contribution was designing and implementing the backend API using ASP.NET Web API, Azure App Services, and Entity Framework Core. I also implemented authentication and authorization using JWT and OAuth2.\n\nIn production, I faced challenges with scalability'"
+  },
+  {
+    "id": "4c615591",
+    "ts": "2026-06-21T15:35:05.554393",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'This is a 6-month contract position. Are you comfortable with a contract engagement of this duration?' = 'Yes'"
+  },
+  {
+    "id": "5e57b451",
+    "ts": "2026-06-21T15:35:05.454205",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'What is your expected hourly rate? Please specify your minimum acceptable rate and your preferred rate.' = '$140,000 - $160,000 per year'"
+  },
+  {
+    "id": "5d4119c5",
+    "ts": "2026-06-21T15:35:05.318886",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'This position is fully onsite in Fremont, CA (5 days per week) and does not provide relocation support. Are you currently located in Fremont, CA or the surrounding Bay Area? Please confirm your city, state, and whether you can work onsite daily.' = 'I can relocate and needs visa sponsorship'"
+  },
+  {
+    "id": "44d6e3c1",
+    "ts": "2026-06-21T15:35:04.775313",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "ad054e91",
+    "ts": "2026-06-21T15:35:04.281914",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c3ab8181",
+    "ts": "2026-06-21T15:35:04.129049",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "46bc98ad",
+    "ts": "2026-06-21T15:35:03.731447",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "77bd5db2",
+    "ts": "2026-06-21T15:35:03.400752",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "f3a5a385",
+    "ts": "2026-06-21T15:35:03.000859",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "95316918",
+    "ts": "2026-06-21T15:35:02.628616",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "1ea9f914",
+    "ts": "2026-06-21T15:34:45.074558",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "1fbf9327",
+    "ts": "2026-06-21T15:34:44.565783",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "6801b200",
+    "ts": "2026-06-21T15:34:44.460223",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "28bba390",
+    "ts": "2026-06-21T15:34:44.140692",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "07269892",
+    "ts": "2026-06-21T15:34:43.760271",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "4a294f65",
+    "ts": "2026-06-21T15:34:43.420862",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ceaf1f19",
+    "ts": "2026-06-21T15:34:42.821905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "4e2d24ee",
+    "ts": "2026-06-21T15:34:24.960380",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "c2391d19",
+    "ts": "2026-06-21T15:34:24.404230",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "bb9df371",
+    "ts": "2026-06-21T15:34:24.296334",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "8ca10b24",
+    "ts": "2026-06-21T15:34:23.964550",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b7cd2e8a",
+    "ts": "2026-06-21T15:34:23.610947",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3d579efa",
+    "ts": "2026-06-21T15:34:23.230573",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "3b30deaa",
+    "ts": "2026-06-21T15:34:22.831960",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "aa818bd7",
+    "ts": "2026-06-21T15:34:05.277909",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "198953ab",
+    "ts": "2026-06-21T15:34:04.727246",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "44a40110",
+    "ts": "2026-06-21T15:34:04.592299",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "cf22d8ad",
+    "ts": "2026-06-21T15:34:04.232257",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "55af3e8e",
+    "ts": "2026-06-21T15:34:03.869252",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "7e8b3f90",
+    "ts": "2026-06-21T15:34:03.467487",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4b6a7c0b",
+    "ts": "2026-06-21T15:34:03.090422",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c19240b3",
+    "ts": "2026-06-21T15:33:45.512116",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "d4300c0c",
+    "ts": "2026-06-21T15:33:44.863215",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7f78b3d8",
+    "ts": "2026-06-21T15:33:44.740433",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "31ed6d85",
+    "ts": "2026-06-21T15:33:44.344446",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "380b3212",
+    "ts": "2026-06-21T15:33:44.061063",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3722ff8c",
+    "ts": "2026-06-21T15:33:43.694882",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "efb0d8fc",
+    "ts": "2026-06-21T15:33:43.272060",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "ed66707b",
+    "ts": "2026-06-21T15:33:25.711940",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "4f97ec50",
+    "ts": "2026-06-21T15:33:25.309906",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "cf86dca3",
+    "ts": "2026-06-21T15:33:25.224885",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "40dc4cae",
+    "ts": "2026-06-21T15:33:24.905717",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "aaf9b18a",
+    "ts": "2026-06-21T15:33:24.538669",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "25177414",
+    "ts": "2026-06-21T15:33:24.055158",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a2999742",
+    "ts": "2026-06-21T15:33:23.623577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d02e10a5",
+    "ts": "2026-06-21T15:32:55.745487",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "0b866531",
+    "ts": "2026-06-21T15:32:55.620854",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf' = 'Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf'"
+  },
+  {
+    "id": "f46c197f",
+    "ts": "2026-06-21T15:32:49.226289",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "a9412a97",
+    "ts": "2026-06-21T15:32:49.109209",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Tamil Nadu, India'"
+  },
+  {
+    "id": "05a28ca2",
+    "ts": "2026-06-21T15:32:14.279183",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "0bc474cd",
+    "ts": "2026-06-21T15:32:14.181085",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Avinashi, Tiruppur, Tamilnadu'"
+  },
+  {
+    "id": "a83c6319",
+    "ts": "2026-06-21T15:30:23.462879",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "e4fcf0ee",
+    "ts": "2026-06-21T15:29:34.479676",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "b4a8ca5d",
+    "ts": "2026-06-21T15:29:24.990468",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
+  },
+  {
+    "id": "f39d3e79",
+    "ts": "2026-06-21T15:29:24.845852",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'Worldwide'"
+  },
+  {
+    "id": "76e36369",
+    "ts": "2026-06-21T15:29:24.738987",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "cb272fcb",
+    "ts": "2026-06-21T15:29:24.483512",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "ee33b47f",
+    "ts": "2026-06-21T15:29:18.361408",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "c9939857",
+    "ts": "2026-06-21T15:29:10.640907",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "fa419fe6",
+    "ts": "2026-06-21T15:29:10.596366",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "68f81fa0",
+    "ts": "2026-06-21T15:29:10.555886",
+    "level": "INFO",
+    "site": "system",
+    "message": "Filtering run for LinkedIn ONLY per configuration."
+  },
+  {
+    "id": "32789226",
+    "ts": "2026-06-21T15:29:10.515588",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 7, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "58baec89",
+    "ts": "2026-06-21T15:29:10.466528",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "f72e6852",
+    "ts": "2026-06-21T15:29:10.430516",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\21-06-2026"
+  },
+  {
+    "id": "1c0df268",
+    "ts": "2026-06-21T15:29:10.389356",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-06-21 15:29:10"
+  },
+  {
+    "id": "d87e1d6b",
+    "ts": "2026-06-21T15:29:10.346857",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "eaf33618",
+    "ts": "2026-06-21T15:29:10.307799",
+    "level": "INFO",
+    "site": "system",
+    "message": "Time window restriction active: 0:00 to 23:00"
+  },
+  {
+    "id": "274168d3",
+    "ts": "2026-06-21T15:29:10.256226",
+    "level": "INFO",
+    "site": "system",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "dd54e429",
+    "ts": "2026-06-21T15:29:10.218563",
+    "level": "INFO",
+    "site": "system",
+    "message": "Daily limits: LinkedIn=1000 (Unlimited requested), Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
+  },
+  {
+    "id": "6e548646",
+    "ts": "2026-06-21T15:29:10.148856",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Starting — Safe Mode Active"
+  },
+  {
+    "id": "10a94a9d",
+    "ts": "2026-06-21T15:06:30.268635",
+    "level": "AI",
+    "site": "test",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0a73e54c",
+    "ts": "2026-06-21T15:06:30.188399",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "5ace4305",
+    "ts": "2026-06-21T15:06:29.895966",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c6bd0b6e",
+    "ts": "2026-06-21T15:06:29.810982",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "13636b38",
+    "ts": "2026-06-21T15:06:29.541936",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "84749108",
+    "ts": "2026-06-21T15:06:29.242867",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e8573f79",
+    "ts": "2026-06-21T15:06:28.872891",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4b826a37",
+    "ts": "2026-06-21T15:06:28.558060",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b8b2abdb",
+    "ts": "2026-06-21T15:06:11.393823",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "ae8277ae",
+    "ts": "2026-06-21T15:06:11.102313",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "52c7fa67",
+    "ts": "2026-06-21T15:06:11.029506",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "2d8c969c",
+    "ts": "2026-06-21T15:06:10.749017",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "580981a1",
+    "ts": "2026-06-21T15:06:10.460640",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c8b536af",
+    "ts": "2026-06-21T15:06:10.161376",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e01aa16d",
+    "ts": "2026-06-21T15:06:09.829503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "9d941d0a",
+    "ts": "2026-06-21T15:05:52.724345",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "8d69e8c5",
+    "ts": "2026-06-21T15:05:52.347448",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "a4582fe7",
+    "ts": "2026-06-21T15:05:52.271618",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "0d6254d3",
+    "ts": "2026-06-21T15:05:51.966111",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "fdf5e32a",
+    "ts": "2026-06-21T15:05:51.656530",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "02596b9f",
+    "ts": "2026-06-21T15:05:51.314268",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "88fc843e",
+    "ts": "2026-06-21T15:05:50.863103",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c1ae7cd7",
+    "ts": "2026-06-21T14:59:34.156617",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "6d59168e",
+    "ts": "2026-06-21T14:59:33.763955",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1d8aafbc",
+    "ts": "2026-06-21T14:59:33.714888",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "f3cc0a6c",
+    "ts": "2026-06-21T14:59:33.358077",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4ee416ce",
+    "ts": "2026-06-21T14:59:33.006630",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d4da6655",
+    "ts": "2026-06-21T14:59:32.598963",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "61cf05cf",
+    "ts": "2026-06-21T14:59:32.198829",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "03a66ecf",
+    "ts": "2026-06-21T14:59:15.063771",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "42042e6d",
+    "ts": "2026-06-21T14:59:14.774838",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "47fbe5e3",
+    "ts": "2026-06-21T14:59:14.695032",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "3db18702",
+    "ts": "2026-06-21T14:59:14.358994",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b83cfd88",
+    "ts": "2026-06-21T14:59:14.058020",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "49d94ed9",
+    "ts": "2026-06-21T14:59:13.724803",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "9eccbbfe",
+    "ts": "2026-06-21T14:59:13.395858",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "e597779c",
+    "ts": "2026-06-21T14:58:56.287374",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "d317bcfb",
+    "ts": "2026-06-21T14:58:55.969575",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "266d709a",
+    "ts": "2026-06-21T14:58:55.895464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "5a42cfb1",
+    "ts": "2026-06-21T14:58:55.561491",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a91d29c7",
+    "ts": "2026-06-21T14:58:55.243100",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8d72f246",
+    "ts": "2026-06-21T14:58:54.950179",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "00c1771c",
+    "ts": "2026-06-21T14:58:54.658918",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "765ff116",
+    "ts": "2026-06-21T14:58:06.226984",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "2daacf97",
+    "ts": "2026-06-21T14:58:05.773399",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "230c8205",
+    "ts": "2026-06-21T14:58:05.696493",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "b4d54728",
+    "ts": "2026-06-21T14:58:05.358436",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4dbe81a4",
+    "ts": "2026-06-21T14:58:05.040054",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "59999e0f",
+    "ts": "2026-06-21T14:58:04.674204",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7a8d1fdc",
+    "ts": "2026-06-21T14:58:04.366710",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "98c94a97",
+    "ts": "2026-06-21T14:57:47.223814",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "55dae897",
+    "ts": "2026-06-21T14:57:46.822926",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "82b6a627",
+    "ts": "2026-06-21T14:57:46.725811",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c6d46b59",
+    "ts": "2026-06-21T14:57:46.421998",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "63d3aa47",
+    "ts": "2026-06-21T14:57:46.089025",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "6f4cb64e",
+    "ts": "2026-06-21T14:57:45.791180",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "25975201",
+    "ts": "2026-06-21T14:57:45.440689",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "fb8d29cc",
+    "ts": "2026-06-21T14:57:28.288262",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "79099926",
+    "ts": "2026-06-21T14:57:27.874925",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "001f2d94",
+    "ts": "2026-06-21T14:57:27.828143",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "4ea68a3c",
+    "ts": "2026-06-21T14:57:27.372100",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "7bec3940",
+    "ts": "2026-06-21T14:57:27.003093",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3d2ea273",
+    "ts": "2026-06-21T14:57:26.542536",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "6ad640de",
+    "ts": "2026-06-21T14:57:26.199845",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b234aacc",
+    "ts": "2026-06-21T14:52:29.124382",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "6ee12a5b",
+    "ts": "2026-06-21T14:52:28.990581",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 8 jobs for '.Net' in Worldwide"
+  },
+  {
+    "id": "873ec168",
+    "ts": "2026-06-21T14:52:28.862082",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "dc01ec94",
+    "ts": "2026-06-21T14:52:28.732672",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "01b8772f",
+    "ts": "2026-06-21T14:52:28.603641",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "5daf70bd",
+    "ts": "2026-06-21T14:52:28.465128",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "64e61f61",
+    "ts": "2026-06-21T14:52:28.332762",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "9321c643",
+    "ts": "2026-06-21T14:52:28.194999",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "9c472594",
+    "ts": "2026-06-21T14:52:28.047971",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "4d2fa1f6",
+    "ts": "2026-06-21T14:52:27.908140",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "7a788089",
+    "ts": "2026-06-21T14:52:27.764114",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "cc0deb54",
+    "ts": "2026-06-21T14:52:27.624455",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "61d1b61d",
+    "ts": "2026-06-21T14:52:27.489638",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "492af1e6",
+    "ts": "2026-06-21T14:52:27.362073",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "089a3c2e",
+    "ts": "2026-06-21T14:52:27.208918",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "daa0c1dd",
+    "ts": "2026-06-21T14:52:27.053595",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "c5483453",
+    "ts": "2026-06-21T14:52:26.965196",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
+  },
+  {
+    "id": "5442f67b",
+    "ts": "2026-06-21T14:52:26.838122",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Apply error: ElementHandle.query_selector_all: Target page, context or browser has been closed"
+  },
+  {
+    "id": "656971bb",
+    "ts": "2026-06-21T14:52:26.664037",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "1a18c194",
+    "ts": "2026-06-21T14:52:26.137422",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "b948a921",
+    "ts": "2026-06-21T14:52:26.087677",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "d84e9a2d",
+    "ts": "2026-06-21T14:52:25.790812",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "1f397c52",
+    "ts": "2026-06-21T14:52:25.499690",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "158dcbd6",
+    "ts": "2026-06-21T14:52:25.198568",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "028baa76",
+    "ts": "2026-06-21T14:52:24.962468",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "045f0fc2",
+    "ts": "2026-06-21T14:52:07.479152",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "15538f23",
+    "ts": "2026-06-21T14:52:07.250367",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "06c246a3",
+    "ts": "2026-06-21T14:52:07.200582",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "0fc820d1",
+    "ts": "2026-06-21T14:52:06.870713",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d3362328",
+    "ts": "2026-06-21T14:52:06.558331",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "2184ad00",
+    "ts": "2026-06-21T14:52:06.057152",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a3c05af3",
+    "ts": "2026-06-21T14:52:05.650440",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "fd49edd0",
+    "ts": "2026-06-21T14:51:38.072479",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "de24bdc8",
+    "ts": "2026-06-21T14:51:38.015503",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.docx' = 'Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.docx'"
+  },
+  {
+    "id": "4f026408",
+    "ts": "2026-06-21T14:51:37.978383",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Summary' = 'Summary:\nHighly skilled and experienced .NET developer with 4 years of experience in designing and developing scalable, secure, and efficient backend systems using C#, .NET Core, ASP.NET Web API, and Azure services. Proficient in Angular and Entity Framework Core for frontend development. Possesses strong knowledge of microservices architecture, CQRS, Docker, RabbitMQ, JWT, and OAuth2. Seeking a challenging role as a Full Stack Backend Engineer at DaCodes, utilizing my technical expertise to drive business'"
+  },
+  {
+    "id": "25142d71",
+    "ts": "2026-06-21T14:51:37.562278",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "c0dc0c08",
+    "ts": "2026-06-21T14:51:37.175084",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "218270a9",
+    "ts": "2026-06-21T14:51:37.143933",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "3cdeb384",
+    "ts": "2026-06-21T14:51:36.840229",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "16582231",
+    "ts": "2026-06-21T14:51:36.578546",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "fde08149",
+    "ts": "2026-06-21T14:51:36.295173",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4fe1db59",
+    "ts": "2026-06-21T14:51:35.967746",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "ae5d9b6f",
+    "ts": "2026-06-21T14:51:13.573652",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "c6526717",
+    "ts": "2026-06-21T14:51:13.509470",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Tamil Nadu, India'"
+  },
+  {
+    "id": "62df38e1",
+    "ts": "2026-06-21T14:50:37.965042",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "9833d269",
+    "ts": "2026-06-21T14:50:37.908937",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Avinashi, Tiruppur, Tamilnadu'"
+  },
+  {
+    "id": "47b14526",
+    "ts": "2026-06-21T14:48:36.245874",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
     "id": "3b46ff06",
     "ts": "2026-06-21T14:48:18.048240",
     "level": "SUCCESS",
@@ -2168,1335 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn search: 'Backend Developer' in 'Bahamas'"
-  },
-  {
-    "id": "c07eca65",
-    "ts": "2026-06-21T11:55:53.241417",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Azerbaijan"
-  },
-  {
-    "id": "8644b32a",
-    "ts": "2026-06-21T11:55:40.972054",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7b3a74b6",
-    "ts": "2026-06-21T11:55:38.071064",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4a0cc543",
-    "ts": "2026-06-21T11:55:29.580802",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "098fb880",
-    "ts": "2026-06-21T11:55:22.310503",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "cbc332ed",
-    "ts": "2026-06-21T11:55:22.246629",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Azerbaijan'"
-  },
-  {
-    "id": "b94f1aad",
-    "ts": "2026-06-21T11:55:22.179272",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Austria"
-  },
-  {
-    "id": "3788bb05",
-    "ts": "2026-06-21T11:55:19.241509",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "17048747",
-    "ts": "2026-06-21T11:55:10.290469",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "cc439443",
-    "ts": "2026-06-21T11:55:10.213215",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Austria'"
-  },
-  {
-    "id": "da04710e",
-    "ts": "2026-06-21T11:55:10.149839",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Armenia"
-  },
-  {
-    "id": "11b607dc",
-    "ts": "2026-06-21T11:55:04.504325",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9d786690",
-    "ts": "2026-06-21T11:55:01.259899",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "2167e64f",
-    "ts": "2026-06-21T11:54:57.681618",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0cc75948",
-    "ts": "2026-06-21T11:54:44.832206",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "1cd617b5",
-    "ts": "2026-06-21T11:54:36.946296",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "c8a20a3b",
-    "ts": "2026-06-21T11:54:36.880856",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Armenia'"
-  },
-  {
-    "id": "60d25a5b",
-    "ts": "2026-06-21T11:54:36.810149",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Argentina"
-  },
-  {
-    "id": "b3fd847c",
-    "ts": "2026-06-21T11:54:30.854288",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "254ba632",
-    "ts": "2026-06-21T11:54:24.959505",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "aa2fe368",
-    "ts": "2026-06-21T11:54:21.702483",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "349f192e",
-    "ts": "2026-06-21T11:54:11.415719",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "871e9bd4",
-    "ts": "2026-06-21T11:54:00.710665",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "1a73b928",
-    "ts": "2026-06-21T11:54:00.638446",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Argentina'"
-  },
-  {
-    "id": "6efdc6d3",
-    "ts": "2026-06-21T11:54:00.547572",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Backend Developer' in Antigua and Barbuda"
-  },
-  {
-    "id": "a243f722",
-    "ts": "2026-06-21T11:53:50.488319",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "27d41f90",
-    "ts": "2026-06-21T11:53:46.946348",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "5f54c827",
-    "ts": "2026-06-21T11:53:43.337190",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3bba21b5",
-    "ts": "2026-06-21T11:53:33.871384",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "1100b6ae",
-    "ts": "2026-06-21T11:53:27.103296",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Backend Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "17be8168",
-    "ts": "2026-06-21T11:53:27.024634",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "a34b7cb8",
-    "ts": "2026-06-21T11:53:26.949559",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Bangladesh"
-  },
-  {
-    "id": "fa6ef325",
-    "ts": "2026-06-21T11:53:17.822243",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "58453fb4",
-    "ts": "2026-06-21T11:53:15.119218",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17d50cd2",
-    "ts": "2026-06-21T11:53:11.659712",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ecfc9c9f",
-    "ts": "2026-06-21T11:53:02.701630",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "34d14fc4",
-    "ts": "2026-06-21T11:52:55.446854",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "4e328041",
-    "ts": "2026-06-21T11:52:55.392965",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Bangladesh'"
-  },
-  {
-    "id": "36f802ac",
-    "ts": "2026-06-21T11:52:55.309600",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Bahrain"
-  },
-  {
-    "id": "25a17711",
-    "ts": "2026-06-21T11:52:48.528059",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17582838",
-    "ts": "2026-06-21T11:52:45.071866",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8547526a",
-    "ts": "2026-06-21T11:52:42.162737",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e82c6523",
-    "ts": "2026-06-21T11:52:29.343332",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "b5620a9b",
-    "ts": "2026-06-21T11:52:20.823486",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "a0932a91",
-    "ts": "2026-06-21T11:52:20.758823",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Bahrain'"
-  },
-  {
-    "id": "fe6b3028",
-    "ts": "2026-06-21T11:52:20.678383",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Bahamas"
-  },
-  {
-    "id": "6ea262bc",
-    "ts": "2026-06-21T11:52:14.447119",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b3233867",
-    "ts": "2026-06-21T11:52:07.858053",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a0207027",
-    "ts": "2026-06-21T11:52:05.148640",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "649d4bb4",
-    "ts": "2026-06-21T11:51:55.698745",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "bc769c2b",
-    "ts": "2026-06-21T11:51:47.076008",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "c6c30f54",
-    "ts": "2026-06-21T11:51:46.993491",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Bahamas'"
-  },
-  {
-    "id": "e1879d6d",
-    "ts": "2026-06-21T11:51:46.917153",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Azerbaijan"
-  },
-  {
-    "id": "4f72a41c",
-    "ts": "2026-06-21T11:51:34.569158",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "42bea5b8",
-    "ts": "2026-06-21T11:51:30.994042",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "9360c4f8",
-    "ts": "2026-06-21T11:51:21.322016",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "7d1e63ca",
-    "ts": "2026-06-21T11:51:11.167725",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "a811f03f",
-    "ts": "2026-06-21T11:51:11.103362",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Azerbaijan'"
-  },
-  {
-    "id": "123cc2c8",
-    "ts": "2026-06-21T11:51:11.039738",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Austria"
-  },
-  {
-    "id": "9c484e0c",
-    "ts": "2026-06-21T11:51:07.596095",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "fabe5ab4",
-    "ts": "2026-06-21T11:50:59.237665",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "aae25297",
-    "ts": "2026-06-21T11:50:59.167205",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Austria'"
-  },
-  {
-    "id": "d2fb83ec",
-    "ts": "2026-06-21T11:50:59.105960",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Armenia"
-  },
-  {
-    "id": "bf311938",
-    "ts": "2026-06-21T11:50:49.733226",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "48612162",
-    "ts": "2026-06-21T11:50:46.293984",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "92907920",
-    "ts": "2026-06-21T11:50:33.419378",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "599c8166",
-    "ts": "2026-06-21T11:50:21.716247",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "02ba2992",
-    "ts": "2026-06-21T11:50:21.669423",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Armenia'"
-  },
-  {
-    "id": "e6a7d119",
-    "ts": "2026-06-21T11:50:21.605873",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Argentina"
-  },
-  {
-    "id": "da1e9484",
-    "ts": "2026-06-21T11:50:14.784386",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4e1ca536",
-    "ts": "2026-06-21T11:50:11.892270",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "d7be6eac",
-    "ts": "2026-06-21T11:50:08.349482",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "544e5ad1",
-    "ts": "2026-06-21T11:49:54.661520",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "73ff4331",
-    "ts": "2026-06-21T11:49:46.960621",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "a94129c2",
-    "ts": "2026-06-21T11:49:46.895151",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Argentina'"
-  },
-  {
-    "id": "37c42665",
-    "ts": "2026-06-21T11:49:46.809432",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior C# Developer' in Antigua and Barbuda"
-  },
-  {
-    "id": "ee040c66",
-    "ts": "2026-06-21T11:49:40.914916",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ef71476e",
-    "ts": "2026-06-21T11:49:37.578566",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "b1c6e8f7",
-    "ts": "2026-06-21T11:49:34.579927",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "28a4474a",
-    "ts": "2026-06-21T11:49:21.825556",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "e70e46f5",
-    "ts": "2026-06-21T11:49:14.740535",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: Senior C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "5e27232a",
-    "ts": "2026-06-21T11:49:14.684168",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior C# Developer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "088ab595",
-    "ts": "2026-06-21T11:49:14.624047",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Bangladesh"
-  },
-  {
-    "id": "46e9e737",
-    "ts": "2026-06-21T11:49:08.230632",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4c18d13a",
-    "ts": "2026-06-21T11:49:04.628085",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c5e8cbd2",
-    "ts": "2026-06-21T11:49:01.857320",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a5151398",
-    "ts": "2026-06-21T11:48:49.147725",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "72b39e97",
-    "ts": "2026-06-21T11:48:40.769515",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "82f1c21e",
-    "ts": "2026-06-21T11:48:40.687423",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Bangladesh'"
-  },
-  {
-    "id": "5001f467",
-    "ts": "2026-06-21T11:48:40.595152",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Bahrain"
-  },
-  {
-    "id": "233b2c19",
-    "ts": "2026-06-21T11:48:34.097771",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4154032c",
-    "ts": "2026-06-21T11:48:31.133552",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e74d8864",
-    "ts": "2026-06-21T11:48:27.341197",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "4eed3817",
-    "ts": "2026-06-21T11:48:14.018689",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "ae7a7473",
-    "ts": "2026-06-21T11:48:05.282092",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "74eb8cf3",
-    "ts": "2026-06-21T11:48:05.240532",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Bahrain'"
-  },
-  {
-    "id": "33dd31d7",
-    "ts": "2026-06-21T11:48:05.183870",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Bahamas"
-  },
-  {
-    "id": "04bc5c76",
-    "ts": "2026-06-21T11:47:57.860330",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "93d44260",
-    "ts": "2026-06-21T11:47:54.178131",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "79a269b5",
-    "ts": "2026-06-21T11:47:50.164140",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "330b468c",
-    "ts": "2026-06-21T11:47:35.493328",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "4d67de5e",
-    "ts": "2026-06-21T11:47:27.016821",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "29f47ce5",
-    "ts": "2026-06-21T11:47:26.958948",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Bahamas'"
-  },
-  {
-    "id": "cc024f72",
-    "ts": "2026-06-21T11:47:26.905594",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Azerbaijan"
-  },
-  {
-    "id": "f70ed6a1",
-    "ts": "2026-06-21T11:47:19.907339",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "744b0c46",
-    "ts": "2026-06-21T11:47:15.716758",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3c8690c6",
-    "ts": "2026-06-21T11:46:57.913261",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "8bc11f0c",
-    "ts": "2026-06-21T11:46:51.355307",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "a5bc3950",
-    "ts": "2026-06-21T11:46:51.291342",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Azerbaijan'"
-  },
-  {
-    "id": "55131afb",
-    "ts": "2026-06-21T11:46:51.242244",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Austria"
-  },
-  {
-    "id": "c044a13b",
-    "ts": "2026-06-21T11:46:48.109148",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "fb2a35ad",
-    "ts": "2026-06-21T11:46:41.403454",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "a45e1eca",
-    "ts": "2026-06-21T11:46:41.365007",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Austria'"
-  },
-  {
-    "id": "1bcd6abf",
-    "ts": "2026-06-21T11:46:41.323212",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Armenia"
-  },
-  {
-    "id": "30d4ba8f",
-    "ts": "2026-06-21T11:46:38.567649",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "86d7db96",
-    "ts": "2026-06-21T11:46:32.299103",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "00ce7cc6",
-    "ts": "2026-06-21T11:46:28.842393",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8c7b296e",
-    "ts": "2026-06-21T11:46:14.900844",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "eadf2e3d",
-    "ts": "2026-06-21T11:46:06.846577",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "72c3a2a4",
-    "ts": "2026-06-21T11:46:06.751523",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Armenia'"
-  },
-  {
-    "id": "9a6754bf",
-    "ts": "2026-06-21T11:46:06.617408",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Argentina"
-  },
-  {
-    "id": "f2356baa",
-    "ts": "2026-06-21T11:45:59.269598",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 2 jobs on page 1"
-  },
-  {
-    "id": "c28b91d9",
-    "ts": "2026-06-21T11:45:51.236839",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "71429c36",
-    "ts": "2026-06-21T11:45:51.163231",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Argentina'"
-  },
-  {
-    "id": "c4cbbcd6",
-    "ts": "2026-06-21T11:45:51.077374",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Antigua and Barbuda"
-  },
-  {
-    "id": "73663898",
-    "ts": "2026-06-21T11:45:46.975892",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "5ba8d5e2",
-    "ts": "2026-06-21T11:45:39.408210",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: C# Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "e9a8d3c8",
-    "ts": "2026-06-21T11:45:39.337151",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "63494435",
-    "ts": "2026-06-21T11:45:39.263332",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Bangladesh"
-  },
-  {
-    "id": "76b2acea",
-    "ts": "2026-06-21T11:45:39.156711",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "b75b9adb",
-    "ts": "2026-06-21T11:45:31.426015",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "302d916c",
-    "ts": "2026-06-21T11:45:31.352964",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Bangladesh'"
-  },
-  {
-    "id": "63a0c7fc",
-    "ts": "2026-06-21T11:45:31.275907",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: net::ERR_ABORTED at https://www.linkedin.com/jobs/search/?keywords=.NET%20Core%20Developer%20%28sponsorship%20OR%20visa%20OR%20relocation%29&location=Bahrain&f_TPR=r604800&f_E=4&sortBy=DD&f_EA=true\nCall log:\nnavigating to \"https://www.linkedin.com/jobs/search/?keywords=.NET%20Core%20Developer%20%28sponsorship%20OR%20visa%20OR%20relocation%29&location=Bahrain&f_TPR=r604800&f_E=4&sortBy=DD&f_EA=true\", waiting until \"domcontentloaded\"\n"
-  },
-  {
-    "id": "764f58d0",
-    "ts": "2026-06-21T11:45:30.973425",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "5bd15f46",
-    "ts": "2026-06-21T11:45:30.867577",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Bahrain'"
-  },
-  {
-    "id": "3cf3bff1",
-    "ts": "2026-06-21T11:45:30.755960",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Bahamas"
-  },
-  {
-    "id": "83e497bc",
-    "ts": "2026-06-21T11:45:30.635855",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "1579a8de",
-    "ts": "2026-06-21T11:45:23.231087",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "915f1eb8",
-    "ts": "2026-06-21T11:45:23.156087",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Bahamas'"
-  },
-  {
-    "id": "7d08e2cb",
-    "ts": "2026-06-21T11:45:23.089515",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Azerbaijan"
-  },
-  {
-    "id": "15de71b1",
-    "ts": "2026-06-21T11:45:22.995044",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "No more jobs on page 1"
-  },
-  {
-    "id": "125fc575",
-    "ts": "2026-06-21T11:45:16.227216",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "077c36c8",
-    "ts": "2026-06-21T11:45:16.152613",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Azerbaijan'"
-  },
-  {
-    "id": "9a83d1d5",
-    "ts": "2026-06-21T11:45:16.063509",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Austria"
-  },
-  {
-    "id": "ce02261c",
-    "ts": "2026-06-21T11:45:12.665762",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 1 jobs on page 1"
-  },
-  {
-    "id": "f98c5390",
-    "ts": "2026-06-21T11:45:03.585132",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "2e0364f9",
-    "ts": "2026-06-21T11:45:03.522958",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Austria'"
-  },
-  {
-    "id": "3c514232",
-    "ts": "2026-06-21T11:45:03.447400",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Armenia"
-  },
-  {
-    "id": "79490d4d",
-    "ts": "2026-06-21T11:44:56.366953",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "098684a1",
-    "ts": "2026-06-21T11:44:53.184877",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "1a78e185",
-    "ts": "2026-06-21T11:44:35.080931",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "9eb314f9",
-    "ts": "2026-06-21T11:44:25.627648",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "c184d416",
-    "ts": "2026-06-21T11:44:25.566103",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Armenia'"
-  },
-  {
-    "id": "e5fd4821",
-    "ts": "2026-06-21T11:44:25.485269",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Argentina"
-  },
-  {
-    "id": "860ada2d",
-    "ts": "2026-06-21T11:44:18.206292",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "8298af72",
-    "ts": "2026-06-21T11:44:14.925649",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "c7dbc135",
-    "ts": "2026-06-21T11:43:58.242492",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "8b512fe6",
-    "ts": "2026-06-21T11:43:50.550117",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "08ddeee5",
-    "ts": "2026-06-21T11:43:50.465026",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Argentina'"
-  },
-  {
-    "id": "6c010ed2",
-    "ts": "2026-06-21T11:43:50.362479",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Core Developer' in Antigua and Barbuda"
-  },
-  {
-    "id": "5bd394cd",
-    "ts": "2026-06-21T11:43:43.025027",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3d278a1f",
-    "ts": "2026-06-21T11:43:39.731034",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f23d5eb7",
-    "ts": "2026-06-21T11:43:21.918450",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "5d2ceb4e",
-    "ts": "2026-06-21T11:43:13.816794",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Core Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "19627af0",
-    "ts": "2026-06-21T11:43:13.741364",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Core Developer' in 'Antigua and Barbuda'"
-  },
-  {
-    "id": "5d2fd3c9",
-    "ts": "2026-06-21T11:43:13.665622",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Bangladesh"
-  },
-  {
-    "id": "7dda4357",
-    "ts": "2026-06-21T11:43:07.134986",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "0df8115d",
-    "ts": "2026-06-21T11:43:03.409142",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e9f291cc",
-    "ts": "2026-06-21T11:42:45.806108",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "8dbc4b62",
-    "ts": "2026-06-21T11:42:37.163091",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "bb5db5cb",
-    "ts": "2026-06-21T11:42:37.102710",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Bangladesh'"
-  },
-  {
-    "id": "9556f527",
-    "ts": "2026-06-21T11:42:37.020992",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Bahrain"
-  },
-  {
-    "id": "062aef90",
-    "ts": "2026-06-21T11:42:26.401180",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "3b9221e3",
-    "ts": "2026-06-21T11:42:22.673687",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "a940e9b4",
-    "ts": "2026-06-21T11:42:09.164233",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "79747387",
-    "ts": "2026-06-21T11:42:02.326762",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "6b81cda5",
-    "ts": "2026-06-21T11:42:02.253465",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Bahrain'"
-  },
-  {
-    "id": "c7bd4df7",
-    "ts": "2026-06-21T11:42:02.168859",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Bahamas"
-  },
-  {
-    "id": "d64f2029",
-    "ts": "2026-06-21T11:41:52.910179",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "feb7d094",
-    "ts": "2026-06-21T11:41:49.595131",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "7b8ed13f",
-    "ts": "2026-06-21T11:41:35.081818",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "c71480a9",
-    "ts": "2026-06-21T11:41:27.165208",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "e78d48ac",
-    "ts": "2026-06-21T11:41:27.067724",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Bahamas'"
-  },
-  {
-    "id": "05346670",
-    "ts": "2026-06-21T11:41:26.984211",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in Azerbaijan"
-  },
-  {
-    "id": "cc3afd07",
-    "ts": "2026-06-21T11:41:26.877450",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "20901f34",
-    "ts": "2026-06-21T11:41:16.910331",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "90114de6",
-    "ts": "2026-06-21T11:41:13.407215",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "daf2371c",
-    "ts": "2026-06-21T11:40:59.935234",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "4dd4c2fc",
-    "ts": "2026-06-21T11:40:50.364041",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Applying Visa Sponsorship Search filter: .NET Developer (sponsorship OR visa OR relocation) (Past Week)"
-  },
-  {
-    "id": "b3b95776",
-    "ts": "2026-06-21T11:40:50.300568",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Azerbaijan'"
   }
 ]
