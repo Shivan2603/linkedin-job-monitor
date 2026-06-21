@@ -106,12 +106,13 @@ def main():
         print("=" * 60)
         print("  1. Run LinkedIn Bot only (Easy Apply + External Link Capturing)")
         print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
-        print("  3. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
-        print("  4. Exit")
+        print("  3. Run Indeed Bot only (Indeed Multi-Country automation)")
+        print("  4. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
+        print("  5. Exit")
         print("=" * 60 + "\n")
         
         try:
-            choice = input("Select an option (1-4): ").strip()
+            choice = input("Select an option (1-5): ").strip()
         except (KeyboardInterrupt, SystemExit):
             print("\nExiting.")
             break
@@ -133,6 +134,14 @@ def main():
                 logger.error(f"Careers Bot error: {e}", "main")
             
         elif choice == "3":
+            logger.info("Running Indeed Bot only...", "main")
+            try:
+                from bot.sites.indeed import run_indeed_bot
+                run_indeed_bot()
+            except Exception as e:
+                logger.error(f"Indeed Bot error: {e}", "main")
+                
+        elif choice == "4":
             logger.info("Starting All Sites standard loop...", "main")
             logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30", "main")
             logger.info("Anti-ban: random delays, cookie persistence, stealth browser", "main")
@@ -153,11 +162,11 @@ def main():
             except (KeyboardInterrupt, SystemExit):
                 logger.info("All Sites cycle interrupted by user.", "main")
                 
-        elif choice == "4":
+        elif choice == "5":
             print("Exiting.")
             break
         else:
-            print("Invalid selection. Please choose 1, 2, 3, or 4.")
+            print("Invalid selection. Please choose 1, 2, 3, 4, or 5.")
 
 if __name__ == "__main__":
     main()
