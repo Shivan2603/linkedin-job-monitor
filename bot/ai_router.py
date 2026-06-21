@@ -341,7 +341,7 @@ def openrouter_claude_complete(system_prompt: str, user_prompt: str, max_tokens:
     capped_tokens = min(max_tokens, 2048)
     
     payload = {
-        "model": "anthropic/claude-sonnet-4.6",
+        "model": "anthropic/claude-3.5-sonnet",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_prompt},

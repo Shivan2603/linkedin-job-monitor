@@ -14,7 +14,12 @@ Key design principles:
   10. Relevance filter: skip jobs below MIN_MATCH_SCORE
 """
 
-import time, random, os, yaml, re
+import time, random, os, yaml, re, sys
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 from urllib.parse import quote, urljoin
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout, Page
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS

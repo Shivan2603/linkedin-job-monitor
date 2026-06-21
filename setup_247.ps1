@@ -18,14 +18,12 @@ if ($existing) {
 
 $action = New-ScheduledTaskAction -Execute $pythonExe -Argument $botScript -WorkingDirectory $workDir
 
-$triggerStartup = New-ScheduledTaskTrigger -AtStartup
-$triggerHourly  = New-ScheduledTaskTrigger -RepetitionInterval (New-TimeSpan -Hours 2) -Once -At (Get-Date)
+$triggerLogon  = New-ScheduledTaskTrigger -AtLogon
+$triggerHourly = New-ScheduledTaskTrigger -RepetitionInterval (New-TimeSpan -Hours 2) -Once -At (Get-Date)
 
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -RestartCount 5 -RestartInterval (New-TimeSpan -Minutes 5) -MultipleInstances IgnoreNew -ExecutionTimeLimit 0 -Priority 4
 
-$principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Highest
-
-Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $triggerStartup -Settings $settings -Principal $principal -Force | Out-Null
+Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $triggerLogon, $triggerHourly -Settings $settings -Force | Out-Null
 
 Write-Host "Task Registered successfully." -ForegroundColor Green
 

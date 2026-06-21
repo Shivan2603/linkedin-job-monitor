@@ -400,58 +400,6 @@ class BrowserManager:
                 self.close_subprocess()
             self.browser.close = custom_close
             
-            # Apply stealth init scripts to the reconnected context
-            self.context.add_init_script("""
-                const newProto = navigator.__proto__;
-                delete newProto.webdriver;
-                navigator.__proto__ = newProto;
-    
-                Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
-                Object.defineProperty(navigator, 'plugins', {
-                    get: () => {
-                        const mockPluginArray = [
-                            { name: 'PDF Viewer', filename: 'internal-pdf-viewer', description: 'Portable Document Format' },
-                            { name: 'Chrome PDF Viewer', filename: 'mhjfbgojdegpeflyipianaadaegdfegg', description: 'Google Chrome PDF Viewer' },
-                            { name: 'Chromium PDF Viewer', filename: 'internal-pdf-viewer', description: 'Chromium PDF Viewer' }
-                        ];
-                        mockPluginArray.item = function(index) { return this[index]; };
-                        mockPluginArray.namedItem = function(name) { return this.find(p => p.name === name); };
-                        return mockPluginArray;
-                    }
-                });
-    
-                window.chrome = {
-                    app: {
-                        isInstalled: false,
-                        InstallState: { DISABLED: 'Disabled', INSTALLED: 'Installed', NOT_INSTALLED: 'NotInstalled' },
-                        RunningState: { CANNOT_RUN: 'CannotRun', RUNNING: 'Running', SUGGESTED_SAVING: 'SuggestedSaving' }
-                    },
-                    csi: function() { return {}; },
-                    loadTimes: function() { return {}; },
-                    runtime: {
-                        OnInstalledReason: { CHROME_UPDATE: 'chrome_update', INSTALL: 'install', SHARED_MODULE_UPDATE: 'shared_module_update', UPDATE: 'update' },
-                        OnRestartRequiredReason: { APP_UPDATE: 'app_update', OS_UPDATE: 'os_update', PERIODIC: 'periodic' },
-                        PlatformArch: { ARM: 'arm', ARM64: 'arm64', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
-                        PlatformNaclArch: { ARM: 'arm', MIPS: 'mips', MIPS64: 'mips64', X86_32: 'x86-32', X86_64: 'x86-64' },
-                        PlatformOs: { ANDROID: 'android', CROS: 'cros', LINUX: 'linux', MAC: 'mac', OPENBSD: 'openbsd', WIN: 'win' },
-                        RequestUpdateCheckStatus: { NO_UPDATE: 'no_update', THROTTLED: 'throttled', UPDATE_AVAILABLE: 'update_available' }
-                    }
-                };
-    
-                const originalQuery = window.navigator.permissions.query;
-                window.navigator.permissions.query = (parameters) => (
-                    parameters.name === 'notifications' ?
-                        Promise.resolve({ state: Notification.permission, onchange: null }) :
-                        originalQuery(parameters)
-                );
-    
-                const getParameter = WebGLRenderingContext.prototype.getParameter;
-                WebGLRenderingContext.prototype.getParameter = function(parameter) {
-                    if (parameter === 37445) return 'Intel Open Source Technology Center';
-                    if (parameter === 37446) return 'Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2)';
-                    return getParameter.apply(this, arguments);
-                };
-            """)
             logger.success("Playwright connected over CDP successfully.", "safety")
         except Exception as e:
             logger.error(f"Failed to connect Playwright over CDP: {e}", "safety")

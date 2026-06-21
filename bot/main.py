@@ -100,22 +100,37 @@ def run_all_sites():
     logger.info("Waiting 60-90 minutes before next cycle...")
 
 def main():
+    cli_choice = None
+    if len(sys.argv) > 1:
+        cli_choice = sys.argv[1].strip()
+        logger.info(f"Command-line argument provided: mode={cli_choice}", "main")
+    elif not sys.stdin.isatty():
+        cli_choice = "4"  # Default to All Sites continuous cycle loop in background
+        logger.info("Non-interactive terminal detected. Defaulting to All Sites loop (mode 4).", "main")
+
     while True:
-        print("\n" + "=" * 60)
-        print("                UNIVERSAL JOB BOT CONTROL PANEL")
-        print("=" * 60)
-        print("  1. Run LinkedIn Bot only (Easy Apply + External Link Capturing)")
-        print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
-        print("  3. Run Indeed Bot only (Indeed Multi-Country automation)")
-        print("  4. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
-        print("  5. Exit")
-        print("=" * 60 + "\n")
-        
-        try:
-            choice = input("Select an option (1-5): ").strip()
-        except (KeyboardInterrupt, SystemExit):
-            print("\nExiting.")
-            break
+        if cli_choice:
+            choice = cli_choice
+            cli_choice = None
+        else:
+            print("\n" + "=" * 60)
+            print("                UNIVERSAL JOB BOT CONTROL PANEL")
+            print("=" * 60)
+            print("  1. Run LinkedIn Bot only (Easy Apply + External Link Capturing)")
+            print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
+            print("  3. Run Indeed Bot only (Indeed Multi-Country automation)")
+            print("  4. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
+            print("  5. Exit")
+            print("=" * 60 + "\n")
+            
+            try:
+                choice = input("Select an option (1-5): ").strip()
+            except (KeyboardInterrupt, SystemExit):
+                print("\nExiting.")
+                break
+            except EOFError:
+                logger.info("EOF on stdin. Exiting menu loop.", "main")
+                break
 
         if choice == "1":
             logger.info("Running LinkedIn Bot only...", "main")
@@ -124,6 +139,8 @@ def main():
                 run_linkedin_bot()
             except Exception as e:
                 logger.error(f"LinkedIn Bot error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
                 
         elif choice == "2":
             logger.info("Running Careers Bot (Bulk Apply)...", "main")
@@ -132,6 +149,8 @@ def main():
                 run_bulk_apply()
             except Exception as e:
                 logger.error(f"Careers Bot error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
             
         elif choice == "3":
             logger.info("Running Indeed Bot only...", "main")
@@ -140,10 +159,11 @@ def main():
                 run_indeed_bot()
             except Exception as e:
                 logger.error(f"Indeed Bot error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
                 
         elif choice == "4":
             logger.info("Starting All Sites standard loop...", "main")
-            logger.info("Daily limits: LinkedIn=25, Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30", "main")
             logger.info("Anti-ban: random delays, cookie persistence, stealth browser", "main")
             logger.info(f"Time window restriction active: {BOT_START_HOUR}:00 to {BOT_END_HOUR}:00", "main")
             
@@ -161,6 +181,10 @@ def main():
                     run_all_sites()
             except (KeyboardInterrupt, SystemExit):
                 logger.info("All Sites cycle interrupted by user.", "main")
+                break
+            except EOFError:
+                logger.info("EOF in cycle loop. Exiting.", "main")
+                break
                 
         elif choice == "5":
             print("Exiting.")

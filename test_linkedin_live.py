@@ -1,4 +1,9 @@
 import os, sys
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 from playwright.sync_api import sync_playwright
 from bot.sites.linkedin import _login, _apply_to_job
 from bot.utils.safety import safe_browser_context
@@ -41,7 +46,7 @@ def test_live():
             print("No apply button found.")
             return
             
-        _apply_to_job(page, "Senior .NET Developer", "Company")
+        _apply_to_job(page, jobs[0])
         print("Finished.")
 
 if __name__ == "__main__":
