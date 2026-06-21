@@ -3,7 +3,7 @@ sites/indeed.py — Indeed Multi-Country Automation with Login Detection
 """
 import time, random, os
 from playwright.sync_api import sync_playwright
-from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file, human_click
+from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file, human_click, browser_manager
 from bot.config import CREDENTIALS, JOB_TITLES, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.utils import logger
@@ -266,7 +266,7 @@ def _ensure_logged_in(page, base_url: str) -> bool:
 def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
     if not check_daily_limit(SITE):
         logger.info("Indeed daily limit reached — stopping", SITE)
-        return
+        return page
 
     from urllib.parse import quote
     logger.info(f"Searching Indeed: '{job_title}' in '{location}' on {base_url}", SITE)
@@ -276,11 +276,11 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
         page.goto(url, wait_until="domcontentloaded")
     except Exception as e:
         logger.warn(f"Failed to navigate to job list: {e}", SITE)
-        return
+        return page
         
     _human_delay(2, 3)
     if not check_and_handle_cloudflare(page):
-        return
+        return page
 
     # Extract all job cards matching standard or test ID elements
     cards = page.query_selector_all('div[data-testid="slider_item"]')
@@ -453,7 +453,33 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                     print("  - Press ENTER to record this application as successful.")
                     print("  - Type 's' and press Enter to SKIP recording this job.")
                     print("*" * 70 + "\n")
+                    
+                    # Disconnect Playwright to allow manual CAPTCHA solving
+                    browser_manager.disconnect()
+                    
                     user_choice = input("Your choice (Enter / s): ").strip().lower()
+                    
+                    # Reconnect Playwright
+                    browser_manager.reconnect()
+                    
+                    # Close any leftover wizard/job page contexts from the new session
+                    for p in browser_manager.context.pages:
+                        if "indeed.com/apply" in p.url or "indeed.com/viewjob" in p.url or "indeed.com/rc/clk" in p.url:
+                            try:
+                                p.close()
+                            except Exception:
+                                pass
+                                
+                    # Find the main search page in the new context
+                    search_page = None
+                    for p in browser_manager.context.pages:
+                        if "/jobs" in p.url:
+                            search_page = p
+                            break
+                    if search_page:
+                        page = search_page
+                    else:
+                        page = browser_manager.get_active_page()
                     
                     if user_choice != 's':
                         logger.success(f"Successfully recorded application to {company} - {job_t} ✅", SITE)
@@ -470,12 +496,6 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                         logger.info(f"Skipped recording application for: {company} — {job_t}", SITE)
                 else:
                     logger.warn(f"Failed to fill or keep open application wizard for {company} - {job_t}", SITE)
-                    
-                if wizard_page != job_page:
-                    try:
-                        wizard_page.close()
-                    except Exception:
-                        pass
             else:
                 # ─── EXTERNAL APPLY FLOW ───
                 external_btn = None
@@ -560,6 +580,7 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             _human_delay(6.0, 12.0)
             
     logger.info(f"Applied to {applied} jobs on Indeed for '{job_title}' in {location}", SITE)
+    return page
 
 def run_indeed_bot():
     if not check_daily_limit(SITE):
@@ -617,7 +638,7 @@ def run_indeed_bot():
 
                 for job_title in JOB_TITLES:
                     for location in locations:
-                        _apply_indeed_jobs(page, job_title, location, base_url)
+                        page = _apply_indeed_jobs(page, job_title, location, base_url)
                         
         except Exception as e:
             logger.error(f"Indeed bot crash: {e}", SITE)

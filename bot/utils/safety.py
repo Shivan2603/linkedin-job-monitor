@@ -12,7 +12,7 @@ Key measures:
   7. Random user-agent rotation
   8. Viewport jitter
 """
-import time, random, os, json
+import time, random, os, json, subprocess, socket
 from datetime import date
 from playwright.sync_api import Page
 from bot.config import DATA_FOLDER
@@ -228,74 +228,184 @@ def random_viewport() -> dict:
         "height": vp["height"] + random.randint(-5, 5),
     }
 
-# ─── BROWSER CONTEXT HELPER ─────────────────────────────────────────────────
-def safe_browser_context(playwright, site: str):
-    """
-    Launch a stealth persistent browser context.
-    Using a persistent profile retains Gmail/LinkedIn logins permanently!
-    headless=False + slow_mo=150 -> each action is visible field-by-field.
-    """
-    # Use a shared Chrome profile for all main sites (retaining active Google SSO / LinkedIn sessions globally)
-    if site in ["indeed", "naukri", "monster", "jobstreet", "jooble", "linkedin", "shine", "company_careers"]:
-        profile_name = "chrome_profile_shared"
-    else:
-        profile_name = f"chrome_profile_{site}"
-        
-    user_data_dir = os.path.join(DATA_FOLDER, profile_name)
-    os.makedirs(user_data_dir, exist_ok=True)
-    
-    # Clean up stale lock files from crashed previous sessions (prevents Error Code 32)
-    for lock_file in ["SingletonLock", "SingletonSocket", "SingletonCookie"]:
-        lock_path = os.path.join(user_data_dir, lock_file)
+# ─── BROWSER MANAGER (NATIVE SUBPROCESS + CDP) ──────────────────────────────
+class BrowserManager:
+    def __init__(self):
+        self.playwright = None
+        self.site = None
+        self.port = 9222
+        self.proc = None
+        self.browser = None
+        self.context = None
+        self.is_cdp = False
+
+    def find_chrome_path(self) -> str:
+        # Check registry first (most reliable on Windows)
         try:
-            if os.path.exists(lock_path):
-                os.remove(lock_path)
+            import winreg
+            for hkey in [winreg.HKEY_LOCAL_MACHINE, winreg.HKEY_CURRENT_USER]:
+                try:
+                    with winreg.OpenKey(hkey, r"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe") as key:
+                        path, _ = winreg.QueryValueEx(key, "")
+                        if path and os.path.exists(path):
+                            return path
+                except Exception:
+                    pass
         except Exception:
             pass
-    
-    launch_kwargs = {
-        "user_data_dir": user_data_dir,
-        "headless": False,
-        "slow_mo": 150,
-        "ignore_default_args": ["--enable-automation"],
-        "args": [
-            "--no-sandbox",
-            "--disable-blink-features=AutomationControlled",
-            "--disable-dev-shm-usage",
-            "--disable-infobars",
-            "--start-maximized",
-            "--window-position=0,0",
-        ],
-        "viewport": {"width": 1600, "height": 900},
-        "locale": "en-IN",
-        "timezone_id": "Asia/Kolkata",
-        "extra_http_headers": {"Accept-Language": "en-IN,en;q=0.9"},
-    }
 
-    if site != "company_careers":
-        launch_kwargs["channel"] = "chrome"  # Use official Google Chrome for main job boards
+        # Fallback to common paths
+        paths = [
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+            r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+            os.path.expandvars(r"%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe"),
+        ]
+        for p in paths:
+            if os.path.exists(p):
+                return p
+        return "chrome.exe"
 
-    context = playwright.chromium.launch_persistent_context(**launch_kwargs)
-    
-    # Only apply stealth overrides if running in headless mode!
-    # Headful official Chrome with AutomationControlled already passes sannysoft without any JS injection.
-    # Overriding these on a real Chrome browser causes fingerprint mismatches that trigger anti-bot detections.
-    if launch_kwargs.get("headless", False):
-        try:
-            from playwright_stealth import Stealth
-            Stealth().apply_stealth_sync(context)
-            logger.info("Successfully initialized playwright-stealth on browser context in headless mode.", "safety")
-        except Exception as e:
-            logger.warn(f"Failed to initialize playwright-stealth: {e}", "safety")
+    def launch(self, playwright, site: str):
+        """Launches Chrome via subprocess and connects Playwright over CDP."""
+        self.playwright = playwright
+        self.site = site
+        
+        if site in ["indeed", "naukri", "monster", "jobstreet", "jooble", "linkedin", "shine", "company_careers"]:
+            profile_name = "chrome_profile_shared"
+        else:
+            profile_name = f"chrome_profile_{site}"
             
-            # Fallback to custom anti-fingerprinting overrides if playwright-stealth fails
-            context.add_init_script("""
-                // 1. Delete the navigator.webdriver property descriptor
+        user_data_dir = os.path.join(DATA_FOLDER, profile_name)
+        os.makedirs(user_data_dir, exist_ok=True)
+        
+        # Try launching via subprocess first
+        try:
+            # Clean up stale lock files
+            for lock_file in ["SingletonLock", "SingletonSocket", "SingletonCookie", "Default/LOCK"]:
+                lock_path = os.path.join(user_data_dir, lock_file)
+                try:
+                    if os.path.exists(lock_path):
+                        os.remove(lock_path)
+                except Exception:
+                    pass
+                    
+            self.port = 9222
+            for port in range(9222, 9300):
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    if s.connect_ex(('127.0.0.1', port)) != 0:
+                        self.port = port
+                        break
+
+            chrome_path = self.find_chrome_path()
+            logger.info(f"Launching native Chrome via subprocess on port {self.port}...", "safety")
+            
+            # Command line arguments to make it completely stealthy
+            chrome_cmd = [
+                chrome_path,
+                f"--remote-debugging-port={self.port}",
+                f"--user-data-dir={user_data_dir}",
+                "--no-first-run",
+                "--no-default-browser-check",
+                "--start-maximized",
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-infobars",
+            ]
+            
+            self.proc = subprocess.Popen(chrome_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            
+            # Wait for Chrome debug port to open
+            start_time = time.time()
+            connected = False
+            while time.time() - start_time < 10:
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    if s.connect_ex(('127.0.0.1', self.port)) == 0:
+                        connected = True
+                        break
+                time.sleep(0.5)
+                
+            if not connected:
+                raise RuntimeError("Timeout waiting for remote debugging port to open")
+                
+            self.is_cdp = True
+            self.reconnect()
+            
+        except Exception as e:
+            logger.warn(f"Failed to launch native Chrome via subprocess: {e}. Falling back to default Playwright launch.", "safety")
+            self.is_cdp = False
+            self.proc = None
+            
+            # Fallback to standard persistent context launch
+            launch_kwargs = {
+                "user_data_dir": user_data_dir,
+                "headless": False,
+                "slow_mo": 150,
+                "ignore_default_args": ["--enable-automation"],
+                "args": [
+                    "--no-sandbox",
+                    "--disable-blink-features=AutomationControlled",
+                    "--disable-dev-shm-usage",
+                    "--disable-infobars",
+                    "--start-maximized",
+                    "--window-position=0,0",
+                ],
+                "viewport": {"width": 1600, "height": 900},
+                "locale": "en-IN",
+                "timezone_id": "Asia/Kolkata",
+                "extra_http_headers": {"Accept-Language": "en-IN,en;q=0.9"},
+            }
+            if site != "company_careers":
+                launch_kwargs["channel"] = "chrome"
+                
+            self.browser = playwright.chromium.launch_persistent_context(**launch_kwargs)
+            self.context = self.browser
+            
+        return self.browser, self.context
+
+    def disconnect(self):
+        """Disconnects Playwright from the browser, leaving Chrome open."""
+        if not self.is_cdp:
+            logger.warn("Not running in CDP mode, disconnect is a no-op.", "safety")
+            return
+        if self.browser:
+            logger.info("Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction...", "safety")
+            try:
+                if hasattr(self, 'original_close') and self.original_close:
+                    self.original_close()
+                else:
+                    self.browser.close()
+            except Exception as e:
+                logger.warn(f"Error disconnecting browser: {e}", "safety")
+            self.browser = None
+            self.context = None
+
+    def reconnect(self):
+        """Reconnects Playwright to the running Chrome process."""
+        if not self.is_cdp:
+            logger.warn("Not running in CDP mode, reconnect is a no-op.", "safety")
+            return
+        logger.info(f"Connecting Playwright over CDP to port {self.port}...", "safety")
+        try:
+            self.browser = self.playwright.chromium.connect_over_cdp(f"http://127.0.0.1:{self.port}")
+            self.context = self.browser.contexts[0]
+            
+            # Wrap browser.close() to also close/terminate the subprocess
+            self.original_close = self.browser.close
+            def custom_close():
+                try:
+                    self.original_close()
+                except Exception:
+                    pass
+                self.close_subprocess()
+            self.browser.close = custom_close
+            
+            # Apply stealth init scripts to the reconnected context
+            self.context.add_init_script("""
                 const newProto = navigator.__proto__;
                 delete newProto.webdriver;
                 navigator.__proto__ = newProto;
     
-                // 2. Mock languages and plugins
                 Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
                 Object.defineProperty(navigator, 'plugins', {
                     get: () => {
@@ -310,7 +420,6 @@ def safe_browser_context(playwright, site: str):
                     }
                 });
     
-                // 3. Mock standard window.chrome object
                 window.chrome = {
                     app: {
                         isInstalled: false,
@@ -329,7 +438,6 @@ def safe_browser_context(playwright, site: str):
                     }
                 };
     
-                // 4. Mock permissions query
                 const originalQuery = window.navigator.permissions.query;
                 window.navigator.permissions.query = (parameters) => (
                     parameters.name === 'notifications' ?
@@ -337,7 +445,6 @@ def safe_browser_context(playwright, site: str):
                         originalQuery(parameters)
                 );
     
-                // 5. Mock WebGL vendor/renderer to standard integrated/discrete graphics card
                 const getParameter = WebGLRenderingContext.prototype.getParameter;
                 WebGLRenderingContext.prototype.getParameter = function(parameter) {
                     if (parameter === 37445) return 'Intel Open Source Technology Center';
@@ -345,11 +452,39 @@ def safe_browser_context(playwright, site: str):
                     return getParameter.apply(this, arguments);
                 };
             """)
-    else:
-        logger.info("Running in headful mode with native Chrome. Bypassing JS fingerprint overrides to prevent anti-bot mismatch.", "safety")
-    
-    # Return context as both browser and context for backwards compatibility
-    return context, context
+            logger.success("Playwright connected over CDP successfully.", "safety")
+        except Exception as e:
+            logger.error(f"Failed to connect Playwright over CDP: {e}", "safety")
+            raise e
+
+    def get_active_page(self):
+        if not self.context:
+            return None
+        if self.context.pages:
+            return self.context.pages[-1]
+        return self.context.new_page()
+
+    def close_subprocess(self):
+        if self.proc:
+            logger.info("Terminating Chrome subprocess...", "safety")
+            try:
+                self.proc.terminate()
+                self.proc.wait(timeout=3)
+            except Exception:
+                try:
+                    self.proc.kill()
+                except Exception:
+                    pass
+            self.proc = None
+
+browser_manager = BrowserManager()
+
+# ─── BROWSER CONTEXT HELPER ─────────────────────────────────────────────────
+def safe_browser_context(playwright, site: str):
+    """
+    Launch a stealth persistent browser context using the BrowserManager.
+    """
+    return browser_manager.launch(playwright, site)
 
 
 # ─── VISIBLE FIELD-BY-FIELD LOGGER ──────────────────────────────────────────
