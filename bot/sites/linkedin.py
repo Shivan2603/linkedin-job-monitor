@@ -15,10 +15,10 @@ Key design principles:
 """
 
 import time, random, os, yaml, re
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout, Page
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
-from bot.ai_resume import tailor_resume
+from bot.ai_resume import tailor_resume, check_tech_stack_relevance, check_experience_relevance
 from bot.ai_router import ai_complete
 from bot.utils import logger
 from bot.utils.logger import record_application, is_already_applied, git_sync
@@ -58,6 +58,55 @@ def _delay(a=1.0, b=3.0):
 
 def _encode(t):
     return quote(str(t))
+
+def _generate_profile_query() -> str:
+    """Dynamically build an optimized boolean search query from the candidate's profile.yaml stack."""
+    try:
+        primary_stack = PROFILE.get("experience_summary", {}).get("primary_stack", [])
+        if not primary_stack:
+            return ".Net"
+        
+        languages = []
+        frameworks = []
+        others = []
+        
+        for skill in primary_stack:
+            s_clean = skill.strip()
+            s_lower = s_clean.lower()
+            if s_lower in ["c#", "csharp"]:
+                if "C#" not in languages:
+                    languages.append("C#")
+            elif s_lower in [".net core", ".net", "dotnet", "asp.net web api", "asp.net mvc", "asp.net"]:
+                if ".NET" not in frameworks:
+                    frameworks.append(".NET")
+            elif s_lower in ["azure", "angular", "sql server", "sql"]:
+                val = "SQL Server" if s_lower == "sql server" else s_clean
+                if val not in others:
+                    others.append(val)
+                    
+        core_parts = []
+        if languages:
+            langs_str = '" OR "'.join(languages)
+            core_parts.append(f'("{langs_str}")')
+        if frameworks:
+            frams_str = '" OR "'.join(frameworks)
+            core_parts.append(f'("{frams_str}")')
+            
+        core_query = " AND ".join(core_parts) if core_parts else ".NET"
+        
+        # Exclude unwanted roles dynamically in search keywords to keep quality high
+        exclusions = 'NOT ("QA" OR "Tester" OR "Scrum Master" OR "Java" OR "Python" OR "PHP" OR "Android" OR "iOS")'
+        
+        if others:
+            others_str = '" OR "'.join(others)
+            other_query = f'("{others_str}")'
+            query = f'{core_query} AND {other_query} {exclusions}'
+        else:
+            query = f'{core_query} {exclusions}'
+            
+        return query
+    except Exception:
+        return ".Net"
 
 # ─── MAIN ENTRY ───────────────────────────────────────────────────────────────
 def run_linkedin_bot():
@@ -191,7 +240,11 @@ def _login(page: Page, creds: dict) -> bool:
 def _search_and_apply(page: Page, job_title: str, location: str):
     logger.info(f"LinkedIn search: '{job_title}' in '{location}'", SITE)
 
-    search_query = job_title
+    if job_title.lower() in [".net", "dotnet"]:
+        search_query = _generate_profile_query()
+    else:
+        search_query = job_title
+
     time_range = "r604800"  # Past week (to find more opportunities worldwide)
     logger.info(f"Searching for: {search_query} (Past Week)", SITE)
 
@@ -201,7 +254,6 @@ def _search_and_apply(page: Page, job_title: str, location: str):
         f"&f_TPR={time_range}"
         f"&f_E=4"           # Mid-Senior level
         f"&sortBy=DD"       # Most recent first
-        f"&f_EA=true"       # Strictly Easy Apply only
     )
 
     try:
@@ -233,13 +285,17 @@ def _search_and_apply(page: Page, job_title: str, location: str):
         logger.info(f"Found {len(jobs)} jobs on page {page_num + 1}", SITE)
 
         for job_el in jobs:
-            if not check_daily_limit(SITE):
-                return
             try:
-                result = _apply_to_job(page, job_el)
-                if result:
+                res = _apply_to_job(page, job_el)
+                if isinstance(res, tuple):
+                    success, apply_type = res
+                else:
+                    success, apply_type = res, "easy"
+
+                if success:
                     applied_count += 1
-                    increment_daily_count(SITE)
+                    if apply_type == "easy":
+                        increment_daily_count(SITE)
                     _delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 8)
             except Exception as e:
                 logger.warn(f"Job error: {str(e)[:80]}", SITE)
@@ -339,13 +395,25 @@ def _apply_to_job(page: Page, job_el) -> bool:
             ".jobs-description-content__text",
         ])
 
+        # 2. Technology Stack Check (Fast Filter)
+        is_tech_ok, tech_reason = check_tech_stack_relevance(job_title, job_desc)
+        if not is_tech_ok:
+            field_log("skip", f"{company} — {job_title}", f"Tech stack mismatch: {tech_reason}", SITE)
+            return False
+
+        # 3. Experience Relevance Check (Fast Filter)
+        is_exp_ok, exp_reason = check_experience_relevance(job_desc, job_title)
+        if not is_exp_ok:
+            field_log("skip", f"{company} — {job_title}", f"Experience mismatch: {exp_reason}", SITE)
+            return False
+
         job_url = page.url
 
         if is_already_applied(SITE, company, job_title):
             field_log("skip", f"{company} — {job_title}", "Already applied", SITE)
             return False
 
-        # Check Easy Apply button FIRST before tailoring the resume
+        # Check Easy Apply or regular Apply buttons
         easy_btn = None
         for btn_locator in [
             page.get_by_role("button", name="Easy Apply"),
@@ -360,45 +428,129 @@ def _apply_to_job(page: Page, job_el) -> bool:
             except Exception:
                 continue
 
+        apply_btn = None
         if not easy_btn:
-            field_log("skip", f"{company} — {job_title}", "No Easy Apply button found", SITE)
+            for btn_locator in [
+                page.locator("button[aria-label*='Apply to' i]:not([aria-label*='Easy Apply' i])"),
+                page.locator("a[aria-label*='Apply to' i]:not([aria-label*='Easy Apply' i])"),
+                page.locator("button:has-text('Apply')").locator("visible=true"),
+                page.locator("a:has-text('Apply')").locator("visible=true"),
+                page.locator(".jobs-apply-button"),
+            ]:
+                try:
+                    if btn_locator.first.is_visible():
+                        apply_btn = btn_locator.first
+                        break
+                except Exception:
+                    continue
+
+        if not easy_btn and not apply_btn:
+            field_log("skip", f"{company} — {job_title}", "No apply buttons found", SITE)
             return False
 
-        # ── RELEVANCE FILTER ────────────────────────────────────────────────
-        tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
-        resume_path   = tailor_result["resume_path"]
-        match_score   = tailor_result["match_score"]
+        if easy_btn:
+            if not check_daily_limit(SITE):
+                field_log("skip", f"{company} — {job_title}", "Easy Apply daily limit reached", SITE)
+                return False
 
-        if not resume_path:
-            field_log("skip", f"{company} — {job_title}", "Tech stack or experience mismatch", SITE)
-            return False
+            # ── RELEVANCE FILTER ────────────────────────────────────────────────
+            tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
+            resume_path   = tailor_result["resume_path"]
+            match_score   = tailor_result["match_score"]
 
-        if match_score < MIN_MATCH:
-            field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}% threshold", SITE)
-            return False
+            if not resume_path:
+                field_log("skip", f"{company} — {job_title}", "Tech stack or experience mismatch (tailoring)", SITE)
+                return False
 
-        print(f"\n  {'─'*55}")
-        print(f"  🎯 APPLYING: {company} — {job_title}")
-        print(f"     Match: {match_score}% | Location: {location}")
-        print(f"  {'─'*55}")
+            if match_score < MIN_MATCH:
+                field_log("skip", f"{company} — {job_title}", f"Match {match_score}% < {MIN_MATCH}% threshold", SITE)
+                return False
 
-        easy_btn.scroll_into_view_if_needed()
-        _delay(0.3, 0.6)
-        field_log("click", "Easy Apply button", "", SITE)
-        easy_btn.click()
-        _delay(1.5, 2.5)
+            print(f"\n  {'─'*55}")
+            print(f"  🎯 APPLYING (EASY APPLY): {company} — {job_title}")
+            print(f"     Match: {match_score}% | Location: {location}")
+            print(f"  {'─'*55}")
 
-        success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
+            easy_btn.scroll_into_view_if_needed()
+            _delay(0.3, 0.6)
+            field_log("click", "Easy Apply button", "", SITE)
+            easy_btn.click()
+            _delay(1.5, 2.5)
 
-        if success:
-            record_application(
-                site=SITE, company=company, role=job_title,
-                location=location, job_url=job_url,
-                match_score=match_score, resume_used=resume_path,
-            )
-            git_sync()
+            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc)
 
-        return success
+            if success:
+                record_application(
+                    site=SITE, company=company, role=job_title,
+                    location=location, job_url=job_url,
+                    match_score=match_score, resume_used=resume_path,
+                )
+                git_sync()
+
+            return success, "easy"
+
+        elif apply_btn:
+            print(f"\n  {'─'*55}")
+            print(f"  🎯 CAPTURING EXTERNAL APPLY: {company} — {job_title}")
+            print(f"     Location: {location}")
+            print(f"  {'─'*55}")
+
+            apply_btn.scroll_into_view_if_needed()
+            _delay(0.3, 0.6)
+            field_log("click", "Apply (External) button", "", SITE)
+
+            # Click and wait for the redirected external page in a popup
+            external_url = None
+            try:
+                with page.context.expect_page(timeout=15000) as new_page_info:
+                    apply_btn.click()
+                new_page = new_page_info.value
+                new_page.wait_for_load_state("domcontentloaded", timeout=15000)
+                _delay(1, 2)
+                external_url = new_page.url
+                new_page.close()
+            except Exception as pop_err:
+                logger.warn(f"Failed to capture external redirect popup: {pop_err}", SITE)
+                try:
+                    href = apply_btn.get_attribute("href")
+                    if href:
+                        external_url = urljoin(BASE_URL, href)
+                except Exception:
+                    pass
+
+            if not external_url:
+                field_log("error", f"{company} — {job_title}", "Could not capture external URL", SITE)
+                return False
+
+            if "linkedin.com/jobs/view/" in external_url or "linkedin.com/jobs/search/" in external_url:
+                field_log("warn", f"{company} — {job_title}", "Redirected back to LinkedIn. Saving original job URL.", SITE)
+                external_url = job_url
+
+            bulk_file = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
+            os.makedirs(os.path.dirname(bulk_file), exist_ok=True)
+
+            already_in_bulk = False
+            if os.path.exists(bulk_file):
+                try:
+                    with open(bulk_file, "r", encoding="utf-8") as f:
+                        bulk_content = f.read()
+                        if external_url in bulk_content:
+                            already_in_bulk = True
+                except Exception:
+                    pass
+
+            if already_in_bulk:
+                field_log("skip", f"{company} — {job_title}", "URL already in bulk_urls.txt", SITE)
+                return False
+
+            try:
+                with open(bulk_file, "a", encoding="utf-8") as f:
+                    f.write(f"\n# {company} — {job_title} ({location})\n{external_url}\n")
+                logger.success(f"Saved external URL for {company} — {job_title} to bulk_urls.txt", SITE)
+                return True, "external"
+            except Exception as write_err:
+                logger.error(f"Failed to save external URL: {write_err}", SITE)
+                return False
 
     except Exception as e:
         logger.warn(f"Apply error: {str(e)[:100]}", SITE)
