@@ -331,8 +331,6 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
             logger.warn(f"Error parsing job card metadata: {e}", SITE)
 
     logger.info(f"Found {len(jobs_to_process)} Indeed jobs to process on search page", SITE)
-    # Sort to process Indeed Apply (Easy Apply) jobs first, then External Apply
-    jobs_to_process.sort(key=lambda j: j.get("is_indeed_apply", False), reverse=True)
     applied = 0
     from bot.utils.logger import record_application, is_already_applied, git_sync
 
