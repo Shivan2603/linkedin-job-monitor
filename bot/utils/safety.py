@@ -490,3 +490,36 @@ def handle_google_sso(auth_page, email: str, password: str) -> bool:
         logger.warn(f"Failed to take final Google SSO screenshot: {e}", "safety")
 
     return True
+
+def select_best_resume_file(page, file_input_el, docx_path: str, pdf_path: str) -> str:
+    """
+    Looks at the file input's accept attribute or surrounding text to decide whether
+    to upload the PDF resume or the DOCX resume.
+    Defaults to PDF if PDF is accepted or requested, as it is universally preferred.
+    """
+    import os
+    if not pdf_path or not os.path.exists(pdf_path):
+        return docx_path
+    if not docx_path or not os.path.exists(docx_path):
+        return pdf_path
+        
+    try:
+        accept = (file_input_el.get_attribute("accept") or "").lower()
+        
+        # If the input explicitly requires doc/docx and doesn't accept pdf
+        if any(x in accept for x in ["doc", "docx"]) and "pdf" not in accept:
+            return docx_path
+            
+        # If surrounding text explicitly asks for doc/docx only
+        parent_text = file_input_el.evaluate("""el => {
+            let container = el.closest('.jobs-easy-apply-form-element, .fb-form-element, div[class*="upload"], label, div');
+            return container ? container.innerText.toLowerCase() : '';
+        }""")
+        if any(x in parent_text for x in ["doc only", "docx only", "word format", "word document"]):
+            if "pdf" not in parent_text:
+                return docx_path
+    except Exception:
+        pass
+        
+    # Default to PDF as it is the industry standard
+    return pdf_path

@@ -20,7 +20,7 @@ from bot.utils.logger import record_application, is_already_applied, git_sync
 from bot.utils.safety import (
     safe_browser_context, save_cookies,
     check_daily_limit, increment_daily_count,
-    field_log, human_fill
+    field_log, human_fill, select_best_resume_file
 )
 
 SITE     = "naukri"
@@ -536,6 +536,7 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
         # Tailor the resume for this job description
         tailor_result = tailor_resume(job_title, company, job_desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
+        resume_pdf_path = tailor_result.get("resume_pdf_path", "")
         match_score   = tailor_result["match_score"]
 
         # If resume_path is empty, it means the job failed programmatic tech stack or experience check
@@ -619,7 +620,7 @@ def _apply_to_url(page: Page, job_url: str, default_title: str, location: str) -
             field_log("click", "Apply button (Quick Apply)", "", SITE)
             apply_btn.click()
             _delay(2, 3)
-            success = _handle_application(page, resume_path, job_title, company, job_desc)
+            success = _handle_application(page, resume_path, job_title, company, job_desc, resume_pdf_path=resume_pdf_path)
 
         if success:
             record_application(
@@ -687,11 +688,10 @@ def _get_naukri_field_label(page: Page, el) -> str:
 
 # ─── APPLICATION FORM HANDLER (FULL FIELD COVERAGE) ──────────────────────────
 def _handle_application(page: Page, resume_path: str, job_title: str,
-                         company: str, job_desc: str) -> bool:
+                        company: str, job_desc: str, resume_pdf_path: str = "") -> bool:
     """
-    Handle Naukri Quick Apply form with field-by-field logging.
-    Covers: resume upload, phone, CTC, notice period, cover letter,
-            text inputs, dropdowns, radio buttons.
+    Fill the application form dynamically.
+    Returns True if application is successfully submitted.
     """
     _delay(1, 2)
 
@@ -704,8 +704,9 @@ def _handle_application(page: Page, resume_path: str, job_title: str,
             try:
                 el = page.query_selector(file_sel)
                 if el and el.is_visible():
-                    field_log("upload", "Resume file", os.path.basename(resume_path), SITE)
-                    el.set_input_files(resume_path)
+                    best_resume = select_best_resume_file(page, el, resume_path, resume_pdf_path)
+                    field_log("upload", "Resume file", os.path.basename(best_resume), SITE)
+                    el.set_input_files(best_resume)
                     _delay(1, 2)
                     break
             except Exception:

@@ -509,14 +509,63 @@ def check_tech_stack_relevance(job_title: str, jd_text: str) -> tuple[bool, str]
         
     return True, "Passed technology stack check"
 
+def convert_docx_to_pdf_win32(docx_path: str) -> str:
+    """
+    Converts a DOCX file to a PDF file using MS Word COM automation on Windows.
+    Returns the absolute path to the generated PDF file if successful.
+    """
+    import win32com.client
+    import pythoncom
+    
+    pythoncom.CoInitialize()
+    abs_docx_path = os.path.abspath(docx_path)
+    abs_pdf_path = abs_docx_path.replace(".docx", ".pdf")
+    
+    word = None
+    doc = None
+    try:
+        word = win32com.client.Dispatch("Word.Application")
+        word.Visible = False
+        doc = word.Documents.Open(abs_docx_path)
+        doc.SaveAs(abs_pdf_path, FileFormat=17) # 17 is wdFormatPDF
+        doc.Close()
+        return abs_pdf_path
+    except Exception as e:
+        raise RuntimeError(f"Word COM PDF conversion failed: {e}")
+    finally:
+        try:
+            if doc:
+                doc.Close()
+        except Exception:
+            pass
+        try:
+            if word:
+                word.Quit()
+        except Exception:
+            pass
+        pythoncom.CoUninitialize()
 
 def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
+    res = None
     if _USING_TAILORROBOT and _tr_tailor_resume:
         logger.ai(f"[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot...", site=site)
         try:
-            return _tr_tailor_resume(job_title, company, job_description, site=site)
+            res = _tr_tailor_resume(job_title, company, job_description, site=site)
         except Exception as e:
             logger.error(f"[JCode Swarm Bridge] TailorRobot delegation failed: {e}. Falling back to local builder.", site=site)
+            
+    if res:
+        docx_path = res.get("resume_path")
+        if docx_path and os.path.exists(docx_path):
+            try:
+                print(f"[PDF Builder] Converting delegated '{os.path.basename(docx_path)}' to PDF...")
+                pdf_path = convert_docx_to_pdf_win32(docx_path)
+                res["resume_pdf_path"] = pdf_path
+                print(f"[PDF Builder] PDF saved successfully: {pdf_path}")
+            except Exception as pdf_err:
+                print(f"[PDF Builder] Warning: PDF conversion failed: {pdf_err}")
+        return res
+
     # Globally clean job title using unified cleaner (strips location suffixes, ALL CAPS, etc.)
     from bot.resume_builder_core import clean_job_title as _clean_title
     job_title = _clean_title(job_title)
@@ -749,11 +798,22 @@ JD:
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
         
-    return {
+    res = {
         "resume_path": out_path,
         "match_score": final_tailored.get("ats_report", {}).get("match_score", 100),
         "tailored":    final_tailored
     }
+    
+    if out_path and os.path.exists(out_path):
+        try:
+            print(f"[PDF Builder] Converting '{os.path.basename(out_path)}' to PDF...")
+            pdf_path = convert_docx_to_pdf_win32(out_path)
+            res["resume_pdf_path"] = pdf_path
+            print(f"[PDF Builder] PDF saved successfully: {pdf_path}")
+        except Exception as pdf_err:
+            print(f"[PDF Builder] Warning: PDF conversion failed: {pdf_err}")
+            
+    return res
 
 def build_clean_resume(tailored: dict, output_path: str):
     doc = Document()

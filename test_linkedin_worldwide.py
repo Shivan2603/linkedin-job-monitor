@@ -108,6 +108,30 @@ def test_salary_estimation():
 
     print("[PASS] Salary estimation verified successfully.")
 
+def test_pdf_generation():
+    print("\nTesting resume tailoring and PDF generation...")
+    from bot.ai_resume import tailor_resume
+    
+    res = tailor_resume(
+        job_title="Senior .NET Developer",
+        company="Test Company",
+        job_description="We are looking for a Senior .NET Developer with C#, Azure, SQL Server, and 4 years of experience.",
+        site="test"
+    )
+    
+    docx_path = res.get("resume_path")
+    pdf_path = res.get("resume_pdf_path")
+    
+    print(f"Generated DOCX: {docx_path}")
+    print(f"Generated PDF: {pdf_path}")
+    
+    assert docx_path and os.path.exists(docx_path), "DOCX resume was not created"
+    assert pdf_path and os.path.exists(pdf_path), "PDF resume was not created"
+    assert pdf_path.endswith(".pdf"), "PDF path must end with .pdf"
+    assert os.path.getsize(pdf_path) > 0, "PDF file must not be empty"
+    
+    print("[PASS] Resume tailoring and PDF generation verified successfully.")
+
 if __name__ == "__main__":
     test_config()
     test_india_filtering()
@@ -115,4 +139,5 @@ if __name__ == "__main__":
     test_stack_relevance()
     test_experience_relevance()
     test_salary_estimation()
+    test_pdf_generation()
     print("\nAll unit tests passed successfully!")

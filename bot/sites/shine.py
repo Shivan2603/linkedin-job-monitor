@@ -3,7 +3,7 @@ sites/shine.py — Shine.com automation
 """
 import time, random, os
 from playwright.sync_api import sync_playwright
-from bot.utils.safety import safe_browser_context
+from bot.utils.safety import safe_browser_context, select_best_resume_file
 from bot.config import CREDENTIALS, JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.utils import logger
@@ -193,7 +193,12 @@ def _apply_shine_jobs(page, job_title: str, location: str):
 
             upload = page.query_selector('input[type="file"]')
             if upload:
-                upload.set_input_files(tailor_result["resume_path"])
+                best_resume = select_best_resume_file(
+                    page, upload,
+                    tailor_result.get("resume_path", ""),
+                    tailor_result.get("resume_pdf_path", "")
+                )
+                upload.set_input_files(best_resume)
                 _human_delay(1, 2)
 
             submit = page.query_selector('button[type="submit"]')

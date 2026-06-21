@@ -26,7 +26,7 @@ from bot.utils.safety import (
     safe_browser_context, save_cookies,
     check_daily_limit, increment_daily_count,
     long_delay, medium_delay, short_delay,
-    field_log, human_fill
+    field_log, human_fill, select_best_resume_file
 )
 
 SITE       = "linkedin"
@@ -477,7 +477,10 @@ def _apply_to_job(page: Page, job_el) -> bool:
             easy_btn.click()
             _delay(1.5, 2.5)
 
-            success = _fill_easy_apply_modal(page, resume_path, job_title, company, job_desc, location)
+            success = _fill_easy_apply_modal(
+                page, resume_path, job_title, company, job_desc, location,
+                resume_pdf_path=tailor_result.get("resume_pdf_path", "")
+            )
 
             if success:
                 record_application(
@@ -558,7 +561,8 @@ def _apply_to_job(page: Page, job_el) -> bool:
 
 # ─── EASY APPLY MODAL (PRODUCTION GRADE) ────────────────────────────────────
 def _fill_easy_apply_modal(page: Page, resume_path: str,
-                            job_title: str, company: str, job_desc: str, location: str = "Worldwide") -> bool:
+                            job_title: str, company: str, job_desc: str,
+                            location: str = "Worldwide", resume_pdf_path: str = "") -> bool:
     """
     Step through LinkedIn Easy Apply modal with FULL field coverage.
     Handles: resume upload, phone, text, number, textarea,
@@ -584,8 +588,9 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
         file_input = page.query_selector('input[type="file"]')
         if file_input:
             try:
-                field_log("upload", "Resume file", os.path.basename(resume_path), SITE)
-                file_input.set_input_files(resume_path)
+                best_resume = select_best_resume_file(page, file_input, resume_path, resume_pdf_path)
+                field_log("upload", "Resume file", os.path.basename(best_resume), SITE)
+                file_input.set_input_files(best_resume)
                 _delay(1, 2)
             except Exception as e:
                 field_log("error", f"Resume upload failed: {e}", "", SITE)

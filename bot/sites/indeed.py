@@ -3,7 +3,7 @@ sites/indeed.py — Indeed Multi-Country Automation with Login Detection
 """
 import time, random, os
 from playwright.sync_api import sync_playwright
-from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count
+from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, select_best_resume_file
 from bot.config import CREDENTIALS, JOB_TITLES, APPLY_DELAY_SECONDS
 from bot.ai_resume import tailor_resume
 from bot.utils import logger
@@ -310,7 +310,12 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 if next_b:
                     upload = page.query_selector('input[type="file"]')
                     if upload:
-                        upload.set_input_files(tailor_result["resume_path"])
+                        best_resume = select_best_resume_file(
+                            page, upload,
+                            tailor_result.get("resume_path", ""),
+                            tailor_result.get("resume_pdf_path", "")
+                        )
+                        upload.set_input_files(best_resume)
                         _human_delay(1, 2)
                     next_b.click()
                 else:
