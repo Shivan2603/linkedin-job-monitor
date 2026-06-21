@@ -371,6 +371,13 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 job_page.close()
                 continue
                 
+            # Dynamically determine if Indeed Apply is available on the loaded job details page
+            if not is_apply:
+                has_indeed_apply_btn = job_page.query_selector('button[id*="indeedApplyButton"], [data-testid*="indeedApplyButton"], [class*="indeed-apply"], .ia-continueButton')
+                if has_indeed_apply_btn:
+                    logger.info(f"Indeed Apply: Detected Indeed Apply button on job page for {company}. Overriding classification to Indeed Apply ✅", SITE)
+                    is_apply = True
+
             if is_apply:
                 # ─── INDEED APPLY (EASY APPLY) FLOW ───
                 desc_el = job_page.query_selector("#jobDescriptionText")
@@ -473,7 +480,6 @@ def _apply_indeed_jobs(page, job_title: str, location: str, base_url: str):
                 # ─── EXTERNAL APPLY FLOW ───
                 external_btn = None
                 external_selectors = [
-                    'a[data-testid="indeedApplyButton-applyButton"]',
                     'a[href*="clk?"]',
                     'a:has-text("Apply on company site")',
                     'button:has-text("Apply on company site")',
