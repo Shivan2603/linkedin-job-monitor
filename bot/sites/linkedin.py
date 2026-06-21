@@ -266,9 +266,25 @@ def _search_and_apply(page: Page, job_title: str, location: str):
 # ─── SINGLE JOB APPLICATION ──────────────────────────────────────────────────
 def _apply_to_job(page: Page, job_el) -> bool:
     try:
-        job_el.scroll_into_view_if_needed()
-        _delay(0.3, 0.6)
-        job_el.click()
+        # Scroll and click job link or element robustly
+        try:
+            job_link = job_el.query_selector("a.job-card-container__link, a[href*='/jobs/view/'], .job-card-list__title")
+            if job_link:
+                job_link.scroll_into_view_if_needed()
+                _delay(0.3, 0.6)
+                job_link.click(timeout=8000)
+            else:
+                job_el.scroll_into_view_if_needed()
+                _delay(0.3, 0.6)
+                job_el.click(timeout=8000)
+        except Exception:
+            try:
+                job_el.scroll_into_view_if_needed()
+                _delay(0.3, 0.6)
+                job_el.click(timeout=10000)
+            except Exception as click_err:
+                logger.warn(f"Failed to click job element: {str(click_err)[:80]}", SITE)
+                return False
         _delay(1.5, 2.5)
 
         def _text(selectors: list) -> str:
