@@ -1,5 +1,271 @@
 [
   {
+    "id": "0f1ae061",
+    "ts": "2026-06-21T16:06:40.161488",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Comrise | Full Stack .Net Engineer (C#, Angular, Security | Taguig, National Capital Region, Philippines | 100% match"
+  },
+  {
+    "id": "68d4f268",
+    "ts": "2026-06-21T16:06:39.955404",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Comrise — Full Stack .Net Engineer (C#, Angular, Security"
+  },
+  {
+    "id": "ed48737c",
+    "ts": "2026-06-21T16:06:31.301615",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "e1ff6892",
+    "ts": "2026-06-21T16:06:31.075715",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of experience do you have in security?' = '4'"
+  },
+  {
+    "id": "1688a4f6",
+    "ts": "2026-06-21T16:06:24.559654",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "e9f4174d",
+    "ts": "2026-06-21T16:06:24.287650",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Full_Stack_.NET_Developer_C#_and_Angular_Comrise_Resume.pdf' = 'Deselect resume Siva_Shankar_Full_Stack_.NET_Developer_C#_and_Angular_Comrise_Resume.pdf'"
+  },
+  {
+    "id": "5251b0f8",
+    "ts": "2026-06-21T16:06:23.157024",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "9d00216c",
+    "ts": "2026-06-21T16:06:22.743810",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "62809aa7",
+    "ts": "2026-06-21T16:06:22.618096",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "8a5e2322",
+    "ts": "2026-06-21T16:06:22.291152",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5a02e747",
+    "ts": "2026-06-21T16:06:21.956284",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "40e21093",
+    "ts": "2026-06-21T16:06:21.565956",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "b62b19ef",
+    "ts": "2026-06-21T16:06:21.167801",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d7147d63",
+    "ts": "2026-06-21T16:04:36.860157",
+    "level": "AI",
+    "site": "linkedin",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "4444bbf0",
+    "ts": "2026-06-21T16:04:29.551727",
+    "level": "AI",
+    "site": "test",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "f2436f84",
+    "ts": "2026-06-21T16:04:29.487032",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 13 jobs on page 2"
+  },
+  {
+    "id": "bc243eef",
+    "ts": "2026-06-21T16:04:29.436345",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "285a6710",
+    "ts": "2026-06-21T16:04:29.012004",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7c4c6c85",
+    "ts": "2026-06-21T16:04:28.904543",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "e47da7c2",
+    "ts": "2026-06-21T16:04:28.553435",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "81ffa6bf",
+    "ts": "2026-06-21T16:04:28.177474",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d2fbaa4d",
+    "ts": "2026-06-21T16:04:27.684476",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "49ede6c0",
+    "ts": "2026-06-21T16:04:27.181383",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "564ff40e",
+    "ts": "2026-06-21T16:04:11.982103",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Tekton Labs — .Net Senior Backend Developer to bulk_urls.txt"
+  },
+  {
+    "id": "cd826662",
+    "ts": "2026-06-21T16:04:09.742210",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "6efcdd66",
+    "ts": "2026-06-21T16:04:09.313884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "ab9100bc",
+    "ts": "2026-06-21T16:04:09.178797",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "36e1ab87",
+    "ts": "2026-06-21T16:04:08.806941",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "002b9da7",
+    "ts": "2026-06-21T16:04:08.460161",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8cd98b8a",
+    "ts": "2026-06-21T16:04:08.116411",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ae18bfaa",
+    "ts": "2026-06-21T16:04:07.704332",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "3eadca97",
+    "ts": "2026-06-21T16:03:50.205667",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq-Fast (form_fill)"
+  },
+  {
+    "id": "d457ba31",
+    "ts": "2026-06-21T16:03:49.748663",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "63f8c6fe",
+    "ts": "2026-06-21T16:03:49.609119",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c83b587d",
+    "ts": "2026-06-21T16:03:49.194940",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "8a4e37cb",
+    "ts": "2026-06-21T16:03:48.860647",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "63c58deb",
+    "ts": "2026-06-21T16:03:48.444334",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "dc90dfb1",
+    "ts": "2026-06-21T16:03:47.901585",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
     "id": "aa84eb3a",
     "ts": "2026-06-21T16:01:08.473591",
     "level": "SUCCESS",
@@ -3232,271 +3498,5 @@
     "level": "AI",
     "site": "linkedin",
     "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "44e63711",
-    "ts": "2026-06-21T12:37:19.836828",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "f1b1f3a1",
-    "ts": "2026-06-21T12:37:02.749554",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "40a48526",
-    "ts": "2026-06-21T12:36:53.696225",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "e7fb374d",
-    "ts": "2026-06-21T12:36:47.010698",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "17a0df99",
-    "ts": "2026-06-21T12:36:44.256775",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "20682a6f",
-    "ts": "2026-06-21T12:36:37.445513",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "74e136c2",
-    "ts": "2026-06-21T12:36:29.104112",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .Net (Past Week)"
-  },
-  {
-    "id": "547b4119",
-    "ts": "2026-06-21T12:36:28.999894",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Worldwide'"
-  },
-  {
-    "id": "0087ffbb",
-    "ts": "2026-06-21T12:36:28.895589",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "dfb2ff42",
-    "ts": "2026-06-21T12:36:28.644976",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "8f3437a9",
-    "ts": "2026-06-21T12:36:22.373225",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "d97141ec",
-    "ts": "2026-06-21T12:36:14.448356",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "80b4b53d",
-    "ts": "2026-06-21T12:36:14.407966",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "bcbb2cf8",
-    "ts": "2026-06-21T12:36:14.362660",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "26e5860d",
-    "ts": "2026-06-21T12:36:14.323279",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 3, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "0fbd2933",
-    "ts": "2026-06-21T12:36:14.278792",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "0d006e71",
-    "ts": "2026-06-21T12:36:14.234970",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\21-06-2026"
-  },
-  {
-    "id": "82bd8f51",
-    "ts": "2026-06-21T12:36:14.187794",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-21 12:36:14"
-  },
-  {
-    "id": "a087e679",
-    "ts": "2026-06-21T12:36:14.142361",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d7d7418c",
-    "ts": "2026-06-21T12:36:14.099363",
-    "level": "INFO",
-    "site": "system",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "9768fc98",
-    "ts": "2026-06-21T12:36:14.058195",
-    "level": "INFO",
-    "site": "system",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "f5285d52",
-    "ts": "2026-06-21T12:36:14.018057",
-    "level": "INFO",
-    "site": "system",
-    "message": "Daily limits: LinkedIn=1000 (Unlimited requested), Naukri=40, Indeed=30, Shine=50, Monster=50, JobStreet=30, Jooble=30"
-  },
-  {
-    "id": "67701f5e",
-    "ts": "2026-06-21T12:36:13.971410",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Starting — Safe Mode Active"
-  },
-  {
-    "id": "a1df20fc",
-    "ts": "2026-06-21T12:16:36.334370",
-    "level": "INFO",
-    "site": "system",
-    "message": "Next cycle in 68 minutes..."
-  },
-  {
-    "id": "a86d10ce",
-    "ts": "2026-06-21T12:16:36.296781",
-    "level": "INFO",
-    "site": "system",
-    "message": "Waiting 60-90 minutes before next cycle..."
-  },
-  {
-    "id": "b99f97e4",
-    "ts": "2026-06-21T12:16:36.259196",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's total applications: {'linkedin': 3, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "ad26e3e6",
-    "ts": "2026-06-21T12:16:36.215834",
-    "level": "INFO",
-    "site": "system",
-    "message": "All sites completed for this cycle."
-  },
-  {
-    "id": "a1c898f2",
-    "ts": "2026-06-21T12:16:36.184394",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "47d47930",
-    "ts": "2026-06-21T12:16:36.121521",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "49c054d0",
-    "ts": "2026-06-21T12:16:35.385782",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 3 jobs for '.Net' in Worldwide"
-  },
-  {
-    "id": "1af6e0ac",
-    "ts": "2026-06-21T12:16:32.049605",
-    "level": "AI",
-    "site": "linkedin",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "44cdc930",
-    "ts": "2026-06-21T12:16:14.082407",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: Devoteam | Creative Tech | PowerBuilder Developer | Lisbon, Lisbon, Portugal | 100% match"
-  },
-  {
-    "id": "e6f93bdf",
-    "ts": "2026-06-21T12:16:14.016402",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: Devoteam — Creative Tech | PowerBuilder Developer"
-  },
-  {
-    "id": "fa4514c5",
-    "ts": "2026-06-21T12:16:07.384503",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "e52cfb96",
-    "ts": "2026-06-21T12:16:07.291283",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'I consent' = 'Yes'"
-  },
-  {
-    "id": "82e34235",
-    "ts": "2026-06-21T12:15:55.538782",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "8d773242",
-    "ts": "2026-06-21T12:15:55.485319",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Creative_Tech_PowerBuilder_Developer_Devoteam_Resume.docx' = 'Deselect resume Siva_Shankar_Creative_Tech_PowerBuilder_Developer_Devoteam_Resume.docx'"
-  },
-  {
-    "id": "f9951254",
-    "ts": "2026-06-21T12:15:50.649605",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
   }
 ]
