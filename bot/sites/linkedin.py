@@ -83,79 +83,11 @@ def run_linkedin_bot():
                 return
             save_cookies(context, SITE)
 
-            from bot.utils.countries import ALL_COUNTRIES_AND_TERRITORIES
-            import json
-            from bot.config import DATA_FOLDER
-
-            # 1. Define priorities based on user request
-            india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
-            
-            # Target countries are those non-India locations specified in user configuration (UK, Australia, Malaysia, Singapore)
-            target_locations = []
-            for loc in LOCATIONS:
-                if not any(k in loc.lower() for k in india_keywords):
-                    target_locations.append(loc)
-            
-            # India locations
-            india_locations = []
-            for loc in LOCATIONS:
-                if any(k in loc.lower() for k in india_keywords):
-                    india_locations.append(loc)
-            if "India" not in india_locations:
-                india_locations.append("India")
-                
-            # First priority countries (all other countries/regions from the database, excluding target and India)
-            priority_1_locations = []
-            for country in ALL_COUNTRIES_AND_TERRITORIES:
-                if country.lower() in [t.lower() for t in target_locations]:
-                    continue
-                if any(k in country.lower() for k in india_keywords):
-                    continue
-                priority_1_locations.append(country)
-                
-            # Master sorted list: Priority 1 first, then Priority 2 (Target countries), then Priority 3 (India)
-            master_locations = priority_1_locations + target_locations + india_locations
-            
-            # Load current state checkpoint
-            state_file = os.path.join(DATA_FOLDER, "linkedin_country_state.json")
-            current_index = 0
-            if os.path.exists(state_file):
-                try:
-                    with open(state_file, "r") as f:
-                        state_data = json.load(f)
-                        current_index = state_data.get("current_index", 0)
-                except Exception:
-                    pass
-            
-            # Process 8 locations per cycle to stay completely within safe search limits
-            batch_size = 8
-            total_locations = len(master_locations)
-            
-            if current_index >= total_locations:
-                current_index = 0
-                
-            batch_locations = []
-            for idx in range(batch_size):
-                loc_idx = (current_index + idx) % total_locations
-                batch_locations.append(master_locations[loc_idx])
-                
-            # Save next checkpoint index
-            next_index = (current_index + batch_size) % total_locations
-            try:
-                with open(state_file, "w") as f:
-                    json.dump({"current_index": next_index}, f)
-            except Exception as e:
-                logger.warn(f"Failed to save country checkpoint: {e}", SITE)
-                
-            logger.info(f"Loaded global country checkpoint index: {current_index}/{total_locations}", SITE)
-            logger.info(f"Executing search batch of 8 locations: {batch_locations}", SITE)
-
             for job_title in JOB_TITLES:
-                for location in batch_locations:
-                    if not check_daily_limit(SITE):
-                        logger.info("LinkedIn daily limit (25) reached — stopping", SITE)
-                        return
-                    _search_and_apply(page, job_title, location)
+                if not check_daily_limit(SITE):
+                    logger.info("LinkedIn daily limit (25) reached — stopping", SITE)
+                    return
+                _search_and_apply(page, job_title, "Worldwide")
         except Exception as e:
             logger.error(f"LinkedIn bot crash: {e}", SITE)
         finally:
@@ -259,16 +191,9 @@ def _login(page: Page, creds: dict) -> bool:
 def _search_and_apply(page: Page, job_title: str, location: str):
     logger.info(f"LinkedIn search: '{job_title}' in '{location}'", SITE)
 
-    india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
-    
-    # If international location, append visa sponsorship criteria and expand time range to past week
-    if not any(k in location.lower() for k in india_keywords):
-        search_query = f'{job_title} (sponsorship OR visa OR relocation)'
-        time_range = "r604800"  # Past week (to find more opportunities)
-        logger.info(f"Applying Visa Sponsorship Search filter: {search_query} (Past Week)", SITE)
-    else:
-        search_query = job_title
-        time_range = "r86400"   # Past 24 hours for local India searches
+    search_query = job_title
+    time_range = "r604800"  # Past week (to find more opportunities worldwide)
+    logger.info(f"Searching for: {search_query} (Past Week)", SITE)
 
     search_url = (
         f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
@@ -380,9 +305,17 @@ def _apply_to_job(page: Page, job_el) -> bool:
 
         location = _text([
             ".job-details-jobs-unified-top-card__primary-description-container .tvm__text",
+            ".job-details-jobs-unified-top-card__primary-description",
+            ".jobs-unified-top-card__primary-description",
             ".jobs-unified-top-card__bullet",
             ".jobs-unified-top-card__workplace-type",
         ]) or "Unknown"
+
+        # India Exclusions Filter
+        india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
+        if any(k in location.lower() for k in india_keywords):
+            field_log("skip", f"{company} — {job_title}", f"Location is India ({location}) — skipping", SITE)
+            return False
 
         job_desc = _text([
             "#job-details",
