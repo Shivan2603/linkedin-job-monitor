@@ -140,7 +140,13 @@ def run_linkedin_bot():
             for job_title in JOB_TITLES:
                 if not check_daily_limit(SITE):
                     logger.warn("LinkedIn Easy Apply daily limit reached — continuing in External Apply Capture mode", SITE)
-                _search_and_apply(page, job_title, "Worldwide")
+                # Standard Search
+                _search_and_apply(page, job_title, "Worldwide", is_freelance=False)
+                
+                # Freelance Search
+                if not check_daily_limit(SITE):
+                    logger.warn("LinkedIn Easy Apply daily limit reached — continuing in External Apply Capture mode", SITE)
+                _search_and_apply(page, job_title, "Worldwide", is_freelance=True)
         except Exception as e:
             logger.error(f"LinkedIn bot crash: {e}", SITE)
         finally:
@@ -241,7 +247,7 @@ def _login(page: Page, creds: dict) -> bool:
         return False
 
 # ─── JOB SEARCH ───────────────────────────────────────────────────────────────
-def _search_and_apply(page: Page, job_title: str, location: str):
+def _search_and_apply(page: Page, job_title: str, location: str, is_freelance: bool = False):
     logger.info(f"LinkedIn search: '{job_title}' in '{location}'", SITE)
 
     if job_title.lower() in [".net", "dotnet"]:
@@ -249,16 +255,31 @@ def _search_and_apply(page: Page, job_title: str, location: str):
     else:
         search_query = job_title
 
-    time_range = "r604800"  # Past week (to find more opportunities worldwide)
-    logger.info(f"Searching for: {search_query} (Past Week)", SITE)
+    if is_freelance:
+        # Target freelance/contracting jobs matching profile keywords
+        search_query = f'({search_query}) AND ("freelance" OR "contract" OR "temporary" OR "contractor")'
+        logger.info(f"Searching for freelance/contract positions: {search_query}", SITE)
+    else:
+        logger.info(f"Searching for: {search_query} (Past Week)", SITE)
 
-    search_url = (
-        f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
-        f"&location={_encode(location)}"
-        f"&f_TPR={time_range}"
-        f"&f_E=4"           # Mid-Senior level
-        f"&sortBy=DD"       # Most recent first
-    )
+    time_range = "r604800"  # Past week (to find more opportunities worldwide)
+
+    if is_freelance:
+        search_url = (
+            f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
+            f"&location={_encode(location)}"
+            f"&f_TPR={time_range}"
+            f"&f_JT=C,T,O"      # Contract, Temporary, Other (freelance)
+            f"&sortBy=DD"       # Most recent first
+        )
+    else:
+        search_url = (
+            f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
+            f"&location={_encode(location)}"
+            f"&f_TPR={time_range}"
+            f"&f_E=4"           # Mid-Senior level
+            f"&sortBy=DD"       # Most recent first
+        )
 
     try:
         page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
