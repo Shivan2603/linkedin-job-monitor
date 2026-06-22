@@ -1,5 +1,600 @@
 [
   {
+    "id": "f3763e75",
+    "ts": "2026-06-22T18:54:42.500362",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: Sopra Steria | Développeur(euse) - Fullstack – Services Financiers - Tours | France | 100% match"
+  },
+  {
+    "id": "7451b95d",
+    "ts": "2026-06-22T18:54:42.390112",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to Sopra Steria - Développeur(euse) - Fullstack – Services Financiers - Tours ✅"
+  },
+  {
+    "id": "d62c3fe3",
+    "ts": "2026-06-22T18:54:42.317133",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "f060b6ba",
+    "ts": "2026-06-22T18:54:42.127042",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "758d419d",
+    "ts": "2026-06-22T18:52:28.820740",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "44c72efe",
+    "ts": "2026-06-22T18:52:21.847672",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Moving to next page via 'Postuler sur Indeed'"
+  },
+  {
+    "id": "9209dde8",
+    "ts": "2026-06-22T18:52:21.695369",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "1f0ff808",
+    "ts": "2026-06-22T18:52:21.618633",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "d5cc91b6",
+    "ts": "2026-06-22T18:52:21.535015",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "0b7b340a",
+    "ts": "2026-06-22T18:52:21.343375",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "7ef302de",
+    "ts": "2026-06-22T18:52:21.137916",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "a63e8bb8",
+    "ts": "2026-06-22T18:52:20.989244",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "89c1100a",
+    "ts": "2026-06-22T18:52:20.804358",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "950598d2",
+    "ts": "2026-06-22T18:52:19.860977",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "98427dc0",
+    "ts": "2026-06-22T18:52:19.675683",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "dc55631f",
+    "ts": "2026-06-22T18:52:19.481998",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "666e96a5",
+    "ts": "2026-06-22T18:52:19.260631",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "6bfe3c4e",
+    "ts": "2026-06-22T18:52:19.072147",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "8688e7e4",
+    "ts": "2026-06-22T18:52:18.876805",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "3d5df21c",
+    "ts": "2026-06-22T18:52:18.673186",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "da508214",
+    "ts": "2026-06-22T18:52:18.494474",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "4b77396e",
+    "ts": "2026-06-22T18:52:18.335576",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "e62cf074",
+    "ts": "2026-06-22T18:52:18.176250",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "6875d3b1",
+    "ts": "2026-06-22T18:52:17.138906",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "98a70417",
+    "ts": "2026-06-22T18:52:15.897290",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "29eace5e",
+    "ts": "2026-06-22T18:52:15.695763",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "0b8c8966",
+    "ts": "2026-06-22T18:52:15.631725",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "40214941",
+    "ts": "2026-06-22T18:52:15.239567",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a75e0d6f",
+    "ts": "2026-06-22T18:52:14.731229",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "b21086b6",
+    "ts": "2026-06-22T18:52:14.388810",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7a9e318d",
+    "ts": "2026-06-22T18:52:13.870534",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "66533f0d",
+    "ts": "2026-06-22T18:51:56.323940",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "758dacbf",
+    "ts": "2026-06-22T18:51:56.205024",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "0825e14d",
+    "ts": "2026-06-22T18:50:51.950852",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "0bc5dcfd",
+    "ts": "2026-06-22T18:50:51.724712",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sopra Steria. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "2843a484",
+    "ts": "2026-06-22T18:50:48.040790",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Développeur(euse) - Fullstack – Services Financiers - Tours (External Apply)..."
+  },
+  {
+    "id": "d94149a5",
+    "ts": "2026-06-22T18:50:41.058493",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Sopra Steria - Développeur Full Stack - Java - Orléans (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "81c22aa2",
+    "ts": "2026-06-22T18:50:40.878079",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "dde9667c",
+    "ts": "2026-06-22T18:50:40.713915",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sopra Steria. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "e3bd6bdc",
+    "ts": "2026-06-22T18:50:37.305295",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Développeur Full Stack - Java - Orléans (External Apply)..."
+  },
+  {
+    "id": "f62042bd",
+    "ts": "2026-06-22T18:50:29.731057",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Sopra Steria - Alternance - Développeur/euse Java - Développement régional - Annecy ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "ede46feb",
+    "ts": "2026-06-22T18:50:27.689049",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "48a85117",
+    "ts": "2026-06-22T18:50:23.855931",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Alternance - Développeur/euse Java - Développement régional - Annecy (External Apply)..."
+  },
+  {
+    "id": "3cb5d5d1",
+    "ts": "2026-06-22T18:50:12.712380",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Sopra Steria - Développeur/euse Fullstack - .NET - Développement Régional - Clermont-Ferrand already captured in bulk_urls.txt"
+  },
+  {
+    "id": "66be0b9a",
+    "ts": "2026-06-22T18:50:10.699332",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "e2bd0a19",
+    "ts": "2026-06-22T18:50:05.646908",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Développeur/euse Fullstack - .NET - Développement Régional - Clermont-Ferrand (External Apply)..."
+  },
+  {
+    "id": "9689006f",
+    "ts": "2026-06-22T18:49:56.618216",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Sopra Steria - Alternance - Développeur/se - Java - Grenoble already captured in bulk_urls.txt"
+  },
+  {
+    "id": "8fb8c43b",
+    "ts": "2026-06-22T18:49:54.678361",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "3b2829f3",
+    "ts": "2026-06-22T18:49:50.236260",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Alternance - Développeur/se - Java - Grenoble (External Apply)..."
+  },
+  {
+    "id": "17a9e116",
+    "ts": "2026-06-22T18:49:38.361630",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Sopra Steria - Alternance - Développeur/se - Java - Lyon already captured in bulk_urls.txt"
+  },
+  {
+    "id": "9cbafd2a",
+    "ts": "2026-06-22T18:49:36.271057",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "114fb38e",
+    "ts": "2026-06-22T18:49:31.900238",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Alternance - Développeur/se - Java - Lyon (External Apply)..."
+  },
+  {
+    "id": "c284aabf",
+    "ts": "2026-06-22T18:49:22.145705",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Safran - Tech Lead.net fullstack F-H already captured in bulk_urls.txt"
+  },
+  {
+    "id": "fe3c3461",
+    "ts": "2026-06-22T18:49:20.207664",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "7a035f56",
+    "ts": "2026-06-22T18:49:16.180300",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Safran - Tech Lead.net fullstack F-H (External Apply)..."
+  },
+  {
+    "id": "bf49454e",
+    "ts": "2026-06-22T18:49:05.557276",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Safran - Stage PFE – Ingénieur(e) Méthodes et Outils pour bureau d'études H-F F-H already captured in bulk_urls.txt"
+  },
+  {
+    "id": "5e81fdd4",
+    "ts": "2026-06-22T18:49:03.666389",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "a3cdb8f1",
+    "ts": "2026-06-22T18:48:59.296058",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Safran - Stage PFE – Ingénieur(e) Méthodes et Outils pour bureau d'études H-F F-H (External Apply)..."
+  },
+  {
+    "id": "f4a03b2e",
+    "ts": "2026-06-22T18:48:51.069746",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Safran - Analyste Programmeur(se) F-H already captured in bulk_urls.txt"
+  },
+  {
+    "id": "f720c4c1",
+    "ts": "2026-06-22T18:48:49.355752",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "4162e480",
+    "ts": "2026-06-22T18:48:44.897037",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Safran - Analyste Programmeur(se) F-H (External Apply)..."
+  },
+  {
+    "id": "7a3948a2",
+    "ts": "2026-06-22T18:48:37.818355",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for TF1 - Développeur fullstack .NET / Angular - H/F (CDD) already captured in bulk_urls.txt"
+  },
+  {
+    "id": "2abf51b4",
+    "ts": "2026-06-22T18:48:35.745859",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "58e9523e",
+    "ts": "2026-06-22T18:48:32.116016",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: TF1 - Développeur fullstack .NET / Angular - H/F (CDD) (External Apply)..."
+  },
+  {
+    "id": "c42a3adf",
+    "ts": "2026-06-22T18:48:23.786696",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for TF1 - Développeur Full Stack .NET / Angular / IAAugmenté- H/F already captured in bulk_urls.txt"
+  },
+  {
+    "id": "0d7a3fa1",
+    "ts": "2026-06-22T18:48:20.912062",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "f657b466",
+    "ts": "2026-06-22T18:48:16.858039",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: TF1 - Développeur Full Stack .NET / Angular / IAAugmenté- H/F (External Apply)..."
+  },
+  {
+    "id": "6a6c9908",
+    "ts": "2026-06-22T18:48:09.949249",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for E.Leclerc - RECEPTIONNAIRE ATELIER - CENTRE AUTO LECLERC 39H 1700e net - H/F already captured in bulk_urls.txt"
+  },
+  {
+    "id": "1ae29ffd",
+    "ts": "2026-06-22T18:48:07.528816",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "5946b022",
+    "ts": "2026-06-22T18:48:03.087570",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: E.Leclerc - RECEPTIONNAIRE ATELIER - CENTRE AUTO LECLERC 39H 1700e net - H/F (External Apply)..."
+  },
+  {
+    "id": "1e855187",
+    "ts": "2026-06-22T18:47:54.079894",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for E.Leclerc - MECANICIEN EN CENTRE AUTO 2000e net - 40h - H/F already captured in bulk_urls.txt"
+  },
+  {
+    "id": "2989f6c6",
+    "ts": "2026-06-22T18:47:51.565473",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "d99c4764",
+    "ts": "2026-06-22T18:47:46.987604",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: E.Leclerc - MECANICIEN EN CENTRE AUTO 2000e net - 40h - H/F (External Apply)..."
+  },
+  {
+    "id": "ec35adb5",
+    "ts": "2026-06-22T18:47:37.832420",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for E.Leclerc - Tech lead .NET, Nancy - H/F already captured in bulk_urls.txt"
+  },
+  {
+    "id": "c5142751",
+    "ts": "2026-06-22T18:47:34.696379",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "cd6e69a6",
+    "ts": "2026-06-22T18:47:30.398604",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: E.Leclerc - Tech lead .NET, Nancy - H/F (External Apply)..."
+  },
+  {
+    "id": "fa6f9092",
+    "ts": "2026-06-22T18:47:30.255607",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "a5da1ae8",
+    "ts": "2026-06-22T18:47:24.447801",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.Net' in 'France' on https://fr.indeed.com"
+  },
+  {
+    "id": "e0933f48",
+    "ts": "2026-06-22T18:47:24.251460",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 2 jobs on Indeed for '.Net' in Paris"
+  },
+  {
+    "id": "6118ded6",
+    "ts": "2026-06-22T18:47:14.981472",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Deodis - Ingénieur DevOps H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "993e024f",
+    "ts": "2026-06-22T18:47:06.911647",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "ba039c88",
+    "ts": "2026-06-22T18:47:03.115559",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Deodis - Ingénieur DevOps H/F (External Apply)..."
+  },
+  {
+    "id": "4cf47e50",
+    "ts": "2026-06-22T18:46:56.313867",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Transdev - Alternance - Développeur CRM Dynamics 365 H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "6368ac23",
+    "ts": "2026-06-22T18:46:53.265809",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "65c400cd",
+    "ts": "2026-06-22T18:46:48.240776",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Transdev - Alternance - Développeur CRM Dynamics 365 H/F (External Apply)..."
+  },
+  {
     "id": "9c482b88",
     "ts": "2026-06-22T18:46:33.971769",
     "level": "SUCCESS",
@@ -2903,600 +3498,5 @@
     "level": "INFO",
     "site": "main",
     "message": "Next cycle in 84 minutes..."
-  },
-  {
-    "id": "036066fc",
-    "ts": "2026-06-22T18:12:51.981746",
-    "level": "INFO",
-    "site": "system",
-    "message": "Waiting 60-90 minutes before next cycle..."
-  },
-  {
-    "id": "874cd00c",
-    "ts": "2026-06-22T18:12:51.859462",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's total applications: {'linkedin': 0, 'naukri': 0, 'indeed': 11, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "6a7cc713",
-    "ts": "2026-06-22T18:12:51.703545",
-    "level": "INFO",
-    "site": "system",
-    "message": "All sites completed for this cycle."
-  },
-  {
-    "id": "5a41be15",
-    "ts": "2026-06-22T18:12:51.551010",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "7b5e0f83",
-    "ts": "2026-06-22T18:12:51.382489",
-    "level": "ERROR",
-    "site": "system",
-    "message": "LinkedIn crashed: BrowserType.launch_persistent_context: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_shared --remote-debugging-pipe about:blank\n<launched> pid=4920\n[pid=4920][out] Opening in existing browser session.\nCall log:\n<launching> C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe --disable-field-trial-config --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --no-sandbox --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --disable-infobars --start-maximized --window-position=0,0 --user-data-dir=E:\\SivaShankar\\jobbot\\data\\chrome_profile_shared --remote-debugging-pipe about:blank\n  - <launched> pid=4920\n  - [pid=4920][out] Opening in existing browser session.\n"
-  },
-  {
-    "id": "6b271bbb",
-    "ts": "2026-06-22T18:12:51.046638",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Safran - Tech Lead.net fullstack F-H ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "ca2a9af9",
-    "ts": "2026-06-22T18:12:50.577863",
-    "level": "WARN",
-    "site": "safety",
-    "message": "Failed to launch native Chrome via subprocess: Timeout waiting for remote debugging port to open. Falling back to default Playwright launch."
-  },
-  {
-    "id": "72d39db2",
-    "ts": "2026-06-22T18:12:48.271698",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "f926d12e",
-    "ts": "2026-06-22T18:12:43.650432",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Safran - Tech Lead.net fullstack F-H (External Apply)..."
-  },
-  {
-    "id": "82e3dc9c",
-    "ts": "2026-06-22T18:12:40.263611",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9223..."
-  },
-  {
-    "id": "a7ef41bf",
-    "ts": "2026-06-22T18:12:33.983932",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Safran - Stage PFE – Ingénieur(e) Méthodes et Outils pour bureau d'études H-F F-H already captured in bulk_urls.txt"
-  },
-  {
-    "id": "449be5d6",
-    "ts": "2026-06-22T18:12:31.859431",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "295166ef",
-    "ts": "2026-06-22T18:12:27.272464",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "c453d2b5",
-    "ts": "2026-06-22T18:12:27.121252",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "a481822b",
-    "ts": "2026-06-22T18:12:26.933871",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "0294f87d",
-    "ts": "2026-06-22T18:12:26.626712",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 11, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "b1ed9147",
-    "ts": "2026-06-22T18:12:26.436155",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Safran - Stage PFE – Ingénieur(e) Méthodes et Outils pour bureau d'études H-F F-H (External Apply)..."
-  },
-  {
-    "id": "7cd4b333",
-    "ts": "2026-06-22T18:12:26.417143",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "132a8aaa",
-    "ts": "2026-06-22T18:12:26.277253",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\22-06-2026"
-  },
-  {
-    "id": "53f7b45b",
-    "ts": "2026-06-22T18:12:26.145918",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-06-22 18:12:26"
-  },
-  {
-    "id": "84a8f34e",
-    "ts": "2026-06-22T18:12:25.938775",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "bb23f08c",
-    "ts": "2026-06-22T18:12:14.403021",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Safran - Analyste Programmeur(se) F-H ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "ad63f006",
-    "ts": "2026-06-22T18:12:11.016557",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "da29c464",
-    "ts": "2026-06-22T18:12:06.215498",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Safran - Analyste Programmeur(se) F-H (External Apply)..."
-  },
-  {
-    "id": "d1b1be18",
-    "ts": "2026-06-22T18:11:54.386548",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for TF1 - Développeur fullstack .NET / Angular - H/F (CDD) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "dfe57b92",
-    "ts": "2026-06-22T18:11:51.772374",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "c7b934d4",
-    "ts": "2026-06-22T18:11:47.178660",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TF1 - Développeur fullstack .NET / Angular - H/F (CDD) (External Apply)..."
-  },
-  {
-    "id": "b5157d67",
-    "ts": "2026-06-22T18:11:38.086692",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for TF1 - Développeur Full Stack .NET / Angular / IAAugmenté- H/F already captured in bulk_urls.txt"
-  },
-  {
-    "id": "c9d60ae8",
-    "ts": "2026-06-22T18:11:35.036365",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "435b49f7",
-    "ts": "2026-06-22T18:11:30.805155",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TF1 - Développeur Full Stack .NET / Angular / IAAugmenté- H/F (External Apply)..."
-  },
-  {
-    "id": "7832d2b7",
-    "ts": "2026-06-22T18:11:22.970252",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for E.Leclerc - RECEPTIONNAIRE ATELIER - CENTRE AUTO LECLERC 39H 1700e net - H/F ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "fccc714f",
-    "ts": "2026-06-22T18:11:20.530027",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "bd2a53c8",
-    "ts": "2026-06-22T18:11:15.423231",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: E.Leclerc - RECEPTIONNAIRE ATELIER - CENTRE AUTO LECLERC 39H 1700e net - H/F (External Apply)..."
-  },
-  {
-    "id": "4a4d1088",
-    "ts": "2026-06-22T18:11:07.896627",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for E.Leclerc - MECANICIEN EN CENTRE AUTO 2000e net - 40h - H/F ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "761f7640",
-    "ts": "2026-06-22T18:11:05.725690",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "8e36641e",
-    "ts": "2026-06-22T18:11:01.726657",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: E.Leclerc - MECANICIEN EN CENTRE AUTO 2000e net - 40h - H/F (External Apply)..."
-  },
-  {
-    "id": "cfb844ab",
-    "ts": "2026-06-22T18:10:53.225255",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for E.Leclerc - Tech lead .NET, Nancy - H/F ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "6e038404",
-    "ts": "2026-06-22T18:10:48.764802",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "d2b864be",
-    "ts": "2026-06-22T18:10:44.979294",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: E.Leclerc - Tech lead .NET, Nancy - H/F (External Apply)..."
-  },
-  {
-    "id": "ec308f26",
-    "ts": "2026-06-22T18:10:44.864344",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 15 Indeed jobs to process on search page"
-  },
-  {
-    "id": "5ac3821a",
-    "ts": "2026-06-22T18:10:38.436908",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.Net' in 'France' on https://fr.indeed.com"
-  },
-  {
-    "id": "f5d0bd9e",
-    "ts": "2026-06-22T18:10:38.230179",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 4 jobs on Indeed for '.Net' in Paris"
-  },
-  {
-    "id": "091bf7b3",
-    "ts": "2026-06-22T18:10:19.674848",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Applied: ALTEN | Ingénieur logiciel (H/F) | Paris | 100% match"
-  },
-  {
-    "id": "9bbac0a2",
-    "ts": "2026-06-22T18:10:19.590011",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Successfully recorded application to ALTEN - Ingénieur logiciel (H/F) ✅"
-  },
-  {
-    "id": "59cd61ae",
-    "ts": "2026-06-22T18:10:19.518297",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "11634547",
-    "ts": "2026-06-22T18:10:19.350138",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "5e4929f4",
-    "ts": "2026-06-22T18:07:44.944060",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
-  },
-  {
-    "id": "cfce397a",
-    "ts": "2026-06-22T18:07:44.660443",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "AI Form Filler error on step 2: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "579031dd",
-    "ts": "2026-06-22T18:07:44.599128",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "eabaa294",
-    "ts": "2026-06-22T18:07:44.534381",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "f35e3bb6",
-    "ts": "2026-06-22T18:07:44.361522",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "3e56344b",
-    "ts": "2026-06-22T18:07:44.200604",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "d1206f16",
-    "ts": "2026-06-22T18:07:44.046888",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "a58a27bf",
-    "ts": "2026-06-22T18:07:43.885942",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "8eb052ab",
-    "ts": "2026-06-22T18:07:42.876249",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "77a0b542",
-    "ts": "2026-06-22T18:07:42.695006",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "42e6a41d",
-    "ts": "2026-06-22T18:07:42.515646",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "520a3578",
-    "ts": "2026-06-22T18:07:42.358259",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "65eb543b",
-    "ts": "2026-06-22T18:07:42.215757",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "38201812",
-    "ts": "2026-06-22T18:07:42.058415",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "8ada508a",
-    "ts": "2026-06-22T18:07:41.898393",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "02922380",
-    "ts": "2026-06-22T18:07:41.605067",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "c98b3bf0",
-    "ts": "2026-06-22T18:07:41.297124",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "e4a77650",
-    "ts": "2026-06-22T18:07:40.818557",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "608de85d",
-    "ts": "2026-06-22T18:07:39.544834",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "be74b286",
-    "ts": "2026-06-22T18:07:38.446501",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
-  },
-  {
-    "id": "73de51a5",
-    "ts": "2026-06-22T18:07:38.209543",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "b72d5d44",
-    "ts": "2026-06-22T18:07:38.144393",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "9ac8afc8",
-    "ts": "2026-06-22T18:07:37.730960",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "e6f9ca46",
-    "ts": "2026-06-22T18:07:37.339014",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "01d7c18c",
-    "ts": "2026-06-22T18:07:36.972770",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "662f368d",
-    "ts": "2026-06-22T18:07:36.592413",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
-  },
-  {
-    "id": "458fe530",
-    "ts": "2026-06-22T18:07:18.903776",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "AI Filler: Moving to next page via 'Postuler sur Indeed'"
-  },
-  {
-    "id": "a2e35b52",
-    "ts": "2026-06-22T18:07:18.696384",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "bb50f2ac",
-    "ts": "2026-06-22T18:07:18.613250",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "0349401b",
-    "ts": "2026-06-22T18:07:18.513324",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "e4876bb6",
-    "ts": "2026-06-22T18:07:18.279683",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "988ab3f0",
-    "ts": "2026-06-22T18:07:18.060574",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "38bb1bab",
-    "ts": "2026-06-22T18:07:17.845605",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "91268c49",
-    "ts": "2026-06-22T18:07:17.575358",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "6cf7f3f8",
-    "ts": "2026-06-22T18:07:16.490366",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "b4fcf2d8",
-    "ts": "2026-06-22T18:07:16.269729",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "b92a2115",
-    "ts": "2026-06-22T18:07:16.034422",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "3883c4d2",
-    "ts": "2026-06-22T18:07:15.780502",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "24f17de5",
-    "ts": "2026-06-22T18:07:15.310555",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
   }
 ]
