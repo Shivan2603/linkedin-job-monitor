@@ -1,5 +1,432 @@
 [
   {
+    "id": "bcb4de8c",
+    "ts": "2026-06-22T18:31:25.263611",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: Sopra Steria | Développeur(se) - .NET - Services Financiers - Rouen | France | 100% match"
+  },
+  {
+    "id": "f7db23fb",
+    "ts": "2026-06-22T18:31:25.097077",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to Sopra Steria - Développeur(se) - .NET - Services Financiers - Rouen ✅"
+  },
+  {
+    "id": "aae8c19f",
+    "ts": "2026-06-22T18:31:25.007479",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "a57899ba",
+    "ts": "2026-06-22T18:31:24.820300",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "29ff8112",
+    "ts": "2026-06-22T18:29:21.822308",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "f6a1c22d",
+    "ts": "2026-06-22T18:29:21.323251",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "AI Form Filler error on step 2: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "b16737df",
+    "ts": "2026-06-22T18:29:21.185882",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "9b8bb93c",
+    "ts": "2026-06-22T18:29:21.045875",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "d4faad8c",
+    "ts": "2026-06-22T18:29:20.801395",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "bf526a8f",
+    "ts": "2026-06-22T18:29:20.529651",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "3b8f63c1",
+    "ts": "2026-06-22T18:29:20.296129",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "d7661146",
+    "ts": "2026-06-22T18:29:20.057158",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "c92c079c",
+    "ts": "2026-06-22T18:29:18.833351",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "f10e81c1",
+    "ts": "2026-06-22T18:29:18.571451",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "2641740b",
+    "ts": "2026-06-22T18:29:18.274898",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "c0cf13ad",
+    "ts": "2026-06-22T18:29:18.003140",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "7beb38ee",
+    "ts": "2026-06-22T18:29:17.816213",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "e4658351",
+    "ts": "2026-06-22T18:29:16.026717",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "4ab8458d",
+    "ts": "2026-06-22T18:29:15.753880",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "2cfeb28c",
+    "ts": "2026-06-22T18:29:15.444729",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "43cf6f12",
+    "ts": "2026-06-22T18:29:15.198899",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "f6d07916",
+    "ts": "2026-06-22T18:29:14.944322",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "63a7a661",
+    "ts": "2026-06-22T18:29:13.833610",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "6dc1d10b",
+    "ts": "2026-06-22T18:29:12.636471",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "3f3da800",
+    "ts": "2026-06-22T18:29:12.237210",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9810aff8",
+    "ts": "2026-06-22T18:29:12.110024",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "429c1149",
+    "ts": "2026-06-22T18:29:11.293760",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "696d1cdf",
+    "ts": "2026-06-22T18:29:10.524852",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "238d154e",
+    "ts": "2026-06-22T18:29:09.816280",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "6694ebf8",
+    "ts": "2026-06-22T18:29:09.304542",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "55af3553",
+    "ts": "2026-06-22T18:28:51.869872",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Moving to next page via 'Postuler sur Indeed'"
+  },
+  {
+    "id": "90813726",
+    "ts": "2026-06-22T18:28:51.631428",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "6c103ac0",
+    "ts": "2026-06-22T18:28:51.488339",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "4e7e183d",
+    "ts": "2026-06-22T18:28:51.355987",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "d48ae272",
+    "ts": "2026-06-22T18:28:51.106254",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "9f99c3c4",
+    "ts": "2026-06-22T18:28:50.837961",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "179623df",
+    "ts": "2026-06-22T18:28:50.580023",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "0278a8a5",
+    "ts": "2026-06-22T18:28:50.309344",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "43241836",
+    "ts": "2026-06-22T18:28:49.208986",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "c4a9d44e",
+    "ts": "2026-06-22T18:28:48.969902",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "3071e959",
+    "ts": "2026-06-22T18:28:48.733176",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "bf9922f2",
+    "ts": "2026-06-22T18:28:48.500528",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "2f5f34e0",
+    "ts": "2026-06-22T18:28:47.101404",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "26b2a54d",
+    "ts": "2026-06-22T18:28:46.877059",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "11f06c44",
+    "ts": "2026-06-22T18:28:46.628195",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "4a042f51",
+    "ts": "2026-06-22T18:28:46.399281",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "b3d34ec4",
+    "ts": "2026-06-22T18:28:46.144734",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "fe5c8580",
+    "ts": "2026-06-22T18:28:45.942506",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "5415d215",
+    "ts": "2026-06-22T18:28:44.885095",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "e0588d89",
+    "ts": "2026-06-22T18:28:43.736522",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "371097d3",
+    "ts": "2026-06-22T18:28:43.481386",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "1bd3bf57",
+    "ts": "2026-06-22T18:28:43.360842",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "b81b7374",
+    "ts": "2026-06-22T18:28:42.940683",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "3feae89d",
+    "ts": "2026-06-22T18:28:42.478236",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0a4aae21",
+    "ts": "2026-06-22T18:28:41.601013",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "bdfc23b6",
+    "ts": "2026-06-22T18:28:40.738602",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "dd8ddbbb",
+    "ts": "2026-06-22T18:28:22.155963",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "4fb517db",
+    "ts": "2026-06-22T18:28:22.020135",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "d902305e",
+    "ts": "2026-06-22T18:27:09.400711",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "5fe2d1a5",
+    "ts": "2026-06-22T18:27:09.260267",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sopra Steria. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "1067e842",
+    "ts": "2026-06-22T18:27:04.437277",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sopra Steria - Développeur(se) - .NET - Services Financiers - Rouen (External Apply)..."
+  },
+  {
     "id": "6caaf091",
     "ts": "2026-06-22T18:26:44.633644",
     "level": "SUCCESS",
@@ -3071,432 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "3630b1d3",
-    "ts": "2026-06-22T17:55:09.042535",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "3ade5abd",
-    "ts": "2026-06-22T17:55:08.769134",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "3c9ed7a4",
-    "ts": "2026-06-22T17:55:08.548042",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "dbda4fb5",
-    "ts": "2026-06-22T17:55:08.389295",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "d4b63cb2",
-    "ts": "2026-06-22T17:55:08.201634",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "aa054d37",
-    "ts": "2026-06-22T17:55:08.024444",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "0a2d8ad7",
-    "ts": "2026-06-22T17:55:06.990714",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "cc4cadb4",
-    "ts": "2026-06-22T17:55:05.880466",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
-  },
-  {
-    "id": "64b52e03",
-    "ts": "2026-06-22T17:55:05.657108",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "7b5ebe38",
-    "ts": "2026-06-22T17:55:05.530490",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "43ab6166",
-    "ts": "2026-06-22T17:55:05.158547",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "84415179",
-    "ts": "2026-06-22T17:55:04.786867",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "0afe8310",
-    "ts": "2026-06-22T17:55:04.416191",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "405d5074",
-    "ts": "2026-06-22T17:55:04.019507",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
-  },
-  {
-    "id": "2154aceb",
-    "ts": "2026-06-22T17:54:47.030044",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "AI Filler: Moving to next page via 'Continuer'"
-  },
-  {
-    "id": "5c7ab67c",
-    "ts": "2026-06-22T17:54:46.663329",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "AI Form Filler error on step 2: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "464ff1c5",
-    "ts": "2026-06-22T17:54:46.569601",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "fa5ac71f",
-    "ts": "2026-06-22T17:54:46.462021",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "031f2b85",
-    "ts": "2026-06-22T17:54:46.263462",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "267f9927",
-    "ts": "2026-06-22T17:54:46.014145",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "b8b993c8",
-    "ts": "2026-06-22T17:54:45.780000",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "ff9bb2f6",
-    "ts": "2026-06-22T17:54:45.526340",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "cf9f41e0",
-    "ts": "2026-06-22T17:54:44.496563",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "693c04ae",
-    "ts": "2026-06-22T17:54:44.329985",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "0efb98d4",
-    "ts": "2026-06-22T17:54:44.147738",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "16018dc8",
-    "ts": "2026-06-22T17:54:43.826583",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "215d5b7d",
-    "ts": "2026-06-22T17:54:43.619699",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "bcab2c8e",
-    "ts": "2026-06-22T17:54:43.379551",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "9ca86b96",
-    "ts": "2026-06-22T17:54:43.184141",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "047d592c",
-    "ts": "2026-06-22T17:54:42.946591",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "bc8e336f",
-    "ts": "2026-06-22T17:54:42.721983",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "7889b0c6",
-    "ts": "2026-06-22T17:54:42.378985",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "6cd3a8e8",
-    "ts": "2026-06-22T17:54:40.897305",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "513eebc6",
-    "ts": "2026-06-22T17:54:39.759280",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
-  },
-  {
-    "id": "f73b3a30",
-    "ts": "2026-06-22T17:54:39.504367",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "593475a7",
-    "ts": "2026-06-22T17:54:39.366680",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "f0138063",
-    "ts": "2026-06-22T17:54:38.874846",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "75f9bc3e",
-    "ts": "2026-06-22T17:54:38.355751",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "c88b834c",
-    "ts": "2026-06-22T17:54:37.729129",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "340c3f2a",
-    "ts": "2026-06-22T17:54:37.120049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
-  },
-  {
-    "id": "77deed34",
-    "ts": "2026-06-22T17:54:19.509369",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "AI Filler: Moving to next page via 'Postuler sur Indeed'"
-  },
-  {
-    "id": "e2520607",
-    "ts": "2026-06-22T17:54:19.255662",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "91f1ea27",
-    "ts": "2026-06-22T17:54:19.093201",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "fcc9e7d0",
-    "ts": "2026-06-22T17:54:18.968589",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "a797b3c0",
-    "ts": "2026-06-22T17:54:18.705930",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "409bcd51",
-    "ts": "2026-06-22T17:54:18.428714",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "fe6bdfb9",
-    "ts": "2026-06-22T17:54:18.158209",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "74506cf1",
-    "ts": "2026-06-22T17:54:17.915253",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "4cb88c00",
-    "ts": "2026-06-22T17:54:16.848832",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "8f668dc0",
-    "ts": "2026-06-22T17:54:16.574913",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "fb1eaacf",
-    "ts": "2026-06-22T17:54:16.282556",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "4cf5fde0",
-    "ts": "2026-06-22T17:54:16.049318",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "ec2fa7b1",
-    "ts": "2026-06-22T17:54:15.789468",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "2562f7e6",
-    "ts": "2026-06-22T17:54:15.547069",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "0b6870c9",
-    "ts": "2026-06-22T17:54:15.277161",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "59dccecd",
-    "ts": "2026-06-22T17:54:15.079079",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "a5b2bfe8",
-    "ts": "2026-06-22T17:54:14.831710",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "370dc360",
-    "ts": "2026-06-22T17:54:14.569628",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "c6a039aa",
-    "ts": "2026-06-22T17:54:13.440244",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "2beb5866",
-    "ts": "2026-06-22T17:54:12.429191",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
-  },
-  {
-    "id": "a9903035",
-    "ts": "2026-06-22T17:54:12.224188",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
   }
 ]
