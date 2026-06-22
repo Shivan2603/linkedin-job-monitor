@@ -120,11 +120,12 @@ def main():
             print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
             print("  3. Run Indeed Bot only (Indeed Multi-Country automation)")
             print("  4. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
-            print("  5. Exit")
+            print("  5. Run Proactive Cold Outreach Agent (24/7 Job Finder & Cold Emailer)")
+            print("  6. Exit")
             print("=" * 60 + "\n")
             
             try:
-                choice = input("Select an option (1-5): ").strip()
+                choice = input("Select an option (1-6): ").strip()
             except (KeyboardInterrupt, SystemExit):
                 print("\nExiting.")
                 break
@@ -187,10 +188,20 @@ def main():
                 break
                 
         elif choice == "5":
+            logger.info("Running Proactive Cold Outreach Agent...", "main")
+            try:
+                from bot.outreach_agent import run_outreach_agent
+                run_outreach_agent()
+            except Exception as e:
+                logger.error(f"Outreach Agent error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
+                
+        elif choice == "6":
             print("Exiting.")
             break
         else:
-            print("Invalid selection. Please choose 1, 2, 3, 4, or 5.")
+            print("Invalid selection. Please choose 1, 2, 3, 4, 5, or 6.")
 
 if __name__ == "__main__":
     main()
