@@ -1,5 +1,425 @@
 [
   {
+    "id": "6bad57fa",
+    "ts": "2026-06-22T18:05:26.296101",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: ALTEN | Développeur Aveva H/F CDI | Paris | 100% match"
+  },
+  {
+    "id": "398ff8d2",
+    "ts": "2026-06-22T18:05:26.216323",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to ALTEN - Développeur Aveva H/F CDI ✅"
+  },
+  {
+    "id": "8f22a93c",
+    "ts": "2026-06-22T18:05:26.148200",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "e23e39fa",
+    "ts": "2026-06-22T18:05:26.008536",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "d6217daa",
+    "ts": "2026-06-22T18:03:01.318449",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "d0ed310f",
+    "ts": "2026-06-22T18:02:54.842143",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Moving to next page via 'Postuler sur Indeed'"
+  },
+  {
+    "id": "a0cdcf29",
+    "ts": "2026-06-22T18:02:54.607994",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "e78c15ef",
+    "ts": "2026-06-22T18:02:54.481944",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "45d22762",
+    "ts": "2026-06-22T18:02:54.348934",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "924dbd7f",
+    "ts": "2026-06-22T18:02:53.839516",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "176d540b",
+    "ts": "2026-06-22T18:02:53.609919",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "cc96dc76",
+    "ts": "2026-06-22T18:02:53.364776",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "aa647cf2",
+    "ts": "2026-06-22T18:02:53.126682",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "629540b1",
+    "ts": "2026-06-22T18:02:51.985740",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "a33472a5",
+    "ts": "2026-06-22T18:02:51.478372",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "ef574bdc",
+    "ts": "2026-06-22T18:02:51.007983",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "07e2fdc2",
+    "ts": "2026-06-22T18:02:50.416621",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "36c81202",
+    "ts": "2026-06-22T18:02:50.079814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "1d237b96",
+    "ts": "2026-06-22T18:02:49.477999",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "3db97213",
+    "ts": "2026-06-22T18:02:49.102435",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "483f0aea",
+    "ts": "2026-06-22T18:02:47.404871",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
+  },
+  {
+    "id": "019c3c42",
+    "ts": "2026-06-22T18:02:47.152851",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
+  },
+  {
+    "id": "42f316f1",
+    "ts": "2026-06-22T18:02:46.896597",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "883db446",
+    "ts": "2026-06-22T18:02:45.750828",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "4d493ee9",
+    "ts": "2026-06-22T18:02:44.474099",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "330e4600",
+    "ts": "2026-06-22T18:02:44.207929",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "97846d6e",
+    "ts": "2026-06-22T18:02:44.025298",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "7f480cce",
+    "ts": "2026-06-22T18:02:43.589507",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "2567713d",
+    "ts": "2026-06-22T18:02:42.912119",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "75526de2",
+    "ts": "2026-06-22T18:02:42.320375",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a1c26677",
+    "ts": "2026-06-22T18:02:41.858479",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "af1cb387",
+    "ts": "2026-06-22T18:02:23.581167",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "ca1cb980",
+    "ts": "2026-06-22T18:02:23.413312",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "9872cd64",
+    "ts": "2026-06-22T18:01:17.466841",
+    "level": "AI",
+    "site": "indeed",
+    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
+  },
+  {
+    "id": "80fd607b",
+    "ts": "2026-06-22T18:01:17.284565",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for ALTEN. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "344a0439",
+    "ts": "2026-06-22T18:01:13.042017",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: ALTEN - Développeur Aveva H/F CDI (External Apply)..."
+  },
+  {
+    "id": "0866f61e",
+    "ts": "2026-06-22T18:01:05.913690",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Groupe Fayat - Chef de projet Développeur Full Stack (H/F) H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "98e60078",
+    "ts": "2026-06-22T18:01:00.872223",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "08cc0565",
+    "ts": "2026-06-22T18:00:56.747840",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Groupe Fayat - Chef de projet Développeur Full Stack (H/F) H/F (External Apply)..."
+  },
+  {
+    "id": "de590092",
+    "ts": "2026-06-22T18:00:47.188573",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for BNP Paribas - Alternance Développeur Junior H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "76566915",
+    "ts": "2026-06-22T18:00:45.188279",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "61f6ffed",
+    "ts": "2026-06-22T18:00:41.170281",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: BNP Paribas - Alternance Développeur Junior H/F (External Apply)..."
+  },
+  {
+    "id": "17a34dfb",
+    "ts": "2026-06-22T18:00:32.722571",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for BNP Paribas - Angular Apprentice H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "d6a84cd5",
+    "ts": "2026-06-22T18:00:28.812518",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "effd7a15",
+    "ts": "2026-06-22T18:00:24.265167",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: BNP Paribas - Angular Apprentice H/F (External Apply)..."
+  },
+  {
+    "id": "90df2ea4",
+    "ts": "2026-06-22T18:00:13.197052",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Capgemini - Développeuse / Développeur C# .NET ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "3127f3d3",
+    "ts": "2026-06-22T18:00:08.595604",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "b0acf9c8",
+    "ts": "2026-06-22T18:00:05.185095",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Capgemini - Développeuse / Développeur C# .NET (External Apply)..."
+  },
+  {
+    "id": "27aa231d",
+    "ts": "2026-06-22T17:59:58.452167",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Capgemini - Responsable technique Fullstack .NET ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "b5046ec7",
+    "ts": "2026-06-22T17:59:53.904720",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "9502b59a",
+    "ts": "2026-06-22T17:59:49.281478",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Capgemini - Responsable technique Fullstack .NET (External Apply)..."
+  },
+  {
+    "id": "b5903ae2",
+    "ts": "2026-06-22T17:59:38.565820",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "External apply URL for Assystem - Développeur C# / .NET H/F already captured in bulk_urls.txt"
+  },
+  {
+    "id": "dc5009c9",
+    "ts": "2026-06-22T17:59:35.137563",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "e056c278",
+    "ts": "2026-06-22T17:59:30.788450",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Assystem - Développeur C# / .NET H/F (External Apply)..."
+  },
+  {
+    "id": "35e7e9c2",
+    "ts": "2026-06-22T17:59:22.019098",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Assystem - Développeur Python / .NET Confirmé H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "2899731a",
+    "ts": "2026-06-22T17:59:17.201324",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "b3b921f3",
+    "ts": "2026-06-22T17:59:13.172492",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Assystem - Développeur Python / .NET Confirmé H/F (External Apply)..."
+  },
+  {
+    "id": "a2670935",
+    "ts": "2026-06-22T17:59:01.326900",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Groupe NGE - Concepteur/Développeur H/F ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "fb10e517",
+    "ts": "2026-06-22T17:58:49.920705",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "cdf31936",
+    "ts": "2026-06-22T17:58:46.073943",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Groupe NGE - Concepteur/Développeur H/F (External Apply)..."
+  },
+  {
     "id": "980f7cc3",
     "ts": "2026-06-22T17:58:30.739192",
     "level": "SUCCESS",
@@ -3078,425 +3498,5 @@
     "level": "INFO",
     "site": "indeed",
     "message": "Searching Indeed: '.Net' in 'Remote' on https://dk.indeed.com"
-  },
-  {
-    "id": "c5dc23b0",
-    "ts": "2026-06-22T17:11:24.560746",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://dk.indeed.com ✅"
-  },
-  {
-    "id": "9580eb2b",
-    "ts": "2026-06-22T17:11:20.044285",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://dk.indeed.com..."
-  },
-  {
-    "id": "cc05c7f9",
-    "ts": "2026-06-22T17:11:19.712356",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "cf29efa0",
-    "ts": "2026-06-22T17:11:19.351287",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "23e5b4a8",
-    "ts": "2026-06-22T17:11:18.773204",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "5f9c2c3f",
-    "ts": "2026-06-22T17:11:16.352234",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed search scope set to: Denmark"
-  },
-  {
-    "id": "1a98178c",
-    "ts": "2026-06-22T17:11:06.904198",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "0e9ba3b9",
-    "ts": "2026-06-22T17:11:06.839262",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "de5ca5bc",
-    "ts": "2026-06-22T17:11:04.210011",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed bot session ended"
-  },
-  {
-    "id": "cebf11b6",
-    "ts": "2026-06-22T17:11:03.774106",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Terminating Chrome subprocess..."
-  },
-  {
-    "id": "b0234008",
-    "ts": "2026-06-22T17:11:03.586836",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 3 jobs on Indeed for '.Net' in Denmark"
-  },
-  {
-    "id": "4d720643",
-    "ts": "2026-06-22T17:10:55.409027",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Ibexa - Account Executive - Nordics (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "e04dbd7e",
-    "ts": "2026-06-22T17:10:55.287950",
-    "level": "AI",
-    "site": "indeed",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "29de2010",
-    "ts": "2026-06-22T17:10:55.068015",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Ibexa. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "da05a4f8",
-    "ts": "2026-06-22T17:10:51.011170",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Ibexa - Account Executive - Nordics (External Apply)..."
-  },
-  {
-    "id": "8f6d7e5e",
-    "ts": "2026-06-22T17:10:42.405127",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping IFS - Senior Director, Demand Generation - Europe North (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "457d8106",
-    "ts": "2026-06-22T17:10:42.292046",
-    "level": "AI",
-    "site": "indeed",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "da4e61e1",
-    "ts": "2026-06-22T17:10:42.150092",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for IFS. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "c4145e85",
-    "ts": "2026-06-22T17:10:38.531644",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: IFS - Senior Director, Demand Generation - Europe North (External Apply)..."
-  },
-  {
-    "id": "5107d0fe",
-    "ts": "2026-06-22T17:10:31.300148",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Famly - Customer Success Manager UK (12 months contract) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "bf60601e",
-    "ts": "2026-06-22T17:10:31.153422",
-    "level": "AI",
-    "site": "indeed",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "ab7a6fc6",
-    "ts": "2026-06-22T17:10:31.012498",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Famly. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "b2e3b337",
-    "ts": "2026-06-22T17:10:26.647174",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Famly - Customer Success Manager UK (12 months contract) (External Apply)..."
-  },
-  {
-    "id": "27ff5f9d",
-    "ts": "2026-06-22T17:10:20.436501",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipped recording application for: TimeLog A/S — Quality Engineer"
-  },
-  {
-    "id": "e3388eea",
-    "ts": "2026-06-22T17:10:20.319042",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "c6741e84",
-    "ts": "2026-06-22T17:10:20.118234",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "a0d59088",
-    "ts": "2026-06-22T17:09:20.010513",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
-  },
-  {
-    "id": "d0954ab9",
-    "ts": "2026-06-22T17:09:19.611901",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "6e2a4dec",
-    "ts": "2026-06-22T17:09:19.500490",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "71f2af63",
-    "ts": "2026-06-22T17:09:19.424974",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "01a0ef19",
-    "ts": "2026-06-22T17:09:18.732177",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "43644e2a",
-    "ts": "2026-06-22T17:09:18.476102",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "1cb016ef",
-    "ts": "2026-06-22T17:09:18.214465",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "ff52fa05",
-    "ts": "2026-06-22T17:09:17.944845",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "7c93a365",
-    "ts": "2026-06-22T17:09:16.942822",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "565e8e74",
-    "ts": "2026-06-22T17:09:16.731600",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "90992a6d",
-    "ts": "2026-06-22T17:09:16.487280",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "d88ceefd",
-    "ts": "2026-06-22T17:09:16.276653",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "e3a496fb",
-    "ts": "2026-06-22T17:09:16.037258",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "ba18db3f",
-    "ts": "2026-06-22T17:09:15.848466",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "29f445aa",
-    "ts": "2026-06-22T17:09:15.560406",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "83dee341",
-    "ts": "2026-06-22T17:09:15.308430",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "91f13d31",
-    "ts": "2026-06-22T17:09:14.906128",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "4429aa04",
-    "ts": "2026-06-22T17:09:14.657439",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "a1e1cd69",
-    "ts": "2026-06-22T17:09:13.597416",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "19eb4148",
-    "ts": "2026-06-22T17:09:12.367762",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
-  },
-  {
-    "id": "286d5f7f",
-    "ts": "2026-06-22T17:09:12.113536",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "b9dd101e",
-    "ts": "2026-06-22T17:09:11.987372",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "4038196b",
-    "ts": "2026-06-22T17:09:11.487763",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "aa555b91",
-    "ts": "2026-06-22T17:09:10.934225",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "10ba0aa7",
-    "ts": "2026-06-22T17:09:10.294465",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "3cf4fd41",
-    "ts": "2026-06-22T17:09:09.526726",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
-  },
-  {
-    "id": "0727d439",
-    "ts": "2026-06-22T17:08:51.843486",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
-  },
-  {
-    "id": "a121e5b1",
-    "ts": "2026-06-22T17:08:51.738604",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking 'Apply' to enter application wizard..."
-  },
-  {
-    "id": "14a32681",
-    "ts": "2026-06-22T17:07:47.428670",
-    "level": "AI",
-    "site": "indeed",
-    "message": "[JCode Swarm Bridge] Delegating resume tailoring to TailorRobot..."
-  },
-  {
-    "id": "15629148",
-    "ts": "2026-06-22T17:07:47.265535",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for TimeLog A/S. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "845e52f9",
-    "ts": "2026-06-22T17:07:43.110205",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TimeLog A/S - Quality Engineer (External Apply)..."
-  },
-  {
-    "id": "d163ed76",
-    "ts": "2026-06-22T17:07:31.754122",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "No external apply button found"
-  },
-  {
-    "id": "43c9bdc5",
-    "ts": "2026-06-22T17:07:27.279515",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Intelligent Systems - Experienced Software Developer (External Apply)..."
-  },
-  {
-    "id": "b0f91a66",
-    "ts": "2026-06-22T17:07:19.667880",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "No external apply button found"
   }
 ]
