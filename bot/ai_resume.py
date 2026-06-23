@@ -249,11 +249,16 @@ DYNAMIC TAILORING RULES
 1. HEADER:
    - Set "job_title_headline" to the target job title (Title Case, no location).
    - Set "location_line" based on the relocation/country context in JD Intelligence.
-2. PROFESSIONAL SUMMARY (5 sentences only):
-   - Sentence 1: Start with the EXACT job_title_headline (e.g. "[job_title_headline] with 4+ years..."). No pronouns.
-   - Sentences 2-3: Frame candidate achievements mapping the JD's primary cloud/framework/lead requirements.
-   - Sentence 4: Include exact phrases from jd_mirror_phrases.
-   - Sentence 5: Append the exact "summary_closing_line" from JD Intelligence.
+2. PROFESSIONAL SUMMARY (EXACTLY 5 sentences — make it impossible to reject):
+   - This is the MOST IMPORTANT section. Write it as if Siva is speaking directly to this company's hiring manager.
+   - Sentence 1: "[EXACT job_title_headline] with 4+ years of hands-on experience delivering [company's primary domain — e.g. 'enterprise tax automation', 'cloud-native procurement platforms', 'identity security systems'] using [top 2-3 JD must-have skills]."
+   - Sentence 2: Mirror the company's domain language. Use exact domain_power_words from JD Intelligence. Reference the most impressive metric that fits the JD's priorities.
+     Example for fintech: "At DSSI Solutions, engineered 12+ procurement microservices achieving 99.98% uptime SLA and 3x message throughput — matching {company}'s expectation for high-availability financial platforms."
+     Example for AI: "At LTIMindtree, designed an Azure OpenAI + pgvector semantic search engine delivering sub-200ms document lookups across 1,000+ weekly tax submissions for Deloitte."
+   - Sentence 3: Explicitly address the JD's biggest technical requirement (not generic). If JD needs cloud → mention specific Azure service. If JD needs security → mention OAuth2/OIDC or FIPS. If JD needs microservices → reference CQRS/Clean Architecture. Use at least one phrase from jd_mirror_phrases.
+   - Sentence 4: If is_team_lead_role → "Mentored 4–6 engineers, introduced ADRs, and reduced onboarding time from 4 weeks to 10 days — ready to bring that technical leadership to [company]."
+     If IC role → "AZ-204 certified with a proven track record of building production-grade systems that improve, design, code and test software for international team environments."
+   - Sentence 5: Use the EXACT summary_closing_line from JD Intelligence verbatim. Do NOT rewrite it.
 3. SKILLS CATEGORIES:
    - Return skills grouped under Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology. Place matching technologies first in each category.
 4. WORK EXPERIENCE:
@@ -261,8 +266,17 @@ DYNAMIC TAILORING RULES
      * "role_title": Incorporate relevant JD tech keywords. e.g. "Senior .NET Developer" instead of plain "Senior Software Engineer" if .NET is the primary keyword, but keep Deloitte client context.
      * "tech_stack_line": Group technologies actually used in that role. Highlight ones matching the JD.
      * "bullets": Write metrics-driven bullets matching the allowed metrics for that role. First 2 bullets of LTIMindtree must prioritize must-have skills from JD. Bullet count per role for 3-PAGE RESUME: LTIMindtree (6 bullets), DSSI (5 bullets), Nexa (4 bullets), Kasadara (3 bullets).
-5. PROJECTS — Include ALL 5 PROJECTS in order of JD relevance:
-   - Write name, tech_stack, and 3 tailored bullets each: 1 architecture rationale bullet (WHY those tech choices), 1 impact bullet (metrics), 1 JD-alignment bullet.
+5. PROJECTS — ALL 5 PROJECTS, in order of JD domain relevance (most relevant FIRST):
+   Each project gets EXACTLY 3 bullets. Write them in this STRICT order:
+   - BULLET 1 — ARCHITECTURE RATIONALE (WHY): Explain WHY those specific technology choices were made as deliberate trade-offs.
+     Template: "[Selected/Chose/Adopted] [specific tech] over [alternative] to [solve specific problem — e.g. 'keep tax data strictly within security boundary', 'achieve sub-200ms semantic lookup without cross-network overhead']."
+     This must sound like a senior engineer explaining a real design decision at a technical interview, NOT a task description.
+   - BULLET 2 — IMPACT (WHAT + METRIC): State the measurable outcome using ONLY the allowed metrics from the project's grounded data.
+     Template: "[Action verb + what was built] — [specific metric from allowed list] [in context that maps to this JD's domain]."
+     Examples: 'reducing manual review time by 60% across 1,000+ weekly submissions', '3x message throughput at 99.98% uptime SLA', 'sub-100ms p99 latency on 30+ enterprise API endpoints'.
+   - BULLET 3 — JD ALIGNMENT (HOW it maps to THIS specific company/role): Directly connect the project to what THIS company needs.
+     Template: "Directly applicable to {company}'s [JD requirement — e.g. 'cloud-native microservices platform', 'federal compliance mandate', 'identity security layer'] — [what the candidate can bring from this project]."
+     This bullet MUST reference the company name and one specific JD requirement. Make it clear this candidate has already solved the exact problem the company is hiring for.
 6. CERTIFICATIONS:
    - List the 2-3 certifications relevant to this JD (e.g., adding AZ-204 highlight or NEICE as appropriate).
 

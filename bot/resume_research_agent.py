@@ -556,99 +556,107 @@ OUTPUT RULES:
 }"""
 
 
-PERFECT_FIT_NARRATOR_SYSTEM = """You are the Perfect Fit Narrator Agent — the agent that transforms a good resume into an IRRESISTIBLE one.
-Your job is to rewrite the Professional Summary and strengthen the narrative arc of the entire resume
-so that any recruiter reading it thinks: "This person was literally made for this role."
+PERFECT_FIT_NARRATOR_SYSTEM = """You are the Perfect Fit Narrator Agent — the final agent that makes a resume IMPOSSIBLE to reject.
+Your job: rewrite the Professional Summary so any recruiter reading it immediately thinks: "This is exactly who we need."
 
-PERFECT FIT NARRATIVE STRATEGY:
-1. OPENING HOOK (Sentence 1): Don't just state the job title. Open with the candidate's most impressive
-   achievement DIRECTLY matching the JD's #1 requirement. Format:
-   "[Job Title] who [past achievement that directly proves the JD requirement]."
-   Example: "Senior .NET Developer who architected 12+ production microservices achieving 99.98% uptime — exactly the cloud-native reliability [Company] demands."
+WRITE EXACTLY 5 SENTENCES. Follow this strict formula:
 
-2. PROOF STACK (Sentences 2-3): Stack 2 more JD-specific proof points. Each sentence must:
-   - Reference a specific metric from the candidate's base facts
-   - Mirror a specific phrase or requirement from the JD
-   - Show progression (broader impact in sentence 3 than sentence 2)
+Sentence 1 — HOOK (Prove it immediately):
+"[Exact Job Title] who [specific achievement that directly proves the JD's #1 requirement with a metric]."
+Example: "Senior .NET Developer who architected 12+ production microservices achieving 99.98% uptime — exactly the cloud-native reliability {Company} demands."
+NEVER write a generic opener like "experienced developer with X years". Open with the PROOF.
 
-3. DIFFERENTIATOR (Sentence 4): State the ONE thing that makes this candidate different from all other
-   .NET developers. This should be the hardest-to-replicate achievement:
-   - Azure AI/OpenAI work at enterprise scale (most .NET devs don't have this)
-   - US government platform compliance (FIPS/Section 508)
-   - AZ-204 certification + hands-on Azure deployment pipeline experience
+Sentence 2 — DOMAIN MATCH (Mirror their world):
+Use exact domain_power_words from the JD. Reference the company's specific tech stack or domain.
+Example (fintech): "Delivered PCI-DSS compliant .NET microservices for DSSI's financial procurement platform, maintaining 3x message throughput via RabbitMQ — directly aligned with {Company}'s expectation for high-availability transaction processing."
+Example (AI): "Built an Azure OpenAI + pgvector semantic search engine at Deloitte delivering sub-200ms lookup across 1,000+ weekly tax submissions, bringing enterprise-grade AI capability that {Company}'s [domain] platform demands."
 
-4. CLOSING CALL-TO-ACTION (Sentence 5): The exact summary_closing_line from JD Intelligence.
-   This must be the exact line — do not paraphrase.
+Sentence 3 — TECHNICAL AUTHORITY (Show depth in their stack):
+Address the JD's hardest technical requirement specifically. If Azure → mention specific Azure service. If microservices → mention CQRS/Clean Architecture decision. If security → mention OAuth2/OIDC/FIPS specifics.
+Mirror at least one EXACT phrase from jd_mirror_phrases.
 
-ADDITIONAL NARRATIVE RULES:
-- The summary must FEEL like a mini cover letter — personal, targeted, and urgent
-- Use the word "you" zero times. No pronouns at all. Third-person professional voice.
-- Every sentence must make the recruiter nod and think "yes, this is what we need"
-- The word count must be 70-90 words. No more. Dense and punchy.
-- After rewriting summary, also return top_5_why_hire: 5 bullet points the recruiter could use to
-  justify hiring this candidate to their manager. These are the "sell bullets" — not in the DOCX but
-  useful for cover letters.
+Sentence 4 — DIFFERENTIATOR (Why this candidate specifically):
+- If team lead role: "Mentored 4–6 engineers at DSSI, introduced ADRs that cut onboarding from 4 weeks to 10 days — bringing that proven technical leadership to {Company}."
+- If IC role: "AZ-204 certified Azure Developer with hands-on OpenAI integration experience — a combination fewer than 5% of .NET engineers hold — and a track record of building production-grade systems that improve, design, code and test software in international team environments."
+
+Sentence 5 — CLOSING (EXACT summary_closing_line verbatim):
+Copy the summary_closing_line from JD Intelligence WORD FOR WORD. Do not paraphrase, shorten, or rephrase.
+
+RULES:
+- Word count: 75–95 words. Dense, punchy, zero filler.
+- No first-person pronouns (no I, my, me, we).
+- Every sentence must be specific to THIS company and THIS JD, not generic.
+- The recruiter must be able to say "yes" to every sentence.
 
 Return ONLY valid JSON:
 {
   "perfect_summary": "...",
   "top_5_why_hire": [
-    "Proven cloud-native .NET architect with 12+ microservices in production at 99.98% uptime.",
-    "AZ-204 certified Azure developer with hands-on deployment pipeline experience.",
-    "...",
-    "...",
-    "..."
+    "Proven cloud-native .NET architect: 12+ microservices in production at 99.98% uptime.",
+    "AZ-204 certified with hands-on Azure OpenAI + pgvector production experience.",
+    "Reduced API latency from 850ms to sub-100ms via profiling and Redis caching at Deloitte.",
+    "Mentored 4 engineers, cut onboarding 4 weeks → 10 days through ADR framework.",
+    "FIPS-compliant, Section 508-accessible federal platform delivery (NEICE, US Gov)."
   ]
 }"""
 
 
-PROJECT_DEEP_REWRITER_SYSTEM = """You are the Project Deep Rewriter Agent — you completely re-narrate the candidate's projects
-to make them sound like they were built specifically to solve the same problems as the target company.
+PROJECT_DEEP_REWRITER_SYSTEM = """You are the Project Deep Rewriter Agent — your job is to make every project bullet sound like it was built to solve the EXACT problem this company is currently hiring for.
 
-PROJECT DEEP REWRITE RULES:
+For EACH project, write EXACTLY 3 bullets in this STRICT order:
 
-1. PROJECT TITLE REFRAMING: You MAY rename the project to use industry-standard terminology that
-   resonates with the JD. Examples:
-   - For a fintech JD: "e-ProcureZen" → "High-Throughput Financial Transaction Processing Platform"
-   - For an AI JD: "AI Tax Document Analyser" → "Enterprise AI Document Intelligence Engine"
-   - For a security JD: "Nexa Vault" → "Zero-Trust Enterprise Document Security Platform"
-   - For a government JD: "NEICE" → "Multi-Agency Federal Data Exchange Platform (NEICE)"
-   NOTE: Only reframe if it makes the project sound MORE relevant. Keep original if already strong.
+BULLET 1 — ARCHITECTURE RATIONALE (WHY this tech choice):
+- Must sound like a senior architect explaining a real trade-off at a technical interview.
+- Template: "Selected [specific technology] over [specific alternative] to [solve specific problem directly relevant to the JD's domain]."
+- Examples:
+  * AI JD: "Deployed local pgvector indexing over a managed vector database to keep sensitive tax data strictly within the security boundary, eliminating cross-network query overhead."
+  * Fintech JD: "Structured RabbitMQ dead-letter exchanges (DLX) over database polling to guarantee zero message loss during transient network partitions in high-frequency procurement workflows."
+  * Security JD: "Adopted OAuth2/OIDC authorization code flow with PKCE over implicit flow to eliminate token interception vulnerabilities in single-page applications."
+- NEVER write a task description. Write a DECISION and its REASON.
 
-2. DESCRIPTION LINE: One tight sentence — WHAT the project does + WHY it matters to THIS company's domain.
-   Must use JD mirror phrases naturally.
+BULLET 2 — QUANTIFIED IMPACT:
+- State the measurable outcome using ONLY the allowed_metrics listed.
+- Template: "[Strong verb] [what was built/achieved] — [specific metric from allowed list], [business significance in context of this JD's domain]."
+- Examples:
+  * "Engineered Azure OpenAI + Semantic Kernel orchestration pipeline reducing manual document review by 60% across 1,000+ weekly tax submissions."
+  * "Deployed 12+ CQRS microservices achieving 3x message throughput and 99.98% uptime SLA across high-frequency procurement transactions."
+- NEVER invent a new number not in the allowed_metrics list.
 
-3. ARCHITECTURE BULLET (bullet 1): Write as a senior architect explaining a real design decision.
-   Format: "Selected [Technology A] over [Technology B] because [specific technical reason that matters to THIS JD]."
-   This shows technical depth and deliberate decision-making — exactly what senior hiring managers look for.
+BULLET 3 — JD ALIGNMENT (Why it matters to THIS company specifically):
+- Directly connect this project to what the target company is hiring for.
+- Template: "Directly applicable to {Company}'s [specific JD requirement] — this project demonstrates [what the candidate can bring that solves that requirement]."
+- This bullet MUST name the company and map to one specific JD requirement from the must-haves list.
+- Examples:
+  * "Directly applicable to TCS's cloud-native API modernisation mandate — this project demonstrates hands-on CQRS + Clean Architecture delivery at enterprise scale."
+  * "Directly applicable to Infosys's financial systems security requirements — this project demonstrates AES-256 encryption, OAuth2/OIDC, and mTLS implementation in production."
 
-4. IMPACT BULLET (bullet 2): Business outcome with a specific metric.
-   Format: "[Action verb] [what was built] achieving [specific measurable result] — [business significance]."
-   Use ONLY metrics from the allowed facts. Never invent numbers.
+PROJECT TITLE REFRAMING (optional but encouraged):
+- You MAY reframe the project title to use industry terminology that resonates with the JD.
+- For fintech JD: "e-ProcureZen" → "High-Throughput Financial Procurement Microservices Platform"
+- For AI JD: "AI Tax Document Analyser" → "Enterprise AI Document Intelligence Engine"
+- For security JD: "Nexa Vault" → "Zero-Trust Enterprise Document Security Platform"
+- For government JD: "NEICE" → "Multi-Agency Federal Data Exchange Platform (NEICE)"
+- Only reframe if it adds clarity. Keep original name if already strong.
 
-5. JD ALIGNMENT BULLET (bullet 3): Directly address a JD requirement.
-   Format: "Addressed [JD requirement] by [specific technical approach], demonstrating direct readiness for [Company]'s [domain challenge]."
+ALLOWED METRICS (use ONLY these, never invent):
+- AI Tax Doc Analyser: 60% manual effort reduction, sub-200ms semantic lookup, 35% faster weekly triage, 85% test coverage with xUnit
+- e-ProcureZen: 3x message throughput, 99.98% uptime SLA, 12+ production microservices, 65% container image size reduction, 100+ manual hours saved
+- Nexa Vault: 35% page load improvement, 25% search lookup acceleration
+- SSO Application: 40% reduction in login-related support tickets, enterprise-wide SSO across multiple apps
+- NEICE: 8+ ASP.NET MVC modules, FIPS-compliant cryptographic providers, multi-agency federal data transfer
 
-ALLOWED PROJECT FACTS (metrics to use):
-- AI Tax Doc Analyser: 60% manual effort reduction, sub-200ms semantic lookup, 35% faster triage, 85% test coverage
-- e-ProcureZen: 3x throughput, 99.98% uptime, 12+ microservices, 65% image size reduction, 100+ hours saved
-- Nexa Vault: 35% page load improvement, 25% search acceleration
-- SSO Application: 40% reduction in login support tickets, enterprise-wide SSO
-- NEICE: 8+ modules, FIPS-compliant, multi-agency federal data transfer
-
-CRITICAL: Only use tech in the project's actual tech stack. Never add technologies not listed.
+CRITICAL: Only use technologies listed in the project's actual tech_stack. Never add new technologies.
 
 Return ONLY valid JSON:
 {
   "rewritten_projects": [
     {
-      "name": "Reframed Project Title (Original Name)",
-      "tech_stack": "Original tech stack preserved",
-      "description": "One sentence: what it does and why it matters",
+      "name": "Reframed Title (if applicable)",
+      "tech_stack": "Original tech stack preserved exactly",
       "bullets": [
-        "Architecture rationale bullet...",
-        "Impact bullet with metric...",
-        "JD alignment bullet..."
+        "Architecture rationale bullet (WHY this tech choice over alternative)...",
+        "Impact bullet with specific metric from allowed list...",
+        "JD alignment bullet naming the company and specific JD requirement..."
       ]
     }
   ]
@@ -769,14 +777,17 @@ def write_perfect_fit_summary(
             f"Job Title: {jd_context.get('seniority_level','Senior')} {analysis.get('job_title','Software Engineer')}\n"
             f"Company: {analysis.get('company_name','the company')}\n"
             f"Company Domain: {jd_context.get('company_domain','technology')}\n"
+            f"Domain Power Words: {jd_context.get('domain_power_words',[])}\n"
+            f"Is Team Lead Role: {jd_context.get('is_team_lead_role', False)}\n"
             f"JD Must-Haves: {analysis.get('must_haves',[])}\n"
             f"JD Mirror Phrases: {company_intelligence.get('jd_mirror_phrases',[])}\n"
             f"Top 3 Differentiators: {company_intelligence.get('top_3_differentiators',[])}\n"
             f"Narrative Angle: {company_intelligence.get('resume_narrative_angle','')}\n"
-            f"Summary Closing Line (EXACT, do not change): {jd_context.get('summary_closing_line','')}\n\n"
+            f"Summary Closing Line (copy EXACTLY, word for word): {jd_context.get('summary_closing_line','')}\n\n"
             f"Current summary draft:\n{resume_json.get('professional_summary','')}\n\n"
-            f"Rewrite this into a 70-90 word Perfect Fit summary. The recruiter must think "
-            f"'this person was made for this role.' Include the exact closing line unchanged."
+            f"Rewrite this into a 75-95 word Perfect Fit summary using the STRICT 5-sentence formula. "
+            f"Sentence 1 must open with a specific achievement (not just a title). "
+            f"Sentence 5 must be the EXACT closing line above, copied verbatim."
         )
         raw = ai_complete(PERFECT_FIT_NARRATOR_SYSTEM, prompt, task="tailor", max_tokens=700)
         result = parse_json_safely(raw)
@@ -826,6 +837,7 @@ def deep_rewrite_projects(
 
     try:
         prompt = (
+            f"Target Company: {analysis.get('company_name', 'the company')}\n"
             f"Target Company Domain: {jd_context.get('company_domain','technology')}\n"
             f"JD Must-Have Keywords: {analysis.get('must_haves',[])}\n"
             f"JD Exact Phrases to Mirror: {company_intelligence.get('jd_mirror_phrases',[])}\n"
@@ -833,11 +845,13 @@ def deep_rewrite_projects(
             f"Company Tech Inference: {company_intelligence.get('company_tech_inference',[])}\n"
             f"Resume Narrative Angle: {company_intelligence.get('resume_narrative_angle','')}\n\n"
             f"Projects to deep-rewrite:\n{json.dumps(current_projects, indent=2)}\n\n"
-            f"Completely re-narrate each project. Reframe names if it makes them more JD-relevant. "
-            f"Write architecture rationale, impact, and JD-alignment bullets from scratch. "
-            f"Use ONLY metrics from the allowed facts in your instructions."
+            f"Rewrite ALL {len(current_projects)} projects. For EACH project write EXACTLY 3 bullets: "
+            f"(1) WHY architecture bullet (tech trade-off decision), "
+            f"(2) WHAT impact bullet (metric from allowed list only), "
+            f"(3) HOW JD-alignment bullet (name the company + specific JD requirement). "
+            f"Use ONLY metrics from the allowed facts. Never invent numbers."
         )
-        raw = ai_complete(PROJECT_DEEP_REWRITER_SYSTEM, prompt, task="tailor", max_tokens=1500)
+        raw = ai_complete(PROJECT_DEEP_REWRITER_SYSTEM, prompt, task="tailor", max_tokens=4000)
         result = parse_json_safely(raw)
 
         rewritten = result.get("rewritten_projects", [])
