@@ -278,6 +278,22 @@ class BrowserManager:
         user_data_dir = os.path.join(DATA_FOLDER, profile_name)
         os.makedirs(user_data_dir, exist_ok=True)
         
+        # Kill existing Chrome processes using this user-data-dir to avoid lock conflicts or session hijacking
+        try:
+            if os.name == 'nt':
+                escaped_profile = profile_name.replace("'", "''")
+                cmd = [
+                    "powershell", "-NoProfile", "-Command",
+                    f"Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | "
+                    f"Where-Object {{ $_.CommandLine -like '*{escaped_profile}*' }} | "
+                    f"ForEach-Object {{ Stop-Process -Id $_.ProcessId -Force }}"
+                ]
+                subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                logger.info(f"Killed existing Chrome processes using profile: {profile_name}", "safety")
+                time.sleep(1)
+        except Exception as ke:
+            logger.warn(f"Failed to kill existing Chrome processes for {profile_name}: {ke}", "safety")
+            
         # Try launching via subprocess first
         try:
             # Clean up stale lock files
