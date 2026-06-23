@@ -11,7 +11,7 @@ from bot.ai_agent_filler import fill_form_with_ai
 from bot.utils.learning import learn_from_filled_form
 from bot.utils import logger
 from bot.utils.logger import record_application, is_already_applied, git_sync
-from bot.utils.safety import safe_browser_context
+from bot.utils.safety import safe_browser_context, browser_manager
 
 SITE = "company_careers"
 BULK_FILE = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
@@ -127,7 +127,7 @@ def _ai_parse_job_and_company(page_title: str, url: str) -> tuple:
     except Exception:
         return "", ""
 
-def apply_to_url(page, url: str) -> bool:
+def apply_to_url(page, url: str) -> tuple[bool, any]:
     logger.info(f"\n==================================================", SITE)
     logger.info(f"Processing URL: {url}", SITE)
     logger.info(f"==================================================", SITE)
@@ -140,7 +140,7 @@ def apply_to_url(page, url: str) -> bool:
         if is_block_page(page):
             logger.warn(f"Skipping {url[:60]}... — Access Denied / Cloudflare block page detected", SITE)
             remove_url_from_file(url)
-            return False
+            return False, page
 
         # Get Page Title & Metadata
         page_title = page.title()
@@ -204,7 +204,20 @@ def apply_to_url(page, url: str) -> bool:
         if is_already_applied(SITE, company, job_title):
             logger.info(f"Already applied to {company} — {job_title}. Skipping...", SITE)
             remove_url_from_file(url)
-            return False
+            return False, page
+
+        # Pre-processing skip or quit option
+        print("\n" + "-" * 60)
+        print(f"Company: {company} | Job Title: {job_title}")
+        user_choice = input("Press ENTER to run AI Tailor & Auto-Fill, 's' to SKIP this URL, or 'q' to QUIT: ").strip().lower()
+        print("-" * 60 + "\n")
+        if user_choice == 'q':
+            logger.info("Quitting bulk apply loop...", SITE)
+            raise KeyboardInterrupt("User quit")
+        elif user_choice == 's':
+            logger.info(f"Skipped application for: {company} — {job_title}", SITE)
+            remove_url_from_file(url)
+            return False, page
 
         # Tailor resume on the fly
         logger.info(f"Tailoring resume for {company} — {job_title}...", SITE)
@@ -225,7 +238,12 @@ def apply_to_url(page, url: str) -> bool:
             print("  - Type 's' and press Enter to SKIP/DISCARD this job.")
             print("  - Type 'd' and press Enter if you manually completed and submitted it yourself.")
             print("*" * 70 + "\n")
+            
+            # Disconnect to allow manual action/CAPTCHA solving
+            browser_manager.disconnect()
             user_choice = input("Your choice (s / d): ").strip().lower()
+            browser_manager.reconnect()
+            page = browser_manager.get_active_page()
             
             if user_choice == 'd':
                 logger.success(f"Manually submitted and recorded: {company} — {job_title}", SITE)
@@ -235,11 +253,11 @@ def apply_to_url(page, url: str) -> bool:
                 )
                 git_sync()
                 remove_url_from_file(url)
-                return True
+                return True, page
             else:
                 logger.info(f"Skipped application for: {company} — {job_title}", SITE)
                 remove_url_from_file(url)
-                return False
+                return False, page
 
         # Learn from filled form BEFORE manual intervention
         try:
@@ -258,12 +276,16 @@ def apply_to_url(page, url: str) -> bool:
         print("  - Type 'd' and press Enter if you manually clicked submit yourself.")
         print("*" * 70 + "\n")
 
+        # Disconnect to allow manual action/CAPTCHA solving
+        browser_manager.disconnect()
         user_choice = input("Your choice (Enter / s / d): ").strip().lower()
+        browser_manager.reconnect()
+        page = browser_manager.get_active_page()
 
         if user_choice == 's':
             logger.info(f"Skipped application for: {company} — {job_title}", SITE)
             remove_url_from_file(url)
-            return False
+            return False, page
 
         # Learn from filled form AFTER manual review (capture user inputs)
         try:
@@ -279,7 +301,7 @@ def apply_to_url(page, url: str) -> bool:
             )
             git_sync()
             remove_url_from_file(url)
-            return True
+            return True, page
 
         # Click submit button on behalf of user
         submit_btn = page.query_selector(
@@ -300,7 +322,7 @@ def apply_to_url(page, url: str) -> bool:
                 )
                 git_sync()
                 remove_url_from_file(url)
-                return True
+                return True, page
             except Exception as e:
                 logger.error(f"Failed to click submit button: {e}", SITE)
         else:
@@ -311,12 +333,15 @@ def apply_to_url(page, url: str) -> bool:
             )
             git_sync()
             remove_url_from_file(url)
-            return True
+            return True, page
 
+    except KeyboardInterrupt:
+        # Re-raise KeyboardInterrupt to cleanly exit main loop
+        raise
     except Exception as e:
         logger.error(f"Failed to process {url[:60]}: {e}", SITE)
 
-    return False
+    return False, page
 
 def main():
     print("=" * 60)
@@ -338,12 +363,18 @@ def main():
         page = context.pages[0] if context.pages else context.new_page()
 
         applied = 0
-        for url in list(urls): # copy list to iterate safely
-            if apply_to_url(page, url):
-                applied += 1
-            time.sleep(2)
+        try:
+            for url in list(urls): # copy list to iterate safely
+                success, page = apply_to_url(page, url)
+                if success:
+                    applied += 1
+                time.sleep(2)
+        except KeyboardInterrupt:
+            logger.info("Session terminated by user request.", SITE)
 
         try:
+            # Connect back if disconnected before closing browser
+            browser_manager.reconnect()
             browser.close()
         except Exception:
             pass
