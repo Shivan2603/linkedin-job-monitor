@@ -34,6 +34,9 @@ from bot.resume_research_agent import (
     expand_projects,
     score_and_rewrite_bullets,
     enforce_consistency,
+    enforce_ats_keywords,
+    write_perfect_fit_summary,
+    deep_rewrite_projects,
 )
 
 # ─── LOCAL SWARM IMPLEMENTATION (FALLBACK) ─────────────────────────
@@ -155,6 +158,11 @@ Every bullet must sound like a senior engineer wrote it specifically for THIS co
 4. For technical bullets: include an architecture RATIONALE — WHY that technology was chosen.
 5. For impact bullets: frame the outcome in business terms (saved hours, reduced latency, improved uptime).
 6. First bullet of every role MUST use at least one of the JD's must-have skills.
+7. Every single JD must-have keyword MUST appear at least once across all bullets and summary combined.
+8. PERFECT FIT POSITIONING: Write as if this candidate is the ONLY person qualified for this role.
+   Every bullet should answer the unspoken recruiter question: "Can they actually do what we need?"
+9. PROOF OVER CLAIMS: Replace every vague claim with a metric. "improved performance" → "reduced p99 latency from 850ms to 94ms".
+10. TECHNICAL DEPTH: At least one bullet per role must show WHY an architectural decision was made, not just WHAT was done.
 
 CRITICAL: You must strictly adhere to the Candidate Base Facts below. Never fabricate, invent, or extrapolate any experience, technology, or metric. All rewrites must be 100% grounded in these base facts.
 
@@ -847,6 +855,54 @@ JD:
     if not isinstance(final_tailored, dict):
         final_tailored = {}
     final_tailored["jd_context"] = jd_context
+    final_tailored["company_intelligence"] = company_intelligence
+
+    # ─── STEP 6: ATS KEYWORD ENFORCER ───────────────────────────────────────
+    print("[JCode Coordinator] Launching ATS Keyword Enforcer...")
+    t0 = time.time()
+    try:
+        final_tailored = enforce_ats_keywords(
+            resume_json=final_tailored,
+            jd_must_haves=analysis.get("must_haves", []),
+            jd_nice_to_haves=analysis.get("nice_to_haves", []),
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("ATSEnforcerAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("ATSEnforcerAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [ATSEnforcer] Outer failed: {e}")
+
+    # ─── STEP 7: PERFECT FIT NARRATOR ───────────────────────────────────────
+    print("[JCode Coordinator] Launching Perfect Fit Narrator...")
+    t0 = time.time()
+    try:
+        final_tailored = write_perfect_fit_summary(
+            resume_json=final_tailored,
+            jd_context=jd_context,
+            company_intelligence=company_intelligence,
+            analysis=analysis,
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("PerfectFitNarratorAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("PerfectFitNarratorAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [PerfectFitNarrator] Outer failed: {e}")
+
+    # ─── STEP 8: PROJECT DEEP REWRITER ──────────────────────────────────────
+    print("[JCode Coordinator] Launching Project Deep Rewriter...")
+    t0 = time.time()
+    try:
+        final_tailored = deep_rewrite_projects(
+            resume_json=final_tailored,
+            jd_context=jd_context,
+            company_intelligence=company_intelligence,
+            analysis=analysis,
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("ProjectDeepRewriterAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("ProjectDeepRewriterAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [ProjectDeepRewriter] Outer failed: {e}")
 
     if "ats_report" not in final_tailored or not final_tailored["ats_report"]:
         final_tailored["ats_report"] = {

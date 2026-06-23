@@ -507,3 +507,345 @@ def enforce_consistency(
             "professional_summary": professional_summary,
             "work_experience": work_experience
         }
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# POWER AGENTS — "IMPOSSIBLE TO REJECT" TIER
+# ═══════════════════════════════════════════════════════════════════════════
+
+ATS_INJECTOR_SYSTEM = """You are the ATS Keyword Enforcer Agent — the most critical agent in the pipeline.
+Your job is GUARANTEEING that every single must-have keyword from the JD appears at least once across
+the entire resume. This is non-negotiable. A recruiter's ATS system will auto-reject any resume missing
+even one of these keywords.
+
+HOW TO INJECT MISSING KEYWORDS:
+1. Scan the full resume JSON for each must-have keyword.
+2. If a keyword is MISSING, inject it into the most semantically relevant location:
+   - Technical keywords → into the most relevant bullet point (weave naturally into the sentence)
+   - Soft skills → into summary or a methodology bullet
+   - Certifications/tools → into the skills section or a relevant bullet
+3. Injection must be NATURAL — it must read like it was always there, not bolted on.
+4. NEVER fabricate new metrics or experiences — only inject the keyword where the existing content supports it.
+5. After injection, mark it as "covered".
+
+INJECTION EXAMPLES:
+- Missing "Clean Architecture": Add to a DSSI bullet: "...using Clean Architecture principles and CQRS pattern..."
+- Missing "Azure DevOps": Add to skills or a DevOps bullet: "...deployed via Azure DevOps CI/CD pipelines..."
+- Missing "RESTful APIs": Weave into an LTIMindtree bullet: "...profiling 30+ RESTful API endpoints..."
+- Missing "Agile/Scrum": Add to summary or methodology: "...across Agile/Scrum delivery sprints..."
+
+OUTPUT RULES:
+- Return the COMPLETE updated resume JSON with ALL must-have keywords now present
+- Include a coverage_report showing which keywords were already there vs. injected
+- Every single must-have keyword must be in the output
+- Return ONLY valid JSON:
+{
+  "professional_summary": "...",
+  "skills_by_category": { ... },
+  "work_experience": [{ "company": "...", "dates": "...", "role_title": "...", "tech_stack_line": "...", "bullets": [...], "key": "..." }, ...],
+  "projects": [{ "name": "...", "tech_stack": "...", "bullets": [...] }, ...],
+  "certifications": [...],
+  "coverage_report": {
+    "already_covered": ["C#", ".NET Core", ...],
+    "injected": ["keyword1 → injected into LTIMindtree bullet 2", ...],
+    "final_ats_score": 100
+  }
+}"""
+
+
+PERFECT_FIT_NARRATOR_SYSTEM = """You are the Perfect Fit Narrator Agent — the agent that transforms a good resume into an IRRESISTIBLE one.
+Your job is to rewrite the Professional Summary and strengthen the narrative arc of the entire resume
+so that any recruiter reading it thinks: "This person was literally made for this role."
+
+PERFECT FIT NARRATIVE STRATEGY:
+1. OPENING HOOK (Sentence 1): Don't just state the job title. Open with the candidate's most impressive
+   achievement DIRECTLY matching the JD's #1 requirement. Format:
+   "[Job Title] who [past achievement that directly proves the JD requirement]."
+   Example: "Senior .NET Developer who architected 12+ production microservices achieving 99.98% uptime — exactly the cloud-native reliability [Company] demands."
+
+2. PROOF STACK (Sentences 2-3): Stack 2 more JD-specific proof points. Each sentence must:
+   - Reference a specific metric from the candidate's base facts
+   - Mirror a specific phrase or requirement from the JD
+   - Show progression (broader impact in sentence 3 than sentence 2)
+
+3. DIFFERENTIATOR (Sentence 4): State the ONE thing that makes this candidate different from all other
+   .NET developers. This should be the hardest-to-replicate achievement:
+   - Azure AI/OpenAI work at enterprise scale (most .NET devs don't have this)
+   - US government platform compliance (FIPS/Section 508)
+   - AZ-204 certification + hands-on Azure deployment pipeline experience
+
+4. CLOSING CALL-TO-ACTION (Sentence 5): The exact summary_closing_line from JD Intelligence.
+   This must be the exact line — do not paraphrase.
+
+ADDITIONAL NARRATIVE RULES:
+- The summary must FEEL like a mini cover letter — personal, targeted, and urgent
+- Use the word "you" zero times. No pronouns at all. Third-person professional voice.
+- Every sentence must make the recruiter nod and think "yes, this is what we need"
+- The word count must be 70-90 words. No more. Dense and punchy.
+- After rewriting summary, also return top_5_why_hire: 5 bullet points the recruiter could use to
+  justify hiring this candidate to their manager. These are the "sell bullets" — not in the DOCX but
+  useful for cover letters.
+
+Return ONLY valid JSON:
+{
+  "perfect_summary": "...",
+  "top_5_why_hire": [
+    "Proven cloud-native .NET architect with 12+ microservices in production at 99.98% uptime.",
+    "AZ-204 certified Azure developer with hands-on deployment pipeline experience.",
+    "...",
+    "...",
+    "..."
+  ]
+}"""
+
+
+PROJECT_DEEP_REWRITER_SYSTEM = """You are the Project Deep Rewriter Agent — you completely re-narrate the candidate's projects
+to make them sound like they were built specifically to solve the same problems as the target company.
+
+PROJECT DEEP REWRITE RULES:
+
+1. PROJECT TITLE REFRAMING: You MAY rename the project to use industry-standard terminology that
+   resonates with the JD. Examples:
+   - For a fintech JD: "e-ProcureZen" → "High-Throughput Financial Transaction Processing Platform"
+   - For an AI JD: "AI Tax Document Analyser" → "Enterprise AI Document Intelligence Engine"
+   - For a security JD: "Nexa Vault" → "Zero-Trust Enterprise Document Security Platform"
+   - For a government JD: "NEICE" → "Multi-Agency Federal Data Exchange Platform (NEICE)"
+   NOTE: Only reframe if it makes the project sound MORE relevant. Keep original if already strong.
+
+2. DESCRIPTION LINE: One tight sentence — WHAT the project does + WHY it matters to THIS company's domain.
+   Must use JD mirror phrases naturally.
+
+3. ARCHITECTURE BULLET (bullet 1): Write as a senior architect explaining a real design decision.
+   Format: "Selected [Technology A] over [Technology B] because [specific technical reason that matters to THIS JD]."
+   This shows technical depth and deliberate decision-making — exactly what senior hiring managers look for.
+
+4. IMPACT BULLET (bullet 2): Business outcome with a specific metric.
+   Format: "[Action verb] [what was built] achieving [specific measurable result] — [business significance]."
+   Use ONLY metrics from the allowed facts. Never invent numbers.
+
+5. JD ALIGNMENT BULLET (bullet 3): Directly address a JD requirement.
+   Format: "Addressed [JD requirement] by [specific technical approach], demonstrating direct readiness for [Company]'s [domain challenge]."
+
+ALLOWED PROJECT FACTS (metrics to use):
+- AI Tax Doc Analyser: 60% manual effort reduction, sub-200ms semantic lookup, 35% faster triage, 85% test coverage
+- e-ProcureZen: 3x throughput, 99.98% uptime, 12+ microservices, 65% image size reduction, 100+ hours saved
+- Nexa Vault: 35% page load improvement, 25% search acceleration
+- SSO Application: 40% reduction in login support tickets, enterprise-wide SSO
+- NEICE: 8+ modules, FIPS-compliant, multi-agency federal data transfer
+
+CRITICAL: Only use tech in the project's actual tech stack. Never add technologies not listed.
+
+Return ONLY valid JSON:
+{
+  "rewritten_projects": [
+    {
+      "name": "Reframed Project Title (Original Name)",
+      "tech_stack": "Original tech stack preserved",
+      "description": "One sentence: what it does and why it matters",
+      "bullets": [
+        "Architecture rationale bullet...",
+        "Impact bullet with metric...",
+        "JD alignment bullet..."
+      ]
+    }
+  ]
+}"""
+
+
+# ─── NEW AGENT FUNCTIONS ─────────────────────────────────────────────────────
+
+def enforce_ats_keywords(
+    resume_json: dict,
+    jd_must_haves: list,
+    jd_nice_to_haves: list,
+    parse_json_safely=None
+) -> dict:
+    """
+    Agent: ATS Keyword Enforcer.
+    Guarantees EVERY must-have keyword from the JD appears at least once.
+    Scans and injects missing keywords naturally into the most relevant location.
+    Returns updated resume_json with coverage_report.
+    """
+    if parse_json_safely is None:
+        def parse_json_safely(raw):
+            import json, re
+            raw = raw.strip()
+            m = re.search(r'(\{.*\})', raw, re.DOTALL)
+            candidate = m.group(1).strip() if m else raw
+            try:
+                return json.loads(candidate, strict=False)
+            except Exception:
+                return {}
+
+    # First do a quick programmatic scan to see what's already covered
+    resume_text = json.dumps(resume_json).lower()
+    already_covered = []
+    missing = []
+    for kw in jd_must_haves:
+        if kw.lower() in resume_text:
+            already_covered.append(kw)
+        else:
+            missing.append(kw)
+
+    if not missing:
+        print(f"    [ATSEnforcer] All {len(jd_must_haves)} must-have keywords already covered. ATS score: 100%")
+        resume_json["coverage_report"] = {
+            "already_covered": already_covered,
+            "injected": [],
+            "final_ats_score": 100
+        }
+        return resume_json
+
+    print(f"    [ATSEnforcer] {len(already_covered)} covered, {len(missing)} missing: {missing[:5]}{'...' if len(missing)>5 else ''}")
+
+    try:
+        prompt = (
+            f"JD Must-Have Keywords (ALL must appear in the resume):\n{jd_must_haves}\n\n"
+            f"JD Nice-to-Have Keywords:\n{jd_nice_to_haves}\n\n"
+            f"MISSING keywords not yet in the resume:\n{missing}\n\n"
+            f"Current Resume JSON:\n{json.dumps(resume_json, indent=2)[:6000]}\n\n"
+            f"Inject ALL missing keywords naturally. Return the complete updated resume JSON."
+        )
+        raw = ai_complete(ATS_INJECTOR_SYSTEM, prompt, task="verify", max_tokens=4000)
+        result = parse_json_safely(raw)
+
+        # Merge injected content back
+        if result.get("work_experience"):
+            resume_json["work_experience"] = result["work_experience"]
+        if result.get("professional_summary"):
+            resume_json["professional_summary"] = result["professional_summary"]
+        if result.get("skills_by_category"):
+            resume_json["skills_by_category"] = result["skills_by_category"]
+        if result.get("projects"):
+            resume_json["projects"] = result["projects"]
+        if result.get("coverage_report"):
+            resume_json["coverage_report"] = result["coverage_report"]
+
+        # Re-verify coverage after injection
+        resume_text_new = json.dumps(resume_json).lower()
+        final_covered = [kw for kw in jd_must_haves if kw.lower() in resume_text_new]
+        final_score = round(len(final_covered) / max(len(jd_must_haves), 1) * 100)
+        print(f"    [ATSEnforcer] Final ATS keyword score: {final_score}% ({len(final_covered)}/{len(jd_must_haves)} must-haves)")
+        if "coverage_report" not in resume_json:
+            resume_json["coverage_report"] = {"final_ats_score": final_score}
+        else:
+            resume_json["coverage_report"]["final_ats_score"] = final_score
+
+        return resume_json
+
+    except Exception as e:
+        print(f"    [ATSEnforcer] Failed: {e}")
+        return resume_json
+
+
+def write_perfect_fit_summary(
+    resume_json: dict,
+    jd_context: dict,
+    company_intelligence: dict,
+    analysis: dict,
+    parse_json_safely=None
+) -> dict:
+    """
+    Agent: Perfect Fit Narrator.
+    Rewrites the professional summary to position the candidate as the PERFECT and ONLY choice.
+    Also generates top_5_why_hire selling points.
+    """
+    if parse_json_safely is None:
+        def parse_json_safely(raw):
+            import json, re
+            raw = raw.strip()
+            m = re.search(r'(\{.*\})', raw, re.DOTALL)
+            candidate = m.group(1).strip() if m else raw
+            try:
+                return json.loads(candidate, strict=False)
+            except Exception:
+                return {}
+
+    try:
+        prompt = (
+            f"Job Title: {jd_context.get('seniority_level','Senior')} {analysis.get('job_title','Software Engineer')}\n"
+            f"Company: {analysis.get('company_name','the company')}\n"
+            f"Company Domain: {jd_context.get('company_domain','technology')}\n"
+            f"JD Must-Haves: {analysis.get('must_haves',[])}\n"
+            f"JD Mirror Phrases: {company_intelligence.get('jd_mirror_phrases',[])}\n"
+            f"Top 3 Differentiators: {company_intelligence.get('top_3_differentiators',[])}\n"
+            f"Narrative Angle: {company_intelligence.get('resume_narrative_angle','')}\n"
+            f"Summary Closing Line (EXACT, do not change): {jd_context.get('summary_closing_line','')}\n\n"
+            f"Current summary draft:\n{resume_json.get('professional_summary','')}\n\n"
+            f"Rewrite this into a 70-90 word Perfect Fit summary. The recruiter must think "
+            f"'this person was made for this role.' Include the exact closing line unchanged."
+        )
+        raw = ai_complete(PERFECT_FIT_NARRATOR_SYSTEM, prompt, task="tailor", max_tokens=700)
+        result = parse_json_safely(raw)
+
+        perfect_summary = result.get("perfect_summary", "")
+        if perfect_summary and len(perfect_summary) > 50:
+            resume_json["professional_summary"] = perfect_summary
+            print(f"    [PerfectFitNarrator] Summary rewritten ({len(perfect_summary.split())} words).")
+        else:
+            print(f"    [PerfectFitNarrator] Summary rewrite too short, keeping current.")
+
+        resume_json["top_5_why_hire"] = result.get("top_5_why_hire", [])
+        return resume_json
+
+    except Exception as e:
+        print(f"    [PerfectFitNarrator] Failed: {e}")
+        return resume_json
+
+
+def deep_rewrite_projects(
+    resume_json: dict,
+    jd_context: dict,
+    company_intelligence: dict,
+    analysis: dict,
+    parse_json_safely=None
+) -> dict:
+    """
+    Agent: Project Deep Rewriter.
+    Completely re-narrates projects to match JD domain perfectly.
+    Can reframe project names, re-angle architecture decisions, re-write all bullets.
+    """
+    if parse_json_safely is None:
+        def parse_json_safely(raw):
+            import json, re
+            raw = raw.strip()
+            m = re.search(r'(\{.*\})', raw, re.DOTALL)
+            candidate = m.group(1).strip() if m else raw
+            try:
+                return json.loads(candidate, strict=False)
+            except Exception:
+                return {}
+
+    current_projects = resume_json.get("projects", [])
+    if not current_projects:
+        print(f"    [ProjectDeepRewriter] No projects to rewrite.")
+        return resume_json
+
+    try:
+        prompt = (
+            f"Target Company Domain: {jd_context.get('company_domain','technology')}\n"
+            f"JD Must-Have Keywords: {analysis.get('must_haves',[])}\n"
+            f"JD Exact Phrases to Mirror: {company_intelligence.get('jd_mirror_phrases',[])}\n"
+            f"Company Culture DNA: {company_intelligence.get('culture_dna',[])}\n"
+            f"Company Tech Inference: {company_intelligence.get('company_tech_inference',[])}\n"
+            f"Resume Narrative Angle: {company_intelligence.get('resume_narrative_angle','')}\n\n"
+            f"Projects to deep-rewrite:\n{json.dumps(current_projects, indent=2)}\n\n"
+            f"Completely re-narrate each project. Reframe names if it makes them more JD-relevant. "
+            f"Write architecture rationale, impact, and JD-alignment bullets from scratch. "
+            f"Use ONLY metrics from the allowed facts in your instructions."
+        )
+        raw = ai_complete(PROJECT_DEEP_REWRITER_SYSTEM, prompt, task="tailor", max_tokens=1500)
+        result = parse_json_safely(raw)
+
+        rewritten = result.get("rewritten_projects", [])
+        if rewritten and isinstance(rewritten, list) and len(rewritten) > 0:
+            resume_json["projects"] = rewritten
+            print(f"    [ProjectDeepRewriter] Rewrote {len(rewritten)} project(s) with JD-aligned narrative.")
+        else:
+            print(f"    [ProjectDeepRewriter] No valid output, keeping current projects.")
+
+        return resume_json
+
+    except Exception as e:
+        print(f"    [ProjectDeepRewriter] Failed: {e}")
+        return resume_json
