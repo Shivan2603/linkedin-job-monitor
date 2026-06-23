@@ -29,6 +29,12 @@ except ImportError:
 from bot.config import GROQ_API_KEY
 from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
+from bot.resume_research_agent import (
+    research_company,
+    expand_projects,
+    score_and_rewrite_bullets,
+    enforce_consistency,
+)
 
 # ─── LOCAL SWARM IMPLEMENTATION (FALLBACK) ─────────────────────────
 
@@ -137,9 +143,18 @@ Allowable candidate skills to categorize:
 Return a JSON with "skills_by_category" containing lists for: Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology.
 CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include raw unquoted strings, variable names, comments, or trailing commas. Do not include markdown code block formatting."""
 
-TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm.
-You will receive the candidate's base resume, Analyzer findings, Reranker-sorted skills, AND the JD Intelligence report.
-Your job is to dynamically rewrite EVERY section of the resume (the professional summary, work experience, projects, skills, certifications) to build a perfect resume specifically tailored for the target Job Description.
+TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm — operating in FRESH WRITING MODE.
+You will receive: the candidate's base resume, Analyzer findings, Reranker-sorted skills, JD Intelligence, AND Company Intelligence (from the Company Research Agent).
+Your job is to FRESHLY WRITE every section of the resume from scratch — NOT paraphrase or shuffle the base resume.
+Every bullet must sound like a senior engineer wrote it specifically for THIS company, using THIS company's language and priorities.
+
+== FRESH WRITING MODE RULES ==
+1. Do NOT copy bullets word-for-word from the base resume. REWRITE with new phrasing.
+2. Mirror the JD's exact phrases (from jd_mirror_phrases and company_intelligence.jd_mirror_phrases) naturally.
+3. Open bullets with the company's culture DNA (from company_intelligence.culture_dna).
+4. For technical bullets: include an architecture RATIONALE — WHY that technology was chosen.
+5. For impact bullets: frame the outcome in business terms (saved hours, reduced latency, improved uptime).
+6. First bullet of every role MUST use at least one of the JD's must-have skills.
 
 CRITICAL: You must strictly adhere to the Candidate Base Facts below. Never fabricate, invent, or extrapolate any experience, technology, or metric. All rewrites must be 100% grounded in these base facts.
 
@@ -603,7 +618,13 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
 
     base_text = extract_resume_text(BASE_RESUME_DOCX)
 
-    # ─── STEP 0: JD INTELLIGENCE AGENT (NEW) ───
+    # ─── STEP 0.5: COMPANY RESEARCH AGENT ───
+    print("[JCode Coordinator] Launching Company Research Agent...")
+    t0 = time.time()
+    company_intelligence = research_company(company, job_title, job_description, parse_json_safely)
+    log_telemetry("CompanyResearchAgent", time.time() - t0, "success")
+
+    # ─── STEP 0: JD INTELLIGENCE AGENT ───
     print("[JCode Coordinator] Launching JD Intelligence Agent...")
     t0 = time.time()
     jd_context = {}
@@ -684,43 +705,125 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
         skills_ranked = {"skills_by_category": {}}
         print(f"    [Reranker] Failed, using default categories: {e}")
 
-    # ─── STEP 3: TAILOR AGENT ───
-    print("[JCode Coordinator] Launching Tailor Agent...")
+    # ─── STEP 3: TAILOR AGENT (FRESH WRITING MODE) ───
+    print("[JCode Coordinator] Launching Tailor Agent (Fresh Writing Mode)...")
     t0 = time.time()
     try:
-        tailor_prompt = f"""Tailor candidate resume with full JD context:
+        tailor_prompt = f"""FRESH WRITE the candidate resume for this specific company and role.
+
+<company_intelligence>
+{json.dumps(company_intelligence, indent=2)}
+</company_intelligence>
 <jd_intelligence>
 {json.dumps(jd_context, indent=2)}
 </jd_intelligence>
-<resume>
+<base_resume_facts>
 {base_text}
-</resume>
+</base_resume_facts>
 Analyzer Findings:
 {json.dumps(analysis)}
 Reranked Skills:
 {json.dumps(skills_ranked)}
 
+FRESH WRITING INSTRUCTIONS:
+- Mirror these JD phrases naturally in bullets: {company_intelligence.get('jd_mirror_phrases', [])}
+- Lead with this narrative angle: {company_intelligence.get('resume_narrative_angle', '')}
+- Company culture DNA to embed: {company_intelligence.get('culture_dna', [])}
+- Top differentiators to highlight: {company_intelligence.get('top_3_differentiators', [])}
+
 IMPORTANT: The summary Line 5 MUST be exactly: "{jd_context.get('summary_closing_line', '')}"
 IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('domain_priority_skills', [])}
 """
-        raw_tailored = ai_complete(TAILOR_SYSTEM, tailor_prompt, task="tailor", max_tokens=2500)
+        raw_tailored = ai_complete(TAILOR_SYSTEM, tailor_prompt, task="tailor", max_tokens=4500)
         draft = parse_json_safely(raw_tailored)
         draft["skills_by_category"] = skills_ranked.get("skills_by_category", {})
         draft["jd_context"] = jd_context
+        draft["company_intelligence"] = company_intelligence
         log_telemetry("TailorAgent", time.time() - t0, "success")
-        print("    [Tailor] Generated initial tailored resume draft.")
+        print("    [Tailor] Fresh resume draft generated.")
     except Exception as e:
         log_telemetry("TailorAgent", time.time() - t0, f"failed: {e}")
-        draft = {"jd_context": jd_context}
+        draft = {"jd_context": jd_context, "company_intelligence": company_intelligence}
         print(f"    [Tailor] Failed: {e}")
 
-    # ─── STEP 4: VERIFIER AGENT (AUDIT LOOP) ───
-    print("[JCode Coordinator] Launching Verifier Agent (Audit Loop)...")
+    # ─── STEP 3.5: PROJECT EXPANDER AGENT ───
+    print("[JCode Coordinator] Launching Project Expander Agent...")
+    t0 = time.time()
+    try:
+        # Pick 2 JD-relevant projects from the base facts
+        domain = jd_context.get("company_domain", "technology")
+        domain_lower = domain.lower()
+        project_priority = {
+            "ai": ["AI Tax Document Analyser", "e-ProcureZen"],
+            "fintech": ["e-ProcureZen", "AI Tax Document Analyser"],
+            "procurement": ["e-ProcureZen", "AI Tax Document Analyser"],
+            "government": ["NEICE", "SSO Application"],
+            "document": ["Nexa Vault", "SSO Application"],
+            "security": ["SSO Application", "Nexa Vault"],
+            "banking": ["e-ProcureZen", "SSO Application"],
+        }
+        selected_projects = ["AI Tax Document Analyser", "e-ProcureZen"]  # default
+        for key, projs in project_priority.items():
+            if key in domain_lower:
+                selected_projects = projs
+                break
+
+        expanded_projs = expand_projects(
+            project_names=selected_projects,
+            jd_context=jd_context,
+            company_intelligence=company_intelligence,
+            parse_json_safely=parse_json_safely
+        )
+        if expanded_projs:
+            draft["projects"] = expanded_projs
+        log_telemetry("ProjectExpanderAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("ProjectExpanderAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [ProjectExpander] Failed: {e}")
+
+    # ─── STEP 4: BULLET QUALITY SCORER + REWRITER ───
+    print("[JCode Coordinator] Launching Bullet Quality Scorer...")
+    t0 = time.time()
+    try:
+        draft_exp = draft.get("work_experience", [])
+        if draft_exp and isinstance(draft_exp, list):
+            improved_exp = score_and_rewrite_bullets(
+                work_experience=draft_exp,
+                jd_must_haves=analysis.get("must_haves", []),
+                company_intelligence=company_intelligence,
+                parse_json_safely=parse_json_safely
+            )
+            draft["work_experience"] = improved_exp
+        log_telemetry("BulletScorerAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("BulletScorerAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [BulletScorer] Failed: {e}")
+
+    # ─── STEP 4.5: CONSISTENCY ENFORCER ───
+    print("[JCode Coordinator] Launching Consistency Enforcer...")
+    t0 = time.time()
+    try:
+        enforced = enforce_consistency(
+            professional_summary=draft.get("professional_summary", ""),
+            work_experience=draft.get("work_experience", []),
+            parse_json_safely=parse_json_safely
+        )
+        draft["professional_summary"] = enforced["professional_summary"]
+        draft["work_experience"] = enforced["work_experience"]
+        log_telemetry("ConsistencyEnforcerAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("ConsistencyEnforcerAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [ConsistencyEnforcer] Failed: {e}")
+
+    # ─── STEP 5: VERIFIER AGENT (FINAL AUDIT) ───
+    print("[JCode Coordinator] Launching Verifier Agent (Final Audit)...")
     t0 = time.time()
     try:
         verify_prompt = f"""Audit and correct this resume draft using JD Intelligence:
 JD Intelligence:
 {json.dumps(jd_context, indent=2)}
+Company Intelligence:
+{json.dumps(company_intelligence, indent=2)}
 Job Title: {job_title}
 Company: {company}
 Draft Summary: {draft.get('professional_summary')}
@@ -729,15 +832,16 @@ Draft Projects: {json.dumps(draft.get('projects'))}
 JD:
 {job_description[:3000]}
 """
-        raw_verified = ai_complete(VERIFIER_SYSTEM, verify_prompt, task="verify", max_tokens=2048)
+        raw_verified = ai_complete(VERIFIER_SYSTEM, verify_prompt, task="verify", max_tokens=4000)
         final_tailored = parse_json_safely(raw_verified)
         final_tailored["jd_context"] = jd_context
+        final_tailored["company_intelligence"] = company_intelligence
         log_telemetry("VerifierAgent", time.time() - t0, "success")
-        print("    [Verifier] Resume audit completed and corrections applied.")
+        print("    [Verifier] Final resume audit completed.")
     except Exception as e:
         log_telemetry("VerifierAgent", time.time() - t0, f"failed: {e}")
         final_tailored = draft
-        print(f"    [Verifier] Failed, using initial draft: {e}")
+        print(f"    [Verifier] Failed, using scored draft: {e}")
 
     # Ensure final_tailored is structured and has ats_report
     if not isinstance(final_tailored, dict):
@@ -802,16 +906,27 @@ JD:
     return res
 
 def build_clean_resume(tailored: dict, output_path: str):
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+
+    # ─ Design tokens (ATS-safe: plain text color, no images/tables)
+    NAVY   = RGBColor(0x1A, 0x2F, 0x4A)
+    ACCENT = RGBColor(0x2C, 0x5F, 0x8C)
+    GRAY   = RGBColor(0x55, 0x55, 0x55)
+    RULE_COLOR = "1A2F4A"
+
     doc = Document()
-    
-    # Set Margins to 1 inch
+
+    # Tighter professional margins
     for section in doc.sections:
-        section.top_margin = Inches(1.0)
-        section.bottom_margin = Inches(1.0)
-        section.left_margin = Inches(1.0)
-        section.right_margin = Inches(1.0)
-        
-    def add_styled_paragraph(text="", style_name='Normal', font_name='Calibri', font_size=10.5, bold=False, italic=False, align=WD_ALIGN_PARAGRAPH.LEFT, space_before=0, space_after=3, line_spacing=1.15):
+        section.top_margin = Inches(0.75)
+        section.bottom_margin = Inches(0.75)
+        section.left_margin = Inches(0.75)
+        section.right_margin = Inches(0.75)
+
+    def add_styled_paragraph(text="", font_name='Calibri', font_size=10.5, bold=False, italic=False,
+                              align=WD_ALIGN_PARAGRAPH.LEFT, space_before=0, space_after=3,
+                              line_spacing=1.15, color=None):
         p = doc.add_paragraph()
         p.alignment = align
         p.paragraph_format.space_before = Pt(space_before)
@@ -823,24 +938,67 @@ def build_clean_resume(tailored: dict, output_path: str):
             run.font.size = Pt(font_size)
             run.bold = bold
             run.italic = italic
+            if color:
+                run.font.color.rgb = color
         return p
-        
+
     def add_section_heading(title):
+        """Premium navy section heading with navy bottom rule."""
         p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(12)
+        p.paragraph_format.space_before = Pt(10)
         p.paragraph_format.space_after = Pt(4)
-        run = p.add_run(title)
+        run = p.add_run(title.upper())
         run.bold = True
         run.font.name = 'Calibri'
-        run.font.size = Pt(12)
-        
-    # 1. HEADER
-    add_styled_paragraph("SIVA SHANKAR", font_size=18, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
+        run.font.size = Pt(11)
+        run.font.color.rgb = NAVY
+        # Bottom rule
+        pPr = p._p.get_or_add_pPr()
+        pBdr = OxmlElement("w:pBdr")
+        bot = OxmlElement("w:bottom")
+        bot.set(qn("w:val"), "single")
+        bot.set(qn("w:sz"), "8")
+        bot.set(qn("w:space"), "2")
+        bot.set(qn("w:color"), RULE_COLOR)
+        pBdr.append(bot)
+        pPr.append(pBdr)
+
+    # 1. HEADER — Premium navy name block
+    p_name = doc.add_paragraph()
+    p_name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_name.paragraph_format.space_before = Pt(0)
+    p_name.paragraph_format.space_after = Pt(2)
+    r_name = p_name.add_run("SIVA SHANKAR")
+    r_name.bold = True
+    r_name.font.name = 'Calibri'
+    r_name.font.size = Pt(20)
+    r_name.font.color.rgb = NAVY
+
     headline = tailored.get("job_title_headline", "Senior Software Engineer")
-    add_styled_paragraph(headline.upper(), font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    contact_line = "+91 6383149155   •   sivashankar.avi6@gmail.com   •   https://www.linkedin.com/in/siva-shankar-4a7849226/   •   https://github.com/shivan2603   •   https://shivan2603.github.io/sivashankar-portfolio/"
-    add_styled_paragraph(contact_line, font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    
+    p_title = doc.add_paragraph()
+    p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_title.paragraph_format.space_before = Pt(0)
+    p_title.paragraph_format.space_after = Pt(5)
+    r_title = p_title.add_run(headline)
+    r_title.font.name = 'Calibri'
+    r_title.font.size = Pt(11.5)
+    r_title.font.color.rgb = ACCENT
+    # Thin navy rule under title
+    pPr = p_title._p.get_or_add_pPr()
+    pBdr = OxmlElement("w:pBdr")
+    bot = OxmlElement("w:bottom")
+    bot.set(qn("w:val"), "single")
+    bot.set(qn("w:sz"), "4")
+    bot.set(qn("w:space"), "4")
+    bot.set(qn("w:color"), RULE_COLOR)
+    pBdr.append(bot)
+    pPr.append(pBdr)
+
+    contact_line = "+91 6383149155   •   sivashankar.avi6@gmail.com   •   linkedin.com/in/siva-shankar-4a7849226"
+    add_styled_paragraph(contact_line, font_size=9.5, align=WD_ALIGN_PARAGRAPH.CENTER, space_before=5, space_after=1)
+    links_line = "github.com/shivan2603   •   shivan2603.github.io/sivashankar-portfolio"
+    add_styled_paragraph(links_line, font_size=9.5, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
+
     # Build location line dynamically
     jd_context = tailored.get("jd_context", {})
     location_line = jd_context.get("location_line", "")
@@ -854,8 +1012,8 @@ def build_clean_resume(tailored: dict, output_path: str):
             location_line = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
         else:
             location_line = "Chennai, India  |  Open to Remote / Hybrid"
-    add_styled_paragraph(location_line, font_size=10, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
-    
+    add_styled_paragraph(location_line, font_size=9.5, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8, color=GRAY)
+
     # 2. PROFESSIONAL SUMMARY
     add_section_heading("Professional Summary")
     add_styled_paragraph(tailored.get("professional_summary", ""), font_size=10.5)

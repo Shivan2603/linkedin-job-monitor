@@ -67,6 +67,13 @@ BADGE_BAR_PATTERN = re.compile(
     r"[\|│]?\s*(?:☁️|⚡|🏆|🤖|📈|🏅|▸|★|•).*?(?:[\|│]|$)", re.UNICODE
 )
 
+# ── DESIGN TOKENS (ATS-safe: plain text colors only, no images/tables) ──────
+# ATS parsers read color-formatted text normally — color is 100% cosmetic only
+NAVY       = RGBColor(0x1A, 0x2F, 0x4A)   # #1A2F4A — deep professional navy
+ACCENT     = RGBColor(0x2C, 0x5F, 0x8C)   # #2C5F8C — mid-blue for subheadings/titles
+GRAY       = RGBColor(0x55, 0x55, 0x55)   # #555555 — medium gray for dates & tech stack
+RULE_COLOR = "1A2F4A"                      # XML hex for border elements (navy)
+
 
 def strip_emojis(text: str) -> str:
     """[F2] Remove ALL emojis and emoji-adjacent symbols from text."""
@@ -322,14 +329,14 @@ def _add_right_tab(paragraph, pos_twips: int = 8640):
 
 
 def _section_rule(paragraph):
-    """Add a thin bottom border under section headings (not a table row)."""
+    """Add a premium navy bottom border under section headings (not a table row)."""
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
     bottom = OxmlElement("w:bottom")
     bottom.set(qn("w:val"), "single")
-    bottom.set(qn("w:sz"), "6")
-    bottom.set(qn("w:space"), "1")
-    bottom.set(qn("w:color"), "2E2E2E")
+    bottom.set(qn("w:sz"), "8")        # slightly thicker — 1pt line
+    bottom.set(qn("w:space"), "2")
+    bottom.set(qn("w:color"), RULE_COLOR)  # navy
     pBdr.append(bottom)
     pPr.append(pBdr)
 
@@ -349,12 +356,12 @@ def _p(doc, text="", bold=False, italic=False, size=10.5,
         run.font.name = "Calibri"
         run.font.size = Pt(size)
         if color:
-            run.font.color.rgb = RGBColor(*color)
+            run.font.color.rgb = RGBColor(*color) if isinstance(color, tuple) else color
     return p
 
 
 def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4.0):
-    """ATS-safe section heading: bold all-caps plain text with bottom rule."""
+    """Premium ATS-safe section heading: navy bold all-caps with navy bottom rule."""
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(space_before)
     p.paragraph_format.space_after = Pt(space_after)
@@ -362,6 +369,7 @@ def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4
     run.bold = True
     run.font.name = "Calibri"
     run.font.size = Pt(11)
+    run.font.color.rgb = NAVY        # navy color — ATS reads plain text, ignores color
     _section_rule(p)
 
 
@@ -369,6 +377,7 @@ def _bullet(doc, text: str, indent_pt: int = 18, space_after: float = 2.0, line_
     """Plain bullet paragraph — bullet char only, no emojis, no table cells."""
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Pt(indent_pt)
+    p.paragraph_format.first_line_indent = Pt(-8)   # hanging indent for clean alignment
     p.paragraph_format.space_after = Pt(space_after)
     p.paragraph_format.line_spacing = line_spacing
     run = p.add_run(f"\u2022  {strip_emojis(text)}")
@@ -421,12 +430,52 @@ def build_resume_docx(config: ResumeConfig) -> str:
 
     c = candidate
 
-    # Header
-    _p(doc, c["name"], bold=True, size=17 if tighten else 18, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1.5 if tighten else 2, ls=ls_val)
-    _p(doc, config.job_title.upper(), bold=True, size=10.5 if tighten else 11, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1.5 if tighten else 2, ls=ls_val)
-    _p(doc, f"{c['phone']}   \u2022   {c['email']}   \u2022   {c['linkedin']}", size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1, ls=ls_val)
-    _p(doc, f"{c.get('github', '')}   \u2022   {c.get('portfolio', '')}", size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1.5 if tighten else 2, ls=ls_val)
-    _p(doc, c["location"], size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=6 if tighten else 8, ls=ls_val)
+    # ── HEADER: Premium navy name + centered contact block ──
+    # Name — large navy bold (ATS reads plain text, color is visual only)
+    p_name = doc.add_paragraph()
+    p_name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_name.paragraph_format.space_before = Pt(0)
+    p_name.paragraph_format.space_after = Pt(2)
+    p_name.paragraph_format.line_spacing = 1.0
+    r_name = p_name.add_run(c["name"].upper())
+    r_name.bold = True
+    r_name.font.name = "Calibri"
+    r_name.font.size = Pt(20 if not tighten else 18)
+    r_name.font.color.rgb = NAVY
+
+    # Job title headline — accent blue, slightly smaller
+    p_title = doc.add_paragraph()
+    p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_title.paragraph_format.space_before = Pt(0)
+    p_title.paragraph_format.space_after = Pt(4)
+    p_title.paragraph_format.line_spacing = 1.0
+    r_title = p_title.add_run(config.job_title)
+    r_title.bold = False
+    r_title.font.name = "Calibri"
+    r_title.font.size = Pt(11.5 if not tighten else 10.5)
+    r_title.font.color.rgb = ACCENT
+
+    # Thin navy rule under name/title header block
+    pPr = p_title._p.get_or_add_pPr()
+    pBdr = OxmlElement("w:pBdr")
+    bot = OxmlElement("w:bottom")
+    bot.set(qn("w:val"), "single")
+    bot.set(qn("w:sz"), "4")
+    bot.set(qn("w:space"), "4")
+    bot.set(qn("w:color"), RULE_COLOR)
+    pBdr.append(bot)
+    pPr.append(pBdr)
+
+    # Contact line 1: phone | email | linkedin
+    _p(doc, f"{c['phone']}   \u2022   {c['email']}   \u2022   {c['linkedin']}",
+       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sb=5, sa=1, ls=ls_val)
+    # Contact line 2: github | portfolio
+    _p(doc, f"{c.get('github', '')}   \u2022   {c.get('portfolio', '')}",
+       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1.5 if tighten else 2, ls=ls_val)
+    # Location line
+    _p(doc, c["location"],
+       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER,
+       sa=6 if tighten else 8, ls=ls_val, color=GRAY)
 
     # Professional Summary
     _heading(doc, "Professional Summary", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
@@ -466,21 +515,24 @@ def build_resume_docx(config: ResumeConfig) -> str:
             r_sk.font.name = "Calibri"
             r_sk.font.size = Pt(p_size)
 
-    # Work Experience
+    # Work Experience — company name in navy
     _heading(doc, "Work Experience", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     for job in jobs:
         p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(4 if tighten else 6)
+        p.paragraph_format.space_before = Pt(4 if tighten else 7)
         p.paragraph_format.space_after = Pt(1)
         _add_right_tab(p)
         rc = p.add_run(strip_emojis(job["company"]))
         rc.bold = True
         rc.font.name = "Calibri"
         rc.font.size = Pt(10.5 if tighten else 11)
+        rc.font.color.rgb = NAVY        # company name in navy
         rd = p.add_run(f"\t{job['dates']}")
-        rd.bold = True
+        rd.bold = False
+        rd.italic = True
         rd.font.name = "Calibri"
-        rd.font.size = Pt(10.5 if tighten else 11)
+        rd.font.size = Pt(10.0 if tighten else 10.5)
+        rd.font.color.rgb = GRAY        # date in gray
 
         p2 = doc.add_paragraph()
         p2.paragraph_format.space_after = Pt(1)
@@ -488,17 +540,19 @@ def build_resume_docx(config: ResumeConfig) -> str:
         r2.italic = True
         r2.font.name = "Calibri"
         r2.font.size = Pt(p_size)
+        r2.font.color.rgb = ACCENT      # role title in accent blue
 
         p3 = doc.add_paragraph()
         p3.paragraph_format.space_after = Pt(2 if tighten else 3)
         r3 = p3.add_run(strip_emojis(job.get("tech", "")))
         r3.font.name = "Calibri"
         r3.font.size = Pt(9.5 if tighten else 10)
+        r3.font.color.rgb = GRAY        # tech stack in gray
 
         for b in job["bullets"]:
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
-    # Key Projects
+    # Key Projects — project name in navy with tech stack in gray italic
     _heading(doc, "Key Projects", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     for proj in projects:
         p = doc.add_paragraph()
@@ -508,10 +562,15 @@ def build_resume_docx(config: ResumeConfig) -> str:
         rn.bold = True
         rn.font.name = "Calibri"
         rn.font.size = Pt(10.5 if tighten else 11)
-        rt = p.add_run(f"\n{strip_emojis(proj.get('tech', ''))}")
-        rt.italic = True
-        rt.font.name = "Calibri"
-        rt.font.size = Pt(9.0 if tighten else 9.5)
+        rn.font.color.rgb = NAVY        # project name in navy
+        tech_text = strip_emojis(proj.get('tech', ''))
+        if tech_text:
+            p.add_run("  ")             # small gap
+            rt = p.add_run(f"— {tech_text}")
+            rt.italic = True
+            rt.font.name = "Calibri"
+            rt.font.size = Pt(9.0 if tighten else 9.5)
+            rt.font.color.rgb = GRAY    # tech in gray
         for b in proj.get("bullets", []):
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
@@ -520,7 +579,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
     for cert in certs:
         _bullet(doc, cert, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
-    # Education
+    # Education — degree in navy
     _heading(doc, "Education", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     edu = config.education
     p = doc.add_paragraph()
@@ -530,10 +589,12 @@ def build_resume_docx(config: ResumeConfig) -> str:
     re_.bold = True
     re_.font.name = "Calibri"
     re_.font.size = Pt(10.5 if tighten else 11)
+    re_.font.color.rgb = NAVY
     ry = p.add_run(f"\t{edu['years']}")
-    ry.bold = True
+    ry.italic = True
     ry.font.name = "Calibri"
-    ry.font.size = Pt(10.5 if tighten else 11)
+    ry.font.size = Pt(10.0 if tighten else 10.5)
+    ry.font.color.rgb = GRAY
 
     p2 = doc.add_paragraph()
     p2.paragraph_format.space_after = Pt(2)
