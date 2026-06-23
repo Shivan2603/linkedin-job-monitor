@@ -97,7 +97,17 @@ def run_all_sites():
     logger.info("All sites completed for this cycle.")
     stats = get_daily_stats()
     logger.info(f"Today's total applications: {stats}")
+
+    # Follow-up email agent runs silently every cycle
+    # Sends 7-day follow-up emails for applications with no response
+    try:
+        from bot.followup_email_agent import run_followup_agent
+        run_followup_agent()
+    except Exception as e:
+        logger.error(f"Follow-up agent error in cycle: {e}")
+
     logger.info("Waiting 60-90 minutes before next cycle...")
+
 
 def main():
     cli_choice = None

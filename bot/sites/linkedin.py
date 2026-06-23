@@ -114,19 +114,120 @@ def _generate_profile_query() -> str:
         return ".Net"
 
 # ─── MAIN ENTRY ───────────────────────────────────────────────────────────────
+# LinkedIn geoId codes for country-specific job searches
+LINKEDIN_COUNTRIES = [
+    # (geoId, country_name, location_label)
+    ("102713980", "India (Remote/WFH)",        "India"),
+    ("102454443", "United Kingdom",             "United Kingdom"),
+    ("101165590", "United States",              "United States"),
+    ("101452733", "Australia",                  "Australia"),
+    ("101174742", "Canada",                     "Canada"),
+    ("102454443", "Singapore",                  "Singapore"),
+    ("105072130", "Malaysia",                   "Malaysia"),
+    ("106693272", "UAE (Dubai)",                "United Arab Emirates"),
+    ("104869687", "Ireland (Dublin)",           "Ireland"),
+    ("103366791", "Germany",                    "Germany"),
+    ("102890719", "Netherlands",                "Netherlands"),
+    ("105117694", "New Zealand",                "New Zealand"),
+    ("105428954", "Switzerland",                "Switzerland"),
+    ("106155005", "Sweden",                     "Sweden"),
+    ("104514075", "Denmark",                    "Denmark"),
+    ("105015875", "Norway",                     "Norway"),
+    ("100819756", "Finland",                    "Finland"),
+    ("105646813", "France (Paris)",             "France"),
+]
+
+
+def _linkedin_country_selector() -> list:
+    """
+    Interactive country selector for LinkedIn — same UX as Indeed.
+    Returns list of (geoId, country_name, location_label) tuples to search.
+    """
+    print("\n" + "=" * 65)
+    print("              LINKEDIN COUNTRY SELECTOR")
+    print("=" * 65)
+    print("  1. All Countries (Worldwide — maximum reach)")
+    print("  2. United Kingdom")
+    print("  3. United States")
+    print("  4. Australia")
+    print("  5. Canada")
+    print("  6. Singapore")
+    print("  7. Malaysia")
+    print("  8. UAE (Dubai)")
+    print("  9. Ireland (Dublin)")
+    print(" 10. View all other countries (Germany, Netherlands, etc.)")
+    print("=" * 65 + "\n")
+
+    try:
+        choice = input("  Select LinkedIn search scope (1-10): ").strip()
+    except (KeyboardInterrupt, SystemExit, EOFError):
+        logger.info("Country selection skipped. Defaulting to Worldwide.", SITE)
+        return LINKEDIN_COUNTRIES  # All
+
+    country_options = {
+        "1":  ("Worldwide",       LINKEDIN_COUNTRIES),
+        "2":  ("United Kingdom",  [(c for c in LINKEDIN_COUNTRIES if "United Kingdom" in c[1]).__next__()]),
+        "3":  ("United States",   [(c for c in LINKEDIN_COUNTRIES if "United States"  in c[1]).__next__()]),
+        "4":  ("Australia",       [(c for c in LINKEDIN_COUNTRIES if "Australia"      in c[1]).__next__()]),
+        "5":  ("Canada",          [(c for c in LINKEDIN_COUNTRIES if "Canada"         in c[1]).__next__()]),
+        "6":  ("Singapore",       [(c for c in LINKEDIN_COUNTRIES if "Singapore"      in c[1]).__next__()]),
+        "7":  ("Malaysia",        [(c for c in LINKEDIN_COUNTRIES if "Malaysia"       in c[1]).__next__()]),
+        "8":  ("UAE",             [(c for c in LINKEDIN_COUNTRIES if "UAE"            in c[1]).__next__()]),
+        "9":  ("Ireland",         [(c for c in LINKEDIN_COUNTRIES if "Ireland"        in c[1]).__next__()]),
+    }
+
+    if choice == "10":
+        others = [c for c in LINKEDIN_COUNTRIES
+                  if not any(k in c[1] for k in ["India","United Kingdom","United States",
+                                                   "Australia","Canada","Singapore",
+                                                   "Malaysia","UAE","Ireland"])]
+        print("\n" + "=" * 65)
+        print("              OTHER AVAILABLE COUNTRIES")
+        print("=" * 65)
+        for idx, (geo, name, _) in enumerate(others, 10):
+            print(f" {idx:2d}. {name}")
+        print("=" * 65 + "\n")
+        try:
+            sub = input("  Select country number: ").strip()
+            num = int(sub) - 10
+            if 0 <= num < len(others):
+                chosen = others[num]
+                logger.info(f"LinkedIn search scope: {chosen[1]}", SITE)
+                return [chosen]
+        except Exception:
+            pass
+        return LINKEDIN_COUNTRIES
+
+    if choice in country_options:
+        name, selected = country_options[choice]
+        logger.info(f"LinkedIn search scope: {name}", SITE)
+        return selected
+
+    logger.info("Invalid choice. Defaulting to Worldwide.", SITE)
+    return LINKEDIN_COUNTRIES
+
+
 def run_linkedin_bot():
     creds = CREDENTIALS["linkedin"]
     if not creds["email"] or not creds["password"]:
         logger.warn("LinkedIn credentials not set — skipping", SITE)
         return
     if not check_daily_limit(SITE):
-        logger.warn("LinkedIn Easy Apply daily limit reached — starting/continuing in External Apply Capture mode", SITE)
+        logger.warn("LinkedIn Easy Apply daily limit reached — External Apply Capture mode", SITE)
 
     logger.info("Starting LinkedIn Easy Apply bot — Production Mode", SITE)
-    print(f"\n{'='*60}")
+    print(f"\n{'='*65}")
     print(f"  LINKEDIN BOT — Headful Mode (Watch the browser!)")
     print(f"  Min match score to apply: {MIN_MATCH}%")
-    print(f"{'='*60}\n")
+    print(f"{'='*65}\n")
+
+    # Country selection (interactive only)
+    import sys as _sys
+    if _sys.stdin.isatty():
+        target_countries = _linkedin_country_selector()
+    else:
+        target_countries = LINKEDIN_COUNTRIES  # headless = all countries
+        logger.info("LinkedIn: headless mode — searching all countries", SITE)
 
     with sync_playwright() as p:
         browser, context = safe_browser_context(p, SITE)
@@ -137,16 +238,17 @@ def run_linkedin_bot():
                 return
             save_cookies(context, SITE)
 
-            for job_title in JOB_TITLES:
-                if not check_daily_limit(SITE):
-                    logger.warn("LinkedIn Easy Apply daily limit reached — continuing in External Apply Capture mode", SITE)
-                # Standard Search
-                _search_and_apply(page, job_title, "Worldwide", is_freelance=False)
-                
-                # Freelance Search
-                if not check_daily_limit(SITE):
-                    logger.warn("LinkedIn Easy Apply daily limit reached — continuing in External Apply Capture mode", SITE)
-                _search_and_apply(page, job_title, "Worldwide", is_freelance=True)
+            for geo_id, country_name, location_label in target_countries:
+                logger.info(f"LinkedIn: searching in {country_name} (geoId={geo_id})", SITE)
+                for job_title in JOB_TITLES:
+                    if not check_daily_limit(SITE):
+                        logger.warn("LinkedIn Easy Apply daily limit reached — External Apply Capture", SITE)
+                    # Standard Search
+                    _search_and_apply(page, job_title, location_label,
+                                      is_freelance=False, geo_id=geo_id)
+                    # Freelance/Contract Search
+                    _search_and_apply(page, job_title, location_label,
+                                      is_freelance=True, geo_id=geo_id)
         except Exception as e:
             logger.error(f"LinkedIn bot crash: {e}", SITE)
         finally:
@@ -247,8 +349,9 @@ def _login(page: Page, creds: dict) -> bool:
         return False
 
 # ─── JOB SEARCH ───────────────────────────────────────────────────────────────
-def _search_and_apply(page: Page, job_title: str, location: str, is_freelance: bool = False):
-    logger.info(f"LinkedIn search: '{job_title}' in '{location}'", SITE)
+def _search_and_apply(page: Page, job_title: str, location: str,
+                      is_freelance: bool = False, geo_id: str = ""):
+    logger.info(f"LinkedIn search: '{job_title}' in '{location}' (geoId={geo_id or 'none'})", SITE)
 
     if job_title.lower() in [".net", "dotnet"]:
         search_query = _generate_profile_query()
@@ -256,29 +359,30 @@ def _search_and_apply(page: Page, job_title: str, location: str, is_freelance: b
         search_query = job_title
 
     if is_freelance:
-        # Target freelance/contracting jobs matching profile keywords
         search_query = f'({search_query}) AND ("freelance" OR "contract" OR "temporary" OR "contractor")'
         logger.info(f"Searching for freelance/contract positions: {search_query}", SITE)
     else:
         logger.info(f"Searching for: {search_query} (Past Week)", SITE)
 
-    time_range = "r604800"  # Past week (to find more opportunities worldwide)
+    time_range = "r604800"  # Past week
+    # Build geo param: prefer geoId (exact country) over plain location string
+    geo_param = f"&geoId={geo_id}" if geo_id else f"&location={_encode(location)}"
 
     if is_freelance:
         search_url = (
             f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
-            f"&location={_encode(location)}"
+            f"{geo_param}"
             f"&f_TPR={time_range}"
-            f"&f_JT=C,T,O"      # Contract, Temporary, Other (freelance)
-            f"&sortBy=DD"       # Most recent first
+            f"&f_JT=C,T,O"      # Contract, Temporary, Other
+            f"&sortBy=DD"
         )
     else:
         search_url = (
             f"{BASE_URL}/jobs/search/?keywords={_encode(search_query)}"
-            f"&location={_encode(location)}"
+            f"{geo_param}"
             f"&f_TPR={time_range}"
-            f"&f_E=4"           # Mid-Senior level
-            f"&sortBy=DD"       # Most recent first
+            f"&f_E=4"            # Mid-Senior level
+            f"&sortBy=DD"
         )
 
     try:

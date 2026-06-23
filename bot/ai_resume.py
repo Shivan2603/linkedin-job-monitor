@@ -906,9 +906,44 @@ JD:
         log_telemetry("ProjectDeepRewriterAgent", time.time() - t0, f"failed: {e}")
         print(f"    [ProjectDeepRewriter] Outer failed: {e}")
 
+    # ─── QUALITY GATE: ATS SCORE MUST BE ≥ 95% ─────────────────────────────
+    # If score is below threshold, run a targeted second pass on remaining gaps
+    print("[JCode Coordinator] Running ATS Quality Gate check...")
+    current_score = final_tailored.get("coverage_report", {}).get("final_ats_score", 0)
+    must_haves    = analysis.get("must_haves", [])
+
+    if current_score < 95 and must_haves:
+        # Find exactly which keywords are still missing
+        resume_text_check = json.dumps(final_tailored).lower()
+        still_missing = [kw for kw in must_haves if kw.lower() not in resume_text_check]
+
+        if still_missing:
+            print(f"    [QualityGate] Score {current_score}% — {len(still_missing)} keywords still missing. Running retry pass...")
+            try:
+                t0 = time.time()
+                final_tailored = enforce_ats_keywords(
+                    resume_json=final_tailored,
+                    jd_must_haves=still_missing,  # only the remaining gaps
+                    jd_nice_to_haves=analysis.get("nice_to_haves", []),
+                    parse_json_safely=parse_json_safely
+                )
+                new_score = final_tailored.get("coverage_report", {}).get("final_ats_score", current_score)
+                log_telemetry("QualityGateRetry", time.time() - t0, f"score: {current_score}%→{new_score}%")
+                print(f"    [QualityGate] Score after retry: {new_score}%")
+                if new_score >= 95:
+                    print(f"    [QualityGate] ✅ ATS score cleared {new_score}% — resume ready.")
+                else:
+                    print(f"    [QualityGate] ⚠️  Score {new_score}% — some niche keywords may be absent.")
+            except Exception as e:
+                print(f"    [QualityGate] Retry failed: {e}")
+        else:
+            print(f"    [QualityGate] ✅ All must-have keywords confirmed present.")
+    else:
+        print(f"    [QualityGate] ✅ ATS score {current_score}% — threshold met.")
+
     if "ats_report" not in final_tailored or not final_tailored["ats_report"]:
         final_tailored["ats_report"] = {
-            "match_score": 100,
+            "match_score": final_tailored.get("coverage_report", {}).get("final_ats_score", 100),
             "matched_keywords": [
                 "C#", ".NET Core", "ASP.NET Web API", "RESTful API", "Microsoft Azure",
                 "Azure App Services", "Azure SQL", "Azure Blob Storage", "Azure DevOps",
@@ -950,9 +985,21 @@ JD:
         print(f"[JCode Coordinator] Resume saved: {out_path}")
     except Exception as e:
         print(f"[ERROR] Document creation failed: {e}")
-        # Fallback copy
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
+
+    # Log application for 7-day follow-up tracking
+    try:
+        from bot.followup_email_agent import log_application
+        log_application(
+            job_title=job_title,
+            company=company,
+            job_url=jd_context.get("job_url", ""),
+            hr_email=jd_context.get("hr_email", ""),
+            jd_context=jd_context
+        )
+    except Exception:
+        pass  # Non-critical
 
     # ─── STEP 9: AUTO COVER LETTER ───────────────────────────────────────────
     print("[JCode Coordinator] Launching Cover Letter Generator...")
