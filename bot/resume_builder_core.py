@@ -1377,13 +1377,21 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     # Build location line dynamically
     location_line = tailored.get("location_line", "").strip()
     if not location_line:
+        location_line = jd_loc_line.strip() if jd_loc_line else ""
+    if not location_line:
         is_intl = jd_is_intl
-        
-        # Fallback/additional check for international countries
-        INTERNATIONAL_COUNTRIES = ["malaysia", "singapore", "australia", "united kingdom", "uk", "london", "usa", "canada", "germany", "uae", "dubai"]
-        if not is_intl:
+        # CRITICAL: Never add 'Visa sponsorship required' for Indian jobs
+        INDIA_CITIES = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "pune",
+                        "mumbai", "delhi", "new delhi", "noida", "gurugram", "gurgaon",
+                        "kolkata", "kochi", "coimbatore", "trivandrum", "ahmedabad", "jaipur"}
+        job_city_lower = jd_context.get("job_location_city", "").lower()
+        job_country_lower = jd_context.get("job_location_country", "").lower()
+        if job_country_lower == "india" or job_city_lower in INDIA_CITIES:
+            is_intl = False
+        elif not is_intl:
+            INTERNATIONAL_COUNTRIES = ["malaysia", "singapore", "australia", "united kingdom",
+                                        "uk", "london", "usa", "canada", "germany", "uae", "dubai"]
             is_intl = any(c in jd_lower for c in INTERNATIONAL_COUNTRIES)
-            
         if is_intl:
             location_line = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
         else:
@@ -1537,15 +1545,15 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
             if not role_company or not title:
                 continue
                 
-            limit = 4
+            limit = 6
             if "ltimindtree" in key.lower():
-                limit = 4
+                limit = 6
             elif "dssi" in key.lower():
-                limit = 3
+                limit = 5
             elif "nexa" in key.lower():
-                limit = 2
+                limit = 4
             elif "kasadara" in key.lower():
-                limit = 2
+                limit = 3
                 
             allowed = extract_allowed_facts(key)
             validated_bullets = []
@@ -1593,7 +1601,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "title": "Senior Software Engineer  |  Client: Deloitte — Enterprise Tax Platform",
                 "tech": ".NET Core 8  •  ASP.NET Web API  •  Angular  •  Azure OpenAI GPT-4  •  Microservices" if not mid_level_mode else ".NET Core 8  •  ASP.NET Web API  •  Angular  •  SQL Server",
                 "key": "LTIMindtree",
-                "limit": 4
+                "limit": 6
             },
             {
                 "company": "DSSI Solutions India Pvt Ltd",
@@ -1601,7 +1609,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "title": "Senior Software Engineer  |  Financial Procurement Platform",
                 "tech": ".NET 7  •  Clean Architecture  •  CQRS  •  YARP Reverse Proxy  •  Docker  •  Azure App Services" if not mid_level_mode else ".NET 7  •  Clean Architecture  •  CQRS  •  SQL Server",
                 "key": "DSSI Solutions India Pvt Ltd",
-                "limit": 3
+                "limit": 5
             },
             {
                 "company": "Nexa Office InfoSystems LLP",
@@ -1609,7 +1617,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "title": "Senior Software Engineer — Contract / Consultant  |  Enterprise Document Management",
                 "tech": ".NET Core  •  ASP.NET Web API  •  Angular  •  Docker  •  SQL Server  •  OAuth2",
                 "key": "Nexa Office InfoSystems LLP",
-                "limit": 2
+                "limit": 4
             },
             {
                 "company": "Kasadara Technology Solutions",
@@ -1617,7 +1625,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
                 "tech": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
                 "key": "Kasadara Technology Solutions",
-                "limit": 2
+                "limit": 3
             }
         ]
         
@@ -1680,7 +1688,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     
     # Check if the AI returned structured project objects
     if isinstance(raw_projects, list) and len(raw_projects) > 0 and isinstance(raw_projects[0], dict) and "bullets" in raw_projects[0]:
-        for p in raw_projects[:2]:
+        for p in raw_projects[:5]:  # Allow all 5 projects for 3-page resume
             name = p.get("name") or p.get("title") or ""
             tech = p.get("tech_stack") or p.get("tech") or ""
             bullets = p.get("bullets") or p.get("description") or []
@@ -1693,7 +1701,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
             allowed = extract_allowed_facts(name)
             validated_proj_bullets = []
             
-            for p_idx, pb in enumerate(bullets[:2]):
+            for p_idx, pb in enumerate(bullets[:3]):
                 ok_soft, err_soft = verify_soft_skills(pb)
                 if not ok_soft:
                     print(f"  [ATS-GUARD] Soft-skill violation in project '{name}' bullet {p_idx+1}: {err_soft}. Falling back.")

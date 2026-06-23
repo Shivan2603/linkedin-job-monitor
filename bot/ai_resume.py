@@ -54,11 +54,11 @@ Think like a senior recruiter AND like the candidate trying to stand out. Analys
 
 1. LOCATION INTELLIGENCE:
    - What city/country is the job in? (e.g. "Kuala Lumpur, Malaysia" or "London, UK" or "Remote")
-   - Does it require relocation? (look for: "must be based in", "onsite", "relocation package", location being non-India)
    - Is visa sponsorship mentioned or implied?
    - What is the ideal location_line for the resume header?
-   - For international: "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
-   - For India-based jobs (whether remote, hybrid, or onsite): "Chennai, India  |  Open to Remote / Hybrid"
+   - CRITICAL INDIA RULE: If the job is in ANY Indian city or location — Bangalore, Bengaluru, Chennai, Hyderabad, Pune, Mumbai, Delhi, New Delhi, Noida, Gurugram, Gurgaon, Kolkata, Kochi, Coimbatore, Trivandrum, Ahmedabad, Jaipur, or any other Indian city — ALWAYS set is_international=false, requires_relocation=false, visa_sponsorship_mentioned=false, and location_line="Chennai, India  |  Open to Remote / Hybrid". NEVER add 'Visa sponsorship required' for Indian jobs.
+   - For truly international jobs outside India (UK, USA, Malaysia, Singapore, Australia, Canada, UAE, Europe, etc.): location_line="Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+   - For India-based jobs (whether remote, hybrid, or onsite): location_line="Chennai, India  |  Open to Remote / Hybrid"
 
 2. DOMAIN INTELLIGENCE:
    - What industry/domain is the company in? (fintech, government, e-commerce, healthcare, SaaS, logistics, banking, telecom, consulting, insurance, tax)
@@ -228,13 +228,12 @@ CANDIDATE BASE FACTS (Grounded Database)
        * Refactored application UI to ensure strict compliance with US Federal Section 508 and WCAG accessibility standards.
        * Optimized legacy WCF and ADO.NET data access layers, reducing web page transaction times by 20%.
 
-3. PROJECTS:
-   - Select max 2 projects that match the JD's domain:
-     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI • pgvector • Semantic Kernel. (Extracts tax data using Semantic Kernel, pgvector search, Azure OpenAI).
-     * e-ProcureZen: C# • .NET 7 • Clean Architecture • YARP • Redis. (Financial procurement platform with YARP reverse proxy and RabbitMQ messaging).
-     * Nexa Vault: .NET Core • Angular • AES-256 • Docker. (Secure document vault using AES-256 encryption and OAuth2 OIDC).
-     * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT. (Centralized SSO using OpenID Connect and mTLS).
-     * NEICE: .NET Framework • WCF • SQL Server • FIPS. (US National Electronic Interstate Compact Enterprise platform, FIPS-compliant, WCF SOAP services).
+3. PROJECTS — Include ALL 5, sorted by JD domain relevance (most relevant FIRST):
+     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry. (AI-powered tax document analysis using Semantic Kernel orchestration and pgvector semantic search with sub-200ms lookup).
+     * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services. (Financial procurement microservices platform with 3x throughput and 99.98% uptime SLA).
+     * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509. (Secure enterprise document vault with AES-256 encryption, OAuth2/OIDC, and mTLS certificate rotation).
+     * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache. (Centralized enterprise SSO with PKCE code flow, JWT caching, and mTLS service-to-service security).
+     * NEICE: .NET Framework 4.x • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508. (US National Electronic Interstate Compact Enterprise — FIPS-compliant multi-agency federal platform with WCF SOAP services).
 
 4. CERTIFICATIONS:
    - Microsoft Azure Developer Associate (AZ-204) | Microsoft | March 18, 2024
@@ -261,9 +260,9 @@ DYNAMIC TAILORING RULES
    - Return a list of dicts. For each company, tailor:
      * "role_title": Incorporate relevant JD tech keywords. e.g. "Senior .NET Developer" instead of plain "Senior Software Engineer" if .NET is the primary keyword, but keep Deloitte client context.
      * "tech_stack_line": Group technologies actually used in that role. Highlight ones matching the JD.
-     * "bullets": Write metrics-driven bullets matching the allowed metrics for that role. First 2 bullets of LTIMindtree must prioritize must-have skills from JD. Limit bullets per role: LTIMindtree (4 max), DSSI (3 max), Nexa (2 max), Kasadara (2 max).
-5. PROJECTS:
-   - Select 2 projects. Write name, tech_stack, and 2 tailored bullets detailing architecture decisions.
+     * "bullets": Write metrics-driven bullets matching the allowed metrics for that role. First 2 bullets of LTIMindtree must prioritize must-have skills from JD. Bullet count per role for 3-PAGE RESUME: LTIMindtree (6 bullets), DSSI (5 bullets), Nexa (4 bullets), Kasadara (3 bullets).
+5. PROJECTS — Include ALL 5 PROJECTS in order of JD relevance:
+   - Write name, tech_stack, and 3 tailored bullets each: 1 architecture rationale bullet (WHY those tech choices), 1 impact bullet (metrics), 1 JD-alignment bullet.
 6. CERTIFICATIONS:
    - List the 2-3 certifications relevant to this JD (e.g., adding AZ-204 highlight or NEICE as appropriate).
 
@@ -290,10 +289,29 @@ Return ONLY a JSON block structured as:
   "projects": [
     {
       "name": "AI Tax Document Analyser",
-      "tech_stack": "C# • .NET Core • Azure OpenAI • pgvector",
-      "bullets": ["...", "..."]
+      "tech_stack": "C# · .NET Core · Azure OpenAI GPT-4 · pgvector · Semantic Kernel · OpenTelemetry",
+      "bullets": ["...", "...", "..."]
     },
-    ...
+    {
+      "name": "e-ProcureZen",
+      "tech_stack": "C# · .NET 7 · Clean Architecture · CQRS · YARP Reverse Proxy · RabbitMQ · Redis · Docker · Azure App Services",
+      "bullets": ["...", "...", "..."]
+    },
+    {
+      "name": "Nexa Vault",
+      "tech_stack": ".NET Core · Angular · AES-256 Encryption · OAuth2/OIDC · Docker · SQL Server · mTLS · X.509",
+      "bullets": ["...", "...", "..."]
+    },
+    {
+      "name": "SSO Application",
+      "tech_stack": "ASP.NET Core · OAuth2 · OIDC · JWT · mTLS · X.509 · In-Memory Distributed Cache",
+      "bullets": ["...", "...", "..."]
+    },
+    {
+      "name": "NEICE",
+      "tech_stack": ".NET Framework 4.x · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
+      "bullets": ["...", "...", "..."]
+    }
   ],
   "certifications": [
     "...", "..."
@@ -322,8 +340,8 @@ Check and enforce:
    - Dynamic role titles and tech stack lines must remain factually grounded (only technologies used in that company are allowed).
    - Mentoring/team lead bullet must be position 1 in LTIMindtree if lead role is true.
    - First 2 bullets of LTIMindtree must use MUST-HAVE skills.
-   - Experience bullet limits: LTIMindtree (4), DSSI (3), Nexa (2), Kasadara (2).
-5. Projects: Max 2 projects, with 2 bullets each. Projects selected must match domain priority.
+   - Experience bullet limits for 3-PAGE RESUME: LTIMindtree (6), DSSI (5), Nexa (4), Kasadara (3).
+5. Projects: ALL 5 projects required. Each must have exactly 3 bullets (architecture rationale, impact metric, JD alignment). Ordered by JD domain relevance.
 6. Certifications: Dynamic certs list has 2-3 items matching JD.
 
 If any rule is violated, rewrite that section.
@@ -760,22 +778,35 @@ IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('dom
     print("[JCode Coordinator] Launching Project Expander Agent...")
     t0 = time.time()
     try:
-        # Pick 2 JD-relevant projects from the base facts
+        # Include ALL 5 projects — sort by JD domain relevance (most relevant first)
         domain = jd_context.get("company_domain", "technology")
         domain_lower = domain.lower()
-        project_priority = {
-            "ai": ["AI Tax Document Analyser", "e-ProcureZen"],
-            "fintech": ["e-ProcureZen", "AI Tax Document Analyser"],
-            "procurement": ["e-ProcureZen", "AI Tax Document Analyser"],
-            "government": ["NEICE", "SSO Application"],
-            "document": ["Nexa Vault", "SSO Application"],
-            "security": ["SSO Application", "Nexa Vault"],
-            "banking": ["e-ProcureZen", "SSO Application"],
+        # Full ordered list — always include all 5
+        selected_projects = [
+            "AI Tax Document Analyser",
+            "e-ProcureZen",
+            "Nexa Vault",
+            "SSO Application",
+            "NEICE",
+        ]
+        # Domain-based priority reordering — move most relevant to front
+        project_priority_front = {
+            "ai": "AI Tax Document Analyser",
+            "fintech": "e-ProcureZen",
+            "procurement": "e-ProcureZen",
+            "government": "NEICE",
+            "federal": "NEICE",
+            "document": "Nexa Vault",
+            "security": "SSO Application",
+            "banking": "e-ProcureZen",
+            "tax": "AI Tax Document Analyser",
+            "healthcare": "AI Tax Document Analyser",
+            "identity": "SSO Application",
         }
-        selected_projects = ["AI Tax Document Analyser", "e-ProcureZen"]  # default
-        for key, projs in project_priority.items():
-            if key in domain_lower:
-                selected_projects = projs
+        for key, priority_proj in project_priority_front.items():
+            if key in domain_lower and priority_proj in selected_projects:
+                selected_projects.remove(priority_proj)
+                selected_projects.insert(0, priority_proj)
                 break
 
         expanded_projs = expand_projects(
@@ -1166,10 +1197,14 @@ def build_clean_resume(tailored: dict, output_path: str):
     location_line = jd_context.get("location_line", "")
     if not location_line:
         is_intl = jd_context.get("is_international", False)
-        if not is_intl:
-            recruiter_wp = tailored.get("ats_report", {}).get("recruiter_weak_point", "").lower()
-            if "location is in india" in recruiter_wp:
-                is_intl = True
+        # CRITICAL: Never show 'Visa sponsorship required' for Indian jobs
+        INDIA_CITIES = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "pune",
+                        "mumbai", "delhi", "new delhi", "noida", "gurugram", "gurgaon",
+                        "kolkata", "kochi", "coimbatore", "trivandrum", "ahmedabad", "jaipur"}
+        job_country = jd_context.get("job_location_country", "").lower()
+        job_city = jd_context.get("job_location_city", "").lower()
+        if job_country == "india" or job_city in INDIA_CITIES:
+            is_intl = False
         if is_intl:
             location_line = "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
         else:

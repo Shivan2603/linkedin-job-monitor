@@ -344,11 +344,14 @@ def expand_projects(
             f"JD Mirror Phrases: {company_intelligence.get('jd_mirror_phrases', [])}\n"
             f"Resume Narrative Angle: {company_intelligence.get('resume_narrative_angle', '')}\n\n"
             f"Projects to expand:\n{json.dumps(selected_facts, indent=2)}\n\n"
-            f"Write deeply expanded project entries. Use ONLY the allowed_metrics listed. "
-            f"Include architecture rationale (why these tech choices), measurable impact, "
-            f"and JD alignment."
+            f"Write deeply expanded project entries for ALL {len(selected_facts)} projects. "
+            f"Each project MUST have exactly 3 bullets: "
+            f"(1) architecture rationale bullet - WHY those exact tech choices were made as trade-offs, "
+            f"(2) impact/metric bullet - quantified outcome using ONLY the allowed_metrics listed, "
+            f"(3) JD-alignment bullet - maps the project capability to the JD's primary requirement. "
+            f"Use ONLY the allowed_metrics listed. Do NOT invent new numbers."
         )
-        raw = ai_complete(PROJECT_EXPANDER_SYSTEM, prompt, task="tailor", max_tokens=1200)
+        raw = ai_complete(PROJECT_EXPANDER_SYSTEM, prompt, task="tailor", max_tokens=3000)
         result = parse_json_safely(raw)
         expanded = result.get("expanded_projects", [])
         print(f"    [ProjectExpander] Expanded {len(expanded)} project(s) with architecture rationale.")
