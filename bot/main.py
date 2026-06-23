@@ -113,19 +113,26 @@ def main():
             choice = cli_choice
             cli_choice = None
         else:
-            print("\n" + "=" * 60)
-            print("                UNIVERSAL JOB BOT CONTROL PANEL")
-            print("=" * 60)
-            print("  1. Run LinkedIn Bot only (Easy Apply + External Link Capturing)")
-            print("  2. Run Careers Bot only (Processes data/bulk_urls.txt interactively)")
-            print("  3. Run Indeed Bot only (Indeed Multi-Country automation)")
-            print("  4. Run All Sites in Shuffled Cycle (Careers first, LinkedIn second, others)")
-            print("  5. Run Proactive Cold Outreach Agent (24/7 Job Finder & Cold Emailer)")
+            print("\n" + "=" * 65)
+            print("           JCODE — UNIVERSAL JOB APPLICATION BOT")
+            print("=" * 65)
+            print("  JOB SITE BOTS:")
+            print("  1. LinkedIn Bot       (Easy Apply + Freelance + External Links)")
+            print("  2. Careers/Bulk Bot   (Processes bulk_urls.txt interactively)")
+            print("  3. Indeed Bot         (Multi-Country automation)")
+            print("  4. All Sites Cycle    (Careers → LinkedIn → Others, shuffled)")
+            print("")
+            print("  AGENTS:")
+            print("  5. Cold Outreach Agent (24/7 Job Finder + Cold Emailer)")
+            print("  7. ★ Build Hiring Package (Resume + Cover Letter + Interview Prep)")
+            print("     → Paste any JD → Get 3 tailored documents in seconds")
+            print("  8. ★ Follow-Up Email Agent (Auto-send 7-day follow-ups)")
+            print("")
             print("  6. Exit")
-            print("=" * 60 + "\n")
-            
+            print("=" * 65 + "\n")
+
             try:
-                choice = input("Select an option (1-6): ").strip()
+                choice = input("Select an option (1-8): ").strip()
             except (KeyboardInterrupt, SystemExit):
                 print("\nExiting.")
                 break
@@ -196,12 +203,79 @@ def main():
                 logger.error(f"Outreach Agent error: {e}", "main")
             if not sys.stdin.isatty():
                 break
-                
+
+        elif choice == "7":
+            # ══ BUILD FULL HIRING PACKAGE ══════════════════════════════
+            print("\n" + "=" * 65)
+            print("  ★  JCODE HIRING PACKAGE BUILDER")
+            print("  Generates: Resume + Cover Letter + Interview Prep Sheet")
+            print("=" * 65)
+            try:
+                company   = input("\n  Company name: ").strip()
+                job_title = input("  Job title:   ").strip()
+                print("\n  Paste the full Job Description below.")
+                print("  When done, type END on a new line and press Enter:\n")
+                jd_lines = []
+                while True:
+                    line = input()
+                    if line.strip().upper() == "END":
+                        break
+                    jd_lines.append(line)
+                jd_text = "\n".join(jd_lines).strip()
+
+                if not company or not job_title or not jd_text:
+                    print("  [!] Company, job title, and JD text are all required.")
+                else:
+                    print(f"\n  Building hiring package for: {job_title} @ {company}")
+                    print("  Running 14-agent pipeline... (this takes ~2-3 minutes)\n")
+                    from bot.ai_resume import tailor_resume
+                    result = tailor_resume(
+                        job_title=job_title,
+                        company=company,
+                        job_description=jd_text
+                    )
+                    print("\n" + "=" * 65)
+                    print("  ★  HIRING PACKAGE READY!")
+                    print("=" * 65)
+                    resume_path = result.get("resume_path", "")
+                    cl_path     = result.get("cover_letter_path", "")
+                    ip_path     = result.get("interview_prep_path", "")
+                    score       = result.get("match_score", "N/A")
+                    print(f"  ATS Score:       {score}%")
+                    print(f"  Resume:          {resume_path}")
+                    print(f"  Cover Letter:    {cl_path if cl_path else 'N/A'}")
+                    print(f"  Interview Prep:  {ip_path if ip_path else 'N/A'}")
+                    # Show why-hire if available
+                    why_hire = result.get("tailored", {}).get("top_5_why_hire", [])
+                    if why_hire:
+                        print("\n  TOP 5 REASONS TO HIRE SIVA FOR THIS ROLE:")
+                        for i, pt in enumerate(why_hire[:5], 1):
+                            print(f"    {i}. {pt}")
+                    print("=" * 65 + "\n")
+            except (KeyboardInterrupt, SystemExit):
+                print("\n  Hiring package builder cancelled.")
+            except Exception as e:
+                logger.error(f"Hiring Package Builder error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
+
         elif choice == "6":
             print("Exiting.")
             break
+
+        elif choice == "8":
+            logger.info("Running Follow-Up Email Agent...", "main")
+            try:
+                from bot.followup_email_agent import run_followup_agent
+                run_followup_agent()
+            except Exception as e:
+                logger.error(f"Follow-Up Agent error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
+
         else:
-            print("Invalid selection. Please choose 1, 2, 3, 4, 5, or 6.")
+            print("Invalid selection. Please choose 1-8.")
+
 
 if __name__ == "__main__":
     main()
