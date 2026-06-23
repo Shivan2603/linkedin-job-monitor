@@ -147,36 +147,38 @@ def _linkedin_country_selector() -> list:
     print("              LINKEDIN COUNTRY SELECTOR")
     print("=" * 65)
     print("  1. All Countries (Worldwide — maximum reach)")
-    print("  2. United Kingdom")
-    print("  3. United States")
-    print("  4. Australia")
-    print("  5. Canada")
-    print("  6. Singapore")
-    print("  7. Malaysia")
-    print("  8. UAE (Dubai)")
-    print("  9. Ireland (Dublin)")
-    print(" 10. View all other countries (Germany, Netherlands, etc.)")
+    print("  2. India (Remote/WFH)")
+    print("  3. United Kingdom")
+    print("  4. United States")
+    print("  5. Australia")
+    print("  6. Canada")
+    print("  7. Singapore")
+    print("  8. Malaysia")
+    print("  9. UAE (Dubai)")
+    print(" 10. Ireland (Dublin)")
+    print(" 11. View all other countries (Germany, Netherlands, etc.)")
     print("=" * 65 + "\n")
 
     try:
-        choice = input("  Select LinkedIn search scope (1-10): ").strip()
+        choice = input("  Select LinkedIn search scope (1-11): ").strip()
     except (KeyboardInterrupt, SystemExit, EOFError):
         logger.info("Country selection skipped. Defaulting to Worldwide.", SITE)
         return LINKEDIN_COUNTRIES  # All
 
     country_options = {
         "1":  ("Worldwide",       LINKEDIN_COUNTRIES),
-        "2":  ("United Kingdom",  [(c for c in LINKEDIN_COUNTRIES if "United Kingdom" in c[1]).__next__()]),
-        "3":  ("United States",   [(c for c in LINKEDIN_COUNTRIES if "United States"  in c[1]).__next__()]),
-        "4":  ("Australia",       [(c for c in LINKEDIN_COUNTRIES if "Australia"      in c[1]).__next__()]),
-        "5":  ("Canada",          [(c for c in LINKEDIN_COUNTRIES if "Canada"         in c[1]).__next__()]),
-        "6":  ("Singapore",       [(c for c in LINKEDIN_COUNTRIES if "Singapore"      in c[1]).__next__()]),
-        "7":  ("Malaysia",        [(c for c in LINKEDIN_COUNTRIES if "Malaysia"       in c[1]).__next__()]),
-        "8":  ("UAE",             [(c for c in LINKEDIN_COUNTRIES if "UAE"            in c[1]).__next__()]),
-        "9":  ("Ireland",         [(c for c in LINKEDIN_COUNTRIES if "Ireland"        in c[1]).__next__()]),
+        "2":  ("India",           [(c for c in LINKEDIN_COUNTRIES if "India" in c[1]).__next__()]),
+        "3":  ("United Kingdom",  [(c for c in LINKEDIN_COUNTRIES if "United Kingdom" in c[1]).__next__()]),
+        "4":  ("United States",   [(c for c in LINKEDIN_COUNTRIES if "United States"  in c[1]).__next__()]),
+        "5":  ("Australia",       [(c for c in LINKEDIN_COUNTRIES if "Australia"      in c[1]).__next__()]),
+        "6":  ("Canada",          [(c for c in LINKEDIN_COUNTRIES if "Canada"         in c[1]).__next__()]),
+        "7":  ("Singapore",       [(c for c in LINKEDIN_COUNTRIES if "Singapore"      in c[1]).__next__()]),
+        "8":  ("Malaysia",        [(c for c in LINKEDIN_COUNTRIES if "Malaysia"       in c[1]).__next__()]),
+        "9":  ("UAE",             [(c for c in LINKEDIN_COUNTRIES if "UAE"            in c[1]).__next__()]),
+        "10": ("Ireland",         [(c for c in LINKEDIN_COUNTRIES if "Ireland"        in c[1]).__next__()]),
     }
 
-    if choice == "10":
+    if choice == "11":
         others = [c for c in LINKEDIN_COUNTRIES
                   if not any(k in c[1] for k in ["India","United Kingdom","United States",
                                                    "Australia","Canada","Singapore",
@@ -184,12 +186,12 @@ def _linkedin_country_selector() -> list:
         print("\n" + "=" * 65)
         print("              OTHER AVAILABLE COUNTRIES")
         print("=" * 65)
-        for idx, (geo, name, _) in enumerate(others, 10):
+        for idx, (geo, name, _) in enumerate(others, 11):
             print(f" {idx:2d}. {name}")
         print("=" * 65 + "\n")
         try:
             sub = input("  Select country number: ").strip()
-            num = int(sub) - 10
+            num = int(sub) - 11
             if 0 <= num < len(others):
                 chosen = others[num]
                 logger.info(f"LinkedIn search scope: {chosen[1]}", SITE)
@@ -512,11 +514,7 @@ def _apply_to_job(page: Page, job_el) -> bool:
             ".jobs-unified-top-card__workplace-type",
         ]) or "Unknown"
 
-        # India Exclusions Filter
-        india_keywords = {"india", "bangalore", "bengaluru", "chennai", "hyderabad", "mumbai", "pune", "delhi", "noida", "gurgaon", "gurugram", "kolkata", "kochi", "coimbatore", "kerala"}
-        if any(k in location.lower() for k in india_keywords):
-            field_log("skip", f"{company} — {job_title}", f"Location is India ({location}) — skipping", SITE)
-            return False
+        # India Exclusions Filter removed to allow applications for Indian jobs
 
         job_desc = _text([
             "#job-details",
