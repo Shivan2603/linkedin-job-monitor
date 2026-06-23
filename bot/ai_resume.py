@@ -38,6 +38,8 @@ from bot.resume_research_agent import (
     write_perfect_fit_summary,
     deep_rewrite_projects,
 )
+from bot.cover_letter_agent import generate_cover_letter
+from bot.interview_prep_agent import generate_interview_prep
 
 # ─── LOCAL SWARM IMPLEMENTATION (FALLBACK) ─────────────────────────
 
@@ -945,20 +947,77 @@ JD:
     
     try:
         build_tailored_resume_from_json(final_tailored, job_title, company, out_path, job_description)
-        print(f"[JCode Coordinator] Document saved successfully to: {out_path}")
+        print(f"[JCode Coordinator] Resume saved: {out_path}")
     except Exception as e:
         print(f"[ERROR] Document creation failed: {e}")
         # Fallback copy
         doc = Document(BASE_RESUME_DOCX)
         doc.save(out_path)
-        
+
+    # ─── STEP 9: AUTO COVER LETTER ───────────────────────────────────────────
+    print("[JCode Coordinator] Launching Cover Letter Generator...")
+    t0 = time.time()
+    cover_letter_path = ""
+    try:
+        cl_filename = f"Siva_Shankar_{safe_role}_{safe_company}_CoverLetter.docx"
+        cl_path = os.path.join(TAILORED_TODAY, cl_filename)
+        cover_letter_path = generate_cover_letter(
+            job_title=job_title,
+            company=company,
+            job_description=job_description,
+            jd_context=jd_context,
+            company_intelligence=company_intelligence,
+            analysis=analysis,
+            output_path=cl_path,
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("CoverLetterAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("CoverLetterAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [CoverLetter] Failed: {e}")
+
+    # ─── STEP 10: INTERVIEW PREP SHEET ────────────────────────────────────────
+    print("[JCode Coordinator] Launching Interview Prep Generator...")
+    t0 = time.time()
+    interview_prep_path = ""
+    try:
+        ip_filename = f"Siva_Shankar_{safe_role}_{safe_company}_InterviewPrep.txt"
+        ip_path = os.path.join(TAILORED_TODAY, ip_filename)
+        interview_prep_path = generate_interview_prep(
+            job_title=job_title,
+            company=company,
+            job_description=job_description,
+            jd_context=jd_context,
+            company_intelligence=company_intelligence,
+            analysis=analysis,
+            output_path=ip_path,
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("InterviewPrepAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("InterviewPrepAgent", time.time() - t0, f"failed: {e}")
+        print(f"    [InterviewPrep] Failed: {e}")
+
+    # ─── FINAL: PACKAGE SUMMARY ──────────────────────────────────────────────
+    ats_score = final_tailored.get("coverage_report", {}).get("final_ats_score",
+                final_tailored.get("ats_report", {}).get("match_score", 100))
+    print(f"\n{'='*60}")
+    print(f"  JCode Package Complete for: {job_title} @ {company}")
+    print(f"  ATS Score:      {ats_score}%")
+    print(f"  Resume:         {os.path.basename(out_path)}")
+    print(f"  Cover Letter:   {os.path.basename(cover_letter_path) if cover_letter_path else 'N/A'}")
+    print(f"  Interview Prep: {os.path.basename(interview_prep_path) if interview_prep_path else 'N/A'}")
+    print(f"{'='*60}\n")
+
     res = {
-        "resume_path": out_path,
-        "resume_pdf_path": out_path.replace(".docx", ".pdf") if out_path else "",
-        "match_score": final_tailored.get("ats_report", {}).get("match_score", 100),
-        "tailored":    final_tailored
+        "resume_path":        out_path,
+        "resume_pdf_path":    out_path.replace(".docx", ".pdf") if out_path else "",
+        "cover_letter_path":  cover_letter_path,
+        "interview_prep_path": interview_prep_path,
+        "match_score":        ats_score,
+        "tailored":           final_tailored
     }
-            
+
     return res
 
 def build_clean_resume(tailored: dict, output_path: str):
