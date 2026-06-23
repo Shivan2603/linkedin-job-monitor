@@ -12,7 +12,7 @@ PERMANENT FIXES (applied to every resume generated):
   [F6]  "improve, design, code and test" 4-verb phrase enforced in latest role
   [F7]  "international team environment" phrase enforced in summary
   [F8]  Company-specific closing line enforced in summary
-  [F9]  Max 3 projects enforced — ranked by JD relevance
+  [F9]  Max 5 projects enforced — ranked by JD relevance (3-page resume)
   [F10] No bold sub-headers inside experience bullets
 ═══════════════════════════════════════════════════════════════
 USAGE:
@@ -280,10 +280,10 @@ def validate_jobs(jobs: list) -> list:
 
 
 def validate_projects(projects: list) -> list:
-    """[F9] Enforce maximum 3 projects."""
-    if len(projects) > 3:
-        print(f"  [WARN][F9] {len(projects)} projects found — trimming to 3 most relevant.")
-        projects = projects[:3]
+    """[F9] Enforce maximum 5 projects (3-page resume allows all 5 portfolio projects)."""
+    if len(projects) > 5:
+        print(f"  [WARN][F9] {len(projects)} projects found — trimming to 5 most relevant.")
+        projects = projects[:5]
     return [{**p, "bullets": [strip_emojis(b) for b in p.get("bullets", [])]} for p in projects]
 
 
@@ -408,7 +408,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
     print(f"  [F6] 4-verb phrase: enforced in latest role bullets")
     print(f"  [F7] Intl phrase:   enforced in summary")
     print(f"  [F8] Company close: enforced ('{config.company}')")
-    print(f"  [F9] Projects:      {len(projects)} (max 3)")
+    print(f"  [F9] Projects:      {len(projects)} (max 5 for 3-page resume)")
     print(f"  [F10] Sub-headers:  0 in experience bullets")
     print()
 
@@ -1733,7 +1733,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 {"name": p["name"], "tech": p["tech"], "bullets": p["bullets"]} 
                 for p in DEFAULT_PROJECTS_POOL
             ]
-        for idx, p in enumerate(raw_projects[:2]):
+        for idx, p in enumerate(raw_projects[:5]):  # Allow all 5 projects for 3-page resume
             name = p.get("name") or p.get("title") or ""
             tech = p.get("tech_stack") or p.get("tech") or ""
             bullets = p.get("bullets") or p.get("description") or []
@@ -1762,7 +1762,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 
             allowed = extract_allowed_facts(name)
             validated_proj_bullets = []
-            for p_idx, pb in enumerate(bullets[:2]):
+            for p_idx, pb in enumerate(bullets[:3]):
                 ok_soft, err_soft = verify_soft_skills(pb)
                 if not ok_soft:
                     dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
@@ -1829,9 +1829,9 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     pages = verify_docx_pages(output_file)
     print(f"  [ATS-GUARD] Initial rendered page count: {pages}")
     
-    # Page Count Escalation Trimming Path
-    if pages > 2:
-        print("  [ATS-GUARD] Page count exceeds 2. Escalation Step 1: Drop Kasadara bullet 2.")
+    # Page Count Escalation Trimming Path — allow up to 3 pages
+    if pages > 3:
+        print("  [ATS-GUARD] Page count exceeds 3. Escalation Step 1: Drop Kasadara bullet 3.")
         for job in config.jobs:
             if "kasadara" in job["company"].lower():
                 if len(job["bullets"]) > 1:
@@ -1841,8 +1841,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 1: {pages}")
         
-    if pages > 2:
-        print("  [ATS-GUARD] Page count still exceeds 2. Escalation Step 2: Drop last DSSI bullet.")
+    if pages > 3:
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 2: Drop last DSSI bullet.")
         for job in config.jobs:
             if "dssi" in job["company"].lower():
                 if len(job["bullets"]) > 1:
@@ -1852,23 +1852,23 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 2: {pages}")
         
-    if pages > 2:
-        print("  [ATS-GUARD] Page count still exceeds 2. Escalation Step 3: Drop 2nd project.")
-        if len(config.projects) > 1:
-            config.projects = [config.projects[0]]
+    if pages > 3:
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 3: Drop last 2 projects.")
+        if len(config.projects) > 3:
+            config.projects = config.projects[:3]
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 3: {pages}")
 
-    if pages > 2:
-        print("  [ATS-GUARD] Page count still exceeds 2. Escalation Step 4: Tighten layout spacing.")
+    if pages > 3:
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 4: Tighten layout spacing.")
         config.tighten_spacing = True
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 4: {pages}")
 
-    if pages > 2:
-        print("  [ATS-GUARD] Page count still exceeds 2. Escalation Step 5: Drop Nexa bullet 2.")
+    if pages > 3:
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 5: Drop Nexa bullet 3.")
         for job in config.jobs:
             if "nexa" in job["company"].lower():
                 if len(job["bullets"]) > 1:
@@ -1907,8 +1907,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                     config.skills["Methodology & Tools"].append(formatted_kw)
             build_resume_docx(config)
             pages = verify_docx_pages(output_file)
-            if pages > 2:
-                print("  [ATS-GUARD] Spacing check: Optimized resume exceeded 2 pages. Tightening spacing.")
+            if pages > 3:
+                print("  [ATS-GUARD] Spacing check: Optimized resume exceeded 3 pages. Tightening spacing.")
                 config.tighten_spacing = True
                 build_resume_docx(config)
         else:
@@ -1961,7 +1961,7 @@ def ats_self_check(config: ResumeConfig, output_file: str):
         ">=2 exact JD phrases":      True,
         "Every bullet has a number": True,
         "Skills = plain category:":  True,
-        "Max 3 projects":            len(config.projects) <= 3,
+        "Max 5 projects (3-page)":   len(config.projects) <= 5,
         "Output is DOCX":            output_file.endswith(".docx"),
         "Zero fabricated data":      True,
     }
