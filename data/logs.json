@@ -1,5 +1,1321 @@
 [
   {
+    "id": "f867a600",
+    "ts": "2026-06-25T22:22:48.469114",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Eurofins | Senior Fullstack Developer (.Net Core | Bangarapet, Karnataka, India | 100% match"
+  },
+  {
+    "id": "db50ee59",
+    "ts": "2026-06-25T22:22:48.174286",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Eurofins — Senior Fullstack Developer (.Net Core"
+  },
+  {
+    "id": "da2383ee",
+    "ts": "2026-06-25T22:22:19.887547",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "c1b12097",
+    "ts": "2026-06-25T22:22:19.615873",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Please list the primary technologies you’ve worked with and mention any advanced or latest versions used (e.g., .NET 6, Angular 15, Python 3.11, etc.).' = 'No'"
+  },
+  {
+    "id": "e88bb348",
+    "ts": "2026-06-25T22:22:19.438621",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Which tools, platforms, or technologies are you proficient in? (e.g., Jira, GitHub, MS Project, AI tools, etc.)' = 'No'"
+  },
+  {
+    "id": "a331de80",
+    "ts": "2026-06-25T22:22:06.175318",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "279f23df",
+    "ts": "2026-06-25T22:22:05.929764",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Fullstack_Developer_.NET_Core_Eurofins_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Fullstack_Developer_.NET_Core_Eurofins_Resume.docx'"
+  },
+  {
+    "id": "e83f96e2",
+    "ts": "2026-06-25T22:22:00.598762",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "e703f6c2",
+    "ts": "2026-06-25T22:22:00.358071",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = '((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")'"
+  },
+  {
+    "id": "f6a8fe21",
+    "ts": "2026-06-25T22:22:00.188497",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Location (city)' = 'Tamil Nadu, India'"
+  },
+  {
+    "id": "4af2ebb1",
+    "ts": "2026-06-25T22:21:58.066060",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "3c2de2f4",
+    "ts": "2026-06-25T22:21:57.893286",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "12a7701f",
+    "ts": "2026-06-25T22:21:57.537173",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "2774adba",
+    "ts": "2026-06-25T22:21:57.372590",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "9544ad59",
+    "ts": "2026-06-25T22:21:56.959792",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "fc750767",
+    "ts": "2026-06-25T22:21:56.392564",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "674a1b74",
+    "ts": "2026-06-25T22:21:55.821137",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "426a27b4",
+    "ts": "2026-06-25T22:21:55.189642",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b4bb49a5",
+    "ts": "2026-06-25T22:21:50.059746",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "6f928d56",
+    "ts": "2026-06-25T22:21:37.586398",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (verify)"
+  },
+  {
+    "id": "0ce92dcf",
+    "ts": "2026-06-25T22:21:35.108899",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "f78cbfea",
+    "ts": "2026-06-25T22:21:34.702937",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "4afeaac7",
+    "ts": "2026-06-25T22:21:34.142653",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "db6e4e96",
+    "ts": "2026-06-25T22:21:33.709087",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "71b543ba",
+    "ts": "2026-06-25T22:21:32.819168",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "94b18d9f",
+    "ts": "2026-06-25T22:21:31.937339",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c8190a19",
+    "ts": "2026-06-25T22:21:26.267668",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "ed020be5",
+    "ts": "2026-06-25T22:21:24.792768",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (analyze)"
+  },
+  {
+    "id": "f0cf000f",
+    "ts": "2026-06-25T22:21:24.699531",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "6061103b",
+    "ts": "2026-06-25T22:21:13.604888",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "25c4df70",
+    "ts": "2026-06-25T22:21:10.986407",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c36a08b2",
+    "ts": "2026-06-25T22:21:10.775202",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "44cafcd8",
+    "ts": "2026-06-25T22:21:08.951765",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "74a0ec64",
+    "ts": "2026-06-25T22:21:08.286575",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "803947d7",
+    "ts": "2026-06-25T22:21:07.610814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "1f3c549c",
+    "ts": "2026-06-25T22:21:06.963052",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "bd98505f",
+    "ts": "2026-06-25T22:21:04.713392",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "90bb2dbd",
+    "ts": "2026-06-25T22:21:04.551833",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "73fc7043",
+    "ts": "2026-06-25T22:21:04.204203",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "aa12b883",
+    "ts": "2026-06-25T22:21:04.073351",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "2fabfe1f",
+    "ts": "2026-06-25T22:21:03.379536",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "47a137e6",
+    "ts": "2026-06-25T22:21:03.139847",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "ef977ee2",
+    "ts": "2026-06-25T22:21:02.846311",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d5be9dd0",
+    "ts": "2026-06-25T22:21:02.344989",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "e7896d30",
+    "ts": "2026-06-25T22:21:01.777225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "09b3ab64",
+    "ts": "2026-06-25T22:20:57.287489",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "70756589",
+    "ts": "2026-06-25T22:20:49.234117",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "e847737b",
+    "ts": "2026-06-25T22:20:44.736293",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "f7dedb4e",
+    "ts": "2026-06-25T22:20:42.761126",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "e1201a60",
+    "ts": "2026-06-25T22:20:42.534052",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "7e7a27dd",
+    "ts": "2026-06-25T22:20:42.294190",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d202b678",
+    "ts": "2026-06-25T22:20:42.051536",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "93656274",
+    "ts": "2026-06-25T22:20:41.988502",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "21ddb2b6",
+    "ts": "2026-06-25T22:20:41.649773",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "8903acef",
+    "ts": "2026-06-25T22:20:41.319300",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "de9a3701",
+    "ts": "2026-06-25T22:20:41.145358",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "4dc19a60",
+    "ts": "2026-06-25T22:20:40.885962",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "c3b4fa7a",
+    "ts": "2026-06-25T22:20:40.649339",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "9210462d",
+    "ts": "2026-06-25T22:20:40.262228",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "bbcc3283",
+    "ts": "2026-06-25T22:20:40.132178",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "3f9a4602",
+    "ts": "2026-06-25T22:20:35.092394",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "b3683a5f",
+    "ts": "2026-06-25T22:20:34.384066",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "47b8a3fe",
+    "ts": "2026-06-25T22:20:22.606561",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Senior Fullstack Developer (.NET Core) @ Eurofins"
+  },
+  {
+    "id": "9a9f8067",
+    "ts": "2026-06-25T22:20:21.910196",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (rerank)"
+  },
+  {
+    "id": "6cc8b19f",
+    "ts": "2026-06-25T22:20:21.065122",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "8f83308d",
+    "ts": "2026-06-25T22:20:20.905561",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c0a2d072",
+    "ts": "2026-06-25T22:20:20.294951",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "7eb2c05f",
+    "ts": "2026-06-25T22:20:19.918106",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8b3fc816",
+    "ts": "2026-06-25T22:20:19.521442",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "71ca900d",
+    "ts": "2026-06-25T22:20:19.178024",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "fe6a39f4",
+    "ts": "2026-06-25T22:20:13.920363",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "fdcb22c4",
+    "ts": "2026-06-25T22:20:04.605192",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (verify)"
+  },
+  {
+    "id": "ad685dd1",
+    "ts": "2026-06-25T22:20:01.743533",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9c8b30d7",
+    "ts": "2026-06-25T22:20:01.655903",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "818b9ee4",
+    "ts": "2026-06-25T22:20:01.487314",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "f4cca9dd",
+    "ts": "2026-06-25T22:20:01.158934",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "6c4c0216",
+    "ts": "2026-06-25T22:20:00.664463",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "92d3333f",
+    "ts": "2026-06-25T22:20:00.605987",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "b81ae38d",
+    "ts": "2026-06-25T22:20:00.499373",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "2abbfa14",
+    "ts": "2026-06-25T22:20:00.164171",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8f29ab76",
+    "ts": "2026-06-25T22:20:00.047782",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "881eb343",
+    "ts": "2026-06-25T22:19:59.644268",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "e9ff6d23",
+    "ts": "2026-06-25T22:19:59.598989",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "4699ac9f",
+    "ts": "2026-06-25T22:19:58.975180",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "64f3690a",
+    "ts": "2026-06-25T22:19:58.479198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d5ab2497",
+    "ts": "2026-06-25T22:19:54.581139",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "8a2584af",
+    "ts": "2026-06-25T22:19:53.317154",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "1dd4e6b7",
+    "ts": "2026-06-25T22:19:41.992019",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "11f9a82c",
+    "ts": "2026-06-25T22:19:41.365751",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "b0d2556a",
+    "ts": "2026-06-25T22:19:41.271326",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "e9776797",
+    "ts": "2026-06-25T22:19:40.922750",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "2b0341a6",
+    "ts": "2026-06-25T22:19:40.789534",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "cab1236e",
+    "ts": "2026-06-25T22:19:40.437307",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "50bf614e",
+    "ts": "2026-06-25T22:19:40.109037",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "0c3b0499",
+    "ts": "2026-06-25T22:19:39.793072",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "aac581fc",
+    "ts": "2026-06-25T22:19:39.680288",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "bf1a953f",
+    "ts": "2026-06-25T22:19:39.615266",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "21ffde87",
+    "ts": "2026-06-25T22:19:39.205203",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "eaefbbf9",
+    "ts": "2026-06-25T22:19:38.671352",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "f3a48b27",
+    "ts": "2026-06-25T22:19:38.182672",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "95027fcf",
+    "ts": "2026-06-25T22:19:37.693108",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "9c1a00ad",
+    "ts": "2026-06-25T22:19:34.682199",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "c63602b8",
+    "ts": "2026-06-25T22:19:32.578470",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "9b7cb775",
+    "ts": "2026-06-25T22:19:22.006146",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (verify)"
+  },
+  {
+    "id": "eb74c0fa",
+    "ts": "2026-06-25T22:19:19.969654",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "499db037",
+    "ts": "2026-06-25T22:19:18.893601",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7add541b",
+    "ts": "2026-06-25T22:19:18.814199",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "fa4f6882",
+    "ts": "2026-06-25T22:19:18.674721",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "55ce92b9",
+    "ts": "2026-06-25T22:19:18.608787",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "e71b92db",
+    "ts": "2026-06-25T22:19:18.369761",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "6d087591",
+    "ts": "2026-06-25T22:19:18.135321",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a62130b9",
+    "ts": "2026-06-25T22:19:18.088700",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "24f01296",
+    "ts": "2026-06-25T22:19:17.617381",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8d7e5c95",
+    "ts": "2026-06-25T22:19:17.617381",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e1fbdabc",
+    "ts": "2026-06-25T22:19:17.293002",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "3db25a11",
+    "ts": "2026-06-25T22:19:16.963707",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8eea054c",
+    "ts": "2026-06-25T22:19:16.451390",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "31c57768",
+    "ts": "2026-06-25T22:19:12.025744",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "9fa12697",
+    "ts": "2026-06-25T22:19:11.184750",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "de27874e",
+    "ts": "2026-06-25T22:18:59.588875",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (verify)"
+  },
+  {
+    "id": "0c0b1d67",
+    "ts": "2026-06-25T22:18:54.196517",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "e0c8facf",
+    "ts": "2026-06-25T22:18:54.029435",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "565940a0",
+    "ts": "2026-06-25T22:18:53.644347",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b1eb7680",
+    "ts": "2026-06-25T22:18:53.227223",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "b53f108c",
+    "ts": "2026-06-25T22:18:52.813388",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "f6e0c93d",
+    "ts": "2026-06-25T22:18:52.340420",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "deb884ea",
+    "ts": "2026-06-25T22:18:47.164045",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "956ea764",
+    "ts": "2026-06-25T22:18:34.435391",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (verify)"
+  },
+  {
+    "id": "988f6b4d",
+    "ts": "2026-06-25T22:18:32.377505",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "2fdd8e43",
+    "ts": "2026-06-25T22:18:32.164677",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "2852610c",
+    "ts": "2026-06-25T22:18:31.674608",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "3863fa8d",
+    "ts": "2026-06-25T22:18:31.155680",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1d732030",
+    "ts": "2026-06-25T22:18:30.673400",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e3bdb5fa",
+    "ts": "2026-06-25T22:18:30.246502",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d098b964",
+    "ts": "2026-06-25T22:18:25.205785",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "f146043c",
+    "ts": "2026-06-25T22:18:12.632663",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "2c8cd645",
+    "ts": "2026-06-25T22:18:08.182144",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7f0d0de2",
+    "ts": "2026-06-25T22:18:08.013420",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "6bd423ec",
+    "ts": "2026-06-25T22:18:07.422569",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "13eebf12",
+    "ts": "2026-06-25T22:18:06.963679",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "588d79d8",
+    "ts": "2026-06-25T22:18:06.326413",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "98584abb",
+    "ts": "2026-06-25T22:18:05.701792",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "4475904a",
+    "ts": "2026-06-25T22:18:00.671266",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "d4e5227b",
+    "ts": "2026-06-25T22:17:48.158081",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (tailor)"
+  },
+  {
+    "id": "d3d9c496",
+    "ts": "2026-06-25T22:17:40.262571",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "f2aa6f9b",
+    "ts": "2026-06-25T22:17:40.055965",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "303abd18",
+    "ts": "2026-06-25T22:17:39.349195",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d62eb6d9",
+    "ts": "2026-06-25T22:17:38.557664",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "cecdfae2",
+    "ts": "2026-06-25T22:17:37.736667",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "50d543f1",
+    "ts": "2026-06-25T22:17:37.112841",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "b45ab4f5",
+    "ts": "2026-06-25T22:17:36.894748",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "98e627c9",
+    "ts": "2026-06-25T22:17:24.258238",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (rerank)"
+  },
+  {
+    "id": "e41485f0",
+    "ts": "2026-06-25T22:17:22.945608",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "4f2da4c3",
+    "ts": "2026-06-25T22:17:22.763849",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "1eef26c2",
+    "ts": "2026-06-25T22:17:22.348343",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "22ad09ef",
+    "ts": "2026-06-25T22:17:21.873584",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "12ac41a1",
+    "ts": "2026-06-25T22:17:21.411552",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "197f5a04",
+    "ts": "2026-06-25T22:17:20.953895",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "ae8f63ae",
+    "ts": "2026-06-25T22:17:15.760656",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "aeada596",
+    "ts": "2026-06-25T22:17:03.315189",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "0a7396b2",
+    "ts": "2026-06-25T22:17:02.378555",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "8a58f49e",
+    "ts": "2026-06-25T22:17:02.225556",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "2c16b6ec",
+    "ts": "2026-06-25T22:17:01.749010",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "07601296",
+    "ts": "2026-06-25T22:17:01.197486",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d29da09b",
+    "ts": "2026-06-25T22:17:00.773658",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7094cd5a",
+    "ts": "2026-06-25T22:17:00.134347",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "800dfb8b",
+    "ts": "2026-06-25T22:16:54.388829",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "8a5835a4",
+    "ts": "2026-06-25T22:16:41.977032",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "851ece9f",
+    "ts": "2026-06-25T22:16:40.697921",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "01f6dfea",
+    "ts": "2026-06-25T22:16:40.353083",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "117f8fbf",
+    "ts": "2026-06-25T22:16:39.152898",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "c09140cd",
+    "ts": "2026-06-25T22:16:38.657464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "763a3dab",
+    "ts": "2026-06-25T22:16:38.070551",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d15e31e1",
+    "ts": "2026-06-25T22:16:37.649649",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "de29cd1a",
+    "ts": "2026-06-25T22:16:32.263326",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "84103777",
+    "ts": "2026-06-25T22:16:19.791945",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Groq (analyze)"
+  },
+  {
+    "id": "537f4ac3",
+    "ts": "2026-06-25T22:16:18.300024",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d0205d4b",
+    "ts": "2026-06-25T22:16:18.116774",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "d0e35106",
+    "ts": "2026-06-25T22:16:17.724228",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "ea47a67b",
+    "ts": "2026-06-25T22:16:17.295911",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8cc4d8ce",
+    "ts": "2026-06-25T22:16:16.858593",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "875e58e2",
+    "ts": "2026-06-25T22:16:16.344814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "ddfcff68",
+    "ts": "2026-06-25T22:16:11.137581",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "523ea5a0",
+    "ts": "2026-06-25T22:15:51.767145",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "8c6cd17f",
+    "ts": "2026-06-25T22:15:44.191608",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "409765a3",
+    "ts": "2026-06-25T22:15:44.016509",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "cc271b71",
+    "ts": "2026-06-25T22:15:43.849801",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 3 jobs for '.Net' in India"
+  },
+  {
+    "id": "64c8422c",
+    "ts": "2026-06-25T22:14:52.846195",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for SimCorp — Lead/Sr. Backend Software Engineer (C#.NET with Azure to bulk_urls.txt"
+  },
+  {
     "id": "7703912e",
     "ts": "2026-06-25T22:14:31.263824",
     "level": "SUCCESS",
@@ -2182,1321 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "00de3cdb",
-    "ts": "2026-06-24T00:12:05.441702",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "20cf513f",
-    "ts": "2026-06-24T00:12:05.126410",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "a34cdf71",
-    "ts": "2026-06-24T00:12:00.075727",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "9c5e296b",
-    "ts": "2026-06-24T00:11:47.767217",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "6e9326a7",
-    "ts": "2026-06-24T00:11:47.686367",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "20f4a2cf",
-    "ts": "2026-06-24T00:11:47.503885",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "dc96979c",
-    "ts": "2026-06-24T00:11:46.854089",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "8ba52d21",
-    "ts": "2026-06-24T00:11:46.670741",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "86a3216e",
-    "ts": "2026-06-24T00:11:46.493931",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "4308c0f0",
-    "ts": "2026-06-24T00:11:45.717474",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "70e5addc",
-    "ts": "2026-06-24T00:11:45.538837",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "c8549d4b",
-    "ts": "2026-06-24T00:11:45.223342",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "88e571ad",
-    "ts": "2026-06-24T00:11:45.082257",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "b4d43586",
-    "ts": "2026-06-24T00:11:44.889121",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "61976cca",
-    "ts": "2026-06-24T00:11:44.622366",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "d2ad3024",
-    "ts": "2026-06-24T00:11:44.443723",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "f8970452",
-    "ts": "2026-06-24T00:11:44.232586",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "e3b10ccb",
-    "ts": "2026-06-24T00:11:44.031989",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "5fceb493",
-    "ts": "2026-06-24T00:11:43.767273",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "00c6ce84",
-    "ts": "2026-06-24T00:11:42.618709",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "3440d264",
-    "ts": "2026-06-24T00:11:41.839361",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "5999cff8",
-    "ts": "2026-06-24T00:11:37.352962",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "522000d1",
-    "ts": "2026-06-24T00:11:37.164805",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "79298e7c",
-    "ts": "2026-06-24T00:11:36.852320",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "0441c7c6",
-    "ts": "2026-06-24T00:11:36.673917",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "2443152d",
-    "ts": "2026-06-24T00:11:36.258984",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "03c55447",
-    "ts": "2026-06-24T00:11:35.871985",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "b5b2127b",
-    "ts": "2026-06-24T00:11:35.413992",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "422a865c",
-    "ts": "2026-06-24T00:11:34.845866",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "54852acb",
-    "ts": "2026-06-24T00:11:29.788875",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "69773f63",
-    "ts": "2026-06-24T00:11:17.452333",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (analyze)"
-  },
-  {
-    "id": "06a8c260",
-    "ts": "2026-06-24T00:11:17.367207",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (free)"
-  },
-  {
-    "id": "9ebbcdb0",
-    "ts": "2026-06-24T00:10:58.115267",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "88ed0d3a",
-    "ts": "2026-06-24T00:10:58.021886",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "e7724ba9",
-    "ts": "2026-06-24T00:10:57.833586",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "4288e646",
-    "ts": "2026-06-24T00:10:57.731764",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "f6ab0c1c",
-    "ts": "2026-06-24T00:10:57.239189",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "9b11f6d0",
-    "ts": "2026-06-24T00:10:56.758997",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "90ca35e8",
-    "ts": "2026-06-24T00:10:56.394787",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "14fdc87b",
-    "ts": "2026-06-24T00:10:55.925938",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "0d05b8e1",
-    "ts": "2026-06-24T00:10:50.812591",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "e18f7298",
-    "ts": "2026-06-24T00:10:38.504915",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (analyze)"
-  },
-  {
-    "id": "ebf22e4c",
-    "ts": "2026-06-24T00:10:38.369612",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (free)"
-  },
-  {
-    "id": "c398ca50",
-    "ts": "2026-06-24T00:10:18.435806",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "499eaedb",
-    "ts": "2026-06-24T00:10:18.303280",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "0da8e09b",
-    "ts": "2026-06-24T00:10:18.068214",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d1fd15c5",
-    "ts": "2026-06-24T00:10:17.968154",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "e9b86338",
-    "ts": "2026-06-24T00:10:17.478049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "41b43478",
-    "ts": "2026-06-24T00:10:16.970417",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "cb0567be",
-    "ts": "2026-06-24T00:10:16.456011",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "1415b9c3",
-    "ts": "2026-06-24T00:10:15.856185",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "53c28ddd",
-    "ts": "2026-06-24T00:10:10.632297",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "3e11c249",
-    "ts": "2026-06-24T00:08:17.688587",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "acf8dd90",
-    "ts": "2026-06-24T00:08:17.623161",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "6e02fe54",
-    "ts": "2026-06-24T00:08:17.365798",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "554a2d85",
-    "ts": "2026-06-24T00:08:16.994636",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "d5b6531f",
-    "ts": "2026-06-24T00:08:16.807420",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "03fedae7",
-    "ts": "2026-06-24T00:08:14.274335",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free returned empty choices, trying next..."
-  },
-  {
-    "id": "3b214b28",
-    "ts": "2026-06-24T00:07:29.367420",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "7e82a552",
-    "ts": "2026-06-24T00:07:29.048375",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "1826cda1",
-    "ts": "2026-06-24T00:07:28.854683",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "7e5a22b1",
-    "ts": "2026-06-24T00:07:28.724643",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "d510f52a",
-    "ts": "2026-06-24T00:07:28.569594",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "6b982666",
-    "ts": "2026-06-24T00:07:28.386627",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "3473b123",
-    "ts": "2026-06-24T00:07:28.184176",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "df13a8d8",
-    "ts": "2026-06-24T00:07:27.983697",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "42d458f9",
-    "ts": "2026-06-24T00:07:27.799911",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "9d5dc84a",
-    "ts": "2026-06-24T00:07:27.457206",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "58ed68d9",
-    "ts": "2026-06-24T00:07:26.420386",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "a937efec",
-    "ts": "2026-06-24T00:07:25.650024",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "925cef7d",
-    "ts": "2026-06-24T00:07:21.675863",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "856f196e",
-    "ts": "2026-06-24T00:07:21.575738",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "a06a3995",
-    "ts": "2026-06-24T00:07:21.365980",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "eaeca492",
-    "ts": "2026-06-24T00:07:21.274061",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "99c8adb6",
-    "ts": "2026-06-24T00:07:20.937142",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "6fb18e2b",
-    "ts": "2026-06-24T00:07:20.577643",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "de92e0be",
-    "ts": "2026-06-24T00:07:20.180425",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "0d8f827d",
-    "ts": "2026-06-24T00:07:19.882091",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "6b8ed97e",
-    "ts": "2026-06-24T00:07:14.807516",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "faee481f",
-    "ts": "2026-06-24T00:07:02.422885",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "33507a26",
-    "ts": "2026-06-24T00:07:02.336473",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior .NET Developer @ insightsoftware"
-  },
-  {
-    "id": "a38a8369",
-    "ts": "2026-06-24T00:06:46.668441",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "19e12f08",
-    "ts": "2026-06-24T00:06:46.581700",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-mini-4b-128k:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "c2c128d0",
-    "ts": "2026-06-24T00:06:46.451803",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "04efa3fe",
-    "ts": "2026-06-24T00:06:46.263993",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-thinking:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "aeb2f386",
-    "ts": "2026-06-24T00:06:46.101717",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm2.5-1.2b-instruct:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "fd84a9d3",
-    "ts": "2026-06-24T00:06:45.932379",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "ec9b8364",
-    "ts": "2026-06-24T00:06:45.162087",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-4o-mini:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "8d97f6cb",
-    "ts": "2026-06-24T00:06:44.986726",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nex-gpt/nex-n2-pro:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "61e8167e",
-    "ts": "2026-06-24T00:06:44.834176",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.3-nemotron-super-49b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "7c5ba3c0",
-    "ts": "2026-06-24T00:06:44.664590",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-it:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "05647e79",
-    "ts": "2026-06-24T00:06:44.489481",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/llama-3.1-nemotron-nano-8b-v1:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "d24bad32",
-    "ts": "2026-06-24T00:06:44.152298",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-super-49b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "1cd19816",
-    "ts": "2026-06-24T00:06:44.001144",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-ultra-253b-v1:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "c7db47b9",
-    "ts": "2026-06-24T00:06:43.814611",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-30b-a3b:free failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completio"
-  },
-  {
-    "id": "4281fe58",
-    "ts": "2026-06-24T00:06:43.639110",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder-480b-a35b:free failed: 400 Client Error: Bad Request for url: https://openrouter.ai/api/v1/chat/complet"
-  },
-  {
-    "id": "e663039b",
-    "ts": "2026-06-24T00:06:43.449394",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "5a1fe25c",
-    "ts": "2026-06-24T00:06:42.353744",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "d18ae597",
-    "ts": "2026-06-24T00:06:41.534518",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "84715c28",
-    "ts": "2026-06-24T00:06:37.350488",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "9f9e3603",
-    "ts": "2026-06-24T00:06:37.264059",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "ae8b9893",
-    "ts": "2026-06-24T00:06:37.076276",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "025d6047",
-    "ts": "2026-06-24T00:06:36.975303",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "e0a65597",
-    "ts": "2026-06-24T00:06:36.626822",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "2dbf9329",
-    "ts": "2026-06-24T00:06:36.290967",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "409abd0c",
-    "ts": "2026-06-24T00:06:35.930405",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "e09736cd",
-    "ts": "2026-06-24T00:06:35.619805",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "3373d068",
-    "ts": "2026-06-24T00:06:30.539448",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "564f236b",
-    "ts": "2026-06-24T00:06:18.040855",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "822853b9",
-    "ts": "2026-06-24T00:06:15.920461",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "b1eec7f6",
-    "ts": "2026-06-24T00:06:15.823512",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "6a33bd53",
-    "ts": "2026-06-24T00:06:15.502339",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "6cb3a1fe",
-    "ts": "2026-06-24T00:06:15.180381",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "e890707e",
-    "ts": "2026-06-24T00:06:14.830149",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ee9b7604",
-    "ts": "2026-06-24T00:06:14.517424",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "f4d07d78",
-    "ts": "2026-06-24T00:06:09.491628",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "aff1ec62",
-    "ts": "2026-06-24T00:05:57.099164",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (verify)"
-  },
-  {
-    "id": "a99e661a",
-    "ts": "2026-06-24T00:05:54.268647",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "44f43eb0",
-    "ts": "2026-06-24T00:05:54.176839",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "e81fca7b",
-    "ts": "2026-06-24T00:05:53.842500",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "13e3203c",
-    "ts": "2026-06-24T00:05:53.510168",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "f9428790",
-    "ts": "2026-06-24T00:05:53.207550",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "e09177f1",
-    "ts": "2026-06-24T00:05:52.906988",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "d75cf0bf",
-    "ts": "2026-06-24T00:05:47.831627",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "3ba35006",
-    "ts": "2026-06-24T00:05:35.518253",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (verify)"
-  },
-  {
-    "id": "f7ffc59f",
-    "ts": "2026-06-24T00:05:27.338732",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "0c38d106",
-    "ts": "2026-06-24T00:05:27.272664",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "78755b80",
-    "ts": "2026-06-24T00:05:26.928404",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "a615faa0",
-    "ts": "2026-06-24T00:05:26.551730",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "0eb0889e",
-    "ts": "2026-06-24T00:05:26.033318",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "364387dc",
-    "ts": "2026-06-24T00:05:25.404302",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "74eead70",
-    "ts": "2026-06-24T00:05:20.276795",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "b72ab04e",
-    "ts": "2026-06-24T00:05:07.934099",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (verify)"
-  },
-  {
-    "id": "19f38243",
-    "ts": "2026-06-24T00:05:05.798070",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "7f4a0ab9",
-    "ts": "2026-06-24T00:05:05.691274",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "2094c0b3",
-    "ts": "2026-06-24T00:05:05.375426",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "bcbba1ca",
-    "ts": "2026-06-24T00:05:05.030034",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "e928e7e8",
-    "ts": "2026-06-24T00:05:04.654310",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "f8d628ea",
-    "ts": "2026-06-24T00:05:04.331986",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "a3cf8e3c",
-    "ts": "2026-06-24T00:04:59.259800",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "8a992689",
-    "ts": "2026-06-24T00:04:46.918361",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "ffa5a388",
-    "ts": "2026-06-24T00:04:42.070761",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "84ac34ac",
-    "ts": "2026-06-24T00:04:41.971508",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "062bf4b8",
-    "ts": "2026-06-24T00:04:41.623777",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "35cd6da6",
-    "ts": "2026-06-24T00:04:41.256975",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "fde86c68",
-    "ts": "2026-06-24T00:04:40.858321",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "067df82c",
-    "ts": "2026-06-24T00:04:40.474699",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "183905de",
-    "ts": "2026-06-24T00:04:35.501590",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "b51f2ba1",
-    "ts": "2026-06-24T00:04:23.171182",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "d88f2e93",
-    "ts": "2026-06-24T00:04:23.027667",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (rerank)"
-  },
-  {
-    "id": "b23501b9",
-    "ts": "2026-06-24T00:04:22.076796",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "369765ba",
-    "ts": "2026-06-24T00:04:21.978316",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "6f98fb2e",
-    "ts": "2026-06-24T00:04:21.638160",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "e0bc09ec",
-    "ts": "2026-06-24T00:04:21.281564",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "de9d4136",
-    "ts": "2026-06-24T00:04:20.912207",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ff219c76",
-    "ts": "2026-06-24T00:04:20.580928",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "3cffe279",
-    "ts": "2026-06-24T00:04:15.541892",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "204d03ce",
-    "ts": "2026-06-24T00:04:03.254012",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (analyze)"
-  },
-  {
-    "id": "c348b5ff",
-    "ts": "2026-06-24T00:04:02.408341",
-    "level": "INFO",
-    "site": "main",
-    "message": "Next cycle in 64 minutes..."
-  },
-  {
-    "id": "ee1b5b82",
-    "ts": "2026-06-24T00:04:02.187062",
-    "level": "INFO",
-    "site": "system",
-    "message": "Waiting 60-90 minutes before next cycle..."
-  },
-  {
-    "id": "7f47d69d",
-    "ts": "2026-06-24T00:04:02.007622",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "ca6e4209",
-    "ts": "2026-06-24T00:04:01.964840",
-    "level": "ERROR",
-    "site": "system",
-    "message": "Follow-up agent error in cycle: 'job_title'"
-  },
-  {
-    "id": "74c66ee4",
-    "ts": "2026-06-24T00:04:01.834846",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "bf65e480",
-    "ts": "2026-06-24T00:04:01.758609",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's total applications: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "57fdabec",
-    "ts": "2026-06-24T00:04:01.589821",
-    "level": "INFO",
-    "site": "system",
-    "message": "All sites completed for this cycle."
-  },
-  {
-    "id": "be827aa8",
-    "ts": "2026-06-24T00:04:01.446875",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- LinkedIn done ---"
-  },
-  {
-    "id": "b0d9fd81",
-    "ts": "2026-06-24T00:04:01.257749",
-    "level": "ERROR",
-    "site": "system",
-    "message": "LinkedIn crashed: [Errno 22] Invalid argument"
-  },
-  {
-    "id": "85f38594",
-    "ts": "2026-06-24T00:04:01.148849",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "f6c9100f",
-    "ts": "2026-06-24T00:04:01.074608",
-    "level": "WARN",
-    "site": "safety",
-    "message": "Failed to launch native Chrome via subprocess: Timeout waiting for remote debugging port to open. Falling back to default Playwright launch."
-  },
-  {
-    "id": "75018615",
-    "ts": "2026-06-24T00:04:00.833861",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "2f126927",
-    "ts": "2026-06-24T00:04:00.483565",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "2666e23e",
-    "ts": "2026-06-24T00:04:00.066446",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "7170186d",
-    "ts": "2026-06-24T00:03:55.059146",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "d30561f7",
-    "ts": "2026-06-24T00:03:50.728993",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9223..."
-  },
-  {
-    "id": "d0da2bfd",
-    "ts": "2026-06-24T00:03:47.503805",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "395160f6",
-    "ts": "2026-06-24T00:03:42.640359",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (analyze)"
-  },
-  {
-    "id": "9c96b89d",
-    "ts": "2026-06-24T00:03:41.380237",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "19302161",
-    "ts": "2026-06-24T00:03:41.306184",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "40c89981",
-    "ts": "2026-06-24T00:03:40.985935",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "09a95397",
-    "ts": "2026-06-24T00:03:40.680589",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "555474b5",
-    "ts": "2026-06-24T00:03:40.371040",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "da2a1219",
-    "ts": "2026-06-24T00:03:40.038868",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "b5e1f39a",
-    "ts": "2026-06-24T00:03:34.976176",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: headless mode — searching all countries"
-  },
-  {
-    "id": "87879923",
-    "ts": "2026-06-24T00:03:34.812184",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "14d5d248",
-    "ts": "2026-06-24T00:03:34.799600",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "0d2e27b5",
-    "ts": "2026-06-24T00:03:34.626143",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "ba664d63",
-    "ts": "2026-06-24T00:03:34.484772",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "f6533ea3",
-    "ts": "2026-06-24T00:03:34.298642",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
   }
 ]
