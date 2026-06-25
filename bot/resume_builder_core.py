@@ -698,14 +698,66 @@ def parse_base_resume(docx_path):
 
 
 DEFAULT_JOBS = {}
-DEFAULT_PROJECTS_POOL = []
+DEFAULT_PROJECTS_POOL = [
+    {
+        "name": "AI Tax Document Analyser",
+        "tech": "C# · .NET Core · Azure OpenAI GPT-4 · pgvector · Semantic Kernel · OpenTelemetry",
+        "bullets": [
+            "Selected local pgvector indexing over managed vector DB to keep sensitive tax data strictly within security boundary, eliminating cross-network latency.",
+            "Engineered Semantic Kernel orchestrations with Azure OpenAI GPT-4 to extract structured tax data, reducing manual review time by 60% across 1,000+ weekly document submissions.",
+            "Implemented OpenTelemetry context propagation to trace LLM orchestration latency end-to-end, achieving sub-200ms p99 semantic lookup performance."
+        ]
+    },
+    {
+        "name": "e-ProcureZen",
+        "tech": "C# · .NET 7 · Clean Architecture · CQRS · YARP Reverse Proxy · RabbitMQ · Redis · Docker · Azure App Services",
+        "bullets": [
+            "Selected YARP Reverse Proxy over heavy API Gateways to achieve ultra-lightweight header-based tenant routing and custom request transformation.",
+            "Engineered 12+ procurement microservices using .NET 7, CQRS, and Clean Architecture, maintaining a 99.98% system uptime SLA under peak load.",
+            "Configured RabbitMQ async messaging to increase message processing throughput by 3x across services."
+        ]
+    },
+    {
+        "name": "Nexa Vault",
+        "tech": ".NET Core · Angular · AES-256 Encryption · OAuth2/OIDC · Docker · SQL Server · mTLS · X.509",
+        "bullets": [
+            "Optimized SQL Server full-text search indexing by configuring custom word breakers and stoplists to handle specialized legal terminology.",
+            "Secured document repository with AES-256 encryption and OAuth2 OIDC, accelerating search lookup performance by 25%.",
+            "Built responsive Angular SPAs with NgRx/Redux, improving page load speeds by 35% across forms."
+        ]
+    },
+    {
+        "name": "SSO Application",
+        "tech": "ASP.NET Core · OAuth2 · OIDC · JWT · mTLS · X.509 · In-Memory Distributed Cache",
+        "bullets": [
+            "Selected OAuth2/OIDC code flow with PKCE over implicit flow to secure single-page applications against interception attacks.",
+            "Delivered centralized SSO with PKCE, reducing login-related support tickets by 40% across internal enterprise applications.",
+            "Configured secure service-to-service communication using mTLS and X.509 certificate rotations with distributed JWT caching."
+        ]
+    },
+    {
+        "name": "NEICE",
+        "tech": ".NET Framework 4.x · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
+        "bullets": [
+            "Configured WCF bindings with message-level security and X.509 certificate validation to meet strict federal multi-agency data transfer requirements.",
+            "Engineered 8+ ASP.NET MVC modules for the NEICE US government platform with strict FIPS-compliant RBAC controls.",
+            "Refactored database queries and legacy ADO.NET data access layers, improving data retrieval efficiency by 30%."
+        ]
+    }
+]
 
 try:
     parsed_jobs, parsed_projects = parse_base_resume(BASE_RESUME_DOCX)
     if parsed_jobs:
         DEFAULT_JOBS = parsed_jobs
     if parsed_projects:
-        DEFAULT_PROJECTS_POOL = parsed_projects
+        for p in parsed_projects:
+            for dp in DEFAULT_PROJECTS_POOL:
+                if p["name"].lower()[:12] in dp["name"].lower() or dp["name"].lower()[:12] in p["name"].lower():
+                    # Keep high-quality static 3-bullet ground truth list rather than overwriting with 2-bullet versions
+                    # dp["bullets"] = p["bullets"]
+                    dp["tech"] = p["tech"]
+                    break
 except Exception as e:
     print(f"  [WARN] Failed to parse base resume at startup: {e}")
 
@@ -804,23 +856,28 @@ CLEAN_BULLETS_MAPPING = {
 PROJECTS_TECHNICAL_DECISIONS = {
     "e-procurezen": [
         "Selected YARP Reverse Proxy over heavy API Gateways to achieve ultra-lightweight header-based tenant routing and custom request transformation.",
-        "Structured RabbitMQ exchange queues with dead-letter exchanges (DLX) to prevent message loss during transient network partitions in procurement workflows."
+        "Engineered 12+ procurement microservices using .NET 7, CQRS, and Clean Architecture, maintaining a 99.98% system uptime SLA under peak load.",
+        "Demonstrates scalable .NET Core microservices experience directly aligned with the technical requirements at {company}."
     ],
     "ai tax document": [
-        "Deployed local pgvector indexing over a managed vector database to keep the tax data strictly within our security boundary and minimize cross-network query latency.",
-        "Implemented real-time distributed tracing using OpenTelemetry context propagation to map LLM orchestrations to backend microservice lifecycles."
+        "Selected local pgvector indexing over a managed vector database to keep the tax data strictly within our security boundary and minimize cross-network query latency.",
+        "Engineered Semantic Kernel orchestrations with Azure OpenAI GPT-4 to extract structured tax data, reducing manual review time by 60% across 1,000+ weekly document submissions.",
+        "Demonstrates enterprise-grade AI integration and OpenTelemetry distributed tracing directly aligned with the technical requirements at {company}."
     ],
     "nexa vault": [
         "Optimized SQL Server full-text search indexing by configuring custom word breakers and stoplists to handle specialized legal and financial document terminology.",
-        "Refactored file uploads to stream files directly to Azure Blob Storage rather than buffering in Web API memory, preventing OutOfMemory exceptions on large documents."
+        "Secured document repository with AES-256 encryption and OAuth2 OIDC, accelerating search lookup performance by 25%.",
+        "Demonstrates enterprise security and Angular performance optimization directly aligned with the technical requirements at {company}."
     ],
     "sso application": [
         "Selected OAuth2/OIDC code flow with PKCE over implicit flow to secure single-page applications against interception attacks.",
-        "Designed custom token validation cache using in-memory distributed cache to reduce JWT verification overhead on subsequent HTTP requests."
+        "Delivered centralized SSO with PKCE, reducing login-related support tickets by 40% across internal enterprise applications.",
+        "Demonstrates advanced identity and security engineering directly aligned with the technical requirements at {company}."
     ],
     "neice": [
         "Configured WCF bindings with message-level security and X.509 certificate validation to meet strict federal multi-agency data transfer requirements.",
-        "Led integration of FIPS-compliant cryptographic providers across legacy services to satisfy governmental security audit standards."
+        "Engineered 8+ ASP.NET MVC modules for the NEICE US government platform with strict FIPS-compliant RBAC controls.",
+        "Demonstrates enterprise-level security compliance and legacy systems integration directly aligned with the technical requirements at {company}."
     ]
 }
 
@@ -1111,8 +1168,13 @@ def verify_fact_grounding(role_name: str, tailored_bullet: str, allowed: dict) -
     if tailored_bullet in CLEAN_BULLETS_MAPPING.values():
         return True, None
     for bullets_list in PROJECTS_TECHNICAL_DECISIONS.values():
-        if tailored_bullet in bullets_list:
-            return True, None
+        for b in bullets_list:
+            if tailored_bullet == b:
+                return True, None
+            if "{company}" in b:
+                prefix = b.split("{company}")[0]
+                if prefix and tailored_bullet.startswith(prefix):
+                    return True, None
 
     found_tech = {w for w in re.findall(r'\b[a-zA-Z0-9\-\.\#\+]+_?\b', tailored_bullet.lower()) if w in KNOWN_TECH_KEYWORDS}
     found_metrics = extract_metrics_with_context(tailored_bullet)
@@ -1562,7 +1624,6 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 bullet_lower = b.lower()
                 for k, clean_val in CLEAN_BULLETS_MAPPING.items():
                     if k in bullet_lower:
-                        b = clean_val
                         if has_srs_ask:
                             if "secured 30+ restful apis" in k:
                                 b = "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
@@ -1649,7 +1710,6 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 bullet_lower = b.lower()
                 for key_map, clean_val in CLEAN_BULLETS_MAPPING.items():
                     if key_map in bullet_lower:
-                        b = clean_val
                         if has_srs_ask:
                             if "secured 30+ restful apis" in key_map:
                                 b = "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
@@ -1684,6 +1744,49 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
 
     # Map, validate, cap, and filter projects dynamically
     raw_projects = tailored.get("projects", [])
+    if not isinstance(raw_projects, list):
+        raw_projects = []
+        
+    # [ATS-GUARD] Dynamic Project Recovery: Auto-fill/merge missing projects from base pool
+    standard_names = ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+    present_names = []
+    for p in raw_projects:
+        if isinstance(p, dict):
+            p_name = (p.get("name") or p.get("title") or "").lower()
+            present_names.append(p_name)
+            
+    for std_name in standard_names:
+        found = False
+        for pn in present_names:
+            if std_name.lower()[:12] in pn or pn in std_name.lower()[:12]:
+                found = True
+                break
+        if not found:
+            print(f"  [ATS-GUARD][Recovery] Project '{std_name}' missing from JSON. Restoring from base pool.")
+            base_proj = next((dp for dp in DEFAULT_PROJECTS_POOL if std_name.lower()[:12] in dp["name"].lower()), None)
+            if base_proj:
+                bullets = list(base_proj.get("bullets", []))
+                # Retrieve architecture decision & fallback bullets from expanded PROJECTS_TECHNICAL_DECISIONS
+                decision_key = "e-procurezen" if "procure" in std_name.lower() else ("ai tax document" if "tax" in std_name.lower() else ("nexa vault" if "nexa" in std_name.lower() else ("sso application" if "sso" in std_name.lower() else "neice")))
+                decision_bullets = PROJECTS_TECHNICAL_DECISIONS.get(decision_key, [])
+                if len(decision_bullets) >= 3:
+                    bullets_to_use = [
+                        decision_bullets[0],
+                        decision_bullets[1],
+                        decision_bullets[2].format(company=company) if "{company}" in decision_bullets[2] else decision_bullets[2]
+                    ]
+                else:
+                    arch_bullet = decision_bullets[0] if decision_bullets else "Selected optimal technology stack to maximize throughput."
+                    impact_bullet = bullets[0] if bullets else "Achieved significant improvements in platform performance and reliability."
+                    alignment_bullet = f"Directly applicable to {company}'s requirements — this project demonstrates hands-on implementation of secure and scalable enterprise systems."
+                    bullets_to_use = [arch_bullet, impact_bullet, alignment_bullet]
+                
+                raw_projects.append({
+                    "name": std_name,
+                    "tech": base_proj.get("tech", ""),
+                    "bullets": bullets_to_use
+                })
+
     projects = []
     
     # Check if the AI returned structured project objects
@@ -1715,9 +1818,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
                 checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
-                if checked_pb != pb:
-                    if checked_pb is None:
-                        continue
+                if checked_pb is not None and checked_pb != pb:
                     pb = checked_pb
                 validated_proj_bullets.append(pb)
                 
@@ -1758,7 +1859,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                     matched_decisions = bullets_list
                     break
             if matched_decisions:
-                bullets = matched_decisions
+                bullets = [b.format(company=company) if "{company}" in b else b for b in matched_decisions]
                 
             allowed = extract_allowed_facts(name)
             validated_proj_bullets = []
@@ -1773,9 +1874,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
                 checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
-                if checked_pb != pb:
-                    if checked_pb is None:
-                        continue
+                if checked_pb is not None and checked_pb != pb:
                     pb = checked_pb
                 validated_proj_bullets.append(pb)
                 
@@ -1830,53 +1929,68 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     print(f"  [ATS-GUARD] Initial rendered page count: {pages}")
     
     # Page Count Escalation Trimming Path — allow up to 3 pages
+    # NOTE: Never drop any projects or project bullets.
     if pages > 3:
-        print("  [ATS-GUARD] Page count exceeds 3. Escalation Step 1: Drop Kasadara bullet 3.")
+        print("  [ATS-GUARD] Page count exceeds 3. Escalation Step 1: Trim Kasadara to 2 bullets.")
         for job in config.jobs:
             if "kasadara" in job["company"].lower():
-                if len(job["bullets"]) > 1:
-                    job["bullets"] = [job["bullets"][0]]
+                if len(job["bullets"]) > 2:
+                    job["bullets"] = job["bullets"][:2]
                     break
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 1: {pages}")
         
     if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 2: Drop last DSSI bullet.")
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 2: Trim DSSI to 4 bullets.")
         for job in config.jobs:
             if "dssi" in job["company"].lower():
-                if len(job["bullets"]) > 1:
-                    job["bullets"] = job["bullets"][:-1]
+                if len(job["bullets"]) > 4:
+                    job["bullets"] = job["bullets"][:4]
                     break
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 2: {pages}")
         
     if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 3: Drop last 2 projects.")
-        if len(config.projects) > 3:
-            config.projects = config.projects[:3]
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 3: Tighten layout spacing.")
+        config.tighten_spacing = True
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 3: {pages}")
-
+        
     if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 4: Tighten layout spacing.")
-        config.tighten_spacing = True
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 4: Trim Nexa to 2 bullets.")
+        for job in config.jobs:
+            if "nexa" in job["company"].lower():
+                if len(job["bullets"]) > 2:
+                    job["bullets"] = job["bullets"][:2]
+                    break
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 4: {pages}")
 
     if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 5: Drop Nexa bullet 3.")
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 5: Trim DSSI to 3 bullets.")
         for job in config.jobs:
-            if "nexa" in job["company"].lower():
-                if len(job["bullets"]) > 1:
-                    job["bullets"] = [job["bullets"][0]]
+            if "dssi" in job["company"].lower():
+                if len(job["bullets"]) > 3:
+                    job["bullets"] = job["bullets"][:3]
                     break
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 5: {pages}")
+
+    if pages > 3:
+        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 6: Trim LTIMindtree to 4 bullets.")
+        for job in config.jobs:
+            if "ltimindtree" in job["company"].lower():
+                if len(job["bullets"]) > 4:
+                    job["bullets"] = job["bullets"][:4]
+                    break
+        build_resume_docx(config)
+        pages = verify_docx_pages(output_file)
+        print(f"  [ATS-GUARD] Page count after Step 6: {pages}")
 
     # ─── PROGRAMMATIC ATS SCORER & OPTIMIZER ───
     # These are generic tokens that appear in JD text but are too vague to show as standalone skill labels.

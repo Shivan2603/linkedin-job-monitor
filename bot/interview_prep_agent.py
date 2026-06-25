@@ -148,6 +148,8 @@ def generate_interview_prep(
         )
         raw = ai_complete(INTERVIEW_PREP_SYSTEM, prompt, task="analyze", max_tokens=4000)
         prep = parse_json_safely(raw)
+        if not isinstance(prep, dict) or not prep:
+            raise ValueError("AI returned invalid or empty JSON structure for interview prep")
     except Exception as e:
         print(f"    [InterviewPrep] AI generation failed: {e}")
         prep = {}

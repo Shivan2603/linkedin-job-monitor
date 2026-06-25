@@ -134,6 +134,8 @@ def generate_cover_letter(
         )
         raw = ai_complete(COVER_LETTER_SYSTEM, prompt, task="tailor", max_tokens=1200)
         letter = parse_json_safely(raw)
+        if not isinstance(letter, dict) or not letter:
+            raise ValueError("AI returned invalid or empty JSON structure for cover letter")
     except Exception as e:
         print(f"    [CoverLetter] AI generation failed: {e}. Using structured fallback.")
         domain = jd_context.get("company_domain", "technology")

@@ -106,6 +106,8 @@ def groq_complete(system_prompt: str, user_prompt: str,
 # ✅ Confirmed-working free models from OpenRouter (June 2025)
 # Source: User's confirmed free model list + openrouter.ai/models?q=free
 OPENROUTER_FREE_MODELS = [
+    # Dynamic free router model (auto-selects working free models)
+    "openrouter/free",
     # Flagship quality (best for resume tailoring)
     "meta-llama/llama-3.3-70b-instruct:free",            # Llama 3.3 70B ✅
     "google/gemma-4-31b-it:free",                        # Gemma 4 31B ✅
@@ -157,12 +159,14 @@ def openrouter_complete(system_prompt: str, user_prompt: str,
                 continue
             resp.raise_for_status()
             data = resp.json()
-            if not data.get("choices"):
+            if not data.get("choices") or not data["choices"][0].get("message"):
                 logger.warn(f"OpenRouter {model} returned empty choices, trying next...", "ai")
                 continue
-            result = data["choices"][0]["message"]["content"].strip()
-            if not result:
+            content = data["choices"][0]["message"].get("content")
+            if not content:
+                logger.warn(f"OpenRouter {model} returned empty content, trying next...", "ai")
                 continue
+            result = content.strip()
             model_short = model.split("/")[-1]
             logger.ai(f"AI response from OpenRouter ({model_short})", "ai")
             return result

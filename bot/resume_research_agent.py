@@ -121,7 +121,7 @@ Return ONLY valid JSON:
 
 
 BULLET_SCORER_SYSTEM = """You are the Bullet Quality Scorer and Rewriter Agent in the JCode Multi-Agent Swarm.
-Your job is to audit every bullet point across all work experience sections and rewrite any that are weak.
+Your job is to audit and rewrite EVERY bullet point across all work experience sections to align with the target JD and company.
 
 SCORING CRITERIA (1–10 per bullet):
 - Specificity (1–3): Does it contain a number, %, or concrete scale?
@@ -133,9 +133,10 @@ SCORING CRITERIA (1–10 per bullet):
 
 TOTAL SCORE = Specificity + Impact + JD Alignment (max 10)
 
-REWRITE RULES (for bullets scoring < 7):
+REWRITE RULES (Apply to EVERY single bullet point):
+- You MUST rewrite EVERY bullet specifically to align with the target JD, referencing the target company domain, target company name, or target requirements where appropriate.
 - Start with a strong action verb (Engineered, Architected, Deployed, Optimized, Led, Secured, Designed)
-- Add a specific metric if one exists in the CANDIDATE BASE FACTS (never invent)
+- Keep all candidate base facts and metrics 100% accurate (never invent or change numbers).
 - Replace vague words: "various" → specific count, "multiple" → actual number
 - Remove all filler: "responsible for", "worked on", "helped with", "assisted in", "involved in"
 - End with the outcome/impact (what it enabled or improved)
@@ -148,8 +149,7 @@ Return ONLY valid JSON:
 {
   "scored_bullets": {
     "LTIMindtree": [
-      {"original": "...", "score": 8, "rewritten": null},
-      {"original": "...", "score": 5, "rewritten": "Optimized 30+ ASP.NET Web API endpoints by eliminating N+1 query loops, achieving sub-100ms p99 latency under peak enterprise load validated via OpenTelemetry."}
+      {"original": "...", "score": 8, "rewritten": "Optimized 30+ ASP.NET Web API endpoints by eliminating N+1 queries, achieving sub-100ms p99 latency to support the high-throughput enterprise systems of [Company]."}
     ],
     "DSSI Solutions": [...],
     "Nexa Office InfoSystems": [...],
@@ -415,14 +415,12 @@ def score_and_rewrite_bullets(
                 new_bullets = []
                 for item in scored_bullets[comp]:
                     orig = item.get("original", "")
-                    score = item.get("score", 10)
                     rewritten = item.get("rewritten")
-                    if score < 7 and rewritten:
+                    if rewritten:
                         new_bullets.append(rewritten)
                         rewrite_count += 1
                     else:
-                        # Keep the original but prefer rewritten if provided
-                        new_bullets.append(rewritten if rewritten else orig)
+                        new_bullets.append(orig)
                 if new_bullets:
                     job["bullets"] = new_bullets
 

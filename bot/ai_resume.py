@@ -7,24 +7,11 @@ from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
-# ─── TAILORROBOT ENGINE BRIDGE ─────────────────────────────────────
-TAILORROBOT_PATH = os.getenv("TAILORROBOT_PATH", r"E:\SivaShankar\tailorrobot")
-if TAILORROBOT_PATH not in sys.path:
-    sys.path.insert(0, TAILORROBOT_PATH)
-
-try:
-    from resume_builder_core import build_tailored_resume_from_json, run_local_tailor_engine
-    import config as _tr_config
-    from ai_resume import tailor_resume as _tr_tailor_resume
-    TAILORED_TODAY  = _tr_config.TAILORED_TODAY
-    BASE_RESUME_DOCX = _tr_config.BASE_RESUME_DOCX
-    DATA_FOLDER = _tr_config.DATA_FOLDER
-    _USING_TAILORROBOT = True
-except ImportError:
-    from bot.config import TAILORED_TODAY, BASE_RESUME_DOCX, DATA_FOLDER
-    from bot.resume_builder_core import build_tailored_resume_from_json
-    _tr_tailor_resume = None
-    _USING_TAILORROBOT = False
+# ─── LOCAL BUILDER AND CONFIG ONLY (NO DELEGATION TO TAILORROBOT) ───
+from bot.config import TAILORED_TODAY, BASE_RESUME_DOCX, DATA_FOLDER
+from bot.resume_builder_core import build_tailored_resume_from_json
+_tr_tailor_resume = None
+_USING_TAILORROBOT = False
 
 from bot.config import GROQ_API_KEY
 from bot.utils import logger
@@ -341,7 +328,88 @@ CRITICAL: All keys and string values must be in double quotes. Do not include un
 
 
 VERIFIER_SYSTEM = """You are the Verifier Agent in the JCode Multi-Agent Swarm.
-Your job is to compare the tailored resume draft against the JD, original candidate facts, and JD Intelligence, then correct any formatting or compliance violations.
+Your job is to compare the tailored resume draft against the JD, original candidate facts, and JD Intelligence, then correct any formatting, fact-grounding, or compliance violations.
+
+CRITICAL: Every single bullet point and the professional summary in the resume must be rewritten to align specifically with the target Job Description (JD), utilizing the company's domain language, tech stack, and goals, while strictly adhering to the candidate's base facts.
+
+CRITICAL: You must strictly adhere to the Candidate Base Facts below. Never fabricate, invent, or extrapolate any experience, technology, or metric. All edits must be 100% grounded in these base facts.
+
+=========================================
+CANDIDATE BASE FACTS (Grounded Database)
+=========================================
+1. HEADER:
+   - Name: SIVA SHANKAR
+   - Contact: +91 6383149155 | sivashankar.avi6@gmail.com
+   - Links: LinkedIn: https://www.linkedin.com/in/siva-shankar-4a7849226/ | GitHub: https://github.com/shivan2603 | Portfolio: https://shivan2603.github.io/sivashankar-portfolio/
+   - Location Line Options:
+     * If international / relocation required: "Chennai, India  |  Open to Global Relocation (Remote / Hybrid)  |  Visa sponsorship required"
+     * If India-based (remote / onsite / hybrid): "Chennai, India  |  Open to Remote / Hybrid"
+
+2. WORK EXPERIENCE:
+   * Role 1: LTIMindtree (Jun 2025 – Present)
+     - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior Backend Developer", "Senior .NET Developer" depending on JD)
+     - Deloitte Enterprise Tax Client context: Client: Deloitte — Enterprise Tax Platform
+     - Allowed Technologies: C#, .NET Core 8, ASP.NET Web API, Angular, Azure OpenAI GPT-4, Microservices, CQRS, pgvector, OpenTelemetry, Redis, SQL Server, Entity Framework Core
+     - Grounded Achievements/Metrics to reframe:
+       * Migrated 50+ legacy tax tables to QRP structures, reducing query latency by 38%.
+       * Deployed Azure OpenAI embedding pipeline for dynamic schema mapping, saving 60% manual effort.
+       * Developed secure stored procedures for dynamic RBAC role mapping across 15+ tax modules.
+       * Profiled and refactored 30+ ASP.NET Web API endpoints to solve N+1 query loops, achieving sub-100ms p99 latency.
+       * Configured Redis-based API response caching, reducing database query load by 45%.
+       * Instrumented OpenTelemetry distributed tracing across microservices, reducing MTTR by 50%.
+       * Secured 30+ RESTful APIs with OAuth2 + JWT authentication for OWASP compliance.
+       * Integrated Azure OpenAI GPT-4 for automated tax document summarization, speeding up weekly triages by 35%.
+       * Built a semantic search engine using pgvector for sub-200ms document lookups.
+       * Leveraged GitHub Copilot prompt engineering for unit tests, raising coverage to 85% with xUnit.
+
+   * Role 2: DSSI Solutions India Pvt Ltd (Nov 2024 – May 2025)
+     - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior .NET Developer", "Senior Backend Engineer" depending on JD)
+     - Procurement Client context: Financial Procurement Platform
+     - Allowed Technologies: C#, .NET 7, Clean Architecture, CQRS, YARP Reverse Proxy, Docker, Azure App Services, RabbitMQ, Redis, JWT, AES-256, Agile/Scrum
+     - Grounded Achievements/Metrics to reframe:
+       * Engineered 12+ procurement microservices using .NET 7, CQRS, and Clean Architecture.
+       * Configured RabbitMQ async messaging, increasing message processing throughput by 3x.
+       * Mentored 4 junior software engineers on CQRS and Git Flow, reducing post-deployment bugs by 40%.
+       * Containerized all 12 microservices using Docker, decreasing container image sizes by 65%.
+       * Implemented Azure Form Recognizer for automated invoice data extraction, saving 100+ manual hours.
+       * Configured YARP Reverse Proxy for path-based routing, maintaining a 99.98% system uptime SLA.
+
+   * Role 3: Nexa Office InfoSystems LLP (Jul 2024 – Nov 2024)
+     - Core Title: Senior Software Engineer — Contract / Consultant (can tailor to "Senior Software Engineer", "Senior Full-Stack Developer", ".NET Consultant")
+     - Document Management Client context: Enterprise Document Management
+     - Allowed Technologies: C#, .NET Core, ASP.NET Web API, Angular, Redux/NgRx, Docker, SQL Server, OAuth2/OIDC, Material-UI, mTLS, X.509
+     - Grounded Achievements/Metrics to reframe:
+       * Designed modular UI components in Angular, improving page load speeds by 35% across forms.
+       * Secured document repository with AES-256 encryption and OAuth2 OpenID Connect integration.
+       * Profiled SQL Server queries and rebuilt indexes, accelerating search lookup performance by 25%.
+       * Configured secure service-to-service communication using mTLS and X.509 certificate rotations.
+
+   * Role 4: Kasadara Technology Solutions (Jul 2022 – Jun 2024)
+     - Core Title: Software Engineer (can tailor to "Software Engineer", ".NET Developer", "Backend Developer")
+     - US Gov SaaS Client context: US Government & SaaS Enterprise Platforms
+     - Allowed Technologies: C#, .NET Framework 4.x, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
+     - Grounded Achievements/Metrics to reframe:
+       * Migrated legacy modules from .NET Framework to .NET Core, achieving a 40% memory usage reduction.
+       * Developed high-throughput background processing services in Go, doubling processing speeds.
+       * Refactored application UI to ensure strict compliance with US Federal Section 508 and WCAG accessibility standards.
+       * Optimized legacy WCF and ADO.NET data access layers, reducing web page transaction times by 20%.
+
+3. PROJECTS — You must include ALL 5 projects. Do NOT drop any projects:
+     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry.
+     * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services.
+     * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509.
+     * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache.
+     * NEICE: .NET Framework 4.x • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508.
+
+4. CERTIFICATIONS:
+   - Microsoft Azure Developer Associate (AZ-204) | Microsoft | March 18, 2024
+   - Top Performer Award | Nexa Office InfoSystems LLP | 2024
+   - US Government Platform (NEICE) | FIPS Compliance & Federal Security Standards | Kasadara Technology Solutions | 2022–2024 (include only for government/defense JDs)
+
+5. EDUCATION:
+   - B.E. Electronics & Communication Engineering | Kathir College of Engineering, Coimbatore (Anna University) | 2018 – 2022 | GPA: 8.6 / 10
+
+=========================================
 
 Check and enforce:
 1. Header Location Line: Match is_international/relocation requirements ( Chennai, India | ... ).
@@ -355,7 +423,7 @@ Check and enforce:
    - Mentoring/team lead bullet must be position 1 in LTIMindtree if lead role is true.
    - First 2 bullets of LTIMindtree must use MUST-HAVE skills.
    - Experience bullet limits for 3-PAGE RESUME: LTIMindtree (6), DSSI (5), Nexa (4), Kasadara (3).
-5. Projects: ALL 5 projects required. Each must have exactly 3 bullets (architecture rationale, impact metric, JD alignment). Ordered by JD domain relevance.
+5. Projects: ALL 5 projects are absolutely required. You must NOT drop any projects. Each must have exactly 3 bullets (architecture rationale, impact metric, JD alignment). Ordered by JD domain relevance.
 6. Certifications: Dynamic certs list has 2-3 items matching JD.
 
 If any rule is violated, rewrite that section.
@@ -601,6 +669,57 @@ def convert_docx_to_pdf_win32(docx_path: str) -> str:
         except Exception:
             pass
         pythoncom.CoUninitialize()
+
+def restore_dropped_projects(current_json: dict, reference_projects: list) -> dict:
+    if not isinstance(current_json, dict):
+        current_json = {}
+    current_projects = current_json.get("projects", [])
+    if not isinstance(current_projects, list):
+        current_projects = []
+    
+    if not reference_projects:
+        return current_json
+        
+    verified_names = {p.get("name", "").lower().strip() for p in current_projects if p.get("name")}
+    
+    restored = list(current_projects)
+    for ref_proj in reference_projects:
+        ref_name = ref_proj.get("name", "").lower().strip()
+        if not ref_name:
+            continue
+        # Check if project is already present (substring match)
+        found = False
+        for vn in verified_names:
+            if ref_name[:15] in vn or vn in ref_name[:15]:
+                found = True
+                break
+        if not found:
+            print(f"    [ProjectRecovery] Restoring project '{ref_proj.get('name')}' dropped during AI step.")
+            restored.append(ref_proj)
+            
+    # Ensure all projects in the list have exactly 3 bullets (architecture rationale, impact, JD alignment)
+    for p in restored:
+        bullets = p.get("bullets", [])
+        if not isinstance(bullets, list):
+            bullets = [bullets] if bullets else []
+        if len(bullets) < 3:
+            name = p.get("name", "")
+            from bot.resume_builder_core import DEFAULT_PROJECTS_POOL, PROJECTS_TECHNICAL_DECISIONS
+            dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+            default_bullets = dp_match["bullets"] if dp_match else ["Configured and optimized backend architecture.", "Delivered high-performance business outcome."]
+            
+            # Reconstruct to have 3 bullets
+            bullets_3 = []
+            # Bullet 1: Architecture rationale
+            bullets_3.append(bullets[0] if len(bullets) > 0 else (next(iter(PROJECTS_TECHNICAL_DECISIONS.get(name.lower(), ["Selected optimal tech stack for performance."])), "Selected optimal tech stack.")))
+            # Bullet 2: Impact
+            bullets_3.append(bullets[1] if len(bullets) > 1 else (default_bullets[0] if default_bullets else "Optimized database and memory usage."))
+            # Bullet 3: JD Alignment
+            bullets_3.append(bullets[2] if len(bullets) > 2 else f"Directly applicable to company requirements, enabling secure and scalable system integration.")
+            p["bullets"] = bullets_3[:3]
+            
+    current_json["projects"] = restored
+    return current_json
 
 def tailor_resume(job_title: str, company: str, job_description: str, site: str = "ai") -> dict:
     res = None
@@ -903,6 +1022,8 @@ JD:
         final_tailored = {}
     final_tailored["jd_context"] = jd_context
     final_tailored["company_intelligence"] = company_intelligence
+    # Restore any projects dropped by Verifier Agent
+    final_tailored = restore_dropped_projects(final_tailored, draft.get("projects", []))
 
     # ─── STEP 6: ATS KEYWORD ENFORCER ───────────────────────────────────────
     print("[JCode Coordinator] Launching ATS Keyword Enforcer...")
@@ -918,6 +1039,8 @@ JD:
     except Exception as e:
         log_telemetry("ATSEnforcerAgent", time.time() - t0, f"failed: {e}")
         print(f"    [ATSEnforcer] Outer failed: {e}")
+    # Restore any projects dropped by ATS Keyword Enforcer Agent
+    final_tailored = restore_dropped_projects(final_tailored, draft.get("projects", []))
 
     # ─── STEP 7: PERFECT FIT NARRATOR ───────────────────────────────────────
     print("[JCode Coordinator] Launching Perfect Fit Narrator...")
@@ -950,6 +1073,8 @@ JD:
     except Exception as e:
         log_telemetry("ProjectDeepRewriterAgent", time.time() - t0, f"failed: {e}")
         print(f"    [ProjectDeepRewriter] Outer failed: {e}")
+    # Restore any projects dropped by Project Deep Rewriter Agent
+    final_tailored = restore_dropped_projects(final_tailored, draft.get("projects", []))
 
     # ─── QUALITY GATE: ATS SCORE MUST BE ≥ 95% ─────────────────────────────
     # If score is below threshold, run a targeted second pass on remaining gaps
@@ -1052,7 +1177,7 @@ JD:
     cover_letter_path = ""
     try:
         cl_filename = f"Siva_Shankar_{safe_role}_{safe_company}_CoverLetter.docx"
-        cl_path = os.path.join(TAILORED_TODAY, cl_filename)
+        cl_path = os.path.join(TAILORED_TODAY, "Cover Letter", cl_filename)
         cover_letter_path = generate_cover_letter(
             job_title=job_title,
             company=company,

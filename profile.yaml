@@ -155,11 +155,17 @@ standard_answers:
   Are you flexible to work in any shift?: 'No'
   Are you legally authorized to work in the country where this job is located?: Yes,
     I am fully authorized to work in India.
+  ? Are you open to relocation or travel for work? If yes, please specify preferred
+    cities and zones (e.g., South Bangalore, East Bangalore, etc.).
+  : 'Yes'
   Are you open to relocation?: Yes, I am open to relocation both within India and
     internationally.
   Are you open to working day shift?: 'Yes'
   Are you open to working in a hybrid setup?: 'Yes'
   Are you proficient in C# and .NET?: 'Yes'
+  ? Are you willing to accept an initial contract of 1 year with possibility of extension
+    and/or conversion to full-time/permanent depending on performance?
+  : 'Yes'
   Are you willing to relocate to the specified job location? Please answer if your current location is not India.: 'Yes'
   Are you willing to relocate?: 'Yes'
   Are you willing to undergo a background check?: 'Yes'
@@ -177,8 +183,9 @@ standard_answers:
   Can you work from office?: 'Yes'
   Choose preferred cities to work: Bengaluru
   City: Avinashi, Tiruppur, Tamilnadu
-  City, state, or zip code: Worldwide
+  City, state, or zip code: India
   Code pays: Inde (+91)
+  Combien d’années d’expérience avez-vous en tant que Ingénierie ?: '3'
   Consent to data processing?: 'Yes'
   Cover Letter: 'Dear Hiring Manager, I am a Senior .NET Developer with 4+ years of
     professional experience delivering scalable, cloud-native applications using C#,
@@ -208,7 +215,10 @@ standard_answers:
   Código do país: Índia (+91)
   DOB: 26-03-2001
   Date of Birth: 26-03-2001
+  Depuis combien d’années utilisez-vous .NET dans Azure ?: '2'
   Depuis combien d’années utilisez-vous .NET framework ?: '4'
+  Depuis combien d’années utilisez-vous Administration du cloud ?: I am unable to
+    verify the exact duration of the candidate's experience with cloud administration.
   Depuis combien d’années utilisez-vous Microsoft Azure ?: '3'
   ? Describe a situation where you had to design or refactor a backend system to improve
     scalability or performance. What decisions did you make, what tradeoffs did you
@@ -231,6 +241,8 @@ standard_answers:
     \ Entity Framework Core to interact with the MySQL database. \n\nTo optimize database\
     \ interactions, I implemented pagination, caching, and lazy loading to reduce\
     \ the load on the database and improve"
+  Deselect resume Siva_Shankar_.NET_Core_Developer_C#_with_Angular_Eurofins_Resume.docx: Deselect
+    resume Siva_Shankar_.NET_Core_Developer_C#_with_Angular_Eurofins_Resume.docx
   Deselect resume Siva_Shankar_.NET_Developer_KCS_iT_Resume.docx: Deselect resume
     Siva_Shankar_.NET_Developer_KCS_iT_Resume.docx
   Deselect resume Siva_Shankar_.NET_Developer_Lateetud_Resume.docx: Deselect resume
@@ -255,6 +267,8 @@ standard_answers:
     resume Siva_Shankar_Dotnet_Developer_NKRS_HealthCare_Resume.docx
   Deselect resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx: Deselect
     resume Siva_Shankar_Dotnet_Developer_NR_Digital_360_Resume.docx
+  Deselect resume Siva_Shankar_Développeur_&_Architecte_Middleware_C#_.NET_Azure_Cloud_–_Se_ITADES_Resume.docx: Deselect
+    resume Siva_Shankar_Développeur_&_Architecte_Middleware_C#_.NET_Azure_Cloud_–_Se_ITADES_Resume.docx
   Deselect resume Siva_Shankar_Développeur_Fullstack_.NET_C#_Angular_Senior_INGELINE_TECHNOLOGIES_Resume.pdf: Deselect
     resume Siva_Shankar_Développeur_Fullstack_.NET_C#_Angular_Senior_INGELINE_TECHNOLOGIES_Resume.pdf
   Deselect resume Siva_Shankar_Freelance_contract_work:_Kentico_Developer_8+_Experience_Qzensys_Solutions_Resume.docx: Deselect
@@ -275,6 +289,8 @@ standard_answers:
     resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf: Deselect
     resume Siva_Shankar_Full_Stack_Backend_Engineer_.NET_C#_Angular_Onsite_Fremont_C_DaCodes__Resume.pdf
+  Deselect resume Siva_Shankar_Full_Stack_Developer_C#_.NET_Angular_Comrise_Resume.docx: Deselect
+    resume Siva_Shankar_Full_Stack_Developer_C#_.NET_Angular_Comrise_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx: Deselect
     resume Siva_Shankar_Full_Stack_Engineer_DCS_Recruitment_Resume.docx
   Deselect resume Siva_Shankar_Full_Stack_Engineer_Insight_Global_Resume.docx: Deselect
@@ -285,6 +301,8 @@ standard_answers:
     resume Siva_Shankar_Full_Stack_Software_Engineer_C#_.NET_&_Angular_Spacebackend_Resume.pdf
   Deselect resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx: Deselect
     resume Siva_Shankar_IT_Software_Engineer_Tokio_Marine_Insuran_Resume.docx
+  Deselect resume Siva_Shankar_Lead_C#_Developer_.NET_Azure_SaaS_Client_Server_Resume.docx: Deselect
+    resume Siva_Shankar_Lead_C#_Developer_.NET_Azure_SaaS_Client_Server_Resume.docx
   Deselect resume Siva_Shankar_Lead_DevOps_Engineer_Prism_Digital_Resume.docx: Deselect
     resume Siva_Shankar_Lead_DevOps_Engineer_Prism_Digital_Resume.docx
   Deselect resume Siva_Shankar_Lead_Full_Stack_Engi_dunnhumby_Resume.docx: Deselect
@@ -335,6 +353,8 @@ standard_answers:
     resume Siva_Shankar_Senior_Full_Stack_En_Unknown_Company_Resume.docx
   Deselect resume Siva_Shankar_Senior_Full_Stack__N_MRL_Consulting_Group_Resume.docx: Deselect
     resume Siva_Shankar_Senior_Full_Stack__N_MRL_Consulting_Group_Resume.docx
+  Deselect resume Siva_Shankar_Senior_Fullstack_Developer_.NET_Core_Eurofins_Resume.docx: Deselect
+    resume Siva_Shankar_Senior_Fullstack_Developer_.NET_Core_Eurofins_Resume.docx
   Deselect resume Siva_Shankar_Senior_Software_Deve_Media_net_Resume.docx: Deselect
     resume Siva_Shankar_Senior_Software_Deve_Media_net_Resume.docx
   Deselect resume Siva_Shankar_Senior_Software_Engi_Civica_Resume.docx: Deselect resume
@@ -347,10 +367,14 @@ standard_answers:
     resume Siva_Shankar_Senior_Software_Engi_VIQU_IT_Recruitment_Resume.docx
   Deselect resume Siva_Shankar_Senior_Software_Engi_YourPrime_Resume.docx: Deselect
     resume Siva_Shankar_Senior_Software_Engi_YourPrime_Resume.docx
+  Deselect resume Siva_Shankar_Senior_Software_Engineer_C#.NET_SAP_ABAP_insightsoftware_Resume.docx: Deselect
+    resume Siva_Shankar_Senior_Software_Engineer_C#.NET_SAP_ABAP_insightsoftware_Resume.docx
   Deselect resume Siva_Shankar_Senior__NET_Develope_Gravitas_Recruitment_Resume.docx: Deselect
     resume Siva_Shankar_Senior__NET_Develope_Gravitas_Recruitment_Resume.docx
   Deselect resume Siva_Shankar_Software_Developer_Insight_Global_Resume.docx: Deselect
     resume Siva_Shankar_Software_Developer_Insight_Global_Resume.docx
+  Deselect resume Siva_Shankar_Software_Development_Engineer_C#_.NET_Azure_WaferWire_Cloud_Technologies_Resume.docx: Deselect
+    resume Siva_Shankar_Software_Development_Engineer_C#_.NET_Azure_WaferWire_Cloud_Technologies_Resume.docx
   Deselect resume Siva_Shankar_Software_Engineer_C__Client_Server_Resume.docx: Deselect
     resume Siva_Shankar_Software_Engineer_C__Client_Server_Resume.docx
   Deselect resume Siva_Shankar_Software_Engineer_Corecom_Consulting_Resume.docx: Deselect
@@ -382,6 +406,7 @@ standard_answers:
   Deselect resume Siva_Shankar__NET_Developer_Viraaj_HR_Solutions__Resume.docx: Deselect
     resume Siva_Shankar__NET_Developer_Viraaj_HR_Solutions__Resume.docx
   Deselect resume Siva_Shankar__Turing_Resume.docx: Deselect resume Siva_Shankar__Turing_Resume.docx
+  Do You Have Any Offer in Hand?: 'Yes'
   Do you agree to the terms and conditions?: 'Yes'
   Do you currently have the right to work in the UK?: I require Visa sponsorship
   Do you have .NET experience?: Yes, I have 4+ years working with .NET Core, .NET
@@ -425,8 +450,11 @@ standard_answers:
   First name: SIVA
   Gender: Male
   Have you been referred to this role by a Civica employee?: 'No'
+  Have you completed any relevant certifications or training programs? Please list them.: No
+    information available.
   Have you ever been convicted of a felony or misdemeanor?: 'No'
   Have you ever been employed by this company or its affiliates?: 'No'
+  Have you managed teams before? If yes, what was the team size and structure?: 'Yes'
   ? Have you personally configured and developed Service Catalog and Flow Designer
     solutions in ServiceNow? Please can you show on your CV.
   : 'No'
@@ -435,6 +463,7 @@ standard_answers:
     ServiceNow implementation or rollout programme? Please show this in your CV.
   : 'No'
   Have you worked directly with cellular modems (AT Commands, QMI, Qualcomm SDKs, Sierra Wireless, Quectel, Telit, etc.)?: 'No'
+  Have you worked on both small-scale and large-scale projects/products? Please provide examples.: 'Yes'
   ? Have you worked with .NET/C# and Angular (preferred) or React in the same project?
     Walk us through a specific integration you built between the frontend and a .NET
     backend, including how you handled API contracts, state management, authentication/authorization,
@@ -456,15 +485,24 @@ standard_answers:
   How Many years of Expereince in Web API?: '4'
   How did you hear about this job?: Online job portal
   How many years .Net experience do you have?: '4'
+  How many years have you been using .NET in Azure?: '4'
+  How many years have you been using Cloud Administration?: '3'
   How many years of Software Development experience do you currently have?: '4'
   How many years of experience do you have in .NET?: '4'
   How many years of experience do you have in Angular?: '4'
+  How many years of experience do you have in Angular? (not angular.js): '4'
   How many years of experience do you have in C# .Net?: '4'
+  How many years of experience do you have in C# / .NET?: '4'
+  How many years of experience do you have in Engineering?: '4'
   How many years of experience do you have in SQL?: '4'
   How many years of experience do you have in security?: '4'
+  ? How many years of experience do you have in the role you're applying for (e.g.,
+    Development, Project Management, QA, etc.)?
+  : '4'
   How many years of experience do you have working with React and JavaScript-based front-end development?: '4'
   How many years of experience do you have?: I have 4+ years of professional software
     development experience.
+  How many years of professional experience do you have?: '4'
   How many years of total professional experience do you have?: '4'
   How many years of work experience do you have with .NET Architecture?: '4'
   How many years of work experience do you have with .NET Core?: '4'
@@ -480,6 +518,7 @@ standard_answers:
   How many years of work experience do you have with Java?: '3'
   How many years of work experience do you have with Microsoft Azure?: '3'
   How many years of work experience do you have with React.js?: '4'
+  How many years of work experience do you have with Relational Databases?: '3'
   How many years of work experience do you have with SQL Server Integration Services (SSIS)?: '4'
   How many years of work experience do you have with SQL?: '4'
   How many years of work experience do you have with ServiceNow?: '0'
@@ -487,11 +526,15 @@ standard_answers:
   How many years of work experience do you have with Windows Presentation Foundation (WPF)?: '4'
   How many years of work experience do you have with Xamarin Products?: '4'
   How many years of working experience do you have with designing and developing derivatives platforms?: '4'
+  How much is the minimum monthly salary you are willing to accept for the role?: '80000'
   How soon can you join our team if selected? Answer in how many months?: I am currently
     serving a notice period, with my last working day on 14th August 2026. Therefore,
     I can join the team approximately 2 months after my last working day.
+  How would you rate your communication and stakeholder engagement skills? (Scale of 1–5): '4'
   I consent: 'Yes'
   If yes, who referred you?: 'Yes'
+  If you are serving notice, what will be your official last working day?: August
+    14 2026
   Last Name: V
   Last name: SHANKAR
   LinkedIn Profile: https://www.linkedin.com/in/siva-shankar-4a7849226/
@@ -504,22 +547,30 @@ standard_answers:
   Notice period (in days): dynamic
   Numéro de téléphone portable: '6383149155'
   Offical Notice Period (Looking for only immediate joiner): '15'
+  Oui: Oui
   Phone: '6383149155'
   Phone country code: India (+91)
   Please enter your current ctc in INR: '1150000'
   Please enter your expected ctc in INR: '22000'
+  Please enter your full name.: Siva Shankar V
+  ? Please list the primary technologies you’ve worked with and mention any advanced
+    or latest versions used (e.g., .NET 6, Angular 15, Python 3.11, etc.).
+  : 'No'
   Please list your key skills relevant to this role.: C#, .NET Core 7/8, ASP.NET Web
     API, Azure App Services, Azure SQL, SQL Server, Entity Framework Core, Microservices,
     CQRS, Docker, RabbitMQ, JWT, OAuth2, Angular 15+
   'Please select your total additional months of experience:': 0 month
   'Please select your total years of professional experience:': 4 years
+  Please specify your highest completed degree (e.g., B.Tech, M.Tech, MBA, MCA, etc.).: B.E.
+    Electronics & Communication EngineeringI
   Postal: '641654'
   Qual seu nível de proficiência em Inglês?: Proficiente
   Role Preference - Civica Job Family: Software Architecture, Development & Engineering
   Salary Expectations: '25'
-  Search by title, skill, or company: ("C#") AND (".NET") AND ("Azure" OR "Angular"
+  Search by title, skill, or company: (("C#") AND (".NET") AND ("Azure" OR "Angular"
     OR "SQL Server") NOT ("QA" OR "Tester" OR "Scrum Master" OR "Java" OR "Python"
-    OR "PHP" OR "Android" OR "iOS")
+    OR "PHP" OR "Android" OR "iOS")) AND ("freelance" OR "contract" OR "temporary"
+    OR "contractor")
   State: TamilNadu
   Summary: 'Summary:
 
@@ -570,24 +621,39 @@ standard_answers:
   What is your current fixed compensation?: '1150000'
   What is your current location?: Chennai
   What is your current salary?: 11.5 Lakh per annum
+  What is your current total annual compensation (CTC)?: 11.5 Lakh per annum
   What is your desired salary?: '22'
   What is your expected compensation?: 20-30 LPA
   What is your expected hourly rate? Please specify your minimum acceptable rate and your preferred rate.: $140,000
     - $160,000 per year
   What is your expected salary?: 20-30 LPA
+  What is your expected total annual compensation (CTC)?: 20 LPA
   What is your level of proficiency in English?: Professional
   What is your notice period?: 'Serving notice (LWD: 14-Aug-2026)'
   What is your preferred work arrangement?: I am comfortable with remote, hybrid,
     or on-site arrangements.
+  What is your primary reason for seeking a new opportunity?: I am seeking a new opportunity
+    to leverage my skills and experience in a more challenging role with opportunities
+    for growth and development, and to relocate to a new location.
   What is your race/ethnicity?: Asian (Indian)
   What is your veteran status?: I am not a protected veteran
   What is your willingness to travel?: Yes, willing to travel up to 50% or more.
   What languages do you speak?: English, Tamil
+  What will be your notice period?: Serving Notice Period
   'What: job title, keywords, or company': I am a highly motivated and experienced
     software engineer with a strong background in .NET Core, C#, and Azure.
   When can you start?: I can start immediately. My last working day is 14th August
     2026.
+  Where are you currently based?: Coimbatore,TamilNadu
   'Where: city, province, or postal code': Chennai
+  Which tools, platforms, or technologies are you proficient in? (e.g., Jira, GitHub, MS Project, AI tools, etc.): 'No'
+  Why Do You Want to Join Our Company?: tI am excited about the opportunity to join
+    Eurofins as a .Net Core Developer, leveraging my skills in C#, .NET Core, and
+    Angular to contribute to the company's success. My experience as a Senior .NET
+    Developer at LTIMindtree has given me a strong foundation in designing and implementing
+    scalable, microservices-based applications using CQRS, Docker, and RabbitMQ. I
+    am particularly drawn to Eurofins' commitment to innovation and customer satisfaction,
+    and I believe my skills and experience
   Why do you want to work here?: I am excited about contributing my .NET, Azure, and
     microservices expertise to a forward-thinking team. My background in building
     scalable enterprise applications aligns well with your technical requirements.
