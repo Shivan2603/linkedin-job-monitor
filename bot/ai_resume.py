@@ -1199,7 +1199,7 @@ JD:
     interview_prep_path = ""
     try:
         ip_filename = f"Siva_Shankar_{safe_role}_{safe_company}_InterviewPrep.txt"
-        ip_path = os.path.join(TAILORED_TODAY, ip_filename)
+        ip_path = os.path.join(TAILORED_TODAY, "Interview Prep", ip_filename)
         interview_prep_path = generate_interview_prep(
             job_title=job_title,
             company=company,
