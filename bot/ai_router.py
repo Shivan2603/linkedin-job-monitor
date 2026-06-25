@@ -109,24 +109,24 @@ OPENROUTER_FREE_MODELS = [
     # Dynamic free router model (auto-selects working free models)
     "openrouter/free",
     # Flagship quality (best for resume tailoring)
-    "meta-llama/llama-3.3-70b-instruct:free",            # Llama 3.3 70B ✅
-    "google/gemma-4-31b-it:free",                        # Gemma 4 31B ✅
-    "qwen/qwen3-coder-480b-a35b:free",                   # Qwen3 Coder 480B ✅
-    "qwen/qwen3-30b-a3b:free",                           # Qwen3 Next 80B A3B ✅
-    "nvidia/nemotron-ultra-253b-v1:free",                # Nemotron 3 Ultra ✅
-    "nvidia/nemotron-super-49b-v1:free",                 # Nemotron 3 Super ✅
-    "nvidia/llama-3.1-nemotron-nano-8b-v1:free",         # Nemotron Nano 9B V2 ✅
-    # Mid-tier (fast & reliable)
-    "google/gemma-4-26b-it:free",                        # Gemma 4 26B A4B ✅  (added)
-    "nvidia/llama-3.3-nemotron-super-49b-v1:free",       # Nemotron 3 Super alt
-    "nex-gpt/nex-n2-pro:free",                           # Nex-N2-Pro ✅
-    "openai/gpt-4o-mini:free",                           # GPT-OSS 20B equivalent ✅
-    # Small/fast fallbacks
-    "meta-llama/llama-3.2-3b-instruct:free",             # Llama 3.2 3B ✅
-    "liquid/lfm2.5-1.2b-instruct:free",                  # Lfm2.5 1.2B Instruct ✅
-    "liquid/lfm2.5-1.2b-thinking:free",                  # Lfm2.5 1.2B Thinking ✅
-    "nvidia/nemotron-nano-12b-v1:free",                  # Nemotron Nano 12B ✅
-    "nvidia/nemotron-mini-4b-128k:free",                 # Nemotron 3 Nano 30B alt ✅
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "google/gemma-4-31b-it:free",
+    "qwen/qwen3-coder:free",
+    "qwen/qwen3-next-80b-a3b-instruct:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "openai/gpt-oss-120b:free",
+    "openai/gpt-oss-20b:free",
+    "cohere/north-mini-code:free",
+    "google/gemma-4-26b-a4b-it:free",
+    "meta-llama/llama-3.2-3b-instruct:free",
+    "liquid/lfm-2.5-1.2b-instruct:free",
+    "liquid/lfm-2.5-1.2b-thinking:free",
+    "nvidia/nemotron-3-nano-30b-a3b:free",
+    "nvidia/nemotron-nano-12b-v2-vl:free",
+    "nvidia/nemotron-nano-9b-v2:free",
+    "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+    "nousresearch/hermes-3-llama-3.1-405b:free"
 ]
 
 def openrouter_complete(system_prompt: str, user_prompt: str,
@@ -345,7 +345,7 @@ def openrouter_claude_complete(system_prompt: str, user_prompt: str, max_tokens:
     capped_tokens = min(max_tokens, 2048)
     
     payload = {
-        "model": "anthropic/claude-3.5-sonnet",
+        "model": "anthropic/claude-sonnet-4.6",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_prompt},
