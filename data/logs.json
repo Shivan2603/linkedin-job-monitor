@@ -1,5 +1,1573 @@
 [
   {
+    "id": "c77013ed",
+    "ts": "2026-06-26T18:05:42.706378",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: Unison Group | .NET Developer | Singapore | 100% match"
+  },
+  {
+    "id": "9aa7b509",
+    "ts": "2026-06-26T18:05:42.499773",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to Unison Group - .NET Developer ✅"
+  },
+  {
+    "id": "0875c925",
+    "ts": "2026-06-26T18:05:42.400141",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "95511832",
+    "ts": "2026-06-26T18:05:42.111173",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "69771714",
+    "ts": "2026-06-26T18:02:40.490677",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "9693e08d",
+    "ts": "2026-06-26T18:02:40.378340",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving."
+  },
+  {
+    "id": "36fb96c6",
+    "ts": "2026-06-26T18:02:40.203191",
+    "level": "ERROR",
+    "site": "indeed",
+    "message": "AI Form Filler error on step 1: All AI providers failed (Cloud + Local). Last: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "0213ba0c",
+    "ts": "2026-06-26T18:02:40.107219",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "002e20ad",
+    "ts": "2026-06-26T18:02:39.963972",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
+  },
+  {
+    "id": "ff95cd49",
+    "ts": "2026-06-26T18:02:38.756125",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter cognitivecomputations/dolphin-mistral-24b-venice-edition:free unavailable, trying next..."
+  },
+  {
+    "id": "58f06313",
+    "ts": "2026-06-26T18:02:37.780550",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-9b-v2:free unavailable, trying next..."
+  },
+  {
+    "id": "d4f0655c",
+    "ts": "2026-06-26T18:02:37.287667",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-nano-12b-v2-vl:free unavailable, trying next..."
+  },
+  {
+    "id": "9c2b9e8b",
+    "ts": "2026-06-26T18:02:36.763791",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-nano-30b-a3b:free unavailable, trying next..."
+  },
+  {
+    "id": "4a8469f6",
+    "ts": "2026-06-26T18:02:36.237575",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm-2.5-1.2b-thinking:free unavailable, trying next..."
+  },
+  {
+    "id": "7a509ae0",
+    "ts": "2026-06-26T18:02:35.712146",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter liquid/lfm-2.5-1.2b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "df5c9583",
+    "ts": "2026-06-26T18:02:35.218341",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "6161b3ef",
+    "ts": "2026-06-26T18:02:33.765498",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-26b-a4b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "55dd00e9",
+    "ts": "2026-06-26T18:02:33.047415",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter cohere/north-mini-code:free unavailable, trying next..."
+  },
+  {
+    "id": "b53b294b",
+    "ts": "2026-06-26T18:02:32.077740",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free unavailable, trying next..."
+  },
+  {
+    "id": "aea2221c",
+    "ts": "2026-06-26T18:02:30.465978",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free unavailable, trying next..."
+  },
+  {
+    "id": "1fbb6578",
+    "ts": "2026-06-26T18:02:28.250413",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "0c405c3e",
+    "ts": "2026-06-26T18:02:27.760003",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "e1b9eb44",
+    "ts": "2026-06-26T18:02:26.361333",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "8470dcfd",
+    "ts": "2026-06-26T18:02:25.326305",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "69d236fd",
+    "ts": "2026-06-26T18:02:24.101798",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "7d4f38c8",
+    "ts": "2026-06-26T18:02:23.048147",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "4ef516fc",
+    "ts": "2026-06-26T18:02:21.855682",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "44a70b3b",
+    "ts": "2026-06-26T18:02:15.952831",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "b21b9502",
+    "ts": "2026-06-26T18:02:15.716540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini-Fast failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "64c34a7f",
+    "ts": "2026-06-26T18:02:15.570332",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "69593615",
+    "ts": "2026-06-26T18:02:15.060221",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "3c972fb6",
+    "ts": "2026-06-26T18:02:14.263217",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "9bf17231",
+    "ts": "2026-06-26T18:02:13.614733",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "5dfc7598",
+    "ts": "2026-06-26T18:02:12.957362",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "a8db6f1a",
+    "ts": "2026-06-26T18:01:55.351804",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "a59dfccd",
+    "ts": "2026-06-26T18:01:55.253981",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "2ddedf8b",
+    "ts": "2026-06-26T18:01:55.126823",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (analyze)"
+  },
+  {
+    "id": "72a5b0f3",
+    "ts": "2026-06-26T18:01:54.999388",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "62089e73",
+    "ts": "2026-06-26T18:00:27.201225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "bf1f6f9b",
+    "ts": "2026-06-26T18:00:27.024619",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "b5a65a04",
+    "ts": "2026-06-26T18:00:26.834055",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "0aa2399a",
+    "ts": "2026-06-26T18:00:26.706994",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c3d115bb",
+    "ts": "2026-06-26T18:00:26.291240",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "89b5967e",
+    "ts": "2026-06-26T18:00:25.947499",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "6fb1a196",
+    "ts": "2026-06-26T18:00:25.589610",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ec6f2067",
+    "ts": "2026-06-26T18:00:25.118894",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "dc2f0b13",
+    "ts": "2026-06-26T18:00:19.976396",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "a5664610",
+    "ts": "2026-06-26T18:00:07.379487",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "3cb98d97",
+    "ts": "2026-06-26T18:00:07.220526",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "d0e0fed9",
+    "ts": "2026-06-26T17:59:46.361503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "29433838",
+    "ts": "2026-06-26T17:59:45.907964",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "51bf93df",
+    "ts": "2026-06-26T17:59:45.381137",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "00d7acab",
+    "ts": "2026-06-26T17:59:44.295763",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "26883031",
+    "ts": "2026-06-26T17:59:43.418733",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "c4cd5d1d",
+    "ts": "2026-06-26T17:59:42.325609",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "14d86f71",
+    "ts": "2026-06-26T17:59:41.461660",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "53757cf6",
+    "ts": "2026-06-26T17:59:36.135138",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "d3503d66",
+    "ts": "2026-06-26T17:59:36.058936",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "26673102",
+    "ts": "2026-06-26T17:59:35.866756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "83b14f1d",
+    "ts": "2026-06-26T17:59:35.771798",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c1364816",
+    "ts": "2026-06-26T17:59:35.427220",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "d248a529",
+    "ts": "2026-06-26T17:59:35.060113",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "5cd70462",
+    "ts": "2026-06-26T17:59:34.651008",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "1cb2a30d",
+    "ts": "2026-06-26T17:59:34.270731",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d1600e61",
+    "ts": "2026-06-26T17:59:29.144767",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "fee9ff7d",
+    "ts": "2026-06-26T17:59:16.054900",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: .NET Developer @ Unison Group"
+  },
+  {
+    "id": "d0f8804b",
+    "ts": "2026-06-26T17:58:56.847570",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (verify)"
+  },
+  {
+    "id": "b0687d20",
+    "ts": "2026-06-26T17:58:56.729262",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "bbe7e628",
+    "ts": "2026-06-26T17:57:45.385088",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "d89bf75c",
+    "ts": "2026-06-26T17:57:44.920683",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "335cbe57",
+    "ts": "2026-06-26T17:57:44.456919",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "1180f98e",
+    "ts": "2026-06-26T17:57:43.722100",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "c19ee49e",
+    "ts": "2026-06-26T17:57:42.569658",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "2658f374",
+    "ts": "2026-06-26T17:57:41.520299",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "c2794215",
+    "ts": "2026-06-26T17:57:40.690607",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "7b4303e5",
+    "ts": "2026-06-26T17:57:36.388965",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "f0b18bb4",
+    "ts": "2026-06-26T17:57:36.277912",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "300af19c",
+    "ts": "2026-06-26T17:57:36.063991",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "eeb3d9ee",
+    "ts": "2026-06-26T17:57:35.944579",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "c398ef62",
+    "ts": "2026-06-26T17:57:35.579564",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a9068c8b",
+    "ts": "2026-06-26T17:57:35.264509",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "4714add8",
+    "ts": "2026-06-26T17:57:34.882392",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d4dd2d1d",
+    "ts": "2026-06-26T17:57:34.446450",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d7342ac8",
+    "ts": "2026-06-26T17:57:29.315238",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "f95c42f5",
+    "ts": "2026-06-26T17:57:16.514012",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "c7315ba4",
+    "ts": "2026-06-26T17:57:16.365844",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "d73da8ac",
+    "ts": "2026-06-26T17:56:23.072144",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "1eacac24",
+    "ts": "2026-06-26T17:56:22.945728",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "c47ff068",
+    "ts": "2026-06-26T17:56:22.725751",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "89048fca",
+    "ts": "2026-06-26T17:56:22.613813",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "ee181ce5",
+    "ts": "2026-06-26T17:56:22.247315",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "3dd4e5a8",
+    "ts": "2026-06-26T17:56:21.854411",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e0b064c3",
+    "ts": "2026-06-26T17:56:21.450455",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "1690df8f",
+    "ts": "2026-06-26T17:56:21.085175",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "c78f668e",
+    "ts": "2026-06-26T17:56:16.001927",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "23ef8005",
+    "ts": "2026-06-26T17:56:03.256981",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (verify)"
+  },
+  {
+    "id": "a89e6a59",
+    "ts": "2026-06-26T17:56:03.144366",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "c10bbde2",
+    "ts": "2026-06-26T17:54:49.167122",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "f53d8892",
+    "ts": "2026-06-26T17:54:49.039753",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "eca8eb8f",
+    "ts": "2026-06-26T17:54:48.834526",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "6a76b9ac",
+    "ts": "2026-06-26T17:54:48.707198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "f6ce66ee",
+    "ts": "2026-06-26T17:54:48.340198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5f160781",
+    "ts": "2026-06-26T17:54:47.989650",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3988b947",
+    "ts": "2026-06-26T17:54:47.591198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "160a21b7",
+    "ts": "2026-06-26T17:54:47.242889",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "dfaab1e2",
+    "ts": "2026-06-26T17:54:42.090936",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "b3d42190",
+    "ts": "2026-06-26T17:54:28.664332",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (verify)"
+  },
+  {
+    "id": "f4aff6c9",
+    "ts": "2026-06-26T17:54:28.518302",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "be0a5900",
+    "ts": "2026-06-26T17:52:09.903465",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "5afd5363",
+    "ts": "2026-06-26T17:52:09.741212",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "7638a9de",
+    "ts": "2026-06-26T17:52:09.442712",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "388416ed",
+    "ts": "2026-06-26T17:52:09.266464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "aa9e93ae",
+    "ts": "2026-06-26T17:52:08.790576",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "2f5c4ba5",
+    "ts": "2026-06-26T17:52:08.362482",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1a9d18f7",
+    "ts": "2026-06-26T17:52:07.889092",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e585f514",
+    "ts": "2026-06-26T17:52:07.180704",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "aa244c90",
+    "ts": "2026-06-26T17:52:01.986629",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "f58f7658",
+    "ts": "2026-06-26T17:51:49.011062",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (verify)"
+  },
+  {
+    "id": "3ec52c72",
+    "ts": "2026-06-26T17:51:48.830566",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "906f6cde",
+    "ts": "2026-06-26T17:51:44.383205",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "6d4978ae",
+    "ts": "2026-06-26T17:51:44.230981",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "e9a090fc",
+    "ts": "2026-06-26T17:51:43.899394",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "c9da0300",
+    "ts": "2026-06-26T17:51:43.731657",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "d3ae4758",
+    "ts": "2026-06-26T17:51:43.343897",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4800255f",
+    "ts": "2026-06-26T17:51:42.937714",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "db37a9a1",
+    "ts": "2026-06-26T17:51:42.481297",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "119cfdb8",
+    "ts": "2026-06-26T17:51:41.973318",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "145e555c",
+    "ts": "2026-06-26T17:51:36.817262",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "aeb0b773",
+    "ts": "2026-06-26T17:51:23.880342",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "6236cf4f",
+    "ts": "2026-06-26T17:51:23.699837",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "01ae12db",
+    "ts": "2026-06-26T17:50:32.414718",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "e2ef7739",
+    "ts": "2026-06-26T17:50:32.243971",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "40319e59",
+    "ts": "2026-06-26T17:50:31.880490",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "b98f8c6d",
+    "ts": "2026-06-26T17:50:31.724180",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "1c8d801b",
+    "ts": "2026-06-26T17:50:31.334857",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "86f5bf2f",
+    "ts": "2026-06-26T17:50:30.890112",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e3848549",
+    "ts": "2026-06-26T17:50:30.452663",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ad2f9a8a",
+    "ts": "2026-06-26T17:50:30.017304",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "3f09723e",
+    "ts": "2026-06-26T17:50:24.797540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "826b6b35",
+    "ts": "2026-06-26T17:50:12.097870",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (tailor)"
+  },
+  {
+    "id": "a0c5bb95",
+    "ts": "2026-06-26T17:50:11.962535",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "f85c1499",
+    "ts": "2026-06-26T17:48:05.337907",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "5d35d181",
+    "ts": "2026-06-26T17:48:04.846800",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "d773da4d",
+    "ts": "2026-06-26T17:48:04.379879",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "fab553ee",
+    "ts": "2026-06-26T17:48:03.368408",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "78d9b975",
+    "ts": "2026-06-26T17:48:02.299407",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "2b35638c",
+    "ts": "2026-06-26T17:48:01.192672",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "acd5b71c",
+    "ts": "2026-06-26T17:48:00.206138",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "40e0528a",
+    "ts": "2026-06-26T17:47:54.436494",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "790fa420",
+    "ts": "2026-06-26T17:47:54.284322",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "40e54620",
+    "ts": "2026-06-26T17:47:54.036681",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "6068b694",
+    "ts": "2026-06-26T17:47:53.900760",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "f0cccb7d",
+    "ts": "2026-06-26T17:47:53.473932",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "ca64f626",
+    "ts": "2026-06-26T17:47:53.063741",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d196f335",
+    "ts": "2026-06-26T17:47:52.648464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e0b156f4",
+    "ts": "2026-06-26T17:47:52.268898",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: [WinError 206] The filename or extension is too long"
+  },
+  {
+    "id": "b06d565f",
+    "ts": "2026-06-26T17:47:52.127559",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "371250bd",
+    "ts": "2026-06-26T17:47:39.623254",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (rerank)"
+  },
+  {
+    "id": "37daf472",
+    "ts": "2026-06-26T17:47:39.489727",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "f929df5a",
+    "ts": "2026-06-26T17:47:27.348219",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "36a41591",
+    "ts": "2026-06-26T17:47:26.908912",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "9e0e6b4b",
+    "ts": "2026-06-26T17:47:26.490343",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "1e61225e",
+    "ts": "2026-06-26T17:47:25.665737",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "66817446",
+    "ts": "2026-06-26T17:47:24.840088",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "4752c537",
+    "ts": "2026-06-26T17:47:23.820474",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "d7b4e21d",
+    "ts": "2026-06-26T17:47:23.076062",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "6117ca6b",
+    "ts": "2026-06-26T17:47:18.951727",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "b191503d",
+    "ts": "2026-06-26T17:47:18.849544",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "58f4cf43",
+    "ts": "2026-06-26T17:47:18.654923",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "6c409a36",
+    "ts": "2026-06-26T17:47:18.554817",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "9c576ffc",
+    "ts": "2026-06-26T17:47:18.075747",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "1344e42e",
+    "ts": "2026-06-26T17:47:17.662920",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "af6daa6a",
+    "ts": "2026-06-26T17:47:17.297132",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "bf9aa71e",
+    "ts": "2026-06-26T17:47:16.900863",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "b02907cc",
+    "ts": "2026-06-26T17:47:11.772325",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "6474feb2",
+    "ts": "2026-06-26T17:46:58.969011",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (analyze)"
+  },
+  {
+    "id": "cfcf8df8",
+    "ts": "2026-06-26T17:46:58.845551",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "5f5c2d07",
+    "ts": "2026-06-26T17:46:27.990884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "7c1dbec9",
+    "ts": "2026-06-26T17:46:27.860315",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "4722623c",
+    "ts": "2026-06-26T17:46:27.575392",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "672c0ba2",
+    "ts": "2026-06-26T17:46:27.448695",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "02d68353",
+    "ts": "2026-06-26T17:46:27.098434",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "62e86e8e",
+    "ts": "2026-06-26T17:46:26.664639",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3f50002b",
+    "ts": "2026-06-26T17:46:26.300489",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "0f3b1ff9",
+    "ts": "2026-06-26T17:46:25.873437",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "f2e22992",
+    "ts": "2026-06-26T17:46:20.744201",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "58664bd9",
+    "ts": "2026-06-26T17:46:08.264745",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (analyze)"
+  },
+  {
+    "id": "0770d514",
+    "ts": "2026-06-26T17:46:08.123004",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "e4d9ffa9",
+    "ts": "2026-06-26T17:45:50.173537",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "50f1993f",
+    "ts": "2026-06-26T17:45:49.706243",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "cb2a2be3",
+    "ts": "2026-06-26T17:45:48.192474",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "89c46231",
+    "ts": "2026-06-26T17:45:47.316204",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "5a13dd31",
+    "ts": "2026-06-26T17:45:46.486166",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "9528bf81",
+    "ts": "2026-06-26T17:45:45.402853",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "9d332cba",
+    "ts": "2026-06-26T17:45:44.526900",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "f40677e3",
+    "ts": "2026-06-26T17:45:39.803031",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "8ae21773",
+    "ts": "2026-06-26T17:45:39.682827",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "d889990a",
+    "ts": "2026-06-26T17:45:39.461655",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "86ef150e",
+    "ts": "2026-06-26T17:45:39.349145",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "362dee56",
+    "ts": "2026-06-26T17:45:38.997890",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "5dac8f60",
+    "ts": "2026-06-26T17:45:38.616169",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "7e3578cf",
+    "ts": "2026-06-26T17:45:38.236267",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "acb1b461",
+    "ts": "2026-06-26T17:45:37.881005",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "85c71a83",
+    "ts": "2026-06-26T17:45:32.753570",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "e9296186",
+    "ts": "2026-06-26T17:45:20.061742",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (analyze)"
+  },
+  {
+    "id": "7a963815",
+    "ts": "2026-06-26T17:45:19.939588",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "aa63933b",
+    "ts": "2026-06-26T17:44:57.992013",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
+  },
+  {
+    "id": "73ec9ee7",
+    "ts": "2026-06-26T17:44:57.521670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
+  },
+  {
+    "id": "9a645930",
+    "ts": "2026-06-26T17:44:56.519521",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "68d253ba",
+    "ts": "2026-06-26T17:44:55.757833",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
+  },
+  {
+    "id": "ebd9c563",
+    "ts": "2026-06-26T17:44:54.836500",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
+  },
+  {
+    "id": "93164e67",
+    "ts": "2026-06-26T17:44:53.847808",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
+  },
+  {
+    "id": "6d59b917",
+    "ts": "2026-06-26T17:44:53.018523",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free unavailable, trying next..."
+  },
+  {
+    "id": "4b9794a9",
+    "ts": "2026-06-26T17:44:48.459917",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "e2181044",
+    "ts": "2026-06-26T17:44:48.327929",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "649ddcca",
+    "ts": "2026-06-26T17:44:48.089152",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "088cb819",
+    "ts": "2026-06-26T17:44:47.945747",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
+  },
+  {
+    "id": "b0ba7f2e",
+    "ts": "2026-06-26T17:44:47.596599",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "eb08d2a9",
+    "ts": "2026-06-26T17:44:47.214542",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c8e4856e",
+    "ts": "2026-06-26T17:44:46.831861",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "f644246f",
+    "ts": "2026-06-26T17:44:46.433679",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
+  },
+  {
+    "id": "d11fd445",
+    "ts": "2026-06-26T17:44:41.292714",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
+  },
+  {
+    "id": "1f8fd59d",
+    "ts": "2026-06-26T17:44:28.492780",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Unison Group. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "77af8abe",
+    "ts": "2026-06-26T17:44:24.237700",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Unison Group - .NET Developer (External Apply)..."
+  },
+  {
     "id": "bf9f8e15",
     "ts": "2026-06-26T17:44:08.859316",
     "level": "SUCCESS",
@@ -1930,1573 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "f1e773c9",
-    "ts": "2026-06-26T17:20:20.804374",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Denmark' (geoId=104514075)"
-  },
-  {
-    "id": "6df60b05",
-    "ts": "2026-06-26T17:20:20.747633",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Denmark (geoId=104514075)"
-  },
-  {
-    "id": "cbe389c4",
-    "ts": "2026-06-26T17:20:20.682977",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7a197519",
-    "ts": "2026-06-26T17:20:20.630319",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "0d1076a6",
-    "ts": "2026-06-26T17:20:20.574302",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Sweden' (geoId=106155005)"
-  },
-  {
-    "id": "6d894c5b",
-    "ts": "2026-06-26T17:20:20.509161",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0025404d",
-    "ts": "2026-06-26T17:20:20.454489",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "f96eee27",
-    "ts": "2026-06-26T17:20:20.381956",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Sweden' (geoId=106155005)"
-  },
-  {
-    "id": "f8a9cd0d",
-    "ts": "2026-06-26T17:20:20.333963",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Sweden (geoId=106155005)"
-  },
-  {
-    "id": "dabea8f3",
-    "ts": "2026-06-26T17:20:20.278473",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ca729963",
-    "ts": "2026-06-26T17:20:20.206745",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "05bf17ad",
-    "ts": "2026-06-26T17:20:20.162438",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Switzerland' (geoId=105428954)"
-  },
-  {
-    "id": "8bec2ccc",
-    "ts": "2026-06-26T17:20:20.103552",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "54af5daf",
-    "ts": "2026-06-26T17:20:20.042267",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "0e24ce3f",
-    "ts": "2026-06-26T17:20:19.969606",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Switzerland' (geoId=105428954)"
-  },
-  {
-    "id": "a835fa50",
-    "ts": "2026-06-26T17:20:19.924479",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Switzerland (geoId=105428954)"
-  },
-  {
-    "id": "31996ed4",
-    "ts": "2026-06-26T17:20:19.866226",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d6002435",
-    "ts": "2026-06-26T17:20:19.804279",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "ef71633a",
-    "ts": "2026-06-26T17:20:19.747462",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'New Zealand' (geoId=105117694)"
-  },
-  {
-    "id": "262c7b36",
-    "ts": "2026-06-26T17:20:19.688069",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1cb49fde",
-    "ts": "2026-06-26T17:20:19.631266",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "35740835",
-    "ts": "2026-06-26T17:20:19.560435",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'New Zealand' (geoId=105117694)"
-  },
-  {
-    "id": "65928633",
-    "ts": "2026-06-26T17:20:19.511328",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in New Zealand (geoId=105117694)"
-  },
-  {
-    "id": "a228ca5b",
-    "ts": "2026-06-26T17:20:19.455936",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "dae52974",
-    "ts": "2026-06-26T17:20:19.396397",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "4a0c983a",
-    "ts": "2026-06-26T17:20:19.337215",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Netherlands' (geoId=102890719)"
-  },
-  {
-    "id": "02fdb25a",
-    "ts": "2026-06-26T17:20:19.279299",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "19397b54",
-    "ts": "2026-06-26T17:20:19.216118",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "162b3da9",
-    "ts": "2026-06-26T17:20:19.157701",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Netherlands' (geoId=102890719)"
-  },
-  {
-    "id": "02184a8d",
-    "ts": "2026-06-26T17:20:19.099784",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Netherlands (geoId=102890719)"
-  },
-  {
-    "id": "c8c56555",
-    "ts": "2026-06-26T17:20:19.042573",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "fb103519",
-    "ts": "2026-06-26T17:20:18.979292",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "8965c2d5",
-    "ts": "2026-06-26T17:20:18.922087",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Germany' (geoId=103366791)"
-  },
-  {
-    "id": "bfa361c2",
-    "ts": "2026-06-26T17:20:18.864635",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3a1a2f7e",
-    "ts": "2026-06-26T17:20:18.806118",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "d6ee1c74",
-    "ts": "2026-06-26T17:20:18.740697",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Germany' (geoId=103366791)"
-  },
-  {
-    "id": "87fb8dc5",
-    "ts": "2026-06-26T17:20:18.687163",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Germany (geoId=103366791)"
-  },
-  {
-    "id": "c240931a",
-    "ts": "2026-06-26T17:20:18.630434",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "13efc38e",
-    "ts": "2026-06-26T17:20:18.569553",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "ff98c766",
-    "ts": "2026-06-26T17:20:18.487547",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Ireland' (geoId=104869687)"
-  },
-  {
-    "id": "26cc40fa",
-    "ts": "2026-06-26T17:20:18.423622",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7475dd10",
-    "ts": "2026-06-26T17:20:18.376347",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "c5dcfb78",
-    "ts": "2026-06-26T17:20:18.313180",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Ireland' (geoId=104869687)"
-  },
-  {
-    "id": "fbcb3530",
-    "ts": "2026-06-26T17:20:18.253924",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Ireland (Dublin) (geoId=104869687)"
-  },
-  {
-    "id": "293c0d10",
-    "ts": "2026-06-26T17:20:18.203724",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "9a6dafdb",
-    "ts": "2026-06-26T17:20:18.138974",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "7fca72e0",
-    "ts": "2026-06-26T17:20:18.075539",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'United Arab Emirates' (geoId=106693272)"
-  },
-  {
-    "id": "8024086a",
-    "ts": "2026-06-26T17:20:18.020347",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "85384aab",
-    "ts": "2026-06-26T17:20:17.961781",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "acfc7c8d",
-    "ts": "2026-06-26T17:20:17.904921",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'United Arab Emirates' (geoId=106693272)"
-  },
-  {
-    "id": "c812e2bb",
-    "ts": "2026-06-26T17:20:17.847147",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in UAE (Dubai) (geoId=106693272)"
-  },
-  {
-    "id": "f3e6dbe4",
-    "ts": "2026-06-26T17:20:17.786888",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "88b01520",
-    "ts": "2026-06-26T17:20:17.725908",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "a23a5cad",
-    "ts": "2026-06-26T17:20:17.669548",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Malaysia' (geoId=105072130)"
-  },
-  {
-    "id": "b109bb95",
-    "ts": "2026-06-26T17:20:17.600671",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "af0dae7b",
-    "ts": "2026-06-26T17:20:17.553543",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "d106b2bd",
-    "ts": "2026-06-26T17:20:17.487495",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Malaysia' (geoId=105072130)"
-  },
-  {
-    "id": "fa278e2b",
-    "ts": "2026-06-26T17:20:17.434447",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Malaysia (geoId=105072130)"
-  },
-  {
-    "id": "b4a7d830",
-    "ts": "2026-06-26T17:20:17.378657",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f82be974",
-    "ts": "2026-06-26T17:20:17.318237",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "843f9d4e",
-    "ts": "2026-06-26T17:20:17.253810",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Singapore' (geoId=102454443)"
-  },
-  {
-    "id": "dcd801e1",
-    "ts": "2026-06-26T17:20:17.190330",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "43b50bbd",
-    "ts": "2026-06-26T17:20:17.123420",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "4150ba9c",
-    "ts": "2026-06-26T17:20:17.078273",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Singapore' (geoId=102454443)"
-  },
-  {
-    "id": "bc051dd5",
-    "ts": "2026-06-26T17:20:17.017345",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Singapore (geoId=102454443)"
-  },
-  {
-    "id": "cf83a833",
-    "ts": "2026-06-26T17:20:16.953371",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ec09d565",
-    "ts": "2026-06-26T17:20:16.884899",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "458fe06f",
-    "ts": "2026-06-26T17:20:16.836813",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Canada' (geoId=101174742)"
-  },
-  {
-    "id": "5a3f89f5",
-    "ts": "2026-06-26T17:20:16.778446",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b61f047b",
-    "ts": "2026-06-26T17:20:16.718960",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "f25607b1",
-    "ts": "2026-06-26T17:20:16.653118",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Canada' (geoId=101174742)"
-  },
-  {
-    "id": "9c261cb9",
-    "ts": "2026-06-26T17:20:16.598546",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Canada (geoId=101174742)"
-  },
-  {
-    "id": "f8de8cf2",
-    "ts": "2026-06-26T17:20:16.540040",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7c0e2161",
-    "ts": "2026-06-26T17:20:16.471872",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "d85e8df5",
-    "ts": "2026-06-26T17:20:16.414977",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Australia' (geoId=101452733)"
-  },
-  {
-    "id": "0ebbfce9",
-    "ts": "2026-06-26T17:20:16.360935",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "eb9936a0",
-    "ts": "2026-06-26T17:20:16.304894",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "5ae1dbe2",
-    "ts": "2026-06-26T17:20:16.235247",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'Australia' (geoId=101452733)"
-  },
-  {
-    "id": "80fad37e",
-    "ts": "2026-06-26T17:20:16.174687",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Australia (geoId=101452733)"
-  },
-  {
-    "id": "3452ee3e",
-    "ts": "2026-06-26T17:20:16.113755",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "feaad4b1",
-    "ts": "2026-06-26T17:20:16.052717",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "f848afb3",
-    "ts": "2026-06-26T17:20:15.979331",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'United States' (geoId=101165590)"
-  },
-  {
-    "id": "c153776d",
-    "ts": "2026-06-26T17:20:15.935284",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "9634a9c8",
-    "ts": "2026-06-26T17:20:15.868327",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "1f31de3e",
-    "ts": "2026-06-26T17:20:15.812664",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'United States' (geoId=101165590)"
-  },
-  {
-    "id": "42cf10d3",
-    "ts": "2026-06-26T17:20:15.757515",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in United States (geoId=101165590)"
-  },
-  {
-    "id": "1d622ee3",
-    "ts": "2026-06-26T17:20:15.694001",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d3b954f9",
-    "ts": "2026-06-26T17:20:15.630343",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "81a3dd3c",
-    "ts": "2026-06-26T17:20:15.566575",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'United Kingdom' (geoId=102454443)"
-  },
-  {
-    "id": "12d280ab",
-    "ts": "2026-06-26T17:20:15.518743",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.Net' in United Kingdom"
-  },
-  {
-    "id": "cb93f0a6",
-    "ts": "2026-06-26T17:20:15.455145",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "29b3e4b5",
-    "ts": "2026-06-26T17:20:15.391442",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "e58e22a6",
-    "ts": "2026-06-26T17:20:15.328375",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "495472ce",
-    "ts": "2026-06-26T17:20:15.269558",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "b036745c",
-    "ts": "2026-06-26T17:20:15.201300",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "869ee1f7",
-    "ts": "2026-06-26T17:20:15.139167",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: Locator.scroll_into_view_if_needed: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b32cecc2",
-    "ts": "2026-06-26T17:20:15.073321",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (analyze)"
-  },
-  {
-    "id": "16067748",
-    "ts": "2026-06-26T17:20:14.971454",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (free)"
-  },
-  {
-    "id": "0f07624a",
-    "ts": "2026-06-26T17:18:01.617276",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "ffba291b",
-    "ts": "2026-06-26T17:18:01.534193",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "7c48e024",
-    "ts": "2026-06-26T17:18:01.394573",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "059998b9",
-    "ts": "2026-06-26T17:18:01.301633",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "49c3368b",
-    "ts": "2026-06-26T17:18:00.963945",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "ac65c08f",
-    "ts": "2026-06-26T17:18:00.517939",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "bde33064",
-    "ts": "2026-06-26T17:18:00.176713",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "b7bf303a",
-    "ts": "2026-06-26T17:17:59.780857",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "89818f54",
-    "ts": "2026-06-26T17:17:54.710390",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "8101e4c3",
-    "ts": "2026-06-26T17:17:42.262181",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (tailor)"
-  },
-  {
-    "id": "d6b82ca3",
-    "ts": "2026-06-26T17:17:42.142628",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (free)"
-  },
-  {
-    "id": "cc96c4f8",
-    "ts": "2026-06-26T17:17:13.382444",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "16685a4f",
-    "ts": "2026-06-26T17:17:13.291998",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "f1ef96df",
-    "ts": "2026-06-26T17:17:13.128837",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "c3d99ee5",
-    "ts": "2026-06-26T17:17:13.025446",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "3f456846",
-    "ts": "2026-06-26T17:17:12.704647",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "3a366cbd",
-    "ts": "2026-06-26T17:17:12.368385",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "880a9fe5",
-    "ts": "2026-06-26T17:17:12.033398",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "39292661",
-    "ts": "2026-06-26T17:17:11.691387",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "9f6141c1",
-    "ts": "2026-06-26T17:17:06.668271",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "f4e1d5d9",
-    "ts": "2026-06-26T17:16:53.865447",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior .NET Fullstack Developer @ Eurofins"
-  },
-  {
-    "id": "f257c254",
-    "ts": "2026-06-26T17:16:37.766936",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (verify)"
-  },
-  {
-    "id": "86deea95",
-    "ts": "2026-06-26T17:16:37.690363",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (free)"
-  },
-  {
-    "id": "c232588d",
-    "ts": "2026-06-26T17:15:53.320962",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "0595f18e",
-    "ts": "2026-06-26T17:15:53.232291",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "687c0900",
-    "ts": "2026-06-26T17:15:53.076765",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "c20c6191",
-    "ts": "2026-06-26T17:15:52.982885",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "0ddb46b7",
-    "ts": "2026-06-26T17:15:52.647588",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "fcc89305",
-    "ts": "2026-06-26T17:15:52.332841",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1e39ba44",
-    "ts": "2026-06-26T17:15:51.902476",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "62c0ee20",
-    "ts": "2026-06-26T17:15:51.554167",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "955c0560",
-    "ts": "2026-06-26T17:15:46.534378",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "7fca7745",
-    "ts": "2026-06-26T17:15:33.772457",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Groq (tailor)"
-  },
-  {
-    "id": "748fc1ab",
-    "ts": "2026-06-26T17:15:31.679000",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "820fb89c",
-    "ts": "2026-06-26T17:15:31.573553",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "15f19401",
-    "ts": "2026-06-26T17:15:31.240324",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "af2b81a6",
-    "ts": "2026-06-26T17:15:30.866971",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "79dc3493",
-    "ts": "2026-06-26T17:15:30.483501",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "d60b46e3",
-    "ts": "2026-06-26T17:15:30.114983",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "c34a404c",
-    "ts": "2026-06-26T17:15:25.066590",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "7d9bdb11",
-    "ts": "2026-06-26T17:15:12.592175",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "ce50d1d1",
-    "ts": "2026-06-26T17:15:12.513238",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
-  },
-  {
-    "id": "b2afdc80",
-    "ts": "2026-06-26T17:15:11.738635",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter cognitivecomputations/dolphin-mistral-24b-venice-edition:free unavailable, trying next..."
-  },
-  {
-    "id": "ef7be500",
-    "ts": "2026-06-26T17:15:10.911534",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-9b-v2:free unavailable, trying next..."
-  },
-  {
-    "id": "753101e2",
-    "ts": "2026-06-26T17:15:10.442767",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v2-vl:free unavailable, trying next..."
-  },
-  {
-    "id": "afe394df",
-    "ts": "2026-06-26T17:15:10.017553",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-nano-30b-a3b:free unavailable, trying next..."
-  },
-  {
-    "id": "1756395e",
-    "ts": "2026-06-26T17:15:09.593192",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm-2.5-1.2b-thinking:free unavailable, trying next..."
-  },
-  {
-    "id": "2874db64",
-    "ts": "2026-06-26T17:15:09.111351",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm-2.5-1.2b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "c6e9d4b9",
-    "ts": "2026-06-26T17:15:08.653682",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "74677fd9",
-    "ts": "2026-06-26T17:15:07.806122",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-a4b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "8ed5f1cf",
-    "ts": "2026-06-26T17:15:07.024031",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter cohere/north-mini-code:free unavailable, trying next..."
-  },
-  {
-    "id": "c101803d",
-    "ts": "2026-06-26T17:15:05.628197",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-20b:free failed: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without"
-  },
-  {
-    "id": "9b73d918",
-    "ts": "2026-06-26T17:09:36.177197",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free unavailable, trying next..."
-  },
-  {
-    "id": "1c815e8d",
-    "ts": "2026-06-26T17:09:34.759562",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
-  },
-  {
-    "id": "1e6b42cd",
-    "ts": "2026-06-26T17:09:34.287880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
-  },
-  {
-    "id": "69ac08cf",
-    "ts": "2026-06-26T17:09:33.792329",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "41c52233",
-    "ts": "2026-06-26T17:09:32.964689",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
-  },
-  {
-    "id": "7996839f",
-    "ts": "2026-06-26T17:09:31.985731",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "c3c1e14f",
-    "ts": "2026-06-26T17:09:30.877486",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "ab513459",
-    "ts": "2026-06-26T17:09:29.992025",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "77aa132d",
-    "ts": "2026-06-26T17:09:25.226528",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "38948797",
-    "ts": "2026-06-26T17:09:25.013318",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "9ebeb118",
-    "ts": "2026-06-26T17:09:24.721292",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "576f6840",
-    "ts": "2026-06-26T17:09:24.541159",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "2596b4e2",
-    "ts": "2026-06-26T17:09:24.130444",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "bf393a1b",
-    "ts": "2026-06-26T17:09:23.683746",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "5ce30ccc",
-    "ts": "2026-06-26T17:09:23.263970",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "9ab73fa9",
-    "ts": "2026-06-26T17:09:22.860726",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "2b8a2acb",
-    "ts": "2026-06-26T17:09:17.692894",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "619b3758",
-    "ts": "2026-06-26T17:09:05.275839",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter failed: All OpenRouter free models unavailable"
-  },
-  {
-    "id": "1687a47d",
-    "ts": "2026-06-26T17:09:05.083245",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nousresearch/hermes-3-llama-3.1-405b:free unavailable, trying next..."
-  },
-  {
-    "id": "f8d66bdd",
-    "ts": "2026-06-26T17:09:03.755887",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter cognitivecomputations/dolphin-mistral-24b-venice-edition:free unavailable, trying next..."
-  },
-  {
-    "id": "f9b9ff2e",
-    "ts": "2026-06-26T17:09:02.839155",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-9b-v2:free unavailable, trying next..."
-  },
-  {
-    "id": "f7d25211",
-    "ts": "2026-06-26T17:09:01.848303",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-nano-12b-v2-vl:free unavailable, trying next..."
-  },
-  {
-    "id": "4af9fb1c",
-    "ts": "2026-06-26T17:09:01.349084",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-nano-30b-a3b:free unavailable, trying next..."
-  },
-  {
-    "id": "0151c70c",
-    "ts": "2026-06-26T17:09:00.822868",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm-2.5-1.2b-thinking:free unavailable, trying next..."
-  },
-  {
-    "id": "c2ea6586",
-    "ts": "2026-06-26T17:09:00.318768",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter liquid/lfm-2.5-1.2b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "81720b3d",
-    "ts": "2026-06-26T17:08:59.795879",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "2b003726",
-    "ts": "2026-06-26T17:08:58.754780",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-26b-a4b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "7ba48d0d",
-    "ts": "2026-06-26T17:08:57.954425",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter cohere/north-mini-code:free unavailable, trying next..."
-  },
-  {
-    "id": "ab89c568",
-    "ts": "2026-06-26T17:08:56.981470",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-20b:free unavailable, trying next..."
-  },
-  {
-    "id": "29cccb59",
-    "ts": "2026-06-26T17:08:55.246102",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free unavailable, trying next..."
-  },
-  {
-    "id": "13a43b20",
-    "ts": "2026-06-26T17:08:53.823593",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
-  },
-  {
-    "id": "b266c416",
-    "ts": "2026-06-26T17:08:53.111438",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
-  },
-  {
-    "id": "8bcca57f",
-    "ts": "2026-06-26T17:08:52.457721",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "86ee50a4",
-    "ts": "2026-06-26T17:08:51.475629",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
-  },
-  {
-    "id": "4a88e557",
-    "ts": "2026-06-26T17:08:50.507901",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "c97a3f8a",
-    "ts": "2026-06-26T17:08:49.257918",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "6feb2272",
-    "ts": "2026-06-26T17:08:48.283741",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "522bed94",
-    "ts": "2026-06-26T17:08:43.548586",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "0b72daa5",
-    "ts": "2026-06-26T17:08:43.370826",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "c758f735",
-    "ts": "2026-06-26T17:08:43.052090",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "aa279d6b",
-    "ts": "2026-06-26T17:08:42.880589",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "d1b82741",
-    "ts": "2026-06-26T17:08:42.398920",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "767c9207",
-    "ts": "2026-06-26T17:08:41.919768",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "bb1c33c2",
-    "ts": "2026-06-26T17:08:41.398835",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "b0d15796",
-    "ts": "2026-06-26T17:08:40.943447",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "95a379c7",
-    "ts": "2026-06-26T17:08:35.760900",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "09d312ab",
-    "ts": "2026-06-26T17:08:23.265842",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (verify)"
-  },
-  {
-    "id": "97626d0f",
-    "ts": "2026-06-26T17:08:23.067142",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "957a5b08",
-    "ts": "2026-06-26T17:08:18.608139",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
-  },
-  {
-    "id": "73160643",
-    "ts": "2026-06-26T17:08:18.062918",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
-  },
-  {
-    "id": "a7a17b9e",
-    "ts": "2026-06-26T17:08:17.564320",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "44710bd5",
-    "ts": "2026-06-26T17:08:16.606749",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
-  },
-  {
-    "id": "26f119bd",
-    "ts": "2026-06-26T17:08:15.782492",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "f48207a2",
-    "ts": "2026-06-26T17:08:14.658335",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "1eeec31d",
-    "ts": "2026-06-26T17:08:13.795355",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "44d42c5d",
-    "ts": "2026-06-26T17:08:09.914393",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "b36d8147",
-    "ts": "2026-06-26T17:08:09.725304",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "8775d852",
-    "ts": "2026-06-26T17:08:09.398168",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "b47633fd",
-    "ts": "2026-06-26T17:08:09.205070",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash-8b not found, trying next..."
-  },
-  {
-    "id": "948bed4d",
-    "ts": "2026-06-26T17:08:08.757727",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "711de8c2",
-    "ts": "2026-06-26T17:08:08.332098",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "2cc172f1",
-    "ts": "2026-06-26T17:08:07.871367",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ef8d2bd8",
-    "ts": "2026-06-26T17:08:07.320082",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Local-JCode failed: JCode CLI exception: JCode CLI failed: Error: Failed to send OpenAI-compatible chat request\n  endpoi"
-  },
-  {
-    "id": "2a3ad264",
-    "ts": "2026-06-26T17:08:02.171405",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Claude-Sonnet-4.6 failed: 402 Client Error: Payment Required for url: https://openrouter.ai/api/v1/chat/completions"
-  },
-  {
-    "id": "ee152dc2",
-    "ts": "2026-06-26T17:07:47.951352",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (tailor)"
-  },
-  {
-    "id": "28487e3f",
-    "ts": "2026-06-26T17:07:47.760162",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "1469a02a",
-    "ts": "2026-06-26T17:06:42.283244",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free unavailable, trying next..."
-  },
-  {
-    "id": "df8de6d3",
-    "ts": "2026-06-26T17:06:41.733364",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter nvidia/nemotron-3-ultra-550b-a55b:free unavailable, trying next..."
-  },
-  {
-    "id": "9257174b",
-    "ts": "2026-06-26T17:06:41.217910",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-next-80b-a3b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "ccb83d2f",
-    "ts": "2026-06-26T17:06:39.728044",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free unavailable, trying next..."
-  },
-  {
-    "id": "53fa8dee",
-    "ts": "2026-06-26T17:06:38.883018",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter google/gemma-4-31b-it:free unavailable, trying next..."
-  },
-  {
-    "id": "75636d9d",
-    "ts": "2026-06-26T17:06:37.626401",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free unavailable, trying next..."
-  },
-  {
-    "id": "1421423f",
-    "ts": "2026-06-26T17:06:36.631034",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openrouter/free unavailable, trying next..."
-  },
-  {
-    "id": "f212f12d",
-    "ts": "2026-06-26T17:06:31.717909",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq 429 Rate Limit"
   }
 ]
