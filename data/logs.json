@@ -1,5 +1,2224 @@
 [
   {
+    "id": "e0a06ade",
+    "ts": "2026-06-28T12:45:15.742136",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Collabera | Full-Stack Developer_.NET and Angular | Toronto, ON | 100% match"
+  },
+  {
+    "id": "154cf0ca",
+    "ts": "2026-06-28T12:45:15.580687",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Collabera — Full-Stack Developer_.NET and Angular"
+  },
+  {
+    "id": "aaa4e69a",
+    "ts": "2026-06-28T12:45:06.188318",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "0bc67f94",
+    "ts": "2026-06-28T12:45:05.966070",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you comfortable going in-person for an technical interview?' = 'Yes'"
+  },
+  {
+    "id": "a860ff68",
+    "ts": "2026-06-28T12:45:05.816413",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Are you local to Toronto, ON and open to working hybrid 5x/month in office?' = 'No'"
+  },
+  {
+    "id": "a4a01310",
+    "ts": "2026-06-28T12:45:05.706371",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have experience supporting multi-tier applications and API integrations?' = 'Yes'"
+  },
+  {
+    "id": "6a7af746",
+    "ts": "2026-06-28T12:45:05.602843",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have strong experience in Angular?' = 'Yes'"
+  },
+  {
+    "id": "9a40895e",
+    "ts": "2026-06-28T12:45:05.482358",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have experience in Azure cloud?' = 'Yes'"
+  },
+  {
+    "id": "3494d89b",
+    "ts": "2026-06-28T12:45:05.319659",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Do you have experience working in banking or capital markets space?' = 'No'"
+  },
+  {
+    "id": "5912cbce",
+    "ts": "2026-06-28T12:45:02.936173",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "3477e402",
+    "ts": "2026-06-28T12:45:02.767419",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3c9f72db",
+    "ts": "2026-06-28T12:45:02.301915",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "25fa0fc7",
+    "ts": "2026-06-28T12:45:01.869278",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "10c97e87",
+    "ts": "2026-06-28T12:45:01.695197",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "df02e94f",
+    "ts": "2026-06-28T12:44:44.769593",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "4ec84e82",
+    "ts": "2026-06-28T12:44:43.712935",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "b4ef3ade",
+    "ts": "2026-06-28T12:44:42.613756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "8bcf984b",
+    "ts": "2026-06-28T12:44:39.491202",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "598df335",
+    "ts": "2026-06-28T12:44:39.358670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0c02a4f4",
+    "ts": "2026-06-28T12:44:38.957176",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4b8b5c22",
+    "ts": "2026-06-28T12:44:38.546086",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "16e24572",
+    "ts": "2026-06-28T12:44:38.385690",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "ebf2a669",
+    "ts": "2026-06-28T12:44:33.505190",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "13317f3e",
+    "ts": "2026-06-28T12:44:32.486893",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "b8a6097c",
+    "ts": "2026-06-28T12:44:30.660084",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "c0443b26",
+    "ts": "2026-06-28T12:44:28.851441",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9b54f546",
+    "ts": "2026-06-28T12:44:28.678858",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "415faeb2",
+    "ts": "2026-06-28T12:44:28.277589",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a5671f68",
+    "ts": "2026-06-28T12:44:27.862251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "fd3373c0",
+    "ts": "2026-06-28T12:44:27.695506",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "a66d1aec",
+    "ts": "2026-06-28T12:44:26.688855",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "c85f2193",
+    "ts": "2026-06-28T12:44:24.284942",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "af46be97",
+    "ts": "2026-06-28T12:44:23.187746",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "d6cfc3b4",
+    "ts": "2026-06-28T12:44:20.908204",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "47655cdd",
+    "ts": "2026-06-28T12:44:20.782262",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "5aa0f7ee",
+    "ts": "2026-06-28T12:44:20.198750",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "db250c9d",
+    "ts": "2026-06-28T12:44:19.750493",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "02316de3",
+    "ts": "2026-06-28T12:44:19.608761",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "a2d9782e",
+    "ts": "2026-06-28T12:44:18.455044",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "16f3a0ec",
+    "ts": "2026-06-28T12:44:17.385281",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "c318f8e8",
+    "ts": "2026-06-28T12:44:16.331023",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "6801d2c7",
+    "ts": "2026-06-28T12:44:13.295897",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "77f94760",
+    "ts": "2026-06-28T12:44:13.112864",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "7cf6c593",
+    "ts": "2026-06-28T12:44:12.719830",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "0bb21db6",
+    "ts": "2026-06-28T12:44:12.312563",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "90955269",
+    "ts": "2026-06-28T12:44:12.172965",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "27bafd5e",
+    "ts": "2026-06-28T12:44:09.164909",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "9c13afb4",
+    "ts": "2026-06-28T12:44:08.079287",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "60ca879f",
+    "ts": "2026-06-28T12:44:07.025045",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "af314621",
+    "ts": "2026-06-28T12:44:05.309097",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "fa17d818",
+    "ts": "2026-06-28T12:44:05.124661",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "ce822b2f",
+    "ts": "2026-06-28T12:44:04.695093",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ef700036",
+    "ts": "2026-06-28T12:44:04.202768",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "633d4f03",
+    "ts": "2026-06-28T12:44:04.056908",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "5b3b866d",
+    "ts": "2026-06-28T12:44:02.998225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "d9e832ba",
+    "ts": "2026-06-28T12:44:01.998010",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "2c104a1c",
+    "ts": "2026-06-28T12:44:00.997926",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "18670c52",
+    "ts": "2026-06-28T12:43:56.387132",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "514122a1",
+    "ts": "2026-06-28T12:43:56.128767",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_.NET_Full_Stack_Engineer_Resume.docx'"
+  },
+  {
+    "id": "ac646b15",
+    "ts": "2026-06-28T12:43:50.157003",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "21987f22",
+    "ts": "2026-06-28T12:43:49.898904",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'Canada'"
+  },
+  {
+    "id": "47c854ce",
+    "ts": "2026-06-28T12:43:49.767946",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = '(\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")'"
+  },
+  {
+    "id": "f2f06417",
+    "ts": "2026-06-28T12:43:13.999622",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "4b62ecc1",
+    "ts": "2026-06-28T12:40:36.537339",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "c413d623",
+    "ts": "2026-06-28T12:40:36.385448",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "48e96939",
+    "ts": "2026-06-28T12:40:36.153117",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "acb34085",
+    "ts": "2026-06-28T12:40:36.014645",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "33a60a58",
+    "ts": "2026-06-28T12:40:35.636540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "50e3718d",
+    "ts": "2026-06-28T12:40:35.133454",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is offline or sleeping"
+  },
+  {
+    "id": "5864f78e",
+    "ts": "2026-06-28T12:40:11.049253",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "28be7ac6",
+    "ts": "2026-06-28T12:40:09.803035",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "ae1b19f7",
+    "ts": "2026-06-28T12:40:05.640016",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "f2f9f0d2",
+    "ts": "2026-06-28T12:39:55.902488",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "e5dade0e",
+    "ts": "2026-06-28T12:39:55.096711",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "e2ebc5fc",
+    "ts": "2026-06-28T12:39:54.273022",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "35bf3a6f",
+    "ts": "2026-06-28T12:39:53.003097",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "a0ced12d",
+    "ts": "2026-06-28T12:39:52.880073",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "378da71a",
+    "ts": "2026-06-28T12:39:52.640913",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9e15a4df",
+    "ts": "2026-06-28T12:39:52.500830",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "0d80dd16",
+    "ts": "2026-06-28T12:39:52.104439",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "eece74dc",
+    "ts": "2026-06-28T12:39:51.740444",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "6da7386c",
+    "ts": "2026-06-28T12:39:51.624527",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "c4c11fac",
+    "ts": "2026-06-28T12:39:44.480033",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "338308e7",
+    "ts": "2026-06-28T12:39:43.480687",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "f9eb5b01",
+    "ts": "2026-06-28T12:39:28.628953",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "c55d86a6",
+    "ts": "2026-06-28T12:39:18.723373",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Senior .NET Full Stack Engineer @ Collabera"
+  },
+  {
+    "id": "0015101c",
+    "ts": "2026-06-28T12:39:06.316941",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "2e0228bb",
+    "ts": "2026-06-28T12:38:57.447896",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "02d00dbe",
+    "ts": "2026-06-28T12:38:56.614082",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "8f4a4611",
+    "ts": "2026-06-28T12:38:55.854621",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "d3b9ad37",
+    "ts": "2026-06-28T12:38:54.294897",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "2560de45",
+    "ts": "2026-06-28T12:38:54.196144",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "0c93e96f",
+    "ts": "2026-06-28T12:38:53.972922",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "0ae53da9",
+    "ts": "2026-06-28T12:38:53.869055",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "38d06a81",
+    "ts": "2026-06-28T12:38:53.463805",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "4c7a78a5",
+    "ts": "2026-06-28T12:38:52.887543",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "2deecbd3",
+    "ts": "2026-06-28T12:38:52.779004",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "a0789c51",
+    "ts": "2026-06-28T12:38:50.095877",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "ef4255bd",
+    "ts": "2026-06-28T12:38:45.915596",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "6eb2d99a",
+    "ts": "2026-06-28T12:38:44.879044",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "e2162cd6",
+    "ts": "2026-06-28T12:38:43.795987",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "70b1877b",
+    "ts": "2026-06-28T12:36:38.733014",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "2f0f79f2",
+    "ts": "2026-06-28T12:36:37.847477",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "757510a1",
+    "ts": "2026-06-28T12:36:36.756421",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "bca8d7a1",
+    "ts": "2026-06-28T12:36:35.223370",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "55e1b309",
+    "ts": "2026-06-28T12:36:35.131033",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "a22e5958",
+    "ts": "2026-06-28T12:36:34.455890",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "745abe68",
+    "ts": "2026-06-28T12:36:34.354694",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1e9d3c64",
+    "ts": "2026-06-28T12:36:33.960857",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "95d35930",
+    "ts": "2026-06-28T12:36:33.593006",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "e43eff8a",
+    "ts": "2026-06-28T12:36:33.473090",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "dd2a26e7",
+    "ts": "2026-06-28T12:36:32.216667",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "d6013624",
+    "ts": "2026-06-28T12:36:30.711178",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "34362f5f",
+    "ts": "2026-06-28T12:36:29.492881",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "d8841fc7",
+    "ts": "2026-06-28T12:36:28.259221",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "b474c0a5",
+    "ts": "2026-06-28T12:36:23.749708",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "931e424a",
+    "ts": "2026-06-28T12:36:23.633728",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "b2478805",
+    "ts": "2026-06-28T12:36:23.317663",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "84a731d9",
+    "ts": "2026-06-28T12:36:23.203355",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "2a8748cd",
+    "ts": "2026-06-28T12:36:22.841968",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "089b9e33",
+    "ts": "2026-06-28T12:36:22.488367",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "b250db74",
+    "ts": "2026-06-28T12:36:22.375575",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "4b7ae1fb",
+    "ts": "2026-06-28T12:36:21.364171",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "aa7ae930",
+    "ts": "2026-06-28T12:36:20.369095",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "98ea8f80",
+    "ts": "2026-06-28T12:36:15.959185",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "9e066900",
+    "ts": "2026-06-28T12:36:14.900200",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "e8a01c57",
+    "ts": "2026-06-28T12:35:35.320652",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "136ff6b5",
+    "ts": "2026-06-28T12:35:34.379823",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "2328f953",
+    "ts": "2026-06-28T12:35:33.562790",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "f122b2ab",
+    "ts": "2026-06-28T12:35:33.084129",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "f947f7aa",
+    "ts": "2026-06-28T12:35:32.154847",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "2dce1895",
+    "ts": "2026-06-28T12:35:32.055010",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "4fcca9fc",
+    "ts": "2026-06-28T12:35:31.777842",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7225daec",
+    "ts": "2026-06-28T12:35:31.673166",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "61629c78",
+    "ts": "2026-06-28T12:35:31.229178",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "52d5c416",
+    "ts": "2026-06-28T12:35:30.877062",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "5fd859b9",
+    "ts": "2026-06-28T12:35:30.734300",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "ac2da64f",
+    "ts": "2026-06-28T12:35:28.212349",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "4d9918a7",
+    "ts": "2026-06-28T12:35:27.192369",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "07a5a292",
+    "ts": "2026-06-28T12:35:26.194905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "25361f51",
+    "ts": "2026-06-28T12:35:25.193489",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "582d44ba",
+    "ts": "2026-06-28T12:35:25.053313",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "5f96d0df",
+    "ts": "2026-06-28T12:35:14.352270",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "23da553b",
+    "ts": "2026-06-28T12:35:13.522688",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "53a74966",
+    "ts": "2026-06-28T12:35:12.657972",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "0c9c7f8c",
+    "ts": "2026-06-28T12:35:11.420307",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "83cd8967",
+    "ts": "2026-06-28T12:35:11.293964",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "1e2ae87b",
+    "ts": "2026-06-28T12:35:11.068404",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "d971201f",
+    "ts": "2026-06-28T12:35:10.954755",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "2db2141a",
+    "ts": "2026-06-28T12:35:10.592578",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "c9eb2102",
+    "ts": "2026-06-28T12:35:10.238995",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "a53c9af2",
+    "ts": "2026-06-28T12:35:10.111794",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "852a5001",
+    "ts": "2026-06-28T12:35:09.100279",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "b32cce47",
+    "ts": "2026-06-28T12:35:08.068880",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "5464d9fb",
+    "ts": "2026-06-28T12:35:06.922175",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "6673a391",
+    "ts": "2026-06-28T12:35:05.908403",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "531b3edc",
+    "ts": "2026-06-28T12:34:51.470393",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "fb8e0c1c",
+    "ts": "2026-06-28T12:34:50.668033",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "cf987fa0",
+    "ts": "2026-06-28T12:34:49.899625",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "c10558a5",
+    "ts": "2026-06-28T12:34:48.732114",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "6637cbd1",
+    "ts": "2026-06-28T12:34:48.633759",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "b8f7d8a7",
+    "ts": "2026-06-28T12:34:48.410182",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "4288d262",
+    "ts": "2026-06-28T12:34:48.292212",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d795a65c",
+    "ts": "2026-06-28T12:34:47.877682",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "7275aa7e",
+    "ts": "2026-06-28T12:34:47.504431",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "6bfdef66",
+    "ts": "2026-06-28T12:34:47.392175",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "cf9e168a",
+    "ts": "2026-06-28T12:34:46.342659",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "78fd20b8",
+    "ts": "2026-06-28T12:34:45.315408",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "2bcea289",
+    "ts": "2026-06-28T12:34:43.962320",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "20691c4f",
+    "ts": "2026-06-28T12:34:42.905601",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "6a3570ca",
+    "ts": "2026-06-28T12:34:18.694060",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "bdd49b3b",
+    "ts": "2026-06-28T12:34:18.559328",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "c120be25",
+    "ts": "2026-06-28T12:34:18.239684",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "40b835b8",
+    "ts": "2026-06-28T12:34:18.123864",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bef97092",
+    "ts": "2026-06-28T12:34:17.618160",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "96e0d8ee",
+    "ts": "2026-06-28T12:34:17.158641",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "7097636d",
+    "ts": "2026-06-28T12:34:17.029601",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "2050a3ce",
+    "ts": "2026-06-28T12:34:13.877672",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "e95d3547",
+    "ts": "2026-06-28T12:34:12.870839",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "b2e71ef7",
+    "ts": "2026-06-28T12:34:11.910669",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "1d9a75cd",
+    "ts": "2026-06-28T12:34:10.905426",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "2c383291",
+    "ts": "2026-06-28T12:33:56.464691",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "8c6f2eca",
+    "ts": "2026-06-28T12:33:55.581264",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "d9e15ff2",
+    "ts": "2026-06-28T12:33:54.478495",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "6405508a",
+    "ts": "2026-06-28T12:33:52.819574",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "9c2b91d8",
+    "ts": "2026-06-28T12:33:52.730571",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "77d3330d",
+    "ts": "2026-06-28T12:33:52.530982",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "b089ebd3",
+    "ts": "2026-06-28T12:33:52.403148",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "9af62b42",
+    "ts": "2026-06-28T12:33:52.026793",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "e7375624",
+    "ts": "2026-06-28T12:33:51.686500",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "6a01887b",
+    "ts": "2026-06-28T12:33:51.563200",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "d59d6c82",
+    "ts": "2026-06-28T12:33:44.490206",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "08bc9023",
+    "ts": "2026-06-28T12:33:43.511758",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "d9b25b16",
+    "ts": "2026-06-28T12:33:39.571619",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "2590eca1",
+    "ts": "2026-06-28T12:33:28.508650",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "2b0b8cd1",
+    "ts": "2026-06-28T12:33:02.892036",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "b7954b5e",
+    "ts": "2026-06-28T12:33:02.733667",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2a88cb1c",
+    "ts": "2026-06-28T12:33:02.095466",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "e8c5cfa9",
+    "ts": "2026-06-28T12:33:01.861965",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "490aba8a",
+    "ts": "2026-06-28T12:33:01.834419",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bcd12cb4",
+    "ts": "2026-06-28T12:33:01.664105",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "c715c3e5",
+    "ts": "2026-06-28T12:33:01.182729",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ada61efb",
+    "ts": "2026-06-28T12:33:01.050703",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "30ec052b",
+    "ts": "2026-06-28T12:33:00.863022",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c0603169",
+    "ts": "2026-06-28T12:33:00.643097",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "56ef3e14",
+    "ts": "2026-06-28T12:33:00.509444",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "c399e611",
+    "ts": "2026-06-28T12:33:00.253360",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "884cc151",
+    "ts": "2026-06-28T12:32:59.763039",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "2404f3f1",
+    "ts": "2026-06-28T12:32:59.632333",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "3d657170",
+    "ts": "2026-06-28T12:32:59.330316",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "ec519e94",
+    "ts": "2026-06-28T12:32:58.464555",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "1f0bab09",
+    "ts": "2026-06-28T12:32:58.245572",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "3147cfa0",
+    "ts": "2026-06-28T12:32:57.232522",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "e4dfd286",
+    "ts": "2026-06-28T12:32:51.668686",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "bb033612",
+    "ts": "2026-06-28T12:32:50.481375",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
+    "id": "4aae1ccd",
+    "ts": "2026-06-28T12:32:46.880288",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "63039e0a",
+    "ts": "2026-06-28T12:32:41.710977",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
+  },
+  {
+    "id": "4152bce2",
+    "ts": "2026-06-28T12:32:41.615231",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'Canada' (geoId=101174742)"
+  },
+  {
+    "id": "af39b763",
+    "ts": "2026-06-28T12:32:41.504918",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: searching in Canada (geoId=101174742)"
+  },
+  {
+    "id": "e3d6c84d",
+    "ts": "2026-06-28T12:32:41.393623",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.Net' in Australia"
+  },
+  {
+    "id": "d1b95205",
+    "ts": "2026-06-28T12:32:33.820081",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "fbacd558",
+    "ts": "2026-06-28T12:32:14.934659",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "9f2d93b5",
+    "ts": "2026-06-28T12:32:14.759495",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "f6392f5b",
+    "ts": "2026-06-28T12:32:14.446865",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "2f3b68be",
+    "ts": "2026-06-28T12:32:14.271136",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "60e56c22",
+    "ts": "2026-06-28T12:32:13.752534",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d9b3a9f8",
+    "ts": "2026-06-28T12:32:13.228506",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is offline or sleeping"
+  },
+  {
+    "id": "3041b23a",
+    "ts": "2026-06-28T12:32:08.840224",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is offline or sleeping"
+  },
+  {
+    "id": "0601ce7d",
+    "ts": "2026-06-28T12:32:07.563823",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "7f61d3e2",
+    "ts": "2026-06-28T12:31:58.406712",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "8a7283d2",
+    "ts": "2026-06-28T12:31:58.279916",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'Australia' (geoId=101452733)"
+  },
+  {
+    "id": "7f51a5e8",
+    "ts": "2026-06-28T12:31:58.169477",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for '.Net' in Australia"
+  },
+  {
+    "id": "650fabf8",
+    "ts": "2026-06-28T12:31:44.893804",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Dematic — Software Test Engineer – .Net / C# / MS SQL Server to bulk_urls.txt"
+  },
+  {
+    "id": "89c12142",
+    "ts": "2026-06-28T12:31:36.495798",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
+    "id": "12182f45",
+    "ts": "2026-06-28T12:31:36.385181",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Senior Software Engineer @ Exact"
+  },
+  {
+    "id": "7e181f8f",
+    "ts": "2026-06-28T12:31:25.041954",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
+  },
+  {
+    "id": "912fe3d3",
+    "ts": "2026-06-28T12:31:24.864681",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'Australia' (geoId=101452733)"
+  },
+  {
+    "id": "927db4ea",
+    "ts": "2026-06-28T12:31:24.663667",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: searching in Australia (geoId=101452733)"
+  },
+  {
+    "id": "f705a7c5",
+    "ts": "2026-06-28T12:31:24.469083",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.Net' in United States"
+  },
+  {
+    "id": "eba923c6",
+    "ts": "2026-06-28T12:31:21.193860",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "6ac2656c",
+    "ts": "2026-06-28T12:31:19.989602",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "9c0fb8ef",
+    "ts": "2026-06-28T12:31:09.580991",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "aa662202",
+    "ts": "2026-06-28T12:31:02.666522",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "70e46797",
+    "ts": "2026-06-28T12:30:50.200609",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "0acf5b79",
+    "ts": "2026-06-28T12:30:42.997722",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "ccabdbe0",
+    "ts": "2026-06-28T12:30:42.898662",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'United States' (geoId=101165590)"
+  },
+  {
+    "id": "05ebb007",
+    "ts": "2026-06-28T12:30:42.798916",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.Net' in United States"
+  },
+  {
+    "id": "1372802e",
+    "ts": "2026-06-28T12:30:39.982523",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "710baa4a",
+    "ts": "2026-06-28T12:30:39.883472",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "6b792847",
+    "ts": "2026-06-28T12:30:39.676006",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "8d300951",
+    "ts": "2026-06-28T12:30:39.561150",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "5ed35465",
+    "ts": "2026-06-28T12:30:39.210251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "2356ad2f",
+    "ts": "2026-06-28T12:30:38.881493",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "c8501da7",
+    "ts": "2026-06-28T12:30:38.756584",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "b5158d9d",
+    "ts": "2026-06-28T12:30:37.752102",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "14a97572",
+    "ts": "2026-06-28T12:30:31.648566",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "5545e95c",
+    "ts": "2026-06-28T12:30:30.885825",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "a43f3c44",
+    "ts": "2026-06-28T12:30:29.840905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "ff801988",
+    "ts": "2026-06-28T12:30:29.826884",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "8f19ef2d",
+    "ts": "2026-06-28T12:30:28.375664",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "22ec4fb4",
+    "ts": "2026-06-28T12:30:28.216597",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "7e8368d4",
+    "ts": "2026-06-28T12:30:27.986828",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "aff23540",
+    "ts": "2026-06-28T12:30:27.825225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "f8136587",
+    "ts": "2026-06-28T12:30:27.480099",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "db4be2b9",
+    "ts": "2026-06-28T12:30:27.136554",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "d3b0b027",
+    "ts": "2026-06-28T12:30:27.022115",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "1a5a87a7",
+    "ts": "2026-06-28T12:30:25.965748",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "da968c9e",
+    "ts": "2026-06-28T12:30:24.966125",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "b2e90c24",
+    "ts": "2026-06-28T12:30:23.928799",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "b3f79da9",
+    "ts": "2026-06-28T12:30:20.384539",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
+  },
+  {
+    "id": "b89560f9",
+    "ts": "2026-06-28T12:30:20.272095",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'United States' (geoId=101165590)"
+  },
+  {
+    "id": "676a6cb8",
+    "ts": "2026-06-28T12:30:20.139930",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: searching in United States (geoId=101165590)"
+  },
+  {
+    "id": "67bbe47b",
+    "ts": "2026-06-28T12:30:19.981062",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.Net' in United Kingdom"
+  },
+  {
+    "id": "3feef49f",
+    "ts": "2026-06-28T12:30:13.249383",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "21189fe7",
+    "ts": "2026-06-28T12:30:10.919189",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "f9e96c02",
+    "ts": "2026-06-28T12:30:08.701787",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "3e1ad6ae",
+    "ts": "2026-06-28T12:30:04.086078",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "31a8ddb1",
+    "ts": "2026-06-28T12:30:03.910503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bf4aab75",
+    "ts": "2026-06-28T12:30:03.529868",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "929289fb",
+    "ts": "2026-06-28T12:30:03.136618",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is offline or sleeping"
+  },
+  {
+    "id": "a1e4c202",
+    "ts": "2026-06-28T12:29:47.966375",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "aa20b54a",
+    "ts": "2026-06-28T12:29:41.513080",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "1303e720",
+    "ts": "2026-06-28T12:29:39.539774",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "04b954be",
+    "ts": "2026-06-28T12:29:39.417716",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'United Kingdom' (geoId=102454443)"
+  },
+  {
+    "id": "280d4c6c",
+    "ts": "2026-06-28T12:29:39.280784",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for '.Net' in United Kingdom"
+  },
+  {
+    "id": "b13cfaa4",
+    "ts": "2026-06-28T12:29:19.906554",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "a022599c",
+    "ts": "2026-06-28T12:29:19.780766",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "206d9da3",
+    "ts": "2026-06-28T12:29:19.389990",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a95fa324",
+    "ts": "2026-06-28T12:29:19.039089",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "c791a697",
+    "ts": "2026-06-28T12:29:18.924173",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "d0a9926a",
+    "ts": "2026-06-28T12:29:16.937577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "48c6de6c",
+    "ts": "2026-06-28T12:29:15.720521",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "30dc1430",
+    "ts": "2026-06-28T12:29:14.431580",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "d4519c1c",
+    "ts": "2026-06-28T12:29:12.383787",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Eurofins — Sr .Net Developer to bulk_urls.txt"
+  },
+  {
+    "id": "95f9603f",
+    "ts": "2026-06-28T12:29:11.204540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "7a0b610a",
+    "ts": "2026-06-28T12:29:10.959246",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "6ccfc7c4",
+    "ts": "2026-06-28T12:29:10.479104",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d2c6e22b",
+    "ts": "2026-06-28T12:29:10.090093",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "f613f2aa",
+    "ts": "2026-06-28T12:29:09.917078",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "ae7f881c",
+    "ts": "2026-06-28T12:29:08.797180",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "71accaf5",
+    "ts": "2026-06-28T12:29:07.687129",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "7574f756",
+    "ts": "2026-06-28T12:29:06.652782",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "127a5ee6",
+    "ts": "2026-06-28T12:29:03.010257",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "387b31f8",
+    "ts": "2026-06-28T12:29:02.862546",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "a75faa51",
+    "ts": "2026-06-28T12:29:02.410694",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "65b7d3a1",
+    "ts": "2026-06-28T12:29:01.929225",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
+  },
+  {
+    "id": "56623fd5",
+    "ts": "2026-06-28T12:29:01.797387",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
+  },
+  {
+    "id": "5c0aa4c1",
+    "ts": "2026-06-28T12:29:00.291074",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
+  },
+  {
+    "id": "c20a1043",
+    "ts": "2026-06-28T12:28:58.922313",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "7e1deb50",
+    "ts": "2026-06-28T12:28:57.031386",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 8 jobs on page 1"
+  },
+  {
+    "id": "d658b7ba",
+    "ts": "2026-06-28T12:28:48.318904",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
+  },
+  {
+    "id": "da3aac50",
+    "ts": "2026-06-28T12:28:48.206713",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.Net' in 'United Kingdom' (geoId=102454443)"
+  },
+  {
+    "id": "7dc30be5",
+    "ts": "2026-06-28T12:28:48.078356",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: searching in United Kingdom (geoId=102454443)"
+  },
+  {
+    "id": "c466c863",
+    "ts": "2026-06-28T12:28:47.970282",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 2 jobs for '.Net' in India"
+  },
+  {
+    "id": "0ee31eca",
+    "ts": "2026-06-28T12:28:28.180752",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
+  },
+  {
+    "id": "f04117ae",
+    "ts": "2026-06-28T12:28:23.882447",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Regnology — Senior .NET Engineer to bulk_urls.txt"
+  },
+  {
+    "id": "81e108ac",
+    "ts": "2026-06-28T12:28:17.149709",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
     "id": "de0b1750",
     "ts": "2026-06-28T12:28:01.123231",
     "level": "SUCCESS",
@@ -1279,2224 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "24d0e8ad",
-    "ts": "2026-06-28T12:20:44.183676",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "f2fd680e",
-    "ts": "2026-06-28T12:20:44.091330",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "7465f374",
-    "ts": "2026-06-28T12:20:43.576455",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "eb8891da",
-    "ts": "2026-06-28T12:20:43.139776",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "c7acd3a3",
-    "ts": "2026-06-28T12:20:43.048303",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "2e70d095",
-    "ts": "2026-06-28T12:20:42.022197",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "1b1e9320",
-    "ts": "2026-06-28T12:20:41.069496",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "b8e1998a",
-    "ts": "2026-06-28T12:20:32.254498",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "d8b89285",
-    "ts": "2026-06-28T12:20:30.162825",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "34439649",
-    "ts": "2026-06-28T12:20:30.078921",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1eb0672f",
-    "ts": "2026-06-28T12:20:29.760686",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "f0216d2a",
-    "ts": "2026-06-28T12:20:29.381488",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "41f858ed",
-    "ts": "2026-06-28T12:20:29.295949",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "1ccf7389",
-    "ts": "2026-06-28T12:20:28.328547",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "827fbfd2",
-    "ts": "2026-06-28T12:20:27.394271",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "8c6892b5",
-    "ts": "2026-06-28T12:20:26.407093",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "5ab54745",
-    "ts": "2026-06-28T12:20:16.463410",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 1"
-  },
-  {
-    "id": "c7536beb",
-    "ts": "2026-06-28T12:20:08.800565",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: ((\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\")) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "37b29930",
-    "ts": "2026-06-28T12:20:08.733040",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'India' (geoId=102713980)"
-  },
-  {
-    "id": "cfebde24",
-    "ts": "2026-06-28T12:20:08.656823",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for '.Net' in India"
-  },
-  {
-    "id": "8c38e9ea",
-    "ts": "2026-06-28T12:19:33.826502",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 9 jobs on page 1"
-  },
-  {
-    "id": "e2bc2752",
-    "ts": "2026-06-28T12:19:23.304752",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: (\"C#\") AND (\".NET\") AND (\"Azure\" OR \"Angular\" OR \"SQL Server\") NOT (\"QA\" OR \"Tester\" OR \"Scrum Master\" OR \"Java\" OR \"Python\" OR \"PHP\" OR \"Android\" OR \"iOS\") (Past Week)"
-  },
-  {
-    "id": "192aa84d",
-    "ts": "2026-06-28T12:19:23.187540",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.Net' in 'India' (geoId=102713980)"
-  },
-  {
-    "id": "67e1f47a",
-    "ts": "2026-06-28T12:19:23.082180",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in India (Remote/WFH) (geoId=102713980)"
-  },
-  {
-    "id": "9a09fa47",
-    "ts": "2026-06-28T12:19:22.974734",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "4ca5fbee",
-    "ts": "2026-06-28T12:19:22.657201",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "e4a588e3",
-    "ts": "2026-06-28T12:19:17.205867",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "063b6f64",
-    "ts": "2026-06-28T12:19:17.078770",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "f471d93a",
-    "ts": "2026-06-28T12:19:16.628983",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "0ee9393c",
-    "ts": "2026-06-28T12:19:16.040708",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "d733ad1d",
-    "ts": "2026-06-28T12:19:12.919840",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "537df4b7",
-    "ts": "2026-06-28T12:18:59.850550",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Worldwide"
-  },
-  {
-    "id": "64cc64f4",
-    "ts": "2026-06-28T12:18:57.647711",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "82a79b73",
-    "ts": "2026-06-28T12:18:57.488104",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "d6234871",
-    "ts": "2026-06-27T22:04:21.649578",
-    "level": "ERROR",
-    "site": "company_careers",
-    "message": "Failed to process https://careerportal.tektonlabs-internal.com/jobs/net-senior: Page.title: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8d4146a1",
-    "ts": "2026-06-27T22:04:17.234263",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "=================================================="
-  },
-  {
-    "id": "4d33fa6d",
-    "ts": "2026-06-27T22:04:17.170486",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing URL: https://careerportal.tektonlabs-internal.com/jobs/net-senior-backend-developer?source=LinkedIn"
-  },
-  {
-    "id": "908d585a",
-    "ts": "2026-06-27T22:04:17.028328",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "\n=================================================="
-  },
-  {
-    "id": "bb14a740",
-    "ts": "2026-06-27T22:04:14.937479",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Skipped application for: Unknown Company — Software Engineer"
-  },
-  {
-    "id": "23da922d",
-    "ts": "2026-06-27T22:04:14.868003",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "49fd37fd",
-    "ts": "2026-06-27T22:04:14.567548",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "28c93bae",
-    "ts": "2026-06-27T20:57:19.065318",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
-  },
-  {
-    "id": "8cf3c6f9",
-    "ts": "2026-06-27T20:57:12.153467",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "AI Filler: No fields found on step 1, clicking next/submit button..."
-  },
-  {
-    "id": "c07ae061",
-    "ts": "2026-06-27T20:57:09.907723",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Filling form fields and uploading resume via AI..."
-  },
-  {
-    "id": "112f108b",
-    "ts": "2026-06-27T20:57:09.828168",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "a788806b",
-    "ts": "2026-06-27T20:55:11.691053",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "e5a190a0",
-    "ts": "2026-06-27T20:55:11.614067",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "9958b4fe",
-    "ts": "2026-06-27T20:55:11.422906",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "8d77d8c9",
-    "ts": "2026-06-27T20:55:11.326554",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "62b1165e",
-    "ts": "2026-06-27T20:55:11.020766",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "bbeff7d6",
-    "ts": "2026-06-27T20:55:10.684288",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "43be2087",
-    "ts": "2026-06-27T20:55:10.597364",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "dd626aa6",
-    "ts": "2026-06-27T20:55:09.629681",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "86fba93b",
-    "ts": "2026-06-27T20:55:08.679581",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "0ebe2a96",
-    "ts": "2026-06-27T20:55:04.816992",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "df50e13f",
-    "ts": "2026-06-27T20:55:03.811079",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "7c797c73",
-    "ts": "2026-06-27T20:54:53.429786",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "c06ea1ae",
-    "ts": "2026-06-27T20:54:52.628847",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "650b085f",
-    "ts": "2026-06-27T20:54:51.826078",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "bb2f91b8",
-    "ts": "2026-06-27T20:54:47.951051",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "7c5c4b4b",
-    "ts": "2026-06-27T20:54:47.868808",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "7d83ee13",
-    "ts": "2026-06-27T20:54:47.352373",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "4cd9cba0",
-    "ts": "2026-06-27T20:54:47.269446",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "f107305e",
-    "ts": "2026-06-27T20:54:46.749621",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "39032b76",
-    "ts": "2026-06-27T20:54:46.149811",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "88743281",
-    "ts": "2026-06-27T20:54:46.068883",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "20ab766d",
-    "ts": "2026-06-27T20:54:22.889191",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "014e495d",
-    "ts": "2026-06-27T20:54:20.446770",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "7f33d1cb",
-    "ts": "2026-06-27T20:54:18.529029",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "6ada3248",
-    "ts": "2026-06-27T20:54:13.518636",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior .NET Full Stack Engineer @ Unknown Company"
-  },
-  {
-    "id": "cd473988",
-    "ts": "2026-06-27T20:53:57.392911",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "90aa3560",
-    "ts": "2026-06-27T20:53:09.426546",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "71266224",
-    "ts": "2026-06-27T20:53:09.356846",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "134d19ee",
-    "ts": "2026-06-27T20:53:09.185862",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "f7432cac",
-    "ts": "2026-06-27T20:53:09.100899",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "10195ad2",
-    "ts": "2026-06-27T20:53:08.795375",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "48bc381f",
-    "ts": "2026-06-27T20:53:08.507990",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "0dd0f486",
-    "ts": "2026-06-27T20:53:08.431084",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "f774bad8",
-    "ts": "2026-06-27T20:53:06.518118",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "80e4062f",
-    "ts": "2026-06-27T20:53:05.561153",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "92be0889",
-    "ts": "2026-06-27T20:53:04.579775",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "4ac04896",
-    "ts": "2026-06-27T20:53:03.566168",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "47cc55b7",
-    "ts": "2026-06-27T20:52:56.310518",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "d62c0b44",
-    "ts": "2026-06-27T20:52:52.774634",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "0baa854d",
-    "ts": "2026-06-27T20:52:52.028711",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "19923ecd",
-    "ts": "2026-06-27T20:52:50.887923",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "cffd1cd2",
-    "ts": "2026-06-27T20:52:50.822924",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "17df83c6",
-    "ts": "2026-06-27T20:52:50.646625",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "12ca8e13",
-    "ts": "2026-06-27T20:52:50.571743",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "a9cd7c84",
-    "ts": "2026-06-27T20:52:50.036388",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "2d7503d3",
-    "ts": "2026-06-27T20:52:49.475239",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is offline or sleeping"
-  },
-  {
-    "id": "4d953e8d",
-    "ts": "2026-06-27T20:52:25.553123",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "f5a19f58",
-    "ts": "2026-06-27T20:52:24.552907",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "a4fc5069",
-    "ts": "2026-06-27T20:52:21.576742",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "6db706c4",
-    "ts": "2026-06-27T20:51:54.833153",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "689f439d",
-    "ts": "2026-06-27T20:51:54.738116",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "0d78b6ef",
-    "ts": "2026-06-27T20:51:54.584880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "caa4a7a4",
-    "ts": "2026-06-27T20:51:54.501101",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "f842b9a8",
-    "ts": "2026-06-27T20:51:54.234772",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "d52afb52",
-    "ts": "2026-06-27T20:51:53.915292",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "75253231",
-    "ts": "2026-06-27T20:51:53.829103",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "4bbeecfd",
-    "ts": "2026-06-27T20:51:51.840983",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "34280c24",
-    "ts": "2026-06-27T20:51:50.878449",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "e65dd9ef",
-    "ts": "2026-06-27T20:51:49.020202",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "53db7d3f",
-    "ts": "2026-06-27T20:51:47.862800",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "50dafeee",
-    "ts": "2026-06-27T20:50:48.673447",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "b3390860",
-    "ts": "2026-06-27T20:50:48.578310",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "869cad71",
-    "ts": "2026-06-27T20:50:48.386731",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "f818567b",
-    "ts": "2026-06-27T20:50:48.290586",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "41527e7c",
-    "ts": "2026-06-27T20:50:47.883894",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "0c7790dd",
-    "ts": "2026-06-27T20:50:47.538773",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "74eb64e6",
-    "ts": "2026-06-27T20:50:47.458490",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "b83ddbd3",
-    "ts": "2026-06-27T20:50:46.448086",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "760c9de6",
-    "ts": "2026-06-27T20:50:30.765030",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "997b345e",
-    "ts": "2026-06-27T20:50:29.786332",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "dafd0855",
-    "ts": "2026-06-27T20:50:28.837842",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "d050f753",
-    "ts": "2026-06-27T20:50:22.515959",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "cba107af",
-    "ts": "2026-06-27T20:50:22.438181",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "baaefe59",
-    "ts": "2026-06-27T20:50:22.276298",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "ff6e4f05",
-    "ts": "2026-06-27T20:50:22.188957",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "872880dd",
-    "ts": "2026-06-27T20:50:21.876077",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "6db4fc97",
-    "ts": "2026-06-27T20:50:21.545230",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "a9c2ace5",
-    "ts": "2026-06-27T20:50:21.465406",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "8b17e1c2",
-    "ts": "2026-06-27T20:50:20.477043",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "999d7c01",
-    "ts": "2026-06-27T20:50:19.526005",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "a86d016d",
-    "ts": "2026-06-27T20:50:18.461027",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "c110efb5",
-    "ts": "2026-06-27T20:50:17.495621",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "0f6f9591",
-    "ts": "2026-06-27T20:50:17.410687",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "0928d2bf",
-    "ts": "2026-06-27T20:50:17.154481",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "852187b8",
-    "ts": "2026-06-27T20:50:00.962527",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "97b901aa",
-    "ts": "2026-06-27T20:49:59.448646",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "41851e04",
-    "ts": "2026-06-27T20:49:58.513583",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "57ead8a6",
-    "ts": "2026-06-27T20:49:56.347339",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "8ce3c09a",
-    "ts": "2026-06-27T20:49:56.269188",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "82ed54bf",
-    "ts": "2026-06-27T20:49:56.108141",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "3a7d1bfd",
-    "ts": "2026-06-27T20:49:56.028554",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "0aadb204",
-    "ts": "2026-06-27T20:49:55.627580",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "def0d1ac",
-    "ts": "2026-06-27T20:49:55.142049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "f3e19359",
-    "ts": "2026-06-27T20:49:55.062719",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "2b101b5c",
-    "ts": "2026-06-27T20:49:53.622567",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "8cb7ba43",
-    "ts": "2026-06-27T20:49:49.402922",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "10fad256",
-    "ts": "2026-06-27T20:49:44.781630",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "c87c4a33",
-    "ts": "2026-06-27T20:49:42.552292",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "05c6d165",
-    "ts": "2026-06-27T20:49:42.468589",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "ae08fa28",
-    "ts": "2026-06-27T20:49:42.078471",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "eacf0723",
-    "ts": "2026-06-27T20:49:41.662259",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "2084d8bb",
-    "ts": "2026-06-27T20:49:41.577322",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "21f7f509",
-    "ts": "2026-06-27T20:49:40.551949",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "ec1f9b25",
-    "ts": "2026-06-27T20:49:39.578392",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "0f0835ff",
-    "ts": "2026-06-27T20:49:38.604474",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "1f144b40",
-    "ts": "2026-06-27T20:49:37.590181",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "05d51508",
-    "ts": "2026-06-27T20:49:25.082509",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "02d3f367",
-    "ts": "2026-06-27T20:49:24.289872",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "1a37ac86",
-    "ts": "2026-06-27T20:49:23.273599",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "4d31370a",
-    "ts": "2026-06-27T20:49:22.141684",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "a8f0415a",
-    "ts": "2026-06-27T20:49:22.083880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "87e57853",
-    "ts": "2026-06-27T20:49:21.907416",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d8f8b7ea",
-    "ts": "2026-06-27T20:49:21.833165",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "5d339552",
-    "ts": "2026-06-27T20:49:21.511631",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "ff3cff64",
-    "ts": "2026-06-27T20:49:21.203038",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "ef2e519f",
-    "ts": "2026-06-27T20:49:21.132068",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "174142ff",
-    "ts": "2026-06-27T20:49:20.161913",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "793714f2",
-    "ts": "2026-06-27T20:49:19.182075",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "74748f3a",
-    "ts": "2026-06-27T20:49:18.190046",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "6543729b",
-    "ts": "2026-06-27T20:49:17.202116",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "2da26de0",
-    "ts": "2026-06-27T20:49:05.292017",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "0f47e7fd",
-    "ts": "2026-06-27T20:49:04.203728",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "e1097aaf",
-    "ts": "2026-06-27T20:49:03.483248",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "eb41c3a6",
-    "ts": "2026-06-27T20:49:01.981181",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "c450b158",
-    "ts": "2026-06-27T20:49:01.913336",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "6d756b3f",
-    "ts": "2026-06-27T20:49:01.734746",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "698306d4",
-    "ts": "2026-06-27T20:49:01.661883",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "9cd4a1ed",
-    "ts": "2026-06-27T20:49:01.285512",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "74ec8fa4",
-    "ts": "2026-06-27T20:49:00.959423",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "d2c2cb89",
-    "ts": "2026-06-27T20:49:00.884469",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "edfc18a7",
-    "ts": "2026-06-27T20:48:55.740213",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "5ff70699",
-    "ts": "2026-06-27T20:48:54.799128",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "356c6eb9",
-    "ts": "2026-06-27T20:48:53.560608",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "a80a00bf",
-    "ts": "2026-06-27T20:48:52.534518",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Tailoring resume for Unknown Company — Software Engineer..."
-  },
-  {
-    "id": "db7a015c",
-    "ts": "2026-06-27T20:48:32.077730",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Detected Company: Unknown Company | Job Title: Software Engineer"
-  },
-  {
-    "id": "327c7952",
-    "ts": "2026-06-27T20:48:31.324910",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "da9752d0",
-    "ts": "2026-06-27T20:48:31.234065",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1f6f0cd6",
-    "ts": "2026-06-27T20:48:30.741107",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "2ce80f6e",
-    "ts": "2026-06-27T20:48:30.230830",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "4b9a76ba",
-    "ts": "2026-06-27T20:48:30.151163",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "3695ea54",
-    "ts": "2026-06-27T20:48:29.085385",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "02be8c2a",
-    "ts": "2026-06-27T20:48:28.143749",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "aef71a10",
-    "ts": "2026-06-27T20:48:27.106081",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "ac50c6c4",
-    "ts": "2026-06-27T20:48:20.588622",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "=================================================="
-  },
-  {
-    "id": "46dbba0e",
-    "ts": "2026-06-27T20:48:20.525444",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Processing URL: https://www.kalibrr.com/c/pt-adicipta-inovasi-teknologi/jobs/185110/supervisor-application-developer-net?ref=linkedin_feed"
-  },
-  {
-    "id": "1a1ef363",
-    "ts": "2026-06-27T20:48:20.446656",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "\n=================================================="
-  },
-  {
-    "id": "38f2c530",
-    "ts": "2026-06-27T20:48:14.513765",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Applied: C# / .NET / Azure Cloud (f/m/d) in Lisbon, Portugal | Digitization at Energie Baden | Software Engineer | Remote/Various | 100% match"
-  },
-  {
-    "id": "4c04abbe",
-    "ts": "2026-06-27T20:48:14.433883",
-    "level": "SUCCESS",
-    "site": "company_careers",
-    "message": "Submitted successfully: C# / .NET / Azure Cloud (f/m/d) in Lisbon, Portugal | Digitization at Energie Baden — Software Engineer"
-  },
-  {
-    "id": "9c1b526f",
-    "ts": "2026-06-27T20:48:09.322462",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Clicking submit button..."
-  },
-  {
-    "id": "ab671a01",
-    "ts": "2026-06-27T20:48:09.205299",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "5edc828c",
-    "ts": "2026-06-27T20:48:08.815512",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "52cf19f3",
-    "ts": "2026-06-27T20:27:20.631732",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
-  },
-  {
-    "id": "1c8c5d2a",
-    "ts": "2026-06-27T20:27:13.904795",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "AI Filler: No fields found on step 1, clicking next/submit button..."
-  },
-  {
-    "id": "d92b680e",
-    "ts": "2026-06-27T20:27:11.677187",
-    "level": "INFO",
-    "site": "company_careers",
-    "message": "Filling form fields and uploading resume via AI..."
-  },
-  {
-    "id": "4fd44b6b",
-    "ts": "2026-06-27T20:27:11.581668",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "f8c72fed",
-    "ts": "2026-06-27T20:24:41.018460",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "02199440",
-    "ts": "2026-06-27T20:24:40.260788",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "d673310d",
-    "ts": "2026-06-27T20:24:39.466692",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "aa2c6fb3",
-    "ts": "2026-06-27T20:24:37.701046",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "8f00ae07",
-    "ts": "2026-06-27T20:24:37.622336",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "2a80fa78",
-    "ts": "2026-06-27T20:24:37.412774",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "0922ec6c",
-    "ts": "2026-06-27T20:24:37.351978",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "8ee40ffe",
-    "ts": "2026-06-27T20:24:36.983873",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "003991a8",
-    "ts": "2026-06-27T20:24:36.632814",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "52c34f32",
-    "ts": "2026-06-27T20:24:36.552438",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "505e1657",
-    "ts": "2026-06-27T20:24:35.504710",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "909f2f0b",
-    "ts": "2026-06-27T20:24:34.478343",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "5d967d49",
-    "ts": "2026-06-27T20:24:33.460049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "1890364a",
-    "ts": "2026-06-27T20:24:32.424341",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "07d79993",
-    "ts": "2026-06-27T20:23:37.349420",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "ae1fb20d",
-    "ts": "2026-06-27T20:23:36.423926",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b0af7577",
-    "ts": "2026-06-27T20:23:35.654829",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "4dc6cfdd",
-    "ts": "2026-06-27T20:23:34.511697",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "be0764fc",
-    "ts": "2026-06-27T20:23:34.429431",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "d8aa6c9e",
-    "ts": "2026-06-27T20:23:34.270822",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "c7b81225",
-    "ts": "2026-06-27T20:23:34.186996",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "098ca25b",
-    "ts": "2026-06-27T20:23:33.859613",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "b52759df",
-    "ts": "2026-06-27T20:23:33.562186",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "2f2808f4",
-    "ts": "2026-06-27T20:23:33.477628",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "a69a5520",
-    "ts": "2026-06-27T20:23:32.448389",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "4f7aced5",
-    "ts": "2026-06-27T20:23:28.033926",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "c9e5c024",
-    "ts": "2026-06-27T20:23:27.070498",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "9ee58a40",
-    "ts": "2026-06-27T20:23:26.012864",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior .NET Full Stack Engineer @ C# / .NET / Azure Cloud (f/m/d) in Lisbon, Portugal | Digitization at Energie Baden"
-  },
-  {
-    "id": "511a1e97",
-    "ts": "2026-06-27T20:23:17.683832",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "fa270e83",
-    "ts": "2026-06-27T20:22:43.177938",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "e085af11",
-    "ts": "2026-06-27T20:22:42.409599",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "373d6c8d",
-    "ts": "2026-06-27T20:22:40.972471",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "eee1644b",
-    "ts": "2026-06-27T20:22:39.515444",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "1b620d62",
-    "ts": "2026-06-27T20:22:39.435400",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "119b2026",
-    "ts": "2026-06-27T20:22:39.278639",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "cec5a155",
-    "ts": "2026-06-27T20:22:39.197531",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "7923ecf3",
-    "ts": "2026-06-27T20:22:38.899959",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "6c67dce5",
-    "ts": "2026-06-27T20:22:38.589399",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "bd966ab9",
-    "ts": "2026-06-27T20:22:38.523990",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "a52b4662",
-    "ts": "2026-06-27T20:22:37.588880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "881194d0",
-    "ts": "2026-06-27T20:22:36.585543",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "32716eb0",
-    "ts": "2026-06-27T20:22:32.358003",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "68001d3d",
-    "ts": "2026-06-27T20:22:31.362876",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "a2b7670e",
-    "ts": "2026-06-27T20:22:12.355132",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "bdb5dd7f",
-    "ts": "2026-06-27T20:22:11.586389",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "4dae4e1c",
-    "ts": "2026-06-27T20:22:10.759410",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "6b564ea5",
-    "ts": "2026-06-27T20:22:09.265732",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "21e43bb0",
-    "ts": "2026-06-27T20:22:09.186881",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "73b201a9",
-    "ts": "2026-06-27T20:22:09.010382",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "8d89c346",
-    "ts": "2026-06-27T20:22:08.941368",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "2a5aec40",
-    "ts": "2026-06-27T20:22:08.625607",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "508be524",
-    "ts": "2026-06-27T20:22:08.276559",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "d06f2307",
-    "ts": "2026-06-27T20:22:08.196538",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "ed1746fb",
-    "ts": "2026-06-27T20:22:05.372767",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "82a957e6",
-    "ts": "2026-06-27T20:22:04.370400",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "47be3c5c",
-    "ts": "2026-06-27T20:22:03.149657",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "d73eece8",
-    "ts": "2026-06-27T20:22:02.051154",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "f711fac4",
-    "ts": "2026-06-27T20:21:03.959233",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "7f4b45eb",
-    "ts": "2026-06-27T20:21:03.884376",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "9f2113ea",
-    "ts": "2026-06-27T20:21:03.709103",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "ec352567",
-    "ts": "2026-06-27T20:21:03.620015",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "945a7615",
-    "ts": "2026-06-27T20:21:03.297798",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "8eb36b4f",
-    "ts": "2026-06-27T20:21:02.997237",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "29608209",
-    "ts": "2026-06-27T20:21:02.878336",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "c03deeeb",
-    "ts": "2026-06-27T20:21:01.862833",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "58173b62",
-    "ts": "2026-06-27T20:21:00.897060",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "6d2a83e5",
-    "ts": "2026-06-27T20:20:59.887974",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "c1052e66",
-    "ts": "2026-06-27T20:20:58.893466",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "c9c4b69c",
-    "ts": "2026-06-27T20:20:15.580352",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "172ebee0",
-    "ts": "2026-06-27T20:20:14.706697",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "5793c0ae",
-    "ts": "2026-06-27T20:20:13.814313",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "b54c50ef",
-    "ts": "2026-06-27T20:20:12.339849",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "7be3cdfc",
-    "ts": "2026-06-27T20:20:12.266242",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "ba42d80a",
-    "ts": "2026-06-27T20:20:12.086484",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d921777b",
-    "ts": "2026-06-27T20:20:12.008611",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "bc278a89",
-    "ts": "2026-06-27T20:20:11.683923",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "a764eb3a",
-    "ts": "2026-06-27T20:20:11.318861",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "0aae26cc",
-    "ts": "2026-06-27T20:20:11.231556",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "a3a85d20",
-    "ts": "2026-06-27T20:20:10.062241",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "cb3920a7",
-    "ts": "2026-06-27T20:20:08.886201",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "7d12354c",
-    "ts": "2026-06-27T20:20:01.652583",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "a1a89f23",
-    "ts": "2026-06-27T20:19:58.710611",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d095ad4b",
-    "ts": "2026-06-27T20:19:58.634193",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "d9369d83",
-    "ts": "2026-06-27T20:19:58.311195",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "9f6abf41",
-    "ts": "2026-06-27T20:19:58.032345",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "6284a19e",
-    "ts": "2026-06-27T20:19:57.965128",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "d41f2cb6",
-    "ts": "2026-06-27T20:19:56.196378",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "b2c58d6b",
-    "ts": "2026-06-27T20:19:55.038384",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "9ab0dfa4",
-    "ts": "2026-06-27T20:19:53.929360",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "032c6516",
-    "ts": "2026-06-27T20:19:52.756295",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "4b73a3d2",
-    "ts": "2026-06-27T20:19:02.322435",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "16f43afa",
-    "ts": "2026-06-27T20:19:01.565288",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b87d542d",
-    "ts": "2026-06-27T20:19:00.797044",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "a698ce3a",
-    "ts": "2026-06-27T20:18:59.389997",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "23fd15cd",
-    "ts": "2026-06-27T20:18:59.324425",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "73b327d2",
-    "ts": "2026-06-27T20:18:59.168297",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "d514d946",
-    "ts": "2026-06-27T20:18:59.097508",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "46a96d92",
-    "ts": "2026-06-27T20:18:58.778910",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "c34a98b9",
-    "ts": "2026-06-27T20:18:58.478452",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "eef4398a",
-    "ts": "2026-06-27T20:18:58.406160",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "a3c3abb8",
-    "ts": "2026-06-27T20:18:57.378486",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "e32f7586",
-    "ts": "2026-06-27T20:18:56.393134",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "e4772116",
-    "ts": "2026-06-27T20:18:48.390427",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "1e8ff585",
-    "ts": "2026-06-27T20:18:37.772975",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "996e8c7f",
-    "ts": "2026-06-27T20:18:37.689445",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "dad2adca",
-    "ts": "2026-06-27T20:18:37.305979",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "a80fdbe4",
-    "ts": "2026-06-27T20:18:36.931233",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "c346cec9",
-    "ts": "2026-06-27T20:18:36.842645",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "63a8c23c",
-    "ts": "2026-06-27T20:18:34.339894",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
-  },
-  {
-    "id": "68b06cb5",
-    "ts": "2026-06-27T20:18:33.048667",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "60883394",
-    "ts": "2026-06-27T20:18:30.892378",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model qwen2.5-coder:7b not pulled yet, trying next..."
-  },
-  {
-    "id": "7edf05a3",
-    "ts": "2026-06-27T20:18:27.797705",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "669db7d2",
-    "ts": "2026-06-27T20:18:27.724160",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "1bd18bff",
-    "ts": "2026-06-27T20:18:27.280509",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "f63503f0",
-    "ts": "2026-06-27T20:18:26.803676",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: All Ollama Cloud models unavailable"
-  },
-  {
-    "id": "f32647bc",
-    "ts": "2026-06-27T20:18:26.707015",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model phi3:mini not pulled yet, trying next..."
-  },
-  {
-    "id": "619a9139",
-    "ts": "2026-06-27T20:18:25.693496",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama Cloud: model llama3.2:3b not pulled yet, trying next..."
   }
 ]
