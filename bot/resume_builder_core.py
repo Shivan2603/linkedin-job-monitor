@@ -69,10 +69,11 @@ BADGE_BAR_PATTERN = re.compile(
 
 # ── DESIGN TOKENS (ATS-safe: plain text colors only, no images/tables) ──────
 # ATS parsers read color-formatted text normally — color is 100% cosmetic only
-NAVY       = RGBColor(0x1A, 0x2F, 0x4A)   # #1A2F4A — deep professional navy
-ACCENT     = RGBColor(0x2C, 0x5F, 0x8C)   # #2C5F8C — mid-blue for subheadings/titles
-GRAY       = RGBColor(0x55, 0x55, 0x55)   # #555555 — medium gray for dates & tech stack
-RULE_COLOR = "1A2F4A"                      # XML hex for border elements (navy)
+NAVY       = RGBColor(0x0D, 0x21, 0x37)   # #0D2137 — deep premium navy (richer than before)
+ACCENT     = RGBColor(0x15, 0x65, 0xC0)   # #1565C0 — strong professional blue
+GRAY       = RGBColor(0x4A, 0x4A, 0x4A)   # #4A4A4A — darker gray for better readability
+LIGHT_GRAY = RGBColor(0x77, 0x77, 0x77)   # #777777 — lighter gray for locations/dates
+RULE_COLOR = "0D2137"                      # XML hex for border elements (deep navy)
 
 
 def strip_emojis(text: str) -> str:
@@ -168,10 +169,11 @@ def enforce_international_phrase(summary: str) -> str:
     """[F7] Ensure 'international team environment' exact phrase is in summary."""
     if "international team" in summary.lower() or "cross-functional" in summary.lower():
         return summary
-    # Append to last sentence
-    if summary.endswith("."):
-        return summary[:-1] + ", experienced delivering solutions in international, cross-functional team environments."
-    return summary + " Experienced delivering solutions in international, cross-functional team environments."
+    # Append as a proper new sentence (not a dangling comma clause)
+    summary = summary.strip()
+    if not summary.endswith("."):
+        summary += "."
+    return summary + " Experienced delivering high-quality solutions in international, cross-functional team environments."
 
 
 def enforce_company_closing(summary: str, company: str, jd_value: str) -> str:
@@ -190,39 +192,136 @@ def enforce_company_closing(summary: str, company: str, jd_value: str) -> str:
 
 def enforce_summary_formula(summary: str, job_title: str) -> str:
     """[F4+] Enforce 5-line formula: Line 1 must start with exact job title.
-    Remove pronouns. Fix double closing. Ensure proper sentence boundaries."""
+    Remove pronouns. Fix double closing. Ensure proper sentence boundaries.
+
+    CRITICAL fixes applied:
+    - Detects 'Partial Title with Full Title ...' and strips the duplicate prefix
+    - Detects summary starting with suffix of title (missing 'Senior') and prepends only the missing words
+    - Never produces 'Full Title with Partial Title ...' artifacts
+    """
     if not summary or not job_title:
         return summary
 
-    # Remove first-person pronouns
-    summary = re.sub(r'\bI am\b', '', summary)
-    summary = re.sub(r'\bI have\b', 'having', summary)
-    summary = re.sub(r'\bmy\b', '', summary, flags=re.IGNORECASE)
-    summary = re.sub(r'\bI\b', '', summary)
-    summary = re.sub(r'\s+', ' ', summary).strip()
+    # ── Step 0: Strip 'Partial Title with Full Title ...' duplicate prefix ──
+    # Catches: 'Principal Engineer with Senior Principal Engineer who cut...'
+    # → 'Senior Principal Engineer who cut...'
+    jt_lower = job_title.lower().strip()
+    sum_lower = summary.lower().strip()
+    # Look for ' with <job_title>' in the first 120 chars
+    with_title_pat = re.search(
+        r'\bwith\s+' + re.escape(jt_lower),
+        sum_lower[:120]
+    )
+    if with_title_pat:
+        before_with = summary[:with_title_pat.start()].strip()
+        before_words = before_with.split()
+        title_words_set = set(jt_lower.split())
+        overlap = sum(1 for w in before_words if w.lower() in title_words_set)
+        # If >50% of pre-'with' words are title words → it's a partial title dupe
+        if before_words and overlap >= max(1, len(before_words) * 0.5):
+            # Strip everything up to (and including) 'with ', keep from job_title
+            after_with_pos = with_title_pat.end() - len(jt_lower)
+            # Find the real case-preserved start of job_title in original
+            idx_in_orig = sum_lower.find(jt_lower, with_title_pat.start())
+            if idx_in_orig >= 0:
+                summary = summary[idx_in_orig:]
+                print(f"  [ATS-GUARD][FORMULA] Stripped duplicate partial title prefix: '{before_with} with'")
+                sum_lower = summary.lower().strip()
 
-    # Ensure summary starts with exact job title (full match, not just 20 chars)
+    # ── Step 1: Clean first-person pronouns without breaking grammar ──
+    summary = re.sub(r'^I am\s+', '', summary.strip())
+    summary = re.sub(r'\bI am\b', 'being', summary)
+    summary = re.sub(r'\bI have\b', 'having', summary)
+    summary = re.sub(r"\bI've\b", 'having', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'\bmy\b', 'the', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'(?<=[.,;!?])\s+I\s+', ' ', summary)
+    summary = re.sub(r'^I\s+', '', summary.strip())
+    summary = re.sub(r'\s+', ' ', summary).strip()
     jt_lower = job_title.lower().strip()
     sum_lower = summary.lower().strip()
 
-    # Check if summary starts with the job title (allow minor prefix variation)
-    if not sum_lower.startswith(jt_lower[:len(jt_lower)]):
-        # Does it start with a different capitalization of the title?
-        first_words = sum_lower.split()[:len(jt_lower.split())]
-        title_words = jt_lower.split()
+    # ── Step 2: Strip known bad opener phrases (AI writes 'As a seasoned...', etc.) ──
+    bad_openers = [
+        r'^As an?\s+[a-z]',
+        r'^A\s+[a-z][a-z-]*(?:-[a-z]+)?\s+',
+        r'^An\s+[a-z]',
+        r'^With\s+',
+        r'^(?:Experienced|Seasoned|Accomplished|Skilled|Dynamic|Dedicated|Results-driven)\s+',
+    ]
+    for bad_pattern in bad_openers:
+        if re.match(bad_pattern, summary, re.IGNORECASE):
+            comma_pos = summary.find(',')
+            if comma_pos > 0:
+                before_comma = summary[:comma_pos]
+                after_comma = summary[comma_pos + 1:].strip()
+                expertise_match = re.search(
+                    r'\bwith\s+(?:expertise|experience|specialization|a\s+focus|strong\s+background|deep\s+knowledge)\s+in\s+(.+)',
+                    before_comma, re.IGNORECASE
+                )
+                if expertise_match:
+                    expertise_area = expertise_match.group(1).strip()
+                    summary = f"{job_title} with expertise in {expertise_area}, {after_comma}" if after_comma else f"{job_title} with expertise in {expertise_area}."
+                elif after_comma:
+                    summary = f"{job_title}: {after_comma[0].upper() + after_comma[1:]}"
+                else:
+                    summary = f"{job_title} with 4+ years of expertise in .NET, C#, and cloud solutions."
+            else:
+                with_match = re.search(r'\bwith\s+', summary, re.IGNORECASE)
+                if with_match:
+                    summary = f"{job_title} {summary[with_match.start():]}"
+                else:
+                    summary = f"{job_title} with 4+ years of expertise in .NET, C#, and cloud solutions."
+            print(f"  [ATS-GUARD][FORMULA] Replaced bad opener — summary now starts with job title.")
+            break
+
+    # ── Step 2b: Summary starts with a SUFFIX of the title (missing first 1-2 words) ──
+    # e.g. job_title='Senior Principal Software Engineer', summary starts 'Principal Software Engineer who...'
+    # Fix: just prepend the missing words, don't create 'Full Title with Partial Title'
+    sum_lower = summary.lower().strip()
+    title_words = jt_lower.split()
+    for drop in range(1, min(3, len(title_words))):
+        suffix = ' '.join(title_words[drop:])
+        if sum_lower.startswith(suffix):
+            missing_prefix = ' '.join(job_title.split()[:drop])
+            summary = f"{missing_prefix} {summary}"
+            print(f"  [ATS-GUARD][FORMULA] Prepended missing title prefix: '{missing_prefix}'")
+            break
+
+    # ── Step 3: Full title still not at start — prepend safely ──
+    sum_lower = summary.lower().strip()
+    if not sum_lower.startswith(jt_lower):
+        first_words = sum_lower.split()[:len(title_words)]
         overlap = sum(1 for a, b in zip(first_words, title_words) if a == b)
         if overlap < max(1, len(title_words) // 2):
-            # Genuinely doesn't start with title — prepend
-            # But avoid doubling if summary starts with "with" or "having" after we'd insert title
             if sum_lower.startswith('with ') or sum_lower.startswith('having '):
                 summary = f"{job_title} {summary}"
+            elif summary[0:1].isupper() and not sum_lower.startswith(jt_lower[:8]):
+                # Looks like a sentence — colon-connect it
+                summary = f"{job_title}: {summary}"
             else:
-                # Check if a connector word like "with" is needed
-                summary = f"{job_title} with " + summary.lstrip()
-            print(f"  [ATS-GUARD][FORMULA] Prepended job title to summary: '{job_title}'")
+                summary = f"{job_title} with {summary.lstrip()}"
+            print(f"  [ATS-GUARD][FORMULA] Prepended job title to summary.")
 
-    # Clean up any double 'with with' artifacts
+    # ── Step 4: Catch any remaining 'Title with Title' artifacts ──
+    # e.g. still contains 'Senior Dev with Senior Dev who...'
+    jt_escaped = re.escape(jt_lower)
+    dup_pattern = re.compile(jt_escaped + r'\s+with\s+' + jt_escaped, re.IGNORECASE)
+    if dup_pattern.search(summary.lower()):
+        summary = dup_pattern.sub(job_title, summary, count=1)
+        print(f"  [ATS-GUARD][FORMULA] Collapsed duplicate title in summary.")
+
+    # 'with As' artifacts
+    summary = re.sub(r'\bwith As an?\s+', 'who is a ', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'\bwith As\s+', 'with a background as ', summary, flags=re.IGNORECASE)
+
+    # ── Step 5: Fix 'having designed' / 'having developed' after removing 'I have' ──
+    # Ensure these don't start a sentence fragment
+    summary = re.sub(r'\.\s+[Hh]aving\s+', '. Having ', summary)
+
+    # ── Step 6: Final duplicate-word and punctuation cleanup ──
     summary = re.sub(r'\b(with)\s+\1\b', 'with', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'\b(in)\s+\1\b', 'in', summary, flags=re.IGNORECASE)
+    summary = re.sub(r'\s+', ' ', summary).strip()
     summary = clean_text_punctuation(summary)
     return summary
 
@@ -328,17 +427,60 @@ def _add_right_tab(paragraph, pos_twips: int = 8640):
     pPr.append(tabs)
 
 
-def _section_rule(paragraph):
-    """Add a premium navy bottom border under section headings (not a table row)."""
+def _set_char_spacing(run, spacing_pt: float = 1.0):
+    """Add character-level letter-spacing (tracking) to a run.
+    spacing_pt: spacing in points (1pt = 20 twips).
+    This is 100% ATS-safe — ATS reads the text, not the spacing.
+    """
+    rPr = run._r.get_or_add_rPr()
+    spacing_el = OxmlElement("w:spacing")
+    spacing_el.set(qn("w:val"), str(int(spacing_pt * 20)))
+    rPr.append(spacing_el)
+
+
+def _add_top_border(paragraph, color: str = None, sz: str = "12", space: str = "6"):
+    """Add a top border line above a paragraph (ATS-safe visual accent)."""
+    c = color or RULE_COLOR
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
+    top = OxmlElement("w:top")
+    top.set(qn("w:val"), "single")
+    top.set(qn("w:sz"), sz)
+    top.set(qn("w:space"), space)
+    top.set(qn("w:color"), c)
+    pBdr.append(top)
+    pPr.append(pBdr)
+
+
+def _add_left_border(paragraph, color: str = None, sz: str = "18", space: str = "6"):
+    """Add a left accent bar beside a paragraph — creates the modern ruled-heading look.
+    ATS-safe: parsers read the text content, not the border styling.
+    """
+    c = color or "1565C0"  # accent blue
+    pPr = paragraph._p.get_or_add_pPr()
+    pBdr = OxmlElement("w:pBdr")
+    left = OxmlElement("w:left")
+    left.set(qn("w:val"), "single")
+    left.set(qn("w:sz"), sz)
+    left.set(qn("w:space"), space)
+    left.set(qn("w:color"), c)
+    pBdr.append(left)
+    pPr.append(pBdr)
+
+
+def _section_rule(paragraph):
+    """Add a navy bottom border under section headings (not a table row)."""
+    pPr = paragraph._p.get_or_add_pPr()
+    pBdr = paragraph._p.get_or_add_pPr().find(qn("w:pBdr"))
+    if pBdr is None:
+        pBdr = OxmlElement("w:pBdr")
+        pPr.append(pBdr)
     bottom = OxmlElement("w:bottom")
     bottom.set(qn("w:val"), "single")
-    bottom.set(qn("w:sz"), "8")        # slightly thicker — 1pt line
+    bottom.set(qn("w:sz"), "6")
     bottom.set(qn("w:space"), "2")
-    bottom.set(qn("w:color"), RULE_COLOR)  # navy
+    bottom.set(qn("w:color"), RULE_COLOR)
     pBdr.append(bottom)
-    pPr.append(pBdr)
 
 
 def _p(doc, text="", bold=False, italic=False, size=10.5,
@@ -361,28 +503,52 @@ def _p(doc, text="", bold=False, italic=False, size=10.5,
 
 
 def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4.0):
-    """Premium ATS-safe section heading: navy bold all-caps with navy bottom rule."""
+    """Premium ATS-safe section heading:
+    - Left accent bar in accent blue (modern ruled-heading look)
+    - Navy bold ALL-CAPS text with letter tracking
+    - Navy bottom rule
+    """
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(space_before)
     p.paragraph_format.space_after = Pt(space_after)
+    p.paragraph_format.left_indent = Pt(6)   # small indent so text clears the left bar
     run = p.add_run(title.upper())
     run.bold = True
     run.font.name = "Calibri"
-    run.font.size = Pt(11)
-    run.font.color.rgb = NAVY        # navy color — ATS reads plain text, ignores color
-    _section_rule(p)
+    run.font.size = Pt(11.5)
+    run.font.color.rgb = NAVY
+    _set_char_spacing(run, 0.8)   # subtle tracking for ALL-CAPS headings
+    # Add both left accent bar + bottom navy rule
+    pPr = p._p.get_or_add_pPr()
+    pBdr = OxmlElement("w:pBdr")
+    # Left accent bar — accent blue
+    left = OxmlElement("w:left")
+    left.set(qn("w:val"), "single")
+    left.set(qn("w:sz"), "18")    # ~2.25pt thick bar
+    left.set(qn("w:space"), "4")
+    left.set(qn("w:color"), "1565C0")
+    pBdr.append(left)
+    # Bottom rule — navy
+    bottom = OxmlElement("w:bottom")
+    bottom.set(qn("w:val"), "single")
+    bottom.set(qn("w:sz"), "4")
+    bottom.set(qn("w:space"), "2")
+    bottom.set(qn("w:color"), RULE_COLOR)
+    pBdr.append(bottom)
+    pPr.append(pBdr)
 
 
-def _bullet(doc, text: str, indent_pt: int = 18, space_after: float = 2.0, line_spacing: float = 1.15, font_size: float = 10.5):
+def _bullet(doc, text: str, indent_pt: int = 22, space_after: float = 2.0, line_spacing: float = 1.15, font_size: float = 10.5):
     """Plain bullet paragraph — bullet char only, no emojis, no table cells."""
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Pt(indent_pt)
-    p.paragraph_format.first_line_indent = Pt(-8)   # hanging indent for clean alignment
+    p.paragraph_format.first_line_indent = Pt(-10)   # hanging indent
     p.paragraph_format.space_after = Pt(space_after)
     p.paragraph_format.line_spacing = line_spacing
-    run = p.add_run(f"\u2022  {strip_emojis(text)}")
+    run = p.add_run(f"\u2022  {strip_emojis(text)}")  # bullet + double-space gap
     run.font.name = "Calibri"
     run.font.size = Pt(font_size)
+    run.font.color.rgb = GRAY  # body text in dark gray (not pure black — more premium)
 
 
 def build_resume_docx(config: ResumeConfig) -> str:
@@ -430,52 +596,66 @@ def build_resume_docx(config: ResumeConfig) -> str:
 
     c = candidate
 
-    # ── HEADER: Premium navy name + centered contact block ──
-    # Name — large navy bold (ATS reads plain text, color is visual only)
+    # ── HEADER BLOCK ──
+    # Top navy rule — creates a strong header band feel
+    p_toprule = doc.add_paragraph()
+    p_toprule.paragraph_format.space_before = Pt(0)
+    p_toprule.paragraph_format.space_after = Pt(0)
+    _add_top_border(p_toprule, color=RULE_COLOR, sz="20", space="0")
+
+    # Name — 24pt bold navy with letter tracking (premium look)
     p_name = doc.add_paragraph()
     p_name.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p_name.paragraph_format.space_before = Pt(0)
+    p_name.paragraph_format.space_before = Pt(8)
     p_name.paragraph_format.space_after = Pt(2)
     p_name.paragraph_format.line_spacing = 1.0
     r_name = p_name.add_run(c["name"].upper())
     r_name.bold = True
     r_name.font.name = "Calibri"
-    r_name.font.size = Pt(20 if not tighten else 18)
+    r_name.font.size = Pt(24 if not tighten else 20)
     r_name.font.color.rgb = NAVY
+    _set_char_spacing(r_name, 2.5)   # generous tracking for the name
 
-    # Job title headline — accent blue, slightly smaller
+    # Job title — 14pt bold accent blue with subtle tracking
     p_title = doc.add_paragraph()
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_title.paragraph_format.space_before = Pt(0)
-    p_title.paragraph_format.space_after = Pt(4)
+    p_title.paragraph_format.space_after = Pt(6)
     p_title.paragraph_format.line_spacing = 1.0
     r_title = p_title.add_run(config.job_title)
-    r_title.bold = False
+    r_title.bold = True
     r_title.font.name = "Calibri"
-    r_title.font.size = Pt(11.5 if not tighten else 10.5)
+    r_title.font.size = Pt(14 if not tighten else 12)
     r_title.font.color.rgb = ACCENT
+    _set_char_spacing(r_title, 0.5)  # subtle tracking on title
 
-    # Thin navy rule under name/title header block
+    # Bottom navy rule under name/title block (thicker for premium feel)
     pPr = p_title._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
     bot = OxmlElement("w:bottom")
     bot.set(qn("w:val"), "single")
-    bot.set(qn("w:sz"), "4")
+    bot.set(qn("w:sz"), "8")      # solid 1pt rule
     bot.set(qn("w:space"), "4")
     bot.set(qn("w:color"), RULE_COLOR)
     pBdr.append(bot)
     pPr.append(pBdr)
 
-    # Contact line 1: phone | email | linkedin
-    _p(doc, f"{c['phone']}   \u2022   {c['email']}   \u2022   {c['linkedin']}",
-       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sb=5, sa=1, ls=ls_val)
+    # Contact line 1: phone | email | linkedin  (pipe separator — clean & modern)
+    _p(doc, f"{c['phone']}  |  {c['email']}  |  {c['linkedin']}",
+       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sb=5, sa=1, ls=ls_val,
+       color=GRAY)
     # Contact line 2: github | portfolio
-    _p(doc, f"{c.get('github', '')}   \u2022   {c.get('portfolio', '')}",
-       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1.5 if tighten else 2, ls=ls_val)
-    # Location line
+    github = c.get('github', '')
+    portfolio = c.get('portfolio', '')
+    if github or portfolio:
+        contact2 = '  |  '.join(x for x in [github, portfolio] if x)
+        _p(doc, contact2,
+           size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER, sa=1, ls=ls_val,
+           color=GRAY)
+    # Location line — lighter gray, slightly smaller
     _p(doc, c["location"],
-       size=9.0 if tighten else 9.5, align=WD_ALIGN_PARAGRAPH.CENTER,
-       sa=6 if tighten else 8, ls=ls_val, color=GRAY)
+       size=8.5 if tighten else 9.0, align=WD_ALIGN_PARAGRAPH.CENTER,
+       sa=6 if tighten else 8, ls=ls_val, color=LIGHT_GRAY)
 
     # Professional Summary
     _heading(doc, "Professional Summary", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
@@ -497,9 +677,11 @@ def build_resume_docx(config: ResumeConfig) -> str:
             r_cat.bold = True
             r_cat.font.name = "Calibri"
             r_cat.font.size = Pt(p_size)
+            r_cat.font.color.rgb = ACCENT   # Category label in accent blue (was plain black)
             r_sk = p.add_run(" \u00b7 ".join(skills[cat]))
             r_sk.font.name = "Calibri"
             r_sk.font.size = Pt(p_size)
+            r_sk.font.color.rgb = GRAY      # Skills list in dark gray for readability
             rendered.add(cat)
             
     for cat, items in skills.items():
@@ -511,53 +693,59 @@ def build_resume_docx(config: ResumeConfig) -> str:
             r_cat.bold = True
             r_cat.font.name = "Calibri"
             r_cat.font.size = Pt(p_size)
+            r_cat.font.color.rgb = ACCENT   # Category label in accent blue
             r_sk = p.add_run(" \u00b7 ".join(items))
             r_sk.font.name = "Calibri"
             r_sk.font.size = Pt(p_size)
+            r_sk.font.color.rgb = GRAY      # Skills list in dark gray
 
-    # Work Experience — company name in navy
+    # Work Experience
     _heading(doc, "Work Experience", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     for job in jobs:
         p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(4 if tighten else 7)
-        p.paragraph_format.space_after = Pt(1)
+        p.paragraph_format.space_before = Pt(5 if tighten else 8)
+        p.paragraph_format.space_after = Pt(0)
         _add_right_tab(p)
         rc = p.add_run(strip_emojis(job["company"]))
         rc.bold = True
         rc.font.name = "Calibri"
         rc.font.size = Pt(10.5 if tighten else 11)
-        rc.font.color.rgb = NAVY        # company name in navy
+        rc.font.color.rgb = NAVY        # company name in deep navy
         rd = p.add_run(f"\t{job['dates']}")
         rd.bold = False
         rd.italic = True
         rd.font.name = "Calibri"
-        rd.font.size = Pt(10.0 if tighten else 10.5)
-        rd.font.color.rgb = GRAY        # date in gray
+        rd.font.size = Pt(9.5 if tighten else 10)
+        rd.font.color.rgb = LIGHT_GRAY  # date in light gray
 
         p2 = doc.add_paragraph()
+        p2.paragraph_format.space_before = Pt(0)
         p2.paragraph_format.space_after = Pt(1)
         r2 = p2.add_run(strip_emojis(job["title"]))
-        r2.italic = True
+        r2.bold = True                  # BOLD for role title prominence
+        r2.italic = True                # and italic for elegance
         r2.font.name = "Calibri"
         r2.font.size = Pt(p_size)
-        r2.font.color.rgb = ACCENT      # role title in accent blue
+        r2.font.color.rgb = ACCENT      # role title in strong accent blue
 
         p3 = doc.add_paragraph()
-        p3.paragraph_format.space_after = Pt(2 if tighten else 3)
+        p3.paragraph_format.space_before = Pt(0)
+        p3.paragraph_format.space_after = Pt(3 if tighten else 4)
         r3 = p3.add_run(strip_emojis(job.get("tech", "")))
+        r3.italic = True                # italic for tech stack line
         r3.font.name = "Calibri"
-        r3.font.size = Pt(9.5 if tighten else 10)
-        r3.font.color.rgb = GRAY        # tech stack in gray
+        r3.font.size = Pt(9.0 if tighten else 9.5)
+        r3.font.color.rgb = LIGHT_GRAY  # lighter gray for tech stack
 
         for b in job["bullets"]:
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
-    # Key Projects — project name in navy with tech stack in gray italic
+    # Key Projects
     _heading(doc, "Key Projects", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     for proj in projects:
         p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(3 if tighten else 5)
-        p.paragraph_format.space_after = Pt(1)
+        p.paragraph_format.space_before = Pt(4 if tighten else 6)
+        p.paragraph_format.space_after = Pt(0)
         rn = p.add_run(strip_emojis(proj["name"]))
         rn.bold = True
         rn.font.name = "Calibri"
@@ -565,12 +753,12 @@ def build_resume_docx(config: ResumeConfig) -> str:
         rn.font.color.rgb = NAVY        # project name in navy
         tech_text = strip_emojis(proj.get('tech', ''))
         if tech_text:
-            p.add_run("  ")             # small gap
-            rt = p.add_run(f"— {tech_text}")
+            p.add_run("   ")            # gap
+            rt = p.add_run(f"| {tech_text}")  # pipe separator looks cleaner than em-dash
             rt.italic = True
             rt.font.name = "Calibri"
             rt.font.size = Pt(9.0 if tighten else 9.5)
-            rt.font.color.rgb = GRAY    # tech in gray
+            rt.font.color.rgb = LIGHT_GRAY
         for b in proj.get("bullets", []):
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
@@ -579,11 +767,12 @@ def build_resume_docx(config: ResumeConfig) -> str:
     for cert in certs:
         _bullet(doc, cert, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
-    # Education — degree in navy
+    # Education
     _heading(doc, "Education", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
     edu = config.education
     p = doc.add_paragraph()
-    p.paragraph_format.space_after = Pt(1)
+    p.paragraph_format.space_before = Pt(3)
+    p.paragraph_format.space_after = Pt(0)
     _add_right_tab(p)
     re_ = p.add_run(edu["degree"])
     re_.bold = True
@@ -593,14 +782,23 @@ def build_resume_docx(config: ResumeConfig) -> str:
     ry = p.add_run(f"\t{edu['years']}")
     ry.italic = True
     ry.font.name = "Calibri"
-    ry.font.size = Pt(10.0 if tighten else 10.5)
-    ry.font.color.rgb = GRAY
+    ry.font.size = Pt(9.5 if tighten else 10)
+    ry.font.color.rgb = LIGHT_GRAY
 
     p2 = doc.add_paragraph()
+    p2.paragraph_format.space_before = Pt(0)
     p2.paragraph_format.space_after = Pt(2)
-    ri = p2.add_run(f"{edu['institution']}  |  GPA: {edu.get('gpa', '')}")
+    ri = p2.add_run(edu['institution'])
     ri.font.name = "Calibri"
     ri.font.size = Pt(p_size)
+    ri.font.color.rgb = GRAY            # institution in dark gray
+    gpa = edu.get('gpa', '')
+    if gpa:
+        p2.add_run("  |  ")
+        rg = p2.add_run(f"GPA: {gpa}")
+        rg.font.name = "Calibri"
+        rg.font.size = Pt(p_size)
+        rg.font.color.rgb = LIGHT_GRAY
 
     os.makedirs(os.path.dirname(config.output_file), exist_ok=True)
     doc.save(config.output_file)
@@ -1117,11 +1315,26 @@ def matches_context(m_tailored, m_allowed) -> bool:
     overlap = words_t.intersection(words_a)
     return len(overlap) >= 1
 
+def get_canonical_project_name(name: str) -> str:
+    name_lower = name.lower().replace("‑", "-")  # Replace non-breaking hyphens with standard hyphens
+    if "procure" in name_lower or "zen" in name_lower:
+        return "e-ProcureZen"
+    if "tax" in name_lower or "analyser" in name_lower or "analyzer" in name_lower or "intelligence" in name_lower:
+        return "AI Tax Document Analyser"
+    if "vault" in name_lower or "document security" in name_lower or "nexa" in name_lower:
+        return "Nexa Vault"
+    if "sso" in name_lower or "single-sign-on" in name_lower or "identity" in name_lower:
+        return "SSO Application"
+    if "neice" in name_lower:
+        return "NEICE"
+    return name
+
 def extract_allowed_facts(role_name: str) -> dict:
     bullets = DEFAULT_JOBS.get(role_name) or []
+    canonical_name = get_canonical_project_name(role_name)
     if not bullets:
         for p in DEFAULT_PROJECTS_POOL:
-            if role_name.lower() in p["name"].lower() or p["name"].lower() in role_name.lower():
+            if canonical_name.lower() in p["name"].lower() or p["name"].lower() in canonical_name.lower():
                 bullets = p["bullets"]
                 break
                 
@@ -1136,7 +1349,7 @@ def extract_allowed_facts(role_name: str) -> dict:
         metrics.extend(extract_metrics_with_context(b))
         
     for p in DEFAULT_PROJECTS_POOL:
-        if role_name.lower() in p["name"].lower() or p["name"].lower() in role_name.lower():
+        if canonical_name.lower() in p["name"].lower() or p["name"].lower() in canonical_name.lower():
             metadata_text = p["name"] + " " + p["tech"]
             words = re.findall(r'\b[a-zA-Z0-9\-\.\#\+]+_?\b', metadata_text.lower())
             for w in words:
@@ -1278,42 +1491,140 @@ def verify_docx_pages(docx_path: str) -> int:
             except Exception:
                 pass
 
+# Recruiter spam phrases that must be stripped from job titles before any use
+_RECRUITER_JUNK_PHRASES = re.compile(
+    r"\b("
+    r"next\s+day\s+joiner[s]?|immediate\s+joiner[s]?|day\s+1\s+joiner[s]?"
+    r"|notice\s+period\s*(?:upto|up\s+to|of)?\s*[\d]+\s*(?:days?|weeks?|months?)?"
+    r"|(?:max|maximum|only|preferred|required|must\s+be)\s+(?:joiner[s]?|joinee[s]?)"
+    r"|(?:freshers?|graduates?)\s*(?:welcome|preferred|only|apply)?"
+    r"|(?:urgent|immediate|emergency)\s*(?:requirement|opening|hiring|need)?"
+    r"|walk\s*in\s*interview"
+    r"|only\s+(?:female|male|candidates?)"
+    r"|contract|contractual|freelance|part\s*time|full\s*time"
+    r"|wfh|work\s+from\s+home"
+    r"|(?:0-2|0-3|1-3|2-4|2-5|3-5|3-6|4-6|5-8|0-1)\s*(?:years?|yrs?)\s*exp(?:erience)?"
+    r"|[\d]+\s*(?:-|to)\s*[\d]+\s*(?:lpa|ctc|lakhs?|lakh)"
+    r")",
+    re.IGNORECASE,
+)
+
+# SDE/SWE level labels that are fine in JD text but NOT in a resume title
+_LEVEL_LABEL_PATTERN = re.compile(
+    r"\b(?:sde|swe|l[1-9]|ic[1-9])\s*[\-/,]?\s*(?:[0-9]\s*[\-/]?\s*[0-9]?)?",
+    re.IGNORECASE,
+)
+
+
+# Role-indicator words — if a fragment contains at least one of these, it's a real role part
+_ROLE_WORDS = re.compile(
+    r"\b(engineer|developer|architect|analyst|manager|lead|designer|scientist"
+    r"|specialist|consultant|administrator|devops|fullstack|full.stack|backend"
+    r"|frontend|data|cloud|software|senior|junior|principal|staff|associate)\b",
+    re.IGNORECASE,
+)
+
+
+def _extract_core_role(title: str) -> str:
+    """Given a messy JD job title, extract only the core role (before recruiter noise)."""
+    # Work on the ORIGINAL title before junk-stripping so we can split first,
+    # then filter parts that are real role fragments.
+    parts = re.split(r'\s*[\-\|\u00b7]\s*', title)  # split on - | ·
+    candidates = []
+    for p in parts:
+        p = p.strip()
+        if not p or len(p) < 3:
+            continue
+        # Skip pure numeric / punctuation fragments
+        if re.fullmatch(r'[\d\-/,.()\.\s]+', p):
+            continue
+        # Strip recruiter junk from this fragment
+        cleaned = _RECRUITER_JUNK_PHRASES.sub('', p).strip()
+        cleaned = _LEVEL_LABEL_PATTERN.sub('', cleaned).strip()
+        cleaned = re.sub(r'^[-\s/,.()|]+|[-\s/,.()|]+$', '', cleaned).strip()
+        if not cleaned or len(cleaned) < 3:
+            continue
+        # Reject if the fragment contains NO role-indicator words
+        # (e.g. ".NET, ASP, SQL Server, C#" is pure tech stack, not a role title)
+        if not _ROLE_WORDS.search(cleaned):
+            continue
+        candidates.append(cleaned)
+    # If no valid role-word fragment found, return empty string so caller uses generic fallback
+    return candidates[0] if candidates else ""
+
+
 def clean_job_title(title: str) -> str:
     if not title:
         return "Senior .NET Full Stack Engineer"
     
-    t = title.strip()
-    
-    # Remove URLs, domain names, and job board site names that bleed into title
+    original = title.strip()
+
+    # STEP 1: Extract the core role fragment from the ORIGINAL raw title.
+    # This correctly splits "SDE 2/3 - .NET, ASP, Sql Server, C# - Next Day Joiners Only"
+    # and returns the first fragment that contains a real role word (e.g. "Software Engineer").
+    # If no role-word fragment is found, falls back to the full original.
+    t = _extract_core_role(original)
+
+    # STEP 2: Strip recruiter junk phrases from the extracted fragment
+    t = _RECRUITER_JUNK_PHRASES.sub('', t)
+
+    # STEP 3: Strip SDE/SWE level labels like "SDE 2/3", "L4", "SWE-2"
+    t = _LEVEL_LABEL_PATTERN.sub('', t)
+    # Also strip any orphaned leading digits left behind (e.g. "2 Backend Engineer" → "Backend Engineer")
+    t = re.sub(r'^\s*\d+\s*', '', t).strip()
+
+    # STEP 4: Remove URLs, domain names, and job board site names
     t = re.sub(r'\b(?:monster\.com|naukri\.com|indeed\.co[m.in/]+|glassdoor\.co[m.in/]+|linkedin\.com\S*|foundit\.in|shine\.com|timesjobs\.com|hirist\.com|wellfound\.com|seek\.com\.au|reed\.co\.uk|totaljobs\.com|jobstreet\.com|indeed\.com|simplyhired\.com|ziprecruiter\.com)\S*', '', t, flags=re.IGNORECASE)
     
-    # Remove junk/job board words
+    # STEP 5: Remove junk/job board words
     t = re.sub(r'\b(jobs|job|vacancy|vacancies|hiring|recruitment|opening|openings|monster|naukri|glassdoor|indeed|linkedin|shine|foundit|hirist|wellfound|seek|reed|totaljobs|jobstreet)\b', '', t, flags=re.IGNORECASE)
     
-    # [NEW] Remove parenthetical location suffixes like "(Shah Alam/Subang)" or "(Kuala Lumpur, Malaysia)"
+    # STEP 6: Remove parenthetical location suffixes
     t = re.sub(r'\s*\([^)]*(?:Shah Alam|Subang|Selangor|Kuala Lumpur|Malaysia|Singapore|Chennai|Bangalore|Mumbai|India|Remote|Hybrid|Onsite|KL|KLCC)[^)]*\)', '', t, flags=re.IGNORECASE)
     
-    # [NEW] Remove trailing location text after dash/pipe like "- Shah Alam/Subang" or "| KL"
+    # STEP 7: Remove trailing location text after dash/pipe
     t = re.sub(r'\s*[-|/]\s*(?:Shah Alam|Subang|Selangor|Kuala Lumpur|Malaysia|Singapore|Chennai|Bangalore|Mumbai|India|Remote|Hybrid|Onsite|KL|KLCC).*$', '', t, flags=re.IGNORECASE)
     
-    # [NEW] Remove trailing " IN CITY/LOCATION" pattern (e.g. "SOFTWARE ENGINEER IN SHAH ALAM/SUBANG")
+    # STEP 8: Remove trailing " IN CITY" pattern
     t = re.sub(r'\s+\bIN\b\s+.+$', '', t, flags=re.IGNORECASE)
-    
+
     # Remove trailing/leading punctuation or spaces
-    t = re.sub(r'^[-\s/•|.]+|[-\s/•|.]+$', '', t)
+    t = re.sub(r'^[-\s/•|.,]+|[-\s/•|.,]+$', '', t)
     t = re.sub(r'\s+', ' ', t).strip()
     
     # Normalize generic titles
     t_lower = t.lower()
     if t_lower in ["", "developer", "engineer", "software developer", "software engineer",
                    ".com", ".net", "com"]:
-        return "Senior .NET Full Stack Engineer"
+        return "Senior Software Engineer"
+        
+    # ── Title Cap: Normalize inflated seniority levels down to Senior Software Engineer ──
+    # JD titles like "Principal", "Staff", "Distinguished", "VP", "Director" etc.
+    # are above the user's target level. Always cap down to Senior Software Engineer.
+    _INFLATED_LEVELS = re.compile(
+        r'\b(Principal|Staff|Distinguished|Fellow|Architect|VP|Vice President|Director|Head of|Chief|Lead Engineer|Engineering Manager|Technical Manager)\b',
+        re.IGNORECASE
+    )
+    if _INFLATED_LEVELS.search(t):
+        # Keep any relevant technology suffix (e.g. ".NET", "C#", "Full Stack")
+        tech_match = re.search(
+            r'(?:^|\s|\b)(\.NET|C#|Java|Python|React|Angular|Full\s+Stack|Cloud|Azure|AWS|Node|Go|Golang|Rust|iOS|Android)(?:\b|$)',
+            t, re.IGNORECASE
+        )
+        if tech_match:
+            tech = tech_match.group(1).strip()
+            # Normalise capitalisation
+            tech_norm = re.sub(r'(?i)\.net', '.NET', tech)
+            tech_norm = re.sub(r'(?i)full\s+stack', 'Full Stack', tech_norm)
+            print(f"  [TITLE-CAP] Inflated title '{t}' -> Senior {tech_norm} Developer")
+            return f"Senior {tech_norm} Developer"
+        print(f"  [TITLE-CAP] Inflated title '{t}' -> Senior Software Engineer")
+        return "Senior Software Engineer"
         
     # Replace abbreviations
     t = re.sub(r'\bsr\b\.?\s*', 'Senior ', t, flags=re.IGNORECASE)
     
-    # [NEW] Normalize title case for common patterns
-    # e.g. "SOFTWARE ENGINEER" → "Software Engineer" (if all uppercase or all lowercase)
+    # Normalize title case (if ALL CAPS or all lowercase)
     if (t == t.upper() or t == t.lower()) and len(t) > 3:
         t = t.title()
 
@@ -1333,8 +1644,12 @@ def clean_job_title(title: str) -> str:
     
     # Final safety: if title still looks like a domain or garbage, return generic
     if re.match(r'^[\w.-]+\.(com|in|co\.uk|au|net|org)$', t, re.IGNORECASE):
-        return "Senior .NET Full Stack Engineer"
+        return "Senior Software Engineer"
     
+    # Remove empty or whitespace-only parentheses left after stripping (e.g. "(Immediate Joiner)" becomes "()")
+    t = re.sub(r'\(\s*\)', '', t).strip()
+    t = re.sub(r'\s+', ' ', t).strip()
+
     # Run punctuation cleanup to fix unclosed parentheses or brackets
     t = clean_text_punctuation(t)
     return t
@@ -1758,12 +2073,12 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     for std_name in standard_names:
         found = False
         for pn in present_names:
-            if std_name.lower()[:12] in pn or pn in std_name.lower()[:12]:
+            if get_canonical_project_name(std_name).lower() == get_canonical_project_name(pn).lower():
                 found = True
                 break
         if not found:
             print(f"  [ATS-GUARD][Recovery] Project '{std_name}' missing from JSON. Restoring from base pool.")
-            base_proj = next((dp for dp in DEFAULT_PROJECTS_POOL if std_name.lower()[:12] in dp["name"].lower()), None)
+            base_proj = next((dp for dp in DEFAULT_PROJECTS_POOL if get_canonical_project_name(std_name).lower() == dp["name"].lower()), None)
             if base_proj:
                 bullets = list(base_proj.get("bullets", []))
                 # Retrieve architecture decision & fallback bullets from expanded PROJECTS_TECHNICAL_DECISIONS
@@ -1808,13 +2123,13 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 ok_soft, err_soft = verify_soft_skills(pb)
                 if not ok_soft:
                     print(f"  [ATS-GUARD] Soft-skill violation in project '{name}' bullet {p_idx+1}: {err_soft}. Falling back.")
-                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if get_canonical_project_name(name).lower() == dp["name"].lower()), None)
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
                 ok_ground, err_ground = verify_fact_grounding(name, pb, allowed)
                 if not ok_ground:
                     print(f"  [ATS-GUARD] Fact-grounding violation in project '{name}' bullet {p_idx+1}: {err_ground}. Falling back.")
-                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if get_canonical_project_name(name).lower() == dp["name"].lower()), None)
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
                 checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
@@ -1845,19 +2160,16 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 continue
                 
             if not bullets and name:
+                canonical_name = get_canonical_project_name(name)
                 for dp in DEFAULT_PROJECTS_POOL:
-                    if dp["name"].lower()[:15] in name.lower() or name.lower()[:15] in dp["name"].lower():
+                    if dp["name"].lower() == canonical_name.lower():
                         bullets = dp["bullets"]
                         if not tech:
                             tech = dp["tech"]
                         break
                         
-            name_lower = name.lower()
-            matched_decisions = None
-            for k, bullets_list in PROJECTS_TECHNICAL_DECISIONS.items():
-                if k in name_lower:
-                    matched_decisions = bullets_list
-                    break
+            canonical_name = get_canonical_project_name(name)
+            matched_decisions = PROJECTS_TECHNICAL_DECISIONS.get(canonical_name.lower())
             if matched_decisions:
                 bullets = [b.format(company=company) if "{company}" in b else b for b in matched_decisions]
                 
@@ -1866,11 +2178,11 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
             for p_idx, pb in enumerate(bullets[:3]):
                 ok_soft, err_soft = verify_soft_skills(pb)
                 if not ok_soft:
-                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if get_canonical_project_name(name).lower() == dp["name"].lower()), None)
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                 ok_ground, err_ground = verify_fact_grounding(name, pb, allowed)
                 if not ok_ground:
-                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if name.lower()[:15] in dp["name"].lower() or dp["name"].lower()[:15] in name.lower()), None)
+                    dp_match = next((dp for dp in DEFAULT_PROJECTS_POOL if get_canonical_project_name(name).lower() == dp["name"].lower()), None)
                     pb = dp_match["bullets"][p_idx] if dp_match and p_idx < len(dp_match["bullets"]) else PROJECT_FALLBACK_POOL[p_idx % len(PROJECT_FALLBACK_POOL)]
                     
                 checked_pb = verify_project_redundancy(pb, all_job_bullets, PROJECT_FALLBACK_POOL)
@@ -1928,10 +2240,11 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     pages = verify_docx_pages(output_file)
     print(f"  [ATS-GUARD] Initial rendered page count: {pages}")
     
-    # Page Count Escalation Trimming Path — allow up to 3 pages
+    # Page Count Escalation Trimming Path — always enforce a maximum of 2 pages
     # NOTE: Never drop any projects or project bullets.
-    if pages > 3:
-        print("  [ATS-GUARD] Page count exceeds 3. Escalation Step 1: Trim Kasadara to 2 bullets.")
+    target_pages = 2
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count exceeds target of {target_pages}. Escalation Step 1: Trim Kasadara to 2 bullets.")
         for job in config.jobs:
             if "kasadara" in job["company"].lower():
                 if len(job["bullets"]) > 2:
@@ -1941,8 +2254,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 1: {pages}")
         
-    if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 2: Trim DSSI to 4 bullets.")
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count still exceeds target of {target_pages}. Escalation Step 2: Trim DSSI to 4 bullets.")
         for job in config.jobs:
             if "dssi" in job["company"].lower():
                 if len(job["bullets"]) > 4:
@@ -1952,15 +2265,15 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 2: {pages}")
         
-    if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 3: Tighten layout spacing.")
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count still exceeds target of {target_pages}. Escalation Step 3: Tighten layout spacing.")
         config.tighten_spacing = True
         build_resume_docx(config)
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 3: {pages}")
         
-    if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 4: Trim Nexa to 2 bullets.")
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count still exceeds target of {target_pages}. Escalation Step 4: Trim Nexa to 2 bullets.")
         for job in config.jobs:
             if "nexa" in job["company"].lower():
                 if len(job["bullets"]) > 2:
@@ -1970,8 +2283,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 4: {pages}")
 
-    if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 5: Trim DSSI to 3 bullets.")
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count still exceeds target of {target_pages}. Escalation Step 5: Trim DSSI to 3 bullets.")
         for job in config.jobs:
             if "dssi" in job["company"].lower():
                 if len(job["bullets"]) > 3:
@@ -1981,8 +2294,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         pages = verify_docx_pages(output_file)
         print(f"  [ATS-GUARD] Page count after Step 5: {pages}")
 
-    if pages > 3:
-        print("  [ATS-GUARD] Page count still exceeds 3. Escalation Step 6: Trim LTIMindtree to 4 bullets.")
+    if pages > target_pages:
+        print(f"  [ATS-GUARD] Page count still exceeds target of {target_pages}. Escalation Step 6: Trim LTIMindtree to 4 bullets.")
         for job in config.jobs:
             if "ltimindtree" in job["company"].lower():
                 if len(job["bullets"]) > 4:
@@ -2021,8 +2334,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                     config.skills["Methodology & Tools"].append(formatted_kw)
             build_resume_docx(config)
             pages = verify_docx_pages(output_file)
-            if pages > 3:
-                print("  [ATS-GUARD] Spacing check: Optimized resume exceeded 3 pages. Tightening spacing.")
+            if pages > target_pages:
+                print(f"  [ATS-GUARD] Spacing check: Optimized resume exceeded {target_pages} pages. Tightening spacing.")
                 config.tighten_spacing = True
                 build_resume_docx(config)
         else:
