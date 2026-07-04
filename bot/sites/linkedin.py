@@ -208,6 +208,111 @@ def _linkedin_country_selector() -> list:
     logger.info("Invalid choice. Defaulting to Worldwide.", SITE)
     return LINKEDIN_COUNTRIES
 
+# ─── USER INTERACTION CONTROLLER ─────────────────────────────────────────────
+def ensure_control_widget(page: Page):
+    """
+    Injects a premium, modern floating UI overlay into the browser page.
+    Allows the user to click a button to pause/resume the bot at any time.
+    """
+    try:
+        # Check if widget is already injected
+        exists = page.evaluate("() => !!document.getElementById('jcode-bot-controller')")
+        if exists:
+            return
+
+        # Inject HTML and CSS with glassmorphic design and session persistence
+        script = """
+        (() => {
+            if (document.getElementById('jcode-bot-controller')) return;
+            
+            const widget = document.createElement('div');
+            widget.id = 'jcode-bot-controller';
+            widget.style.position = 'fixed';
+            widget.style.top = '12px';
+            widget.style.right = '80px';
+            widget.style.zIndex = '9999999';
+            widget.style.background = 'rgba(23, 23, 23, 0.85)';
+            widget.style.backdropFilter = 'blur(12px)';
+            widget.style.webkitBackdropFilter = 'blur(12px)';
+            widget.style.border = '1px solid rgba(255, 255, 255, 0.15)';
+            widget.style.borderRadius = '12px';
+            widget.style.padding = '10px 16px';
+            widget.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+            widget.style.fontSize = '13px';
+            widget.style.color = '#ffffff';
+            widget.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.37)';
+            widget.style.display = 'flex';
+            widget.style.alignItems = 'center';
+            widget.style.gap = '12px';
+            widget.style.userSelect = 'none';
+            widget.style.transition = 'all 0.3s ease';
+
+            if (sessionStorage.getItem('jcode_bot_paused') === null) {
+                sessionStorage.setItem('jcode_bot_paused', 'false');
+            }
+            window.bot_paused = sessionStorage.getItem('jcode_bot_paused') === 'true';
+
+            const updateWidget = () => {
+                const statusDotColor = window.bot_paused ? '#ef4444' : '#22c55e';
+                const statusTextColor = window.bot_paused ? '🔴 USER CONTROL (PAUSED)' : '🟢 BOT ACTIVE';
+                const btnText = window.bot_paused ? 'RESUME BOT CONTROL' : 'PAUSE BOT (TAKE CONTROL)';
+                const btnBg = window.bot_paused ? '#22c55e' : '#ef4444';
+                
+                widget.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="height: 10px; width: 10px; background-color: ${statusDotColor}; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px ${statusDotColor};"></span>
+                        <strong style="font-weight: 600; font-size: 12px; letter-spacing: 0.5px;">${statusTextColor}</strong>
+                    </div>
+                    <button id="jcode-toggle-btn" style="background: ${btnBg}; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 11px; transition: opacity 0.2s;">
+                        ${btnText}
+                    </button>
+                `;
+                
+                const btn = widget.querySelector('#jcode-toggle-btn');
+                btn.addEventListener('click', () => {
+                    window.bot_paused = !window.bot_paused;
+                    sessionStorage.setItem('jcode_bot_paused', window.bot_paused ? 'true' : 'false');
+                    updateWidget();
+                });
+                btn.addEventListener('mouseenter', () => btn.style.opacity = '0.85');
+                btn.addEventListener('mouseleave', () => btn.style.opacity = '1');
+            };
+
+            updateWidget();
+            document.body.appendChild(widget);
+        })();
+        """
+        page.evaluate(script)
+    except Exception:
+        pass
+
+
+def check_pause(page: Page):
+    """
+    Periodically checks if the user clicked the Pause button in the browser.
+    If paused, sleeps and waits until the user clicks Resume.
+    """
+    ensure_control_widget(page)
+    try:
+        page.evaluate("() => { if (sessionStorage.getItem('jcode_bot_paused') === 'true') { window.bot_paused = true; } }")
+        paused = page.evaluate("() => window.bot_paused")
+        if paused:
+            logger.info("⏸️ Bot PAUSED by user. Waiting for manual control...", SITE)
+            print("\n" + "=" * 65)
+            print("  ⚠️  BOT PAUSED — YOU HAVE COMPLETE CONTROL IN THE BROWSER")
+            print("  Click the green 'RESUME BOT CONTROL' button in the page to continue.")
+            print("=" * 65 + "\n")
+            
+            while True:
+                time.sleep(0.5)
+                ensure_control_widget(page)
+                still_paused = page.evaluate("() => window.bot_paused")
+                if not still_paused:
+                    logger.success("▶️ Bot RESUMED. Giving control back to the bot.", SITE)
+                    break
+    except Exception:
+        pass
+
 
 def run_linkedin_bot():
     creds = CREDENTIALS["linkedin"]
@@ -416,6 +521,7 @@ def _search_and_apply(page: Page, job_title: str, location: str,
         logger.info(f"Found {len(jobs)} jobs on page {page_num + 1}", SITE)
 
         for job_el in jobs:
+            check_pause(page)
             try:
                 res = _apply_to_job(page, job_el)
                 if isinstance(res, tuple):
@@ -452,6 +558,7 @@ def _search_and_apply(page: Page, job_title: str, location: str,
 
 # ─── SINGLE JOB APPLICATION ──────────────────────────────────────────────────
 def _apply_to_job(page: Page, job_el) -> bool:
+    check_pause(page)
     try:
         # Scroll and click job link or element robustly
         try:
@@ -710,6 +817,7 @@ def _fill_easy_apply_modal(page: Page, resume_path: str,
             break
 
         field_log("step", f"Modal Step {step + 1}", "", SITE)
+        check_pause(page)
 
         # ── 1. Resume upload ─────────────────────────────────────────────────
         file_input = page.query_selector('input[type="file"]')

@@ -60,11 +60,26 @@ def is_block_page(page) -> bool:
     return False
 
 def _extract_company_from_url(url: str) -> str:
+    """Extracts company name from URL, handling subdomains, country codes, ATS domains, and LinkedIn job view URLs."""
     try:
         parsed = urlparse(url)
         domain = parsed.netloc.lower()
         path = parsed.path.lower()
         
+        # Special case: LinkedIn job view URLs
+        if "linkedin.com" in domain:
+            if "/jobs/view/" in path:
+                path_parts = [p for p in path.split("/") if p]
+                if path_parts:
+                    last_part = path_parts[-1]
+                    if "-at-" in last_part:
+                        co_part = last_part.split("-at-")[-1]
+                        co_part = re.sub(r'-\d+$', '', co_part)
+                        co_name = co_part.replace("-", " ").replace("_", " ").strip()
+                        if co_name:
+                            return co_name.title()
+            return "LinkedIn"
+
         # 1. Handle ATS domains where company is in path or subdomain
         if "lever.co" in domain:
             parts = [p for p in path.split("/") if p]

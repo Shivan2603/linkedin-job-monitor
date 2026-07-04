@@ -1,32 +1,50 @@
 """
 bot/ai_router.py — Multi-Provider AI Router with Caching
 
-Providers (all FREE):
-  1. Groq          — Primary (Llama 3.3 70B / 3.1 8B) — 30 RPM free
-  2. OpenRouter    — Fallback (Mistral 7B, Llama 3 8B, Gemma 2 9B — FREE tier)
-  3. Google Gemini — Fallback (gemini-2.0-flash, gemini-1.5-flash)
-  4. Cache         — Reuse previous responses for same job+company (saves quota)
+Provider Chain (fastest → most capable, all FREE / cloud):
+  1. Cache         — Instant reuse for same JD (zero API calls)
+  2. Groq          — Llama 3.3 70B cloud (30 RPM free)
+  3. Gemini        — gemini-2.0-flash cloud (1500 req/day free)
+  4. OpenRouter    — 15+ free cloud models (fallback pool)
+  5. Ollama Cloud  — Self-hosted on HF Spaces (always-on, zero cost)
 
-Fixes:
-  - Groq 429: 30s backoff + switches to smaller model on retry
-  - Gemini: corrected model names (removed -latest suffix)
-  - OpenRouter: added as free unlimited fallback
-  - Cache: saves AI responses to disk — same job never calls API twice
+Removed:
+  - Local JCode CLI subprocess (windows-only, slow, unreliable)
+  - Local LM Studio (localhost-only)
+  - Ollama localhost (replaced by cloud deployment)
+  - Claude Sonnet 402 (paid, always fails on free key)
+  - OpenCode Zen (requires paid subscription/billing details)
 """
 
-import json, os, time, hashlib, requests, subprocess
+import json, os, time, hashlib, requests
 from bot.config import (
     GROQ_API_KEY, HUGGINGFACE_TOKEN, GEMINI_API_KEY,
     GROQ_MODEL_PRIMARY, GROQ_MODEL_FAST, DATA_FOLDER
 )
 from bot.utils import logger
 
-GROQ_API_URL      = "https://api.groq.com/openai/v1/chat/completions"
+# ─── ENDPOINTS ───────────────────────────────────────────────────────────────
+GROQ_API_URL       = "https://api.groq.com/openai/v1/chat/completions"
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
-# Cache file
+# Ollama Cloud — deployed on Hugging Face Spaces (free, always-on)
+# Deployed at: https://huggingface.co/spaces/Shivan2603/jcode-ollama-cloud
+OLLAMA_CLOUD_URL   = os.getenv(
+    "OLLAMA_CLOUD_URL",
+    "https://shivan2603-jcode-ollama-cloud.hf.space"
+)
+OLLAMA_CLOUD_MODELS = [
+    "qwen2.5-coder:7b",   # Best for JSON/structured output
+    "qwen2.5:7b",          # High quality general
+    "llama3.2:3b",         # Fast reliable fallback
+    "phi3:mini",           # Ultra fast (form filling)
+]
+
+# Cache
 CACHE_FILE = os.path.join(DATA_FOLDER, "ai_cache.json")
+
+
 
 # ─── RESPONSE CACHE ──────────────────────────────────────────────────────────
 def _load_cache() -> dict:
@@ -52,20 +70,22 @@ def _get_cached(key: str) -> str | None:
     cache = _load_cache()
     entry = cache.get(key)
     if entry:
-        # Cache valid for 24 hours
-        if time.time() - entry.get("ts", 0) < 86400:
+        if time.time() - entry.get("ts", 0) < 86400:  # 24-hour cache
             return entry["response"]
     return None
 
 def _set_cached(key: str, response: str):
     cache = _load_cache()
     cache[key] = {"response": response, "ts": time.time()}
-    # Keep only last 500 entries
     if len(cache) > 500:
         oldest = sorted(cache.items(), key=lambda x: x[1].get("ts", 0))[:100]
         for k, _ in oldest:
             del cache[k]
     _save_cache(cache)
+
+
+
+
 
 # ─── GROQ ─────────────────────────────────────────────────────────────────────
 def groq_complete(system_prompt: str, user_prompt: str,
@@ -90,99 +110,21 @@ def groq_complete(system_prompt: str, user_prompt: str,
     }
 
     try:
-        resp = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=60)
+        resp = requests.post(GROQ_API_URL, headers=headers,
+                             json=payload, timeout=40)
         if resp.status_code == 429:
             logger.warn("Groq 429 rate limit hit — switching instantly to next provider", "ai")
             raise Exception("Groq 429 Rate Limit")
-        
         resp.raise_for_status()
         return resp.json()["choices"][0]["message"]["content"].strip()
-    except requests.HTTPError as e:
+    except Exception as e:
         raise Exception(f"Groq failed: {e}")
 
-# ─── OPENROUTER (FREE TIER — no credit card needed) ──────────────────────────
-# Full list of confirmed working free models — ordered best quality → fastest
-# Bot tries each in sequence, skipping rate-limited/unavailable ones
-# ✅ Confirmed-working free models from OpenRouter (June 2025)
-# Source: User's confirmed free model list + openrouter.ai/models?q=free
-OPENROUTER_FREE_MODELS = [
-    # Dynamic free router model (auto-selects working free models)
-    "openrouter/free",
-    # Flagship quality (best for resume tailoring)
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "google/gemma-4-31b-it:free",
-    "qwen/qwen3-coder:free",
-    "qwen/qwen3-next-80b-a3b-instruct:free",
-    "nvidia/nemotron-3-ultra-550b-a55b:free",
-    "nvidia/nemotron-3-super-120b-a12b:free",
-    "openai/gpt-oss-120b:free",
-    "openai/gpt-oss-20b:free",
-    "cohere/north-mini-code:free",
-    "google/gemma-4-26b-a4b-it:free",
-    "meta-llama/llama-3.2-3b-instruct:free",
-    "liquid/lfm-2.5-1.2b-instruct:free",
-    "liquid/lfm-2.5-1.2b-thinking:free",
-    "nvidia/nemotron-3-nano-30b-a3b:free",
-    "nvidia/nemotron-nano-12b-v2-vl:free",
-    "nvidia/nemotron-nano-9b-v2:free",
-    "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-    "nousresearch/hermes-3-llama-3.1-405b:free"
-]
-
-def openrouter_complete(system_prompt: str, user_prompt: str,
-                        max_tokens: int = 2048) -> str:
-    if not OPENROUTER_API_KEY or len(OPENROUTER_API_KEY) < 10:
-        raise ValueError("OPENROUTER_API_KEY not set — get free key at openrouter.ai")
-
-    headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://github.com/Shivan2603/linkedin-job-monitor",
-        "X-Title": "Universal Job Bot",
-    }
-
-    for model in OPENROUTER_FREE_MODELS:
-        try:
-            payload = {
-                "model": model,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user",   "content": user_prompt},
-                ],
-                "max_tokens":  max_tokens,
-                "temperature": 0.3,
-            }
-            resp = requests.post(OPENROUTER_API_URL, headers=headers,
-                                 json=payload, timeout=60)
-            if resp.status_code in [429, 402, 503]:
-                logger.warn(f"OpenRouter {model} unavailable, trying next...", "ai")
-                continue
-            resp.raise_for_status()
-            data = resp.json()
-            if not data.get("choices") or not data["choices"][0].get("message"):
-                logger.warn(f"OpenRouter {model} returned empty choices, trying next...", "ai")
-                continue
-            content = data["choices"][0]["message"].get("content")
-            if not content:
-                logger.warn(f"OpenRouter {model} returned empty content, trying next...", "ai")
-                continue
-            result = content.strip()
-            model_short = model.split("/")[-1]
-            logger.ai(f"AI response from OpenRouter ({model_short})", "ai")
-            return result
-        except Exception as e:
-            logger.warn(f"OpenRouter {model} failed: {str(e)[:80]}", "ai")
-            continue
-
-    raise Exception("All OpenRouter free models unavailable")
 
 # ─── GOOGLE GEMINI ────────────────────────────────────────────────────────────
-# Corrected model names (removed -latest suffix which causes 404)
 GEMINI_MODELS = [
-    "gemini-2.0-flash",         # Free, fast, generous quota
-    "gemini-2.0-flash-lite",    # Free, lighter
-    "gemini-1.5-flash",         # Free, proven reliable
-    "gemini-1.5-flash-8b",      # Free, smallest/fastest
+    "gemini-2.0-flash",       # Free, fast, generous quota
+    "gemini-2.0-flash-lite",  # Free, lighter
 ]
 
 def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
@@ -216,7 +158,7 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
         except Exception as e:
             err = str(e)
             if "429" in err or "quota" in err.lower():
-                logger.warn(f"Gemini {model} quota: {err[:60]}", "ai")
+                logger.warn(f"Gemini {model} quota hit, trying next...", "ai")
                 continue
             if "404" in err:
                 continue
@@ -224,202 +166,174 @@ def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
 
     raise Exception("All Gemini models failed or hit quota limits")
 
-def jcode_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
-    combined = f"System Instruction:\n{system_prompt}\n\nUser Input:\n{user_prompt}"
-    jcode_path = r"C:\Users\SIVASHANKAR V\AppData\Local\jcode\bin\jcode.exe"
-    cmd = [jcode_path, "run", "--tool-profile", "none", combined]
-    try:
-        res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=240)
-        if res.returncode == 0:
-            output = res.stdout.strip()
-            if output:
-                return output
-        err_msg = res.stderr.strip() or f"Exit code {res.returncode}"
-        raise Exception(f"JCode CLI failed: {err_msg}")
-    except subprocess.TimeoutExpired:
-        raise Exception("JCode CLI request timed out after 240 seconds")
-    except Exception as e:
-        raise Exception(f"JCode CLI exception: {e}")
 
-
-# ─── LOCAL AI: OLLAMA + LM STUDIO (PRIMARY — ZERO COST, ZERO RATE LIMITS) ─────
-OLLAMA_URL     = "http://localhost:11434/api/generate"
-LM_STUDIO_URL  = "http://localhost:1234/v1/chat/completions"  # OpenAI-compatible
-
-# Best models for Intel Iris Xe + 8GB RAM (CPU inference)
-OLLAMA_MODELS = [
-    "phi3:mini",         # Microsoft Phi-3 Mini 3.8B — best for 8GB RAM, fast JSON
-    "qwen2.5-coder:1.5b", # Qwen 2.5 Coder 1.5B — fast local developer assistant
-    "qwen2.5:3b",        # Qwen 2.5 3B — excellent at structured output / JSON
-    "llama3.2:3b",       # Meta Llama 3.2 3B — reliable workhorse
-    "gemma2:2b",         # Google Gemma 2 2B — tiny & fast
-    "phi3:medium",       # Phi-3 Medium 14B — best quality (needs 10GB+ RAM)
+# ─── OPENROUTER (FREE TIER FALLBACK) ─────────────────────────────────────────
+# Trimmed to only the models that actually respond quickly.
+# Removed slow/always-rate-limited models to save time.
+OPENROUTER_FREE_MODELS = [
+    "openai/gpt-oss-120b:free",               # Best quality free (GPT class)
+    "meta-llama/llama-3.3-70b-instruct:free", # Strong 70B
+    "qwen/qwen3-coder:free",                  # Good for code/JSON
+    "nvidia/nemotron-3-super-120b-a12b:free", # Large + capable
+    "openai/gpt-oss-20b:free",                # Fast GPT-class
+    "meta-llama/llama-3.2-3b-instruct:free",  # Tiny but reliable
+    "openrouter/free",                         # Auto-router fallback
 ]
 
-def _is_ollama_running() -> bool:
-    """Quick check if Ollama server is up — checks /api/tags which is the proper health endpoint."""
-    for endpoint in ["http://localhost:11434/api/tags", "http://localhost:11434"]:
-        try:
-            r = requests.get(endpoint, timeout=3)
-            if r.status_code in [200, 204]:
-                return True
-        except Exception:
-            continue
-    return False
-
-def _is_lm_studio_running() -> bool:
-    """Quick check if LM Studio local server is up."""
-    try:
-        r = requests.get("http://localhost:1234/v1/models", timeout=2)
-        return r.status_code == 200
-    except Exception:
-        return False
-
-def lm_studio_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
-    """
-    Uses LM Studio's local server (OpenAI-compatible on port 1234).
-    Start LM Studio → Local Server tab → Start Server.
-    """
-    if not _is_lm_studio_running():
-        raise Exception("LM Studio server not running — open LM Studio and start Local Server")
-    payload = {
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user",   "content": user_prompt},
-        ],
-        "max_tokens": max_tokens,
-        "temperature": 0.3,
-        "stream": False,
-    }
-    resp = requests.post(LM_STUDIO_URL, json=payload, timeout=180)
-    resp.raise_for_status()
-    result = resp.json()["choices"][0]["message"]["content"].strip()
-    if result:
-        logger.ai("AI response from Local LM Studio", "ai")
-        return result
-    raise Exception("LM Studio returned empty response")
-
-def ollama_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
-    """
-    Runs a local LLM via Ollama. Zero cost, zero internet, zero rate limits.
-    Install: run SETUP_LOCAL_AI.bat to download Ollama + best model automatically.
-    """
-    if not _is_ollama_running():
-        raise Exception("Ollama not running — run SETUP_LOCAL_AI.bat")
-    combined = f"{system_prompt}\n\n{user_prompt}"
-    for model in OLLAMA_MODELS:
-        try:
-            resp = requests.post(
-                OLLAMA_URL,
-                json={"model": model, "prompt": combined, "stream": False,
-                      "options": {"num_predict": max_tokens, "temperature": 0.3}},
-                timeout=180,  # CPU inference can be slow
-            )
-            if resp.status_code == 404:
-                continue  # model not pulled yet
-            resp.raise_for_status()
-            result = resp.json().get("response", "").strip()
-            if result:
-                logger.ai(f"AI response from Local Ollama ({model})", "ai")
-                return result
-        except requests.ConnectionError:
-            raise Exception("Ollama stopped unexpectedly")
-        except Exception as e:
-            logger.warn(f"Ollama {model} failed: {str(e)[:60]}", "ai")
-            continue
-    raise Exception("All Ollama local models unavailable")
-
-
-def openrouter_claude_complete(system_prompt: str, user_prompt: str, max_tokens: int = 2048) -> str:
+def openrouter_complete(system_prompt: str, user_prompt: str,
+                        max_tokens: int = 2048) -> str:
     if not OPENROUTER_API_KEY or len(OPENROUTER_API_KEY) < 10:
-        raise ValueError("OPENROUTER_API_KEY not configured")
+        raise ValueError("OPENROUTER_API_KEY not set — get free key at openrouter.ai")
 
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
         "HTTP-Referer": "https://github.com/Shivan2603/linkedin-job-monitor",
-        "X-Title": "Universal Job Bot",
+        "X-Title": "JCode Job Bot",
     }
-    
-    # Cap max_tokens to prevent "can only afford X tokens" errors on low credits
-    capped_tokens = min(max_tokens, 2048)
-    
-    payload = {
-        "model": "anthropic/claude-sonnet-4.6",
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user",   "content": user_prompt},
-        ],
-        "max_tokens":  capped_tokens,
-        "temperature": 0.3,
-    }
-    
-    resp = requests.post(OPENROUTER_API_URL, headers=headers, json=payload, timeout=60)
-    resp.raise_for_status()
-    return resp.json()["choices"][0]["message"]["content"].strip()
+
+    for model in OPENROUTER_FREE_MODELS:
+        try:
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user",   "content": user_prompt},
+                ],
+                "max_tokens":  max_tokens,
+                "temperature": 0.3,
+            }
+            resp = requests.post(OPENROUTER_API_URL, headers=headers,
+                                 json=payload, timeout=60)
+            if resp.status_code != 200:
+                logger.warn(f"OpenRouter {model} status {resp.status_code}: {resp.text[:150]}", "ai")
+                continue
+            data = resp.json()
+            if not data.get("choices") or not data["choices"][0].get("message"):
+                continue
+            content = data["choices"][0]["message"].get("content", "").strip()
+            if not content:
+                continue
+            model_short = model.split("/")[-1]
+            logger.ai(f"AI response from OpenRouter ({model_short})", "ai")
+            return content
+        except Exception as e:
+            logger.warn(f"OpenRouter {model} failed: {str(e)[:80]}", "ai")
+            continue
+
+    raise Exception("All OpenRouter free models unavailable")
+
+
+# ─── OLLAMA CLOUD (HuggingFace Spaces) ───────────────────────────────────────
+def _is_ollama_cloud_up() -> bool:
+    """Ping the cloud Ollama health endpoint."""
+    try:
+        r = requests.get(f"{OLLAMA_CLOUD_URL}/api/tags", timeout=5)
+        return r.status_code in [200, 204]
+    except Exception:
+        return False
+
+def ollama_cloud_complete(system_prompt: str, user_prompt: str,
+                          max_tokens: int = 2048) -> str:
+    """
+    Calls the cloud-deployed Ollama on Hugging Face Spaces.
+    Endpoint: OLLAMA_CLOUD_URL (default: shivan2603-jcode-ollama-cloud.hf.space)
+    Deployed via: E:\\SivaShankar\\ollama-cloud (Docker → HF Spaces)
+    """
+    combined = f"{system_prompt}\n\n{user_prompt}"
+    generate_url = f"{OLLAMA_CLOUD_URL}/api/generate"
+
+    for model in OLLAMA_CLOUD_MODELS:
+        try:
+            resp = requests.post(
+                generate_url,
+                json={
+                    "model": model,
+                    "prompt": combined,
+                    "stream": False,
+                    "options": {"num_predict": max_tokens, "temperature": 0.3},
+                },
+                timeout=120,
+            )
+            if resp.status_code == 404:
+                logger.warn(f"Ollama Cloud: model {model} not pulled yet, trying next...", "ai")
+                continue
+            resp.raise_for_status()
+            result = resp.json().get("response", "").strip()
+            if result:
+                logger.ai(f"AI response from Ollama Cloud ({model})", "ai")
+                return result
+        except requests.ConnectionError:
+            raise Exception("Ollama Cloud (HF Spaces) is offline or sleeping")
+        except Exception as e:
+            logger.warn(f"Ollama Cloud {model} failed: {str(e)[:60]}", "ai")
+            continue
+
+    raise Exception("All Ollama Cloud models unavailable")
 
 
 # ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
 def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
     """
-    Intelligent AI routing with caching.
-    Order: Cache → Claude-Sonnet-4.6 (for resume tasks) → Local AI → Gemini (1500 req/day) → Groq → OpenRouter → Error
+    Cloud-first AI router. Provider order:
+      Cache → OpenCode Zen → Groq → Gemini → OpenRouter → Ollama Cloud
+
+    All providers are cloud-hosted. No local subprocess, no localhost dependency.
     """
     combined = f"{system_prompt}\n\n{user_prompt}"
 
-    # 1. Check cache first (saves API quota)
-    if task in ["tailor", "ats_check"]:  # Cache heavy tasks
+    # 1. Cache — instant for repeat calls (same JD never calls API twice)
+    if task in ["tailor", "ats_check"]:
         key = _cache_key(system_prompt, user_prompt, task)
         cached = _get_cached(key)
         if cached:
             logger.ai(f"AI response from Cache ({task})", "ai")
             return cached
 
-    # 2. Build provider chain — LOCAL FIRST, then cloud fallback
-    #    This guarantees AI never fails due to rate limits or API issues.
-    
     providers = []
-    
-    # Prioritize Claude Sonnet 4.6 for resume-related tasks
-    if task in ["tailor", "analyze", "rerank", "verify", "ats_check"]:
-        providers.append(("Claude-Sonnet-4.6", lambda: openrouter_claude_complete(system_prompt, user_prompt, max_tokens)))
-    
-    providers.append(("Local-JCode", lambda: jcode_complete(system_prompt, user_prompt, max_tokens)))
-    if _is_ollama_running():
-        providers.append(("Local-Ollama", lambda: ollama_complete(system_prompt, user_prompt, max_tokens)))
-    if _is_lm_studio_running():
-        providers.append(("Local-LMStudio", lambda: lm_studio_complete(system_prompt, user_prompt, max_tokens)))
-    
+
+    # 1. Ollama Cloud (HF Spaces) — Primary. Zero rate limits, private, 100% free.
+    providers.append((
+        "Ollama-Cloud",
+        lambda: ollama_cloud_complete(system_prompt, user_prompt, max_tokens)
+    ))
+
+    # 2. Gemini — Fallback. Free, fast cloud.
+    providers.append((
+        "Gemini",
+        lambda: gemini_complete(combined, max_tokens)
+    ))
+
+    # 3. Groq — Fallback. Fast cloud, instant failover on 429.
     if task == "form_fill":
-        providers.extend([
-            ("Gemini-Fast",  lambda: gemini_complete(combined, max_tokens)),
-            ("Groq-Fast",    lambda: groq_complete(system_prompt, user_prompt,
-                                                   model=GROQ_MODEL_FAST,
-                                                   max_tokens=max_tokens)),
-            ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
-                                                         max_tokens=max_tokens)),
-        ])
+        providers.append((
+            "Groq-Fast",
+            lambda: groq_complete(system_prompt, user_prompt,
+                                  model=GROQ_MODEL_FAST, max_tokens=max_tokens)
+        ))
     else:
-        providers.extend([
-            ("Gemini",       lambda: gemini_complete(combined, max_tokens)),
-            ("Groq",         lambda: groq_complete(system_prompt, user_prompt,
-                                                   max_tokens=max_tokens)),
-            ("OpenRouter",   lambda: openrouter_complete(system_prompt, user_prompt,
-                                                         max_tokens=max_tokens)),
-        ])
-    
+        providers.append((
+            "Groq",
+            lambda: groq_complete(system_prompt, user_prompt, max_tokens=max_tokens)
+        ))
+
+    # 4. OpenRouter — Final Fallback. Free cloud model pool.
+    providers.append((
+        "OpenRouter",
+        lambda: openrouter_complete(system_prompt, user_prompt, max_tokens=max_tokens)
+    ))
+
+    # 3. Try each provider
     last_error = None
     for name, fn in providers:
         try:
             result = fn()
-            if name != "Cache":
-                logger.ai(f"AI response from {name} ({task})", "ai")
             # Cache successful tailor/ats results
             if task in ["tailor", "ats_check"]:
                 _set_cached(key, result)
             return result
-        except ValueError as e:
+        except ValueError:
             # API key not set — skip silently
             continue
         except Exception as e:
@@ -427,7 +341,7 @@ def ai_complete(system_prompt: str, user_prompt: str,
             last_error = e
             continue
 
-    raise Exception(f"All AI providers failed (Cloud + Local). Last: {last_error}")
+    raise Exception(f"All AI providers failed (Cloud). Last: {last_error}")
 
 
 # ─── ATS CHECKER ─────────────────────────────────────────────────────────────
@@ -445,7 +359,6 @@ Return exactly:
 
     try:
         raw = ai_complete(system, user, task="ats_check", max_tokens=400)
-        # Strip code fences
         for fence in ["```json", "```"]:
             if fence in raw:
                 raw = raw.split(fence)[1].split("```")[0].strip()

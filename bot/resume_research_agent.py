@@ -23,6 +23,17 @@ Adds 4 advanced AI agents to the resume tailoring pipeline:
 
 import re
 import json
+import sys
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if hasattr(sys.stderr, 'reconfigure'):
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 from bot.ai_router import ai_complete
 
 # ─── SYSTEM PROMPTS ─────────────────────────────────────────────────────────
@@ -204,6 +215,103 @@ and the professional_summary. Only change what needs fixing. Return ONLY valid J
 }"""
 
 
+NARRATIVE_STRATEGY_SYSTEM = """You are the Narrative Strategy Agent — the creative director of the resume pipeline.
+Your job is to decide THE STORY this candidate tells THIS specific company, based on deep company intelligence.
+
+You receive: company intelligence, JD intelligence, and the full set of candidate grounded achievements.
+You return a narrative strategy that will make the Tailor Agent write a completely unique, company-specific resume.
+
+The candidate has these grounded achievements across 4 roles:
+
+LTIMindtree (current, Jun 2025–Present | Enterprise Tax Platform for Deloitte):
+  A1: Migrated 50+ legacy tax tables to QRP structures — 38% query latency reduction
+  A2: Azure OpenAI embedding pipeline for dynamic schema mapping — 60% manual effort saved
+  A3: Secure stored procedures for dynamic RBAC role mapping across 15+ tax modules
+  A4: Profiled 30+ ASP.NET Web API endpoints, solved N+1 loops — sub-100ms p99 latency
+  A5: Redis-based API response caching — 45% database query load reduction
+  A6: OpenTelemetry distributed tracing across microservices — 50% MTTR reduction
+  A7: Secured 30+ RESTful APIs with OAuth2+JWT for OWASP compliance
+  A8: Azure OpenAI GPT-4 for automated tax document summarization — 35% faster triage
+  A9: Semantic search engine using pgvector — sub-200ms document lookups
+  A10: GitHub Copilot prompt engineering for unit tests — 85% xUnit coverage
+
+DSSI Solutions (Nov 2024–May 2025 | Financial Procurement Platform):
+  B1: Engineered 12+ procurement microservices using .NET 7, CQRS, Clean Architecture
+  B2: RabbitMQ async messaging — 3x message throughput increase
+  B3: Mentored 4 junior engineers on CQRS and Git Flow — 40% reduction in post-deploy bugs
+  B4: Containerized 12 microservices with Docker — 65% container image size reduction
+  B5: Azure Form Recognizer for automated invoice extraction — 100+ manual hours saved
+  B6: YARP Reverse Proxy for path-based routing — 99.98% uptime SLA
+
+Nexa Office InfoSystems (Jul 2024–Nov 2024 | Enterprise Document Management):
+  C1: Modular Angular UI components — 35% page load speed improvement
+  C2: AES-256 encryption + OAuth2/OIDC for secure document repository
+  C3: SQL Server query profiling and index rebuild — 25% search acceleration
+  C4: mTLS and X.509 certificate rotation for service-to-service security
+
+Kasadara Technology Solutions (Jul 2022–Jun 2024 | US Government SaaS):
+  D1: .NET Framework to .NET Core migration — 40% memory reduction
+  D2: High-throughput Go background services — 2x processing speed
+  D3: US Federal Section 508 + WCAG accessibility compliance
+  D4: Legacy WCF/ADO.NET optimization — 20% transaction time reduction
+
+YOUR TASK:
+Based on the company_intelligence and jd_intelligence provided, decide:
+
+1. candidate_angle: What is the ONE positioning sentence for this candidate? (max 15 words)
+   Examples:
+   - For fintech: "The engineer who built financial procurement microservices at 99.98% SLA"
+   - For AI/cloud company: "The engineer who shipped Azure OpenAI semantic search in production"
+   - For security-heavy role: "The engineer who hardened 30+ APIs with OAuth2, AES-256, and FIPS compliance"
+   - For government: "The engineer who delivered FIPS-compliant federal platforms with US gov compliance"
+
+2. primary_achievement: The SINGLE most impressive achievement for this company (choose ONE from A1-D4 above)
+   Pick the one achievement that most directly addresses what this company is hiring for.
+
+3. secondary_achievement: The second most relevant achievement (different role preferred if possible)
+
+4. role_emphasis_order: Order the 4 companies by relevance to this JD (most relevant FIRST)
+   Format: ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"]
+   Example for a fintech JD: ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"]
+
+5. bullet_allocation: How many bullets to give each role (total must = 18)
+   Default: LTIMindtree=6, DSSI=5, Nexa=4, Kasadara=3
+   DYNAMIC RULE: The role most relevant to this JD gets +1 bullet; the least relevant role gets -1 bullet.
+   Limits: LTIMindtree always gets minimum 5 (current role), other roles minimum 2.
+
+6. top_bullets_for_primary_role: List the 3 achievement codes (e.g. ["B1", "B6", "B2"]) that should be the FIRST 3 bullets
+   of the primary role — chosen specifically because they best answer this JD's must-haves.
+
+7. suppress_achievements: List achievement codes to suppress (don't feature prominently) for this JD
+   Example: ["D3"] for a non-government role (WCAG/accessibility not relevant)
+
+8. summary_opening_angle: Which aspect of experience should sentence 1 of the summary lead with?
+   Options: "cloud", "ai_ml", "fintech_domain", "security", "government", "performance", "leadership"
+   Choose the ONE that makes this candidate most compelling for this specific company.
+
+9. domain_verbs: 5 strong action verbs that match this company's culture DNA
+   Examples for a startup: ["Shipped", "Owned", "Drove", "Scaled", "Built"]
+   Examples for enterprise bank: ["Hardened", "Governed", "Audited", "Secured", "Architected"]
+   Examples for cloud SaaS: ["Architected", "Deployed", "Optimized", "Automated", "Instrumented"]
+
+10. project_order: List all 5 projects in order of relevance for this JD:
+    Options: ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+
+Return ONLY valid JSON:
+{
+  "candidate_angle": "...",
+  "primary_achievement": "B6",
+  "secondary_achievement": "A4",
+  "role_emphasis_order": ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+  "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 6, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 2},
+  "top_bullets_for_primary_role": ["B1", "B6", "B2"],
+  "suppress_achievements": ["D3"],
+  "summary_opening_angle": "fintech_domain",
+  "domain_verbs": ["Engineered", "Architected", "Deployed", "Secured", "Optimized"],
+  "project_order": ["e-ProcureZen", "AI Tax Document Analyser", "SSO Application", "Nexa Vault", "NEICE"]
+}"""
+
+
 # ─── AGENT FUNCTIONS ─────────────────────────────────────────────────────────
 
 def research_company(company: str, job_title: str, jd_text: str,
@@ -251,6 +359,218 @@ def research_company(company: str, job_title: str, jd_text: str,
             "opening_power_verb": "Architected",
             "summary_tone": "achievement-first"
         }
+
+
+def build_narrative_strategy(
+    company: str,
+    job_title: str,
+    jd_text: str,
+    company_intelligence: dict,
+    jd_context: dict,
+    parse_json_safely=None
+) -> dict:
+    """
+    Agent 0.75: Narrative Strategy Agent.
+    Decides the unique story angle, bullet allocation, and project order
+    for this specific company — runs BEFORE the Tailor Agent.
+    Returns a narrative_strategy dict that drives all downstream writing.
+    Falls back to a domain-aware strategy (not just a generic default) when AI fails.
+    """
+    if parse_json_safely is None:
+        def parse_json_safely(raw):
+            import json, re
+            raw = raw.strip()
+            m = re.search(r'(\{.*\})', raw, re.DOTALL)
+            candidate = m.group(1).strip() if m else raw
+            try:
+                return json.loads(candidate, strict=False)
+            except Exception:
+                return {}
+
+    # ── Domain-aware smart fallbacks ──────────────────────────────────────────
+    # Used when AI returns empty or invalid JSON. Much better than a generic default.
+    DOMAIN_FALLBACKS = {
+        "fintech": {
+            "candidate_angle": "The engineer who built high-availability financial microservices at 99.98% SLA",
+            "primary_achievement": "B1", "secondary_achievement": "B6",
+            "role_emphasis_order": ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 5, "DSSI Solutions": 6, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["B1", "B6", "B2"],
+            "suppress_achievements": ["D3"],
+            "summary_opening_angle": "fintech_domain",
+            "domain_verbs": ["Engineered", "Delivered", "Secured", "Optimized", "Scaled"],
+            "project_order": ["e-ProcureZen", "AI Tax Document Analyser", "SSO Application", "Nexa Vault", "NEICE"]
+        },
+        "procurement": {
+            "candidate_angle": "The engineer who built financial procurement microservices at 99.98% SLA",
+            "primary_achievement": "B1", "secondary_achievement": "B6",
+            "role_emphasis_order": ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 5, "DSSI Solutions": 6, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["B1", "B6", "B2"],
+            "suppress_achievements": ["D3"],
+            "summary_opening_angle": "fintech_domain",
+            "domain_verbs": ["Engineered", "Delivered", "Configured", "Optimized", "Secured"],
+            "project_order": ["e-ProcureZen", "AI Tax Document Analyser", "Nexa Vault", "SSO Application", "NEICE"]
+        },
+        "banking": {
+            "candidate_angle": "The engineer who shipped secure financial APIs with OAuth2 and 99.98% SLA payment microservices",
+            "primary_achievement": "B6", "secondary_achievement": "A7",
+            "role_emphasis_order": ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 5, "DSSI Solutions": 6, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["B6", "B1", "A7"],
+            "suppress_achievements": ["D3"],
+            "summary_opening_angle": "fintech_domain",
+            "domain_verbs": ["Secured", "Engineered", "Delivered", "Hardened", "Optimized"],
+            "project_order": ["e-ProcureZen", "SSO Application", "Nexa Vault", "AI Tax Document Analyser", "NEICE"]
+        },
+        "ai": {
+            "candidate_angle": "The engineer who shipped Azure OpenAI GPT-4 semantic search into production",
+            "primary_achievement": "A8", "secondary_achievement": "A9",
+            "role_emphasis_order": ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 7, "DSSI Solutions": 5, "Nexa Office InfoSystems": 3, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["A8", "A9", "A2"],
+            "suppress_achievements": ["D3", "D2"],
+            "summary_opening_angle": "ai_ml",
+            "domain_verbs": ["Shipped", "Architected", "Instrumented", "Deployed", "Optimized"],
+            "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "SSO Application", "Nexa Vault", "NEICE"]
+        },
+        "government": {
+            "candidate_angle": "The engineer who delivered FIPS-compliant US federal platforms with Section 508 compliance",
+            "primary_achievement": "D1", "secondary_achievement": "D3",
+            "role_emphasis_order": ["Kasadara Technology Solutions", "LTIMindtree", "Nexa Office InfoSystems", "DSSI Solutions"],
+            "bullet_allocation": {"LTIMindtree": 5, "DSSI Solutions": 2, "Nexa Office InfoSystems": 3, "Kasadara Technology Solutions": 8},
+            "top_bullets_for_primary_role": ["D1", "D3", "D4"],
+            "suppress_achievements": ["B5", "A8"],
+            "summary_opening_angle": "government",
+            "domain_verbs": ["Delivered", "Migrated", "Hardened", "Complied", "Configured"],
+            "project_order": ["NEICE", "SSO Application", "Nexa Vault", "e-ProcureZen", "AI Tax Document Analyser"]
+        },
+        "federal": {
+            "candidate_angle": "The engineer who built FIPS-compliant federal platforms across US government agencies",
+            "primary_achievement": "D1", "secondary_achievement": "D3",
+            "role_emphasis_order": ["Kasadara Technology Solutions", "LTIMindtree", "Nexa Office InfoSystems", "DSSI Solutions"],
+            "bullet_allocation": {"LTIMindtree": 5, "DSSI Solutions": 2, "Nexa Office InfoSystems": 3, "Kasadara Technology Solutions": 8},
+            "top_bullets_for_primary_role": ["D1", "D3", "D4"],
+            "suppress_achievements": ["B5"],
+            "summary_opening_angle": "government",
+            "domain_verbs": ["Delivered", "Migrated", "Secured", "Hardened", "Complied"],
+            "project_order": ["NEICE", "SSO Application", "Nexa Vault", "e-ProcureZen", "AI Tax Document Analyser"]
+        },
+        "security": {
+            "candidate_angle": "The engineer who hardened 30+ enterprise APIs with OAuth2, AES-256, and mTLS in production",
+            "primary_achievement": "A7", "secondary_achievement": "C4",
+            "role_emphasis_order": ["LTIMindtree", "Nexa Office InfoSystems", "DSSI Solutions", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 4, "Nexa Office InfoSystems": 5, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["A7", "A3", "C2"],
+            "suppress_achievements": ["D2"],
+            "summary_opening_angle": "security",
+            "domain_verbs": ["Hardened", "Secured", "Architected", "Configured", "Enforced"],
+            "project_order": ["SSO Application", "Nexa Vault", "AI Tax Document Analyser", "e-ProcureZen", "NEICE"]
+        },
+        "cloud": {
+            "candidate_angle": "Cloud-native .NET engineer who architected 12+ microservices at 99.98% uptime on Azure",
+            "primary_achievement": "A5", "secondary_achievement": "A6",
+            "role_emphasis_order": ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 5, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["A5", "A6", "A4"],
+            "suppress_achievements": ["D3"],
+            "summary_opening_angle": "cloud",
+            "domain_verbs": ["Architected", "Deployed", "Automated", "Optimized", "Instrumented"],
+            "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+        },
+        "saas": {
+            "candidate_angle": "Performance-obsessed .NET engineer who built SaaS APIs at sub-100ms p99 and 99.98% uptime",
+            "primary_achievement": "A4", "secondary_achievement": "B6",
+            "role_emphasis_order": ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 5, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["A4", "A5", "B6"],
+            "suppress_achievements": ["D3"],
+            "summary_opening_angle": "performance",
+            "domain_verbs": ["Engineered", "Optimized", "Deployed", "Scaled", "Architected"],
+            "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+        },
+        "leadership": {
+            "candidate_angle": "Engineering lead who mentored 4 engineers and shipped 12+ microservices reducing defects by 40%",
+            "primary_achievement": "B3", "secondary_achievement": "A4",
+            "role_emphasis_order": ["DSSI Solutions", "LTIMindtree", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 6, "Nexa Office InfoSystems": 3, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["B3", "B1", "B6"],
+            "suppress_achievements": [],
+            "summary_opening_angle": "leadership",
+            "domain_verbs": ["Led", "Mentored", "Architected", "Delivered", "Drove"],
+            "project_order": ["e-ProcureZen", "AI Tax Document Analyser", "Nexa Vault", "SSO Application", "NEICE"]
+        },
+    }
+
+    # Generic fallback — used only when domain is completely unknown
+    GENERIC_DEFAULT = {
+        "candidate_angle": "Performance-obsessed .NET engineer who reduced enterprise API latency to sub-100ms p99",
+        "primary_achievement": "A4", "secondary_achievement": "B1",
+        "role_emphasis_order": ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+        "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 5, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+        "top_bullets_for_primary_role": ["A4", "A7", "A5"],
+        "suppress_achievements": [],
+        "summary_opening_angle": "performance",
+        "domain_verbs": ["Engineered", "Architected", "Optimized", "Deployed", "Secured"],
+        "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+    }
+
+    def _domain_fallback(domain: str) -> dict:
+        """Return the best matching domain-aware fallback strategy."""
+        domain_lower = (domain or "").lower()
+        for key, strategy in DOMAIN_FALLBACKS.items():
+            if key in domain_lower:
+                return dict(strategy)  # return a copy
+        return dict(GENERIC_DEFAULT)
+
+    try:
+        prompt = (
+            f"Company: {company}\n"
+            f"Job Title: {job_title}\n"
+            f"JD Domain: {jd_context.get('company_domain', 'technology')}\n"
+            f"JD Seniority: {jd_context.get('seniority_level', 'Senior')}\n"
+            f"Is Team Lead Role: {jd_context.get('is_team_lead_role', False)}\n"
+            f"JD Must-Have Skills: {jd_context.get('domain_priority_skills', [])}\n"
+            f"Company Culture DNA: {company_intelligence.get('culture_dna', [])}\n"
+            f"Company Narrative Angle: {company_intelligence.get('resume_narrative_angle', '')}\n"
+            f"Top 3 Differentiators: {company_intelligence.get('top_3_differentiators', [])}\n\n"
+            f"JD (first 2000 chars):\n{jd_text[:2000]}\n\n"
+            f"Build the narrative strategy for this candidate for this specific company."
+        )
+        raw = ai_complete(NARRATIVE_STRATEGY_SYSTEM, prompt, task="analyze", max_tokens=800)
+        result = parse_json_safely(raw)
+
+        # If AI returned empty/invalid JSON, use domain-aware fallback immediately
+        if not result or not isinstance(result, dict) or len(result) < 3:
+            domain = jd_context.get("company_domain", "")
+            print(f"    [NarrativeStrategy] Empty AI result — using domain fallback for '{domain}'")
+            result = _domain_fallback(domain)
+        else:
+            # Fill any missing keys from domain-aware fallback (not just generic)
+            domain = jd_context.get("company_domain", "")
+            fallback = _domain_fallback(domain)
+            for key, default_val in fallback.items():
+                if key not in result or not result[key]:
+                    result[key] = default_val
+
+        # Validate bullet_allocation floor limits
+        alloc = result.get("bullet_allocation", {})
+        if isinstance(alloc, dict):
+            alloc["LTIMindtree"] = max(5, int(alloc.get("LTIMindtree", 6)))
+            alloc["DSSI Solutions"] = max(2, int(alloc.get("DSSI Solutions", 5)))
+            alloc["Nexa Office InfoSystems"] = max(2, int(alloc.get("Nexa Office InfoSystems", 4)))
+            alloc["Kasadara Technology Solutions"] = max(2, int(alloc.get("Kasadara Technology Solutions", 3)))
+            result["bullet_allocation"] = alloc
+
+        print(f"    [NarrativeStrategy] Angle: {result.get('candidate_angle', 'N/A')[:80]}")
+        print(f"    [NarrativeStrategy] Summary opening: {result.get('summary_opening_angle', 'N/A')}")
+        print(f"    [NarrativeStrategy] Bullet allocation: {result.get('bullet_allocation', {})}")
+        return result
+
+    except Exception as e:
+        domain = jd_context.get("company_domain", "")
+        print(f"    [NarrativeStrategy] Failed (using domain fallback for '{domain}'): {e}")
+        return _domain_fallback(domain)
 
 
 def expand_projects(
@@ -354,6 +674,10 @@ def expand_projects(
         raw = ai_complete(PROJECT_EXPANDER_SYSTEM, prompt, task="tailor", max_tokens=3000)
         result = parse_json_safely(raw)
         expanded = result.get("expanded_projects", [])
+        if not isinstance(expanded, list):
+            expanded = []
+        else:
+            expanded = [p for p in expanded if isinstance(p, dict)]
         print(f"    [ProjectExpander] Expanded {len(expanded)} project(s) with architecture rationale.")
         return expanded
     except Exception as e:

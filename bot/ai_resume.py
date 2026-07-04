@@ -3,6 +3,16 @@ ai_resume.py — Multi-AI resume tailoring bridge for jobbot
 Delegates all resume tailoring to the TailorRobot engine at E:\SivaShankar\tailorrobot.
 """
 import os, re, json, time, sys
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+if hasattr(sys.stderr, 'reconfigure'):
+    try:
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -18,6 +28,7 @@ from bot.utils import logger
 from bot.ai_router import ai_complete, check_resume_ats
 from bot.resume_research_agent import (
     research_company,
+    build_narrative_strategy,
     expand_projects,
     score_and_rewrite_bullets,
     enforce_consistency,
@@ -26,7 +37,7 @@ from bot.resume_research_agent import (
     deep_rewrite_projects,
 )
 from bot.cover_letter_agent import generate_cover_letter
-from bot.interview_prep_agent import generate_interview_prep
+# interview_prep_agent removed — only resume + cover letter are produced
 
 # ─── LOCAL SWARM IMPLEMENTATION (FALLBACK) ─────────────────────────
 
@@ -63,9 +74,12 @@ Think like a senior recruiter AND like the candidate trying to stand out. Analys
 
 5. SUMMARY CLOSING (Line 5):
    - Write the EXACT last line of the professional summary.
-   - Format: "[Eager to / Excited to / Committed to] [join/contribute to] [Company]'s [domain keyword] team in [City] [, bringing / and deliver] [top relevant skill from JD]."
-   - If remote: "Bringing [top skill] to [Company]'s [domain] mission, delivering results across distributed international teams."
-   - If India-based: "Bringing scalable [top skill] expertise to [Company] to [deliver JD's stated outcome]."
+   - CRITICAL RULE: DO NOT mention the company name anywhere in the resume. The resume is a generic document shared with multiple recruiters. Only the cover letter mentions the company name.
+   - Format: "[Eager to / Excited to / Committed to] [contribute to / build] [domain keyword] solutions in [City/context], bringing [top relevant skill from JD] to high-impact teams."
+   - If remote: "Bringing [top skill] to [domain]-focused distributed teams, delivering results across international enterprise environments."
+   - If India-based: "Bringing scalable [top skill] expertise to deliver [JD's stated outcome] in fast-paced [domain] environments."
+   - Good example: "Excited to contribute to high-availability fintech platforms in Kuala Lumpur, bringing 4+ years of PCI-DSS compliant .NET expertise to mission-critical digital banking systems."
+   - BAD example (DO NOT DO THIS): "Excited to join CIMB's digital banking team..." ← NEVER put company name in resume summary.
 
 6. CERTIFICATIONS RELEVANCE:
    - Which of our certs should be highlighted? (AZ-204 if Azure in JD; NEICE if gov/federal; AZ-204 with [HIGHLY RELEVANT] suffix if Azure is the primary cloud)
@@ -135,23 +149,64 @@ Allowable candidate skills to categorize:
 Return a JSON with "skills_by_category" containing lists for: Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology.
 CRITICAL: Return ONLY standard JSON. All keys and string values must be enclosed in double quotes. Do not include raw unquoted strings, variable names, comments, or trailing commas. Do not include markdown code block formatting."""
 
-TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm — operating in FRESH WRITING MODE.
-You will receive: the candidate's base resume, Analyzer findings, Reranker-sorted skills, JD Intelligence, AND Company Intelligence (from the Company Research Agent).
-Your job is to FRESHLY WRITE every section of the resume from scratch — NOT paraphrase or shuffle the base resume.
-Every bullet must sound like a senior engineer wrote it specifically for THIS company, using THIS company's language and priorities.
+TAILOR_SYSTEM = """You are the Tailor Agent in the JCode Multi-Agent Swarm — operating in DEEP PERSONALIZATION MODE.
+You receive: JD Intelligence, Company Intelligence, Narrative Strategy, Analyzer findings, Reranker skills, and the full candidate base facts.
+Your job: FRESHLY WRITE a resume that tells a completely unique, company-specific story.
+This resume must feel like it was written by a human who spent 2 hours studying this specific company.
 
-== FRESH WRITING MODE RULES ==
-1. Do NOT copy bullets word-for-word from the base resume. REWRITE with new phrasing.
-2. Mirror the JD's exact phrases (from jd_mirror_phrases and company_intelligence.jd_mirror_phrases) naturally.
-3. Open bullets with the company's culture DNA (from company_intelligence.culture_dna).
-4. For technical bullets: include an architecture RATIONALE — WHY that technology was chosen.
-5. For impact bullets: frame the outcome in business terms (saved hours, reduced latency, improved uptime).
-6. First bullet of every role MUST use at least one of the JD's must-have skills.
-7. Every single JD must-have keyword MUST appear at least once across all bullets and summary combined.
-8. PERFECT FIT POSITIONING: Write as if this candidate is the ONLY person qualified for this role.
-   Every bullet should answer the unspoken recruiter question: "Can they actually do what we need?"
-9. PROOF OVER CLAIMS: Replace every vague claim with a metric. "improved performance" → "reduced p99 latency from 850ms to 94ms".
-10. TECHNICAL DEPTH: At least one bullet per role must show WHY an architectural decision was made, not just WHAT was done.
+== CRITICAL ANTI-TEMPLATE RULES (VIOLATIONS WILL BE REJECTED) ==
+1. DO NOT start the summary with "[Job Title] with 4+ years of hands-on experience". That is a template. Start from a DIFFERENT angle each time.
+2. DO NOT write the same opening sentence structure as any other resume. The narrative_strategy.summary_opening_angle tells you which angle to lead with.
+3. DO NOT use the same work experience bullets as a generic resume. Select and reframe bullets based on narrative_strategy.top_bullets_for_primary_role.
+4. DO NOT mention the company name anywhere in the resume body. Domain/industry language only.
+5. DO NOT copy bullets word-for-word from the base facts. REFRAME with the company's exact language.
+
+== SUMMARY WRITING GUIDE ==
+The professional summary MUST be driven by narrative_strategy.summary_opening_angle:
+
+- "performance": Lead with the most impressive latency/throughput metric. Start with: "Performance-obsessed [job title] who reduced..."
+  Example: "Performance-obsessed .NET backend engineer who profiled 30+ enterprise APIs from 850ms to sub-100ms p99 — delivering the kind of latency that production SLAs demand."
+
+- "cloud": Lead with Azure architecture. Start with: "Cloud-native [job title] who..."
+  Example: "Cloud-native .NET engineer who architected 12+ microservices on Azure App Services with 99.98% uptime — an AZ-204 certified practitioner who ships production-grade cloud systems."
+
+- "ai_ml": Lead with AI/ML delivery. Start with: "AI-driven [job title] who..."
+  Example: "AI-driven .NET engineer who shipped Azure OpenAI GPT-4 semantic search into production — reducing document lookup from 2.3s to sub-200ms across 1,000+ weekly submissions."
+
+- "fintech_domain": Lead with the financial domain outcome. Start with: "[Job title] with a track record in financial platforms..."
+  Example: "Backend engineer with a proven track record in high-availability financial procurement platforms — engineered 12+ microservices achieving 3x throughput and 99.98% SLA for a live B2B procurement system."
+
+- "security": Lead with security depth. Start with: "Security-minded [job title] who..."
+  Example: "Security-minded .NET engineer who hardened 30+ enterprise APIs with OAuth2+JWT, AES-256 document encryption, and mTLS certificate rotation across production financial systems."
+
+- "government": Lead with compliance track record. Start with: "[Job title] with federal compliance experience..."
+  Example: "Full-stack .NET engineer with hands-on US federal platform delivery — built FIPS-compliant, Section 508-accessible systems across a multi-agency government compact used nationwide."
+
+- "leadership": Lead with the mentoring/team impact. Start with: "Technical lead and [job title] who..."
+  Example: "Engineering lead who mentored 4 junior engineers, introduced architectural decision records, and cut post-deployment defects by 40% — while shipping 12+ microservices into production."
+
+Sentence 2: Reference the achievement listed in narrative_strategy.primary_achievement, using this company's domain language and the JD's mirror phrases.
+Sentence 3: Address the JD's single biggest technical requirement. Mention the specific technology from domain_priority_skills.
+Sentence 4: If is_team_lead_role: mention mentoring + ADRs. If IC role: mention AZ-204 + production system delivery.
+Sentence 5: Use the EXACT summary_closing_line from JD Intelligence verbatim. Do NOT rewrite it.
+
+== WORK EXPERIENCE BULLET RULES ==
+Bullet COUNT per role comes from narrative_strategy.bullet_allocation. Respect it exactly.
+
+For the PRIMARY ROLE (first in narrative_strategy.role_emphasis_order):
+- The first 3 bullets MUST be the achievements listed in narrative_strategy.top_bullets_for_primary_role (in that order)
+- Reframe each achievement using the company's domain language and JD mirror phrases
+- DO NOT suppress achievements listed in narrative_strategy.suppress_achievements — simply de-emphasize them (put them last or omit if bullet count is tight)
+
+Bullet rewriting rules:
+- Use domain_verbs from narrative_strategy as the opening verbs
+- Frame outcomes in THIS company's business context (e.g. for fintech: "financial throughput", for SaaS: "platform reliability")
+- At least 1 bullet per role must show WHY an architectural decision was made (trade-off rationale)
+- PROOF OVER CLAIMS: every bullet needs a number, %, or concrete scale
+- Tense: LTIMindtree (current) = present tense. All others = past tense.
+
+== PROJECT ORDERING ==
+Order projects exactly as listed in narrative_strategy.project_order.
 
 CRITICAL: You must strictly adhere to the Candidate Base Facts below. Never fabricate, invent, or extrapolate any experience, technology, or metric. All rewrites must be 100% grounded in these base facts.
 
@@ -208,7 +263,7 @@ CANDIDATE BASE FACTS (Grounded Database)
    * Role 4: Kasadara Technology Solutions (Jul 2022 – Jun 2024)
      - Core Title: Software Engineer (can tailor to "Software Engineer", ".NET Developer", "Backend Developer")
      - US Gov SaaS Client context: US Government & SaaS Enterprise Platforms
-     - Allowed Technologies: C#, .NET Framework 4.x, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
+     - Allowed Technologies: C#, .NET Framework, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
      - Grounded Achievements/Metrics to reframe:
        * Migrated legacy modules from .NET Framework to .NET Core, achieving a 40% memory usage reduction.
        * Developed high-throughput background processing services in Go, doubling processing speeds.
@@ -220,7 +275,7 @@ CANDIDATE BASE FACTS (Grounded Database)
      * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services. (Financial procurement microservices platform with 3x throughput and 99.98% uptime SLA).
      * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509. (Secure enterprise document vault with AES-256 encryption, OAuth2/OIDC, and mTLS certificate rotation).
      * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache. (Centralized enterprise SSO with PKCE code flow, JWT caching, and mTLS service-to-service security).
-     * NEICE: .NET Framework 4.x • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508. (US National Electronic Interstate Compact Enterprise — FIPS-compliant multi-agency federal platform with WCF SOAP services).
+     * NEICE: .NET Framework • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508. (US National Electronic Interstate Compact Enterprise — FIPS-compliant multi-agency federal platform with WCF SOAP services).
 
 4. CERTIFICATIONS:
    - Microsoft Azure Developer Associate (AZ-204) | Microsoft | March 18, 2024
@@ -236,23 +291,26 @@ DYNAMIC TAILORING RULES
 1. HEADER:
    - Set "job_title_headline" to the target job title (Title Case, no location).
    - Set "location_line" based on the relocation/country context in JD Intelligence.
-2. PROFESSIONAL SUMMARY (EXACTLY 5 sentences — make it impossible to reject):
-   - This is the MOST IMPORTANT section. Write it as if Siva is speaking directly to this company's hiring manager.
-   - Sentence 1: "[EXACT job_title_headline] with 4+ years of hands-on experience delivering [company's primary domain — e.g. 'enterprise tax automation', 'cloud-native procurement platforms', 'identity security systems'] using [top 2-3 JD must-have skills]."
-   - Sentence 2: Mirror the company's domain language. Use exact domain_power_words from JD Intelligence. Reference the most impressive metric that fits the JD's priorities.
-     Example for fintech: "At DSSI Solutions, engineered 12+ procurement microservices achieving 99.98% uptime SLA and 3x message throughput — matching {company}'s expectation for high-availability financial platforms."
-     Example for AI: "At LTIMindtree, designed an Azure OpenAI + pgvector semantic search engine delivering sub-200ms document lookups across 1,000+ weekly tax submissions for Deloitte."
-   - Sentence 3: Explicitly address the JD's biggest technical requirement (not generic). If JD needs cloud → mention specific Azure service. If JD needs security → mention OAuth2/OIDC or FIPS. If JD needs microservices → reference CQRS/Clean Architecture. Use at least one phrase from jd_mirror_phrases.
-   - Sentence 4: If is_team_lead_role → "Mentored 4–6 engineers, introduced ADRs, and reduced onboarding time from 4 weeks to 10 days — ready to bring that technical leadership to [company]."
-     If IC role → "AZ-204 certified with a proven track record of building production-grade systems that improve, design, code and test software for international team environments."
+2. PROFESSIONAL SUMMARY (EXACTLY 5 sentences — unique per company, never from a template):
+   - This is the MOST IMPORTANT section. Choose the opening angle from narrative_strategy.summary_opening_angle.
+   - DO NOT start with "[Title] with 4+ years of hands-on experience...". That is a template and is FORBIDDEN.
+   - Follow the SUMMARY WRITING GUIDE defined above. The opening must match the summary_opening_angle.
+   - Sentence 2: Feature the primary_achievement from narrative_strategy. Use this company's domain language and jd_mirror_phrases.
+   - Sentence 3: Address the JD's biggest technical requirement specifically. Use at least one phrase from jd_mirror_phrases.
+   - Sentence 4: If is_team_lead_role → "Mentored 4–6 engineers, introduced ADRs, and reduced onboarding time from 4 weeks to 10 days — ready to bring that same technical leadership to high-performing engineering teams."
+     If IC role → "AZ-204 certified with a proven track record of building production-grade systems that align with demanding enterprise engineering environments."
    - Sentence 5: Use the EXACT summary_closing_line from JD Intelligence verbatim. Do NOT rewrite it.
 3. SKILLS CATEGORIES:
-   - Return skills grouped under Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology. Place matching technologies first in each category.
+   - Return skills grouped under Backend, Frontend, Cloud, Databases, DevOps, Security, Testing, Methodology. Place matching technologies first.
 4. WORK EXPERIENCE:
-   - Return a list of dicts. For each company, tailor:
-     * "role_title": Incorporate relevant JD tech keywords. e.g. "Senior .NET Developer" instead of plain "Senior Software Engineer" if .NET is the primary keyword, but keep Deloitte client context.
-     * "tech_stack_line": Group technologies actually used in that role. Highlight ones matching the JD.
-     * "bullets": Write metrics-driven bullets matching the allowed metrics for that role. First 2 bullets of LTIMindtree must prioritize must-have skills from JD. Bullet count per role for 3-PAGE RESUME: LTIMindtree (6 bullets), DSSI (5 bullets), Nexa (4 bullets), Kasadara (3 bullets).
+   - Return roles in the order from narrative_strategy.role_emphasis_order.
+   - For each company, tailor:
+     * "role_title": Use JD-relevant title variant listed in base facts. Keep Deloitte client context for LTIMindtree.
+     * "tech_stack_line": Technologies actually used in that role, JD-matching ones listed first.
+     * "bullets": Use EXACTLY the count from narrative_strategy.bullet_allocation for each company.
+       For the primary role (first in role_emphasis_order), the FIRST 3 bullets MUST be the achievements in top_bullets_for_primary_role, reframed in this company's domain language.
+       Open each bullet with one of the domain_verbs from narrative_strategy.
+       Every bullet needs a number, %, or concrete scale.
 5. PROJECTS — ALL 5 PROJECTS, in order of JD domain relevance (most relevant FIRST):
    Each project gets EXACTLY 3 bullets. Write them in this STRICT order:
    - BULLET 1 — ARCHITECTURE RATIONALE (WHY): Explain WHY those specific technology choices were made as deliberate trade-offs.
@@ -261,9 +319,11 @@ DYNAMIC TAILORING RULES
    - BULLET 2 — IMPACT (WHAT + METRIC): State the measurable outcome using ONLY the allowed metrics from the project's grounded data.
      Template: "[Action verb + what was built] — [specific metric from allowed list] [in context that maps to this JD's domain]."
      Examples: 'reducing manual review time by 60% across 1,000+ weekly submissions', '3x message throughput at 99.98% uptime SLA', 'sub-100ms p99 latency on 30+ enterprise API endpoints'.
-   - BULLET 3 — JD ALIGNMENT (HOW it maps to THIS specific company/role): Directly connect the project to what THIS company needs.
-     Template: "Directly applicable to {company}'s [JD requirement — e.g. 'cloud-native microservices platform', 'federal compliance mandate', 'identity security layer'] — [what the candidate can bring from this project]."
-     This bullet MUST reference the company name and one specific JD requirement. Make it clear this candidate has already solved the exact problem the company is hiring for.
+   - BULLET 3 — JD ALIGNMENT (HOW it maps to THIS specific role/domain): Directly connect the project to what this type of role needs.
+     Template: "Directly applicable to [domain/industry — e.g. 'cloud-native microservices platforms', 'federal compliance environments', 'identity security layers'] — [what the candidate can bring from this project to this kind of role]."
+     CRITICAL: DO NOT mention the company name in any project bullet. The resume is a reusable document. Reference the domain/industry, not the specific company.
+     Good example: "Directly applicable to high-availability procurement platforms requiring 12-factor app design — delivering the same event-driven CQRS patterns in cloud-native enterprise environments."
+     BAD example: "Directly applicable to QuilinX's cloud-native microservices platform" ← NEVER put company name in resume.
 6. CERTIFICATIONS:
    - List the 2-3 certifications relevant to this JD (e.g., adding AZ-204 highlight or NEICE as appropriate).
 
@@ -310,7 +370,7 @@ Return ONLY a JSON block structured as:
     },
     {
       "name": "NEICE",
-      "tech_stack": ".NET Framework 4.x · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
+      "tech_stack": ".NET Framework · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
       "bullets": ["...", "...", "..."]
     }
   ],
@@ -387,7 +447,7 @@ CANDIDATE BASE FACTS (Grounded Database)
    * Role 4: Kasadara Technology Solutions (Jul 2022 – Jun 2024)
      - Core Title: Software Engineer (can tailor to "Software Engineer", ".NET Developer", "Backend Developer")
      - US Gov SaaS Client context: US Government & SaaS Enterprise Platforms
-     - Allowed Technologies: C#, .NET Framework 4.x, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
+     - Allowed Technologies: C#, .NET Framework, ASP.NET MVC, ADO.NET, EF Core, Go, WCF, SQL Server, Agile, FIPS Compliance, Section 508, WCAG
      - Grounded Achievements/Metrics to reframe:
        * Migrated legacy modules from .NET Framework to .NET Core, achieving a 40% memory usage reduction.
        * Developed high-throughput background processing services in Go, doubling processing speeds.
@@ -399,7 +459,7 @@ CANDIDATE BASE FACTS (Grounded Database)
      * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services.
      * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509.
      * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache.
-     * NEICE: .NET Framework 4.x • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508.
+     * NEICE: .NET Framework • WCF • SQL Server • FIPS Compliance • RBAC • ADO.NET • Section 508.
 
 4. CERTIFICATIONS:
    - Microsoft Azure Developer Associate (AZ-204) | Microsoft | March 18, 2024
@@ -412,19 +472,22 @@ CANDIDATE BASE FACTS (Grounded Database)
 =========================================
 
 Check and enforce:
-1. Header Location Line: Match is_international/relocation requirements ( Chennai, India | ... ).
+1. Header Location Line: Match is_international/relocation requirements (Chennai, India | ...).
 2. Job Title Headline: Must be Title Case, with no locations or parentheticals.
-3. Summary 5-Sentence Formula:
-   - Starts with the exact job_title_headline (no pronouns, no cities).
-   - Ends with the exact summary_closing_line from JD Intelligence.
+3. Summary Anti-Template Check (CRITICAL):
+   - REJECT the summary if it starts with "[Job Title] with 4+ years of hands-on experience" — that is a forbidden template opening.
+   - REJECT if the summary does not clearly reflect the narrative_strategy.summary_opening_angle provided.
+   - The summary MUST end with the exact summary_closing_line from JD Intelligence verbatim.
    - Punctuation clean: no double periods, no orphaned parentheses.
+   - NO company name anywhere in the summary.
 4. Work Experience:
    - Dynamic role titles and tech stack lines must remain factually grounded (only technologies used in that company are allowed).
-   - Mentoring/team lead bullet must be position 1 in LTIMindtree if lead role is true.
-   - First 2 bullets of LTIMindtree must use MUST-HAVE skills.
-   - Experience bullet limits for 3-PAGE RESUME: LTIMindtree (6), DSSI (5), Nexa (4), Kasadara (3).
-5. Projects: ALL 5 projects are absolutely required. You must NOT drop any projects. Each must have exactly 3 bullets (architecture rationale, impact metric, JD alignment). Ordered by JD domain relevance.
-6. Certifications: Dynamic certs list has 2-3 items matching JD.
+   - Bullet count per role MUST match the bullet_allocation from narrative_strategy (if provided).
+   - If bullet count is wrong, trim or add bullets to match exactly.
+   - First 2 bullets of the primary role must use JD must-have skills.
+   - NO company name in any bullet.
+5. Projects: ALL 5 projects are absolutely required. You must NOT drop any projects. Each must have exactly 3 bullets. Ordered per narrative_strategy.project_order.
+6. Certifications: 2-3 items matching JD.
 
 If any rule is violated, rewrite that section.
 Return the final corrected full JSON matching this schema:
@@ -512,6 +575,8 @@ def parse_json_safely(raw: str) -> dict:
     # Repair unquoted items in arrays, e.g. ["Docker", GitHub Actions, Git Flow] -> ["Docker", "GitHub Actions", "Git Flow"]
     def fix_array(match):
         arr_content = match.group(1).strip()
+        if any(c in arr_content for c in ['{', '}', '[', ']']):
+            return match.group(0)
         elements = []
         parts = re.findall(r'("[^"\\]*(?:\\.[^"\\]*)*"|[^,]+)', arr_content)
         for p in parts:
@@ -671,26 +736,31 @@ def convert_docx_to_pdf_win32(docx_path: str) -> str:
         pythoncom.CoUninitialize()
 
 def restore_dropped_projects(current_json: dict, reference_projects: list) -> dict:
+    from bot.resume_builder_core import get_canonical_project_name
     if not isinstance(current_json, dict):
         current_json = {}
     current_projects = current_json.get("projects", [])
     if not isinstance(current_projects, list):
         current_projects = []
     
-    if not reference_projects:
+    if not isinstance(reference_projects, list) or not reference_projects:
         return current_json
         
-    verified_names = {p.get("name", "").lower().strip() for p in current_projects if p.get("name")}
+    verified_names = {p.get("name", "").lower().strip() for p in current_projects if isinstance(p, dict) and p.get("name")}
     
     restored = list(current_projects)
     for ref_proj in reference_projects:
+        if not isinstance(ref_proj, dict):
+            continue
         ref_name = ref_proj.get("name", "").lower().strip()
         if not ref_name:
             continue
-        # Check if project is already present (substring match)
+        # Check if project is already present by mapping both to their canonical name
         found = False
+        ref_canon = get_canonical_project_name(ref_name).lower().strip()
         for vn in verified_names:
-            if ref_name[:15] in vn or vn in ref_name[:15]:
+            vn_canon = get_canonical_project_name(vn).lower().strip()
+            if ref_canon == vn_canon:
                 found = True
                 break
         if not found:
@@ -699,6 +769,8 @@ def restore_dropped_projects(current_json: dict, reference_projects: list) -> di
             
     # Ensure all projects in the list have exactly 3 bullets (architecture rationale, impact, JD alignment)
     for p in restored:
+        if not isinstance(p, dict):
+            continue
         bullets = p.get("bullets", [])
         if not isinstance(bullets, list):
             bullets = [bullets] if bullets else []
@@ -768,7 +840,7 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
                 "jd_context": {
                     "is_experience_matching": False,
                     "location_line": "Chennai, India  |  Open to Remote/Hybrid",
-                    "summary_closing_line": f"Bringing scalable .NET and cloud expertise to {company}."
+                    "summary_closing_line": "Bringing scalable .NET and cloud expertise to high-impact enterprise engineering teams."
                 }
             },
             "ats_report": {
@@ -828,7 +900,7 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
             "requires_relocation": False, "is_international": False,
             "company_domain": "technology", "is_team_lead_role": False,
             "location_line": "Chennai, India  |  Open to Remote/Hybrid",
-            "summary_closing_line": f"Bringing scalable .NET and cloud expertise to {company} to deliver high-quality enterprise software.",
+            "summary_closing_line": "Bringing scalable .NET and cloud expertise to deliver high-quality enterprise software in fast-paced environments.",
             "jd_mirror_phrases": [], "domain_power_words": [], "domain_priority_skills": [],
             "cert_highlight": "AZ-204", "bullet_style": "achievement"
         }
@@ -866,12 +938,42 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
         skills_ranked = {"skills_by_category": {}}
         print(f"    [Reranker] Failed, using default categories: {e}")
 
-    # ─── STEP 3: TAILOR AGENT (FRESH WRITING MODE) ───
-    print("[JCode Coordinator] Launching Tailor Agent (Fresh Writing Mode)...")
+    # ─── STEP 2.5: NARRATIVE STRATEGY AGENT ───
+    print("[JCode Coordinator] Launching Narrative Strategy Agent...")
     t0 = time.time()
     try:
-        tailor_prompt = f"""FRESH WRITE the candidate resume for this specific company and role.
+        narrative_strategy = build_narrative_strategy(
+            company=company,
+            job_title=job_title,
+            jd_text=job_description,
+            company_intelligence=company_intelligence,
+            jd_context=jd_context,
+            parse_json_safely=parse_json_safely
+        )
+        log_telemetry("NarrativeStrategyAgent", time.time() - t0, "success")
+    except Exception as e:
+        log_telemetry("NarrativeStrategyAgent", time.time() - t0, f"failed: {e}")
+        narrative_strategy = {
+            "candidate_angle": "Cloud-native .NET engineer with 4+ years delivering enterprise platforms",
+            "summary_opening_angle": "performance",
+            "role_emphasis_order": ["LTIMindtree", "DSSI Solutions", "Nexa Office InfoSystems", "Kasadara Technology Solutions"],
+            "bullet_allocation": {"LTIMindtree": 6, "DSSI Solutions": 5, "Nexa Office InfoSystems": 4, "Kasadara Technology Solutions": 3},
+            "top_bullets_for_primary_role": ["A4", "A7", "A5"],
+            "suppress_achievements": [],
+            "domain_verbs": ["Engineered", "Architected", "Optimized", "Deployed", "Secured"],
+            "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+        }
+        print(f"    [NarrativeStrategy] Failed (using defaults): {e}")
 
+    # ─── STEP 3: TAILOR AGENT (DEEP PERSONALIZATION MODE) ───
+    print("[JCode Coordinator] Launching Tailor Agent (Deep Personalization Mode)...")
+    t0 = time.time()
+    try:
+        tailor_prompt = f"""DEEP PERSONALIZATION: Write the candidate resume for this specific company and role.
+
+<narrative_strategy>
+{json.dumps(narrative_strategy, indent=2)}
+</narrative_strategy>
 <company_intelligence>
 {json.dumps(company_intelligence, indent=2)}
 </company_intelligence>
@@ -886,13 +988,19 @@ Analyzer Findings:
 Reranked Skills:
 {json.dumps(skills_ranked)}
 
-FRESH WRITING INSTRUCTIONS:
-- Mirror these JD phrases naturally in bullets: {company_intelligence.get('jd_mirror_phrases', [])}
-- Lead with this narrative angle: {company_intelligence.get('resume_narrative_angle', '')}
-- Company culture DNA to embed: {company_intelligence.get('culture_dna', [])}
-- Top differentiators to highlight: {company_intelligence.get('top_3_differentiators', [])}
+DEEP PERSONALIZATION INSTRUCTIONS:
+- Use narrative_strategy.summary_opening_angle to choose the UNIQUE summary opening (NOT template).
+- Candidate angle to convey: {narrative_strategy.get('candidate_angle', '')}
+- Primary achievement to feature: {narrative_strategy.get('primary_achievement', '')} (from base facts)
+- Top role order: {narrative_strategy.get('role_emphasis_order', [])}
+- Exact bullet counts: {narrative_strategy.get('bullet_allocation', {})}
+- First 3 bullets of primary role MUST be: {narrative_strategy.get('top_bullets_for_primary_role', [])}
+- Domain verbs to open bullets with: {narrative_strategy.get('domain_verbs', [])}
+- JD mirror phrases to embed naturally: {company_intelligence.get('jd_mirror_phrases', [])}
+- Company culture DNA: {company_intelligence.get('culture_dna', [])}
+- Project order: {narrative_strategy.get('project_order', [])}
 
-IMPORTANT: The summary Line 5 MUST be exactly: "{jd_context.get('summary_closing_line', '')}"
+IMPORTANT: The summary last sentence MUST be exactly: "{jd_context.get('summary_closing_line', '')}"
 IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('domain_priority_skills', [])}
 """
         raw_tailored = ai_complete(TAILOR_SYSTEM, tailor_prompt, task="tailor", max_tokens=4500)
@@ -900,48 +1008,49 @@ IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('dom
         draft["skills_by_category"] = skills_ranked.get("skills_by_category", {})
         draft["jd_context"] = jd_context
         draft["company_intelligence"] = company_intelligence
+        draft["narrative_strategy"] = narrative_strategy
         log_telemetry("TailorAgent", time.time() - t0, "success")
-        print("    [Tailor] Fresh resume draft generated.")
+        print("    [Tailor] Deep personalized resume draft generated.")
     except Exception as e:
         log_telemetry("TailorAgent", time.time() - t0, f"failed: {e}")
-        draft = {"jd_context": jd_context, "company_intelligence": company_intelligence}
+        draft = {"jd_context": jd_context, "company_intelligence": company_intelligence, "narrative_strategy": narrative_strategy}
         print(f"    [Tailor] Failed: {e}")
 
     # ─── STEP 3.5: PROJECT EXPANDER AGENT ───
     print("[JCode Coordinator] Launching Project Expander Agent...")
     t0 = time.time()
     try:
-        # Include ALL 5 projects — sort by JD domain relevance (most relevant first)
-        domain = jd_context.get("company_domain", "technology")
-        domain_lower = domain.lower()
-        # Full ordered list — always include all 5
-        selected_projects = [
-            "AI Tax Document Analyser",
-            "e-ProcureZen",
-            "Nexa Vault",
-            "SSO Application",
-            "NEICE",
-        ]
-        # Domain-based priority reordering — move most relevant to front
-        project_priority_front = {
-            "ai": "AI Tax Document Analyser",
-            "fintech": "e-ProcureZen",
-            "procurement": "e-ProcureZen",
-            "government": "NEICE",
-            "federal": "NEICE",
-            "document": "Nexa Vault",
-            "security": "SSO Application",
-            "banking": "e-ProcureZen",
-            "tax": "AI Tax Document Analyser",
-            "healthcare": "AI Tax Document Analyser",
-            "identity": "SSO Application",
-        }
-        for key, priority_proj in project_priority_front.items():
-            if key in domain_lower and priority_proj in selected_projects:
-                selected_projects.remove(priority_proj)
-                selected_projects.insert(0, priority_proj)
-                break
+        # Use narrative_strategy.project_order (AI-chosen by domain relevance)
+        # Fall back to the domain-keyword heuristic if not available
+        strategy_project_order = narrative_strategy.get("project_order", [])
+        all_projects = ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
 
+        if strategy_project_order and len(strategy_project_order) == 5:
+            # Use AI-chosen order, validate all 5 are present
+            selected_projects = strategy_project_order
+            # Ensure all 5 canonical names are present (in case AI renamed one)
+            for p in all_projects:
+                if not any(p.lower()[:10] in sp.lower() for sp in selected_projects):
+                    selected_projects.append(p)
+        else:
+            # Fallback: hardcoded domain-keyword heuristic
+            selected_projects = list(all_projects)
+            domain_lower = jd_context.get("company_domain", "").lower()
+            project_priority_front = {
+                "ai": "AI Tax Document Analyser", "fintech": "e-ProcureZen",
+                "procurement": "e-ProcureZen", "government": "NEICE",
+                "federal": "NEICE", "document": "Nexa Vault",
+                "security": "SSO Application", "banking": "e-ProcureZen",
+                "tax": "AI Tax Document Analyser", "healthcare": "AI Tax Document Analyser",
+                "identity": "SSO Application",
+            }
+            for key, priority_proj in project_priority_front.items():
+                if key in domain_lower and priority_proj in selected_projects:
+                    selected_projects.remove(priority_proj)
+                    selected_projects.insert(0, priority_proj)
+                    break
+
+        print(f"    [ProjectExpander] Project order: {selected_projects}")
         expanded_projs = expand_projects(
             project_names=selected_projects,
             jd_context=jd_context,
@@ -993,23 +1102,26 @@ IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('dom
     print("[JCode Coordinator] Launching Verifier Agent (Final Audit)...")
     t0 = time.time()
     try:
-        verify_prompt = f"""Audit and correct this resume draft using JD Intelligence:
+        verify_prompt = f"""Audit and correct this resume draft. Enforce anti-template rules and narrative strategy.
+
+Narrative Strategy (CRITICAL — the summary MUST reflect this):
+{json.dumps(narrative_strategy, indent=2)}
 JD Intelligence:
 {json.dumps(jd_context, indent=2)}
 Company Intelligence:
 {json.dumps(company_intelligence, indent=2)}
 Job Title: {job_title}
-Company: {company}
 Draft Summary: {draft.get('professional_summary')}
 Draft Experience: {json.dumps(draft.get('work_experience'))}
 Draft Projects: {json.dumps(draft.get('projects'))}
-JD:
+JD (first 3000 chars):
 {job_description[:3000]}
 """
         raw_verified = ai_complete(VERIFIER_SYSTEM, verify_prompt, task="verify", max_tokens=4000)
         final_tailored = parse_json_safely(raw_verified)
         final_tailored["jd_context"] = jd_context
         final_tailored["company_intelligence"] = company_intelligence
+        final_tailored["narrative_strategy"] = narrative_strategy
         log_telemetry("VerifierAgent", time.time() - t0, "success")
         print("    [Verifier] Final resume audit completed.")
     except Exception as e:
@@ -1022,6 +1134,7 @@ JD:
         final_tailored = {}
     final_tailored["jd_context"] = jd_context
     final_tailored["company_intelligence"] = company_intelligence
+    final_tailored["narrative_strategy"] = narrative_strategy
     # Restore any projects dropped by Verifier Agent
     final_tailored = restore_dropped_projects(final_tailored, draft.get("projects", []))
 
@@ -1147,8 +1260,14 @@ JD:
     cleaned_title = re.sub(r'[\s\-,\/\|\(\)]+', '_', job_title).strip('_')
     safe_company = re.sub(r'[^\w\-]', '_', company)[:60]
     safe_role    = cleaned_title[:60]
-    filename = f"Siva_Shankar_{safe_role}_{safe_company}_Resume.docx"
-    out_path = os.path.join(TAILORED_TODAY, filename)
+    
+    # Save in a company-specific folder to prevent overwrites,
+    # keeping the actual uploaded filename clean (no company name in the file name).
+    company_dir = os.path.join(TAILORED_TODAY, safe_company)
+    os.makedirs(company_dir, exist_ok=True)
+    
+    filename = f"Siva_Shankar_{safe_role}_Resume.docx"
+    out_path = os.path.join(company_dir, filename)
     
     try:
         build_tailored_resume_from_json(final_tailored, job_title, company, out_path, job_description)
@@ -1176,8 +1295,8 @@ JD:
     t0 = time.time()
     cover_letter_path = ""
     try:
-        cl_filename = f"Siva_Shankar_{safe_role}_{safe_company}_CoverLetter.docx"
-        cl_path = os.path.join(TAILORED_TODAY, "Cover Letter", cl_filename)
+        cl_filename = f"Siva_Shankar_{safe_role}_CoverLetter.docx"
+        cl_path = os.path.join(company_dir, cl_filename)
         cover_letter_path = generate_cover_letter(
             job_title=job_title,
             company=company,
@@ -1193,27 +1312,7 @@ JD:
         log_telemetry("CoverLetterAgent", time.time() - t0, f"failed: {e}")
         print(f"    [CoverLetter] Failed: {e}")
 
-    # ─── STEP 10: INTERVIEW PREP SHEET ────────────────────────────────────────
-    print("[JCode Coordinator] Launching Interview Prep Generator...")
-    t0 = time.time()
-    interview_prep_path = ""
-    try:
-        ip_filename = f"Siva_Shankar_{safe_role}_{safe_company}_InterviewPrep.txt"
-        ip_path = os.path.join(TAILORED_TODAY, "Interview Prep", ip_filename)
-        interview_prep_path = generate_interview_prep(
-            job_title=job_title,
-            company=company,
-            job_description=job_description,
-            jd_context=jd_context,
-            company_intelligence=company_intelligence,
-            analysis=analysis,
-            output_path=ip_path,
-            parse_json_safely=parse_json_safely
-        )
-        log_telemetry("InterviewPrepAgent", time.time() - t0, "success")
-    except Exception as e:
-        log_telemetry("InterviewPrepAgent", time.time() - t0, f"failed: {e}")
-        print(f"    [InterviewPrep] Failed: {e}")
+    # Interview Prep removed — only Resume + Cover Letter are produced
 
     # ─── FINAL: PACKAGE SUMMARY ──────────────────────────────────────────────
     ats_score = final_tailored.get("coverage_report", {}).get("final_ats_score",
@@ -1223,14 +1322,12 @@ JD:
     print(f"  ATS Score:      {ats_score}%")
     print(f"  Resume:         {os.path.basename(out_path)}")
     print(f"  Cover Letter:   {os.path.basename(cover_letter_path) if cover_letter_path else 'N/A'}")
-    print(f"  Interview Prep: {os.path.basename(interview_prep_path) if interview_prep_path else 'N/A'}")
     print(f"{'='*60}\n")
 
     res = {
         "resume_path":        out_path,
         "resume_pdf_path":    out_path.replace(".docx", ".pdf") if out_path else "",
         "cover_letter_path":  cover_letter_path,
-        "interview_prep_path": interview_prep_path,
         "match_score":        ats_score,
         "tailored":           final_tailored
     }

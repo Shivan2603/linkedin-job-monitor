@@ -76,6 +76,34 @@ LIGHT_GRAY = RGBColor(0x77, 0x77, 0x77)   # #777777 — lighter gray for locatio
 RULE_COLOR = "0D2137"                      # XML hex for border elements (deep navy)
 
 
+def strip_markdown(text: str) -> str:
+    """Strip all markdown formatting that the AI may inject into resume text.
+    E.g. **bold**, *italic*, `code`, ##heading, ~~strike~~, [link](url), > quote.
+    This is essential because LLMs often return markdown-formatted text even
+    when instructed not to.  ATS parsers must see clean plain text.
+    """
+    if not text:
+        return text
+    # Remove bold/italic markers (**, __, *, _)
+    text = re.sub(r'\*{1,3}(.*?)\*{1,3}', r'\1', text)
+    text = re.sub(r'_{1,3}(.*?)_{1,3}', r'\1', text)
+    # Remove inline code backticks
+    text = re.sub(r'`{1,3}(.*?)`{1,3}', r'\1', text)
+    # Remove ATX headings (# Heading)
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    # Remove strikethrough
+    text = re.sub(r'~~(.*?)~~', r'\1', text)
+    # Remove markdown links [text](url)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    # Remove blockquote markers
+    text = re.sub(r'^>+\s?', '', text, flags=re.MULTILINE)
+    # Remove leading - or * list markers
+    text = re.sub(r'^[\-\*]\s+', '', text, flags=re.MULTILINE)
+    # Collapse multiple spaces
+    text = re.sub(r'  +', ' ', text)
+    return text.strip()
+
+
 def strip_emojis(text: str) -> str:
     """[F2] Remove ALL emojis and emoji-adjacent symbols from text."""
     if not text:
@@ -85,6 +113,13 @@ def strip_emojis(text: str) -> str:
     for sym in ["▸", "★", "◆", "◇", "►", "▷", "❖", "✦", "✧", "⬥", "⬦"]:
         text = text.replace(sym, "")
     return text.strip()
+
+
+def clean(text: str) -> str:
+    """Master text cleaner: strips markdown AND emojis. Use on ALL AI-generated text."""
+    if not text:
+        return text
+    return strip_emojis(strip_markdown(text))
 
 
 def enforce_paas_phrase(cloud_skills: List[str]) -> List[str]:
@@ -165,6 +200,86 @@ def clean_text_punctuation(text: str) -> str:
     return text.strip()
 
 
+def sanitize_ai_placeholders(text: str, company: str) -> str:
+    """Replace any {placeholder} template literals the AI forgot to fill.
+    The LLM sometimes returns '{the company}', '{company}', '{firm}' etc.
+    instead of the real company name — this is a critical quality bug.
+    """
+    if not text or not company:
+        return text
+    # Replace all common company placeholder variants
+    placeholders = [
+        r'\{the\s+company\}',
+        r'\{company\}',
+        r'\{firm\}',
+        r'\{organization\}',
+        r'\{organisation\}',
+        r'\{employer\}',
+        r'\{client\}',
+        r'\{target\s+company\}',
+        r'\[the\s+company\]',
+        r'\[company\]',
+        r'\[company\s+name\]',
+        r'\[firm\]',
+        r'<company>',
+        r'<the company>',
+        r'YOUR_COMPANY',
+        r'COMPANY_NAME',
+    ]
+    for pat in placeholders:
+        text = re.sub(pat, company, text, flags=re.IGNORECASE)
+    # Also fix stale 'performance benchmark {the company} demands' style injections
+    text = re.sub(r'benchmark\s+\{[^}]*\}\s+demands', f'benchmark {company} demands', text, flags=re.IGNORECASE)
+    if any(p.strip('\\{}[]<>') in text.lower() for p in ['company', 'firm', 'employer']):
+        # Catch any remaining curly/square bracket placeholders generically
+        text = re.sub(r'[\{\[](the )?(?:company|firm|employer|organisation|organization|client)[\}\]]', company, text, flags=re.IGNORECASE)
+    return text
+
+
+def deduplicate_closing_lines(summary: str, company: str) -> str:
+    """Remove duplicate closing sentences. The AI sometimes appends multiple
+    'Bringing scalable .NET expertise to X' or 'Experienced delivering...'
+    sentences when the summary already contains them.
+    """
+    # Split into sentences
+    sentences = re.split(r'(?<=[.!?])\s+', summary.strip())
+    seen = set()
+    deduped = []
+    
+    # Check if we have any company-specific closing sentence
+    has_company_sentence = any(company.lower() in s.lower() for s in sentences)
+    
+    for s in sentences:
+        s_clean = s.strip()
+        if not s_clean:
+            continue
+        s_norm = re.sub(r'\s+', ' ', s_clean.lower())
+        if s_norm in seen:
+            print(f"  [GUARD] Removed duplicate closing sentence: '{s_clean[:60]}...'")
+            continue
+            
+        # Semantic redundancy check: If we have the company-specific closing sentence,
+        # skip the generic "Bringing scalable .NET and cloud expertise..." sentence.
+        if has_company_sentence and company.lower() not in s_norm:
+            is_generic_bringing = ("bringing" in s_norm or "scalable .net" in s_norm) and ("expertise" in s_norm or "solutions" in s_norm)
+            if is_generic_bringing:
+                print(f"  [GUARD] Removed generic redundant closing sentence: '{s_clean[:60]}...'")
+                continue
+                
+        seen.add(s_norm)
+        deduped.append(s_clean)
+    return ' '.join(deduped)
+
+
+
+def clean_title_for_comparison(t: str) -> str:
+    """Helper to clean title and summary starting words for robust comparison."""
+    t = t.lower().strip()
+    t = re.sub(r'\b(senior|junior|lead|principal|staff|associate|expert|seasoned|results-driven|accomplished|co-op|intern|contract|consultant|full-stack|fullstack|backend|frontend)\b', '', t)
+    t = re.sub(r'[^a-z0-9\s]', '', t)
+    return ' '.join(t.split())
+
+
 def enforce_international_phrase(summary: str) -> str:
     """[F7] Ensure 'international team environment' exact phrase is in summary."""
     if "international team" in summary.lower() or "cross-functional" in summary.lower():
@@ -195,38 +310,30 @@ def enforce_summary_formula(summary: str, job_title: str) -> str:
     Remove pronouns. Fix double closing. Ensure proper sentence boundaries.
 
     CRITICAL fixes applied:
-    - Detects 'Partial Title with Full Title ...' and strips the duplicate prefix
-    - Detects summary starting with suffix of title (missing 'Senior') and prepends only the missing words
-    - Never produces 'Full Title with Partial Title ...' artifacts
+    - Strips double title like 'Title: Senior Title' if title is already present.
+    - Detects 'Partial Title with Full Title ...' and strips the duplicate prefix.
+    - Robust checking allowing seniority prefixes.
     """
     if not summary or not job_title:
         return summary
 
-    # ── Step 0: Strip 'Partial Title with Full Title ...' duplicate prefix ──
-    # Catches: 'Principal Engineer with Senior Principal Engineer who cut...'
-    # → 'Senior Principal Engineer who cut...'
+    summary = summary.strip()
     jt_lower = job_title.lower().strip()
     sum_lower = summary.lower().strip()
-    # Look for ' with <job_title>' in the first 120 chars
-    with_title_pat = re.search(
-        r'\bwith\s+' + re.escape(jt_lower),
-        sum_lower[:120]
-    )
-    if with_title_pat:
-        before_with = summary[:with_title_pat.start()].strip()
-        before_words = before_with.split()
-        title_words_set = set(jt_lower.split())
-        overlap = sum(1 for w in before_words if w.lower() in title_words_set)
-        # If >50% of pre-'with' words are title words → it's a partial title dupe
-        if before_words and overlap >= max(1, len(before_words) * 0.5):
-            # Strip everything up to (and including) 'with ', keep from job_title
-            after_with_pos = with_title_pat.end() - len(jt_lower)
-            # Find the real case-preserved start of job_title in original
-            idx_in_orig = sum_lower.find(jt_lower, with_title_pat.start())
-            if idx_in_orig >= 0:
-                summary = summary[idx_in_orig:]
-                print(f"  [ATS-GUARD][FORMULA] Stripped duplicate partial title prefix: '{before_with} with'")
-                sum_lower = summary.lower().strip()
+
+    # ── Step 0: Robust check if job title is already present at summary start ──
+    jt_clean = clean_title_for_comparison(job_title)
+    sum_words = summary.lower().split()[:len(job_title.split()) + 3]
+    sum_clean = clean_title_for_comparison(' '.join(sum_words))
+
+    if sum_clean.startswith(jt_clean) or jt_clean in sum_clean[:len(jt_clean)+20]:
+        # Title is already present. Clean any colon prefixes (e.g. 'Title: Senior Title who...')
+        if ':' in summary[:len(job_title)+15]:
+            parts = summary.split(':', 1)
+            if clean_title_for_comparison(parts[0]) == jt_clean:
+                summary = parts[1].strip()
+                print(f"  [ATS-GUARD][FORMULA] Cleaned title colon prefix from summary.")
+        return summary
 
     # ── Step 1: Clean first-person pronouns without breaking grammar ──
     summary = re.sub(r'^I am\s+', '', summary.strip())
@@ -237,10 +344,8 @@ def enforce_summary_formula(summary: str, job_title: str) -> str:
     summary = re.sub(r'(?<=[.,;!?])\s+I\s+', ' ', summary)
     summary = re.sub(r'^I\s+', '', summary.strip())
     summary = re.sub(r'\s+', ' ', summary).strip()
-    jt_lower = job_title.lower().strip()
-    sum_lower = summary.lower().strip()
 
-    # ── Step 2: Strip known bad opener phrases (AI writes 'As a seasoned...', etc.) ──
+    # ── Step 2: Strip known bad opener phrases ──
     bad_openers = [
         r'^As an?\s+[a-z]',
         r'^A\s+[a-z][a-z-]*(?:-[a-z]+)?\s+',
@@ -274,21 +379,9 @@ def enforce_summary_formula(summary: str, job_title: str) -> str:
             print(f"  [ATS-GUARD][FORMULA] Replaced bad opener — summary now starts with job title.")
             break
 
-    # ── Step 2b: Summary starts with a SUFFIX of the title (missing first 1-2 words) ──
-    # e.g. job_title='Senior Principal Software Engineer', summary starts 'Principal Software Engineer who...'
-    # Fix: just prepend the missing words, don't create 'Full Title with Partial Title'
-    sum_lower = summary.lower().strip()
-    title_words = jt_lower.split()
-    for drop in range(1, min(3, len(title_words))):
-        suffix = ' '.join(title_words[drop:])
-        if sum_lower.startswith(suffix):
-            missing_prefix = ' '.join(job_title.split()[:drop])
-            summary = f"{missing_prefix} {summary}"
-            print(f"  [ATS-GUARD][FORMULA] Prepended missing title prefix: '{missing_prefix}'")
-            break
-
     # ── Step 3: Full title still not at start — prepend safely ──
     sum_lower = summary.lower().strip()
+    title_words = jt_lower.split()
     if not sum_lower.startswith(jt_lower):
         first_words = sum_lower.split()[:len(title_words)]
         overlap = sum(1 for a, b in zip(first_words, title_words) if a == b)
@@ -303,7 +396,6 @@ def enforce_summary_formula(summary: str, job_title: str) -> str:
             print(f"  [ATS-GUARD][FORMULA] Prepended job title to summary.")
 
     # ── Step 4: Catch any remaining 'Title with Title' artifacts ──
-    # e.g. still contains 'Senior Dev with Senior Dev who...'
     jt_escaped = re.escape(jt_lower)
     dup_pattern = re.compile(jt_escaped + r'\s+with\s+' + jt_escaped, re.IGNORECASE)
     if dup_pattern.search(summary.lower()):
@@ -329,7 +421,13 @@ def enforce_summary_formula(summary: str, job_title: str) -> str:
 def validate_summary(summary: str, job_title: str, company: str) -> str:
     """[F3][F7][F8] Run all summary safety checks and return clean summary."""
     summary = strip_emojis(summary)
-    
+
+    # [PRE-FIX] Replace any {placeholder} template literals from AI output
+    summary = sanitize_ai_placeholders(summary, company)
+
+    # [PRE-FIX] Strip markdown formatting from summary
+    summary = strip_markdown(summary)
+
     # Safety: remove any domain-like prefix (e.g. 'monster.com with 4+ years')
     domain_prefix = re.match(
         r'^(?:[\w.-]+\.(?:com|in|co\.uk|au|net|org)|monster|naukri|glassdoor|indeed|linkedin|shine|foundit|hirist|wellfound|seek|reed|totaljobs|jobstreet)\s*(?:with|having)?\s*',
@@ -338,14 +436,21 @@ def validate_summary(summary: str, job_title: str, company: str) -> str:
     if domain_prefix:
         summary = job_title + " with " + summary[domain_prefix.end():].lstrip()
         print(f"  [ATS-GUARD][F4] Fixed domain/job-board prefix in summary → starts with: '{job_title}'")
-    
+
     # [F4+] Enforce formula (full title match, not just [:20])
     summary = enforce_summary_formula(summary, job_title)
+
+    # [PRE-F7/F8] Deduplicate closing sentences before adding new ones
+    summary = deduplicate_closing_lines(summary, company)
 
     # [F7] International phrase — run BEFORE company closing to avoid duplication
     summary = enforce_international_phrase(summary)
     # [F8] Company closing — only append if not already there
     summary = enforce_company_closing(summary, company, "scalable .NET and cloud expertise")
+
+    # [POST] Final dedup pass — catches any duplicates created by enforce_* functions
+    summary = deduplicate_closing_lines(summary, company)
+
     # Final punctuation cleanup
     summary = clean_text_punctuation(summary)
     return summary
@@ -353,13 +458,14 @@ def validate_summary(summary: str, job_title: str, company: str) -> str:
 
 def validate_skills(skills: Dict[str, List[str]]) -> Dict[str, List[str]]:
     """[F1][F5] Clean skills — no tables, enforce PaaS phrase."""
-    clean = {}
+    clean_skills = {}
     for cat, items in skills.items():
-        clean_items = [strip_emojis(s) for s in items if s.strip()]
+        # Use global clean() — strips markdown AND emojis
+        clean_items = [clean(s) for s in items if s.strip()]
         if cat.lower() in ("cloud & devops", "cloud", "cloud & azure", "azure & cloud", "cloud and devops"):
             clean_items = enforce_paas_phrase(clean_items)
-        clean[cat] = clean_items
-    return clean
+        clean_skills[cat] = clean_items
+    return clean_skills
 
 
 def validate_jobs(jobs: list) -> list:
@@ -368,7 +474,7 @@ def validate_jobs(jobs: list) -> list:
         return jobs
     clean_jobs = []
     for i, job in enumerate(jobs):
-        bullets = [strip_emojis(b) for b in job.get("bullets", [])]
+        bullets = [clean(b) for b in job.get("bullets", [])]
         # [F10] Remove bold sub-headers (lines that are very short and have no metric/number)
         bullets = [b for b in bullets if len(b.strip()) > 30]
         # [F6] Enforce 4-verb phrase in MOST RECENT role only (index 0)
@@ -383,7 +489,7 @@ def validate_projects(projects: list) -> list:
     if len(projects) > 5:
         print(f"  [WARN][F9] {len(projects)} projects found — trimming to 5 most relevant.")
         projects = projects[:5]
-    return [{**p, "bullets": [strip_emojis(b) for b in p.get("bullets", [])]} for p in projects]
+    return [{**p, "bullets": [clean(b) for b in p.get("bullets", [])]} for p in projects]
 
 
 # ──────────────────────────────────────────────────────────────
@@ -410,6 +516,7 @@ class ResumeConfig:
     # Optional
     jd_text: str = ""
     tighten_spacing: bool = False
+    design: str = "A"          # "A" shaded callout | "B" bold underline | "C" minimal ruled
 
 
 # ──────────────────────────────────────────────────────────────
@@ -485,14 +592,14 @@ def _section_rule(paragraph):
 
 def _p(doc, text="", bold=False, italic=False, size=10.5,
        align=WD_ALIGN_PARAGRAPH.LEFT, sb=0, sa=3, ls=1.15, color=None):
-    """Add a plain paragraph. No tables, no columns, no icons."""
+    """Add a plain paragraph. Strips markdown AND emojis. No tables, no columns, no icons."""
     p = doc.add_paragraph()
     p.alignment = align
     p.paragraph_format.space_before = Pt(sb)
     p.paragraph_format.space_after = Pt(sa)
     p.paragraph_format.line_spacing = ls
     if text:
-        run = p.add_run(strip_emojis(text))
+        run = p.add_run(clean(text))   # clean() strips markdown + emojis
         run.bold = bold
         run.italic = italic
         run.font.name = "Calibri"
@@ -502,50 +609,99 @@ def _p(doc, text="", bold=False, italic=False, size=10.5,
     return p
 
 
-def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4.0):
-    """Premium ATS-safe section heading:
-    - Left accent bar in accent blue (modern ruled-heading look)
-    - Navy bold ALL-CAPS text with letter tracking
-    - Navy bottom rule
+def _add_paragraph_shading(paragraph, fill_hex: str = "EEF2F7"):
+    """Add a light background shading to a paragraph for the shaded heading callout look.
+    fill_hex: hex color WITHOUT '#'. ATS parsers ignore shading — text is fully readable.
+    """
+    pPr = paragraph._p.get_or_add_pPr()
+    shd = OxmlElement("w:shd")
+    shd.set(qn("w:val"), "clear")
+    shd.set(qn("w:color"), "auto")
+    shd.set(qn("w:fill"), fill_hex)
+    pPr.append(shd)
+
+
+def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4.0, design: str = "A"):
+    """
+    Design-aware ATS-safe section heading.
+    ATS parsers only read plain text — borders, shading, and colors are invisible to them.
+
+    Design A — Shaded callout: light-blue background + 3pt left bar (modern, warm)
+    Design B — Executive underline: no shading, full-width bold bottom rule (authoritative)
+    Design C — Minimal ruled: accent-blue small caps + thin gray bottom rule (Swiss-style)
     """
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(space_before)
     p.paragraph_format.space_after = Pt(space_after)
-    p.paragraph_format.left_indent = Pt(6)   # small indent so text clears the left bar
-    run = p.add_run(title.upper())
-    run.bold = True
-    run.font.name = "Calibri"
-    run.font.size = Pt(11.5)
-    run.font.color.rgb = NAVY
-    _set_char_spacing(run, 0.8)   # subtle tracking for ALL-CAPS headings
-    # Add both left accent bar + bottom navy rule
-    pPr = p._p.get_or_add_pPr()
-    pBdr = OxmlElement("w:pBdr")
-    # Left accent bar — accent blue
-    left = OxmlElement("w:left")
-    left.set(qn("w:val"), "single")
-    left.set(qn("w:sz"), "18")    # ~2.25pt thick bar
-    left.set(qn("w:space"), "4")
-    left.set(qn("w:color"), "1565C0")
-    pBdr.append(left)
-    # Bottom rule — navy
-    bottom = OxmlElement("w:bottom")
-    bottom.set(qn("w:val"), "single")
-    bottom.set(qn("w:sz"), "4")
-    bottom.set(qn("w:space"), "2")
-    bottom.set(qn("w:color"), RULE_COLOR)
-    pBdr.append(bottom)
-    pPr.append(pBdr)
+
+    if design == "A":
+        # ── Design A: Shaded callout + thick left accent bar ──────────────
+        p.paragraph_format.left_indent = Pt(8)   # clears the 3pt left bar
+        run = p.add_run(title.upper())
+        run.bold = True
+        run.font.name = "Calibri"
+        run.font.size = Pt(11.0)
+        run.font.color.rgb = NAVY
+        _set_char_spacing(run, 1.2)
+        _add_paragraph_shading(p, "E8EDF5")      # light slate-blue fill
+        pPr = p._p.get_or_add_pPr()
+        pBdr = OxmlElement("w:pBdr")
+        left = OxmlElement("w:left")
+        left.set(qn("w:val"), "single")
+        left.set(qn("w:sz"), "24")               # 3pt bar
+        left.set(qn("w:space"), "6")
+        left.set(qn("w:color"), "1565C0")
+        pBdr.append(left)
+        pPr.append(pBdr)
+
+    elif design == "B":
+        # ── Design B: Executive — no shading, bold full-width bottom rule ──
+        p.paragraph_format.left_indent = Pt(0)
+        run = p.add_run(title.upper())
+        run.bold = True
+        run.font.name = "Calibri"
+        run.font.size = Pt(11.0)
+        run.font.color.rgb = NAVY
+        _set_char_spacing(run, 1.5)              # wider tracking for authority
+        pPr = p._p.get_or_add_pPr()
+        pBdr = OxmlElement("w:pBdr")
+        bot = OxmlElement("w:bottom")
+        bot.set(qn("w:val"), "single")
+        bot.set(qn("w:sz"), "12")               # 1.5pt rule — bold and clear
+        bot.set(qn("w:space"), "3")
+        bot.set(qn("w:color"), RULE_COLOR)       # navy rule
+        pBdr.append(bot)
+        pPr.append(pBdr)
+
+    else:
+        # ── Design C: Minimal — accent-blue text + thin gray bottom rule ───
+        p.paragraph_format.left_indent = Pt(0)
+        run = p.add_run(title.upper())
+        run.bold = True
+        run.font.name = "Calibri"
+        run.font.size = Pt(9.5)                  # smaller — editorial look
+        run.font.color.rgb = ACCENT              # accent blue — pops subtly
+        _set_char_spacing(run, 2.0)              # generous tracking for small text
+        pPr = p._p.get_or_add_pPr()
+        pBdr = OxmlElement("w:pBdr")
+        bot = OxmlElement("w:bottom")
+        bot.set(qn("w:val"), "single")
+        bot.set(qn("w:sz"), "4")                # 0.5pt hairline rule — ultra minimal
+        bot.set(qn("w:space"), "4")
+        bot.set(qn("w:color"), "AAAAAA")        # light gray — subtle
+        pBdr.append(bot)
+        pPr.append(pBdr)
+
 
 
 def _bullet(doc, text: str, indent_pt: int = 22, space_after: float = 2.0, line_spacing: float = 1.15, font_size: float = 10.5):
-    """Plain bullet paragraph — bullet char only, no emojis, no table cells."""
+    """Plain bullet paragraph — strips markdown AND emojis, no table cells."""
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Pt(indent_pt)
     p.paragraph_format.first_line_indent = Pt(-10)   # hanging indent
     p.paragraph_format.space_after = Pt(space_after)
     p.paragraph_format.line_spacing = line_spacing
-    run = p.add_run(f"\u2022  {strip_emojis(text)}")  # bullet + double-space gap
+    run = p.add_run(f"\u2022  {clean(text)}")  # bullet + double-space gap
     run.font.name = "Calibri"
     run.font.size = Pt(font_size)
     run.font.color.rgb = GRAY  # body text in dark gray (not pure black — more premium)
@@ -563,7 +719,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
     skills     = validate_skills(config.skills)
     jobs       = validate_jobs(config.jobs)
     projects   = validate_projects(config.projects)
-    certs      = [strip_emojis(c) for c in config.certifications]
+    certs      = [clean(c) for c in config.certifications]
     candidate  = config.candidate
 
     print(f"  [F1] Tables:        0 (plain text only)")
@@ -586,6 +742,8 @@ def build_resume_docx(config: ResumeConfig) -> str:
     bullet_size = 10.0 if tighten else 10.5
     p_size = 10.0 if tighten else 10.5
     margin_val = 0.7 if tighten else 0.75
+    design = getattr(config, "design", "A")   # "A" / "B" / "C"
+    print(f"  [RENDER] Using Design {design} for '{config.company}'")
 
     # Spacing and margins: enforce margins
     for section in doc.sections:
@@ -597,11 +755,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
     c = candidate
 
     # ── HEADER BLOCK ──
-    # Top navy rule — creates a strong header band feel
-    p_toprule = doc.add_paragraph()
-    p_toprule.paragraph_format.space_before = Pt(0)
-    p_toprule.paragraph_format.space_after = Pt(0)
-    _add_top_border(p_toprule, color=RULE_COLOR, sz="20", space="0")
+    # (Top rule removed per user preference — header starts cleanly with the name)
 
     # Name — 24pt bold navy with letter tracking (premium look)
     p_name = doc.add_paragraph()
@@ -658,11 +812,11 @@ def build_resume_docx(config: ResumeConfig) -> str:
        sa=6 if tighten else 8, ls=ls_val, color=LIGHT_GRAY)
 
     # Professional Summary
-    _heading(doc, "Professional Summary", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Professional Summary", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     _p(doc, summary, size=p_size, sa=3 if tighten else 4, ls=ls_val)
 
     # Technical Skills - 5 Consolidated Categories in correct order
-    _heading(doc, "Technical Skills", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Technical Skills", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     skill_order = [
         "Languages & Core", "Cloud & DevOps", "Databases & Cache",
         "Security & Messaging", "Methodology & Tools"
@@ -700,13 +854,13 @@ def build_resume_docx(config: ResumeConfig) -> str:
             r_sk.font.color.rgb = GRAY      # Skills list in dark gray
 
     # Work Experience
-    _heading(doc, "Work Experience", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Work Experience", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     for job in jobs:
         p = doc.add_paragraph()
         p.paragraph_format.space_before = Pt(5 if tighten else 8)
         p.paragraph_format.space_after = Pt(0)
         _add_right_tab(p)
-        rc = p.add_run(strip_emojis(job["company"]))
+        rc = p.add_run(clean(job["company"]))
         rc.bold = True
         rc.font.name = "Calibri"
         rc.font.size = Pt(10.5 if tighten else 11)
@@ -721,7 +875,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
         p2 = doc.add_paragraph()
         p2.paragraph_format.space_before = Pt(0)
         p2.paragraph_format.space_after = Pt(1)
-        r2 = p2.add_run(strip_emojis(job["title"]))
+        r2 = p2.add_run(clean(job["title"]))
         r2.bold = True                  # BOLD for role title prominence
         r2.italic = True                # and italic for elegance
         r2.font.name = "Calibri"
@@ -731,7 +885,7 @@ def build_resume_docx(config: ResumeConfig) -> str:
         p3 = doc.add_paragraph()
         p3.paragraph_format.space_before = Pt(0)
         p3.paragraph_format.space_after = Pt(3 if tighten else 4)
-        r3 = p3.add_run(strip_emojis(job.get("tech", "")))
+        r3 = p3.add_run(clean(job.get("tech", "")))
         r3.italic = True                # italic for tech stack line
         r3.font.name = "Calibri"
         r3.font.size = Pt(9.0 if tighten else 9.5)
@@ -741,17 +895,17 @@ def build_resume_docx(config: ResumeConfig) -> str:
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
     # Key Projects
-    _heading(doc, "Key Projects", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Key Projects", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     for proj in projects:
         p = doc.add_paragraph()
         p.paragraph_format.space_before = Pt(4 if tighten else 6)
         p.paragraph_format.space_after = Pt(0)
-        rn = p.add_run(strip_emojis(proj["name"]))
+        rn = p.add_run(clean(proj["name"]))
         rn.bold = True
         rn.font.name = "Calibri"
         rn.font.size = Pt(10.5 if tighten else 11)
         rn.font.color.rgb = NAVY        # project name in navy
-        tech_text = strip_emojis(proj.get('tech', ''))
+        tech_text = clean(proj.get('tech', ''))
         if tech_text:
             p.add_run("   ")            # gap
             rt = p.add_run(f"| {tech_text}")  # pipe separator looks cleaner than em-dash
@@ -763,12 +917,12 @@ def build_resume_docx(config: ResumeConfig) -> str:
             _bullet(doc, b, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
     # Certifications
-    _heading(doc, "Certifications", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Certifications", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     for cert in certs:
         _bullet(doc, cert, space_after=sa_val, line_spacing=ls_val, font_size=bullet_size)
 
     # Education
-    _heading(doc, "Education", space_before=5 if tighten else 10, space_after=3 if tighten else 4)
+    _heading(doc, "Education", space_before=5 if tighten else 10, space_after=3 if tighten else 4, design=design)
     edu = config.education
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(3)
@@ -935,7 +1089,7 @@ DEFAULT_PROJECTS_POOL = [
     },
     {
         "name": "NEICE",
-        "tech": ".NET Framework 4.x · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
+        "tech": ".NET Framework · WCF · SQL Server · FIPS Compliance · RBAC · ADO.NET · Section 508",
         "bullets": [
             "Configured WCF bindings with message-level security and X.509 certificate validation to meet strict federal multi-agency data transfer requirements.",
             "Engineered 8+ ASP.NET MVC modules for the NEICE US government platform with strict FIPS-compliant RBAC controls.",
@@ -960,9 +1114,415 @@ except Exception as e:
     print(f"  [WARN] Failed to parse base resume at startup: {e}")
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+#  WORLD-CLASS REFERENCE BANK
+#  Based on: Google XYZ formula, FAANG resume research, top SWE resume patterns
+#  Rule: Accomplished [X] as measured by [Y], by doing [Z]
+#  Every bullet must: start with power verb | have a metric | name a technology
+# ══════════════════════════════════════════════════════════════════════════════
+
+WORLD_CLASS_REFERENCE_BANK = {
+
+    # ── Power verbs by category (never use: responsible for, worked on, helped with) ──
+    "power_verbs": {
+        "architecture":  ["Architected", "Engineered", "Designed", "Spearheaded", "Established",
+                          "Introduced", "Formulated", "Structured", "Blueprinted", "Pioneered"],
+        "delivery":      ["Delivered", "Shipped", "Launched", "Deployed", "Implemented",
+                          "Developed", "Built", "Created", "Rolled out", "Released"],
+        "performance":   ["Optimised", "Accelerated", "Reduced", "Improved", "Decreased",
+                          "Boosted", "Streamlined", "Eliminated", "Cut", "Halved"],
+        "leadership":    ["Mentored", "Led", "Guided", "Championed", "Drove",
+                          "Coordinated", "Facilitated", "Empowered", "Established", "Cultivated"],
+        "security":      ["Secured", "Hardened", "Enforced", "Implemented", "Achieved",
+                          "Validated", "Certified", "Audited", "Complied", "Protected"],
+        "integration":   ["Integrated", "Orchestrated", "Connected", "Unified", "Automated",
+                          "Configured", "Wired", "Bridged", "Linked", "Interfaced"],
+        "scale":         ["Scaled", "Containerised", "Migrated", "Refactored", "Modularised",
+                          "Decoupled", "Distributed", "Partitioned", "Sharded", "Parallelised"],
+        "quality":       ["Instrumented", "Validated", "Enforced", "Standardised", "Documented",
+                          "Reviewed", "Audited", "Tested", "Benchmarked", "Profiled"],
+    },
+
+    # ── World-class XYZ bullet formulas ────────────────────────────────────────
+    # Formula: [Power Verb] [WHAT, with tech] — [METRIC result], [business impact]
+    "bullet_formulas": [
+        "{verb} {what} using {tech} — achieving {metric} under {context}.",
+        "{verb} {count} {what} following {pattern} — serving {scale} with {metric} {kpi}.",
+        "{verb} {what} with {tech}, reducing {problem} by {pct}% and {business_impact}.",
+        "{verb} {what} — achieved {metric} {kpi} validated via {tool}.",
+        "{verb} {count} {what}, cutting {problem} from {before} to {after} ({pct}% improvement).",
+        "{verb} {what} across {scope} — reduced {problem} by {pct}% and improved {outcome}.",
+    ],
+
+    # ── Reference bullets drawn from Siva's verified facts (grounded, never fabricated) ──
+    "reference_bullets": {
+        "microservices": [
+            "Architected 15+ .NET Core 8 microservices following Clean Architecture and CQRS — serving 2M+ tax records at sub-200ms p99 API response time validated via OpenTelemetry.",
+            "Architected 12+ production-grade .NET 7 microservices using CQRS and YARP Reverse Proxy — system handles 300+ RPS at 99.98% uptime SLA under Grafana K6 load testing.",
+        ],
+        "performance": [
+            "Optimised 30+ ASP.NET Web API endpoints to eliminate N+1 queries — achieving sub-100ms p99 latency under peak Deloitte audit load.",
+            "Achieved 99.5% Redis Distributed Cache hit rate with 300ms average API response time using Generic Repository Pattern with Unit of Work.",
+        ],
+        "security": [
+            "Implemented JWT + OAuth2/OIDC token-based authentication with RBAC and AES-256 field-level encryption — achieved OWASP Top 10 compliance across all 15+ API endpoints.",
+            "Built enterprise authentication with JWT + RBAC + IP Whitelisting and AES-256 encrypted API responses — reduced unauthorised access attempts by 72% and achieved PCI-DSS compliance.",
+        ],
+        "cicd": [
+            "Built Azure DevOps YAML CI/CD pipelines with SonarQube quality gates and automated xUnit/NUnit test runs — achieved 98% pipeline success rate and reduced production defect rate by 40%.",
+            "Containerised 12 services with Docker multi-stage builds on Azure App Services with zero-downtime rolling updates — achieved 98% pipeline success rate and 65% reduction in Docker image sizes.",
+        ],
+        "ai_ml": [
+            "Integrated Azure OpenAI GPT-4 + Semantic Kernel with pgvector semantic search over 10M+ tax documents — achieved 35% improvement in audit reviewer throughput at sub-200ms latency.",
+        ],
+        "mentorship": [
+            "Mentored 4 junior engineers on .NET 7 Clean Architecture and CQRS — led Agile/Scrum ceremonies and reduced production bugs by 40% through SonarQube-enforced quality gates.",
+        ],
+        "messaging": [
+            "Orchestrated RabbitMQ async messaging across 8 procurement microservices — improved throughput by 3x under peak load vs synchronous HTTP chaining with Polly circuit breakers preventing cascading failures.",
+        ],
+    },
+
+    # ── World-class summary opening patterns (Senior Engineer level) ────────────
+    "summary_openers": [
+        # Results-first (FAANG style)
+        "Senior Software Engineer who {achievement} — {metric}. Brings {years}+ years of {stack} expertise to build {outcome}.",
+        # Architect framing (McKinsey style)
+        "Senior Software Engineer and AZ-204 certified Azure professional with {years}+ years designing and deploying {what}. Expert in {stack} — consistently achieving {metric}.",
+        # Impact-first (Google style)
+        "Results-driven Senior Software Engineer with {years}+ years delivering {what} at {scale}. Proven track record of {metric} through {tech} and {pattern}.",
+    ],
+
+    # ── Forbidden weak phrases — auto-flagged and replaced ───────────────────
+    "forbidden_phrases": [
+        "responsible for", "worked on", "helped with", "assisted in",
+        "was involved in", "participated in", "contributed to", "tasked with",
+        "part of the team", "helped to", "involved in", "duties included",
+        "job duties", "functions included", "handled", "dealt with",
+    ],
+
+    # ── Required metric signals — every bullet should have at least one ────────
+    "metric_signals": [
+        r'\d+\+',           # 15+, 300+
+        r'\d+%',            # 40%, 98%
+        r'\d+x\b',          # 3x, 5x
+        r'sub-\d+ms',       # sub-200ms, sub-100ms
+        r'\d+\s*ms',        # 300ms
+        r'\d+\.\d+%',       # 99.98%
+        r'\d+[KkMmBb]\+?',  # 10M+, 500K
+        r'p\d{2}\b',        # p99, p95
+        r'\$[\d,]+',        # $4,200
+        r'\d+\s+(?:weeks?|days?|hours?|minutes?)', # 10 days, 7 minutes
+    ],
+
+    # ── Minimum content quality thresholds ─────────────────────────────────────
+    "thresholds": {
+        "min_bullet_length": 55,        # chars
+        "max_bullet_length": 220,       # chars — keep scannable
+        "min_metrics_per_role": 2,      # measurable numbers per company
+        "min_tech_keywords_per_role": 5,# distinct tech names per company
+        "max_duplicate_starters": 1,    # max bullets starting with same verb
+        "min_summary_sentences": 3,     # professional summary depth
+    },
+}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  QUALITY GATE — 4-STAGE PRE-DOCX PIPELINE
+#  Runs on every resume before the DOCX is written.
+#  Catches: AI artifacts | grammar | weak content | missing metrics
+# ══════════════════════════════════════════════════════════════════════════════
+
+def quality_gate_check(summary: str, jobs: list, projects: list, company: str) -> list:
+    """
+    4-stage quality gate. Returns a list of QualityIssue strings.
+    Each issue is auto-fixed where possible; unresolvable issues are logged.
+
+    Stage 1 — Placeholder & AI artifact check
+    Stage 2 — Grammar & style check
+    Stage 3 — Content richness check
+    Stage 4 — World-class scoring
+    """
+    issues = []
+    bank = WORLD_CLASS_REFERENCE_BANK
+
+    # ── STAGE 1: Placeholder & AI artifact detection ─────────────────────────
+    all_text = summary + " ".join(
+        b for j in jobs for b in j.get("bullets", [])
+    ) + " ".join(
+        b for p in projects for b in p.get("bullets", [])
+    )
+
+    # Detect unresolved placeholders
+    remaining_placeholders = re.findall(r'[\{\[](?:the\s+)?(?:company|firm|employer|organization)[}\]]', all_text, re.IGNORECASE)
+    if remaining_placeholders:
+        issues.append(f"[STAGE1][CRITICAL] Unresolved placeholders found: {remaining_placeholders}")
+
+    # Detect markdown leakage
+    markdown_hits = re.findall(r'\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|#{1,4}\s', all_text)
+    if markdown_hits:
+        issues.append(f"[STAGE1][CRITICAL] Markdown leakage in content: {markdown_hits[:3]}")
+
+    # ── STAGE 2: Grammar & style ─────────────────────────────────────────────
+    # Check for first-person pronouns in bullets
+    for j in jobs:
+        for b in j.get("bullets", []):
+            if re.search(r'\b(I|my|we|our|me)\b', b):
+                issues.append(f"[STAGE2][WARN] First-person pronoun in bullet: '{b[:60]}'")
+
+    # Check for forbidden weak openers
+    for j in jobs:
+        for b in j.get("bullets", []):
+            b_lower = b.strip().lower()
+            for forbidden in bank["forbidden_phrases"]:
+                if b_lower.startswith(forbidden) or f" {forbidden} " in b_lower:
+                    issues.append(f"[STAGE2][WARN] Weak phrase '{forbidden}' in bullet: '{b[:60]}'")
+                    break
+
+    # Check for duplicate bullet starters within same role
+    for j in jobs:
+        starters = [b.split()[0].lower() for b in j.get("bullets", []) if b.strip()]
+        seen_starters = set()
+        for s in starters:
+            if s in seen_starters:
+                issues.append(f"[STAGE2][WARN] Duplicate bullet starter '{s}' in {j.get('company','?')}")
+            seen_starters.add(s)
+
+    # ── STAGE 3: Content richness ─────────────────────────────────────────────
+    metric_patterns = [re.compile(p) for p in bank["metric_signals"]]
+
+    for j in jobs:
+        role_bullets = j.get("bullets", [])
+        metrics_found = 0
+        tech_keywords = set()
+
+        for b in role_bullets:
+            # Check bullet length
+            if len(b.strip()) < bank["thresholds"]["min_bullet_length"]:
+                issues.append(f"[STAGE3][WARN] Bullet too short ({len(b)} chars): '{b[:50]}'")
+            if len(b.strip()) > bank["thresholds"]["max_bullet_length"]:
+                issues.append(f"[STAGE3][INFO] Bullet too long ({len(b)} chars) — consider splitting")
+
+            # Count metrics
+            if any(p.search(b) for p in metric_patterns):
+                metrics_found += 1
+
+            # Count tech keywords (simple heuristic: capitalised words / known tech)
+            tech_hits = re.findall(r'\b(?:\.NET|C#|Azure|SQL|Redis|Docker|Angular|CQRS|JWT|OAuth|gRPC|RabbitMQ|PostgreSQL|Kubernetes|OpenTelemetry|YARP|SonarQube|xUnit|NUnit|SignalR|WCF|ASP\.NET|EF Core|Entity Framework)\b', b)
+            tech_keywords.update(tech_hits)
+
+        if metrics_found < bank["thresholds"]["min_metrics_per_role"]:
+            issues.append(f"[STAGE3][WARN] {j.get('company','?')}: only {metrics_found} metric(s) found (target ≥ {bank['thresholds']['min_metrics_per_role']})")
+
+        if len(tech_keywords) < bank["thresholds"]["min_tech_keywords_per_role"]:
+            issues.append(f"[STAGE3][INFO] {j.get('company','?')}: only {len(tech_keywords)} tech keywords found")
+
+    # ── STAGE 4: World-class score ────────────────────────────────────────────
+    for j in jobs:
+        role_bullets = j.get("bullets", [])
+        score = 100
+        deductions = []
+
+        metrics_total = sum(1 for b in role_bullets if any(p.search(b) for p in metric_patterns))
+        if metrics_total == 0:
+            score -= 20; deductions.append("no metrics")
+        elif metrics_total < 2:
+            score -= 10; deductions.append("few metrics")
+
+        weak_count = sum(1 for b in role_bullets
+                         for f in bank["forbidden_phrases"]
+                         if b.lower().startswith(f) or f" {f} " in b.lower())
+        if weak_count > 0:
+            score -= weak_count * 8; deductions.append(f"{weak_count} weak phrase(s)")
+
+        short_count = sum(1 for b in role_bullets if len(b.strip()) < bank["thresholds"]["min_bullet_length"])
+        if short_count > 0:
+            score -= short_count * 5; deductions.append(f"{short_count} short bullet(s)")
+
+        score = max(0, score)
+        deduction_str = f" — {', '.join(deductions)}" if deductions else ""
+        icon = "✅" if score >= 85 else ("⚠️" if score >= 70 else "❌")
+        print(f"  [QUALITY] {icon} {j.get('company','?')}: {score}/100 — {len(role_bullets)} bullets, {metrics_total} metrics{deduction_str}")
+
+    return issues
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  JD / LOCATION-AWARE DESIGN SELECTOR
+#  Auto-picks Design A / B / C based on the JD industry, tech, and geography.
+#  Design A — Cloud/SaaS/Azure/modern tech (Netherlands, Singapore, UK, AU)
+#  Design B — Fintech/Banking/ERP/Government/Enterprise (USA, India MNC)
+#  Design C — Startup/Product/FAANG-style/Minimal (no strong signal)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def select_resume_design(jd_text: str, company: str = "", location: str = "") -> str:
+    """
+    Think like a professional before choosing the design.
+    Returns 'A', 'B', or 'C'.
+
+    Design A — Shaded callout headings (modern, warm, structured)
+               Best: Cloud-native, SaaS, Azure/AWS-heavy, tech startups,
+                     Netherlands, UK, Singapore, Australia, Germany, UAE
+    Design B — Bold navy underline headings (executive, authoritative)
+               Best: Fintech, banking, finance, ERP/SAP, insurance,
+                     government, large MNC India, USA enterprise
+    Design C — Minimal left-aligned ruled (Swiss-style, premium minimal)
+               Best: FAANG-style, product companies, engineering-first,
+                     creative-tech, no dominant industry signal
+    """
+    jd = (jd_text or "").lower()
+    co = (company or "").lower()
+    loc = (location or "").lower()
+    combined = jd + " " + co + " " + loc
+
+    # ── Design A signals: Cloud / modern tech / international tech hubs ──
+    design_a_signals = [
+        "azure", "aws", "gcp", "cloud native", "microservices", "kubernetes",
+        "docker", "saas", "paas", "opentelemetry", "devops", "ci/cd",
+        "netherlands", "amsterdam", "eindhoven", "rotterdam",
+        "singapore", "malaysia", "kuala lumpur",
+        "australia", "sydney", "melbourne",
+        "united kingdom", "london", "manchester",
+        "germany", "berlin", "munich",
+        "uae", "dubai", "abu dhabi",
+        "canada", "toronto", "vancouver",
+        "startup", "scale-up", "scaleup", "tech company",
+        "exact", "booking.com", "adyen", "philips", "asml",
+        "fintech", "neobank", "digital bank",  # fintech is often cloud-native
+    ]
+
+    # ── Design B signals: Traditional enterprise / banking / government ──
+    design_b_signals = [
+        "investment bank", "hedge fund", "insurance", "actuarial",
+        "erp", "sap", "oracle financials", "epicor", "dynamics 365",
+        "government", "federal", "public sector", "ministry", "defence", "defense",
+        "naukri", "infosys", "tcs", "wipro", "cognizant", "hcl", "tech mahindra",
+        "accenture", "deloitte", "kpmg", "pwc", "ernst", "capgemini",
+        "large enterprise", "fortune 500", "fortune500",
+        "manufacturing", "automotive", "supply chain", "logistics",
+        "banking", "core banking", "swift", "trade finance", "clearing",
+    ]
+
+    # Score each design
+    score_a = sum(1 for s in design_a_signals if s in combined)
+    score_b = sum(1 for s in design_b_signals if s in combined)
+
+    # Design A beats B when cloud/modern signals dominate
+    if score_a >= 2 and score_a >= score_b:
+        design = "A"
+    elif score_b >= 2 and score_b > score_a:
+        design = "B"
+    elif score_a == 1:
+        design = "A"  # Even one cloud signal → modern design
+    else:
+        design = "C"  # No strong signal → clean minimal
+
+    print(f"  [SE-DESIGN] Scores: A={score_a} B={score_b} → Design {design} selected for '{company or 'this role'}'")
+    return design
+
+
+
+def smart_dotnet_versions(jd_text: str) -> str:
+    """
+    Think like a Senior Software Engineer:
+    Read the JD and decide which .NET versions to present.
+
+    Strategy:
+    ─────────────────────────────────────────────────────────
+    A senior engineer doesn't dump every version they know.
+    They show the recruiter EXACTLY what they need, plus
+    enough breadth to prove they're not a one-trick pony.
+
+    Decision logic (in priority order):
+    1. JD asks for specific versions → lead with those, add adjacent ones.
+    2. JD is cloud-native / Azure / microservices → .NET Core 8 / .NET 7 / .NET 6
+    3. JD has legacy signals (WCF, ADO.NET, Framework, migration) → include .NET Framework
+    4. JD is full-stack / enterprise → .NET Core 8 / .NET 7 / .NET Framework
+    5. Default (no clear signal) → .NET Core 8 / .NET 7 / .NET 6 / .NET 5
+    """
+    if not jd_text:
+        return ".NET Core 8 / .NET 7 / .NET 6 / .NET 5"
+
+    jd = jd_text.lower()
+
+    # ── Detect specific version mentions in JD ──────────────────────────
+    asks_net8  = any(x in jd for x in ["net 8", ".net8", "core 8", "net core 8", ".net core 8"])
+    asks_net7  = any(x in jd for x in ["net 7", ".net7", "core 7", "net core 7", ".net core 7"])
+    asks_net6  = any(x in jd for x in ["net 6", ".net6", "core 6", "net core 6", ".net core 6"])
+    asks_net5  = any(x in jd for x in ["net 5", ".net5", "core 5", ".net core 5"])
+    asks_net3  = any(x in jd for x in ["net core 3", ".net core 3", "3.1"])
+    asks_framework = any(x in jd for x in [
+        ".net framework", "net framework", "framework 4", "framework 3",
+        "wcf", "ado.net", "webforms", "web forms", "legacy .net",
+        "legacy system", "migration from .net", "migrate to .net core",
+        "classic asp", "asp classic"
+    ])
+
+    # ── Detect role signals ─────────────────────────────────────────────
+    is_cloud_native  = any(x in jd for x in ["azure", "aws", "microservices", "kubernetes", "docker", "paas", "cloud-native"])
+    is_legacy_role   = any(x in jd for x in ["legacy", "modernisation", "modernization", "migration", "wcf", "ado.net", "webforms", "monolith"])
+    is_enterprise    = any(x in jd for x in ["enterprise", "erp", "crm", "sap", "large-scale", "government", "banking", "finance"])
+
+    # ── Build the version string like a senior engineer would ──────────
+    parts = []
+
+    # Always lead with .NET Core 8 if JD doesn't specifically exclude it
+    if asks_net8 or not any([asks_net7, asks_net6, asks_net5, asks_net3]):
+        parts.append(".NET Core 8")
+
+    if asks_net7 or (is_cloud_native and not asks_net6 and not asks_net5):
+        if ".NET Core 8" not in parts or asks_net7:
+            parts.append(".NET 7")
+
+    if asks_net6:
+        parts.append(".NET 6")
+
+    if asks_net5:
+        parts.append(".NET 5")
+
+    if asks_net3:
+        parts.append(".NET Core 3.1")
+
+    # Include .NET Framework only when the JD explicitly signals it
+    # or when it's a legacy / enterprise / migration role
+    if asks_framework or is_legacy_role or (is_enterprise and not is_cloud_native):
+        parts.append(".NET Framework")
+
+    # ── SENIOR ENGINEER BREADTH RULE ──────────────────────────────────────
+    # A senior engineer always demonstrates version breadth.
+    # If the JD only asked for one version, we still show the current-gen
+    # version(s) FIRST, then the JD version — proving we're up-to-date
+    # AND can handle what they're running.
+    if len(parts) == 1:
+        v = parts[0]
+        if v == ".NET 7":
+            parts = [".NET Core 8", ".NET 7"]
+        elif v == ".NET 6":
+            parts = [".NET Core 8", ".NET 7", ".NET 6"]
+        elif v == ".NET 5":
+            parts = [".NET Core 8", ".NET 7", ".NET 6", ".NET 5"]
+        elif v == ".NET Core 3.1":
+            parts = [".NET Core 8", ".NET 7", ".NET Core 3.1"]
+        elif v == ".NET Framework":
+            parts = [".NET Core 8", ".NET Framework"]
+        elif v == ".NET Core 8":
+            parts = [".NET Core 8", ".NET 7"]
+    # If .NET 8 is missing from a multi-version list, prepend it (always current)
+    elif ".NET Core 8" not in parts and not asks_framework:
+        parts = [".NET Core 8"] + parts
+
+    if not parts:
+        return ".NET Core 8 / .NET 7 / .NET 6 / .NET 5"
+
+    result = " / ".join(parts)
+    print(f"  [SE-THINK] .NET versions selected for this JD: {result}")
+    return result
+
+
+
 DEFAULT_SKILLS = {
     "Backend": [
-        ".NET Core 8 / .NET 7", ".NET Framework 4.x", "C#", "ASP.NET Web API", "ASP.NET Core",
+        ".NET Core 8 / .NET 7", ".NET Framework", "C#", "ASP.NET Web API", "ASP.NET Core",
         "RESTful APIs", "ASP.NET MVC", "ADO.NET", "HTML5", "CSS",
         "CQRS", "Clean Architecture", "Domain-Driven Design (DDD)", "SOLID Principles",
         "Microservices", "Entity Framework Core", "YARP Reverse Proxy",
@@ -1329,8 +1889,23 @@ def get_canonical_project_name(name: str) -> str:
         return "NEICE"
     return name
 
+def resolve_standard_company(name: str) -> str:
+    if not name:
+        return name
+    name_lower = name.lower()
+    if any(x in name_lower for x in ["ltimindtree", "lti", "deloitte", "tax"]):
+        return "LTIMindtree"
+    if any(x in name_lower for x in ["dssi", "procure"]):
+        return "DSSI Solutions India Pvt Ltd"
+    if any(x in name_lower for x in ["nexa", "vault"]):
+        return "Nexa Office InfoSystems LLP"
+    if any(x in name_lower for x in ["kasadara", "gov", "federal", "neice"]):
+        return "Kasadara Technology Solutions"
+    return name
+
 def extract_allowed_facts(role_name: str) -> dict:
-    bullets = DEFAULT_JOBS.get(role_name) or []
+    resolved_name = resolve_standard_company(role_name)
+    bullets = DEFAULT_JOBS.get(resolved_name) or []
     canonical_name = get_canonical_project_name(role_name)
     if not bullets:
         for p in DEFAULT_PROJECTS_POOL:
@@ -1434,7 +2009,7 @@ DISALLOWED_CLAIMS = [
 ]
 
 ALLOWED_REFRAMED_BULLETS = {
-    "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
+    "Engineered core modules for the NEICE platform using .NET Framework and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
     "Developed integration endpoints for 3 third-party services, authoring detailed system and user manuals.",
     "Authored detailed Technical Documentation and Requirement Specifications for 30+ enterprise services."
 }
@@ -1665,16 +2240,33 @@ def run_local_tailor_engine(jd_text: str, job_title: str, company: str) -> dict:
     cloud_density = sum(1 for kw in ["kubernetes", "docker", "microservices", "azure openai", "vector", "pgvector", "opentelemetry", "yarp"] if kw in jd_lower)
     mid_level_mode = has_mid_level_ask or (cloud_density <= 2)
 
-    tailored_skills = {}
+    # ─── THINK LIKE A SENIOR ENGINEER: pick the right .NET versions for this JD ───
+    dotnet_ver_str = smart_dotnet_versions(jd_text)
+
+    # Build a per-JD skills pool (don't mutate DEFAULT_SKILLS globally)
+    jd_skills_pool = {}
     for cat, items in DEFAULT_SKILLS.items():
+        if cat == "Backend":
+            # Replace the static .NET version entry with the JD-smart one
+            filtered = [x for x in items if not (x.startswith(".NET Core") or x.startswith(".NET Framework") or x.startswith(".NET 7") or x.startswith(".NET 6") or x.startswith(".NET 5"))]
+            jd_skills_pool[cat] = [dotnet_ver_str] + filtered
+        else:
+            jd_skills_pool[cat] = list(items)
+
+    tailored_skills = {}
+    for cat, items in jd_skills_pool.items():
         scored_items = []
         for item in items:
             score = score_text(item, jd_keywords)
             if item.lower() in jd_text.lower():
                 score += 5.0
+            # Always keep the .NET version entry at the top of Backend
+            if cat == "Backend" and item == dotnet_ver_str:
+                score += 20.0
             scored_items.append((item, score))
         scored_items.sort(key=lambda x: x[1], reverse=True)
         tailored_skills[cat] = [x[0] for x in scored_items[:12]]
+
         
     tailored_jobs = {}
     for company_key, bullets in DEFAULT_JOBS.items():
@@ -1888,10 +2480,10 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "company": "Kasadara Technology Solutions",
                 "dates": "Jul 2022 – Jun 2024",
                 "role_title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
-                "tech_stack_line": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
+                "tech_stack_line": ".NET Framework  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
                 "key": "Kasadara Technology Solutions",
                 "bullets": [
-                    "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
+                    "Engineered core modules for the NEICE platform using .NET Framework and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
                     "Optimised SQL Server architecture via Entity Framework migrations, LINQ tuning, and indexed stored procedures — achieving 30% retrieval speed."
                 ] if has_legacy_ask else (DEFAULT_JOBS.get("Kasadara Technology Solutions") or [])
             }
@@ -1999,7 +2591,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
                 "company": "Kasadara Technology Solutions",
                 "dates": "Jul 2022 – Jun 2024",
                 "title": "Software Engineer  |  US Government & SaaS Enterprise Platforms",
-                "tech": ".NET Framework 4.x  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
+                "tech": ".NET Framework  •  ASP.NET MVC  •  ADO.NET  •  C#  •  SQL Server  •  Entity Framework Core" if has_legacy_ask else ".NET Core  •  ASP.NET MVC  •  C#  •  Angular  •  Vue.js  •  Entity Framework Core",
                 "key": "Kasadara Technology Solutions",
                 "limit": 3
             }
@@ -2017,7 +2609,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
             
             if role["key"] == "Kasadara Technology Solutions" and has_legacy_ask:
                 bullets = [
-                    "Engineered core modules for the NEICE platform using .NET Framework 4.x and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
+                    "Engineered core modules for the NEICE platform using .NET Framework and ASP.NET MVC, utilizing ADO.NET for high-performance direct database access.",
                     "Optimised SQL Server architecture via Entity Framework migrations, LINQ tuning, and indexed stored procedures — achieving 30% retrieval speed."
                 ]
             
@@ -2200,8 +2792,32 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
     skills = tailored.get("skills_by_category", {})
     if not skills:
         skills = DEFAULT_SKILLS
+
+    # ── THINK LIKE A SENIOR ENGINEER: inject JD-smart .NET versions ──
+    # Before writing the resume, decide which .NET versions to show based on the JD.
+    # A senior engineer doesn't list all versions — they show what the recruiter needs.
+    dotnet_ver = smart_dotnet_versions(jd_text)
+    if "Backend" in skills and isinstance(skills["Backend"], list):
+        # Remove any stale .NET version placeholders from the AI or defaults
+        backend_cleaned = [
+            x for x in skills["Backend"]
+            if not (
+                x.strip().startswith(".NET Core") or
+                x.strip().startswith(".NET Framework") or
+                x.strip().startswith(".NET 7") or
+                x.strip().startswith(".NET 6") or
+                x.strip().startswith(".NET 5") or
+                x.strip().startswith(".NET 8")
+            )
+        ]
+        skills["Backend"] = [dotnet_ver] + backend_cleaned
+    elif "Backend" not in skills:
+        # Skills came back without a Backend category — add the essentials
+        skills["Backend"] = [dotnet_ver, "C#", "ASP.NET Web API", "RESTful APIs", "Clean Architecture"]
+
     consolidated_skills = normalize_skills_categories(skills, jd_text)
     verify_no_keywords_dropped(skills, consolidated_skills, jd_text)
+
     # Clean up punctuation in all sections to prevent unclosed parentheses, spacing bugs, or double periods
     summary = clean_text_punctuation(summary)
     for j in jobs:
@@ -2218,6 +2834,20 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
 
     skills = consolidated_skills
 
+    # ── THINK LIKE A PROFESSIONAL: pick design before writing ──────────────
+    jd_location = jd_context.get("job_location_city", "") + " " + jd_context.get("job_location_country", "")
+    design = select_resume_design(jd_text, company, jd_location)
+
+    # ── QUALITY GATE: catch all AI mistakes before DOCX is written ─────────
+    print("\n  [QUALITY GATE] Running 4-stage pre-flight quality check...")
+    issues = quality_gate_check(summary, jobs, projects, company)
+    if issues:
+        print(f"  [QUALITY GATE] {len(issues)} issue(s) found:")
+        for issue in issues:
+            print(f"    {issue}")
+    else:
+        print("  [QUALITY GATE] ✅ All checks passed — zero AI mistakes detected")
+
     # Create builder config
     config = ResumeConfig(
         job_title=job_title,
@@ -2230,7 +2860,8 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         certifications=certifications,
         education=education,
         candidate=candidate,
-        jd_text=jd_text
+        jd_text=jd_text,
+        design=design,
     )
 
     # Initial DOCX build
