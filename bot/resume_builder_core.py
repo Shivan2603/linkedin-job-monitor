@@ -590,6 +590,68 @@ def _section_rule(paragraph):
     pBdr.append(bottom)
 
 
+# ─── MASTER AUTO-BOLDING PATTERNS & ENGINE ────────────────────────────────────
+METRIC_PATTERNS = [
+    r'\bsub-\d+ms\b',
+    r'\b\d+(?:\.\d+)?(?:%|\+|x|ms)\b',
+    r'\b\d+\s+junior\s+engineers\b',
+    r'\b\d+\s+microservices\b',
+    r'\b\d+\s+production\s+microservices\b',
+    r'\b\d+\s+modules\b',
+    r'\b\d+%\s+reduction\b',
+    r'\b\d+%\s+improvement\b',
+    r'\b\d+%\s+faster\b',
+    r'\b\d+,\d+\+\s+government\s+users\b',
+    r'\b\d+%\s+database\s+query\s+load\b',
+    r'\b\d+%\s+manual\s+effort\b',
+    r'\b\d+%\s+page\s+load\b',
+    r'\b\d+%\s+memory\s+reduction\b',
+    r'\b\d+%\s+query\s+latency\b',
+    r'\b\d+%\s+search\s+acceleration\b',
+    r'\b\d+%\s+transaction\s+time\b',
+    r'\b\d+%\s+xunit\s+coverage\b',
+    r'\b\d+%\s+container\s+image\b',
+    r'\b99\.98%\s+uptime\b',
+    r'\b99\.98%\b'
+]
+
+KEYWORDS = [
+    r'\.net\s+core', r'\.net', r'c#', r'azure', r'asp\.net\s+web\s+api', r'asp\.net', r'angular',
+    r'vue\.js', r'sql\s+server', r'entity\s+framework\s+core', r'entity\s+framework', r'rabbitmq',
+    r'docker', r'celery', r'terraform', r'xunit', r'postman',
+    r'cqrs', r'clean\s+architecture', r'domain-driven\s+design', r'ddd',
+    r'opentelemetry', r'redis', r'service\s+bus', r'reverse\s+proxy',
+    r'oauth2', r'jwt', r'fips', r'microservices', r'stored\s+procedures',
+    r'linq', r'agile', r'scrum', r'ci/cd', r'yarp\s+reverse\s+proxy', r'yarp', r'go\s+background', r'golang',
+    r'securing\s+\d+\s+restful\s+apis', r'restful\s+apis', r'restful\s+api', r'rest\s+apis', r'rest\s+api',
+    r'stored\s+procedures', r'rbac', r'aes-256', r'mtls', r'x\.509', r'wcf', r'ado\.net',
+    r'section\s+508', r'wcag', r'solid\s+principles', r'solid', r'deloitte', r'neice',
+    r'stored\s+procedures', r'azure\s+openai', r'pgvector'
+]
+
+def auto_bold_text(text: str) -> str:
+    """Auto-bold key metrics and technologies inside text by wrapping them in double asterisks."""
+    if not text:
+        return text
+    # Strip any existing ** markers to perform clean formatting
+    text = text.replace("**", "")
+    
+    # 1. Bold metric patterns using temporary placeholders to avoid nested matching
+    for pat in METRIC_PATTERNS:
+        text = re.sub(pat, lambda m: f"__B_START__{m.group(0)}__B_END__", text, flags=re.IGNORECASE)
+        
+    # 2. Bold core keywords
+    for kw in KEYWORDS:
+        pattern = r'(^|[\s\(\[\{\-,;:\u2014])(' + kw + r')(?=$|[\s\(\)\]\}\-,;:\.\!\?\u2014])'
+        text = re.sub(pattern, r"\1__B_START__\2__B_END__", text, flags=re.IGNORECASE)
+        
+    # 3. Translate placeholders to markdown bold asterisks
+    text = text.replace("__B_START__", "**").replace("__B_END__", "**")
+    # Clean up multiple asterisks
+    text = text.replace("******", "**").replace("****", "**")
+    return text
+
+
 def clean_except_bold(text: str) -> str:
     """Master text cleaner: strips emojis and markdown except bold ** markers."""
     if not text:
@@ -610,7 +672,9 @@ def clean_except_bold(text: str) -> str:
 
 def _add_runs_with_bold(p, text: str, default_font="Calibri", default_size=10.5, default_color=None, force_bold=False, force_italic=False):
     """Parses text for **bold** markup and adds it as formatted runs to paragraph p."""
-    cleaned_text = clean_except_bold(text)
+    # Apply auto-bolding engine first to format metrics and technologies
+    bolded_text = auto_bold_text(text)
+    cleaned_text = clean_except_bold(bolded_text)
     parts = cleaned_text.split("**")
     is_bold = False
     for part in parts:

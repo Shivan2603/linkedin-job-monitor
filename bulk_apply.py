@@ -374,6 +374,7 @@ def apply_to_url(page, url: str) -> tuple[bool, any]:
         raise
     except Exception as e:
         logger.error(f"Failed to process {url[:60]}: {e}", SITE)
+        remove_url_from_file(url)
 
     return False, page
 
