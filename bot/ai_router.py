@@ -293,7 +293,19 @@ def ai_complete(system_prompt: str, user_prompt: str,
 
     providers = []
 
-    # 1. Groq — Primary (LPU-powered, ultra-low latency ~0.3s).
+    # 1. Ollama Cloud (HF Spaces) — Primary. Zero rate limits, private, 100% free.
+    providers.append((
+        "Ollama-Cloud",
+        lambda: ollama_cloud_complete(system_prompt, user_prompt, max_tokens)
+    ))
+
+    # 2. Gemini — Fallback. Free, fast cloud.
+    providers.append((
+        "Gemini",
+        lambda: gemini_complete(combined, max_tokens)
+    ))
+
+    # 3. Groq — Fallback. Fast cloud, instant failover on 429.
     if task == "form_fill":
         providers.append((
             "Groq-Fast",
@@ -306,22 +318,10 @@ def ai_complete(system_prompt: str, user_prompt: str,
             lambda: groq_complete(system_prompt, user_prompt, max_tokens=max_tokens)
         ))
 
-    # 2. Gemini — Blazing fast cloud (Gemini 2.0 Flash / Flash-Lite, ~0.8s). Free up to 15 RPM.
-    providers.append((
-        "Gemini",
-        lambda: gemini_complete(combined, max_tokens)
-    ))
-
-    # 3. OpenRouter — Fallback free cloud model pool.
+    # 4. OpenRouter — Final Fallback. Free cloud model pool.
     providers.append((
         "OpenRouter",
         lambda: openrouter_complete(system_prompt, user_prompt, max_tokens=max_tokens)
-    ))
-
-    # 4. Ollama Cloud (HF Spaces) — Final fallback (zero cost, but runs on slower CPU space).
-    providers.append((
-        "Ollama-Cloud",
-        lambda: ollama_cloud_complete(system_prompt, user_prompt, max_tokens)
     ))
 
     # 3. Try each provider
