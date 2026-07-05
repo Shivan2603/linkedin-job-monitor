@@ -12,10 +12,52 @@ from bot.ai_resume import tailor_resume
 from bot.ai_agent_filler import fill_form_with_ai
 from bot.utils import logger
 from bot.utils.logger import record_application, is_already_applied, git_sync
-from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count
+from bot.utils.safety import safe_browser_context, check_daily_limit, increment_daily_count, browser_manager
+from bot.utils.learning import learn_from_filled_form
 
 SITE = "company_careers"
 MIN_MATCH = int(os.getenv("MIN_MATCH_SCORE", "60"))
+BULK_FILE = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
+
+def load_bulk_urls() -> list:
+    """Reads URLs from the bulk file. Creates the file if it doesn't exist."""
+    if not os.path.exists(BULK_FILE):
+        os.makedirs(os.path.dirname(BULK_FILE), exist_ok=True)
+        with open(BULK_FILE, "w", encoding="utf-8") as f:
+            f.write("# Paste job URLs here (one per line). Lines starting with # are ignored.\n")
+            f.write("# Example:\n# https://jobs.lever.co/company/job-id\n")
+        logger.info(f"Created empty bulk URLs file at: {BULK_FILE}", SITE)
+        return []
+        
+    urls = []
+    with open(BULK_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                urls.append(line)
+    return urls
+
+def normalize_url_for_compare(url: str) -> str:
+    """Helper to normalize URLs for comparison by stripping protocol, www, query params, and trailing slashes."""
+    if not url:
+        return ""
+    url = re.sub(r'^https?://', '', url.strip().lower())
+    url = url.replace('www.', '')
+    url = url.split('?')[0]
+    url = url.rstrip('/')
+    return url
+
+def remove_url_from_file(url: str):
+    """Removes the processed URL from the text file so the user can see remaining tasks."""
+    if not os.path.exists(BULK_FILE):
+        return
+    norm_target = normalize_url_for_compare(url)
+    with open(BULK_FILE, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+    with open(BULK_FILE, "w", encoding="utf-8") as f:
+        for line in lines:
+            if normalize_url_for_compare(line.strip()) != norm_target:
+                f.write(line)
 
 # ─── DYNAMIC SEARCH QUERIES — massive global coverage ───────────────────────
 def _build_search_queries() -> list:
@@ -196,8 +238,32 @@ def run_company_careers_bot():
         page = context.pages[0] if context.pages else context.new_page()
 
         applied = 0
-        job_urls = []
 
+        # Step 0: Process URLs from bulk_urls.txt (last to first)
+        bulk_urls = load_bulk_urls()
+        if bulk_urls:
+            logger.info(f"Loaded {len(bulk_urls)} job URLs from bulk upload list. Processing last-to-first...", SITE)
+            # Process in reverse order (from last to first)
+            for url in reversed(bulk_urls):
+                if not check_daily_limit(SITE):
+                    logger.info("Company Careers daily limit reached", SITE)
+                    break
+                try:
+                    # Apply to this career page
+                    result = _apply_to_career_page(page, url)
+                    if result:
+                        applied += 1
+                        increment_daily_count(SITE)
+                        _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 8)
+                    # Always remove the URL from bulk list once processed (either success or failure/skip)
+                    remove_url_from_file(url)
+                except Exception as e:
+                    logger.warn(f"Error processing bulk URL {url[:80]}…: {e}", SITE)
+                    remove_url_from_file(url)
+                    continue
+
+        # Now search and apply further
+        job_urls = []
         try:
             # Step 1: Discover job URLs via search engines
             discovered = _discover_jobs_from_google(page)
@@ -443,7 +509,15 @@ def _ai_parse_job_and_company(page_title: str, url: str) -> tuple:
             raw = m.group(1).strip() if m else raw
             
         data = json.loads(raw)
-        return data.get("job_title", "").strip(), data.get("company", "").strip()
+        job_t = data.get("job_title", "").strip()
+        co = data.get("company", "").strip()
+        
+        # If company name is a known job board or placeholder, force it to empty so fallback handles it
+        job_boards = {"linkedin", "indeed", "jobstreet", "monster", "foundit", "shine", "careers", "jobs", "unknown company", "unknown"}
+        if co.lower().strip() in job_boards:
+            co = ""
+            
+        return job_t, co
     except Exception:
         return "", ""
 
@@ -518,16 +592,49 @@ def _apply_to_career_page(page, url: str) -> bool:
         # Use AI to fill all form fields intelligently including file/resume uploads
         success = fill_form_with_ai(page, site=SITE, resume_path=resume_path)
 
-        if not success:
-            logger.warn(f"AI form fill failed for {company} — {job_t}", SITE)
+        # Interactive manual review
+        print("\n" + "*" * 70)
+        print("ACTION REQUIRED (TAKE CONTROL):")
+        print(f"Form has been pre-filled for: {company} — {job_t}")
+        print("Please review the browser page, fill any missing fields, and solve CAPTCHAs.")
+        print("When you are done:")
+        print("  - Press ENTER to let the bot submit the form and learn your answers.")
+        print("  - Type 's' and press Enter to SKIP this application.")
+        print("  - Type 'd' and press Enter if you manually clicked submit yourself.")
+        print("*" * 70 + "\n")
+
+        # Disconnect to allow manual action/CAPTCHA solving
+        browser_manager.disconnect()
+        user_choice = input("Your choice (Enter / s / d): ").strip().lower()
+        browser_manager.reconnect()
+        page = browser_manager.get_active_page()
+
+        if user_choice == 's':
+            logger.info(f"Skipped application for: {company} — {job_t}", SITE)
             return False
 
-        # Look for submit button
+        # Learn from filled form AFTER manual review (capture user inputs)
+        try:
+            learn_from_filled_form(page, SITE)
+        except Exception as e:
+            logger.warn(f"Post-learning failed: {e}", SITE)
+
+        if user_choice == 'd':
+            logger.success(f"Manually submitted and recorded: {company} — {job_t}", SITE)
+            record_application(
+                site=SITE, company=company, role=job_t, location="Remote/Various",
+                job_url=url, match_score=match_score, resume_used=resume_path,
+            )
+            git_sync()
+            return True
+
+        # Click submit button on behalf of user
         submit_btn = None
         for sel in [
             'button[type="submit"]', 'input[type="submit"]',
             'button:has-text("Submit Application")', button_text_match("Submit Application"),
-            'button:has-text("Apply")', 'button:has-text("Send Application")'
+            'button:has-text("Apply")', 'button:has-text("Send Application")',
+            'button:has-text("Submit")', '#submit_app'
         ]:
             try:
                 el = page.locator(sel).first
@@ -538,8 +645,15 @@ def _apply_to_career_page(page, url: str) -> bool:
                 continue
 
         if submit_btn:
-            submit_btn.click()
-            _human_delay(3, 5)
+            try:
+                logger.info("Clicking submit button...", SITE)
+                submit_btn.click()
+                _human_delay(3, 5)
+                logger.success(f"Submitted successfully: {company} — {job_t}", SITE)
+            except Exception as e:
+                logger.error(f"Failed to click submit button: {e}", SITE)
+        else:
+            logger.warn("Submit button not found. Assuming you clicked submit manually.", SITE)
 
         record_application(
             site=SITE, company=company, role=job_t, location="Remote/Various",

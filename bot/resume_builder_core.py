@@ -590,22 +590,53 @@ def _section_rule(paragraph):
     pBdr.append(bottom)
 
 
+def clean_except_bold(text: str) -> str:
+    """Master text cleaner: strips emojis and markdown except bold ** markers."""
+    if not text:
+        return text
+    # Strip emojis
+    text = strip_emojis(text)
+    # Strip other markdown markers
+    text = re.sub(r'_{1,3}(.*?)_{1,3}', r'\1', text)
+    text = re.sub(r'`{1,3}(.*?)`{1,3}', r'\1', text)
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'~~(.*?)~~', r'\1', text)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    text = re.sub(r'^>+\s?', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^[\-\*]\s+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'  +', ' ', text)
+    return text.strip()
+
+
+def _add_runs_with_bold(p, text: str, default_font="Calibri", default_size=10.5, default_color=None, force_bold=False, force_italic=False):
+    """Parses text for **bold** markup and adds it as formatted runs to paragraph p."""
+    cleaned_text = clean_except_bold(text)
+    parts = cleaned_text.split("**")
+    is_bold = False
+    for part in parts:
+        if not part:
+            is_bold = not is_bold
+            continue
+        run = p.add_run(part)
+        run.font.name = default_font
+        run.font.size = Pt(default_size)
+        if default_color:
+            run.font.color.rgb = RGBColor(*default_color) if isinstance(default_color, tuple) else default_color
+        run.bold = force_bold or is_bold
+        run.italic = force_italic
+        is_bold = not is_bold
+
+
 def _p(doc, text="", bold=False, italic=False, size=10.5,
        align=WD_ALIGN_PARAGRAPH.LEFT, sb=0, sa=3, ls=1.15, color=None):
-    """Add a plain paragraph. Strips markdown AND emojis. No tables, no columns, no icons."""
+    """Add a plain paragraph. Supports markdown **bold** rendering. No tables, no columns."""
     p = doc.add_paragraph()
     p.alignment = align
     p.paragraph_format.space_before = Pt(sb)
     p.paragraph_format.space_after = Pt(sa)
     p.paragraph_format.line_spacing = ls
     if text:
-        run = p.add_run(clean(text))   # clean() strips markdown + emojis
-        run.bold = bold
-        run.italic = italic
-        run.font.name = "Calibri"
-        run.font.size = Pt(size)
-        if color:
-            run.font.color.rgb = RGBColor(*color) if isinstance(color, tuple) else color
+        _add_runs_with_bold(p, text, default_font="Calibri", default_size=size, default_color=color, force_bold=bold, force_italic=italic)
     return p
 
 
@@ -695,16 +726,21 @@ def _heading(doc, title: str, space_before: float = 10.0, space_after: float = 4
 
 
 def _bullet(doc, text: str, indent_pt: int = 22, space_after: float = 2.0, line_spacing: float = 1.15, font_size: float = 10.5):
-    """Plain bullet paragraph — strips markdown AND emojis, no table cells."""
+    """Plain bullet paragraph — supports markdown **bold** rendering, no table cells."""
     p = doc.add_paragraph()
     p.paragraph_format.left_indent = Pt(indent_pt)
     p.paragraph_format.first_line_indent = Pt(-10)   # hanging indent
     p.paragraph_format.space_after = Pt(space_after)
     p.paragraph_format.line_spacing = line_spacing
-    run = p.add_run(f"\u2022  {clean(text)}")  # bullet + double-space gap
-    run.font.name = "Calibri"
-    run.font.size = Pt(font_size)
-    run.font.color.rgb = GRAY  # body text in dark gray (not pure black — more premium)
+    
+    # Bullet point run (normal bullet style, dark gray)
+    run_bullet = p.add_run("\u2022  ")
+    run_bullet.font.name = "Calibri"
+    run_bullet.font.size = Pt(font_size)
+    run_bullet.font.color.rgb = GRAY
+    
+    # Body text runs with bold parsing
+    _add_runs_with_bold(p, text, default_font="Calibri", default_size=font_size, default_color=GRAY)
 
 
 def build_resume_docx(config: ResumeConfig) -> str:

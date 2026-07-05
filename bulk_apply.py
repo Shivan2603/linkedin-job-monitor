@@ -34,15 +34,26 @@ def load_bulk_urls() -> list:
                 urls.append(line)
     return urls
 
+def normalize_url_for_compare(url: str) -> str:
+    """Helper to normalize URLs for comparison by stripping protocol, www, query params, and trailing slashes."""
+    if not url:
+        return ""
+    url = re.sub(r'^https?://', '', url.strip().lower())
+    url = url.replace('www.', '')
+    url = url.split('?')[0]
+    url = url.rstrip('/')
+    return url
+
 def remove_url_from_file(url: str):
     """Removes the processed URL from the text file so the user can see remaining tasks."""
     if not os.path.exists(BULK_FILE):
         return
+    norm_target = normalize_url_for_compare(url)
     with open(BULK_FILE, "r", encoding="utf-8") as f:
         lines = f.readlines()
     with open(BULK_FILE, "w", encoding="utf-8") as f:
         for line in lines:
-            if line.strip() != url:
+            if normalize_url_for_compare(line.strip()) != norm_target:
                 f.write(line)
 
 def is_block_page(page) -> bool:
@@ -138,7 +149,15 @@ def _ai_parse_job_and_company(page_title: str, url: str) -> tuple:
             raw = m.group(1).strip() if m else raw
             
         data = json.loads(raw)
-        return data.get("job_title", "").strip(), data.get("company", "").strip()
+        job_t = data.get("job_title", "").strip()
+        co = data.get("company", "").strip()
+        
+        # If company name is a known job board or placeholder, force it to empty so fallback handles it
+        job_boards = {"linkedin", "indeed", "jobstreet", "monster", "foundit", "shine", "careers", "jobs", "unknown company", "unknown"}
+        if co.lower().strip() in job_boards:
+            co = ""
+            
+        return job_t, co
     except Exception:
         return "", ""
 
