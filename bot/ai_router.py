@@ -226,9 +226,9 @@ def openrouter_complete(system_prompt: str, user_prompt: str,
 
 # ─── OLLAMA CLOUD (HuggingFace Spaces) ───────────────────────────────────────
 def _is_ollama_cloud_up() -> bool:
-    """Ping the cloud Ollama health endpoint."""
+    """Ping the cloud Ollama health endpoint. 3s so sleeping spaces are skipped fast."""
     try:
-        r = requests.get(f"{OLLAMA_CLOUD_URL}/api/tags", timeout=5)
+        r = requests.get(f"{OLLAMA_CLOUD_URL}/api/tags", timeout=3)
         return r.status_code in [200, 204]
     except Exception:
         return False
@@ -239,7 +239,14 @@ def ollama_cloud_complete(system_prompt: str, user_prompt: str,
     Calls the cloud-deployed Ollama on Hugging Face Spaces.
     Endpoint: OLLAMA_CLOUD_URL (default: shivan2603-jcode-ollama-cloud.hf.space)
     Deployed via: E:\\SivaShankar\\ollama-cloud (Docker → HF Spaces)
+
+    Fail-fast: health-check (3 s) + generate timeout (15 s) so the router
+    falls through instantly to Gemini/Groq when the HF Space is sleeping.
     """
+    # Fast health check — skip entirely if the space is sleeping/unreachable
+    if not _is_ollama_cloud_up():
+        raise Exception("Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping")
+
     combined = f"{system_prompt}\n\n{user_prompt}"
     generate_url = f"{OLLAMA_CLOUD_URL}/api/generate"
 
@@ -253,7 +260,7 @@ def ollama_cloud_complete(system_prompt: str, user_prompt: str,
                     "stream": False,
                     "options": {"num_predict": max_tokens, "temperature": 0.3},
                 },
-                timeout=120,
+                timeout=15,   # was 120 — fail fast so Gemini/Groq take over quickly
             )
             if resp.status_code == 404:
                 logger.warn(f"Ollama Cloud: model {model} not pulled yet, trying next...", "ai")
