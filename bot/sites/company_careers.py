@@ -430,9 +430,9 @@ def run_company_careers_bot():
                         q = tc.get("search_query")
                         if not q: continue
                         logger.info(f"AI Target Company Query: {q}", SITE)
-                        ddg_url = f"https://duckduckgo.com/?q={quote(q)}&ia=web"
-                        page.goto(ddg_url, wait_until="domcontentloaded", timeout=20000)
-                        _human_delay(4, 7)
+                        google_url = f"https://www.google.com/search?q={quote(q)}&num=5"
+                        page.goto(google_url, wait_until="domcontentloaded", timeout=20000)
+                        _human_delay(2, 4)
                         links = page.evaluate("""
                             () => Array.from(document.querySelectorAll('a[href]'))
                                        .map(el => el.href)
@@ -485,10 +485,8 @@ def run_company_careers_bot():
 
 def _discover_jobs_from_google(page) -> list:
     """
-    Discovers visa-sponsorship job URLs via search engines.
-    PRIMARY:   DuckDuckGo — no bot detection, no CAPTCHA.
-    SECONDARY: Bing       — minimal bot detection.
-    Google is intentionally NOT used (triggers CAPTCHA instantly with automated traffic).
+    Discovers visa-sponsorship job URLs via Google Search.
+    Uses Chromium + playwright-stealth to prevent bot detection and CAPTCHAs.
     Limits to 6 queries per session with 8-15s human-paced delays.
     """
     urls = []
@@ -502,21 +500,10 @@ def _discover_jobs_from_google(page) -> list:
     else:
         queries_to_run = random.sample(SEARCH_QUERIES, min(6, len(SEARCH_QUERIES)))
 
-    # Search engine rotation: DuckDuckGo first, Bing second — NO Google
-    ENGINES = ["duckduckgo", "bing"]
-
-    for i, query in enumerate(queries_to_run):
-        engine = ENGINES[i % len(ENGINES)]
-
+    for query in queries_to_run:
         try:
-            if engine == "duckduckgo":
-                # DuckDuckGo — best for automated searches, no CAPTCHA
-                search_url = f"https://duckduckgo.com/?q={quote(query)}&ia=web"
-            else:
-                # Bing — minimal bot detection
-                search_url = f"https://www.bing.com/search?q={quote(query)}&count=20"
-
-            logger.info(f"[{engine.upper()}] {query[:70]}...", SITE)
+            search_url = f"https://www.google.com/search?q={quote(query)}"
+            logger.info(f"[GOOGLE] {query[:70]}...", SITE)
             page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
 
             # Human-like paced delay — 8 to 15 seconds between searches
@@ -577,7 +564,7 @@ def _discover_jobs_from_google(page) -> list:
             logger.info(f"  → {len(apply_links)} job links found", SITE)
 
         except Exception as e:
-            logger.warn(f"Search failed ({engine}): {str(e)[:80]}", SITE)
+            logger.warn(f"Search failed (Google): {str(e)[:80]}", SITE)
 
     # ── Direct Lever & Greenhouse public job APIs (zero CAPTCHA risk) ──────────
     # These are official public-facing APIs designed for scraping
