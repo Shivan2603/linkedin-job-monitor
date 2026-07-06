@@ -128,9 +128,10 @@ def main():
             print("=" * 65)
             print("  JOB SITE BOTS:")
             print("  1. LinkedIn Bot       (Easy Apply + Freelance + External Links)")
-            print("  2. Careers/Bulk Bot   (Processes bulk_urls.txt interactively)")
+            print("  2. Careers Bot        (Auto-search & apply on company portals)")
             print("  3. Indeed Bot         (Multi-Country automation)")
             print("  4. All Sites Cycle    (Careers → LinkedIn → Others, shuffled)")
+            print("  9. Bulk Apply Bot     (Process bulk_urls.txt one-by-one)")
             print("")
             print("  AGENTS:")
             print("  5. Cold Outreach Agent (24/7 Job Finder + Cold Emailer)")
@@ -161,10 +162,10 @@ def main():
                 break
                 
         elif choice == "2":
-            logger.info("Running Careers Bot (Bulk Apply)...", "main")
+            logger.info("Running Careers Bot (Search & Auto-Apply)...", "main")
             try:
-                from bulk_apply import main as run_bulk_apply
-                run_bulk_apply()
+                from bot.sites.company_careers import run_company_careers_bot
+                run_company_careers_bot()
             except Exception as e:
                 logger.error(f"Careers Bot error: {e}", "main")
             if not sys.stdin.isatty():
@@ -283,8 +284,19 @@ def main():
             if not sys.stdin.isatty():
                 break
 
+        elif choice == "9":
+            logger.info("Running Bulk Apply Bot (bulk_urls.txt)...", "main")
+            try:
+                from bulk_apply import main as run_bulk_apply
+                run_bulk_apply()
+            except Exception as e:
+                logger.error(f"Bulk Apply Bot error: {e}", "main")
+            if not sys.stdin.isatty():
+                break
+
         else:
-            print("Invalid selection. Please choose 1-8.")
+            print("Invalid selection. Please choose 1-9.")
+
 
 
 if __name__ == "__main__":
