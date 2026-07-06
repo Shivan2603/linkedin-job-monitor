@@ -592,8 +592,11 @@ def _section_rule(paragraph):
 
 # ─── MASTER AUTO-BOLDING PATTERNS & ENGINE ────────────────────────────────────
 METRIC_PATTERNS = [
+    r'\b\d+\+?\s+years\s+of\s+experience\b',
+    r'\b\d+\+?\s+years\b',
+    r'\b\d+\+?\s+yrs\b',
     r'\bsub-\d+ms\b',
-    r'\b\d+(?:\.\d+)?(?:%|\+|x|ms)\b',
+    r'\b\d+(?:\.\d+)?(?:%|\+|x|ms)(?!\w)',
     r'\b\d+\s+junior\s+engineers\b',
     r'\b\d+\s+microservices\b',
     r'\b\d+\s+production\s+microservices\b',
@@ -629,6 +632,8 @@ KEYWORDS = [
     r'stored\s+procedures', r'azure\s+openai', r'pgvector'
 ]
 
+DYNAMIC_KEYWORDS = []
+
 def auto_bold_text(text: str) -> str:
     """Auto-bold key metrics and technologies inside text by wrapping them in double asterisks."""
     if not text:
@@ -640,8 +645,9 @@ def auto_bold_text(text: str) -> str:
     for pat in METRIC_PATTERNS:
         text = re.sub(pat, lambda m: f"__B_START__{m.group(0)}__B_END__", text, flags=re.IGNORECASE)
         
-    # 2. Bold core keywords
-    for kw in KEYWORDS:
+    # 2. Bold core keywords and dynamically extracted skills/keywords
+    combined_keywords = KEYWORDS + DYNAMIC_KEYWORDS
+    for kw in combined_keywords:
         pattern = r'(^|[\s\(\[\{\-,;:\u2014])(' + kw + r')(?=$|[\s\(\)\]\}\-,;:\.\!\?\u2014])'
         text = re.sub(pattern, r"\1__B_START__\2__B_END__", text, flags=re.IGNORECASE)
         
@@ -817,6 +823,21 @@ def build_resume_docx(config: ResumeConfig) -> str:
 
     summary    = validate_summary(config.summary, config.job_title, config.company)
     skills     = validate_skills(config.skills)
+    
+    # Dynamically populate keywords to bold from configured skills
+    global DYNAMIC_KEYWORDS
+    extracted_skills = []
+    if skills:
+        for cat, items in skills.items():
+            for item in items:
+                cleaned = item.strip()
+                if cleaned:
+                    extracted_skills.append(cleaned)
+    # Deduplicate and sort by length descending to match longer keywords first
+    extracted_skills = sorted(list(set(extracted_skills)), key=len, reverse=True)
+    # Regex escape them
+    DYNAMIC_KEYWORDS = [re.escape(s) for s in extracted_skills]
+
     jobs       = validate_jobs(config.jobs)
     projects   = validate_projects(config.projects)
     certs      = [clean(c) for c in config.certifications]
