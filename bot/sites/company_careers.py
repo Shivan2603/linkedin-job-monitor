@@ -44,6 +44,8 @@ VISA_GLOBAL_LOCATIONS = [
     "UAE", "Dubai", "Abu Dhabi",
     # New Zealand (Skilled Migrant)
     "New Zealand", "Auckland",
+    # Malaysia (Employment Pass)
+    "Malaysia", "Kuala Lumpur", "KL", "Penang",
     # Remote / Global
     "Remote", "Worldwide",
 ]
@@ -55,43 +57,128 @@ VISA_SPONSORSHIP_TERMS = [
     "work authorization", "employment pass", "global mobility",
 ]
 
-# ─── TAKE CONTROL ANYTIME (background stdin watcher) ─────────────────────────
-_control_event = threading.Event()  # Set when user types 'c'
+# ─── IN-BROWSER CONTROL WIDGET (identical to LinkedIn bot) ──────────────────
+# Users click a button ON THE PAGE to pause/resume — no need to type in terminal.
+
+def ensure_control_widget(page):
+    """
+    Injects the same premium floating glassmorphic control widget used by the LinkedIn bot.
+    Shows a PAUSE / RESUME button fixed in the top-right corner of every career page.
+    When paused the bot polls until the user clicks RESUME — handles CAPTCHAs seamlessly.
+    """
+    try:
+        exists = page.evaluate("() => !!document.getElementById('jcode-bot-controller')")
+        if exists:
+            return
+        script = """
+        (() => {
+            if (document.getElementById('jcode-bot-controller')) return;
+
+            const widget = document.createElement('div');
+            widget.id = 'jcode-bot-controller';
+            widget.style.position = 'fixed';
+            widget.style.top = '12px';
+            widget.style.right = '80px';
+            widget.style.zIndex = '9999999';
+            widget.style.background = 'rgba(23, 23, 23, 0.88)';
+            widget.style.backdropFilter = 'blur(12px)';
+            widget.style.webkitBackdropFilter = 'blur(12px)';
+            widget.style.border = '1px solid rgba(255,255,255,0.15)';
+            widget.style.borderRadius = '12px';
+            widget.style.padding = '10px 16px';
+            widget.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+            widget.style.fontSize = '13px';
+            widget.style.color = '#ffffff';
+            widget.style.boxShadow = '0 8px 32px 0 rgba(0,0,0,0.37)';
+            widget.style.display = 'flex';
+            widget.style.alignItems = 'center';
+            widget.style.gap = '12px';
+            widget.style.userSelect = 'none';
+            widget.style.transition = 'all 0.3s ease';
+
+            if (sessionStorage.getItem('jcode_bot_paused') === null)
+                sessionStorage.setItem('jcode_bot_paused', 'false');
+            window.bot_paused = sessionStorage.getItem('jcode_bot_paused') === 'true';
+
+            const updateWidget = () => {
+                const statusDotColor = window.bot_paused ? '#ef4444' : '#22c55e';
+                const statusText = window.bot_paused ? '🔴 USER CONTROL (PAUSED)' : '🟢 BOT ACTIVE';
+                const btnText = window.bot_paused ? 'RESUME BOT' : 'PAUSE BOT (TAKE CONTROL)';
+                const btnBg   = window.bot_paused ? '#22c55e' : '#ef4444';
+                widget.innerHTML = `
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span style="height:10px;width:10px;background:${statusDotColor};border-radius:50%;display:inline-block;box-shadow:0 0 8px ${statusDotColor};"></span>
+                        <strong style="font-weight:600;font-size:12px;letter-spacing:0.5px;">${statusText}</strong>
+                    </div>
+                    <button id="jcode-toggle-btn" style="background:${btnBg};color:white;border:none;padding:6px 12px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:11px;transition:opacity 0.2s;">
+                        ${btnText}
+                    </button>
+                `;
+                const btn = widget.querySelector('#jcode-toggle-btn');
+                btn.addEventListener('click', () => {
+                    window.bot_paused = !window.bot_paused;
+                    sessionStorage.setItem('jcode_bot_paused', window.bot_paused ? 'true' : 'false');
+                    updateWidget();
+                });
+                btn.addEventListener('mouseenter', () => btn.style.opacity = '0.85');
+                btn.addEventListener('mouseleave', () => btn.style.opacity = '1');
+            };
+            updateWidget();
+            document.body.appendChild(widget);
+        })();
+        """
+        page.evaluate(script)
+    except Exception:
+        pass
+
+
+def check_pause(page):
+    """
+    Injects the widget on every page, then checks if the user clicked Pause.
+    If paused, blocks until they click Resume — allows CAPTCHA solving, manual review, etc.
+    """
+    ensure_control_widget(page)
+    try:
+        page.evaluate("() => { if (sessionStorage.getItem('jcode_bot_paused') === 'true') { window.bot_paused = true; } }")
+        paused = page.evaluate("() => window.bot_paused")
+        if paused:
+            logger.info("⏸️ Bot PAUSED by user (solve CAPTCHA / review form). Waiting...", SITE)
+            print("\n" + "=" * 65)
+            print("  \u26a0\ufe0f  BOT PAUSED \u2014 YOU HAVE COMPLETE BROWSER CONTROL")
+            print("  Solve CAPTCHAs, fill missing fields, navigate freely.")
+            print("  Click the green 'RESUME BOT' button in the page to continue.")
+            print("=" * 65 + "\n")
+            while True:
+                time.sleep(0.5)
+                ensure_control_widget(page)
+                still_paused = page.evaluate("() => window.bot_paused")
+                if not still_paused:
+                    logger.info("▶️ Bot RESUMED by user.", SITE)
+                    break
+    except Exception:
+        pass
+
+
+# ─── TERMINAL SHORTCUT — type 'c'+Enter to instantly pause ───────────────────
+_control_event = threading.Event()
 
 def _start_control_watcher():
-    """Starts a background daemon thread that watches stdin for 'c' to trigger take-control."""
+    """Secondary: background thread watches stdin for 'c' — sets _control_event."""
     def _watcher():
-        print("\n[BOT] Type 'c' + Enter at ANY TIME to take control of the browser.")
+        print("[BOT] Terminal shortcut: type 'c' + Enter to pause bot instantly.")
         while True:
             try:
                 line = sys.stdin.readline()
                 if line.strip().lower() == 'c':
                     _control_event.set()
-                    print("[BOT] ⚡ Take-control flagged — bot will pause at next safe point.")
+                    print("[BOT] \u26a1 Pause flagged \u2014 bot will pause at next safe point.")
             except Exception:
                 break
     t = threading.Thread(target=_watcher, daemon=True)
     t.start()
 
-def _check_take_control(page):
-    """If the user typed 'c', disconnect the browser and wait for them to hand back control."""
-    if _control_event.is_set():
-        _control_event.clear()
-        print("\n" + "=" * 70)
-        print("⚡  YOU HAVE CONTROL — Browser is now live for your input.")
-        print("   Fill forms, solve CAPTCHAs, navigate to any page you want.")
-        print("   When finished, press ENTER to hand control back to the bot.")
-        print("=" * 70)
-        browser_manager.disconnect()
-        try:
-            input("Press ENTER to return control to the bot: ")
-        except Exception:
-            pass
-        browser_manager.reconnect()
-        print("[BOT] Control returned — resuming automation.\n")
 
-
-# ─── DYNAMIC SEARCH QUERIES — massive global visa sponsorship coverage ────────
+# ─── DYNAMIC SEARCH QUERIES \u2014 massive global visa sponsorship coverage \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 
 def _build_search_queries() -> list:
     """Build Google search queries prioritizing GLOBAL VISA SPONSORSHIP roles matching the .NET/C# profile."""
@@ -116,9 +203,9 @@ def _build_search_queries() -> list:
         for loc in ["New York", "San Francisco", "Seattle", "Austin"]:
             queries.append(f'site:lever.co OR site:greenhouse.io {role} "{loc}" "h1b" OR "visa sponsorship" OR "will sponsor"')
 
-        # ── Canada / Australia / Germany / Singapore / Netherlands ──
-        for loc in ["Canada", "Australia", "Germany", "Singapore", "Netherlands", "Ireland", "Dubai"]:
-            queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "{loc}" "visa" OR "relocation" OR "work permit"')
+        # ── Canada / Australia / Germany / Singapore / Malaysia / Netherlands ──
+        for loc in ["Canada", "Australia", "Germany", "Singapore", "Malaysia", "Kuala Lumpur", "Netherlands", "Ireland", "Dubai"]:
+            queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "{loc}" "visa" OR "relocation" OR "work permit" OR "employment pass"')
 
         # ── Remote / global visa sponsorship ──
         queries.append(f'{role} "visa sponsorship" "remote" -site:linkedin.com -site:indeed.com')
@@ -341,8 +428,11 @@ def run_company_careers_bot():
 
             # Step 4: Apply to each discovered URL (visa-first order)
             for url in job_urls:
-                # Check if user wants to take control before navigating to each new job
-                _check_take_control(page)
+                # Check widget pause state before each new job (terminal shortcut OR in-browser click)
+                check_pause(page)
+                if _control_event.is_set():
+                    _control_event.clear()
+                    check_pause(page)  # trigger full pause-wait via widget
 
                 if not check_daily_limit(SITE):
                     logger.info("Company Careers daily limit reached", SITE)
@@ -568,6 +658,8 @@ def _apply_to_career_page(page, url: str) -> bool:
 
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        # Inject control widget immediately so user can pause/solve CAPTCHA on any page
+        check_pause(page)
         _human_delay(2, 4)
 
         # Check for Cloudflare / Access Denied block
