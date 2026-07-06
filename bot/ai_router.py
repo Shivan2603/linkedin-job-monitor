@@ -125,6 +125,8 @@ def groq_complete(system_prompt: str, user_prompt: str,
 GEMINI_MODELS = [
     "gemini-2.0-flash",       # Free, fast, generous quota
     "gemini-2.0-flash-lite",  # Free, lighter
+    "gemini-1.5-flash",       # Fast fallback
+    "gemini-1.5-pro",         # High-quality fallback
 ]
 
 def gemini_complete(prompt: str, max_tokens: int = 2048) -> str:
@@ -280,6 +282,9 @@ def ollama_cloud_complete(system_prompt: str, user_prompt: str,
 
 
 # ─── SMART ROUTER WITH CACHE ─────────────────────────────────────────────────
+PROVIDER_COOLDOWN = {}
+COOLDOWN_DURATION = 300  # 5 minutes
+
 def ai_complete(system_prompt: str, user_prompt: str,
                 task: str = "general", max_tokens: int = 2048) -> str:
     """
@@ -331,9 +336,18 @@ def ai_complete(system_prompt: str, user_prompt: str,
         lambda: openrouter_complete(system_prompt, user_prompt, max_tokens=max_tokens)
     ))
 
+    # Filter out providers under active cooldown
+    active_providers = []
+    current_time = time.time()
+    for name, fn in providers:
+        cooldown_until = PROVIDER_COOLDOWN.get(name, 0)
+        if current_time - cooldown_until < COOLDOWN_DURATION:
+            continue
+        active_providers.append((name, fn))
+
     # 3. Try each provider
     last_error = None
-    for name, fn in providers:
+    for name, fn in active_providers:
         try:
             result = fn()
             # Cache successful tailor/ats results
@@ -346,6 +360,12 @@ def ai_complete(system_prompt: str, user_prompt: str,
         except Exception as e:
             logger.warn(f"{name} failed: {str(e)[:100]}", "ai")
             last_error = e
+            
+            # Put under cooldown on quota/429/connection issues
+            err_str = str(e).lower()
+            if any(term in err_str for term in ["429", "quota", "limit", "sleeping", "unreachable", "offline", "connectionerror"]):
+                PROVIDER_COOLDOWN[name] = time.time()
+                logger.warn(f"⚠️ Provider {name} placed on 5-minute cooldown to avoid retry lag.", "ai")
             continue
 
     raise Exception(f"All AI providers failed (Cloud). Last: {last_error}")

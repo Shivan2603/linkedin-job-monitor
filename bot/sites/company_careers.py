@@ -266,7 +266,7 @@ def _ai_generate_target_companies() -> list:
             "Return EXACTLY a JSON array of objects: [{\"company\": \"Name\", \"search_query\": \"query\"}]"
         )
         user = f"Locations: {LOCATIONS}"
-        raw = ai_complete(system, user, task="form_fill", max_tokens=600)
+        raw = ai_complete(system, user, task="form_fill", max_tokens=1000)
         
         raw = raw.strip()
         if "```json" in raw:
@@ -277,10 +277,36 @@ def _ai_generate_target_companies() -> list:
             m = re.search(r'(\[.*?\])', raw, re.DOTALL)
             raw = m.group(1).strip() if m else raw
             
-        return json.loads(raw)
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            # Fallback parsing in case of truncation or malformed trailing bracket
+            if raw.startswith("[") and not raw.endswith("]"):
+                # Try to close the array and objects
+                raw_fixed = raw.strip()
+                if raw_fixed.endswith("}"):
+                    raw_fixed += "]"
+                elif raw_fixed.endswith(","):
+                    raw_fixed = raw_fixed[:-1] + "]"
+                else:
+                    # Look for the last closed brace
+                    last_brace = raw_fixed.rfind("}")
+                    if last_brace != -1:
+                        raw_fixed = raw_fixed[:last_brace+1] + "]"
+                try:
+                    return json.loads(raw_fixed)
+                except Exception:
+                    pass
+            raise
     except Exception as e:
         logger.warn(f"AI target company generation failed: {e}", SITE)
-        return []
+        # static fallback list to keep going if AI provider fails
+        return [
+            {"company": "Elastic", "search_query": "Elastic .net careers"},
+            {"company": "Figma", "search_query": "Figma .net jobs"},
+            {"company": "Vercel", "search_query": "Vercel software engineer careers"},
+            {"company": "Dream11", "search_query": "Dream11 software engineer careers"}
+        ]
 
 
 SEARCH_QUERIES = _build_search_queries()
@@ -636,11 +662,13 @@ def is_block_page(page) -> bool:
     """Returns True if the page displays a Cloudflare block, Access Denied, or 403/404 error."""
     try:
         title = page.title().lower()
-        if any(term in title for term in ["access denied", "cloudflare", "attention required", "security check", "forbidden", "403"]):
+        if any(term in title for term in ["access denied", "attention required", "security check", "forbidden", "403"]):
             return True
         body_text = page.inner_text("body").lower()
-        if "cloudflare" in body_text and ("ray id" in body_text or "enable javascript" in body_text or "security check" in body_text):
+        # A real Cloudflare challenge has "ray id" or "checking your browser" or "just a moment"
+        if "ray id" in body_text or "checking your browser" in body_text or "just a moment" in body_text:
             return True
+        # Access denied page signatures
         if "access denied" in body_text and "error code 1020" in body_text:
             return True
     except Exception:
