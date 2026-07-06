@@ -458,98 +458,133 @@ def run_company_careers_bot():
 
 
 def _discover_jobs_from_google(page) -> list:
-    """Search Google and DuckDuckGo for job listings using dynamic queries and pagination"""
+    """
+    Discovers visa-sponsorship job URLs via search engines.
+    PRIMARY:   DuckDuckGo — no bot detection, no CAPTCHA.
+    SECONDARY: Bing       — minimal bot detection.
+    Google is intentionally NOT used (triggers CAPTCHA instantly with automated traffic).
+    Limits to 6 queries per session with 8-15s human-paced delays.
+    """
     urls = []
-    
-    # Generate queries dynamically using AI
+
+    # Get AI-generated visa-sponsorship queries; fallback to static list
     ai_queries = _ai_generate_search_queries()
     if ai_queries:
-        logger.info(f"AI: Generated {len(ai_queries)} dynamic search queries.", SITE)
-        queries_to_run = ai_queries[:15]  # Run up to 15 queries
+        logger.info(f"AI: Generated {len(ai_queries)} visa-sponsorship search queries.", SITE)
+        # Run max 6 queries to stay under radar
+        queries_to_run = ai_queries[:6]
     else:
-        # Fallback to random queries
-        queries_to_run = random.sample(SEARCH_QUERIES, min(8, len(SEARCH_QUERIES)))
-        
-    for i, query in enumerate(queries_to_run):
-        # Alternate search engines: Google (even indexes) and DuckDuckGo (odd indexes)
-        engine = "google" if i % 2 == 0 else "duckduckgo"
-        
-        # Paging: Crawl 2 pages per query (e.g. Page 1 and Page 2)
-        for page_num in range(2):
-            try:
-                if engine == "google":
-                    # Google pagination: start=0, start=10
-                    start = page_num * 10
-                    search_url = f"https://www.google.com/search?q={quote(query)}&start={start}"
-                else:
-                    search_url = f"https://duckduckgo.com/?q={quote(query)}"
-                    
-                logger.info(f"Searching {engine} (Page {page_num + 1}): {query[:60]}...", SITE)
-                page.goto(search_url, wait_until="domcontentloaded", timeout=25000)
-                _human_delay(2, 4)
-                
-                if engine == "duckduckgo" and page_num > 0:
-                    page.keyboard.press("End")
-                    _human_delay(1.5, 2.5)
-                    page.keyboard.press("End")
-                    _human_delay(1.5, 2.5)
-                
-                # Extract links dynamically (filtering out aggregators and keeping ATS/Careers/Apply links)
-                links = page.evaluate("""
-                    () => {
-                        const els = document.querySelectorAll('a[href]');
-                        return Array.from(els).map(el => {
-                            const href = el.href;
-                            try {
-                                const url = new URL(href);
-                                const host = url.hostname.toLowerCase();
-                                const path = url.pathname.toLowerCase();
-                                
-                                // Exclude search engines & major aggregators
-                                const blacklist = [
-                                    'google.', 'youtube.', 'github.', 'facebook.', 'twitter.', 'x.com', 'instagram.', 'pinterest.',
-                                    'linkedin.com', 'indeed.com', 'glassdoor.', 'naukri.com', 'monster.com', 'foundit.', 'shine.com',
-                                    'jooble.', 'jobstreet.', 'seek.com', 'simplyhired', 'ziprecruiter', 'careerbuilder',
-                                    'talent.com', 'neuvoo', 'upwork', 'fiverr', 'freelancer', 'ambitionbox', 'levels.fyi',
-                                    'duckduckgo.com', 'bing.com', 'yahoo.com', 'wikipedia.org', 'support.google'
-                                ];
-                                if (blacklist.some(domain => host.includes(domain))) return null;
-                                
-                                // Check if it matches major ATS or has job/career terms in URL or link text
-                                const isAts = host.includes('lever.co') || host.includes('greenhouse.io') || 
-                                              host.includes('myworkdayjobs.com') || host.includes('ashbyhq.com') || 
-                                              host.includes('smartrecruiters.com') || host.includes('breezy.hr') ||
-                                              host.includes('rippling.com') || host.includes('workable.com') ||
-                                              host.includes('recruitee.com') || host.includes('sap.com') ||
-                                              host.includes('taleo.net') || host.includes('icims.com');
-                                              
-                                const hasJobTerm = path.includes('/job') || path.includes('/career') || 
-                                                   path.includes('/apply') || path.includes('/position') || 
-                                                   path.includes('/opening') || host.includes('careers.');
-                                                   
-                                if (isAts || hasJobTerm) {
-                                    return href;
-                                }
-                            } catch (err) {}
-                            return null;
-                        }).filter(h => h !== null);
-                    }
-                """)
-                # Filter to apply pages and de-duplicate
-                apply_links = list(set([l for l in links if "/apply" in l or "job" in l.lower() or "career" in l.lower()]))
-                urls.extend(apply_links[:10])  # Max 10 per query page
-                logger.info(f"Found {len(apply_links)} job links: {query[:50]}", SITE)
-                _human_delay(2, 4)
-                
-                # DuckDuckGo handles paging via scroll/infinite loading, so stop loop
-                if engine == "duckduckgo":
-                    break
-                    
-            except Exception as e:
-                logger.warn(f"Search discovery failed for query: {e}", SITE)
-                
-    return list(set(urls))
+        queries_to_run = random.sample(SEARCH_QUERIES, min(6, len(SEARCH_QUERIES)))
 
+    # Search engine rotation: DuckDuckGo first, Bing second — NO Google
+    ENGINES = ["duckduckgo", "bing"]
+
+    for i, query in enumerate(queries_to_run):
+        engine = ENGINES[i % len(ENGINES)]
+
+        try:
+            if engine == "duckduckgo":
+                # DuckDuckGo — best for automated searches, no CAPTCHA
+                search_url = f"https://duckduckgo.com/?q={quote(query)}&ia=web"
+            else:
+                # Bing — minimal bot detection
+                search_url = f"https://www.bing.com/search?q={quote(query)}&count=20"
+
+            logger.info(f"[{engine.upper()}] {query[:70]}...", SITE)
+            page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+
+            # Human-like paced delay — 8 to 15 seconds between searches
+            _human_delay(8, 15)
+
+            # Scroll to load more results
+            page.keyboard.press("End")
+            _human_delay(2, 4)
+            page.keyboard.press("End")
+            _human_delay(1, 3)
+
+            # Extract ATS & career page links
+            links = page.evaluate("""
+                () => {
+                    const els = document.querySelectorAll('a[href]');
+                    return Array.from(els).map(el => {
+                        const href = el.href;
+                        try {
+                            const url = new URL(href);
+                            const host = url.hostname.toLowerCase();
+                            const path = url.pathname.toLowerCase();
+
+                            // Hard blacklist — search engines and job aggregators
+                            const blacklist = [
+                                'google.', 'youtube.', 'facebook.', 'twitter.', 'x.com',
+                                'linkedin.com', 'indeed.com', 'glassdoor.', 'naukri.com',
+                                'monster.com', 'foundit.', 'shine.com', 'jooble.',
+                                'jobstreet.', 'seek.com', 'simplyhired', 'ziprecruiter',
+                                'careerbuilder', 'talent.com', 'neuvoo', 'ambitionbox',
+                                'duckduckgo.com', 'bing.com', 'yahoo.com', 'wikipedia.org',
+                                'microsoft.com/en-us/bing', 'support.google', 'accounts.google'
+                            ];
+                            if (blacklist.some(d => host.includes(d))) return null;
+
+                            // Must match major ATS or have job/career path
+                            const isAts = host.includes('lever.co') || host.includes('greenhouse.io') ||
+                                          host.includes('myworkdayjobs.com') || host.includes('ashbyhq.com') ||
+                                          host.includes('smartrecruiters.com') || host.includes('breezy.hr') ||
+                                          host.includes('workable.com') || host.includes('recruitee.com') ||
+                                          host.includes('taleo.net') || host.includes('icims.com') ||
+                                          host.includes('rippling.com') || host.includes('sap.com');
+
+                            const hasJobTerm = path.includes('/job') || path.includes('/career') ||
+                                               path.includes('/apply') || path.includes('/position') ||
+                                               path.includes('/opening') || host.startsWith('careers.');
+
+                            return (isAts || hasJobTerm) ? href : null;
+                        } catch (e) { return null; }
+                    }).filter(h => h !== null);
+                }
+            """)
+
+            apply_links = list(set([
+                l for l in links
+                if any(x in l.lower() for x in ["/apply", "job", "career", "position"])
+            ]))
+            urls.extend(apply_links[:8])  # max 8 per query
+            logger.info(f"  → {len(apply_links)} job links found", SITE)
+
+        except Exception as e:
+            logger.warn(f"Search failed ({engine}): {str(e)[:80]}", SITE)
+
+    # ── Direct Lever & Greenhouse public job APIs (zero CAPTCHA risk) ──────────
+    # These are official public-facing APIs designed for scraping
+    logger.info("Querying Lever & Greenhouse public job APIs for visa-sponsorship roles...", SITE)
+    try:
+        import requests as _req
+        for co_slug, api_url in [
+            ("stripe",      "https://api.lever.co/v0/postings/stripe?mode=json&team=Engineering"),
+            ("razorpay",    "https://api.lever.co/v0/postings/razorpay?mode=json"),
+            ("cloudflare",  "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs"),
+            ("mongodb",     "https://boards-api.greenhouse.io/v1/boards/mongodb/jobs"),
+            ("datadog",     "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"),
+            ("grafanalabs", "https://boards-api.greenhouse.io/v1/boards/grafanalabs/jobs"),
+            ("canva",       "https://boards-api.greenhouse.io/v1/boards/canva/jobs"),
+            ("revolut",     "https://boards-api.greenhouse.io/v1/boards/revolut/jobs"),
+            ("wise",        "https://boards-api.greenhouse.io/v1/boards/wise/jobs"),
+        ]:
+            try:
+                resp = _req.get(api_url, timeout=8)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    jobs = data if isinstance(data, list) else data.get("jobs", [])
+                    for job in jobs[:20]:
+                        title = (job.get("text") or job.get("title") or "").lower()
+                        apply_url = job.get("hostedUrl") or job.get("absolute_url") or ""
+                        if apply_url and any(k in title for k in [".net", "c#", "dotnet", "software", "backend", "engineer"]):
+                            urls.append(apply_url)
+                    logger.info(f"  [{co_slug}] API: found {len(jobs)} postings", SITE)
+            except Exception:
+                pass
+    except ImportError:
+        pass
+    return list(set(urls))
 
 def _discover_jobs_from_target_companies(page) -> list:
     """Discover jobs directly by crawling target company job portals"""
