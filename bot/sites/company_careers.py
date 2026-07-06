@@ -17,49 +17,10 @@ from bot.utils.learning import learn_from_filled_form
 
 SITE = "company_careers"
 MIN_MATCH = int(os.getenv("MIN_MATCH_SCORE", "60"))
-BULK_FILE = r"E:\SivaShankar\jobbot\data\bulk_urls.txt"
 
-def load_bulk_urls() -> list:
-    """Reads URLs from the bulk file. Creates the file if it doesn't exist."""
-    if not os.path.exists(BULK_FILE):
-        os.makedirs(os.path.dirname(BULK_FILE), exist_ok=True)
-        with open(BULK_FILE, "w", encoding="utf-8") as f:
-            f.write("# Paste job URLs here (one per line). Lines starting with # are ignored.\n")
-            f.write("# Example:\n# https://jobs.lever.co/company/job-id\n")
-        logger.info(f"Created empty bulk URLs file at: {BULK_FILE}", SITE)
-        return []
-        
-    urls = []
-    with open(BULK_FILE, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                urls.append(line)
-    return urls
-
-def normalize_url_for_compare(url: str) -> str:
-    """Helper to normalize URLs for comparison by stripping protocol, www, query params, and trailing slashes."""
-    if not url:
-        return ""
-    url = re.sub(r'^https?://', '', url.strip().lower())
-    url = url.replace('www.', '')
-    url = url.split('?')[0]
-    url = url.rstrip('/')
-    return url
-
-def remove_url_from_file(url: str):
-    """Removes the processed URL from the text file so the user can see remaining tasks."""
-    if not os.path.exists(BULK_FILE):
-        return
-    norm_target = normalize_url_for_compare(url)
-    with open(BULK_FILE, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-    with open(BULK_FILE, "w", encoding="utf-8") as f:
-        for line in lines:
-            if normalize_url_for_compare(line.strip()) != norm_target:
-                f.write(line)
 
 # ─── DYNAMIC SEARCH QUERIES — massive global coverage ───────────────────────
+
 def _build_search_queries() -> list:
     """Build dynamic Google search queries for all job titles across all major ATS platforms globally."""
     from bot.config import JOB_TITLES, LOCATIONS
@@ -239,30 +200,7 @@ def run_company_careers_bot():
 
         applied = 0
 
-        # Step 0: Process URLs from bulk_urls.txt (last to first)
-        bulk_urls = load_bulk_urls()
-        if bulk_urls:
-            logger.info(f"Loaded {len(bulk_urls)} job URLs from bulk upload list. Processing last-to-first...", SITE)
-            # Process in reverse order (from last to first)
-            for url in reversed(bulk_urls):
-                if not check_daily_limit(SITE):
-                    logger.info("Company Careers daily limit reached", SITE)
-                    break
-                try:
-                    # Apply to this career page
-                    result = _apply_to_career_page(page, url)
-                    if result:
-                        applied += 1
-                        increment_daily_count(SITE)
-                        _human_delay(APPLY_DELAY_SECONDS, APPLY_DELAY_SECONDS + 8)
-                    # Always remove the URL from bulk list once processed (either success or failure/skip)
-                    remove_url_from_file(url)
-                except Exception as e:
-                    logger.warn(f"Error processing bulk URL {url[:80]}…: {e}", SITE)
-                    remove_url_from_file(url)
-                    continue
-
-        # Now search and apply further
+        # Now search and apply
         job_urls = []
         try:
             # Step 1: Discover job URLs via search engines
