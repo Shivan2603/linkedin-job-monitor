@@ -404,9 +404,9 @@ def run_company_careers_bot():
                         q = tc.get("search_query")
                         if not q: continue
                         logger.info(f"AI Target Company Query: {q}", SITE)
-                        google_url = f"https://www.google.com/search?q={quote(q)}&num=5"
-                        page.goto(google_url, wait_until="domcontentloaded", timeout=20000)
-                        _human_delay(2, 4)
+                        ddg_url = f"https://duckduckgo.com/?q={quote(q)}&ia=web"
+                        page.goto(ddg_url, wait_until="domcontentloaded", timeout=20000)
+                        _human_delay(4, 7)
                         links = page.evaluate("""
                             () => Array.from(document.querySelectorAll('a[href]'))
                                        .map(el => el.href)
