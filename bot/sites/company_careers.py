@@ -1,10 +1,11 @@
 """
 sites/company_careers.py — Universal Company Career Website Automation
 Discovers jobs on Lever, Greenhouse, Workday, Ashby, Workable, SuccessFactors, Taleo, iCIMS, Breezy, Recruitee, and direct career portals.
+Prioritizes VISA SPONSORSHIP roles globally (UK Tier 2, US H-1B, Canada, Australia, Germany, Singapore, UAE, etc.).
 Uses ai_agent_filler to dynamically navigate and submit applications.
-Applies broadly to any matching position — no salary/visa filter.
+User can take control at ANY TIME by typing 'c' + Enter in the terminal.
 """
-import time, random, re, os, json
+import time, random, re, os, json, sys, threading
 from urllib.parse import quote, urljoin, urlparse
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 from bot.config import JOB_TITLES, LOCATIONS, APPLY_DELAY_SECONDS
@@ -18,55 +19,138 @@ from bot.utils.learning import learn_from_filled_form
 SITE = "company_careers"
 MIN_MATCH = int(os.getenv("MIN_MATCH_SCORE", "60"))
 
+# ─── GLOBAL VISA SPONSORSHIP LOCATIONS ────────────────────────────────────────
+# Countries/regions known to sponsor skilled worker visas for .NET engineers
+VISA_GLOBAL_LOCATIONS = [
+    # United Kingdom (Skilled Worker / Tier 2)
+    "United Kingdom", "London", "Manchester", "Birmingham", "Edinburgh",
+    # United States (H-1B / O-1 / TN)
+    "United States", "New York", "San Francisco", "Seattle", "Austin", "Chicago",
+    # Canada (Express Entry / LMIA)
+    "Canada", "Toronto", "Vancouver", "Calgary", "Ottawa",
+    # Australia (TSS 482 / Skilled Independent)
+    "Australia", "Sydney", "Melbourne", "Brisbane", "Perth",
+    # Germany (EU Blue Card)
+    "Germany", "Berlin", "Munich", "Hamburg", "Frankfurt",
+    # Singapore (Employment Pass)
+    "Singapore",
+    # Netherlands (Highly Skilled Migrant)
+    "Netherlands", "Amsterdam",
+    # Ireland (Critical Skills)
+    "Ireland", "Dublin",
+    # Sweden / Denmark / Finland / Norway
+    "Sweden", "Stockholm", "Denmark", "Copenhagen", "Finland", "Helsinki",
+    # UAE / Middle East
+    "UAE", "Dubai", "Abu Dhabi",
+    # New Zealand (Skilled Migrant)
+    "New Zealand", "Auckland",
+    # Remote / Global
+    "Remote", "Worldwide",
+]
 
-# ─── DYNAMIC SEARCH QUERIES — massive global coverage ───────────────────────
+VISA_SPONSORSHIP_TERMS = [
+    "visa sponsorship", "visa sponsor", "will sponsor", "sponsorship available",
+    "we sponsor", "visa support", "relocation assistance", "relocation support",
+    "h1b", "h-1b", "tier 2 sponsor", "skilled worker visa", "work permit",
+    "work authorization", "employment pass", "global mobility",
+]
+
+# ─── TAKE CONTROL ANYTIME (background stdin watcher) ─────────────────────────
+_control_event = threading.Event()  # Set when user types 'c'
+
+def _start_control_watcher():
+    """Starts a background daemon thread that watches stdin for 'c' to trigger take-control."""
+    def _watcher():
+        print("\n[BOT] Type 'c' + Enter at ANY TIME to take control of the browser.")
+        while True:
+            try:
+                line = sys.stdin.readline()
+                if line.strip().lower() == 'c':
+                    _control_event.set()
+                    print("[BOT] ⚡ Take-control flagged — bot will pause at next safe point.")
+            except Exception:
+                break
+    t = threading.Thread(target=_watcher, daemon=True)
+    t.start()
+
+def _check_take_control(page):
+    """If the user typed 'c', disconnect the browser and wait for them to hand back control."""
+    if _control_event.is_set():
+        _control_event.clear()
+        print("\n" + "=" * 70)
+        print("⚡  YOU HAVE CONTROL — Browser is now live for your input.")
+        print("   Fill forms, solve CAPTCHAs, navigate to any page you want.")
+        print("   When finished, press ENTER to hand control back to the bot.")
+        print("=" * 70)
+        browser_manager.disconnect()
+        try:
+            input("Press ENTER to return control to the bot: ")
+        except Exception:
+            pass
+        browser_manager.reconnect()
+        print("[BOT] Control returned — resuming automation.\n")
+
+
+# ─── DYNAMIC SEARCH QUERIES — massive global visa sponsorship coverage ────────
 
 def _build_search_queries() -> list:
-    """Build dynamic Google search queries for all job titles across all major ATS platforms globally."""
-    from bot.config import JOB_TITLES, LOCATIONS
+    """Build Google search queries prioritizing GLOBAL VISA SPONSORSHIP roles matching the .NET/C# profile."""
+    from bot.config import JOB_TITLES
 
     queries = []
-    
-    # Generate queries dynamically from user's configured titles and locations
-    for loc in LOCATIONS:
-        for title in JOB_TITLES:
-            role = f'"{title}"'
-            # Greenhouse, Lever & Workday search
-            queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "{loc}" "apply"')
-            # Ashby & Workable search
-            queries.append(f'site:jobs.ashbyhq.com OR site:apply.workable.com {role} "{loc}"')
-            # SuccessFactors & Taleo & iCIMS search
-            queries.append(f'site:jobs.sap.com OR site:taleo.net OR site:icims.com {role} "{loc}"')
-            # SmartRecruiters, Recruitee, Rippling & Breezy search
-            queries.append(f'site:jobs.smartrecruiters.com OR site:recruitee.com OR site:jobs.rippling.com OR site:app.breezy.hr {role} "{loc}"')
-            # Direct company career site search (excluding aggregators)
-            queries.append(f'{role} "careers" "{loc}" -site:linkedin.com -site:indeed.com -site:naukri.com -site:glassdoor.com -site:monster.com -site:foundit.in -site:shine.com -site:jobstreet.com')
+
+    for title in JOB_TITLES:
+        role = f'"{title}"'
+        # ── Visa sponsorship on major ATS (global, no location lock) ──
+        queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "visa sponsorship"')
+        queries.append(f'site:jobs.ashbyhq.com OR site:apply.workable.com {role} "visa sponsorship"')
+        queries.append(f'site:jobs.smartrecruiters.com OR site:recruitee.com OR site:app.breezy.hr {role} "visa sponsorship"')
+        queries.append(f'site:icims.com OR site:taleo.net {role} "visa sponsorship" OR "sponsor visa"')
+
+        # ── UK Skilled Worker / Tier 2 ──
+        for loc in ["London", "Manchester", "Birmingham", "United Kingdom"]:
+            queries.append(f'site:lever.co OR site:greenhouse.io {role} "{loc}" "visa sponsorship" OR "tier 2"')
+            queries.append(f'{role} "{loc}" "visa sponsorship" -site:linkedin.com -site:indeed.com -site:glassdoor.com')
+
+        # ── USA (H-1B willing) ──
+        for loc in ["New York", "San Francisco", "Seattle", "Austin"]:
+            queries.append(f'site:lever.co OR site:greenhouse.io {role} "{loc}" "h1b" OR "visa sponsorship" OR "will sponsor"')
+
+        # ── Canada / Australia / Germany / Singapore / Netherlands ──
+        for loc in ["Canada", "Australia", "Germany", "Singapore", "Netherlands", "Ireland", "Dubai"]:
+            queries.append(f'site:lever.co OR site:greenhouse.io OR site:myworkdayjobs.com {role} "{loc}" "visa" OR "relocation" OR "work permit"')
+
+        # ── Remote / global visa sponsorship ──
+        queries.append(f'{role} "visa sponsorship" "remote" -site:linkedin.com -site:indeed.com')
+        queries.append(f'site:lever.co OR site:greenhouse.io {role} "relocation" OR "globally" "visa" OR "sponsorship"')
 
     return list(set(queries))
 
 
 def _ai_generate_search_queries() -> list:
-    """Use AI to generate highly dynamic, hyper-targeted Google search queries for career sites."""
+    """Use AI to generate highly targeted Google search queries for GLOBAL VISA SPONSORSHIP .NET jobs."""
     try:
         from bot.ai_router import ai_complete
-        from bot.config import JOB_TITLES, LOCATIONS
-        
+        from bot.config import JOB_TITLES
+
         system = (
-            "You are an AI recruitment crawler. Generate 20-25 highly effective, advanced Google search queries "
-            "to find direct job application links or career portals for software engineers. "
-            "Focus on major ATS platforms: lever.co, greenhouse.io, myworkdayjobs.com, ashbyhq.com, workable.com, smartrecruiters.com, sap.com, taleo.net, icims.com, breezy.hr, recruitee.com. "
-            "Focus on the candidate's stack: .NET, C#, .NET Core, ASP.NET Core, Azure, Microservices, Angular.\n\n"
-            "CRITICAL RULES FOR GOOGLE SEARCH OPERATORS:\n"
-            "1. The 'site:' operator must ONLY be used for ATS domains (e.g. site:lever.co, site:greenhouse.io, site:myworkdayjobs.com).\n"
-            "2. NEVER use 'site:' for location names, company names, or job titles (e.g. NEVER write 'site:bangalore' or 'site:uk'). Locations and titles must be standard quoted text, e.g. \"Kuala Lumpur\" OR \"Singapore\" OR \"remote\".\n"
-            "3. Ensure the syntax is valid for Google Search (use OR in uppercase, group terms with parentheses correctly)."
+            "You are an AI recruitment crawler specializing in GLOBAL VISA SPONSORSHIP opportunities. "
+            "Generate 20-25 highly effective advanced Google search queries to find direct job application links "
+            "for .NET / C# / ASP.NET Core / Azure engineers who need visa sponsorship. "
+            "Target ONLY jobs that explicitly offer visa sponsorship, work permits, or relocation assistance. "
+            "Focus on major ATS platforms: lever.co, greenhouse.io, myworkdayjobs.com, ashbyhq.com, "
+            "workable.com, smartrecruiters.com, taleo.net, icims.com, breezy.hr, recruitee.com.\n\n"
+            "Target countries: UK (Tier 2/Skilled Worker), USA (H-1B), Canada (LMIA), Australia (TSS 482), "
+            "Germany (EU Blue Card), Singapore (EP), Netherlands, Ireland, UAE, Sweden, Denmark, New Zealand.\n\n"
+            "CRITICAL RULES:\n"
+            "1. 'site:' operator ONLY for ATS domains — NEVER for location names.\n"
+            "2. Include 'visa sponsorship' OR 'will sponsor' OR 'h1b' OR 'tier 2' OR 'work permit' OR 'relocation' in EVERY query.\n"
+            "3. Output ONLY a clean list of queries, one per line. No numbering, no markdown."
         )
         user = (
-            f"Configured Job Titles: {JOB_TITLES}\n"
-            f"Configured Locations: {LOCATIONS}\n\n"
-            f"Rules:\n"
-            f"1. Output ONLY a clean list of queries, one per line. Do not number them or add markdown formatting.\n"
-            f"2. Make them highly targeted to direct career pages. Exclude general job aggregators (e.g. -site:linkedin.com -site:indeed.com)."
+            f"Candidate Profile: .NET Core, C#, ASP.NET Web API, Azure, Microservices, Angular, 4+ years experience\n"
+            f"Job Titles: {JOB_TITLES}\n"
+            f"Goal: Find globally posted visa-sponsorship .NET jobs and return ready-to-use Google search queries."
         )
         raw = ai_complete(system, user, task="form_fill", max_tokens=1000)
         lines = [line.strip() for line in raw.split("\n") if line.strip()]
@@ -186,13 +270,24 @@ TARGET_COMPANIES = [
     {"company": "Delivery Hero", "portal": "direct", "search_url": "https://careers.deliveryhero.com/global/en"},
 ]
 
+def _check_visa_sponsorship(text: str) -> bool:
+    """Returns True if the job description or page text mentions visa sponsorship / relocation."""
+    t = text.lower()
+    return any(term in t for term in VISA_SPONSORSHIP_TERMS)
+
+
 def _human_delay(a=2.0, b=4.0):
     time.sleep(random.uniform(a, b))
 
 
 def run_company_careers_bot():
-    """Main entry — discovers and applies to jobs on company career portals"""
-    logger.info("🏢 Starting Universal Company Career Pages bot", SITE)
+    """Main entry — discovers and applies to global visa-sponsorship jobs on company career portals"""
+    logger.info("🏢 Starting Careers Bot — Global Visa Sponsorship Mode", SITE)
+    logger.info("Targets: UK (Tier 2) | USA (H-1B) | Canada | Australia | Germany | Singapore | UAE | Remote", SITE)
+
+    # Start background stdin watcher so user can type 'c' anytime
+    if sys.stdin.isatty():
+        _start_control_watcher()
 
     with sync_playwright() as p:
         browser, context = safe_browser_context(p, "company_careers")
@@ -203,10 +298,10 @@ def run_company_careers_bot():
         # Now search and apply
         job_urls = []
         try:
-            # Step 1: Discover job URLs via search engines
+            # Step 1: Discover job URLs via search engines (visa-focused queries)
             discovered = _discover_jobs_from_google(page)
             job_urls.extend(discovered)
-            logger.info(f"Discovered {len(discovered)} job URLs from search engines", SITE)
+            logger.info(f"Discovered {len(discovered)} job URLs from visa-sponsorship search queries", SITE)
 
             # Step 2: Discover jobs directly from static target company boards
             direct_discovered = _discover_jobs_from_target_companies(page)
@@ -237,10 +332,18 @@ def run_company_careers_bot():
 
             # De-duplicate
             job_urls = list(set(job_urls))
-            logger.info(f"Total deduplicated job URLs to process: {len(job_urls)}", SITE)
 
-            # Step 4: Apply to each discovered URL
+            # ★ Sort: visa-sponsorship keyword URLs float to the TOP of the queue
+            visa_urls  = [u for u in job_urls if any(t in u.lower() for t in ["visa", "sponsor", "relocation", "global"])]
+            other_urls = [u for u in job_urls if u not in visa_urls]
+            job_urls   = visa_urls + other_urls
+            logger.info(f"Total URLs: {len(job_urls)} — {len(visa_urls)} flagged as likely visa-sponsorship 🌟", SITE)
+
+            # Step 4: Apply to each discovered URL (visa-first order)
             for url in job_urls:
+                # Check if user wants to take control before navigating to each new job
+                _check_take_control(page)
+
                 if not check_daily_limit(SITE):
                     logger.info("Company Careers daily limit reached", SITE)
                     break
@@ -514,6 +617,13 @@ def _apply_to_career_page(page, url: str) -> bool:
             logger.info(f"Skipping {company} — {job_t} (Job description does not mention .NET or C# keywords)", SITE)
             return False
 
+        # Visa sponsorship detection — log prominently
+        has_visa = _check_visa_sponsorship(desc + " " + page_title + " " + url)
+        if has_visa:
+            logger.info(f"🌟 VISA SPONSORSHIP DETECTED — {company} | {job_t}", SITE)
+        else:
+            logger.info(f"   No visa mention — {company} | {job_t} (proceeding anyway for profile match)", SITE)
+
         # Tailor resume
         tailor_result = tailor_resume(job_t, company, desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
@@ -530,9 +640,10 @@ def _apply_to_career_page(page, url: str) -> bool:
         # Use AI to fill all form fields intelligently including file/resume uploads
         success = fill_form_with_ai(page, site=SITE, resume_path=resume_path)
 
-        # Interactive manual review
+        # Interactive manual review — remind user they can type 'c' anytime
+        visa_tag = " 🌟 VISA SPONSORSHIP" if has_visa else ""
         print("\n" + "*" * 70)
-        print("ACTION REQUIRED (TAKE CONTROL):")
+        print(f"ACTION REQUIRED (TAKE CONTROL):{visa_tag}")
         print(f"Form has been pre-filled for: {company} — {job_t}")
         print("Please review the browser page, fill any missing fields, and solve CAPTCHAs.")
         print("When you are done:")
