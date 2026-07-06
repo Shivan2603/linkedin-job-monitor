@@ -376,6 +376,12 @@ class BrowserManager:
                 
             self.browser = playwright.chromium.launch_persistent_context(**launch_kwargs)
             self.context = self.browser
+            try:
+                from playwright_stealth import Stealth
+                Stealth().apply_stealth_sync(self.context)
+                logger.info("Playwright-Stealth applied successfully to persistent context.", "safety")
+            except Exception as se:
+                logger.warn(f"Failed to apply playwright-stealth to persistent context: {se}", "safety")
             
         return self.browser, self.context
 
@@ -415,6 +421,13 @@ class BrowserManager:
                     pass
                 self.close_subprocess()
             self.browser.close = custom_close
+            
+            try:
+                from playwright_stealth import Stealth
+                Stealth().apply_stealth_sync(self.context)
+                logger.info("Playwright-Stealth applied successfully to CDP context.", "safety")
+            except Exception as se:
+                logger.warn(f"Failed to apply playwright-stealth to CDP context: {se}", "safety")
             
             logger.success("Playwright connected over CDP successfully.", "safety")
         except Exception as e:
