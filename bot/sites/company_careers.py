@@ -716,6 +716,26 @@ def _apply_to_career_page(page, url: str) -> bool:
         else:
             logger.info(f"   No visa mention — {company} | {job_t} (proceeding anyway for profile match)", SITE)
 
+        # ── PRE-PROCESSING DECISION (same as Bulk Apply Bot) ─────────────────
+        visa_tag = " 🌟 VISA SPONSORSHIP" if has_visa else ""
+        print("\n" + "-" * 65)
+        print(f"  Company  : {company}")
+        print(f"  Job Title: {job_t}{visa_tag}")
+        print(f"  URL      : {url[:80]}")
+        print("-" * 65)
+        try:
+            pre_choice = input("  Press ENTER to tailor resume & auto-fill | 's' to SKIP | 'q' to QUIT: ").strip().lower()
+        except (EOFError, OSError):
+            pre_choice = ""  # non-interactive mode — auto-proceed
+        print("-" * 65 + "\n")
+
+        if pre_choice == 'q':
+            logger.info("User quit careers bot session.", SITE)
+            raise KeyboardInterrupt("User quit")
+        elif pre_choice == 's':
+            logger.info(f"Skipped: {company} — {job_t}", SITE)
+            return False
+
         # Tailor resume
         tailor_result = tailor_resume(job_t, company, desc, site=SITE)
         resume_path   = tailor_result["resume_path"]
