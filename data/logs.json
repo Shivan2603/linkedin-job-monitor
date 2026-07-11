@@ -1,5 +1,2357 @@
 [
   {
+    "id": "63631c1f",
+    "ts": "2026-07-11T21:45:16.586812",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: Unison Group | Full stack developer (.net) | Singapore | 100% match"
+  },
+  {
+    "id": "42affb5f",
+    "ts": "2026-07-11T21:45:16.455927",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to Unison Group - Full stack developer (.net) ✅"
+  },
+  {
+    "id": "c895dd10",
+    "ts": "2026-07-11T21:45:16.334681",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "fd4b645d",
+    "ts": "2026-07-11T21:45:16.228383",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Playwright-Stealth applied successfully to CDP context."
+  },
+  {
+    "id": "d9d51e90",
+    "ts": "2026-07-11T21:45:15.873038",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "932233d7",
+    "ts": "2026-07-11T21:41:49.816138",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "6a457041",
+    "ts": "2026-07-11T21:41:49.704649",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving."
+  },
+  {
+    "id": "e6a19405",
+    "ts": "2026-07-11T21:41:49.550079",
+    "level": "AI",
+    "site": "indeed",
+    "message": "Step 1: Filled 2/2 fields via AI."
+  },
+  {
+    "id": "2c007ab8",
+    "ts": "2026-07-11T21:41:45.497046",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "312491af",
+    "ts": "2026-07-11T21:41:36.980639",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "184cc0ea",
+    "ts": "2026-07-11T21:41:35.514474",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "433f2072",
+    "ts": "2026-07-11T21:41:34.060664",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "da4e874e",
+    "ts": "2026-07-11T21:41:32.506315",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "db4bde68",
+    "ts": "2026-07-11T21:41:26.666702",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "d3fe106b",
+    "ts": "2026-07-11T21:41:26.419186",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "dd401ec4",
+    "ts": "2026-07-11T21:41:26.005618",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "1b1cbe7f",
+    "ts": "2026-07-11T21:41:11.877763",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "103ba4ac",
+    "ts": "2026-07-11T21:41:10.899326",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "63b0e5f3",
+    "ts": "2026-07-11T21:41:09.972198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "ae4a5006",
+    "ts": "2026-07-11T21:41:08.247721",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Full stack developer (.net) @ Unison Group"
+  },
+  {
+    "id": "348e6b29",
+    "ts": "2026-07-11T21:40:42.757014",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "26bf3883",
+    "ts": "2026-07-11T21:38:40.323908",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "bc036909",
+    "ts": "2026-07-11T21:38:39.158503",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "4c685fe3",
+    "ts": "2026-07-11T21:38:38.082144",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "ee29615c",
+    "ts": "2026-07-11T21:38:36.192149",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "4f401e19",
+    "ts": "2026-07-11T21:38:35.921940",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "fdc3d392",
+    "ts": "2026-07-11T21:38:35.650813",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2f26a323",
+    "ts": "2026-07-11T21:38:34.162441",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e0e3d642",
+    "ts": "2026-07-11T21:38:33.893101",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "accc37d3",
+    "ts": "2026-07-11T21:38:33.621967",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "04957512",
+    "ts": "2026-07-11T21:38:33.008416",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "c115083e",
+    "ts": "2026-07-11T21:38:32.385605",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "995ca9bf",
+    "ts": "2026-07-11T21:38:31.845489",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "d2ebbf1d",
+    "ts": "2026-07-11T21:38:31.295400",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "fb0a0d95",
+    "ts": "2026-07-11T21:38:30.994107",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "992dae7c",
+    "ts": "2026-07-11T21:38:29.127526",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "789b4f66",
+    "ts": "2026-07-11T21:36:34.769600",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "16095cbb",
+    "ts": "2026-07-11T21:36:33.784081",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "4ba77ab7",
+    "ts": "2026-07-11T21:36:32.725472",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "033e46ed",
+    "ts": "2026-07-11T21:36:31.316285",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "91937e04",
+    "ts": "2026-07-11T21:35:50.800944",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "4bccd7e8",
+    "ts": "2026-07-11T21:35:49.687621",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "208d7745",
+    "ts": "2026-07-11T21:35:48.655825",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "7397bd62",
+    "ts": "2026-07-11T21:35:47.235610",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "bf849c6d",
+    "ts": "2026-07-11T21:35:43.581642",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "8a90dadf",
+    "ts": "2026-07-11T21:35:42.646844",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "f625b30f",
+    "ts": "2026-07-11T21:35:41.723875",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "14af07a7",
+    "ts": "2026-07-11T21:35:40.277660",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "6e98219a",
+    "ts": "2026-07-11T21:35:01.129358",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "50ee6b2d",
+    "ts": "2026-07-11T21:35:00.069960",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "50158f06",
+    "ts": "2026-07-11T21:34:59.141838",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "14b73a2d",
+    "ts": "2026-07-11T21:34:57.753030",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "3e43ce9f",
+    "ts": "2026-07-11T21:34:57.408478",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "d726c225",
+    "ts": "2026-07-11T21:34:37.403341",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "7cf830f0",
+    "ts": "2026-07-11T21:34:36.417852",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "50d96806",
+    "ts": "2026-07-11T21:34:35.417185",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "64adf592",
+    "ts": "2026-07-11T21:34:34.013220",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "73abf82e",
+    "ts": "2026-07-11T21:34:23.740416",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "e958b45a",
+    "ts": "2026-07-11T21:34:22.857009",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "16396731",
+    "ts": "2026-07-11T21:34:21.941157",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "7838ae9f",
+    "ts": "2026-07-11T21:34:20.309905",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "ebe8a1a6",
+    "ts": "2026-07-11T21:33:34.535529",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "0db5e140",
+    "ts": "2026-07-11T21:33:33.428922",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "64561edc",
+    "ts": "2026-07-11T21:33:32.263330",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "2171739d",
+    "ts": "2026-07-11T21:33:30.184971",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "167a94b5",
+    "ts": "2026-07-11T21:33:17.829976",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "c16b50bf",
+    "ts": "2026-07-11T21:33:16.764002",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "146e806c",
+    "ts": "2026-07-11T21:33:15.731924",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "872027bd",
+    "ts": "2026-07-11T21:33:12.393151",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "dc795d48",
+    "ts": "2026-07-11T21:33:12.120888",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "39c75588",
+    "ts": "2026-07-11T21:33:11.858457",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "19d494b8",
+    "ts": "2026-07-11T21:33:10.127685",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "131f3e08",
+    "ts": "2026-07-11T21:33:09.849785",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "40cb3274",
+    "ts": "2026-07-11T21:33:09.569134",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "f96acfc6",
+    "ts": "2026-07-11T21:33:08.866345",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "7279ba66",
+    "ts": "2026-07-11T21:33:08.245705",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "e0a28cf3",
+    "ts": "2026-07-11T21:33:07.716159",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "158c98e7",
+    "ts": "2026-07-11T21:33:07.110662",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "29bb7896",
+    "ts": "2026-07-11T21:33:06.832351",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "fa93eaf4",
+    "ts": "2026-07-11T21:33:05.300650",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Unison Group. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "bee72d40",
+    "ts": "2026-07-11T21:33:01.997545",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Unison Group - Full stack developer (.net) (External Apply)..."
+  },
+  {
+    "id": "9f1a3df4",
+    "ts": "2026-07-11T21:33:01.728359",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "62684392",
+    "ts": "2026-07-11T21:32:55.614743",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.NET Developer' in 'Singapore' on https://sg.indeed.com"
+  },
+  {
+    "id": "a4b97ce7",
+    "ts": "2026-07-11T21:32:55.324534",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for '.NET Developer' in Remote"
+  },
+  {
+    "id": "34bc2399",
+    "ts": "2026-07-11T21:32:45.326747",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Program - Web & Mobile Engineering (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "c4516b1c",
+    "ts": "2026-07-11T21:32:45.040809",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "11d32a9b",
+    "ts": "2026-07-11T21:32:41.363316",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Program - Web & Mobile Engineering (External Apply)..."
+  },
+  {
+    "id": "d93fa540",
+    "ts": "2026-07-11T21:32:33.967881",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Program - DevOps Engineer (AI) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "1e888117",
+    "ts": "2026-07-11T21:32:33.670313",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "72a2eb72",
+    "ts": "2026-07-11T21:32:30.298613",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Program - DevOps Engineer (AI) (External Apply)..."
+  },
+  {
+    "id": "df4c2d6c",
+    "ts": "2026-07-11T21:32:22.207542",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Android Engineer, Futures (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "a470f953",
+    "ts": "2026-07-11T21:32:21.915382",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "91081fa2",
+    "ts": "2026-07-11T21:32:17.242090",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Android Engineer, Futures (External Apply)..."
+  },
+  {
+    "id": "c50d0b2b",
+    "ts": "2026-07-11T21:32:08.089725",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Overmind - Blockchain Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "bec511ee",
+    "ts": "2026-07-11T21:32:07.789799",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Overmind. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "c96d2c3f",
+    "ts": "2026-07-11T21:32:03.571006",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Overmind - Blockchain Developer (External Apply)..."
+  },
+  {
+    "id": "27cb9d90",
+    "ts": "2026-07-11T21:31:55.582039",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Backend Engineer ( recommendation) - AI/LLM (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "7839ecbd",
+    "ts": "2026-07-11T21:31:55.277111",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "ae88c093",
+    "ts": "2026-07-11T21:31:51.225292",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Backend Engineer ( recommendation) - AI/LLM (External Apply)..."
+  },
+  {
+    "id": "fce6f9c7",
+    "ts": "2026-07-11T21:31:42.473285",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Front-end Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "2306ee41",
+    "ts": "2026-07-11T21:31:42.186792",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "79261f43",
+    "ts": "2026-07-11T21:31:38.063131",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Front-end Developer (External Apply)..."
+  },
+  {
+    "id": "f2dcf93e",
+    "ts": "2026-07-11T21:31:30.393561",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Frontend Engineer - Earn (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "7f52afb9",
+    "ts": "2026-07-11T21:31:30.106728",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "b07c44b3",
+    "ts": "2026-07-11T21:31:26.250174",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Frontend Engineer - Earn (External Apply)..."
+  },
+  {
+    "id": "efa56ce7",
+    "ts": "2026-07-11T21:31:15.470022",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "00d04410",
+    "ts": "2026-07-11T21:31:15.195353",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "f5b00318",
+    "ts": "2026-07-11T21:31:11.799434",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (External Apply)..."
+  },
+  {
+    "id": "44a38c57",
+    "ts": "2026-07-11T21:31:02.486302",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Growmodo GmbH - WordPress Developer / AI Specialist (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "5dedbf56",
+    "ts": "2026-07-11T21:31:02.211750",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "1ee90973",
+    "ts": "2026-07-11T21:30:58.181395",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Growmodo GmbH - WordPress Developer / AI Specialist (External Apply)..."
+  },
+  {
+    "id": "47abe59c",
+    "ts": "2026-07-11T21:30:47.378030",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Worthland - Developer Relations (Dev Rel) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "9e1f70d1",
+    "ts": "2026-07-11T21:30:47.064770",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Worthland. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "58ba2727",
+    "ts": "2026-07-11T21:30:42.835361",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Worthland - Developer Relations (Dev Rel) (External Apply)..."
+  },
+  {
+    "id": "72abdba8",
+    "ts": "2026-07-11T21:30:33.125327",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping deCircle - Senior Full Stack Web3 Engineer - YieldNest (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "5117dbda",
+    "ts": "2026-07-11T21:30:32.834167",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for deCircle. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "ba876fe0",
+    "ts": "2026-07-11T21:30:29.178718",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: deCircle - Senior Full Stack Web3 Engineer - YieldNest (External Apply)..."
+  },
+  {
+    "id": "10892622",
+    "ts": "2026-07-11T21:30:20.825468",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Software Engineer(Java) - Tech Compliance (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "df1be303",
+    "ts": "2026-07-11T21:30:20.537739",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "cc992d59",
+    "ts": "2026-07-11T21:30:16.621908",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Software Engineer(Java) - Tech Compliance (External Apply)..."
+  },
+  {
+    "id": "e446a974",
+    "ts": "2026-07-11T21:30:04.747221",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "30c463b7",
+    "ts": "2026-07-11T21:30:04.413338",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for GECO Asia. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "68664161",
+    "ts": "2026-07-11T21:30:01.166425",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (External Apply)..."
+  },
+  {
+    "id": "f5bbeb8b",
+    "ts": "2026-07-11T21:29:48.942572",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Overmind - Full-Stack Engineer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "f6208961",
+    "ts": "2026-07-11T21:29:48.650591",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Overmind. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "9783b0bc",
+    "ts": "2026-07-11T21:29:44.897933",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Overmind - Full-Stack Engineer (External Apply)..."
+  },
+  {
+    "id": "dcf3590e",
+    "ts": "2026-07-11T21:29:37.964526",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Embed - Senior Software Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "9463711b",
+    "ts": "2026-07-11T21:29:37.678664",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Embed. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "f1273b24",
+    "ts": "2026-07-11T21:29:34.068096",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Embed - Senior Software Developer (External Apply)..."
+  },
+  {
+    "id": "a7792e04",
+    "ts": "2026-07-11T21:29:33.780704",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "81da9009",
+    "ts": "2026-07-11T21:29:28.585609",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: '.NET Developer' in 'Remote' on https://sg.indeed.com"
+  },
+  {
+    "id": "da13e481",
+    "ts": "2026-07-11T21:29:28.292680",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for 'Senior Software Engineer' in Singapore"
+  },
+  {
+    "id": "d39d69d3",
+    "ts": "2026-07-11T21:29:17.673022",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior iOS Engineer, Futures (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "cda3fcd6",
+    "ts": "2026-07-11T21:29:17.370360",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "491278d3",
+    "ts": "2026-07-11T21:29:13.668623",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior iOS Engineer, Futures (External Apply)..."
+  },
+  {
+    "id": "026d21b8",
+    "ts": "2026-07-11T21:29:05.809835",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Program - Web & Mobile Engineering (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "1832164f",
+    "ts": "2026-07-11T21:29:05.516537",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "84b2417b",
+    "ts": "2026-07-11T21:29:01.737735",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Program - Web & Mobile Engineering (External Apply)..."
+  },
+  {
+    "id": "a66f75ba",
+    "ts": "2026-07-11T21:28:52.730715",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior QA Engineer - Web3 Wallet (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "866f1ea7",
+    "ts": "2026-07-11T21:28:52.441422",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "199003c5",
+    "ts": "2026-07-11T21:28:48.395665",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior QA Engineer - Web3 Wallet (External Apply)..."
+  },
+  {
+    "id": "cecd8b61",
+    "ts": "2026-07-11T21:28:40.085686",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior QA Engineer (Frontend/App), Java (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "a2a7952c",
+    "ts": "2026-07-11T21:28:39.803061",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "a082505b",
+    "ts": "2026-07-11T21:28:35.784825",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior QA Engineer (Frontend/App), Java (External Apply)..."
+  },
+  {
+    "id": "f9fa4726",
+    "ts": "2026-07-11T21:28:25.477891",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Razer USA Ltd - Senior Audio Video (AV) Engineer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "943f20cb",
+    "ts": "2026-07-11T21:28:25.191852",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Razer USA Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "326ca0c4",
+    "ts": "2026-07-11T21:28:20.457201",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Razer USA Ltd - Senior Audio Video (AV) Engineer (External Apply)..."
+  },
+  {
+    "id": "fe6ba4f6",
+    "ts": "2026-07-11T21:28:11.666420",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping VFlowTech - Senior Embedded Engineer (Battery & Energy Management System) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "d5dc9422",
+    "ts": "2026-07-11T21:28:11.370616",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for VFlowTech. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "acebc87c",
+    "ts": "2026-07-11T21:28:07.575996",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: VFlowTech - Senior Embedded Engineer (Battery & Energy Management System) (External Apply)..."
+  },
+  {
+    "id": "2d9d8836",
+    "ts": "2026-07-11T21:27:58.715518",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Quincus - Senior Java Engineer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "086201a7",
+    "ts": "2026-07-11T21:27:58.425405",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Quincus. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "36d78e20",
+    "ts": "2026-07-11T21:27:54.173066",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Quincus - Senior Java Engineer (External Apply)..."
+  },
+  {
+    "id": "aaad2643",
+    "ts": "2026-07-11T21:27:44.022967",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Backend Engineer ( recommendation) - AI/LLM (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "a2d28cfe",
+    "ts": "2026-07-11T21:27:43.713632",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "b5c9e7b5",
+    "ts": "2026-07-11T21:27:40.013685",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Backend Engineer ( recommendation) - AI/LLM (External Apply)..."
+  },
+  {
+    "id": "2c9a348d",
+    "ts": "2026-07-11T21:27:28.060920",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Autumn Compass - C++ Software Engineer in Crypto Trading (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "ff13cf9f",
+    "ts": "2026-07-11T21:27:27.773915",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Autumn Compass. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "fb43ec01",
+    "ts": "2026-07-11T21:27:23.863760",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Autumn Compass - C++ Software Engineer in Crypto Trading (External Apply)..."
+  },
+  {
+    "id": "9ab8b58d",
+    "ts": "2026-07-11T21:27:13.813962",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping MCPayment - Senior Java Engineer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "046746e1",
+    "ts": "2026-07-11T21:27:13.511941",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for MCPayment. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "f5236c05",
+    "ts": "2026-07-11T21:27:09.993522",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: MCPayment - Senior Java Engineer (External Apply)..."
+  },
+  {
+    "id": "151c29ae",
+    "ts": "2026-07-11T21:26:57.841827",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "15dba25a",
+    "ts": "2026-07-11T21:26:57.552387",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "7ac4801e",
+    "ts": "2026-07-11T21:26:53.208121",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (External Apply)..."
+  },
+  {
+    "id": "6f83898c",
+    "ts": "2026-07-11T21:26:45.693381",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Edufied Pte Ltd - Tech Team Lead (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "272473fc",
+    "ts": "2026-07-11T21:26:45.406901",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Edufied Pte Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "c12bfa1d",
+    "ts": "2026-07-11T21:26:41.960484",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Edufied Pte Ltd - Tech Team Lead (External Apply)..."
+  },
+  {
+    "id": "80bd339f",
+    "ts": "2026-07-11T21:26:29.647235",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Sioux High Tech Software Ltd. - Senior/Lead Software Engineer (C# / C++) – Automation & Machine Control (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "e174aba4",
+    "ts": "2026-07-11T21:26:29.358081",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sioux High Tech Software Ltd.. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "9da7d1ee",
+    "ts": "2026-07-11T21:26:24.843308",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sioux High Tech Software Ltd. - Senior/Lead Software Engineer (C# / C++) – Automation & Machine Control (External Apply)..."
+  },
+  {
+    "id": "c4e26e15",
+    "ts": "2026-07-11T21:26:17.811372",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Sunnic Pte Ltd - Security Software Engineer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "e1fa0310",
+    "ts": "2026-07-11T21:26:17.696637",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sunnic Pte Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "eb37d866",
+    "ts": "2026-07-11T21:26:13.484743",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sunnic Pte Ltd - Security Software Engineer (External Apply)..."
+  },
+  {
+    "id": "ab06bf5c",
+    "ts": "2026-07-11T21:26:06.238948",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Radix Engenharia e Software - Senior Software Developer (Singapore) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "9d18239e",
+    "ts": "2026-07-11T21:26:06.100052",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Radix Engenharia e Software. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "9a9d4510",
+    "ts": "2026-07-11T21:26:02.243227",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Radix Engenharia e Software - Senior Software Developer (Singapore) (External Apply)..."
+  },
+  {
+    "id": "3c25266a",
+    "ts": "2026-07-11T21:26:02.154580",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "87b984bc",
+    "ts": "2026-07-11T21:25:57.148607",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior Software Engineer' in 'Singapore' on https://sg.indeed.com"
+  },
+  {
+    "id": "5d073b49",
+    "ts": "2026-07-11T21:25:57.035841",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Applied to 0 jobs on Indeed for 'Senior Software Engineer' in Remote"
+  },
+  {
+    "id": "491ef0b6",
+    "ts": "2026-07-11T21:25:44.949987",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Programm - Software Engineer Web3 (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "2f606ba6",
+    "ts": "2026-07-11T21:25:44.840115",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "19814de9",
+    "ts": "2026-07-11T21:25:41.308685",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Programm - Software Engineer Web3 (External Apply)..."
+  },
+  {
+    "id": "0960ea4c",
+    "ts": "2026-07-11T21:25:30.393603",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Programm - Software Engineer Java (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "62f03790",
+    "ts": "2026-07-11T21:25:30.279168",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "f5042605",
+    "ts": "2026-07-11T21:25:25.947781",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Programm - Software Engineer Java (External Apply)..."
+  },
+  {
+    "id": "89fca9d5",
+    "ts": "2026-07-11T21:25:15.572581",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Sawdey Solution Services - Operations Analyst (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "fc300a8f",
+    "ts": "2026-07-11T21:25:15.459294",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sawdey Solution Services. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "83c70a96",
+    "ts": "2026-07-11T21:25:11.696524",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Sawdey Solution Services - Operations Analyst (External Apply)..."
+  },
+  {
+    "id": "a3990cc2",
+    "ts": "2026-07-11T21:25:01.200290",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - QA Engineer (AI), Personalisation (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "f225f597",
+    "ts": "2026-07-11T21:25:01.075210",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "3e4a16b6",
+    "ts": "2026-07-11T21:24:56.751996",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - QA Engineer (AI), Personalisation (External Apply)..."
+  },
+  {
+    "id": "194ea862",
+    "ts": "2026-07-11T21:24:44.890538",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Android Engineer, Futures (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "3e4b8b53",
+    "ts": "2026-07-11T21:24:44.770852",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "30268e66",
+    "ts": "2026-07-11T21:24:40.746436",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Android Engineer, Futures (External Apply)..."
+  },
+  {
+    "id": "08edd10d",
+    "ts": "2026-07-11T21:24:30.362957",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Binance Accelerator Program - DevOps Engineer (AI) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "6b6b2c79",
+    "ts": "2026-07-11T21:24:30.212232",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "31675e3e",
+    "ts": "2026-07-11T21:24:25.767107",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Binance Accelerator Program - DevOps Engineer (AI) (External Apply)..."
+  },
+  {
+    "id": "5f8ddb1c",
+    "ts": "2026-07-11T21:24:17.300380",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Backend Engineer ( recommendation) - AI/LLM (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "db96d387",
+    "ts": "2026-07-11T21:24:17.038938",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "5fe65b07",
+    "ts": "2026-07-11T21:24:12.988030",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Backend Engineer ( recommendation) - AI/LLM (External Apply)..."
+  },
+  {
+    "id": "68710e5c",
+    "ts": "2026-07-11T21:24:02.034036",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Front-end Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "4a5ec81f",
+    "ts": "2026-07-11T21:24:01.742757",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "12ed3e1d",
+    "ts": "2026-07-11T21:23:58.030729",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Front-end Developer (External Apply)..."
+  },
+  {
+    "id": "0cf4498a",
+    "ts": "2026-07-11T21:23:47.767034",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Pioneer Talent Program - AI Agent Engineer (Fully Remote) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "ead42fb3",
+    "ts": "2026-07-11T21:23:47.461876",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "6cb26860",
+    "ts": "2026-07-11T21:23:43.185964",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Pioneer Talent Program - AI Agent Engineer (Fully Remote) (External Apply)..."
+  },
+  {
+    "id": "eacc3b83",
+    "ts": "2026-07-11T21:23:31.364157",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "753e6daf",
+    "ts": "2026-07-11T21:23:30.977387",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "54daeb5f",
+    "ts": "2026-07-11T21:23:26.754282",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (External Apply)..."
+  },
+  {
+    "id": "5b2a4260",
+    "ts": "2026-07-11T21:23:16.699355",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Senior Frontend Engineer - Cloud (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "23d325a8",
+    "ts": "2026-07-11T21:23:16.400808",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "ecd58c0f",
+    "ts": "2026-07-11T21:23:12.496519",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Senior Frontend Engineer - Cloud (External Apply)..."
+  },
+  {
+    "id": "d4f51107",
+    "ts": "2026-07-11T21:23:04.267569",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Binance - Software Engineer(Java) - Tech Compliance (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "e2b1a3f5",
+    "ts": "2026-07-11T21:23:04.000135",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "1437e044",
+    "ts": "2026-07-11T21:23:00.349395",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Binance - Software Engineer(Java) - Tech Compliance (External Apply)..."
+  },
+  {
+    "id": "921aa1f6",
+    "ts": "2026-07-11T21:22:52.965822",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping deCircle - Senior Full Stack Web3 Engineer - YieldNest (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "bca3386f",
+    "ts": "2026-07-11T21:22:52.669402",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for deCircle. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "c9c20040",
+    "ts": "2026-07-11T21:22:48.766945",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: deCircle - Senior Full Stack Web3 Engineer - YieldNest (External Apply)..."
+  },
+  {
+    "id": "24be2bb6",
+    "ts": "2026-07-11T21:22:40.071481",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "8fbcdbcf",
+    "ts": "2026-07-11T21:22:39.765302",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for GECO Asia. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "e7e0f605",
+    "ts": "2026-07-11T21:22:35.460866",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (External Apply)..."
+  },
+  {
+    "id": "64d195e5",
+    "ts": "2026-07-11T21:22:25.873899",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipping Embed - Senior Software Developer (Tech stack or experience mismatch)"
+  },
+  {
+    "id": "0315c0d3",
+    "ts": "2026-07-11T21:22:25.569568",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Embed. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "c8028818",
+    "ts": "2026-07-11T21:22:21.761300",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Embed - Senior Software Developer (External Apply)..."
+  },
+  {
+    "id": "dddf96e2",
+    "ts": "2026-07-11T21:22:21.474365",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Found 15 Indeed jobs to process on search page"
+  },
+  {
+    "id": "99428ee2",
+    "ts": "2026-07-11T21:22:15.511156",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Searching Indeed: 'Senior Software Engineer' in 'Remote' on https://sg.indeed.com"
+  },
+  {
+    "id": "d349a10b",
+    "ts": "2026-07-11T21:22:15.285336",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Indeed already logged in on https://sg.indeed.com ✅"
+  },
+  {
+    "id": "880450ca",
+    "ts": "2026-07-11T21:22:11.087903",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Checking login status for Indeed domain: https://sg.indeed.com..."
+  },
+  {
+    "id": "d99ef809",
+    "ts": "2026-07-11T21:22:10.694024",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "09434770",
+    "ts": "2026-07-11T21:22:10.464947",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Playwright-Stealth applied successfully to CDP context."
+  },
+  {
+    "id": "5dbf6353",
+    "ts": "2026-07-11T21:22:09.778310",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "89675227",
+    "ts": "2026-07-11T21:22:09.113007",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Launching native Chrome via subprocess on port 9222..."
+  },
+  {
+    "id": "68e61df5",
+    "ts": "2026-07-11T21:22:05.954388",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
+  },
+  {
+    "id": "72edf34a",
+    "ts": "2026-07-11T21:22:04.563847",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed search scope set to: All Countries"
+  },
+  {
+    "id": "8bc0023c",
+    "ts": "2026-07-11T21:22:03.156790",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "🚀 Starting Indeed Multi-Country bot"
+  },
+  {
+    "id": "13a88422",
+    "ts": "2026-07-11T21:22:02.964836",
+    "level": "INFO",
+    "site": "main",
+    "message": "Running Indeed Bot only..."
+  },
+  {
+    "id": "aa1bc92b",
+    "ts": "2026-07-11T20:58:25.622461",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "f0e1ed18",
+    "ts": "2026-07-11T20:58:24.970817",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Launching native Chrome via subprocess on port 9222..."
+  },
+  {
+    "id": "2e7f9804",
+    "ts": "2026-07-11T20:58:21.760709",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
+  },
+  {
+    "id": "7c08c088",
+    "ts": "2026-07-11T20:58:20.250615",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search scope: Worldwide"
+  },
+  {
+    "id": "517ebdc2",
+    "ts": "2026-07-11T20:58:16.701522",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "574353d8",
+    "ts": "2026-07-11T20:58:16.564495",
+    "level": "INFO",
+    "site": "main",
+    "message": "Running LinkedIn Bot only..."
+  },
+  {
+    "id": "679873cb",
+    "ts": "2026-07-11T20:57:19.212473",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free failed: Response ended prematurely"
+  },
+  {
+    "id": "a302bd9b",
+    "ts": "2026-07-11T20:47:39.726886",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "42caab69",
+    "ts": "2026-07-11T20:47:38.757609",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "1cba0308",
+    "ts": "2026-07-11T20:47:37.816209",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "207fa733",
+    "ts": "2026-07-11T20:47:36.410593",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "7d8d44c4",
+    "ts": "2026-07-11T20:47:11.936346",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "5ba32214",
+    "ts": "2026-07-11T20:47:10.954681",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "8db6708e",
+    "ts": "2026-07-11T20:47:09.859723",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "1180064d",
+    "ts": "2026-07-11T20:47:08.436971",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "c02e9679",
+    "ts": "2026-07-11T20:46:51.992670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "c4ee1415",
+    "ts": "2026-07-11T20:46:50.970145",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "cf3653f9",
+    "ts": "2026-07-11T20:46:49.956962",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "98d9e0c7",
+    "ts": "2026-07-11T20:46:48.466525",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "a515217d",
+    "ts": "2026-07-11T20:46:23.066176",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "b47a7893",
+    "ts": "2026-07-11T20:46:22.099461",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "fc0fc31e",
+    "ts": "2026-07-11T20:46:21.101993",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "6f9fa733",
+    "ts": "2026-07-11T20:46:19.642526",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "bd88ba91",
+    "ts": "2026-07-11T20:46:19.265686",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "23891f42",
+    "ts": "2026-07-11T20:46:10.254960",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "0f6d7bac",
+    "ts": "2026-07-11T20:46:08.913294",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "6116f997",
+    "ts": "2026-07-11T20:46:07.765138",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "57faa824",
+    "ts": "2026-07-11T20:46:06.384856",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "c7dfe767",
+    "ts": "2026-07-11T20:45:52.587945",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "cf7cb1f8",
+    "ts": "2026-07-11T20:45:51.495700",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "ee453b63",
+    "ts": "2026-07-11T20:45:50.474834",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "236d544f",
+    "ts": "2026-07-11T20:45:48.301047",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "9b5dc3d0",
+    "ts": "2026-07-11T20:45:40.500192",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "a5c232ed",
+    "ts": "2026-07-11T20:45:39.409609",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "2798e969",
+    "ts": "2026-07-11T20:45:38.130625",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "92ad6b4f",
+    "ts": "2026-07-11T20:45:35.756500",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "9c3f5344",
+    "ts": "2026-07-11T20:45:08.479746",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "90c397cf",
+    "ts": "2026-07-11T20:45:07.403454",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "16965a16",
+    "ts": "2026-07-11T20:45:06.429670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "38bbb042",
+    "ts": "2026-07-11T20:45:04.671946",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "6e2792cb",
+    "ts": "2026-07-11T20:45:04.374344",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "b75f9c91",
+    "ts": "2026-07-11T20:45:04.117801",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "36f5f432",
+    "ts": "2026-07-11T20:45:02.394966",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e7916df8",
+    "ts": "2026-07-11T20:45:02.102835",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "2acd74d0",
+    "ts": "2026-07-11T20:45:01.732867",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "cb589235",
+    "ts": "2026-07-11T20:45:01.085596",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "0f34b238",
+    "ts": "2026-07-11T20:45:00.477865",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "1c65dbf7",
+    "ts": "2026-07-11T20:44:59.838583",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "b6f0439b",
+    "ts": "2026-07-11T20:44:58.968023",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "d20053bf",
+    "ts": "2026-07-11T20:44:58.663990",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "0573cc8d",
+    "ts": "2026-07-11T20:44:45.023295",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "5260e9c3",
+    "ts": "2026-07-11T20:44:37.634285",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "207691de",
+    "ts": "2026-07-11T20:44:37.352811",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "f6e8e62f",
+    "ts": "2026-07-11T20:44:37.068345",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 2 jobs for 'Senior .NET Developer' in India"
+  },
+  {
+    "id": "6c9f7672",
+    "ts": "2026-07-11T20:43:15.589474",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for UST — Firmware Engineer to bulk_urls.txt"
+  },
+  {
+    "id": "94758fac",
+    "ts": "2026-07-11T20:42:57.244427",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "42c3a981",
+    "ts": "2026-07-11T20:41:35.344166",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "fcb7d138",
+    "ts": "2026-07-11T20:40:47.297065",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for NatWest Group — Software Engineer, Dot Net to bulk_urls.txt"
+  },
+  {
+    "id": "b127e1b7",
+    "ts": "2026-07-11T20:39:59.376540",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "3f2b1b4e",
+    "ts": "2026-07-11T20:39:52.124299",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Senior .NET Developer (Past Week)"
+  },
+  {
+    "id": "50987814",
+    "ts": "2026-07-11T20:39:51.893090",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "0854b16c",
+    "ts": "2026-07-11T20:39:51.610671",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for '.NET Developer' in India"
+  },
+  {
+    "id": "182a4b99",
+    "ts": "2026-07-11T20:39:45.647279",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "64811870",
+    "ts": "2026-07-11T20:39:45.377256",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "20c7df37",
+    "ts": "2026-07-11T20:39:45.099654",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "eae8e0dc",
+    "ts": "2026-07-11T20:39:44.590993",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "2bdf66bd",
+    "ts": "2026-07-11T20:39:44.080343",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "87662a37",
+    "ts": "2026-07-11T20:39:43.535886",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "8af5b13c",
+    "ts": "2026-07-11T20:39:42.600114",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "81846397",
+    "ts": "2026-07-11T20:39:42.300132",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "b9f41878",
+    "ts": "2026-07-11T20:39:34.337335",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 3 jobs on page 1"
+  },
+  {
+    "id": "163d9168",
+    "ts": "2026-07-11T20:39:26.951445",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (.NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "2a1a7c01",
+    "ts": "2026-07-11T20:39:26.671967",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "b286c120",
+    "ts": "2026-07-11T20:39:26.408658",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 3 jobs for '.NET Developer' in India"
+  },
+  {
+    "id": "d837a3c5",
+    "ts": "2026-07-11T20:39:02.759592",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for UPS — Lead Application Developer - Full stack (.NET, angular, Azure to bulk_urls.txt"
+  },
+  {
+    "id": "e66b307a",
+    "ts": "2026-07-11T20:37:44.720487",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "3d2ff4ec",
+    "ts": "2026-07-11T20:37:03.051520",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for UPS — Lead Application Developer - Full stack (.NET, angular, Azure to bulk_urls.txt"
+  },
+  {
+    "id": "a14f6031",
+    "ts": "2026-07-11T20:36:53.860425",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to capture external redirect popup: Timeout 15000ms exceeded while waiting for event \"page\""
+  },
+  {
+    "id": "3b519de6",
+    "ts": "2026-07-11T20:35:51.541968",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "16470b9b",
+    "ts": "2026-07-11T20:34:52.245647",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for NatWest Group — Software Engineer, Dot Net to bulk_urls.txt"
+  },
+  {
+    "id": "7cd03b59",
+    "ts": "2026-07-11T20:34:16.849708",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "63900035",
+    "ts": "2026-07-11T20:34:08.035055",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: .NET Developer (Past Week)"
+  },
+  {
+    "id": "1954d879",
+    "ts": "2026-07-11T20:34:07.749572",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: '.NET Developer' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "2020126b",
+    "ts": "2026-07-11T20:34:07.490731",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior Software Engineer' in India"
+  },
+  {
+    "id": "6af10e1e",
+    "ts": "2026-07-11T20:34:04.944202",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "3b239392",
+    "ts": "2026-07-11T20:34:04.688032",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "81d66b0c",
+    "ts": "2026-07-11T20:34:04.425629",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "9d44ba4e",
+    "ts": "2026-07-11T20:34:03.962285",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a8c632c1",
+    "ts": "2026-07-11T20:34:03.421005",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "d7c9a1da",
+    "ts": "2026-07-11T20:34:02.698279",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "05a2d582",
+    "ts": "2026-07-11T20:34:01.803133",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "76c0649c",
+    "ts": "2026-07-11T20:34:01.562716",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "edae506d",
+    "ts": "2026-07-11T20:33:51.808292",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 3 jobs on page 1"
+  },
+  {
+    "id": "8a6865e1",
+    "ts": "2026-07-11T20:33:43.455906",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "5dbca21a",
+    "ts": "2026-07-11T20:33:43.181162",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Software Engineer' in 'India' (geoId=102713980)"
+  },
+  {
+    "id": "f04d9512",
+    "ts": "2026-07-11T20:33:42.879785",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 8 jobs for 'Senior Software Engineer' in India"
+  },
+  {
+    "id": "d4b97962",
+    "ts": "2026-07-11T20:33:17.844912",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Med-Metrix — Senior Application Developer to bulk_urls.txt"
+  },
+  {
+    "id": "5acfe12e",
+    "ts": "2026-07-11T20:32:48.103858",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Globant — Senior .Net Developer to bulk_urls.txt"
+  },
+  {
+    "id": "2c1f94a3",
+    "ts": "2026-07-11T20:31:48.229764",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
     "id": "07c914ac",
     "ts": "2026-07-11T20:30:56.203605",
     "level": "SUCCESS",
@@ -1146,2357 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "3d041966",
-    "ts": "2026-07-08T20:15:45.408191",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "a36c08bc",
-    "ts": "2026-07-08T20:15:43.824081",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "e0926ad2",
-    "ts": "2026-07-08T20:15:40.368765",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "645ba023",
-    "ts": "2026-07-08T20:15:39.230953",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "fa85cec4",
-    "ts": "2026-07-08T20:15:38.119292",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "2314de15",
-    "ts": "2026-07-08T20:15:36.469293",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "e1dd068b",
-    "ts": "2026-07-08T20:14:50.909862",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "ace4d1ff",
-    "ts": "2026-07-08T20:14:49.887658",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "e6d9b74c",
-    "ts": "2026-07-08T20:14:48.865566",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "c00b0f43",
-    "ts": "2026-07-08T20:14:47.066022",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "dab6336a",
-    "ts": "2026-07-08T20:14:46.715252",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "2868563c",
-    "ts": "2026-07-08T20:14:27.969127",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "e00afaf5",
-    "ts": "2026-07-08T20:14:26.924408",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b1ee24c5",
-    "ts": "2026-07-08T20:14:26.028529",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "4e48d4f1",
-    "ts": "2026-07-08T20:14:23.785856",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "1f3ae6ad",
-    "ts": "2026-07-08T20:14:23.690781",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "d3d11518",
-    "ts": "2026-07-08T20:14:23.563242",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "a846aced",
-    "ts": "2026-07-08T20:14:18.781659",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "40d5f57d",
-    "ts": "2026-07-08T20:14:18.678177",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "b81759de",
-    "ts": "2026-07-08T20:14:18.542765",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "c469dd68",
-    "ts": "2026-07-08T20:14:18.037896",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "50fb5b2b",
-    "ts": "2026-07-08T20:14:17.619448",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "876be821",
-    "ts": "2026-07-08T20:14:17.014334",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "9017a808",
-    "ts": "2026-07-08T20:14:16.425136",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "0284e2de",
-    "ts": "2026-07-08T20:14:16.298060",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "3a51e7c0",
-    "ts": "2026-07-08T20:08:56.797816",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "4ef4160c",
-    "ts": "2026-07-08T20:08:56.478114",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "60cbbf14",
-    "ts": "2026-07-08T20:08:56.195404",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "36aecda7",
-    "ts": "2026-07-08T20:08:55.585339",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "f90ff0d7",
-    "ts": "2026-07-08T20:08:54.970767",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "ae6afe8a",
-    "ts": "2026-07-08T20:08:54.427932",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "1323c12f",
-    "ts": "2026-07-08T20:08:53.566849",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "6edce31a",
-    "ts": "2026-07-08T20:08:53.333798",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "f3555ad0",
-    "ts": "2026-07-08T20:08:51.694766",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior Software Engineer @ Visasponsor"
-  },
-  {
-    "id": "d1772bb2",
-    "ts": "2026-07-08T20:08:28.755302",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "55eea134",
-    "ts": "2026-07-08T20:07:57.317471",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "5ad94ece",
-    "ts": "2026-07-08T20:07:56.193298",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "ed030de5",
-    "ts": "2026-07-08T20:07:55.163993",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "516ba4ed",
-    "ts": "2026-07-08T20:07:53.427882",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "c5c6860d",
-    "ts": "2026-07-08T20:07:46.459943",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "030c160e",
-    "ts": "2026-07-08T20:07:45.413217",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "be28aecc",
-    "ts": "2026-07-08T20:07:44.352151",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "dab0e246",
-    "ts": "2026-07-08T20:07:42.879138",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "1454446f",
-    "ts": "2026-07-08T20:06:56.184163",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "24dba4cf",
-    "ts": "2026-07-08T20:06:55.152195",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "061d1940",
-    "ts": "2026-07-08T20:06:54.137009",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "b19cabf0",
-    "ts": "2026-07-08T20:06:51.786905",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "7b17ec0a",
-    "ts": "2026-07-08T20:06:15.527806",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "6cc9e0f9",
-    "ts": "2026-07-08T20:06:14.097961",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "43f7a197",
-    "ts": "2026-07-08T20:06:12.985685",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "b49cd29c",
-    "ts": "2026-07-08T20:06:11.328136",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "a16f147f",
-    "ts": "2026-07-08T20:06:06.150020",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "4863cd8f",
-    "ts": "2026-07-08T20:06:05.011045",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "47e8da76",
-    "ts": "2026-07-08T20:06:01.401118",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "9b913c71",
-    "ts": "2026-07-08T20:05:59.455485",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "5c75be9b",
-    "ts": "2026-07-08T20:04:04.011899",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "202ccd3e",
-    "ts": "2026-07-08T20:04:02.710882",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b4d76f02",
-    "ts": "2026-07-08T20:04:01.582208",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "4dc93e45",
-    "ts": "2026-07-08T20:03:59.661471",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from Cache (tailor)"
-  },
-  {
-    "id": "ea25c419",
-    "ts": "2026-07-08T20:03:59.189710",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "5acded07",
-    "ts": "2026-07-08T20:03:33.434057",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "dc6470c9",
-    "ts": "2026-07-08T20:03:32.304639",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "74aace75",
-    "ts": "2026-07-08T20:03:31.079312",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "c7b589f0",
-    "ts": "2026-07-08T20:03:28.874861",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "37b1aaf3",
-    "ts": "2026-07-08T20:03:28.552519",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "25743b3f",
-    "ts": "2026-07-08T20:03:28.213128",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "7f50f43e",
-    "ts": "2026-07-08T20:03:22.380431",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "97fe5a53",
-    "ts": "2026-07-08T20:03:22.013399",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "933557f6",
-    "ts": "2026-07-08T20:03:21.655183",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "7d8d7ec4",
-    "ts": "2026-07-08T20:03:20.735157",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "c2c93ad5",
-    "ts": "2026-07-08T20:03:20.121514",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "55adcc15",
-    "ts": "2026-07-08T20:03:19.404274",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "50283e88",
-    "ts": "2026-07-08T20:03:18.863840",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "1c0c258f",
-    "ts": "2026-07-08T20:03:18.681460",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "daa1ad1f",
-    "ts": "2026-07-08T19:56:43.912833",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "9972aae7",
-    "ts": "2026-07-08T19:56:43.590227",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "3c50c2db",
-    "ts": "2026-07-08T19:56:43.285583",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "2851cec0",
-    "ts": "2026-07-08T19:56:42.709035",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "8568bfd2",
-    "ts": "2026-07-08T19:56:41.988011",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "91857838",
-    "ts": "2026-07-08T19:56:41.067916",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "c71e0f92",
-    "ts": "2026-07-08T19:56:40.337051",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "eb62acf5",
-    "ts": "2026-07-08T19:56:40.043969",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "b9af7bf5",
-    "ts": "2026-07-08T19:56:38.467304",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior Software Engineer @ Target Company"
-  },
-  {
-    "id": "0e7eea40",
-    "ts": "2026-07-08T19:55:52.285684",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "79e51b02",
-    "ts": "2026-07-08T19:54:30.100618",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "4559ba6a",
-    "ts": "2026-07-08T19:54:28.986160",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "e14afe51",
-    "ts": "2026-07-08T19:54:27.846431",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "551df8fa",
-    "ts": "2026-07-08T19:54:26.098822",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "ae2f9318",
-    "ts": "2026-07-08T19:54:18.907771",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "9a5dae9e",
-    "ts": "2026-07-08T19:54:17.915287",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "362640e4",
-    "ts": "2026-07-08T19:54:16.850601",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "ea9f7b57",
-    "ts": "2026-07-08T19:54:15.255276",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "7da42038",
-    "ts": "2026-07-08T19:53:42.472739",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "b3737c21",
-    "ts": "2026-07-08T19:53:41.354303",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "89f9cd26",
-    "ts": "2026-07-08T19:53:40.016835",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "a2f7c2f0",
-    "ts": "2026-07-08T19:53:38.278574",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "4ec484f6",
-    "ts": "2026-07-08T19:53:00.906427",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "82eea05c",
-    "ts": "2026-07-08T19:52:59.573138",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "a09613f2",
-    "ts": "2026-07-08T19:52:58.301076",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "342d69f2",
-    "ts": "2026-07-08T19:52:56.597572",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "f0a3c2ec",
-    "ts": "2026-07-08T19:52:52.641599",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "d9257d99",
-    "ts": "2026-07-08T19:52:51.483365",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "4bc77c76",
-    "ts": "2026-07-08T19:52:50.363697",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "5074deb6",
-    "ts": "2026-07-08T19:52:48.501826",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
-  },
-  {
-    "id": "aed9d3c5",
-    "ts": "2026-07-08T19:52:07.263566",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "993547f9",
-    "ts": "2026-07-08T19:50:34.138015",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "eb46bc61",
-    "ts": "2026-07-08T19:50:33.037319",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "c2f1d852",
-    "ts": "2026-07-08T19:50:31.871541",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "9d25dbe0",
-    "ts": "2026-07-08T19:50:30.303774",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "15e4f2df",
-    "ts": "2026-07-08T19:50:12.765156",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "951c63f4",
-    "ts": "2026-07-08T19:50:11.934860",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "31a6899a",
-    "ts": "2026-07-08T19:50:10.838671",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "8e0cbce4",
-    "ts": "2026-07-08T19:50:09.044626",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "8a842e5c",
-    "ts": "2026-07-08T19:50:08.918643",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "001aecbb",
-    "ts": "2026-07-08T19:50:08.767691",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "d776ee8b",
-    "ts": "2026-07-08T19:50:03.454467",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "11f9eb1b",
-    "ts": "2026-07-08T19:50:03.365156",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "760d9314",
-    "ts": "2026-07-08T19:50:03.233329",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "e33362c2",
-    "ts": "2026-07-08T19:50:02.725810",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "2b57c698",
-    "ts": "2026-07-08T19:50:02.107147",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "112f880c",
-    "ts": "2026-07-08T19:50:01.701403",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "1e0dec90",
-    "ts": "2026-07-08T19:50:01.188889",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "19833510",
-    "ts": "2026-07-08T19:50:00.990312",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "c4befa97",
-    "ts": "2026-07-08T19:24:09.696503",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "602b2f38",
-    "ts": "2026-07-08T19:24:01.174315",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "2d5deae0",
-    "ts": "2026-07-08T19:24:00.924792",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'India' (geoId=102713980)"
-  },
-  {
-    "id": "5d987cdf",
-    "ts": "2026-07-08T19:24:00.687865",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in India (Remote/WFH) (geoId=102713980)"
-  },
-  {
-    "id": "2881f40e",
-    "ts": "2026-07-08T19:24:00.432152",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "7b190407",
-    "ts": "2026-07-08T19:23:59.836414",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "7afca3a4",
-    "ts": "2026-07-08T19:23:54.453514",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "cc661b55",
-    "ts": "2026-07-08T19:23:54.180499",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "026224e6",
-    "ts": "2026-07-08T19:23:53.901105",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "54fdca96",
-    "ts": "2026-07-08T19:23:52.212255",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "2c8f3b90",
-    "ts": "2026-07-08T19:23:51.571315",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "c3d6437c",
-    "ts": "2026-07-08T19:23:48.388283",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "33cfd59d",
-    "ts": "2026-07-08T19:23:37.982441",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Worldwide"
-  },
-  {
-    "id": "98c5af05",
-    "ts": "2026-07-08T19:23:36.587770",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "5b48b7f7",
-    "ts": "2026-07-08T19:23:36.424813",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "07b2a54f",
-    "ts": "2026-07-08T13:39:45.488401",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "04d526af",
-    "ts": "2026-07-08T13:39:45.252304",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "2ac7ae7b",
-    "ts": "2026-07-08T13:39:44.935227",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "6e78deca",
-    "ts": "2026-07-08T13:39:44.839686",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "c7a3cd01",
-    "ts": "2026-07-08T13:39:44.696114",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "ae7d1518",
-    "ts": "2026-07-08T13:39:44.555314",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-07-2026"
-  },
-  {
-    "id": "ec20ed5a",
-    "ts": "2026-07-08T13:39:44.445883",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-08 13:39:44"
-  },
-  {
-    "id": "936f1804",
-    "ts": "2026-07-08T13:39:44.317828",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d29cb2a2",
-    "ts": "2026-07-08T13:39:43.988512",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "305bef5d",
-    "ts": "2026-07-08T13:39:43.860564",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "5fe834de",
-    "ts": "2026-07-08T13:39:43.762694",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "3b27da02",
-    "ts": "2026-07-08T13:39:39.501961",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "05eaa438",
-    "ts": "2026-07-08T10:18:09.809351",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "3ca60c70",
-    "ts": "2026-07-08T10:18:09.715900",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "03111e9e",
-    "ts": "2026-07-08T10:18:09.624882",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "f844eba8",
-    "ts": "2026-07-08T10:18:09.535874",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "71cad653",
-    "ts": "2026-07-08T10:18:09.443642",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "1d2a5a37",
-    "ts": "2026-07-08T10:18:09.337799",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-07-2026"
-  },
-  {
-    "id": "15a8a687",
-    "ts": "2026-07-08T10:18:09.240309",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-08 10:18:09"
-  },
-  {
-    "id": "aea1fb4a",
-    "ts": "2026-07-08T10:18:09.148390",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "1de0302d",
-    "ts": "2026-07-08T10:18:09.055926",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "368b6374",
-    "ts": "2026-07-08T10:18:08.957232",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "f7494f83",
-    "ts": "2026-07-08T10:18:08.855569",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "83de87a3",
-    "ts": "2026-07-08T10:18:08.508126",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "7296daad",
-    "ts": "2026-07-08T10:15:45.606593",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "69d7d149",
-    "ts": "2026-07-08T10:15:45.511097",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "612ef744",
-    "ts": "2026-07-08T10:15:45.382734",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "1e3736b8",
-    "ts": "2026-07-08T10:15:45.276019",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "576f9b34",
-    "ts": "2026-07-08T10:15:45.165905",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "4e51c470",
-    "ts": "2026-07-08T10:15:45.039563",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-07-2026"
-  },
-  {
-    "id": "00b23ce2",
-    "ts": "2026-07-08T10:15:44.313746",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-08 10:15:44"
-  },
-  {
-    "id": "420f69c3",
-    "ts": "2026-07-08T10:15:43.928256",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a366f22f",
-    "ts": "2026-07-08T10:15:43.794511",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "099d0179",
-    "ts": "2026-07-08T10:15:43.623783",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "65706e0c",
-    "ts": "2026-07-08T10:15:43.393932",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "dc48b08d",
-    "ts": "2026-07-08T10:15:41.774192",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "5b5ffa51",
-    "ts": "2026-07-06T19:29:14.022790",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "62c6830e",
-    "ts": "2026-07-06T19:29:12.904504",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Terminating Chrome subprocess..."
-  },
-  {
-    "id": "5a1f7cc2",
-    "ts": "2026-07-06T19:29:12.625881",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b141e2e8",
-    "ts": "2026-07-06T19:29:12.345438",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "fd316ed6",
-    "ts": "2026-07-06T19:29:12.093459",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "1f4d09f0",
-    "ts": "2026-07-06T19:29:11.810220",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c3517372",
-    "ts": "2026-07-06T19:29:11.519576",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Software Engineer (Past Week)"
-  },
-  {
-    "id": "e187c9fe",
-    "ts": "2026-07-06T19:29:11.268304",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "e5310ba7",
-    "ts": "2026-07-06T19:29:11.026845",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "baf712d9",
-    "ts": "2026-07-06T19:29:10.719973",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Azure Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "2964c1af",
-    "ts": "2026-07-06T19:29:10.432744",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "d6d95b50",
-    "ts": "2026-07-06T19:29:10.160185",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a86124e6",
-    "ts": "2026-07-06T19:29:09.898769",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Azure Developer (Past Week)"
-  },
-  {
-    "id": "f1b12dbe",
-    "ts": "2026-07-06T19:29:09.621534",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "698fcb2d",
-    "ts": "2026-07-06T19:29:09.330203",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1d7fa784",
-    "ts": "2026-07-06T19:29:09.089045",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "45917e83",
-    "ts": "2026-07-06T19:29:08.817491",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "209e7548",
-    "ts": "2026-07-06T19:29:08.542231",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "accbe35b",
-    "ts": "2026-07-06T19:29:08.252187",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Backend Developer (Past Week)"
-  },
-  {
-    "id": "498e5b0f",
-    "ts": "2026-07-06T19:29:08.002864",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "833d18d6",
-    "ts": "2026-07-06T19:29:07.717737",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "94900b6e",
-    "ts": "2026-07-06T19:29:07.440328",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "83500701",
-    "ts": "2026-07-06T19:29:07.155495",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "dac3e9c9",
-    "ts": "2026-07-06T19:29:06.935449",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1858c5cd",
-    "ts": "2026-07-06T19:29:06.641520",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Backend Developer (Past Week)"
-  },
-  {
-    "id": "5294a829",
-    "ts": "2026-07-06T19:29:06.387015",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "7fbc2906",
-    "ts": "2026-07-06T19:29:06.100792",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f9f46437",
-    "ts": "2026-07-06T19:29:05.868080",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "b5f7bdf3",
-    "ts": "2026-07-06T19:29:05.559552",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "12b68e73",
-    "ts": "2026-07-06T19:29:05.283795",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "9ad6fd0b",
-    "ts": "2026-07-06T19:29:05.000549",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: C# Developer (Past Week)"
-  },
-  {
-    "id": "18b9d161",
-    "ts": "2026-07-06T19:29:04.728670",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "86f81f0f",
-    "ts": "2026-07-06T19:29:04.505288",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4aac7792",
-    "ts": "2026-07-06T19:29:04.251202",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "986d3c31",
-    "ts": "2026-07-06T19:29:03.995845",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "e58dd826",
-    "ts": "2026-07-06T19:29:03.742393",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "81d773bb",
-    "ts": "2026-07-06T19:29:03.437423",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "45e32593",
-    "ts": "2026-07-06T19:29:03.168409",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "c7903157",
-    "ts": "2026-07-06T19:29:02.774495",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "2cc6b5af",
-    "ts": "2026-07-06T19:29:02.474077",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "f9a9da00",
-    "ts": "2026-07-06T19:29:02.202155",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "adb89150",
-    "ts": "2026-07-06T19:29:01.896754",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c6b6b028",
-    "ts": "2026-07-06T19:29:01.552577",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "440c3f08",
-    "ts": "2026-07-06T19:29:01.284880",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "491d75a9",
-    "ts": "2026-07-06T19:29:00.908241",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b01af076",
-    "ts": "2026-07-06T19:29:00.557674",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "0263d4b1",
-    "ts": "2026-07-06T19:29:00.228256",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "96335a39",
-    "ts": "2026-07-06T19:28:59.886429",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "fcb8bfc6",
-    "ts": "2026-07-06T19:28:59.606535",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior .NET Developer (Past Week)"
-  },
-  {
-    "id": "7195e883",
-    "ts": "2026-07-06T19:28:59.314407",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "8a7213fa",
-    "ts": "2026-07-06T19:28:59.055336",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "dcc70e63",
-    "ts": "2026-07-06T19:28:58.760420",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (.NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "8e2edcfc",
-    "ts": "2026-07-06T19:28:58.449571",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "d2d966b8",
-    "ts": "2026-07-06T19:28:58.187764",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7a23ecda",
-    "ts": "2026-07-06T19:28:57.921322",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .NET Developer (Past Week)"
-  },
-  {
-    "id": "342a34a4",
-    "ts": "2026-07-06T19:28:57.656815",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "2d7da98b",
-    "ts": "2026-07-06T19:28:57.390606",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1b101966",
-    "ts": "2026-07-06T19:28:57.095901",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "2c02820e",
-    "ts": "2026-07-06T19:28:56.834437",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "605f333a",
-    "ts": "2026-07-06T19:28:56.605210",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "194da3f4",
-    "ts": "2026-07-06T19:28:56.317690",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "b71bfd30",
-    "ts": "2026-07-06T19:28:56.053815",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "5cf01fc7",
-    "ts": "2026-07-06T19:28:55.758767",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in France (Paris) (geoId=105646813)"
-  },
-  {
-    "id": "db2a60e5",
-    "ts": "2026-07-06T19:28:55.507403",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "907be652",
-    "ts": "2026-07-06T19:28:55.199003",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "e76ba18f",
-    "ts": "2026-07-06T19:28:54.937890",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "f80254b2",
-    "ts": "2026-07-06T19:28:54.668640",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a4c174fc",
-    "ts": "2026-07-06T19:28:54.399781",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Software Engineer (Past Week)"
-  },
-  {
-    "id": "128a1f50",
-    "ts": "2026-07-06T19:28:54.129863",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "241856a0",
-    "ts": "2026-07-06T19:28:53.884928",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8ac19179",
-    "ts": "2026-07-06T19:28:53.620711",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Azure Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "bd57148d",
-    "ts": "2026-07-06T19:28:53.348875",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "9b15b8e2",
-    "ts": "2026-07-06T19:28:53.063662",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8d03a504",
-    "ts": "2026-07-06T19:28:52.826773",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Azure Developer (Past Week)"
-  },
-  {
-    "id": "f0e78abc",
-    "ts": "2026-07-06T19:28:52.540858",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "8f6828a3",
-    "ts": "2026-07-06T19:28:52.291832",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "779fa60e",
-    "ts": "2026-07-06T19:28:52.001622",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "73a04c16",
-    "ts": "2026-07-06T19:28:51.740050",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "d79cd306",
-    "ts": "2026-07-06T19:28:51.460653",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "d2b0962e",
-    "ts": "2026-07-06T19:28:51.173362",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Backend Developer (Past Week)"
-  },
-  {
-    "id": "61cbf62f",
-    "ts": "2026-07-06T19:28:50.908943",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "e5d80090",
-    "ts": "2026-07-06T19:28:50.606561",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ce29a2a7",
-    "ts": "2026-07-06T19:28:50.324927",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "6d8a328d",
-    "ts": "2026-07-06T19:28:50.070877",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "95dd87ae",
-    "ts": "2026-07-06T19:28:49.797441",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "220a040e",
-    "ts": "2026-07-06T19:28:49.558988",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Backend Developer (Past Week)"
-  },
-  {
-    "id": "c114605f",
-    "ts": "2026-07-06T19:28:49.265369",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "0dbe4adb",
-    "ts": "2026-07-06T19:28:49.003396",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "833b9b95",
-    "ts": "2026-07-06T19:28:48.744689",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "9435181e",
-    "ts": "2026-07-06T19:28:48.516897",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "80528caa",
-    "ts": "2026-07-06T19:28:48.245973",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a690a3ec",
-    "ts": "2026-07-06T19:28:47.911742",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: C# Developer (Past Week)"
-  },
-  {
-    "id": "0596fea7",
-    "ts": "2026-07-06T19:28:47.643144",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "914ddd85",
-    "ts": "2026-07-06T19:28:47.373823",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "eafe6812",
-    "ts": "2026-07-06T19:28:47.126664",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "13703b3d",
-    "ts": "2026-07-06T19:28:46.871984",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "821a8786",
-    "ts": "2026-07-06T19:28:46.673028",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "245b3d6c",
-    "ts": "2026-07-06T19:28:46.393753",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "df7d9af7",
-    "ts": "2026-07-06T19:28:46.140596",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "1e4e1373",
-    "ts": "2026-07-06T19:28:45.850132",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "8dcbaf4b",
-    "ts": "2026-07-06T19:28:45.551007",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "20d03bec",
-    "ts": "2026-07-06T19:28:45.316655",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "0795853b",
-    "ts": "2026-07-06T19:28:45.002372",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "27138515",
-    "ts": "2026-07-06T19:28:44.714180",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "9bc445f7",
-    "ts": "2026-07-06T19:28:44.401493",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "32456ef5",
-    "ts": "2026-07-06T19:28:44.120722",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3e8437e8",
-    "ts": "2026-07-06T19:28:43.836977",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "473eae43",
-    "ts": "2026-07-06T19:28:43.508104",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "72a69995",
-    "ts": "2026-07-06T19:28:43.116429",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5e0e8ede",
-    "ts": "2026-07-06T19:28:42.992280",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior .NET Developer (Past Week)"
-  },
-  {
-    "id": "caee6605",
-    "ts": "2026-07-06T19:28:42.867108",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "cff2c5f5",
-    "ts": "2026-07-06T19:28:42.587878",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "309d8171",
-    "ts": "2026-07-06T19:28:42.327436",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (.NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "bba49fd5",
-    "ts": "2026-07-06T19:28:42.048593",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "9f3d33ba",
-    "ts": "2026-07-06T19:28:41.776630",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "9af05e8d",
-    "ts": "2026-07-06T19:28:41.489895",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .NET Developer (Past Week)"
-  },
-  {
-    "id": "e5e44ae0",
-    "ts": "2026-07-06T19:28:41.262450",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "abd63a34",
-    "ts": "2026-07-06T19:28:40.969172",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0ce77488",
-    "ts": "2026-07-06T19:28:40.730942",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "fa60104b",
-    "ts": "2026-07-06T19:28:40.477589",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "3d793878",
-    "ts": "2026-07-06T19:28:40.275966",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4840298b",
-    "ts": "2026-07-06T19:28:40.090240",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "0ae8cbb6",
-    "ts": "2026-07-06T19:28:39.935606",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "1fc52027",
-    "ts": "2026-07-06T19:28:39.647722",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Finland (geoId=100819756)"
-  },
-  {
-    "id": "dda89388",
-    "ts": "2026-07-06T19:28:39.380176",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4ba05a6e",
-    "ts": "2026-07-06T19:28:39.085652",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "7eb5bed1",
-    "ts": "2026-07-06T19:28:38.849142",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "5afd9526",
-    "ts": "2026-07-06T19:28:38.560953",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c04e8b2b",
-    "ts": "2026-07-06T19:28:38.310898",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Software Engineer (Past Week)"
-  },
-  {
-    "id": "1226facf",
-    "ts": "2026-07-06T19:28:38.029693",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "9eb3946d",
-    "ts": "2026-07-06T19:28:37.751633",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "c0f4609a",
-    "ts": "2026-07-06T19:28:37.469560",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Azure Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "240407c9",
-    "ts": "2026-07-06T19:28:37.203005",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "9322fa19",
-    "ts": "2026-07-06T19:28:36.934427",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "2bf65951",
-    "ts": "2026-07-06T19:28:36.645184",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Azure Developer (Past Week)"
-  },
-  {
-    "id": "7a93a1fc",
-    "ts": "2026-07-06T19:28:36.374263",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "6970b29d",
-    "ts": "2026-07-06T19:28:36.106287",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a7f26f2b",
-    "ts": "2026-07-06T19:28:35.848899",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "4f2a5575",
-    "ts": "2026-07-06T19:28:35.565535",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "ff0f21b3",
-    "ts": "2026-07-06T19:28:35.287252",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "20a27f84",
-    "ts": "2026-07-06T19:28:35.010356",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Backend Developer (Past Week)"
-  },
-  {
-    "id": "a1a3d751",
-    "ts": "2026-07-06T19:28:34.719234",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "3004ad72",
-    "ts": "2026-07-06T19:28:34.465522",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "fbe3fb74",
-    "ts": "2026-07-06T19:28:34.209417",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "63912a16",
-    "ts": "2026-07-06T19:28:33.920024",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "e2cae96c",
-    "ts": "2026-07-06T19:28:33.658349",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ff2d7271",
-    "ts": "2026-07-06T19:28:33.391452",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Backend Developer (Past Week)"
-  },
-  {
-    "id": "e153c116",
-    "ts": "2026-07-06T19:28:33.123938",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "715b2358",
-    "ts": "2026-07-06T19:28:32.847055",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "e7ab5c8b",
-    "ts": "2026-07-06T19:28:32.578330",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "8d03281b",
-    "ts": "2026-07-06T19:28:32.279967",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "63a10c98",
-    "ts": "2026-07-06T19:28:32.017760",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a7c7cc35",
-    "ts": "2026-07-06T19:28:31.695762",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: C# Developer (Past Week)"
-  },
-  {
-    "id": "9faea13a",
-    "ts": "2026-07-06T19:28:31.446223",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "7af91667",
-    "ts": "2026-07-06T19:28:31.173694",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "6a9acc94",
-    "ts": "2026-07-06T19:28:30.906066",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "08ea5e81",
-    "ts": "2026-07-06T19:28:30.610437",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "85bfb64e",
-    "ts": "2026-07-06T19:28:30.354693",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "6acbd8a1",
-    "ts": "2026-07-06T19:28:30.065389",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "992f10e0",
-    "ts": "2026-07-06T19:28:29.788358",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "6cec8b65",
-    "ts": "2026-07-06T19:28:29.514829",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "56585f4b",
-    "ts": "2026-07-06T19:28:29.234874",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
   }
 ]
