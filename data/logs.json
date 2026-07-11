@@ -1,5 +1,1104 @@
 [
   {
+    "id": "14850f7f",
+    "ts": "2026-07-11T22:02:02.397624",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Applied: Erast Pte Ltd | Software Developer / Software Engineer (3boJN2) | Singapore | 100% match"
+  },
+  {
+    "id": "1809796f",
+    "ts": "2026-07-11T22:02:02.291773",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Successfully recorded application to Erast Pte Ltd - Software Developer / Software Engineer (3boJN2) ✅"
+  },
+  {
+    "id": "76c51df7",
+    "ts": "2026-07-11T22:02:02.179837",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "a5406880",
+    "ts": "2026-07-11T22:02:02.049125",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Playwright-Stealth applied successfully to CDP context."
+  },
+  {
+    "id": "f025f63f",
+    "ts": "2026-07-11T22:02:01.653765",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "30a0135f",
+    "ts": "2026-07-11T21:58:51.032710",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "51e47465",
+    "ts": "2026-07-11T21:58:50.892077",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving."
+  },
+  {
+    "id": "0f6a98f3",
+    "ts": "2026-07-11T21:58:50.520616",
+    "level": "AI",
+    "site": "indeed",
+    "message": "Step 1: Filled 2/2 fields via AI."
+  },
+  {
+    "id": "43c8f7ac",
+    "ts": "2026-07-11T21:58:46.109128",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "c000d720",
+    "ts": "2026-07-11T21:58:42.902856",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "5850bb59",
+    "ts": "2026-07-11T21:58:41.334444",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "35f5ef43",
+    "ts": "2026-07-11T21:58:40.178032",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "9b54938f",
+    "ts": "2026-07-11T21:58:38.884166",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "2eb637ef",
+    "ts": "2026-07-11T21:58:32.688514",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "fbcd4200",
+    "ts": "2026-07-11T21:58:32.598859",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "30e3e0df",
+    "ts": "2026-07-11T21:58:32.398225",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "05ee6eab",
+    "ts": "2026-07-11T21:58:24.290875",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "8b8027c2",
+    "ts": "2026-07-11T21:58:23.488770",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "161c6db1",
+    "ts": "2026-07-11T21:58:22.439252",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "5004395c",
+    "ts": "2026-07-11T21:58:21.185316",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Software Developer / Software Engineer (3boJN2) @ Erast Pte Ltd"
+  },
+  {
+    "id": "fb332e11",
+    "ts": "2026-07-11T21:58:01.066116",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "d7b32fd4",
+    "ts": "2026-07-11T21:57:55.323409",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "11cfd832",
+    "ts": "2026-07-11T21:57:54.575922",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "42d5313c",
+    "ts": "2026-07-11T21:57:53.719448",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "5aed44dc",
+    "ts": "2026-07-11T21:57:52.368368",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "b50397bf",
+    "ts": "2026-07-11T21:57:39.905925",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "7a23a82a",
+    "ts": "2026-07-11T21:57:39.082385",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "32c6d594",
+    "ts": "2026-07-11T21:57:38.123938",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "c21bf164",
+    "ts": "2026-07-11T21:57:36.759286",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "bcc3b2fa",
+    "ts": "2026-07-11T21:56:57.617230",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "31816356",
+    "ts": "2026-07-11T21:56:56.665541",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "da02121a",
+    "ts": "2026-07-11T21:56:55.640097",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "40a717e2",
+    "ts": "2026-07-11T21:56:54.004068",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "ef938a6b",
+    "ts": "2026-07-11T21:56:53.913467",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "8ba39df2",
+    "ts": "2026-07-11T21:56:53.788359",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "7ad12a38",
+    "ts": "2026-07-11T21:56:51.448974",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "aab8d5db",
+    "ts": "2026-07-11T21:56:51.294590",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "9d6f44fd",
+    "ts": "2026-07-11T21:56:51.163555",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "d4f49dc2",
+    "ts": "2026-07-11T21:56:50.456088",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "a6918083",
+    "ts": "2026-07-11T21:56:50.090759",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "50db7277",
+    "ts": "2026-07-11T21:56:49.733165",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "029da6bd",
+    "ts": "2026-07-11T21:56:49.189198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e4a92ea7",
+    "ts": "2026-07-11T21:56:49.082939",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "3ed3ce68",
+    "ts": "2026-07-11T21:56:47.539249",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "ce96f653",
+    "ts": "2026-07-11T21:55:14.988352",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "c1d43c8f",
+    "ts": "2026-07-11T21:55:14.039685",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "4e0d19d6",
+    "ts": "2026-07-11T21:55:13.006706",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "c3c82dc9",
+    "ts": "2026-07-11T21:55:11.698579",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "b95e1ee8",
+    "ts": "2026-07-11T21:55:11.356100",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "60e31fe6",
+    "ts": "2026-07-11T21:55:04.498077",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "68a5b401",
+    "ts": "2026-07-11T21:55:03.557282",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "77f1b578",
+    "ts": "2026-07-11T21:55:02.542378",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "8f0cf08a",
+    "ts": "2026-07-11T21:55:01.003865",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "0ea2b056",
+    "ts": "2026-07-11T21:54:57.342065",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "add1b243",
+    "ts": "2026-07-11T21:54:56.199782",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "4ff23532",
+    "ts": "2026-07-11T21:54:55.142080",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "cc65443c",
+    "ts": "2026-07-11T21:54:53.752017",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "85bbce68",
+    "ts": "2026-07-11T21:54:40.752271",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "90c9dc68",
+    "ts": "2026-07-11T21:54:39.813081",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "c03c1147",
+    "ts": "2026-07-11T21:54:38.857695",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "f7ad5973",
+    "ts": "2026-07-11T21:54:37.523688",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "6560d05e",
+    "ts": "2026-07-11T21:54:22.355546",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "62b65ab7",
+    "ts": "2026-07-11T21:54:21.439318",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "25e3f9ac",
+    "ts": "2026-07-11T21:54:20.383203",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "20338b63",
+    "ts": "2026-07-11T21:54:19.013057",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "118f13e1",
+    "ts": "2026-07-11T21:54:09.222665",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "e3f971b6",
+    "ts": "2026-07-11T21:54:08.313070",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "8e0e9f53",
+    "ts": "2026-07-11T21:54:07.257551",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "28571dbd",
+    "ts": "2026-07-11T21:54:05.507410",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Erast Pte Ltd. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "4a9adbbe",
+    "ts": "2026-07-11T21:54:01.757607",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Erast Pte Ltd - Software Developer / Software Engineer (3boJN2) (External Apply)..."
+  },
+  {
+    "id": "99f70f9c",
+    "ts": "2026-07-11T21:53:52.290792",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for Zenika Singapore - Senior C#.NET Developer ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "892233c5",
+    "ts": "2026-07-11T21:53:48.471247",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "c4a6f524",
+    "ts": "2026-07-11T21:53:44.643023",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Zenika Singapore - Senior C#.NET Developer (External Apply)..."
+  },
+  {
+    "id": "59aab3f2",
+    "ts": "2026-07-11T21:53:36.127653",
+    "level": "SUCCESS",
+    "site": "indeed",
+    "message": "Captured external apply URL for percept-solutions - .NET Developer ➡️ Saved to data/bulk_urls.txt"
+  },
+  {
+    "id": "6ff3c423",
+    "ts": "2026-07-11T21:53:33.631369",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking external apply link to capture redirection..."
+  },
+  {
+    "id": "92e3cfdf",
+    "ts": "2026-07-11T21:53:29.825231",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: percept-solutions - .NET Developer (External Apply)..."
+  },
+  {
+    "id": "6733d721",
+    "ts": "2026-07-11T21:53:19.620070",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Skipped recording application for: Fuku — Full Stack .NET Developer"
+  },
+  {
+    "id": "d10b973a",
+    "ts": "2026-07-11T21:53:19.438617",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "c062fa09",
+    "ts": "2026-07-11T21:53:19.328479",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Playwright-Stealth applied successfully to CDP context."
+  },
+  {
+    "id": "746e8e16",
+    "ts": "2026-07-11T21:53:19.088010",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "b9d5d745",
+    "ts": "2026-07-11T21:52:44.203861",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Disconnecting Playwright from Chrome to allow manual/CAPTCHA interaction..."
+  },
+  {
+    "id": "0c6c2f53",
+    "ts": "2026-07-11T21:52:44.112043",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "AI Filler: Final submit/apply button detected. Stopping auto-submit to allow manual review and captcha solving."
+  },
+  {
+    "id": "b04c3e42",
+    "ts": "2026-07-11T21:52:43.943662",
+    "level": "AI",
+    "site": "indeed",
+    "message": "Step 1: Filled 2/2 fields via AI."
+  },
+  {
+    "id": "66eafed2",
+    "ts": "2026-07-11T21:52:40.019045",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "46d0b0e3",
+    "ts": "2026-07-11T21:51:42.511638",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "dc20e476",
+    "ts": "2026-07-11T21:51:41.709627",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "3922324f",
+    "ts": "2026-07-11T21:51:40.475944",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "3e2c34a5",
+    "ts": "2026-07-11T21:51:39.121388",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq-Fast failed: Groq failed: 413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/comple"
+  },
+  {
+    "id": "465e9cca",
+    "ts": "2026-07-11T21:51:32.886869",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: No popup opened, assuming same-page navigation or modal."
+  },
+  {
+    "id": "176bfb94",
+    "ts": "2026-07-11T21:51:32.788379",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Clicking 'Apply' to enter application wizard..."
+  },
+  {
+    "id": "b33d2f81",
+    "ts": "2026-07-11T21:51:32.593544",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "6d6f74db",
+    "ts": "2026-07-11T21:51:22.416880",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "f7049d64",
+    "ts": "2026-07-11T21:51:21.428803",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "0fdeda2f",
+    "ts": "2026-07-11T21:51:20.586387",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "e1b20fe1",
+    "ts": "2026-07-11T21:51:19.326702",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "8e8024dd",
+    "ts": "2026-07-11T21:51:19.236104",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "fca0a438",
+    "ts": "2026-07-11T21:51:19.113707",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "daabb291",
+    "ts": "2026-07-11T21:51:18.884721",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "b6cd991b",
+    "ts": "2026-07-11T21:51:18.795183",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "cd31a78c",
+    "ts": "2026-07-11T21:51:18.664216",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "be44866d",
+    "ts": "2026-07-11T21:51:18.317722",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "c8329b92",
+    "ts": "2026-07-11T21:51:17.972526",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "fbf7678e",
+    "ts": "2026-07-11T21:51:17.602594",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "2db3584b",
+    "ts": "2026-07-11T21:51:17.184637",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "ecf4c836",
+    "ts": "2026-07-11T21:51:17.083408",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "932474fa",
+    "ts": "2026-07-11T21:51:15.576552",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Full Stack .NET Developer @ Fuku"
+  },
+  {
+    "id": "2d3897e2",
+    "ts": "2026-07-11T21:50:48.386488",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "8a8f5edb",
+    "ts": "2026-07-11T21:50:22.523991",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "fdb0969c",
+    "ts": "2026-07-11T21:50:21.674985",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "ab757f91",
+    "ts": "2026-07-11T21:50:20.815412",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "361d9ef3",
+    "ts": "2026-07-11T21:50:19.325738",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "7f6ff42f",
+    "ts": "2026-07-11T21:50:10.304126",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "b1f7ee9d",
+    "ts": "2026-07-11T21:50:09.265153",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "fcfa17d2",
+    "ts": "2026-07-11T21:50:08.465253",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "fdf639da",
+    "ts": "2026-07-11T21:50:05.751039",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (gpt-oss-120b:free)"
+  },
+  {
+    "id": "b10022cf",
+    "ts": "2026-07-11T21:48:13.885461",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "e1308ba2",
+    "ts": "2026-07-11T21:47:57.615446",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "c33aa395",
+    "ts": "2026-07-11T21:47:56.632412",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "55723764",
+    "ts": "2026-07-11T21:47:55.842395",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "98c13640",
+    "ts": "2026-07-11T21:47:54.327132",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "68ed1ce7",
+    "ts": "2026-07-11T21:46:58.727078",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "d41fd8a9",
+    "ts": "2026-07-11T21:46:57.906441",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "69be8d2f",
+    "ts": "2026-07-11T21:46:57.070887",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "fd47d11e",
+    "ts": "2026-07-11T21:46:55.832071",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "aba9ed41",
+    "ts": "2026-07-11T21:46:55.640268",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "8fcf03b8",
+    "ts": "2026-07-11T21:46:48.117756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "0735be19",
+    "ts": "2026-07-11T21:46:47.182565",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "8d3d6073",
+    "ts": "2026-07-11T21:46:46.376920",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "4c842a53",
+    "ts": "2026-07-11T21:46:45.212818",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "387e0af2",
+    "ts": "2026-07-11T21:46:41.127132",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "b3241346",
+    "ts": "2026-07-11T21:46:40.226357",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "430ec7da",
+    "ts": "2026-07-11T21:46:39.443023",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "abdbfaa1",
+    "ts": "2026-07-11T21:46:38.181114",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "7ceef617",
+    "ts": "2026-07-11T21:46:30.907986",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "5cb82b74",
+    "ts": "2026-07-11T21:46:30.063518",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "413e93b9",
+    "ts": "2026-07-11T21:46:29.181572",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "75337c4c",
+    "ts": "2026-07-11T21:46:27.706590",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "55a8259a",
+    "ts": "2026-07-11T21:46:07.485955",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "20fe16e3",
+    "ts": "2026-07-11T21:46:06.694605",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "0581ccb3",
+    "ts": "2026-07-11T21:46:05.866531",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "d4e9895f",
+    "ts": "2026-07-11T21:46:04.621329",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "5d85c8f0",
+    "ts": "2026-07-11T21:45:47.970371",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "b4d9321f",
+    "ts": "2026-07-11T21:45:47.028150",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "d56cf91f",
+    "ts": "2026-07-11T21:45:46.268891",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
+  },
+  {
+    "id": "ac3843d0",
+    "ts": "2026-07-11T21:45:44.612873",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "c2571aaf",
+    "ts": "2026-07-11T21:45:44.331091",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "0159aba3",
+    "ts": "2026-07-11T21:45:44.091983",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "a6b35870",
+    "ts": "2026-07-11T21:45:43.700934",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e82e2fa6",
+    "ts": "2026-07-11T21:45:43.432259",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "bce40b88",
+    "ts": "2026-07-11T21:45:43.174659",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "2f4a81e4",
+    "ts": "2026-07-11T21:45:42.639001",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "4944f77a",
+    "ts": "2026-07-11T21:45:41.980814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "3b031a44",
+    "ts": "2026-07-11T21:45:41.333767",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "a7cc1a10",
+    "ts": "2026-07-11T21:45:40.526253",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "b5fa1f89",
+    "ts": "2026-07-11T21:45:40.238090",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "6bac981a",
+    "ts": "2026-07-11T21:45:38.374747",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Indeed Apply: Detected Indeed Apply button on job page for Fuku. Overriding classification to Indeed Apply ✅"
+  },
+  {
+    "id": "a5df1ba9",
+    "ts": "2026-07-11T21:45:34.075336",
+    "level": "INFO",
+    "site": "indeed",
+    "message": "Opening job page: Fuku - Full Stack .NET Developer (External Apply)..."
+  },
+  {
     "id": "63631c1f",
     "ts": "2026-07-11T21:45:16.586812",
     "level": "SUCCESS",
@@ -2399,1104 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "Learned from form: 'Are you comfortable with the Chennai location?' = 'Yes'"
-  },
-  {
-    "id": "36c1afd1",
-    "ts": "2026-07-11T20:30:26.923686",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Within how many days can you join?' = 'Within how many days can you join? 14'"
-  },
-  {
-    "id": "53a4ffdb",
-    "ts": "2026-07-11T20:30:22.288042",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "10f20861",
-    "ts": "2026-07-11T20:30:21.765804",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_.NET+_Angular_Developer_Resume.docx' = 'Deselect resume Siva_Shankar_.NET+_Angular_Developer_Resume.docx'"
-  },
-  {
-    "id": "dda54068",
-    "ts": "2026-07-11T20:30:15.792507",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "5d80ba96",
-    "ts": "2026-07-11T20:30:15.452201",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'India'"
-  },
-  {
-    "id": "a94aae8b",
-    "ts": "2026-07-11T20:30:15.154326",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Search by title, skill, or company' = 'Senior Software Engineer'"
-  },
-  {
-    "id": "f3832414",
-    "ts": "2026-07-11T20:29:39.854383",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "6cfdeebb",
-    "ts": "2026-07-11T20:29:30.675235",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "a9a2c3a1",
-    "ts": "2026-07-11T20:29:29.701335",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "0309b5b0",
-    "ts": "2026-07-11T20:29:28.625446",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "290246c4",
-    "ts": "2026-07-11T20:29:27.049654",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: .NET+ Angular Developer @ VAYUZ Technologies"
-  },
-  {
-    "id": "ee5c36bd",
-    "ts": "2026-07-11T20:29:00.864371",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "835e0b2d",
-    "ts": "2026-07-11T20:28:55.978921",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "b859cdd1",
-    "ts": "2026-07-11T20:28:55.166948",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "81a89bac",
-    "ts": "2026-07-11T20:28:54.168378",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "e9b398d7",
-    "ts": "2026-07-11T20:28:52.733933",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "0bea21e6",
-    "ts": "2026-07-11T20:28:13.263887",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "294d6fde",
-    "ts": "2026-07-11T20:28:12.412120",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b719a3b5",
-    "ts": "2026-07-11T20:28:11.551847",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "b91d812e",
-    "ts": "2026-07-11T20:28:10.044427",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "ef85b0d5",
-    "ts": "2026-07-11T20:27:15.663678",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "c0f3d24c",
-    "ts": "2026-07-11T20:27:14.561190",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "993ac853",
-    "ts": "2026-07-11T20:27:13.422688",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "c00ff6a8",
-    "ts": "2026-07-11T20:27:11.845284",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "86f6fd96",
-    "ts": "2026-07-11T20:27:09.383937",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "1df48e42",
-    "ts": "2026-07-11T20:27:08.468850",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "03ed5425",
-    "ts": "2026-07-11T20:27:07.442399",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "0398a17e",
-    "ts": "2026-07-11T20:27:06.096625",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "bd2c955f",
-    "ts": "2026-07-11T20:26:43.214403",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "461e9015",
-    "ts": "2026-07-11T20:26:42.158779",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "731f66a1",
-    "ts": "2026-07-11T20:26:41.125191",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "239c43cc",
-    "ts": "2026-07-11T20:26:39.651259",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "da5ab7cc",
-    "ts": "2026-07-11T20:26:08.534610",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "c6f08808",
-    "ts": "2026-07-11T20:26:07.363777",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "4d9327cb",
-    "ts": "2026-07-11T20:26:05.902160",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "4737e3b7",
-    "ts": "2026-07-11T20:26:04.300044",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "758c100d",
-    "ts": "2026-07-11T20:25:59.156717",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "8a6b60f5",
-    "ts": "2026-07-11T20:25:58.018103",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "aa9cfdb8",
-    "ts": "2026-07-11T20:25:56.859954",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "5dfacc1c",
-    "ts": "2026-07-11T20:25:55.225209",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "040f7311",
-    "ts": "2026-07-11T20:25:54.953101",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "12ce2a32",
-    "ts": "2026-07-11T20:25:54.671481",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "c6a5197c",
-    "ts": "2026-07-11T20:25:50.350559",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "1463a699",
-    "ts": "2026-07-11T20:25:50.084855",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "35a8c942",
-    "ts": "2026-07-11T20:25:49.802811",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "600134ad",
-    "ts": "2026-07-11T20:25:49.298875",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "2d53c1ea",
-    "ts": "2026-07-11T20:25:48.792749",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "62306cb2",
-    "ts": "2026-07-11T20:25:48.290063",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "d279c36b",
-    "ts": "2026-07-11T20:25:47.766304",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "eb2eb8b0",
-    "ts": "2026-07-11T20:25:47.503707",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "207e5a1f",
-    "ts": "2026-07-11T20:25:28.004614",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for Husky Technologies — Developer – Azure Full Stack (Adv+Elite) - Husky (Guindy to bulk_urls.txt"
-  },
-  {
-    "id": "edb34653",
-    "ts": "2026-07-11T20:25:03.222846",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for Copart — SOFTWARE ENGINEER to bulk_urls.txt"
-  },
-  {
-    "id": "a131f5de",
-    "ts": "2026-07-11T20:24:27.925516",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "3c6f3319",
-    "ts": "2026-07-11T20:23:39.698135",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for Infosys — .Net Lead to bulk_urls.txt"
-  },
-  {
-    "id": "cbc80c03",
-    "ts": "2026-07-11T20:23:02.371359",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for Eaton — Software Engineer to bulk_urls.txt"
-  },
-  {
-    "id": "c2b4f767",
-    "ts": "2026-07-11T20:22:32.858510",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for NatWest Group — Software Engineer, Dot Net to bulk_urls.txt"
-  },
-  {
-    "id": "50d90af0",
-    "ts": "2026-07-11T20:22:14.847042",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "620ed204",
-    "ts": "2026-07-11T20:22:07.181233",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "7c9907f7",
-    "ts": "2026-07-11T20:22:06.795544",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'India' (geoId=102713980)"
-  },
-  {
-    "id": "b1c49f51",
-    "ts": "2026-07-11T20:22:06.495425",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in India (Remote/WFH) (geoId=102713980)"
-  },
-  {
-    "id": "e106753e",
-    "ts": "2026-07-11T20:22:06.188805",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "b6664646",
-    "ts": "2026-07-11T20:22:05.483327",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "788a0f94",
-    "ts": "2026-07-11T20:21:55.881426",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "1e3cae03",
-    "ts": "2026-07-11T20:21:55.619670",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "082a7e63",
-    "ts": "2026-07-11T20:21:55.358149",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "1521c968",
-    "ts": "2026-07-11T20:21:53.735812",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "326b0739",
-    "ts": "2026-07-11T20:21:53.091797",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "27cf0a6b",
-    "ts": "2026-07-11T20:21:49.946178",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "25c5d927",
-    "ts": "2026-07-11T20:21:39.839588",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Worldwide"
-  },
-  {
-    "id": "34ac5d3e",
-    "ts": "2026-07-11T20:21:34.753661",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "2e0e53b3",
-    "ts": "2026-07-11T20:21:34.508586",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "b058169f",
-    "ts": "2026-07-11T12:18:05.683720",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "cf88198d",
-    "ts": "2026-07-11T12:18:05.585987",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "7bac4211",
-    "ts": "2026-07-11T12:18:05.473883",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "f0e1fb82",
-    "ts": "2026-07-11T12:18:05.365193",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "0ca05975",
-    "ts": "2026-07-11T12:18:05.245599",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "15b4769e",
-    "ts": "2026-07-11T12:18:05.140600",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\11-07-2026"
-  },
-  {
-    "id": "0df49b0e",
-    "ts": "2026-07-11T12:18:05.013470",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-11 12:18:05"
-  },
-  {
-    "id": "4a70e266",
-    "ts": "2026-07-11T12:18:04.908311",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "7f6bb870",
-    "ts": "2026-07-11T12:18:04.807637",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "2417a6dd",
-    "ts": "2026-07-11T12:18:04.710921",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "78ef6a06",
-    "ts": "2026-07-11T12:18:04.597731",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "22cb7c7a",
-    "ts": "2026-07-11T12:18:04.014640",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "6009f57b",
-    "ts": "2026-07-09T22:18:04.052804",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "f925d586",
-    "ts": "2026-07-09T22:18:03.957384",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\09-07-2026"
-  },
-  {
-    "id": "7429fffa",
-    "ts": "2026-07-09T22:18:03.841962",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-09 22:18:03"
-  },
-  {
-    "id": "c32be205",
-    "ts": "2026-07-09T22:18:03.746387",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "e5826282",
-    "ts": "2026-07-09T22:18:03.648399",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "c042586a",
-    "ts": "2026-07-09T22:18:03.554053",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "972cf5e2",
-    "ts": "2026-07-09T22:18:03.459039",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "d2d05258",
-    "ts": "2026-07-09T22:18:03.112097",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "f4053fd0",
-    "ts": "2026-07-09T21:35:32.856841",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "00639b16",
-    "ts": "2026-07-09T21:35:32.750101",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "599c111c",
-    "ts": "2026-07-09T21:35:32.659454",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "e1fe0c64",
-    "ts": "2026-07-09T21:35:32.560938",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "a3706903",
-    "ts": "2026-07-09T21:35:32.450735",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "e0e311d5",
-    "ts": "2026-07-09T21:35:32.355657",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\09-07-2026"
-  },
-  {
-    "id": "f4c9c8ef",
-    "ts": "2026-07-09T21:35:32.268211",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-09 21:35:32"
-  },
-  {
-    "id": "4e0f0ddd",
-    "ts": "2026-07-09T21:35:32.177505",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "f26966ed",
-    "ts": "2026-07-09T21:35:32.085086",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "e1df2a47",
-    "ts": "2026-07-09T21:35:31.959279",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "6e931933",
-    "ts": "2026-07-09T21:35:31.847891",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "5728de73",
-    "ts": "2026-07-09T21:35:31.730993",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "210d6243",
-    "ts": "2026-07-09T15:18:04.590815",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "89c23a86",
-    "ts": "2026-07-09T15:18:04.510716",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "a5420eca",
-    "ts": "2026-07-09T15:18:04.419689",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "a603f82a",
-    "ts": "2026-07-09T15:18:04.304662",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "22331d7d",
-    "ts": "2026-07-09T15:18:04.124294",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "cf21d55d",
-    "ts": "2026-07-09T15:18:04.019681",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\09-07-2026"
-  },
-  {
-    "id": "f0f521b3",
-    "ts": "2026-07-09T15:18:03.937797",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-09 15:18:03"
-  },
-  {
-    "id": "9b1ce565",
-    "ts": "2026-07-09T15:18:03.851698",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "b02efddd",
-    "ts": "2026-07-09T15:18:03.763848",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "f2bdbb51",
-    "ts": "2026-07-09T15:18:03.668276",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "2f15b6e3",
-    "ts": "2026-07-09T15:18:03.575911",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "3bd8c1aa",
-    "ts": "2026-07-09T15:18:03.230769",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "24f87e40",
-    "ts": "2026-07-09T12:18:06.108919",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "9476f232",
-    "ts": "2026-07-09T12:18:05.674053",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "584ea91b",
-    "ts": "2026-07-08T22:18:03.797265",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "acf0b2cb",
-    "ts": "2026-07-08T22:18:03.693462",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-07-2026"
-  },
-  {
-    "id": "06cddda3",
-    "ts": "2026-07-08T22:18:03.593559",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-08 22:18:03"
-  },
-  {
-    "id": "213bd1b5",
-    "ts": "2026-07-08T22:18:03.491853",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "97f365e3",
-    "ts": "2026-07-08T22:18:03.396664",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "fc0376bc",
-    "ts": "2026-07-08T22:18:03.301442",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "e9a36a7b",
-    "ts": "2026-07-08T22:18:03.202479",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "06a2adf8",
-    "ts": "2026-07-08T22:18:02.728914",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "c0220300",
-    "ts": "2026-07-08T21:29:23.149886",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "64668b9a",
-    "ts": "2026-07-08T21:29:23.053820",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "b4b296a2",
-    "ts": "2026-07-08T21:29:22.968296",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "a7476e52",
-    "ts": "2026-07-08T21:29:22.844211",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "3b35ec29",
-    "ts": "2026-07-08T21:29:22.752351",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "0d1769dc",
-    "ts": "2026-07-08T21:29:22.659178",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-07-2026"
-  },
-  {
-    "id": "cb2e6b79",
-    "ts": "2026-07-08T21:29:22.536278",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-08 21:29:22"
-  },
-  {
-    "id": "cd0daab7",
-    "ts": "2026-07-08T21:29:22.448803",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "ae80ddce",
-    "ts": "2026-07-08T21:29:22.359089",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "4623cbbd",
-    "ts": "2026-07-08T21:29:22.265594",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "a902775b",
-    "ts": "2026-07-08T21:29:22.162449",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "98e23c35",
-    "ts": "2026-07-08T21:29:21.259960",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "c2517c73",
-    "ts": "2026-07-08T20:20:23.376430",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Product Designer (.NET Ecosystem) @ Jetbrains"
-  },
-  {
-    "id": "1a4ae12b",
-    "ts": "2026-07-08T20:20:01.066492",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "734212c1",
-    "ts": "2026-07-08T20:20:00.802138",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "44d8302c",
-    "ts": "2026-07-08T20:20:00.571099",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "4813eae7",
-    "ts": "2026-07-08T20:19:59.854742",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "ff2f37c3",
-    "ts": "2026-07-08T20:19:59.238153",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "60e4e744",
-    "ts": "2026-07-08T20:19:58.523880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "360a7f6b",
-    "ts": "2026-07-08T20:19:57.521606",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "cc3763f9",
-    "ts": "2026-07-08T20:19:57.192002",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "9728d030",
-    "ts": "2026-07-08T20:19:55.444970",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "9bbf97d2",
-    "ts": "2026-07-08T20:19:13.772123",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "188e77c4",
-    "ts": "2026-07-08T20:19:12.754840",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b1f08329",
-    "ts": "2026-07-08T20:19:11.714049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "a1822c1e",
-    "ts": "2026-07-08T20:19:09.678724",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "40442089",
-    "ts": "2026-07-08T20:16:40.587946",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "fc4fbe38",
-    "ts": "2026-07-08T20:16:39.462315",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "8a773808",
-    "ts": "2026-07-08T20:16:38.434049",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"openai/gpt-oss-120b:free is temporarily rate-limited upstream. Please retr"
-  },
-  {
-    "id": "e0fcc6d1",
-    "ts": "2026-07-08T20:16:36.596031",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "39faee4b",
-    "ts": "2026-07-08T20:15:48.141584",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "844d2780",
-    "ts": "2026-07-08T20:15:46.723405",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
   }
 ]
