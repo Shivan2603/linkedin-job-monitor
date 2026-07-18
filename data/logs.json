@@ -1,5 +1,1223 @@
 [
   {
+    "id": "33341349",
+    "ts": "2026-07-18T22:07:20.367950",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: GovTech Singapore | Software Engineer, GoBIZ | Singapore, Singapore | 96% match"
+  },
+  {
+    "id": "98a3dca8",
+    "ts": "2026-07-18T22:07:20.076364",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: GovTech Singapore — Software Engineer, GoBIZ"
+  },
+  {
+    "id": "4b05d2c5",
+    "ts": "2026-07-18T22:07:13.038985",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "1af9832f",
+    "ts": "2026-07-18T22:07:12.707562",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'By submitting my application, I hereby give my consent to GovTech to obtain, verify and share my information with other Government agencies for the purposes of recruitment and review of recruitment practices.' = 'I hereby give my consent.'"
+  },
+  {
+    "id": "48bc6883",
+    "ts": "2026-07-18T22:07:12.437526",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'What is your work eligibility in Singapore?' = 'Work Visa'"
+  },
+  {
+    "id": "ab69719e",
+    "ts": "2026-07-18T22:07:12.194571",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Share your LinkedIn Profile with us' = 'https://www.linkedin.com/in/siva-shankar-4a7849226/'"
+  },
+  {
+    "id": "331a3a83",
+    "ts": "2026-07-18T22:07:06.764066",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "3edcab30",
+    "ts": "2026-07-18T22:07:06.403415",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Discipline' = 'Computer Science'"
+  },
+  {
+    "id": "e40e74cd",
+    "ts": "2026-07-18T22:07:06.091236",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Degree' = 'Degree Institution'"
+  },
+  {
+    "id": "4cd322b5",
+    "ts": "2026-07-18T22:06:55.672341",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "554a5db1",
+    "ts": "2026-07-18T22:06:55.259665",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'Backend Developer'"
+  },
+  {
+    "id": "a8c28fe0",
+    "ts": "2026-07-18T22:06:20.172653",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "635f81d6",
+    "ts": "2026-07-18T22:06:20.043764",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "85bddec6",
+    "ts": "2026-07-18T22:06:17.143032",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "776ac053",
+    "ts": "2026-07-18T22:06:16.319706",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "44ef1fef",
+    "ts": "2026-07-18T22:06:16.087545",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "d91f2bcf",
+    "ts": "2026-07-18T22:06:15.857738",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "3900462f",
+    "ts": "2026-07-18T22:06:15.027522",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "1174f4a6",
+    "ts": "2026-07-18T22:06:14.068527",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2f45ede9",
+    "ts": "2026-07-18T22:06:13.687408",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Senior Software Engineer @ GovTech Singapore"
+  },
+  {
+    "id": "d8250558",
+    "ts": "2026-07-18T22:05:48.425734",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "ec136383",
+    "ts": "2026-07-18T22:05:48.158352",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "3c17c505",
+    "ts": "2026-07-18T22:05:45.507650",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "5113e0e7",
+    "ts": "2026-07-18T22:05:44.577487",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e36246f1",
+    "ts": "2026-07-18T22:05:44.231118",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "b7f9bfe1",
+    "ts": "2026-07-18T22:05:43.862458",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "3f381f0d",
+    "ts": "2026-07-18T22:05:42.826320",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "e5ffc51b",
+    "ts": "2026-07-18T22:05:41.751533",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "fdc134cf",
+    "ts": "2026-07-18T22:05:41.368047",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "9734070e",
+    "ts": "2026-07-18T22:05:41.062033",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "8073a521",
+    "ts": "2026-07-18T22:05:38.282502",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "5063b9a0",
+    "ts": "2026-07-18T22:05:37.507997",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "a5612629",
+    "ts": "2026-07-18T22:05:37.302565",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e56b23cc",
+    "ts": "2026-07-18T22:05:37.081661",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "3a39692c",
+    "ts": "2026-07-18T22:05:36.025782",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "d46265af",
+    "ts": "2026-07-18T22:05:35.231523",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d1273d27",
+    "ts": "2026-07-18T22:05:35.047404",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "4b1540f6",
+    "ts": "2026-07-18T22:05:34.926412",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"nousresearch/hermes-3-llama-3.1-405b:free is temporarily rate-limited upst"
+  },
+  {
+    "id": "09de2e9b",
+    "ts": "2026-07-18T22:05:33.582554",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "741b0736",
+    "ts": "2026-07-18T22:05:32.782292",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "762ae945",
+    "ts": "2026-07-18T22:05:32.396131",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "bfd9bbd5",
+    "ts": "2026-07-18T22:05:32.127605",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "2bb28637",
+    "ts": "2026-07-18T22:05:31.351489",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "9b78a43e",
+    "ts": "2026-07-18T22:05:30.557464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "bdca686e",
+    "ts": "2026-07-18T22:05:30.392838",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "20454db3",
+    "ts": "2026-07-18T22:05:30.260651",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e14fe066",
+    "ts": "2026-07-18T22:05:27.982725",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "9e551c6b",
+    "ts": "2026-07-18T22:05:27.129281",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "0de3cff1",
+    "ts": "2026-07-18T22:05:26.850156",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "40d7de49",
+    "ts": "2026-07-18T22:05:26.614574",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "e53948ef",
+    "ts": "2026-07-18T22:05:25.799961",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "698e4c6a",
+    "ts": "2026-07-18T22:05:24.827784",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "bd1845eb",
+    "ts": "2026-07-18T22:05:24.562971",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "0bd9a08c",
+    "ts": "2026-07-18T22:04:50.028684",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "df8565a0",
+    "ts": "2026-07-18T22:04:49.177624",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "1ada8fb6",
+    "ts": "2026-07-18T22:04:48.861039",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "1aee1af9",
+    "ts": "2026-07-18T22:04:48.457858",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "3ddd285f",
+    "ts": "2026-07-18T22:04:47.331222",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "d842f7f7",
+    "ts": "2026-07-18T22:04:46.357550",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "446c4d0c",
+    "ts": "2026-07-18T22:04:46.028541",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "0e3240e0",
+    "ts": "2026-07-18T22:04:45.897850",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "5847c627",
+    "ts": "2026-07-18T22:04:45.175156",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "06cbdec3",
+    "ts": "2026-07-18T22:04:44.312679",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "689a08cc",
+    "ts": "2026-07-18T22:04:44.067561",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "dd831265",
+    "ts": "2026-07-18T22:04:43.859518",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "6f521216",
+    "ts": "2026-07-18T22:04:42.975246",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "cefd02f3",
+    "ts": "2026-07-18T22:04:42.117811",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "24e9a93e",
+    "ts": "2026-07-18T22:04:41.877811",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "ffbac7b1",
+    "ts": "2026-07-18T22:04:11.842531",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "b926fbfa",
+    "ts": "2026-07-18T22:04:11.009236",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "feed1e91",
+    "ts": "2026-07-18T22:04:10.785274",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "af632763",
+    "ts": "2026-07-18T22:04:10.557645",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "6a428ae1",
+    "ts": "2026-07-18T22:04:09.717736",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "131f7283",
+    "ts": "2026-07-18T22:04:08.887766",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "710d9477",
+    "ts": "2026-07-18T22:04:08.710396",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "21404fb8",
+    "ts": "2026-07-18T22:04:08.572951",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "c06e422e",
+    "ts": "2026-07-18T22:04:07.117533",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "0f413130",
+    "ts": "2026-07-18T22:04:06.282622",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "aa094da3",
+    "ts": "2026-07-18T22:04:05.858460",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "ccb6126d",
+    "ts": "2026-07-18T22:04:05.627909",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "436685a6",
+    "ts": "2026-07-18T22:04:04.651679",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "f2303fee",
+    "ts": "2026-07-18T22:04:03.882040",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "a5e13945",
+    "ts": "2026-07-18T22:04:03.582890",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "f25a215e",
+    "ts": "2026-07-18T22:03:22.887892",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "89dbed3e",
+    "ts": "2026-07-18T22:03:21.637710",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "177f6807",
+    "ts": "2026-07-18T22:03:21.391096",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "658125c8",
+    "ts": "2026-07-18T22:03:21.151800",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "e8e22c35",
+    "ts": "2026-07-18T22:03:20.143829",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "9391d173",
+    "ts": "2026-07-18T22:03:19.167566",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "6962028b",
+    "ts": "2026-07-18T22:03:18.977969",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "e4ebabc3",
+    "ts": "2026-07-18T22:03:18.843023",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "cb3a5e78",
+    "ts": "2026-07-18T22:03:16.355932",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "3e6702b4",
+    "ts": "2026-07-18T22:03:15.534545",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e7f19e9b",
+    "ts": "2026-07-18T22:03:15.130769",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "287bd1b5",
+    "ts": "2026-07-18T22:03:14.863031",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "87d73667",
+    "ts": "2026-07-18T22:03:14.053882",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "e37986f4",
+    "ts": "2026-07-18T22:03:13.256553",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "223a2c49",
+    "ts": "2026-07-18T22:03:13.027860",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "823a9081",
+    "ts": "2026-07-18T22:03:01.349587",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "e07a8283",
+    "ts": "2026-07-18T22:03:00.626057",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "623514a9",
+    "ts": "2026-07-18T22:03:00.398111",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "a19aeb2e",
+    "ts": "2026-07-18T22:03:00.128175",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "a64ed573",
+    "ts": "2026-07-18T22:02:59.372942",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "5d60713d",
+    "ts": "2026-07-18T22:02:58.408180",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "b8ced7e9",
+    "ts": "2026-07-18T22:02:58.203134",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (free)"
+  },
+  {
+    "id": "87b65735",
+    "ts": "2026-07-18T22:02:53.147826",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "e7f77cc2",
+    "ts": "2026-07-18T22:02:52.385716",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "2f9f0977",
+    "ts": "2026-07-18T22:02:52.176722",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "53a44b36",
+    "ts": "2026-07-18T22:02:51.945578",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "b12bc204",
+    "ts": "2026-07-18T22:02:51.032568",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "928d39bc",
+    "ts": "2026-07-18T22:02:50.177987",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d043a5a6",
+    "ts": "2026-07-18T22:02:49.992607",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "2e522bad",
+    "ts": "2026-07-18T22:02:49.860719",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-next-80b-a3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "e9db1736",
+    "ts": "2026-07-18T22:02:48.285101",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "11d48487",
+    "ts": "2026-07-18T22:02:47.282776",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "70ebe573",
+    "ts": "2026-07-18T22:02:46.903551",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "be009d9f",
+    "ts": "2026-07-18T22:02:46.555988",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "cfa36897",
+    "ts": "2026-07-18T22:02:45.582196",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "3937e241",
+    "ts": "2026-07-18T22:02:44.626690",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "867987e0",
+    "ts": "2026-07-18T22:02:44.210564",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "d1f1cb2c",
+    "ts": "2026-07-18T22:02:43.921559",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "7323244b",
+    "ts": "2026-07-18T22:02:41.740489",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream"
+  },
+  {
+    "id": "0ee38506",
+    "ts": "2026-07-18T22:02:40.784945",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "d6a97f91",
+    "ts": "2026-07-18T22:02:40.374858",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "2c2d5d4b",
+    "ts": "2026-07-18T22:02:39.842814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
+  },
+  {
+    "id": "139ffbc8",
+    "ts": "2026-07-18T22:02:38.842925",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
+  },
+  {
+    "id": "dc3ccb09",
+    "ts": "2026-07-18T22:02:37.720317",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "4cde7036",
+    "ts": "2026-07-18T22:02:36.969460",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "770c1e25",
+    "ts": "2026-07-18T22:02:36.692520",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "9c226506",
+    "ts": "2026-07-18T22:02:36.412436",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "ff117071",
+    "ts": "2026-07-18T22:02:35.977829",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "d1074efd",
+    "ts": "2026-07-18T22:02:35.714309",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "4909be53",
+    "ts": "2026-07-18T22:02:35.424984",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "ff992e7c",
+    "ts": "2026-07-18T22:02:34.887570",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "72b80d54",
+    "ts": "2026-07-18T22:02:34.314640",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "469d8f20",
+    "ts": "2026-07-18T22:02:33.627646",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "3139542b",
+    "ts": "2026-07-18T22:02:32.735321",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "acc0a00d",
+    "ts": "2026-07-18T22:02:32.472970",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "381c3a08",
+    "ts": "2026-07-18T22:02:24.221972",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "3537c8ce",
+    "ts": "2026-07-18T22:02:16.497686",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Backend Developer (Past Week)"
+  },
+  {
+    "id": "d5a763ae",
+    "ts": "2026-07-18T22:02:16.172497",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Backend Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "dc8f1256",
+    "ts": "2026-07-18T22:02:15.892403",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'C# Developer' in Singapore"
+  },
+  {
+    "id": "6e7fc11b",
+    "ts": "2026-07-18T22:01:58.067579",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 6 jobs on page 1"
+  },
+  {
+    "id": "fbff7b66",
+    "ts": "2026-07-18T22:01:49.489169",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "4bb209dd",
+    "ts": "2026-07-18T22:01:49.209650",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "04665221",
+    "ts": "2026-07-18T22:01:48.952826",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 4 jobs for 'C# Developer' in Singapore"
+  },
+  {
+    "id": "92d2170b",
+    "ts": "2026-07-18T22:00:45.042533",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for GXS Bank — Software Engineer, Backend to bulk_urls.txt"
+  },
+  {
+    "id": "8d325ee6",
+    "ts": "2026-07-18T22:00:16.539214",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "431422c0",
+    "ts": "2026-07-18T21:59:29.633786",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Julius Baer — Tech Lead ART SDA 100% to bulk_urls.txt"
+  },
+  {
+    "id": "8836acd3",
+    "ts": "2026-07-18T21:58:43.172634",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "a3d48a96",
+    "ts": "2026-07-18T21:58:05.842367",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Micron Technology — Smart Systems Engineer to bulk_urls.txt"
+  },
+  {
+    "id": "3adc4962",
+    "ts": "2026-07-18T21:57:04.877777",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Amazon Web Services (AWS) — Sr. Manufacturing Test Engineer, AWS Rack Mfg Operations to bulk_urls.txt"
+  },
+  {
+    "id": "938ee888",
+    "ts": "2026-07-18T21:56:50.162883",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "65b47041",
+    "ts": "2026-07-18T21:56:43.734955",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: C# Developer (Past Week)"
+  },
+  {
+    "id": "54e64254",
+    "ts": "2026-07-18T21:56:43.445343",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "d0243f01",
+    "ts": "2026-07-18T21:56:43.179959",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior Full Stack Developer' in Singapore"
+  },
+  {
+    "id": "aca44d89",
+    "ts": "2026-07-18T21:56:40.333457",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
+    "id": "1b6f3aec",
+    "ts": "2026-07-18T21:56:31.952375",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "d3c293ca",
+    "ts": "2026-07-18T21:56:31.677690",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "2344ee2e",
+    "ts": "2026-07-18T21:56:31.422934",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior Full Stack Developer' in Singapore"
+  },
+  {
+    "id": "6269ac1d",
+    "ts": "2026-07-18T21:55:57.268691",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 11 jobs on page 2"
+  },
+  {
+    "id": "46391bc0",
+    "ts": "2026-07-18T21:54:39.712849",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "90a6dcd0",
+    "ts": "2026-07-18T21:54:30.881428",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Senior Full Stack Developer (Past Week)"
+  },
+  {
+    "id": "f46d9152",
+    "ts": "2026-07-18T21:54:30.613178",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "3d2b2b1b",
+    "ts": "2026-07-18T21:54:30.332903",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Developer' in Singapore"
+  },
+  {
+    "id": "c915db82",
+    "ts": "2026-07-18T21:54:26.764140",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 1 jobs on page 1"
+  },
+  {
+    "id": "9a78e8d4",
+    "ts": "2026-07-18T21:54:20.124890",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "384ffab2",
+    "ts": "2026-07-18T21:54:19.828070",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Full Stack Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "4c8b1546",
+    "ts": "2026-07-18T21:54:19.509319",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Developer' in Singapore"
+  },
+  {
+    "id": "b0137647",
+    "ts": "2026-07-18T21:53:42.993089",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 11 jobs on page 2"
+  },
+  {
+    "id": "f5236c96",
+    "ts": "2026-07-18T21:52:09.788619",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "fbf302cc",
+    "ts": "2026-07-18T21:51:59.706408",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Full Stack Developer (Past Week)"
+  },
+  {
+    "id": "bb6a5363",
+    "ts": "2026-07-18T21:51:59.429421",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Full Stack Developer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "29a4d0cb",
+    "ts": "2026-07-18T21:51:59.007865",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for 'Senior .NET Developer' in Singapore"
+  },
+  {
     "id": "18a7951f",
     "ts": "2026-07-18T21:51:03.978069",
     "level": "SUCCESS",
@@ -2280,1223 +3498,5 @@
     "level": "INFO",
     "site": "safety",
     "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "f12fb63f",
-    "ts": "2026-07-18T21:25:07.789295",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Singapore"
-  },
-  {
-    "id": "dd883d71",
-    "ts": "2026-07-18T21:24:53.614253",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "d1a48a92",
-    "ts": "2026-07-18T21:24:53.354097",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "c2eefc50",
-    "ts": "2026-07-18T21:18:41.223990",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Apply error: [Errno 13] Permission denied: 'E:\\\\SivaShankar\\\\aTresume\\\\18-07-2026\\\\GovTech_Singapore\\\\Siva_Shanka"
-  },
-  {
-    "id": "1365985b",
-    "ts": "2026-07-18T21:18:20.859803",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "7eb63856",
-    "ts": "2026-07-18T21:17:59.489501",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "f740cd58",
-    "ts": "2026-07-18T21:17:58.516608",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "00dc0887",
-    "ts": "2026-07-18T21:17:57.542649",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "80d9aa7e",
-    "ts": "2026-07-18T21:17:56.994764",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "81c7e877",
-    "ts": "2026-07-18T21:17:51.445997",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "4ea86a62",
-    "ts": "2026-07-18T21:17:50.624187",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "73492115",
-    "ts": "2026-07-18T21:17:49.660195",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "53aaf8d5",
-    "ts": "2026-07-18T21:17:49.309269",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "2224db41",
-    "ts": "2026-07-18T21:16:51.932934",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "1623c6da",
-    "ts": "2026-07-18T21:16:51.046414",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "25d64461",
-    "ts": "2026-07-18T21:16:50.129827",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "bb2a0309",
-    "ts": "2026-07-18T21:16:49.933708",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "952ad414",
-    "ts": "2026-07-18T21:16:12.886926",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "9a33174b",
-    "ts": "2026-07-18T21:16:11.906139",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "b7aa57c8",
-    "ts": "2026-07-18T21:16:10.584557",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "10334373",
-    "ts": "2026-07-18T21:16:10.069655",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "f9eda7e5",
-    "ts": "2026-07-18T21:16:05.805425",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "8922d229",
-    "ts": "2026-07-18T21:16:05.083689",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "3256c43c",
-    "ts": "2026-07-18T21:16:04.199674",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "24981172",
-    "ts": "2026-07-18T21:16:03.984980",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "6ecddc57",
-    "ts": "2026-07-18T21:15:47.336270",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "1972f191",
-    "ts": "2026-07-18T21:15:46.253906",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "210ff6a7",
-    "ts": "2026-07-18T21:15:45.104647",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "c8e7494e",
-    "ts": "2026-07-18T21:15:44.673748",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "611c930d",
-    "ts": "2026-07-18T21:15:13.011733",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "703a15ba",
-    "ts": "2026-07-18T21:15:11.811219",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "8f562e33",
-    "ts": "2026-07-18T21:15:10.616093",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "d94ca196",
-    "ts": "2026-07-18T21:15:10.185072",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "dfd40551",
-    "ts": "2026-07-18T21:15:01.826853",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "ec18bb36",
-    "ts": "2026-07-18T21:15:00.880166",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "61cc35fb",
-    "ts": "2026-07-18T21:14:59.771661",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "ca882dfa",
-    "ts": "2026-07-18T21:14:58.799625",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "8d8d401b",
-    "ts": "2026-07-18T21:14:58.519401",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "80228df9",
-    "ts": "2026-07-18T21:14:58.249401",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "92078595",
-    "ts": "2026-07-18T21:14:53.430558",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "aaf07db1",
-    "ts": "2026-07-18T21:14:53.197336",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "a2847fdb",
-    "ts": "2026-07-18T21:14:52.939294",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "9525f2d8",
-    "ts": "2026-07-18T21:14:52.379047",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "faebb136",
-    "ts": "2026-07-18T21:14:51.912419",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "348e1d5a",
-    "ts": "2026-07-18T21:14:51.430389",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "5d7b6852",
-    "ts": "2026-07-18T21:14:50.646891",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "09af7abe",
-    "ts": "2026-07-18T21:14:50.382067",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "29abed66",
-    "ts": "2026-07-18T21:14:45.534399",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "de962794",
-    "ts": "2026-07-18T21:14:37.054142",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "4047b6a8",
-    "ts": "2026-07-18T21:14:36.797487",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Singapore' (geoId=102454443)"
-  },
-  {
-    "id": "f040f5f5",
-    "ts": "2026-07-18T21:14:36.537520",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Singapore (geoId=102454443)"
-  },
-  {
-    "id": "98d0a462",
-    "ts": "2026-07-18T21:14:36.174179",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "441289d6",
-    "ts": "2026-07-18T21:14:35.459336",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "f5d3ec4f",
-    "ts": "2026-07-18T21:14:30.296155",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "67ee9e5a",
-    "ts": "2026-07-18T21:14:30.030623",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "921f83f7",
-    "ts": "2026-07-18T21:14:29.801751",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "a1579440",
-    "ts": "2026-07-18T21:14:29.154258",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "40047835",
-    "ts": "2026-07-18T21:14:28.533921",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "39b77ef4",
-    "ts": "2026-07-18T21:14:25.338568",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "3f271cfb",
-    "ts": "2026-07-18T21:14:23.469370",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Singapore"
-  },
-  {
-    "id": "baafcb9b",
-    "ts": "2026-07-18T21:14:10.059354",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "62ee631c",
-    "ts": "2026-07-18T21:14:09.830011",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "ac2a020a",
-    "ts": "2026-07-18T20:37:37.991234",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "⏸️ Bot PAUSED by user. Waiting for manual control..."
-  },
-  {
-    "id": "71ea4783",
-    "ts": "2026-07-18T20:36:57.609735",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "d7bb2ab0",
-    "ts": "2026-07-18T20:36:57.367019",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "957aa099",
-    "ts": "2026-07-18T20:36:57.063169",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "c6096948",
-    "ts": "2026-07-18T20:36:56.338206",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "ab8d37f2",
-    "ts": "2026-07-18T20:36:55.731179",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "bc889be8",
-    "ts": "2026-07-18T20:36:55.117797",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "0bc836dc",
-    "ts": "2026-07-18T20:36:54.165036",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "d73f2ac7",
-    "ts": "2026-07-18T20:36:53.888421",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "74d63d2e",
-    "ts": "2026-07-18T20:36:52.312619",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior Automation Software Engineer @ Applied Angstrom Technology"
-  },
-  {
-    "id": "2d68949f",
-    "ts": "2026-07-18T20:36:19.922076",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "69911687",
-    "ts": "2026-07-18T20:35:43.225443",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "2bf0dd77",
-    "ts": "2026-07-18T20:35:41.807753",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "f1e9a11b",
-    "ts": "2026-07-18T20:35:40.872065",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "4174941c",
-    "ts": "2026-07-18T20:35:40.212632",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "542d9525",
-    "ts": "2026-07-18T20:35:01.004667",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "0dc35e87",
-    "ts": "2026-07-18T20:34:59.908981",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "1a8a665c",
-    "ts": "2026-07-18T20:34:58.673758",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "d9c743c9",
-    "ts": "2026-07-18T20:34:57.923853",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "122cc859",
-    "ts": "2026-07-18T20:34:48.439771",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "1cb417f8",
-    "ts": "2026-07-18T20:34:47.363576",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "e9de04e1",
-    "ts": "2026-07-18T20:34:46.183252",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "02f3c2b7",
-    "ts": "2026-07-18T20:34:45.671612",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "23270724",
-    "ts": "2026-07-18T20:34:17.311709",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "8475ac43",
-    "ts": "2026-07-18T20:34:15.886349",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "04151851",
-    "ts": "2026-07-18T20:34:14.454263",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "7846a0d0",
-    "ts": "2026-07-18T20:34:13.641443",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "b72e52a8",
-    "ts": "2026-07-18T20:33:37.982392",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "2c98e4f9",
-    "ts": "2026-07-18T20:33:36.671233",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "615e96bf",
-    "ts": "2026-07-18T20:33:35.313784",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "6945812c",
-    "ts": "2026-07-18T20:33:34.498753",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "94fb7036",
-    "ts": "2026-07-18T20:32:26.268853",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "fd09a9a7",
-    "ts": "2026-07-18T20:32:25.250590",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "8e0ccfe0",
-    "ts": "2026-07-18T20:32:24.226386",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "49404d69",
-    "ts": "2026-07-18T20:32:23.805753",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "06d0b00b",
-    "ts": "2026-07-18T20:31:58.981629",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "54cc2a7b",
-    "ts": "2026-07-18T20:31:57.921419",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "4afc3944",
-    "ts": "2026-07-18T20:31:56.936521",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "c116522f",
-    "ts": "2026-07-18T20:31:56.490051",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "08f10494",
-    "ts": "2026-07-18T20:31:18.863686",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "5ade7175",
-    "ts": "2026-07-18T20:31:17.603642",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "79ec8003",
-    "ts": "2026-07-18T20:31:16.603417",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "d73638ba",
-    "ts": "2026-07-18T20:31:16.013545",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "39ded3e0",
-    "ts": "2026-07-18T20:31:15.823470",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "88e286f4",
-    "ts": "2026-07-18T20:31:15.680627",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "6f6ff10f",
-    "ts": "2026-07-18T20:31:10.584033",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "dd8227c4",
-    "ts": "2026-07-18T20:31:10.425279",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "f657c379",
-    "ts": "2026-07-18T20:31:10.253044",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "6e22546c",
-    "ts": "2026-07-18T20:31:09.642833",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "2b860b17",
-    "ts": "2026-07-18T20:31:09.238093",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "91132137",
-    "ts": "2026-07-18T20:31:08.623337",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "09e2ebf1",
-    "ts": "2026-07-18T20:31:08.158703",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "510189ce",
-    "ts": "2026-07-18T20:31:07.952648",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "25a77e02",
-    "ts": "2026-07-18T20:30:16.479285",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 2"
-  },
-  {
-    "id": "a2af88f5",
-    "ts": "2026-07-18T20:28:57.991038",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "d7d2c1e5",
-    "ts": "2026-07-18T20:28:51.557321",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "be932afc",
-    "ts": "2026-07-18T20:28:51.362777",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Singapore' (geoId=102454443)"
-  },
-  {
-    "id": "5c0390fb",
-    "ts": "2026-07-18T20:28:51.182635",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Singapore (geoId=102454443)"
-  },
-  {
-    "id": "1abec519",
-    "ts": "2026-07-18T20:28:50.990005",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "010e7b32",
-    "ts": "2026-07-18T20:28:50.367692",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "8fb41e0d",
-    "ts": "2026-07-18T20:28:44.114784",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "c36ecfe9",
-    "ts": "2026-07-18T20:28:43.947383",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "543a294d",
-    "ts": "2026-07-18T20:28:43.763500",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "0a381ac2",
-    "ts": "2026-07-18T20:28:43.251367",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "552d26e7",
-    "ts": "2026-07-18T20:28:42.592587",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "ebadc0ad",
-    "ts": "2026-07-18T20:28:39.453939",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "f8f294df",
-    "ts": "2026-07-18T20:28:37.772174",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Singapore"
-  },
-  {
-    "id": "84b25f9a",
-    "ts": "2026-07-18T20:28:34.291949",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "462238b4",
-    "ts": "2026-07-18T20:28:34.169661",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "caa77381",
-    "ts": "2026-07-18T20:28:23.305704",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "6943c233",
-    "ts": "2026-07-18T20:28:23.191382",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "e2276f80",
-    "ts": "2026-07-18T20:28:23.082958",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "e3992745",
-    "ts": "2026-07-18T20:28:22.972425",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "8aeb4021",
-    "ts": "2026-07-18T20:28:22.858759",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "3c24fc95",
-    "ts": "2026-07-18T20:28:22.743061",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "59910958",
-    "ts": "2026-07-18T20:28:22.627227",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "2e278ffe",
-    "ts": "2026-07-18T20:28:22.515841",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "5151c6bc",
-    "ts": "2026-07-18T20:28:22.401464",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "24196cb3",
-    "ts": "2026-07-18T20:28:22.286833",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "517928ba",
-    "ts": "2026-07-18T20:28:22.171697",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "bb47f971",
-    "ts": "2026-07-18T20:28:22.019672",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "3cca7006",
-    "ts": "2026-07-18T20:28:21.834569",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "896f5435",
-    "ts": "2026-07-18T20:28:21.661784",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "b19796eb",
-    "ts": "2026-07-18T20:28:21.430876",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "09c3233e",
-    "ts": "2026-07-18T20:28:21.102212",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "6b44d5b4",
-    "ts": "2026-07-18T20:28:20.819625",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "a1ef1bfc",
-    "ts": "2026-07-18T20:28:20.514252",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Target page, context or browser has be"
-  },
-  {
-    "id": "11b1ecd2",
-    "ts": "2026-07-18T20:23:18.403930",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "⏸️ Bot PAUSED by user. Waiting for manual control..."
-  },
-  {
-    "id": "1533ebe5",
-    "ts": "2026-07-18T20:23:18.189004",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 3"
-  },
-  {
-    "id": "159e2ee8",
-    "ts": "2026-07-18T20:22:50.329933",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Applied: ST Engineering | Senior Application Software Developer (DSC/TE | Singapore, Singapore | 100% match"
-  },
-  {
-    "id": "c87960d5",
-    "ts": "2026-07-18T20:22:50.086959",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "✅ LinkedIn Easy Apply submitted: ST Engineering — Senior Application Software Developer (DSC/TE"
-  },
-  {
-    "id": "d5cf0331",
-    "ts": "2026-07-18T20:22:43.816473",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "de74a8c8",
-    "ts": "2026-07-18T20:22:43.628659",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Will you now or in the future require any workpass for employment?' = 'No'"
-  },
-  {
-    "id": "f34ecc0f",
-    "ts": "2026-07-18T20:22:43.516021",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'What's your expected salary per month?' = '20'"
-  },
-  {
-    "id": "2222ed0a",
-    "ts": "2026-07-18T20:22:43.406288",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'What's your current salary per month?' = '12'"
-  },
-  {
-    "id": "d986a02a",
-    "ts": "2026-07-18T20:22:40.095204",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "5fdffb30",
-    "ts": "2026-07-18T20:22:39.944250",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'Deselect resume Siva_Shankar_Senior_Application_Software_Developer_DSC_TE_Resume.docx' = 'Deselect resume Siva_Shankar_Senior_Application_Software_Developer_DSC_TE_Resume.docx'"
-  },
-  {
-    "id": "41859d81",
-    "ts": "2026-07-18T20:22:35.024979",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Profile updated with new learned answers."
-  },
-  {
-    "id": "cd3ed4bd",
-    "ts": "2026-07-18T20:22:34.889854",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Learned from form: 'City, state, or zip code' = 'Singapore'"
-  },
-  {
-    "id": "553dc1c8",
-    "ts": "2026-07-18T20:21:58.271092",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior Application Software Developer (DSC/TE) @ ST Engineering"
-  },
-  {
-    "id": "c6f66a71",
-    "ts": "2026-07-18T20:21:20.004960",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "65846a97",
-    "ts": "2026-07-18T20:20:05.848674",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "9ead87a5",
-    "ts": "2026-07-18T20:20:04.983735",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "fb915e69",
-    "ts": "2026-07-18T20:20:04.085521",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "5baae62e",
-    "ts": "2026-07-18T20:20:03.831359",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "7d71fdfd",
-    "ts": "2026-07-18T20:20:00.451292",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry s"
-  },
-  {
-    "id": "d9a62fd8",
-    "ts": "2026-07-18T20:19:59.434787",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstrea"
-  },
-  {
-    "id": "353a3472",
-    "ts": "2026-07-18T20:19:58.537322",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "4d960a2b",
-    "ts": "2026-07-18T20:19:58.185892",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "88fd006e",
-    "ts": "2026-07-18T20:19:58.097665",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "867ec772",
-    "ts": "2026-07-18T20:19:57.987192",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "5c65dcf0",
-    "ts": "2026-07-18T20:19:57.300621",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
   }
 ]
