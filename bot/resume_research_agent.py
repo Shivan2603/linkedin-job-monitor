@@ -1088,8 +1088,6 @@ def write_perfect_fit_summary(
             f"Summary Closing Line (copy EXACTLY, word for word): {jd_context.get('summary_closing_line','')}\n\n"
             f"Current summary draft:\n{resume_json.get('professional_summary','')}\n\n"
             f"Rewrite this into a 75-95 word highly professional, dense, and factual summary (3-4 sentences). "
-            f"Sentence 1 must open with a specific achievement (not just a title). "
-            f"Sentence 5 must be the EXACT closing line above, copied verbatim."
         )
         raw = ai_complete(PERFECT_FIT_NARRATOR_SYSTEM, prompt, task="tailor", max_tokens=700)
         result = parse_json_safely(raw)

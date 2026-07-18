@@ -162,33 +162,12 @@ This resume must feel like it was written by a human who spent 2 hours studying 
 5. DO NOT copy bullets word-for-word from the base facts. REFRAME with the company's exact language.
 
 == SUMMARY WRITING GUIDE ==
-The professional summary MUST be driven by narrative_strategy.summary_opening_angle:
+The professional summary MUST be highly professional, dense, and factual (3-4 sentences).
+Do NOT use gimmicky hooks like "Performance-obsessed" or "Impact-driven".
+Instead, write a grounded, mature engineering summary that mirrors this style:
+"Senior Software Engineer with 4+ years building high-availability distributed systems, fault-tolerant microservices, and AI-augmented enterprise platforms on Microsoft Azure. Currently modernizing enterprise compliance platforms — architecting 8-stage QLM workflow engines, QAR survey platforms, and cross-system integrations (SWIFT/HANA) using .NET Core 8 and Angular. Previously architected a 12-service PCI-DSS-compliant microservices platform sustaining 300+ RPS at 99.98% uptime. Mentors 7-engineer teams and ships production features from schema design through observability. Microsoft AZ-204 Certified."
 
-- "performance": Lead with the most impressive latency/throughput metric. Start with: "Performance-obsessed [job title] who reduced..."
-  Example: "Performance-obsessed .NET backend engineer who profiled 30+ enterprise APIs from 850ms to sub-100ms p99 — delivering the kind of latency that production SLAs demand."
-
-- "cloud": Lead with Azure architecture. Start with: "Cloud-native [job title] who..."
-  Example: "Cloud-native .NET engineer who architected 12+ microservices on Azure App Services with 99.98% uptime — an AZ-204 certified practitioner who ships production-grade cloud systems."
-
-- "ai_ml": Lead with AI/ML delivery. Start with: "AI-driven [job title] who..."
-  Example: "AI-driven .NET engineer who shipped Azure OpenAI GPT-4 semantic search into production — reducing document lookup from 2.3s to sub-200ms across 1,000+ weekly submissions."
-
-- "fintech_domain": Lead with the financial domain outcome. Start with: "[Job title] with a track record in financial platforms..."
-  Example: "Backend engineer with a proven track record in high-availability financial procurement platforms — engineered 12+ microservices achieving 3x throughput and 99.98% SLA for a live B2B procurement system."
-
-- "security": Lead with security depth. Start with: "Security-minded [job title] who..."
-  Example: "Security-minded .NET engineer who hardened 30+ enterprise APIs with OAuth2+JWT, AES-256 document encryption, and mTLS certificate rotation across production financial systems."
-
-- "government": Lead with compliance track record. Start with: "[Job title] with federal compliance experience..."
-  Example: "Full-stack .NET engineer with hands-on US federal platform delivery — built FIPS-compliant, Section 508-accessible systems across a multi-agency government compact used nationwide."
-
-- "leadership": Lead with the mentoring/team impact. Start with: "Technical lead and [job title] who..."
-  Example: "Engineering lead who mentored 4 junior engineers, introduced architectural decision records, and cut post-deployment defects by 40% — while shipping 12+ microservices into production."
-
-Sentence 2: Reference the achievement listed in narrative_strategy.primary_achievement, using this company's domain language and the JD's mirror phrases.
-Sentence 3: Address the JD's single biggest technical requirement. Mention the specific technology from domain_priority_skills.
-Sentence 4: If is_team_lead_role: mention mentoring + ADRs. If IC role: mention AZ-204 + production system delivery.
-Sentence 5: Use the EXACT summary_closing_line from JD Intelligence verbatim. Do NOT rewrite it.
+Tailor the technologies and focus areas to the JD, but keep this exact professional, dense, and fact-driven tone. Ensure you explicitly mention the years of experience (e.g. "with 4+ years of experience"). Never use AI buzzword salads or fragmented casual "hook" sentences. Be direct, authoritative, and grounded in the candidate's actual LTIMindtree QRP and DSSI microservices experience.
 
 == WORK EXPERIENCE BULLET RULES ==
 Bullet COUNT per role comes from narrative_strategy.bullet_allocation. Respect it exactly.
