@@ -69,11 +69,11 @@ BADGE_BAR_PATTERN = re.compile(
 
 # ── DESIGN TOKENS (ATS-safe: plain text colors only, no images/tables) ──────
 # ATS parsers read color-formatted text normally — color is 100% cosmetic only
-NAVY       = RGBColor(0x0D, 0x21, 0x37)   # #0D2137 — deep premium navy (richer than before)
-ACCENT     = RGBColor(0x15, 0x65, 0xC0)   # #1565C0 — strong professional blue
+NAVY       = RGBColor(0x1A, 0x5C, 0x38)   # #1A5C38 — forest green (heading + name)
+ACCENT     = RGBColor(0x1A, 0x5C, 0x38)   # #1A5C38 — sub-headings (same green family)
 GRAY       = RGBColor(0x4A, 0x4A, 0x4A)   # #4A4A4A — darker gray for better readability
 LIGHT_GRAY = RGBColor(0x77, 0x77, 0x77)   # #777777 — lighter gray for locations/dates
-RULE_COLOR = "0D2137"                      # XML hex for border elements (deep navy)
+RULE_COLOR = "1A5C38"                      # XML hex for border elements (forest green)
 
 
 def strip_markdown(text: str) -> str:
