@@ -155,8 +155,8 @@ Your job: FRESHLY WRITE a resume that tells a completely unique, company-specifi
 This resume must feel like it was written by a human who spent 2 hours studying this specific company.
 
 == CRITICAL ANTI-TEMPLATE RULES (VIOLATIONS WILL BE REJECTED) ==
-1. DO NOT start the summary with "[Job Title] with 4+ years of hands-on experience". That is a template. Start from a DIFFERENT angle each time.
-2. DO NOT write the same opening sentence structure as any other resume. The narrative_strategy.summary_opening_angle tells you which angle to lead with.
+1. Write a highly professional, dense, factual summary (3-4 sentences) based on the candidate's real QRP/microservices experience.
+2. DO NOT use gimmicky hooks like "Performance-obsessed". Keep it mature and grounded.
 3. DO NOT use the same work experience bullets as a generic resume. Select and reframe bullets based on narrative_strategy.top_bullets_for_primary_role.
 4. DO NOT mention the company name anywhere in the resume body. Domain/industry language only.
 5. DO NOT copy bullets word-for-word from the base facts. REFRAME with the company's exact language.
@@ -271,7 +271,7 @@ CANDIDATE BASE FACTS (Grounded Database)
        * Optimized legacy WCF and ADO.NET data access layers, reducing web page transaction times by 20%.
 
 3. PROJECTS — Include ALL 5, sorted by JD domain relevance (most relevant FIRST):
-     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry. (AI-powered tax document analysis using Semantic Kernel orchestration and pgvector semantic search with sub-200ms lookup).
+     * QRP (Quality & Risk Portal): C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry. (Enterprise compliance portal with 8-stage QLM workflow, QAR survey engine, and granular RBAC).
      * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services. (Financial procurement microservices platform with 3x throughput and 99.98% uptime SLA).
      * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509. (Secure enterprise document vault with AES-256 encryption, OAuth2/OIDC, and mTLS certificate rotation).
      * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache. (Centralized enterprise SSO with PKCE code flow, JWT caching, and mTLS service-to-service security).
@@ -291,12 +291,11 @@ DYNAMIC TAILORING RULES
 1. HEADER:
    - Set "job_title_headline" to the target job title (Title Case, no location).
    - Set "location_line" based on the relocation/country context in JD Intelligence.
-2. PROFESSIONAL SUMMARY (EXACTLY 5 sentences — unique per company, never from a template):
-   - This is the MOST IMPORTANT section. Choose the opening angle from narrative_strategy.summary_opening_angle.
-   - DO NOT start with "[Title] with 4+ years of hands-on experience...". That is a template and is FORBIDDEN.
-   - Follow the SUMMARY WRITING GUIDE defined above. The opening must match the summary_opening_angle.
-   - Sentence 2: Feature the primary_achievement from narrative_strategy. Use this company's domain language and jd_mirror_phrases.
-   - Sentence 3: Address the JD's biggest technical requirement specifically. Use at least one phrase from jd_mirror_phrases.
+2. PROFESSIONAL SUMMARY (3-4 sentences):
+- This is the MOST IMPORTANT section.
+- Follow the SUMMARY WRITING GUIDE defined above to produce a highly professional, dense 3-4 sentence summary.
+- Focus on real architecture, scale (RPS/uptime), and exact technologies.
+- Weave in the company's domain language and jd_mirror_phrases naturally.
    - Sentence 4: If is_team_lead_role → "Mentored 4–6 engineers, introduced ADRs, and reduced onboarding time from 4 weeks to 10 days — ready to bring that same technical leadership to high-performing engineering teams."
      If IC role → "AZ-204 certified with a proven track record of building production-grade systems that align with demanding enterprise engineering environments."
    - Sentence 5: Use the EXACT summary_closing_line from JD Intelligence verbatim. Do NOT rewrite it.
@@ -314,7 +313,7 @@ DYNAMIC TAILORING RULES
 5. PROJECTS — ALL 5 PROJECTS, in order of JD domain relevance (most relevant FIRST):
    Each project gets EXACTLY 3 bullets. Write them in this STRICT order:
    - BULLET 1 — ARCHITECTURE RATIONALE (WHY): Explain WHY those specific technology choices were made as deliberate trade-offs.
-     Template: "[Selected/Chose/Adopted] [specific tech] over [alternative] to [solve specific problem — e.g. 'keep tax data strictly within security boundary', 'achieve sub-200ms semantic lookup without cross-network overhead']."
+     Template: "[Selected/Chose/Adopted] [specific tech] over [alternative] to [solve specific problem — e.g. 'handle complex 8-stage QLM workflows securely', 'enforce dynamic QAR survey rules without performance bottlenecks']."
      This must sound like a senior engineer explaining a real design decision at a technical interview, NOT a task description.
    - BULLET 2 — IMPACT (WHAT + METRIC): State the measurable outcome using ONLY the allowed metrics from the project's grounded data.
      Template: "[Action verb + what was built] — [specific metric from allowed list] [in context that maps to this JD's domain]."
@@ -349,7 +348,7 @@ Return ONLY a JSON block structured as:
   ],
   "projects": [
     {
-      "name": "AI Tax Document Analyser",
+      "name": "QRP (Quality & Risk Portal)",
       "tech_stack": "C# · .NET Core · Azure OpenAI GPT-4 · pgvector · Semantic Kernel · OpenTelemetry",
       "bullets": ["...", "...", "..."]
     },
@@ -455,7 +454,7 @@ CANDIDATE BASE FACTS (Grounded Database)
        * Optimized legacy WCF and ADO.NET data access layers, reducing web page transaction times by 20%.
 
 3. PROJECTS — You must include ALL 5 projects. Do NOT drop any projects:
-     * AI Tax Document Analyser: C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry.
+     * QRP (Quality & Risk Portal): C# • .NET Core • Azure OpenAI GPT-4 • pgvector • Semantic Kernel • OpenTelemetry.
      * e-ProcureZen: C# • .NET 7 • Clean Architecture • CQRS • YARP Reverse Proxy • RabbitMQ • Redis • Docker • Azure App Services.
      * Nexa Vault: .NET Core • Angular • AES-256 Encryption • OAuth2/OIDC • Docker • SQL Server • mTLS • X.509.
      * SSO Application: ASP.NET Core • OAuth2 • OIDC • JWT • mTLS • X.509 • In-Memory Distributed Cache.
@@ -961,7 +960,7 @@ def tailor_resume(job_title: str, company: str, job_description: str, site: str 
             "top_bullets_for_primary_role": ["A4", "A7", "A5"],
             "suppress_achievements": [],
             "domain_verbs": ["Engineered", "Architected", "Optimized", "Deployed", "Secured"],
-            "project_order": ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+            "project_order": ["QRP (Quality & Risk Portal)", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
         }
         print(f"    [NarrativeStrategy] Failed (using defaults): {e}")
 
@@ -1023,7 +1022,7 @@ IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('dom
         # Use narrative_strategy.project_order (AI-chosen by domain relevance)
         # Fall back to the domain-keyword heuristic if not available
         strategy_project_order = narrative_strategy.get("project_order", [])
-        all_projects = ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+        all_projects = ["QRP (Quality & Risk Portal)", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
 
         if strategy_project_order and len(strategy_project_order) == 5:
             # Use AI-chosen order, validate all 5 are present
@@ -1037,11 +1036,11 @@ IMPORTANT: Prioritise these domain skills in first bullets: {jd_context.get('dom
             selected_projects = list(all_projects)
             domain_lower = jd_context.get("company_domain", "").lower()
             project_priority_front = {
-                "ai": "AI Tax Document Analyser", "fintech": "e-ProcureZen",
+                "ai": "QRP (Quality & Risk Portal)", "fintech": "e-ProcureZen",
                 "procurement": "e-ProcureZen", "government": "NEICE",
                 "federal": "NEICE", "document": "Nexa Vault",
                 "security": "SSO Application", "banking": "e-ProcureZen",
-                "tax": "AI Tax Document Analyser", "healthcare": "AI Tax Document Analyser",
+                "tax": "QRP (Quality & Risk Portal)", "healthcare": "QRP (Quality & Risk Portal)",
                 "identity": "SSO Application",
             }
             for key, priority_proj in project_priority_front.items():

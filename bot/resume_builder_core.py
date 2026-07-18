@@ -1147,7 +1147,7 @@ def parse_base_resume(docx_path):
                     pass
                     
         elif state == "PROJECTS":
-            known_projects = ["e-procurezen", "ai tax document", "nexa vault", "sso application", "neice"]
+            known_projects = ["e-procurezen", "qrp (quality & risk portal)", "nexa vault", "sso application", "neice"]
             is_project_title = False
             for kp in known_projects:
                 if kp in text.lower():
@@ -1173,7 +1173,7 @@ def parse_base_resume(docx_path):
 DEFAULT_JOBS = {}
 DEFAULT_PROJECTS_POOL = [
     {
-        "name": "AI Tax Document Analyser",
+        "name": "QRP (Quality & Risk Portal)",
         "tech": "C# · .NET Core · Azure OpenAI GPT-4 · pgvector · Semantic Kernel · OpenTelemetry",
         "bullets": [
             "Selected local pgvector indexing over managed vector DB to keep sensitive tax data strictly within security boundary, eliminating cross-network latency.",
@@ -1700,15 +1700,15 @@ PROJECT_FALLBACK_POOL = [
 
 CLEAN_BULLETS_MAPPING = {
     # LTIMindtree
-    "migration of 50+ legacy tax tables": "Optimized database performance by migrating 50+ legacy tax tables to QRP structures, reducing query latency by 38%.",
+    "qlm case management": "Built QLM case-management module — an 8-stage workflow engine tracking compliance matters firm-wide.",
     "assisted schema mapping pipeline": "Implemented an Azure OpenAI embedding pipeline to auto-suggest mappings, reducing manual migration effort by 60%.",
-    "advanced stored procedures for dynamic rbac": "Designed secure stored procedures for dynamic RBAC role mapping across 15+ enterprise tax modules.",
+    "granular rbac": "Implemented granular RBAC across 7+ roles with field- and record-level access control.",
     "profiled and refactored 30+ asp.net": "Refactored 30+ ASP.NET Web API endpoints to eliminate N+1 queries, achieving sub-100ms p99 latency.",
     "redis-based api response caching": "Implemented Redis-based API response caching, reducing database query volume by 45% under high concurrency.",
     "opentelemetry distributed tracing": "Instrumented OpenTelemetry distributed tracing across microservices, reducing MTTR by 50%.",
     "secured 30+ restful apis": "Secured 30+ RESTful APIs with OAuth2 + JWT authentication, ensuring strict OWASP compliance.",
-    "automated tax document summarisation": "Integrated Azure OpenAI GPT-4 for document summarization, accelerating weekly submissions triage by 35%.",
-    "semantic search engine using pgvector": "Engineered a semantic search engine using pgvector, delivering sub-200ms intelligent lookup over tax records.",
+    "qar survey engine": "Engineered Annual Quality Assurance Review survey system with dynamic, role-based question visibility.",
+    "swift and cp3 integrations": "Integrated QRP with SWIFT and CP3 for near-real-time data sync feeding QAR eligibility rules.",
     "github copilot with custom prompt": "Leveraged GitHub Copilot prompt engineering for unit testing, raising code coverage to 85% with xUnit.",
 
     # DSSI
@@ -1738,7 +1738,7 @@ PROJECTS_TECHNICAL_DECISIONS = {
         "Engineered 12+ procurement microservices using .NET 7, CQRS, and Clean Architecture, maintaining a 99.98% system uptime SLA under peak load.",
         "Demonstrates scalable .NET Core microservices experience directly aligned with the technical requirements at {company}."
     ],
-    "ai tax document": [
+    "qrp (quality & risk portal)": [
         "Selected local pgvector indexing over a managed vector database to keep the tax data strictly within our security boundary and minimize cross-network query latency.",
         "Engineered Semantic Kernel orchestrations with Azure OpenAI GPT-4 to extract structured tax data, reducing manual review time by 60% across 1,000+ weekly document submissions.",
         "Demonstrates enterprise-grade AI integration and OpenTelemetry distributed tracing directly aligned with the technical requirements at {company}."
@@ -2000,8 +2000,8 @@ def get_canonical_project_name(name: str) -> str:
     name_lower = name.lower().replace("‑", "-")  # Replace non-breaking hyphens with standard hyphens
     if "procure" in name_lower or "zen" in name_lower:
         return "e-ProcureZen"
-    if "tax" in name_lower or "analyser" in name_lower or "analyzer" in name_lower or "intelligence" in name_lower:
-        return "AI Tax Document Analyser"
+    if "qrp" in name_lower or "quality" in name_lower or "risk" in name_lower:
+        return "QRP (Quality & Risk Portal)"
     if "vault" in name_lower or "document security" in name_lower or "nexa" in name_lower:
         return "Nexa Vault"
     if "sso" in name_lower or "single-sign-on" in name_lower or "identity" in name_lower:
@@ -2014,7 +2014,7 @@ def resolve_standard_company(name: str) -> str:
     if not name:
         return name
     name_lower = name.lower()
-    if any(x in name_lower for x in ["ltimindtree", "lti", "deloitte", "tax"]):
+    if any(x in name_lower for x in ["ltimindtree", "lti", "deloitte", "qrp"]):
         return "LTIMindtree"
     if any(x in name_lower for x in ["dssi", "procure"]):
         return "DSSI Solutions India Pvt Ltd"
@@ -2776,7 +2776,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
         raw_projects = []
         
     # [ATS-GUARD] Dynamic Project Recovery: Auto-fill/merge missing projects from base pool
-    standard_names = ["AI Tax Document Analyser", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
+    standard_names = ["QRP (Quality & Risk Portal)", "e-ProcureZen", "Nexa Vault", "SSO Application", "NEICE"]
     present_names = []
     for p in raw_projects:
         if isinstance(p, dict):
@@ -2795,7 +2795,7 @@ def build_tailored_resume_from_json(tailored: dict, job_title: str, company: str
             if base_proj:
                 bullets = list(base_proj.get("bullets", []))
                 # Retrieve architecture decision & fallback bullets from expanded PROJECTS_TECHNICAL_DECISIONS
-                decision_key = "e-procurezen" if "procure" in std_name.lower() else ("ai tax document" if "tax" in std_name.lower() else ("nexa vault" if "nexa" in std_name.lower() else ("sso application" if "sso" in std_name.lower() else "neice")))
+                decision_key = "e-procurezen" if "procure" in std_name.lower() else ("qrp (quality & risk portal)" if "tax" in std_name.lower() else ("nexa vault" if "nexa" in std_name.lower() else ("sso application" if "sso" in std_name.lower() else "neice")))
                 decision_bullets = PROJECTS_TECHNICAL_DECISIONS.get(decision_key, [])
                 if len(decision_bullets) >= 3:
                     bullets_to_use = [
