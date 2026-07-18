@@ -224,17 +224,10 @@ CANDIDATE BASE FACTS (Grounded Database)
 2. WORK EXPERIENCE:
    * Role 1: LTIMindtree (Jun 2025 – Present)
      - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior Backend Developer", "Senior .NET Developer" depending on JD)
-     - Deloitte Enterprise Tax Client context: Client: Deloitte — Enterprise Tax Platform
-     - Allowed Technologies: C#, .NET Core 8, ASP.NET Web API, Angular, Azure OpenAI GPT-4, Microservices, CQRS, pgvector, OpenTelemetry, Redis, SQL Server, Entity Framework Core
-     - Grounded Achievements/Metrics to reframe:
-       * Migrated 50+ legacy tax tables to QRP structures, reducing query latency by 38%.
-       * Deployed Azure OpenAI embedding pipeline for dynamic schema mapping, saving 60% manual effort.
-       * Developed secure stored procedures for dynamic RBAC role mapping across 15+ tax modules.
-       * Profiled and refactored 30+ ASP.NET Web API endpoints to solve N+1 query loops, achieving sub-100ms p99 latency.
-       * Configured Redis-based API response caching, reducing database query load by 45%.
-       * Instrumented OpenTelemetry distributed tracing across microservices, reducing MTTR by 50%.
-       * Secured 30+ RESTful APIs with OAuth2 + JWT authentication for OWASP compliance.
-       * Integrated Azure OpenAI GPT-4 for automated tax document summarization, speeding up weekly triages by 35%.
+     - Deloitte QRP Client context: Client: Deloitte — Quality & Risk Portal (QRP)
+* Engineered 8-stage QLM case-management workflow and QAR survey engine using .NET Core 8 and Angular.
+* Implemented granular RBAC across 7+ roles securing sensitive communications.
+* Integrated QRP with SWIFT and CP3 for near-real-time data sync feeding QAR eligibility rules.
        * Built a semantic search engine using pgvector for sub-200ms document lookups.
        * Leveraged GitHub Copilot prompt engineering for unit tests, raising coverage to 85% with xUnit.
 
@@ -339,7 +332,7 @@ Return ONLY a JSON block structured as:
     {
       "company": "LTIMindtree",
       "dates": "Jun 2025 – Present",
-      "role_title": "Senior Software Engineer | Client: Deloitte — Enterprise Tax Platform",
+      "role_title": "Senior Software Engineer | Client: Deloitte — Quality & Risk Portal (QRP)",
       "tech_stack_line": ".NET Core 8 • ASP.NET Web API • Angular • Azure OpenAI GPT-4 • Microservices",
       "bullets": ["...", "...", "...", "..."],
       "key": "LTIMindtree"
@@ -407,17 +400,10 @@ CANDIDATE BASE FACTS (Grounded Database)
 2. WORK EXPERIENCE:
    * Role 1: LTIMindtree (Jun 2025 – Present)
      - Core Title: Senior Software Engineer (can tailor to "Senior Software Engineer", "Senior Backend Developer", "Senior .NET Developer" depending on JD)
-     - Deloitte Enterprise Tax Client context: Client: Deloitte — Enterprise Tax Platform
-     - Allowed Technologies: C#, .NET Core 8, ASP.NET Web API, Angular, Azure OpenAI GPT-4, Microservices, CQRS, pgvector, OpenTelemetry, Redis, SQL Server, Entity Framework Core
-     - Grounded Achievements/Metrics to reframe:
-       * Migrated 50+ legacy tax tables to QRP structures, reducing query latency by 38%.
-       * Deployed Azure OpenAI embedding pipeline for dynamic schema mapping, saving 60% manual effort.
-       * Developed secure stored procedures for dynamic RBAC role mapping across 15+ tax modules.
-       * Profiled and refactored 30+ ASP.NET Web API endpoints to solve N+1 query loops, achieving sub-100ms p99 latency.
-       * Configured Redis-based API response caching, reducing database query load by 45%.
-       * Instrumented OpenTelemetry distributed tracing across microservices, reducing MTTR by 50%.
-       * Secured 30+ RESTful APIs with OAuth2 + JWT authentication for OWASP compliance.
-       * Integrated Azure OpenAI GPT-4 for automated tax document summarization, speeding up weekly triages by 35%.
+     - Deloitte QRP Client context: Client: Deloitte — Quality & Risk Portal (QRP)
+* Engineered 8-stage QLM case-management workflow and QAR survey engine using .NET Core 8 and Angular.
+* Implemented granular RBAC across 7+ roles securing sensitive communications.
+* Integrated QRP with SWIFT and CP3 for near-real-time data sync feeding QAR eligibility rules.
        * Built a semantic search engine using pgvector for sub-200ms document lookups.
        * Leveraged GitHub Copilot prompt engineering for unit tests, raising coverage to 85% with xUnit.
 
@@ -1492,7 +1478,7 @@ def build_clean_resume(tailored: dict, output_path: str):
         {
             "company": "LTIMindtree",
             "dates": "Jun 2025 – Present",
-            "title": "Senior Software Engineer  |  Client: Deloitte — Enterprise Tax Platform",
+            "title": "Senior Software Engineer  |  Client: Deloitte — Quality & Risk Portal (QRP)",
             "tech": ".NET Core 8  •  ASP.NET Web API  •  Angular  •  Azure OpenAI GPT-4  •  Microservices  •  CQRS  •  pgvector  •  OpenTelemetry  •  Redis  •  SQL Server",
             "key": "LTIMindtree"
         },
