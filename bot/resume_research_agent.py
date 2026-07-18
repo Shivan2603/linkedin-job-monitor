@@ -883,32 +883,12 @@ Your job: rewrite the Professional Summary so any recruiter reading it immediate
 
 WRITE EXACTLY 5 SENTENCES. Follow this strict formula:
 
-Sentence 1 — HOOK (Prove it immediately):
-"[Exact Job Title] who [specific achievement that directly proves the JD's #1 requirement with a metric]."
-Example: "Senior .NET Developer who architected 12+ production microservices achieving 99.98% uptime — exactly the cloud-native reliability {Company} demands."
-NEVER write a generic opener like "experienced developer with X years". Open with the PROOF.
+The professional summary MUST be highly professional, dense, and factual (3-4 sentences). Do NOT use gimmicky hooks like "Performance-obsessed" or "Impact-driven".
+Instead, write a grounded, mature engineering summary that mirrors this style:
+"Senior Software Engineer with 4+ years building high-availability distributed systems, fault-tolerant microservices, and AI-augmented enterprise platforms on Microsoft Azure. Currently modernizing enterprise compliance platforms — architecting 8-stage QLM workflow engines, QAR survey platforms, and cross-system integrations (SWIFT/HANA) using .NET Core 8 and Angular. Previously architected a 12-service PCI-DSS-compliant microservices platform sustaining 300+ RPS at 99.98% uptime. Mentors 7-engineer teams and ships production features from schema design through observability. Microsoft AZ-204 Certified."
 
-Sentence 2 — DOMAIN MATCH (Mirror their world):
-Use exact domain_power_words from the JD. Reference the company's specific tech stack or domain.
-Example (fintech): "Delivered PCI-DSS compliant .NET microservices for DSSI's financial procurement platform, maintaining 3x message throughput via RabbitMQ — directly aligned with {Company}'s expectation for high-availability transaction processing."
-Example (AI): "Built an Azure OpenAI + pgvector semantic search engine at Deloitte delivering sub-200ms lookup across 1,000+ weekly tax submissions, bringing enterprise-grade AI capability that {Company}'s [domain] platform demands."
+Tailor the technologies and focus areas to the JD, but keep this exact professional, dense, and fact-driven tone. Never use AI buzzword salads or overly casual "hook" sentences. Be direct, authoritative, and grounded in the candidate's actual LTIMindtree QRP and DSSI microservices experience.
 
-Sentence 3 — TECHNICAL AUTHORITY (Show depth in their stack):
-Address the JD's hardest technical requirement specifically. If Azure → mention specific Azure service. If microservices → mention CQRS/Clean Architecture decision. If security → mention OAuth2/OIDC/FIPS specifics.
-Mirror at least one EXACT phrase from jd_mirror_phrases.
-
-Sentence 4 — DIFFERENTIATOR (Why this candidate specifically):
-- If team lead role: "Mentored 4–6 engineers at DSSI, introduced ADRs that cut onboarding from 4 weeks to 10 days — bringing that proven technical leadership to {Company}."
-- If IC role: "AZ-204 certified Azure Developer with hands-on OpenAI integration experience — a combination fewer than 5% of .NET engineers hold — and a track record of building production-grade systems that improve, design, code and test software in international team environments."
-
-Sentence 5 — CLOSING (EXACT summary_closing_line verbatim):
-Copy the summary_closing_line from JD Intelligence WORD FOR WORD. Do not paraphrase, shorten, or rephrase.
-
-RULES:
-- Word count: 75–95 words. Dense, punchy, zero filler.
-- No first-person pronouns (no I, my, me, we).
-- Every sentence must be specific to THIS company and THIS JD, not generic.
-- The recruiter must be able to say "yes" to every sentence.
 
 Return ONLY valid JSON:
 {
@@ -1107,7 +1087,7 @@ def write_perfect_fit_summary(
             f"Narrative Angle: {company_intelligence.get('resume_narrative_angle','')}\n"
             f"Summary Closing Line (copy EXACTLY, word for word): {jd_context.get('summary_closing_line','')}\n\n"
             f"Current summary draft:\n{resume_json.get('professional_summary','')}\n\n"
-            f"Rewrite this into a 75-95 word Perfect Fit summary using the STRICT 5-sentence formula. "
+            f"Rewrite this into a 75-95 word highly professional, dense, and factual summary (3-4 sentences). "
             f"Sentence 1 must open with a specific achievement (not just a title). "
             f"Sentence 5 must be the EXACT closing line above, copied verbatim."
         )
