@@ -1,5 +1,446 @@
 [
   {
+    "id": "66abd771",
+    "ts": "2026-07-24T20:12:13.965361",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Pyramid Consulting, Inc | Full Stack Engineer | Cracow, Małopolskie, Poland | 100% match"
+  },
+  {
+    "id": "4ae932e1",
+    "ts": "2026-07-24T20:12:13.743195",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Pyramid Consulting, Inc — Full Stack Engineer"
+  },
+  {
+    "id": "de74a7be",
+    "ts": "2026-07-24T20:11:54.335474",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "89adb5f5",
+    "ts": "2026-07-24T20:11:54.037646",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'Full Stack Developer'"
+  },
+  {
+    "id": "d0a3caac",
+    "ts": "2026-07-24T20:11:16.169598",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "b382bfc9",
+    "ts": "2026-07-24T20:11:16.006511",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "cbd59955",
+    "ts": "2026-07-24T20:11:15.788738",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "29f4a279",
+    "ts": "2026-07-24T20:11:15.316464",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "88d06eca",
+    "ts": "2026-07-24T20:11:14.824567",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "cc2b88ac",
+    "ts": "2026-07-24T20:11:14.200790",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "20890884",
+    "ts": "2026-07-24T20:11:13.453248",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "eb5848f1",
+    "ts": "2026-07-24T20:11:13.198738",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "2c062142",
+    "ts": "2026-07-24T20:11:11.853191",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Full Stack Engineer @ Pyramid Consulting, Inc"
+  },
+  {
+    "id": "906accca",
+    "ts": "2026-07-24T20:10:51.782468",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "1607c167",
+    "ts": "2026-07-24T20:10:08.516227",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "2a1acfb3",
+    "ts": "2026-07-24T20:10:08.228918",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "d1d5ca7c",
+    "ts": "2026-07-24T20:10:07.904192",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "6b8d0dc6",
+    "ts": "2026-07-24T20:10:07.569289",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "6e88393f",
+    "ts": "2026-07-24T20:09:30.296343",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "1eb6281f",
+    "ts": "2026-07-24T20:09:29.748366",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "78692458",
+    "ts": "2026-07-24T20:09:29.246700",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "b1e6ece9",
+    "ts": "2026-07-24T20:09:28.754689",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "e777c274",
+    "ts": "2026-07-24T20:08:37.133508",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "66a19a55",
+    "ts": "2026-07-24T20:08:35.959725",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "582de169",
+    "ts": "2026-07-24T20:08:35.495677",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2d7a30b2",
+    "ts": "2026-07-24T20:08:34.847525",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "1f1fceb6",
+    "ts": "2026-07-24T20:07:16.290249",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "5ef61ad9",
+    "ts": "2026-07-24T20:07:15.867511",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "eeeb6fff",
+    "ts": "2026-07-24T20:07:15.509915",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "cab1ba0b",
+    "ts": "2026-07-24T20:07:15.104703",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "4505e65b",
+    "ts": "2026-07-24T20:07:10.615532",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "7b678d60",
+    "ts": "2026-07-24T20:07:10.256730",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "b51b6014",
+    "ts": "2026-07-24T20:07:09.936616",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "4abed343",
+    "ts": "2026-07-24T20:07:09.503315",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "94fb476b",
+    "ts": "2026-07-24T20:06:50.235362",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "d873c759",
+    "ts": "2026-07-24T20:06:49.899700",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "d48bef6b",
+    "ts": "2026-07-24T20:06:49.611158",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2ea4fd31",
+    "ts": "2026-07-24T20:06:48.933611",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "0763d060",
+    "ts": "2026-07-24T20:05:46.232524",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "8c0443a1",
+    "ts": "2026-07-24T20:05:45.952074",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "7bc6b82e",
+    "ts": "2026-07-24T20:05:45.628591",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "748bd16f",
+    "ts": "2026-07-24T20:05:44.936974",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "16333f78",
+    "ts": "2026-07-24T20:05:44.733017",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "5c74dc4e",
+    "ts": "2026-07-24T20:05:44.525067",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2acf2ad1",
+    "ts": "2026-07-24T20:05:38.628678",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "d9bc665f",
+    "ts": "2026-07-24T20:05:38.432067",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "ac0bff39",
+    "ts": "2026-07-24T20:05:38.252984",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "378afa1d",
+    "ts": "2026-07-24T20:05:37.731609",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "9987d1c3",
+    "ts": "2026-07-24T20:05:37.300198",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "9b3b9da8",
+    "ts": "2026-07-24T20:05:36.845661",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "556ca6a5",
+    "ts": "2026-07-24T20:05:36.386454",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "8b31331e",
+    "ts": "2026-07-24T20:05:36.173893",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "0d26c055",
+    "ts": "2026-07-24T20:04:59.498061",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for SimCorp — Lead full-stack Engineer (C#, Angular) - OTC Product Area to bulk_urls.txt"
+  },
+  {
+    "id": "909943f2",
+    "ts": "2026-07-24T20:04:34.765544",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "921373d7",
+    "ts": "2026-07-24T20:03:27.564282",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Versigent — Senior Full-Stack Developer (.NET to bulk_urls.txt"
+  },
+  {
+    "id": "120ea8b0",
+    "ts": "2026-07-24T20:02:56.350803",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "928a7f73",
+    "ts": "2026-07-24T20:02:48.339879",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Full Stack Developer (Past Week)"
+  },
+  {
+    "id": "4013a5fa",
+    "ts": "2026-07-24T20:02:48.155792",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Full Stack Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "d45294c9",
+    "ts": "2026-07-24T20:02:47.915147",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior .NET Developer' in Malaysia"
+  },
+  {
+    "id": "2ec41555",
+    "ts": "2026-07-24T20:02:40.676786",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 2 jobs on page 1"
+  },
+  {
+    "id": "476d5007",
+    "ts": "2026-07-24T20:02:24.482986",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "56c80146",
+    "ts": "2026-07-24T20:02:24.198778",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior .NET Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "af2b3193",
+    "ts": "2026-07-24T20:02:23.985167",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 6 jobs for 'Senior .NET Developer' in Malaysia"
+  },
+  {
     "id": "15da1dc7",
     "ts": "2026-07-24T20:02:03.959119",
     "level": "SUCCESS",
@@ -3057,446 +3498,5 @@
     "level": "INFO",
     "site": "indeed",
     "message": "Opening job page: Allied Container Group - Senior Web Developer (External Apply)..."
-  },
-  {
-    "id": "ebd06595",
-    "ts": "2026-07-21T19:26:13.305862",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Program - Web & Mobile Engineering (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "e4c51a51",
-    "ts": "2026-07-21T19:26:13.127561",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "b661887b",
-    "ts": "2026-07-21T19:26:09.688906",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Program - Web & Mobile Engineering (External Apply)..."
-  },
-  {
-    "id": "082236f0",
-    "ts": "2026-07-21T19:26:01.541974",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping SHOPLINE - Software Security Lead / Senior Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "eda648b5",
-    "ts": "2026-07-21T19:26:01.332173",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for SHOPLINE. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "e3baeb20",
-    "ts": "2026-07-21T19:25:57.362717",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: SHOPLINE - Software Security Lead / Senior Engineer (External Apply)..."
-  },
-  {
-    "id": "0d0fc505",
-    "ts": "2026-07-21T19:25:47.782372",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Autumn Compass - C++ Software Engineer in Crypto Trading (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c2aaa30b",
-    "ts": "2026-07-21T19:25:47.604297",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Autumn Compass. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "b4445e05",
-    "ts": "2026-07-21T19:25:43.716837",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Autumn Compass - C++ Software Engineer in Crypto Trading (External Apply)..."
-  },
-  {
-    "id": "b7a08c85",
-    "ts": "2026-07-21T19:25:35.186228",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Sioux High Tech Software Ltd. - Senior/Lead Software Engineer (C#) – Automation & Machine Control (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "6b6aa2de",
-    "ts": "2026-07-21T19:25:34.977717",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Sioux High Tech Software Ltd.. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "c464b72f",
-    "ts": "2026-07-21T19:25:30.999019",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Sioux High Tech Software Ltd. - Senior/Lead Software Engineer (C#) – Automation & Machine Control (External Apply)..."
-  },
-  {
-    "id": "0a4d98b1",
-    "ts": "2026-07-21T19:25:23.709497",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Edufied Pte Ltd - Tech Team Lead (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "2ef13c6e",
-    "ts": "2026-07-21T19:25:23.540996",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Edufied Pte Ltd. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "f50eb86c",
-    "ts": "2026-07-21T19:25:20.113065",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Edufied Pte Ltd - Tech Team Lead (External Apply)..."
-  },
-  {
-    "id": "b04cb250",
-    "ts": "2026-07-21T19:25:12.656132",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Startale Group - TypeScript Backend Engineer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "bd2b2c49",
-    "ts": "2026-07-21T19:25:10.749126",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "c4067a6b",
-    "ts": "2026-07-21T19:25:06.975215",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Startale Group - TypeScript Backend Engineer (External Apply)..."
-  },
-  {
-    "id": "82f65e30",
-    "ts": "2026-07-21T19:25:06.816050",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 15 Indeed jobs to process on search page"
-  },
-  {
-    "id": "8f901b8a",
-    "ts": "2026-07-21T19:25:01.319930",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: 'Senior Software Engineer' in 'Singapore' on https://sg.indeed.com"
-  },
-  {
-    "id": "11f4b393",
-    "ts": "2026-07-21T19:25:01.177163",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 0 jobs on Indeed for 'Senior Software Engineer' in Remote"
-  },
-  {
-    "id": "52a9d75e",
-    "ts": "2026-07-21T19:24:49.379021",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Programm - Java Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "4ad657be",
-    "ts": "2026-07-21T19:24:49.197322",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "3a4d91c2",
-    "ts": "2026-07-21T19:24:45.288705",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Programm - Java Engineer (External Apply)..."
-  },
-  {
-    "id": "3bb12fd6",
-    "ts": "2026-07-21T19:24:34.354026",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Program - Web & Mobile Engineering (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "d785e1ed",
-    "ts": "2026-07-21T19:24:34.210838",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "f63344a7",
-    "ts": "2026-07-21T19:24:30.924750",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Program - Web & Mobile Engineering (External Apply)..."
-  },
-  {
-    "id": "8816abfc",
-    "ts": "2026-07-21T19:24:19.023724",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Data/ Java Engineer (AI/LLM Chatbot, Customer Service) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "6f6924a0",
-    "ts": "2026-07-21T19:24:18.861090",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "9d8b97b8",
-    "ts": "2026-07-21T19:24:14.932607",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Data/ Java Engineer (AI/LLM Chatbot, Customer Service) (External Apply)..."
-  },
-  {
-    "id": "da2abfd3",
-    "ts": "2026-07-21T19:24:08.044831",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Programm - Software Engineer Web3 (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "47949634",
-    "ts": "2026-07-21T19:24:07.892390",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "ff0ea6e1",
-    "ts": "2026-07-21T19:24:04.467987",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Programm - Software Engineer Web3 (External Apply)..."
-  },
-  {
-    "id": "9f89982d",
-    "ts": "2026-07-21T19:23:54.015836",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Programm - Software Engineer Java (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "5f50d97f",
-    "ts": "2026-07-21T19:23:53.850282",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "c41ea8bf",
-    "ts": "2026-07-21T19:23:50.559957",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Programm - Software Engineer Java (External Apply)..."
-  },
-  {
-    "id": "bc29298c",
-    "ts": "2026-07-21T19:23:38.720914",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Program - DevOps Engineer (AI) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c447d5a2",
-    "ts": "2026-07-21T19:23:38.540062",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "40cdfbca",
-    "ts": "2026-07-21T19:23:34.879792",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Program - DevOps Engineer (AI) (External Apply)..."
-  },
-  {
-    "id": "b1960495",
-    "ts": "2026-07-21T19:23:25.312213",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Software Engineer(Java) - Tech Compliance (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "ee747759",
-    "ts": "2026-07-21T19:23:25.151839",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "41298e2b",
-    "ts": "2026-07-21T19:23:21.614491",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Software Engineer(Java) - Tech Compliance (External Apply)..."
-  },
-  {
-    "id": "666f5da5",
-    "ts": "2026-07-21T19:23:14.677564",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Apryse - Account Manager, Enterprise (Japanese Speaking) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "62af5d9d",
-    "ts": "2026-07-21T19:23:14.482598",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Apryse. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "fbe04026",
-    "ts": "2026-07-21T19:23:11.141526",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Apryse - Account Manager, Enterprise (Japanese Speaking) (External Apply)..."
-  },
-  {
-    "id": "783bc16d",
-    "ts": "2026-07-21T19:23:00.701405",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping TechBiz Global GmbH - Sales Development Representative (SDR) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "acad0d6b",
-    "ts": "2026-07-21T19:23:00.526945",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for TechBiz Global GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "ad4eba54",
-    "ts": "2026-07-21T19:22:56.930341",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TechBiz Global GmbH - Sales Development Representative (SDR) (External Apply)..."
-  },
-  {
-    "id": "1878a2e1",
-    "ts": "2026-07-21T19:22:46.610927",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping AYP - Product Manager, SaaS (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "f8184b02",
-    "ts": "2026-07-21T19:22:46.439176",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for AYP. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "1a77969b",
-    "ts": "2026-07-21T19:22:42.466994",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: AYP - Product Manager, SaaS (External Apply)..."
-  },
-  {
-    "id": "5bc9c1ca",
-    "ts": "2026-07-21T19:22:35.026876",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping TechBiz Global GmbH - Head of Solution Engineering (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "fb3651d3",
-    "ts": "2026-07-21T19:22:34.844350",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for TechBiz Global GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "4291570b",
-    "ts": "2026-07-21T19:22:30.727523",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TechBiz Global GmbH - Head of Solution Engineering (External Apply)..."
-  },
-  {
-    "id": "efdc4ab4",
-    "ts": "2026-07-21T19:22:23.979868",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Cloud Science Labs - Business Development Intern (Salesforce & Tech Focus) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "0ed80a90",
-    "ts": "2026-07-21T19:22:23.801972",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Cloud Science Labs. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "3950dae9",
-    "ts": "2026-07-21T19:22:20.084218",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Cloud Science Labs - Business Development Intern (Salesforce & Tech Focus) (External Apply)..."
-  },
-  {
-    "id": "c97f30bf",
-    "ts": "2026-07-21T19:22:12.093717",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Growmodo GmbH - Senior UI/UX Designer / AI Expert (Full-Time / On-Call) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "ebd96a0d",
-    "ts": "2026-07-21T19:22:11.901238",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "04c181be",
-    "ts": "2026-07-21T19:22:08.452941",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Growmodo GmbH - Senior UI/UX Designer / AI Expert (Full-Time / On-Call) (External Apply)..."
-  },
-  {
-    "id": "c8bb7567",
-    "ts": "2026-07-21T19:22:02.162994",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "de5142bb",
-    "ts": "2026-07-21T19:22:01.980958",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for GECO Asia. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "983d6d33",
-    "ts": "2026-07-21T19:21:58.819157",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (External Apply)..."
   }
 ]
