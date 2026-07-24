@@ -1,5 +1,1951 @@
 [
   {
+    "id": "56d5b2e7",
+    "ts": "2026-07-24T20:43:23.154597",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Astek | Cyber Security Software Development Engineer (she//he) - Kraków (Małopolskie), Polska | Cracow, Małopolskie, Poland | 100% match"
+  },
+  {
+    "id": "cc5f3212",
+    "ts": "2026-07-24T20:43:22.943580",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Astek — Cyber Security Software Development Engineer (she//he) - Kraków (Małopolskie), Polska"
+  },
+  {
+    "id": "f4f2bb3c",
+    "ts": "2026-07-24T20:43:14.764328",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "7f516a2e",
+    "ts": "2026-07-24T20:43:14.498631",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Cyber_Security_Software_Development_Engineer_she_he_Resume.docx' = 'Deselect resume Siva_Shankar_Cyber_Security_Software_Development_Engineer_she_he_Resume.docx'"
+  },
+  {
+    "id": "8e8b7e6d",
+    "ts": "2026-07-24T20:43:14.306096",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'C# Developer'"
+  },
+  {
+    "id": "d29722f6",
+    "ts": "2026-07-24T20:42:33.574726",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "ee701f15",
+    "ts": "2026-07-24T20:42:33.381643",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "1e14314f",
+    "ts": "2026-07-24T20:42:33.042121",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "e4139fd7",
+    "ts": "2026-07-24T20:42:32.687659",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "be95ca78",
+    "ts": "2026-07-24T20:42:32.271757",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e4af9619",
+    "ts": "2026-07-24T20:42:30.899445",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "11fa82f9",
+    "ts": "2026-07-24T20:42:30.542268",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "ffb3c965",
+    "ts": "2026-07-24T20:42:30.203729",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2eca08f5",
+    "ts": "2026-07-24T20:42:29.907255",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Cyber Security Software Development Engineer (she//he) @ Astek"
+  },
+  {
+    "id": "1a02e4f8",
+    "ts": "2026-07-24T20:41:58.647124",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "eb9eef9e",
+    "ts": "2026-07-24T20:41:58.433649",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "39deae67",
+    "ts": "2026-07-24T20:41:56.070546",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "9696ea96",
+    "ts": "2026-07-24T20:41:55.767737",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "2d40b0aa",
+    "ts": "2026-07-24T20:41:55.445889",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "3188aec3",
+    "ts": "2026-07-24T20:41:55.125389",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "ef405875",
+    "ts": "2026-07-24T20:41:52.119721",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "484502c0",
+    "ts": "2026-07-24T20:41:51.798069",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "837046ac",
+    "ts": "2026-07-24T20:41:51.463820",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "bfbcd2b3",
+    "ts": "2026-07-24T20:41:51.225417",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "ab1ce143",
+    "ts": "2026-07-24T20:41:50.157954",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "04e57b1e",
+    "ts": "2026-07-24T20:41:49.825546",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "ced3c253",
+    "ts": "2026-07-24T20:41:49.477997",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "9cc096c0",
+    "ts": "2026-07-24T20:41:48.345957",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "d2ccb6f7",
+    "ts": "2026-07-24T20:41:48.038680",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "c80bf0d4",
+    "ts": "2026-07-24T20:41:47.576258",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d1233236",
+    "ts": "2026-07-24T20:41:47.185812",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "4a031f42",
+    "ts": "2026-07-24T20:41:46.991907",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "1e50d4da",
+    "ts": "2026-07-24T20:41:46.495957",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "c3bddc95",
+    "ts": "2026-07-24T20:41:45.996091",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "d0f6d500",
+    "ts": "2026-07-24T20:41:45.336289",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "45fd4779",
+    "ts": "2026-07-24T20:41:44.731495",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "a9ddeed6",
+    "ts": "2026-07-24T20:41:44.340196",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "decba8a4",
+    "ts": "2026-07-24T20:41:43.906007",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "e9b185a9",
+    "ts": "2026-07-24T20:41:43.461955",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "5ec6a918",
+    "ts": "2026-07-24T20:41:43.271306",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "f649f189",
+    "ts": "2026-07-24T20:41:42.893414",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "7f224894",
+    "ts": "2026-07-24T20:41:39.964623",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "60dec3aa",
+    "ts": "2026-07-24T20:41:39.464515",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "66bee0cb",
+    "ts": "2026-07-24T20:41:39.126671",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "3b9df371",
+    "ts": "2026-07-24T20:41:38.793165",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "257f3fd8",
+    "ts": "2026-07-24T20:41:38.490733",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d782e010",
+    "ts": "2026-07-24T20:41:35.740612",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "ef3ab412",
+    "ts": "2026-07-24T20:41:35.557444",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "3207a21b",
+    "ts": "2026-07-24T20:41:35.093477",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "3f5fdecb",
+    "ts": "2026-07-24T20:41:34.741135",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "d17e8325",
+    "ts": "2026-07-24T20:41:34.315881",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "773d5114",
+    "ts": "2026-07-24T20:41:33.938804",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "40e82a8d",
+    "ts": "2026-07-24T20:41:33.587942",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "c01ddcfd",
+    "ts": "2026-07-24T20:41:33.245814",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "639ff101",
+    "ts": "2026-07-24T20:41:32.963648",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "2cc7c3a8",
+    "ts": "2026-07-24T20:41:32.734275",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "be11c74a",
+    "ts": "2026-07-24T20:41:32.373251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "eb904546",
+    "ts": "2026-07-24T20:41:32.069519",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "0d03605f",
+    "ts": "2026-07-24T20:41:31.649267",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "f22ac1ac",
+    "ts": "2026-07-24T20:41:31.319311",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "9d8aea7c",
+    "ts": "2026-07-24T20:41:30.978620",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "d76a46df",
+    "ts": "2026-07-24T20:41:30.601151",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "e66fba15",
+    "ts": "2026-07-24T20:41:30.281135",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "101d6a01",
+    "ts": "2026-07-24T20:41:30.082934",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "d54e4221",
+    "ts": "2026-07-24T20:41:29.842857",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "1ee5e451",
+    "ts": "2026-07-24T20:41:29.675498",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "284af3d5",
+    "ts": "2026-07-24T20:41:26.336811",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "a5692b65",
+    "ts": "2026-07-24T20:41:26.064741",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "e492864c",
+    "ts": "2026-07-24T20:41:25.788602",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "371cdfc6",
+    "ts": "2026-07-24T20:41:25.458754",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "c16db949",
+    "ts": "2026-07-24T20:41:25.176945",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "bdae0ce8",
+    "ts": "2026-07-24T20:41:24.861090",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "5305028e",
+    "ts": "2026-07-24T20:41:24.627050",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "91e2b298",
+    "ts": "2026-07-24T20:41:24.423830",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "f69264c3",
+    "ts": "2026-07-24T20:41:24.050954",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "d8c16c27",
+    "ts": "2026-07-24T20:41:21.171545",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "63b16234",
+    "ts": "2026-07-24T20:41:17.467867",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "fdc1b3d6",
+    "ts": "2026-07-24T20:41:17.062629",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "a9074659",
+    "ts": "2026-07-24T20:41:16.305670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "45296ffa",
+    "ts": "2026-07-24T20:41:15.978040",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "8be9167d",
+    "ts": "2026-07-24T20:41:15.729691",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "e48f3d37",
+    "ts": "2026-07-24T20:41:15.534876",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "5367681e",
+    "ts": "2026-07-24T20:41:15.000495",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "f292cc51",
+    "ts": "2026-07-24T20:41:14.686127",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "827617ce",
+    "ts": "2026-07-24T20:41:14.346848",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "3356ccbc",
+    "ts": "2026-07-24T20:41:13.939004",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "c665145f",
+    "ts": "2026-07-24T20:41:13.535702",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "f30908b7",
+    "ts": "2026-07-24T20:41:13.237791",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "b8c60e7e",
+    "ts": "2026-07-24T20:41:12.991880",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "7435f89a",
+    "ts": "2026-07-24T20:41:12.773108",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "2787631e",
+    "ts": "2026-07-24T20:41:12.449045",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "a3fa3e3e",
+    "ts": "2026-07-24T20:41:12.129670",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "2fefb5ab",
+    "ts": "2026-07-24T20:41:11.802665",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "6960321a",
+    "ts": "2026-07-24T20:41:11.305596",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "b207faf5",
+    "ts": "2026-07-24T20:41:11.016561",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "f6182373",
+    "ts": "2026-07-24T20:41:10.650574",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "c415ca16",
+    "ts": "2026-07-24T20:41:10.320916",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter failed: All OpenRouter free models unavailable"
+  },
+  {
+    "id": "2f72c15d",
+    "ts": "2026-07-24T20:41:10.125656",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openrouter/free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "8c3e72a3",
+    "ts": "2026-07-24T20:41:09.735963",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.2-3b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.2-3b-instruct\","
+  },
+  {
+    "id": "1fc9fb40",
+    "ts": "2026-07-24T20:41:09.068395",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-20b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "83aba884",
+    "ts": "2026-07-24T20:41:06.759897",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter nvidia/nemotron-3-super-120b-a12b:free status 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"head"
+  },
+  {
+    "id": "9e31fc23",
+    "ts": "2026-07-24T20:41:04.242760",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "737636ab",
+    "ts": "2026-07-24T20:41:03.743821",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "a291d67d",
+    "ts": "2026-07-24T20:41:01.477251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d22adf73",
+    "ts": "2026-07-24T20:41:00.672396",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "65a38a40",
+    "ts": "2026-07-24T20:41:00.411480",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "eeec8cba",
+    "ts": "2026-07-24T20:41:00.179109",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "715e2053",
+    "ts": "2026-07-24T20:40:59.791331",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "82356e00",
+    "ts": "2026-07-24T20:40:59.590371",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "76a6bdfd",
+    "ts": "2026-07-24T20:40:59.400758",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "15a3fa0b",
+    "ts": "2026-07-24T20:40:58.931618",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "12557d60",
+    "ts": "2026-07-24T20:40:58.253555",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "f8f1c5f8",
+    "ts": "2026-07-24T20:40:57.751208",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "ce90fbb0",
+    "ts": "2026-07-24T20:40:57.266577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "1c282bbd",
+    "ts": "2026-07-24T20:40:57.055497",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "6374006c",
+    "ts": "2026-07-24T20:40:11.532939",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for EY — Client Technology - DevX Principal Engineer - Tech Lead to bulk_urls.txt"
+  },
+  {
+    "id": "c279d5d8",
+    "ts": "2026-07-24T20:39:59.422294",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to capture external redirect popup: Timeout 15000ms exceeded while waiting for event \"page\""
+  },
+  {
+    "id": "c204b491",
+    "ts": "2026-07-24T20:39:39.243369",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "4ef4a611",
+    "ts": "2026-07-24T20:39:28.640854",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: C# Developer (Past Week)"
+  },
+  {
+    "id": "fd077f20",
+    "ts": "2026-07-24T20:39:28.487657",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'C# Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "a4d8dedc",
+    "ts": "2026-07-24T20:39:28.321999",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Senior Full Stack Developer' in Malaysia"
+  },
+  {
+    "id": "54e2ae92",
+    "ts": "2026-07-24T20:39:13.935621",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "5ec626da",
+    "ts": "2026-07-24T20:39:02.432352",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "f0059bcc",
+    "ts": "2026-07-24T20:39:02.241835",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "a525a03e",
+    "ts": "2026-07-24T20:39:02.033631",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 1 jobs for 'Senior Full Stack Developer' in Malaysia"
+  },
+  {
+    "id": "a75db18d",
+    "ts": "2026-07-24T20:39:01.794688",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "1ee5deed",
+    "ts": "2026-07-24T20:38:42.411823",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "bcd9af83",
+    "ts": "2026-07-24T20:38:22.993865",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "949eebb9",
+    "ts": "2026-07-24T20:38:03.509475",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "1d4d179a",
+    "ts": "2026-07-24T20:36:33.085486",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "9c71e074",
+    "ts": "2026-07-24T20:36:32.731125",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'What is your expected hourly rate on B2B in PLN?' = '€80,000 - €100,000 per year'"
+  },
+  {
+    "id": "8dda5f41",
+    "ts": "2026-07-24T20:36:21.516328",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "0b38a16d",
+    "ts": "2026-07-24T20:36:21.177597",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'Senior Full Stack Developer'"
+  },
+  {
+    "id": "cffe3d02",
+    "ts": "2026-07-24T20:35:45.397948",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "46bf198e",
+    "ts": "2026-07-24T20:35:05.645462",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "c9ede13e",
+    "ts": "2026-07-24T20:35:05.344744",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "db2ed864",
+    "ts": "2026-07-24T20:35:05.053911",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "a1a04fbb",
+    "ts": "2026-07-24T20:35:04.414451",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "d46fc15e",
+    "ts": "2026-07-24T20:35:04.198288",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "ce2db01d",
+    "ts": "2026-07-24T20:35:04.013815",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "c3eb5f8a",
+    "ts": "2026-07-24T20:35:03.619733",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Fullstack Developer @ Seargin"
+  },
+  {
+    "id": "6d41fa8b",
+    "ts": "2026-07-24T20:34:38.592188",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "62f102f7",
+    "ts": "2026-07-24T20:33:58.935923",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "2c65863a",
+    "ts": "2026-07-24T20:33:58.645905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "0e7a9ef1",
+    "ts": "2026-07-24T20:33:58.269134",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "7edaa23a",
+    "ts": "2026-07-24T20:33:57.973126",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "dc3175b2",
+    "ts": "2026-07-24T20:33:49.871039",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "81ada021",
+    "ts": "2026-07-24T20:33:49.528505",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "a98d6f6f",
+    "ts": "2026-07-24T20:33:49.217508",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "43e0c4aa",
+    "ts": "2026-07-24T20:33:48.532270",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "15ba4d18",
+    "ts": "2026-07-24T20:32:45.927526",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "f113d006",
+    "ts": "2026-07-24T20:32:45.556605",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "dd4df82d",
+    "ts": "2026-07-24T20:32:45.186540",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "da88d916",
+    "ts": "2026-07-24T20:32:44.612188",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e58cd7e7",
+    "ts": "2026-07-24T20:32:44.419421",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "24842367",
+    "ts": "2026-07-24T20:32:44.197727",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "43103803",
+    "ts": "2026-07-24T20:32:43.721905",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "fc16baf3",
+    "ts": "2026-07-24T20:32:43.199980",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "bce34a44",
+    "ts": "2026-07-24T20:32:42.683884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "68ca504b",
+    "ts": "2026-07-24T20:32:42.109827",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "9567e4a3",
+    "ts": "2026-07-24T20:32:41.875608",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "029c12dd",
+    "ts": "2026-07-24T20:32:40.567925",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "fc968963",
+    "ts": "2026-07-24T20:31:10.281577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "e03122de",
+    "ts": "2026-07-24T20:31:09.871616",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "aa891c25",
+    "ts": "2026-07-24T20:31:09.539917",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "466bbfaf",
+    "ts": "2026-07-24T20:31:09.007318",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "8da3af65",
+    "ts": "2026-07-24T20:30:51.841062",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "f18c03a3",
+    "ts": "2026-07-24T20:30:51.480767",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "afc86571",
+    "ts": "2026-07-24T20:30:51.104065",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2b78dde6",
+    "ts": "2026-07-24T20:30:50.696835",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "ed82d35d",
+    "ts": "2026-07-24T20:30:13.825066",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "cbdabaa3",
+    "ts": "2026-07-24T20:30:13.556594",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "f83eec6e",
+    "ts": "2026-07-24T20:30:13.280787",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "e8aa22dc",
+    "ts": "2026-07-24T20:30:12.983995",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from Cache (tailor)"
+  },
+  {
+    "id": "1aa2c45a",
+    "ts": "2026-07-24T20:30:12.748571",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "0a16d4be",
+    "ts": "2026-07-24T20:30:00.898282",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "9c3db508",
+    "ts": "2026-07-24T20:30:00.578576",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "fb0f3a8d",
+    "ts": "2026-07-24T20:30:00.331577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "193a43f5",
+    "ts": "2026-07-24T20:30:00.099392",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "857367d6",
+    "ts": "2026-07-24T20:29:52.084152",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "bdc1eb2d",
+    "ts": "2026-07-24T20:29:51.758608",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "9eea53aa",
+    "ts": "2026-07-24T20:29:51.455447",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "6576c445",
+    "ts": "2026-07-24T20:29:51.113979",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "8edbdf3d",
+    "ts": "2026-07-24T20:29:40.476129",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "d903ec07",
+    "ts": "2026-07-24T20:29:40.115691",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "60bd619f",
+    "ts": "2026-07-24T20:29:39.738443",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "4265cf29",
+    "ts": "2026-07-24T20:29:39.382367",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "97c27866",
+    "ts": "2026-07-24T20:29:25.796621",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "4d736652",
+    "ts": "2026-07-24T20:29:25.538926",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "d3a09767",
+    "ts": "2026-07-24T20:29:25.223227",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "7aa9b6ca",
+    "ts": "2026-07-24T20:29:24.618314",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "9305b219",
+    "ts": "2026-07-24T20:29:24.421210",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "c9486b4c",
+    "ts": "2026-07-24T20:29:24.226577",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "2c5cfc3a",
+    "ts": "2026-07-24T20:27:53.643656",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Hitachi Energy — .NET Developer to bulk_urls.txt"
+  },
+  {
+    "id": "bea175a6",
+    "ts": "2026-07-24T20:27:44.716299",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "8918ed0d",
+    "ts": "2026-07-24T20:26:59.158817",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e3abb64c",
+    "ts": "2026-07-24T20:26:58.929078",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "553e7b9b",
+    "ts": "2026-07-24T20:26:58.675019",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "753e24ec",
+    "ts": "2026-07-24T20:26:58.215430",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "b3a5afca",
+    "ts": "2026-07-24T20:26:57.678136",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8234fa0f",
+    "ts": "2026-07-24T20:26:57.169776",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "9dfd25cd",
+    "ts": "2026-07-24T20:26:56.686471",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "e39c3c0d",
+    "ts": "2026-07-24T20:26:56.430684",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "ab6839b3",
+    "ts": "2026-07-24T20:25:53.797059",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "72ca795c",
+    "ts": "2026-07-24T20:24:07.458955",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "6f4d8ca5",
+    "ts": "2026-07-24T20:23:57.069091",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Senior Full Stack Developer (Past Week)"
+  },
+  {
+    "id": "df831cb4",
+    "ts": "2026-07-24T20:23:56.862978",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "ab955748",
+    "ts": "2026-07-24T20:23:56.643408",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 0 jobs for 'Full Stack Developer' in Malaysia"
+  },
+  {
+    "id": "76cc7a60",
+    "ts": "2026-07-24T20:23:40.611199",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 4 jobs on page 1"
+  },
+  {
+    "id": "fdef7b47",
+    "ts": "2026-07-24T20:23:29.241512",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
+  },
+  {
+    "id": "ec5f6c42",
+    "ts": "2026-07-24T20:23:29.021373",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Full Stack Developer' in 'Malaysia' (geoId=105072130)"
+  },
+  {
+    "id": "b15aa129",
+    "ts": "2026-07-24T20:23:28.766172",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: Applied 5 jobs for 'Full Stack Developer' in Malaysia"
+  },
+  {
+    "id": "6a526cf8",
+    "ts": "2026-07-24T20:23:28.505142",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "0303b956",
+    "ts": "2026-07-24T20:23:09.142193",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "9b30a159",
+    "ts": "2026-07-24T20:22:49.812330",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "b9aa85c2",
+    "ts": "2026-07-24T20:22:30.506245",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "dd610b54",
+    "ts": "2026-07-24T20:22:11.140090",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "be93324e",
+    "ts": "2026-07-24T20:21:51.720732",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "ed4cb2d4",
+    "ts": "2026-07-24T20:21:32.596175",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "c897c758",
+    "ts": "2026-07-24T20:21:13.328574",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "edd4789e",
+    "ts": "2026-07-24T20:20:53.938012",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "985b7c37",
+    "ts": "2026-07-24T20:20:34.625995",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "33ee95ab",
+    "ts": "2026-07-24T20:20:15.201880",
+    "level": "WARN",
+    "site": "linkedin",
+    "message": "Failed to click job element: ElementHandle.click: Timeout 10000ms exceeded.\nCall log:\nattempting click action"
+  },
+  {
+    "id": "e7f08c24",
+    "ts": "2026-07-24T20:18:48.358532",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "d866743f",
+    "ts": "2026-07-24T20:18:48.072776",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'What is your expected hourly rate on B2B in PLN?' = '€65,000 - €75,000 per year'"
+  },
+  {
+    "id": "0dc068cf",
+    "ts": "2026-07-24T20:18:43.029247",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "3a697da5",
+    "ts": "2026-07-24T20:18:42.717088",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Deselect resume Siva_Shankar_Fullstack_Developer_Resume.docx' = 'Deselect resume Siva_Shankar_Fullstack_Developer_Resume.docx'"
+  },
+  {
+    "id": "8f79a38b",
+    "ts": "2026-07-24T20:18:04.330829",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "4a843002",
+    "ts": "2026-07-24T20:18:04.223500",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "5ac101d3",
+    "ts": "2026-07-24T20:18:04.118642",
+    "level": "INFO",
+    "site": "system",
+    "message": "Filtering run for LinkedIn ONLY per configuration."
+  },
+  {
+    "id": "f8d4b7c9",
+    "ts": "2026-07-24T20:18:04.011716",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 4, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "8ba30b22",
+    "ts": "2026-07-24T20:18:03.907740",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "3b46f5b2",
+    "ts": "2026-07-24T20:18:03.798061",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\24-07-2026"
+  },
+  {
+    "id": "8d1f48cb",
+    "ts": "2026-07-24T20:18:03.699870",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-07-24 20:18:03"
+  },
+  {
+    "id": "47aeb196",
+    "ts": "2026-07-24T20:18:03.575769",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "b8021c95",
+    "ts": "2026-07-24T20:18:03.402743",
+    "level": "INFO",
+    "site": "main",
+    "message": "Time window restriction active: 0:00 to 23:00"
+  },
+  {
+    "id": "8451b6c8",
+    "ts": "2026-07-24T20:18:03.290065",
+    "level": "INFO",
+    "site": "main",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "6edd1d67",
+    "ts": "2026-07-24T20:18:03.180540",
+    "level": "INFO",
+    "site": "main",
+    "message": "Starting All Sites standard loop..."
+  },
+  {
+    "id": "846576b1",
+    "ts": "2026-07-24T20:18:03.063864",
+    "level": "INFO",
+    "site": "main",
+    "message": "Command-line argument provided: mode=4"
+  },
+  {
+    "id": "9e8a3af9",
+    "ts": "2026-07-24T20:18:01.797773",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "dac81dd9",
+    "ts": "2026-07-24T20:17:49.764718",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "c102c4d7",
+    "ts": "2026-07-24T20:17:49.444930",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "c182c326",
+    "ts": "2026-07-24T20:17:49.061352",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "25b15745",
+    "ts": "2026-07-24T20:17:48.737081",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Fullstack Developer @ Seargin"
+  },
+  {
+    "id": "6c43db2a",
+    "ts": "2026-07-24T20:17:23.820111",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "d18d336a",
+    "ts": "2026-07-24T20:17:14.917114",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "7f2555a6",
+    "ts": "2026-07-24T20:17:14.416064",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "b3ca8083",
+    "ts": "2026-07-24T20:17:13.767439",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "be4fae13",
+    "ts": "2026-07-24T20:17:12.830281",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "c7662497",
+    "ts": "2026-07-24T20:17:12.650137",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "3d929a0c",
+    "ts": "2026-07-24T20:17:12.417145",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "4292aecc",
+    "ts": "2026-07-24T20:17:11.898073",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "37ab428c",
+    "ts": "2026-07-24T20:17:11.350638",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "a8e378d9",
+    "ts": "2026-07-24T20:17:10.903294",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "9e13847f",
+    "ts": "2026-07-24T20:17:10.424586",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "83e45e7e",
+    "ts": "2026-07-24T20:17:10.251561",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "5e8197c1",
+    "ts": "2026-07-24T20:17:08.928684",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "d7fee7fc",
+    "ts": "2026-07-24T20:16:13.021673",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "8898c920",
+    "ts": "2026-07-24T20:16:12.628247",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "f093496b",
+    "ts": "2026-07-24T20:16:12.309970",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "706a08fa",
+    "ts": "2026-07-24T20:16:11.893511",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "faadc879",
+    "ts": "2026-07-24T20:16:09.341518",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "190ca481",
+    "ts": "2026-07-24T20:16:09.039251",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "caefedfb",
+    "ts": "2026-07-24T20:16:08.233570",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "c91980f9",
+    "ts": "2026-07-24T20:16:07.901298",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "2074babe",
+    "ts": "2026-07-24T20:15:30.859105",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "a43c3028",
+    "ts": "2026-07-24T20:15:30.566321",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "55c74eb4",
+    "ts": "2026-07-24T20:15:30.221362",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "1b032280",
+    "ts": "2026-07-24T20:15:29.771155",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "14543cab",
+    "ts": "2026-07-24T20:14:44.378399",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "cfe8521d",
+    "ts": "2026-07-24T20:14:44.069752",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "1744b2f5",
+    "ts": "2026-07-24T20:14:43.788756",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "c6233e40",
+    "ts": "2026-07-24T20:14:43.150051",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "5c3fdeb0",
+    "ts": "2026-07-24T20:14:42.989208",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "28b1c5da",
+    "ts": "2026-07-24T20:14:42.791286",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "630fa51e",
+    "ts": "2026-07-24T20:14:09.009904",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for New Wave International Cargo — Fullstack Developer (.Net + Angular to bulk_urls.txt"
+  },
+  {
+    "id": "49c618da",
+    "ts": "2026-07-24T20:13:31.488274",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 3"
+  },
+  {
+    "id": "55e9b313",
+    "ts": "2026-07-24T20:12:45.458228",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Billennium — Senior Fullstack Developer (.NET + Angular to bulk_urls.txt"
+  },
+  {
     "id": "66abd771",
     "ts": "2026-07-24T20:12:13.965361",
     "level": "SUCCESS",
@@ -1552,1951 +3498,5 @@
     "level": "WARN",
     "site": "ai",
     "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "5bf44e63",
-    "ts": "2026-07-24T19:36:05.474487",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "410e4e75",
-    "ts": "2026-07-24T19:36:04.954991",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "8e7395f6",
-    "ts": "2026-07-24T19:36:04.204092",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "a7baab32",
-    "ts": "2026-07-24T19:36:03.614144",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "03f6f149",
-    "ts": "2026-07-24T19:36:03.341287",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "44a2de39",
-    "ts": "2026-07-24T19:36:01.891597",
-    "level": "INFO",
-    "site": "system",
-    "message": "[FollowUp] Logged application: Senior Software Engineer @ Astek"
-  },
-  {
-    "id": "df51a4d6",
-    "ts": "2026-07-24T19:35:39.079000",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "a042baf1",
-    "ts": "2026-07-24T19:35:02.943865",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "f75dc276",
-    "ts": "2026-07-24T19:35:02.530976",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "c531fc63",
-    "ts": "2026-07-24T19:35:02.094510",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "ca93f794",
-    "ts": "2026-07-24T19:35:01.496953",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "864a093c",
-    "ts": "2026-07-24T19:34:53.286061",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "37f86fcf",
-    "ts": "2026-07-24T19:34:52.786663",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "5a758f86",
-    "ts": "2026-07-24T19:34:52.244132",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "c20492cc",
-    "ts": "2026-07-24T19:34:51.695839",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "df1ed385",
-    "ts": "2026-07-24T19:33:57.109741",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "5e284354",
-    "ts": "2026-07-24T19:33:56.628509",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "46e20202",
-    "ts": "2026-07-24T19:33:56.176251",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "c17135fe",
-    "ts": "2026-07-24T19:33:55.840841",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "aace5d91",
-    "ts": "2026-07-24T19:33:02.146388",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "e33719a3",
-    "ts": "2026-07-24T19:33:01.670522",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "c8fbf193",
-    "ts": "2026-07-24T19:33:01.276870",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "9f9288a4",
-    "ts": "2026-07-24T19:33:00.833233",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "0312b75b",
-    "ts": "2026-07-24T19:32:43.187403",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "2d4088da",
-    "ts": "2026-07-24T19:32:42.304382",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "4f95a29f",
-    "ts": "2026-07-24T19:32:41.729898",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "28ee9d7e",
-    "ts": "2026-07-24T19:32:41.344365",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "63845704",
-    "ts": "2026-07-24T19:32:03.546916",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "1eeb2f49",
-    "ts": "2026-07-24T19:32:02.912912",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "077992e0",
-    "ts": "2026-07-24T19:32:02.466581",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "f34b2c7c",
-    "ts": "2026-07-24T19:32:01.611538",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "99029d5c",
-    "ts": "2026-07-24T19:31:09.415714",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "a2c6f0be",
-    "ts": "2026-07-24T19:31:08.959767",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "787db9c5",
-    "ts": "2026-07-24T19:31:08.419083",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "f44fc04d",
-    "ts": "2026-07-24T19:31:07.978711",
-    "level": "AI",
-    "site": "ai",
-    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
-  },
-  {
-    "id": "e6c8b9f8",
-    "ts": "2026-07-24T19:30:57.585780",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
-  },
-  {
-    "id": "30b3df51",
-    "ts": "2026-07-24T19:30:57.215646",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
-  },
-  {
-    "id": "f780f246",
-    "ts": "2026-07-24T19:30:56.812671",
-    "level": "WARN",
-    "site": "ai",
-    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
-  },
-  {
-    "id": "ec7176e3",
-    "ts": "2026-07-24T19:30:55.870777",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "6b4beced",
-    "ts": "2026-07-24T19:30:55.563908",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
-  },
-  {
-    "id": "48e22641",
-    "ts": "2026-07-24T19:30:55.250326",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Groq 429 rate limit hit — switching instantly to next provider"
-  },
-  {
-    "id": "0e69ebb5",
-    "ts": "2026-07-24T19:30:49.274042",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "0a63a34f",
-    "ts": "2026-07-24T19:30:49.003110",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini failed: All Gemini models failed or hit quota limits"
-  },
-  {
-    "id": "51e1e81c",
-    "ts": "2026-07-24T19:30:48.723220",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-pro not found, trying next..."
-  },
-  {
-    "id": "637796a1",
-    "ts": "2026-07-24T19:30:48.210880",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-1.5-flash not found, trying next..."
-  },
-  {
-    "id": "9343ede2",
-    "ts": "2026-07-24T19:30:47.583039",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
-  },
-  {
-    "id": "064eaa71",
-    "ts": "2026-07-24T19:30:47.077920",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
-  },
-  {
-    "id": "8cb69936",
-    "ts": "2026-07-24T19:30:46.463633",
-    "level": "WARN",
-    "site": "ai",
-    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
-  },
-  {
-    "id": "242d501c",
-    "ts": "2026-07-24T19:30:46.197103",
-    "level": "WARN",
-    "site": "ai",
-    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
-  },
-  {
-    "id": "9899581a",
-    "ts": "2026-07-24T19:30:27.067205",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "c352f0ca",
-    "ts": "2026-07-24T19:30:15.950754",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .NET Developer (Past Week)"
-  },
-  {
-    "id": "33e5f433",
-    "ts": "2026-07-24T19:30:15.651876",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Malaysia' (geoId=105072130)"
-  },
-  {
-    "id": "128c17a6",
-    "ts": "2026-07-24T19:30:15.355949",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 0 jobs for 'Senior Software Engineer' in Malaysia"
-  },
-  {
-    "id": "1eb4fbb9",
-    "ts": "2026-07-24T19:30:07.329749",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 2 jobs on page 1"
-  },
-  {
-    "id": "3cd8ceca",
-    "ts": "2026-07-24T19:29:56.312999",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "c47dad1c",
-    "ts": "2026-07-24T19:29:56.048357",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Malaysia' (geoId=105072130)"
-  },
-  {
-    "id": "7b741db4",
-    "ts": "2026-07-24T19:29:55.753945",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: Applied 1 jobs for 'Senior Software Engineer' in Malaysia"
-  },
-  {
-    "id": "d1cb2b44",
-    "ts": "2026-07-24T19:29:28.835279",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "Saved external URL for Sitecore — Lead Software Developer to bulk_urls.txt"
-  },
-  {
-    "id": "856a9452",
-    "ts": "2026-07-24T19:29:15.383891",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 8 jobs on page 2"
-  },
-  {
-    "id": "48028cac",
-    "ts": "2026-07-24T19:29:11.224097",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "9de28107",
-    "ts": "2026-07-24T19:29:10.809163",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "2569759f",
-    "ts": "2026-07-24T19:29:10.362914",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "953bef79",
-    "ts": "2026-07-24T19:29:09.742302",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "b0106456",
-    "ts": "2026-07-24T19:29:09.341564",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "b38295f2",
-    "ts": "2026-07-24T19:29:08.924808",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "5c4ecff9",
-    "ts": "2026-07-24T19:29:08.504608",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "1888f4d6",
-    "ts": "2026-07-24T19:29:08.076603",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "26dbe257",
-    "ts": "2026-07-24T19:29:07.593998",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "97179d97",
-    "ts": "2026-07-24T19:29:07.074552",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "7b8ed1f5",
-    "ts": "2026-07-24T19:29:06.674863",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "cef468ae",
-    "ts": "2026-07-24T19:29:06.289408",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "fa60ce39",
-    "ts": "2026-07-24T19:29:05.925910",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "6b2f7c3c",
-    "ts": "2026-07-24T19:29:05.527306",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "2e0028e5",
-    "ts": "2026-07-24T19:29:05.095044",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "41076cf7",
-    "ts": "2026-07-24T19:29:04.692955",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "8cec7d98",
-    "ts": "2026-07-24T19:29:04.307257",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "a2a1dd18",
-    "ts": "2026-07-24T19:29:03.947321",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "90a33f85",
-    "ts": "2026-07-24T19:29:03.543571",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "8c26e21c",
-    "ts": "2026-07-24T19:29:03.128604",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "766f28fe",
-    "ts": "2026-07-24T19:29:02.673924",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "8cb4d912",
-    "ts": "2026-07-24T19:29:02.234101",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "8a74e7ba",
-    "ts": "2026-07-24T19:29:01.771750",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "68f0534e",
-    "ts": "2026-07-24T19:29:01.243939",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "9e0de7d4",
-    "ts": "2026-07-24T19:29:00.362204",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Failed to click job element: ElementHandle.scroll_into_view_if_needed: Element is not attached to the DOM\nCal"
-  },
-  {
-    "id": "da5020cc",
-    "ts": "2026-07-24T19:28:57.891485",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Found 25 jobs on page 1"
-  },
-  {
-    "id": "22625452",
-    "ts": "2026-07-24T19:28:48.677741",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "7b0e0f8f",
-    "ts": "2026-07-24T19:28:48.398864",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Malaysia' (geoId=105072130)"
-  },
-  {
-    "id": "21419e15",
-    "ts": "2026-07-24T19:28:48.093676",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Malaysia (geoId=105072130)"
-  },
-  {
-    "id": "65190aff",
-    "ts": "2026-07-24T19:28:47.840930",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "25ce8d8a",
-    "ts": "2026-07-24T19:28:47.180887",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "4ebc593a",
-    "ts": "2026-07-24T19:28:30.989087",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "2f64faba",
-    "ts": "2026-07-24T19:28:30.671575",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "88806819",
-    "ts": "2026-07-24T19:28:30.285807",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "c494d6f3",
-    "ts": "2026-07-24T19:28:28.585716",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "5aeca3af",
-    "ts": "2026-07-24T19:28:27.769467",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "f095c7f4",
-    "ts": "2026-07-24T19:28:24.423551",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "e1525d3a",
-    "ts": "2026-07-24T19:28:09.927936",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: Malaysia"
-  },
-  {
-    "id": "f51f7af8",
-    "ts": "2026-07-24T19:28:06.893852",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "48b5a697",
-    "ts": "2026-07-24T19:28:06.718491",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "37f547da",
-    "ts": "2026-07-23T13:18:05.814410",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "38ac30f7",
-    "ts": "2026-07-23T13:18:05.673978",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "c2710c45",
-    "ts": "2026-07-23T12:19:18.682626",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "e14774e6",
-    "ts": "2026-07-23T12:19:18.585087",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "844372a8",
-    "ts": "2026-07-23T12:19:18.489427",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "04ad3d40",
-    "ts": "2026-07-23T12:19:18.387707",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "3e258501",
-    "ts": "2026-07-23T12:19:18.272138",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "8ca6a66a",
-    "ts": "2026-07-23T12:19:18.172857",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\23-07-2026"
-  },
-  {
-    "id": "e20dafb5",
-    "ts": "2026-07-23T12:19:18.076913",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-23 12:19:18"
-  },
-  {
-    "id": "7581d8e2",
-    "ts": "2026-07-23T12:19:17.981036",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "4c5c6a30",
-    "ts": "2026-07-23T12:19:17.888829",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "7809f580",
-    "ts": "2026-07-23T12:19:17.793040",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "2a38bfba",
-    "ts": "2026-07-23T12:19:17.701630",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "08a8e60d",
-    "ts": "2026-07-23T12:19:17.585470",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "b8c0a777",
-    "ts": "2026-07-22T21:18:30.263329",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "2350bd9b",
-    "ts": "2026-07-22T21:18:29.257379",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "604c7a5e",
-    "ts": "2026-07-22T21:18:28.219782",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "7f74bf4e",
-    "ts": "2026-07-22T21:18:27.201306",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "49538483",
-    "ts": "2026-07-22T21:18:26.194140",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "d1d08956",
-    "ts": "2026-07-22T21:18:25.169335",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\22-07-2026"
-  },
-  {
-    "id": "4341f6ec",
-    "ts": "2026-07-22T21:18:24.157111",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-22 21:18:24"
-  },
-  {
-    "id": "4d4dfdd8",
-    "ts": "2026-07-22T21:18:23.086569",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a39871c9",
-    "ts": "2026-07-22T21:18:22.064393",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "b850a296",
-    "ts": "2026-07-22T21:18:21.035664",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "9a91f960",
-    "ts": "2026-07-22T21:18:20.005472",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "8367269b",
-    "ts": "2026-07-22T21:18:18.952098",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "19e4dc69",
-    "ts": "2026-07-22T19:27:05.840585",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "52100974",
-    "ts": "2026-07-22T19:27:05.741407",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "c035353d",
-    "ts": "2026-07-22T19:27:05.631374",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "054e9379",
-    "ts": "2026-07-22T19:27:05.503916",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "cd37168e",
-    "ts": "2026-07-22T19:27:05.361294",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "73eddaea",
-    "ts": "2026-07-22T19:27:05.277366",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\22-07-2026"
-  },
-  {
-    "id": "85789234",
-    "ts": "2026-07-22T19:27:05.155488",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-22 19:27:05"
-  },
-  {
-    "id": "ff1e1ef7",
-    "ts": "2026-07-22T19:27:05.028353",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "45d50dba",
-    "ts": "2026-07-22T19:27:04.917896",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "a036e25f",
-    "ts": "2026-07-22T19:27:04.800745",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "2bbf9281",
-    "ts": "2026-07-22T19:27:04.695658",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "19bde552",
-    "ts": "2026-07-22T19:27:04.479221",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "fe6b3ddd",
-    "ts": "2026-07-21T19:41:06.139540",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed bot session ended"
-  },
-  {
-    "id": "2a368015",
-    "ts": "2026-07-21T19:41:05.918075",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Terminating Chrome subprocess..."
-  },
-  {
-    "id": "e2c95f01",
-    "ts": "2026-07-21T19:41:05.743894",
-    "level": "ERROR",
-    "site": "indeed",
-    "message": "Indeed bot crash: BrowserContext.new_page: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a5a6d434",
-    "ts": "2026-07-21T19:41:05.602038",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Fuku - Senior Full Stack Software Engineer (External Apply)..."
-  },
-  {
-    "id": "d7e788fc",
-    "ts": "2026-07-21T19:40:18.143396",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Scellus - Full Stack Web Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "ccaf4440",
-    "ts": "2026-07-21T19:40:15.799756",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "ff2a2696",
-    "ts": "2026-07-21T19:40:11.809047",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Scellus - Full Stack Web Developer (External Apply)..."
-  },
-  {
-    "id": "9e3c74c2",
-    "ts": "2026-07-21T19:40:00.728053",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Portcast - Backend Engineer [Mid-Level] (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "76158c21",
-    "ts": "2026-07-21T19:40:00.548117",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Portcast. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "a62d4107",
-    "ts": "2026-07-21T19:39:56.528348",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Portcast - Backend Engineer [Mid-Level] (External Apply)..."
-  },
-  {
-    "id": "2d7b4487",
-    "ts": "2026-07-21T19:39:49.477736",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Seeka Technology - Graphics Design Internship (Ui/UX) - WFH/Remote Work (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c2526d89",
-    "ts": "2026-07-21T19:39:49.298125",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Seeka Technology. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "10d137af",
-    "ts": "2026-07-21T19:39:45.932957",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Seeka Technology - Graphics Design Internship (Ui/UX) - WFH/Remote Work (External Apply)..."
-  },
-  {
-    "id": "7bde0daa",
-    "ts": "2026-07-21T19:39:35.217111",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Parallel Wireless - Director, Solution Sales Engineering, Asia region (Malaysia) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "f1f865b9",
-    "ts": "2026-07-21T19:39:35.042696",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Parallel Wireless. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "f684d2b5",
-    "ts": "2026-07-21T19:39:31.764421",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Parallel Wireless - Director, Solution Sales Engineering, Asia region (Malaysia) (External Apply)..."
-  },
-  {
-    "id": "e4793850",
-    "ts": "2026-07-21T19:39:25.426079",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Seeka Technology - IT / Web Scrapping / QA Tester Internship / A.I. Automation - WFH/Remote Work (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "e202ba9b",
-    "ts": "2026-07-21T19:39:25.242106",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Seeka Technology. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "2d11c3f1",
-    "ts": "2026-07-21T19:39:21.419126",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Seeka Technology - IT / Web Scrapping / QA Tester Internship / A.I. Automation - WFH/Remote Work (External Apply)..."
-  },
-  {
-    "id": "1849ed11",
-    "ts": "2026-07-21T19:39:13.484152",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Growmodo GmbH - Senior Graphic Designer / AI Expert (Full-Time / On-Call) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "1af2bbf8",
-    "ts": "2026-07-21T19:39:13.326722",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "245e70a2",
-    "ts": "2026-07-21T19:39:10.066384",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Growmodo GmbH - Senior Graphic Designer / AI Expert (Full-Time / On-Call) (External Apply)..."
-  },
-  {
-    "id": "11f4c922",
-    "ts": "2026-07-21T19:39:00.874058",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Renesas Electronics - Senior ABAP (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "2bd3a47a",
-    "ts": "2026-07-21T19:39:00.649114",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Renesas Electronics. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "3ca7bddd",
-    "ts": "2026-07-21T19:38:56.926186",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Renesas Electronics - Senior ABAP (External Apply)..."
-  },
-  {
-    "id": "2cc6f91b",
-    "ts": "2026-07-21T19:38:49.176030",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Seeka Technology - Software Engineer Internship - Testing, Technical Analysis, and Automation (WFH Only) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "e0327970",
-    "ts": "2026-07-21T19:38:48.992756",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Seeka Technology. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "6b984ec2",
-    "ts": "2026-07-21T19:38:45.850992",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Seeka Technology - Software Engineer Internship - Testing, Technical Analysis, and Automation (WFH Only) (External Apply)..."
-  },
-  {
-    "id": "d1fb9034",
-    "ts": "2026-07-21T19:38:34.263216",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping AYP - Data Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "32420d9b",
-    "ts": "2026-07-21T19:38:34.077617",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for AYP. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "1181988d",
-    "ts": "2026-07-21T19:38:30.237592",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: AYP - Data Engineer (External Apply)..."
-  },
-  {
-    "id": "4749c459",
-    "ts": "2026-07-21T19:38:18.797836",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping BasicBrix - Cloud Systems Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "7788392e",
-    "ts": "2026-07-21T19:38:18.618363",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for BasicBrix. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "bf696a24",
-    "ts": "2026-07-21T19:38:15.516653",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: BasicBrix - Cloud Systems Engineer (External Apply)..."
-  },
-  {
-    "id": "d4a73cef",
-    "ts": "2026-07-21T19:38:03.692456",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "a3f0b6b6",
-    "ts": "2026-07-21T19:38:03.478939",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Growmodo GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "4586b9e8",
-    "ts": "2026-07-21T19:38:00.455001",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Growmodo GmbH - Senior Full-Stack Developer / AI Specialist (Full-Time / On-Call) (External Apply)..."
-  },
-  {
-    "id": "27459f40",
-    "ts": "2026-07-21T19:37:50.859423",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping BasicBrix - Front End Developer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "1c91c6e9",
-    "ts": "2026-07-21T19:37:50.663414",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for BasicBrix. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "616f2f62",
-    "ts": "2026-07-21T19:37:46.823155",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: BasicBrix - Front End Developer (External Apply)..."
-  },
-  {
-    "id": "b46a1394",
-    "ts": "2026-07-21T19:37:36.676841",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Snappymob - Software Engineer (.Net) ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "443cf918",
-    "ts": "2026-07-21T19:37:33.565083",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "11715e50",
-    "ts": "2026-07-21T19:37:30.364184",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Snappymob - Software Engineer (.Net) (External Apply)..."
-  },
-  {
-    "id": "98c3547b",
-    "ts": "2026-07-21T19:37:30.220880",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 15 Indeed jobs to process on search page"
-  },
-  {
-    "id": "0f5b4246",
-    "ts": "2026-07-21T19:37:24.744529",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: 'Senior Software Engineer' in 'Remote' on https://malaysia.indeed.com"
-  },
-  {
-    "id": "cffbeec3",
-    "ts": "2026-07-21T19:37:24.579933",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Indeed already logged in on https://malaysia.indeed.com ✅"
-  },
-  {
-    "id": "fe7bbef0",
-    "ts": "2026-07-21T19:37:21.287983",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Checking login status for Indeed domain: https://malaysia.indeed.com..."
-  },
-  {
-    "id": "be3e5a56",
-    "ts": "2026-07-21T19:37:21.086679",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "464582af",
-    "ts": "2026-07-21T19:37:20.921781",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "f3eb2e47",
-    "ts": "2026-07-21T19:37:19.598321",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "f9cd0bd5",
-    "ts": "2026-07-21T19:37:18.967428",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "f2bc2bf2",
-    "ts": "2026-07-21T19:37:15.819960",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "6b75f88c",
-    "ts": "2026-07-21T19:37:14.400593",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed search scope set to: Malaysia"
-  },
-  {
-    "id": "87e6f0cc",
-    "ts": "2026-07-21T19:37:11.765106",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "🚀 Starting Indeed Multi-Country bot"
-  },
-  {
-    "id": "5d442cc8",
-    "ts": "2026-07-21T19:37:11.653559",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running Indeed Bot only..."
-  },
-  {
-    "id": "20f9c359",
-    "ts": "2026-07-21T19:32:18.031944",
-    "level": "WARN",
-    "site": "indeed",
-    "message": "⚠️ Cloudflare Human Verification detected! Please complete the verification in the browser window."
-  },
-  {
-    "id": "b71ca7f1",
-    "ts": "2026-07-21T19:32:14.885582",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Total eBiz Solutions Pte. Ltd - Full Stack Developer (External Apply)..."
-  },
-  {
-    "id": "63849086",
-    "ts": "2026-07-21T19:32:04.499603",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Ashford Benjamin Ltd. - C# Developer (All Levels) already captured in bulk_urls.txt"
-  },
-  {
-    "id": "3fab16df",
-    "ts": "2026-07-21T19:32:02.282724",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "bf5c14ba",
-    "ts": "2026-07-21T19:31:58.686070",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Ashford Benjamin Ltd. - C# Developer (All Levels) (External Apply)..."
-  },
-  {
-    "id": "8ab50a8c",
-    "ts": "2026-07-21T19:31:51.554109",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for LYNEER CORP (SINGAPORE) PTE. LTD. - .Net Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "05d7c0cc",
-    "ts": "2026-07-21T19:31:49.348057",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "7df64c8c",
-    "ts": "2026-07-21T19:31:45.652766",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: LYNEER CORP (SINGAPORE) PTE. LTD. - .Net Developer (External Apply)..."
-  },
-  {
-    "id": "fed0f8da",
-    "ts": "2026-07-21T19:31:45.482473",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 15 Indeed jobs to process on search page"
-  },
-  {
-    "id": "f2e11e69",
-    "ts": "2026-07-21T19:31:40.610857",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.NET Developer' in 'Singapore' on https://sg.indeed.com"
-  },
-  {
-    "id": "b39db2c0",
-    "ts": "2026-07-21T19:31:40.467680",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 0 jobs on Indeed for '.NET Developer' in Remote"
-  },
-  {
-    "id": "b086e6df",
-    "ts": "2026-07-21T19:31:33.697903",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Alpaca - Senior Full-Stack Engineer - Broker API (Partner-Facing Application) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c32228df",
-    "ts": "2026-07-21T19:31:33.522383",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Alpaca. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "954552de",
-    "ts": "2026-07-21T19:31:29.967868",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Alpaca - Senior Full-Stack Engineer - Broker API (Partner-Facing Application) (External Apply)..."
-  },
-  {
-    "id": "46d0a65d",
-    "ts": "2026-07-21T19:31:20.952880",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Embed - Senior Backend Developer (.Net & AWS) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "92fc3a71",
-    "ts": "2026-07-21T19:31:20.766264",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Embed. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "f18c426a",
-    "ts": "2026-07-21T19:31:17.342655",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Embed - Senior Backend Developer (.Net & AWS) (External Apply)..."
-  },
-  {
-    "id": "f408fa16",
-    "ts": "2026-07-21T19:31:09.988483",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping BITFIT LABS PTE LTD - Senior FullStack Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "3e5dd00c",
-    "ts": "2026-07-21T19:31:09.816367",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for BITFIT LABS PTE LTD. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "b99f5488",
-    "ts": "2026-07-21T19:31:05.650154",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: BITFIT LABS PTE LTD - Senior FullStack Engineer (External Apply)..."
-  },
-  {
-    "id": "464d2e2b",
-    "ts": "2026-07-21T19:30:53.505189",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Fuku - Full Stack DeveloperWFH/Remote (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "2473a8c7",
-    "ts": "2026-07-21T19:30:53.337601",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Fuku. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "dce6f9d1",
-    "ts": "2026-07-21T19:30:50.172360",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Fuku - Full Stack DeveloperWFH/Remote (External Apply)..."
-  },
-  {
-    "id": "e74868fc",
-    "ts": "2026-07-21T19:30:39.841784",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping deCircle - Hyperliquid - Backend Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "561f8869",
-    "ts": "2026-07-21T19:30:39.684196",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for deCircle. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "aeb168fc",
-    "ts": "2026-07-21T19:30:36.345924",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: deCircle - Hyperliquid - Backend Engineer (External Apply)..."
-  },
-  {
-    "id": "da48c389",
-    "ts": "2026-07-21T19:30:27.525762",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Overmind - Full-Stack Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "5b98f795",
-    "ts": "2026-07-21T19:30:27.346663",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Overmind. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "28f39c78",
-    "ts": "2026-07-21T19:30:24.104584",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Overmind - Full-Stack Engineer (External Apply)..."
-  },
-  {
-    "id": "963ce8e5",
-    "ts": "2026-07-21T19:30:16.843423",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Data/ Java Engineer (AI/LLM Chatbot, Customer Service) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "67d0c428",
-    "ts": "2026-07-21T19:30:16.652264",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "19269df3",
-    "ts": "2026-07-21T19:30:13.248336",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Data/ Java Engineer (AI/LLM Chatbot, Customer Service) (External Apply)..."
-  },
-  {
-    "id": "2d27d4df",
-    "ts": "2026-07-21T19:30:05.682195",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Program - Web & Mobile Engineering (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "1c4926ea",
-    "ts": "2026-07-21T19:30:05.499408",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "a25564b6",
-    "ts": "2026-07-21T19:30:02.137572",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Program - Web & Mobile Engineering (External Apply)..."
-  },
-  {
-    "id": "93871db3",
-    "ts": "2026-07-21T19:29:55.160022",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Binance Accelerator Program - DevOps Engineer (AI) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "d5d77e4c",
-    "ts": "2026-07-21T19:29:54.993096",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "f456d37e",
-    "ts": "2026-07-21T19:29:51.294490",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Binance Accelerator Program - DevOps Engineer (AI) (External Apply)..."
-  },
-  {
-    "id": "1f4d8b72",
-    "ts": "2026-07-21T19:29:44.665736",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Binance - Software Engineer(Java) - Tech Compliance (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "222a5522",
-    "ts": "2026-07-21T19:29:44.493595",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Binance. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "62b50752",
-    "ts": "2026-07-21T19:29:39.949536",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Binance - Software Engineer(Java) - Tech Compliance (External Apply)..."
-  },
-  {
-    "id": "722586b9",
-    "ts": "2026-07-21T19:29:31.028296",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping TechBiz Global GmbH - Account Executive (Sales Manager) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "7bb6ee57",
-    "ts": "2026-07-21T19:29:30.836634",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for TechBiz Global GmbH. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "bfd4feb1",
-    "ts": "2026-07-21T19:29:27.254393",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: TechBiz Global GmbH - Account Executive (Sales Manager) (External Apply)..."
-  },
-  {
-    "id": "b742adab",
-    "ts": "2026-07-21T19:29:20.997526",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Cloud Science Labs - Business Development Intern (Salesforce & Tech Focus) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "1ca1e84d",
-    "ts": "2026-07-21T19:29:20.770706",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Cloud Science Labs. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "1785b8fa",
-    "ts": "2026-07-21T19:29:17.360036",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Cloud Science Labs - Business Development Intern (Salesforce & Tech Focus) (External Apply)..."
-  },
-  {
-    "id": "c3a748ac",
-    "ts": "2026-07-21T19:29:07.918253",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Worthland - Developer Relations (Dev Rel) (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "e092f93c",
-    "ts": "2026-07-21T19:29:07.731475",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Worthland. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "a6da5a07",
-    "ts": "2026-07-21T19:29:04.069804",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Worthland - Developer Relations (Dev Rel) (External Apply)..."
-  },
-  {
-    "id": "292e6f1d",
-    "ts": "2026-07-21T19:28:55.038476",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "fa739b06",
-    "ts": "2026-07-21T19:28:54.861043",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for GECO Asia. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "a9c9a262",
-    "ts": "2026-07-21T19:28:50.790408",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: GECO Asia - IT Consultants (Backend Engineer, Data Engineer, Application Developer) – Training Provided (External Apply)..."
-  },
-  {
-    "id": "d061a6dd",
-    "ts": "2026-07-21T19:28:38.753212",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "External apply URL for Startale Group - TypeScript Backend Engineer already captured in bulk_urls.txt"
-  },
-  {
-    "id": "866c4b8f",
-    "ts": "2026-07-21T19:28:36.667017",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "c2c2c323",
-    "ts": "2026-07-21T19:28:32.845682",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Startale Group - TypeScript Backend Engineer (External Apply)..."
-  },
-  {
-    "id": "99005b51",
-    "ts": "2026-07-21T19:28:32.737146",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Found 15 Indeed jobs to process on search page"
-  },
-  {
-    "id": "0e0fb637",
-    "ts": "2026-07-21T19:28:26.984742",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Searching Indeed: '.NET Developer' in 'Remote' on https://sg.indeed.com"
-  },
-  {
-    "id": "7f1b32ac",
-    "ts": "2026-07-21T19:28:26.863398",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Applied to 0 jobs on Indeed for 'Senior Software Engineer' in Singapore"
-  },
-  {
-    "id": "769776df",
-    "ts": "2026-07-21T19:28:15.611887",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Open Government Products - Software Engineer, ActiveSG (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "4c79ef9e",
-    "ts": "2026-07-21T19:28:15.433550",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Open Government Products. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "d94579f6",
-    "ts": "2026-07-21T19:28:11.769205",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Open Government Products - Software Engineer, ActiveSG (External Apply)..."
-  },
-  {
-    "id": "40a67cd2",
-    "ts": "2026-07-21T19:28:04.401671",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping LRDTech - Software Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "d4c0cb98",
-    "ts": "2026-07-21T19:28:04.230893",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for LRDTech. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "cdbe6c7e",
-    "ts": "2026-07-21T19:28:00.382705",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: LRDTech - Software Engineer (External Apply)..."
-  },
-  {
-    "id": "ed5fd97e",
-    "ts": "2026-07-21T19:27:49.660540",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping AvePoint - Senior Software Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "7e240814",
-    "ts": "2026-07-21T19:27:49.492344",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for AvePoint. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "6f6ec71b",
-    "ts": "2026-07-21T19:27:46.396308",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: AvePoint - Senior Software Engineer (External Apply)..."
-  },
-  {
-    "id": "39e65c07",
-    "ts": "2026-07-21T19:27:36.525573",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Open Government Products - Senior Software Engineer, FormSG (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c003b2d5",
-    "ts": "2026-07-21T19:27:36.350374",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Open Government Products. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "89f8ce0b",
-    "ts": "2026-07-21T19:27:32.592306",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Open Government Products - Senior Software Engineer, FormSG (External Apply)..."
-  },
-  {
-    "id": "8490e488",
-    "ts": "2026-07-21T19:27:25.388394",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Pave Bank - Junior Software Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "c52fac87",
-    "ts": "2026-07-21T19:27:25.208307",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Pave Bank. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "b3f0c742",
-    "ts": "2026-07-21T19:27:21.541391",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Pave Bank - Junior Software Engineer (External Apply)..."
-  },
-  {
-    "id": "2512f58e",
-    "ts": "2026-07-21T19:27:12.261078",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Renesas Electronics - Senior / Software Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "bab15667",
-    "ts": "2026-07-21T19:27:12.074695",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Renesas Electronics. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "dac8b78f",
-    "ts": "2026-07-21T19:27:08.792165",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Renesas Electronics - Senior / Software Engineer (External Apply)..."
-  },
-  {
-    "id": "1407b3b8",
-    "ts": "2026-07-21T19:27:01.727451",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Skipping Worthland - Backend Engineer (Tech stack or experience mismatch)"
-  },
-  {
-    "id": "772d2ab3",
-    "ts": "2026-07-21T19:27:01.556566",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Indeed Apply: Detected Indeed Apply button on job page for Worthland. Overriding classification to Indeed Apply ✅"
-  },
-  {
-    "id": "6132abc5",
-    "ts": "2026-07-21T19:26:57.712321",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Worthland - Backend Engineer (External Apply)..."
-  },
-  {
-    "id": "235197a5",
-    "ts": "2026-07-21T19:26:46.787218",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Sea Limited - Backend Engineer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "c4a6029e",
-    "ts": "2026-07-21T19:26:44.736086",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "c1762cb1",
-    "ts": "2026-07-21T19:26:40.990293",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Sea Limited - Backend Engineer (External Apply)..."
-  },
-  {
-    "id": "a6dce48f",
-    "ts": "2026-07-21T19:26:29.949065",
-    "level": "SUCCESS",
-    "site": "indeed",
-    "message": "Captured external apply URL for Allied Container Group - Senior Web Developer ➡️ Saved to data/bulk_urls.txt"
-  },
-  {
-    "id": "e6a46107",
-    "ts": "2026-07-21T19:26:28.267945",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Clicking external apply link to capture redirection..."
-  },
-  {
-    "id": "127978e6",
-    "ts": "2026-07-21T19:26:24.453431",
-    "level": "INFO",
-    "site": "indeed",
-    "message": "Opening job page: Allied Container Group - Senior Web Developer (External Apply)..."
   }
 ]
