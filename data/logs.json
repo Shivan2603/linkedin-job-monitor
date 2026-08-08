@@ -1,5 +1,264 @@
 [
   {
+    "id": "25987a52",
+    "ts": "2026-08-08T18:10:15.740273",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: PRIMUS Global Solutions (PRIMUS UK & Europe) | Dotnet Developer | Poland | 100% match"
+  },
+  {
+    "id": "984e7171",
+    "ts": "2026-08-08T18:10:15.476361",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: PRIMUS Global Solutions (PRIMUS UK & Europe) — Dotnet Developer"
+  },
+  {
+    "id": "a4db4be9",
+    "ts": "2026-08-08T18:10:08.268534",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "96543037",
+    "ts": "2026-08-08T18:10:08.014862",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with ASP.NET?' = '4'"
+  },
+  {
+    "id": "adcf389e",
+    "ts": "2026-08-08T18:09:49.973232",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "d4c60bd4",
+    "ts": "2026-08-08T18:09:49.721585",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with Node.js in Azure?' = '3'"
+  },
+  {
+    "id": "f479409a",
+    "ts": "2026-08-08T18:09:33.857668",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "147b9484",
+    "ts": "2026-08-08T18:09:33.611159",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with Node.js in Azure?' = 'No'"
+  },
+  {
+    "id": "b8ab7c21",
+    "ts": "2026-08-08T18:09:33.444590",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of work experience do you have with Python (Programming Language)?' = '2'"
+  },
+  {
+    "id": "277be5e5",
+    "ts": "2026-08-08T18:08:48.870031",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: .NET Developer @ PRIMUS Global Solutions (PRIMUS UK & Europe)"
+  },
+  {
+    "id": "2783fc80",
+    "ts": "2026-08-08T18:08:19.981323",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "61be273c",
+    "ts": "2026-08-08T18:07:00.708658",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "43773d4d",
+    "ts": "2026-08-08T18:07:00.459207",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "d724ecc5",
+    "ts": "2026-08-08T18:07:00.240408",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "2b7c7cef",
+    "ts": "2026-08-08T18:06:59.237863",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "4b7c5658",
+    "ts": "2026-08-08T18:06:47.001304",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "74f89192",
+    "ts": "2026-08-08T18:06:46.778034",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "120eef89",
+    "ts": "2026-08-08T18:06:46.533627",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "291a5cb3",
+    "ts": "2026-08-08T18:06:45.661461",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "d51c1a27",
+    "ts": "2026-08-08T18:05:11.226719",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "3db02f56",
+    "ts": "2026-08-08T18:05:10.979188",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "e3410fea",
+    "ts": "2026-08-08T18:05:10.663952",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "f64adaa1",
+    "ts": "2026-08-08T18:05:09.445091",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "c3e93f2a",
+    "ts": "2026-08-08T18:05:09.347630",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "18cc1e21",
+    "ts": "2026-08-08T18:05:09.229371",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "3ca8a430",
+    "ts": "2026-08-08T18:05:08.752166",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "c9f611b6",
+    "ts": "2026-08-08T18:05:08.282241",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "2f57498a",
+    "ts": "2026-08-08T18:05:07.806202",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "fafb65d9",
+    "ts": "2026-08-08T18:05:07.126172",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "58b841ef",
+    "ts": "2026-08-08T18:05:07.017226",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "6a7801ac",
+    "ts": "2026-08-08T18:05:05.640769",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "3ae37f42",
+    "ts": "2026-08-08T18:03:17.722947",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "815e88d7",
+    "ts": "2026-08-08T18:03:17.523523",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "7e0ff10e",
+    "ts": "2026-08-08T18:03:17.269501",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "7c88038d",
+    "ts": "2026-08-08T18:03:16.315505",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "db852e67",
+    "ts": "2026-08-08T18:03:16.145936",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "7e66d876",
+    "ts": "2026-08-08T18:03:15.960823",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
     "id": "6292e238",
     "ts": "2026-08-08T18:02:54.313603",
     "level": "SUCCESS",
@@ -3239,264 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "LinkedIn search: 'C# Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "430ef58b",
-    "ts": "2026-07-24T21:43:57.826738",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "de521e78",
-    "ts": "2026-07-24T21:43:57.652738",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: C# Developer (Past Week)"
-  },
-  {
-    "id": "516338fa",
-    "ts": "2026-07-24T21:43:57.506648",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "6018655a",
-    "ts": "2026-07-24T21:43:57.352875",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "00ff710a",
-    "ts": "2026-07-24T21:43:57.186609",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "c53604d8",
-    "ts": "2026-07-24T21:43:57.032405",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "f8a9492d",
-    "ts": "2026-07-24T21:43:56.866621",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "6f959b3e",
-    "ts": "2026-07-24T21:43:56.702934",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "3c2bd7e1",
-    "ts": "2026-07-24T21:43:56.542805",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "75d662b1",
-    "ts": "2026-07-24T21:43:56.357012",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "824fc929",
-    "ts": "2026-07-24T21:43:56.186637",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "263a1b4f",
-    "ts": "2026-07-24T21:43:56.046851",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "53b05529",
-    "ts": "2026-07-24T21:43:55.886966",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "21a96fb6",
-    "ts": "2026-07-24T21:43:55.722615",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "c4afd12e",
-    "ts": "2026-07-24T21:43:55.556668",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "670bfdec",
-    "ts": "2026-07-24T21:43:55.396622",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1317bb23",
-    "ts": "2026-07-24T21:43:55.206969",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "f503aa64",
-    "ts": "2026-07-24T21:43:55.056794",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "dad1431a",
-    "ts": "2026-07-24T21:43:54.921710",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "7ee161a1",
-    "ts": "2026-07-24T21:43:54.746844",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior .NET Developer (Past Week)"
-  },
-  {
-    "id": "157cc59b",
-    "ts": "2026-07-24T21:43:54.561849",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "4be59a49",
-    "ts": "2026-07-24T21:43:54.399483",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "384f414f",
-    "ts": "2026-07-24T21:43:54.246638",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (.NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "aeda7fde",
-    "ts": "2026-07-24T21:43:54.092696",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "aecab9b4",
-    "ts": "2026-07-24T21:43:53.944346",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1c967f97",
-    "ts": "2026-07-24T21:43:53.766649",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .NET Developer (Past Week)"
-  },
-  {
-    "id": "a1dda813",
-    "ts": "2026-07-24T21:43:53.612890",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "a63d4918",
-    "ts": "2026-07-24T21:43:53.456836",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "3a084d49",
-    "ts": "2026-07-24T21:43:53.302637",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "9ad4be4b",
-    "ts": "2026-07-24T21:43:53.146707",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "5bc559dd",
-    "ts": "2026-07-24T21:43:52.977039",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f3f40ecb",
-    "ts": "2026-07-24T21:43:52.802646",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "14f6389a",
-    "ts": "2026-07-24T21:43:52.646465",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "88a0ac3c",
-    "ts": "2026-07-24T21:43:52.496817",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in France (Paris) (geoId=105646813)"
-  },
-  {
-    "id": "8a98d8d5",
-    "ts": "2026-07-24T21:43:52.321802",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "aa8f22a5",
-    "ts": "2026-07-24T21:43:52.142760",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "7f19f49f",
-    "ts": "2026-07-24T21:43:51.972708",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Finland' (geoId=100819756)"
   }
 ]
