@@ -1,5 +1,614 @@
 [
   {
+    "id": "2962d8ba",
+    "ts": "2026-08-08T18:22:17.010689",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: SCIENTE | Senior Software Engineer | Singapore, Singapore | 100% match"
+  },
+  {
+    "id": "254dc124",
+    "ts": "2026-08-08T18:22:16.745775",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: SCIENTE — Senior Software Engineer"
+  },
+  {
+    "id": "28dfef1a",
+    "ts": "2026-08-08T18:22:04.580100",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "fc9252a4",
+    "ts": "2026-08-08T18:22:04.330728",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'City, state, or zip code' = 'Singapore'"
+  },
+  {
+    "id": "4f1aace6",
+    "ts": "2026-08-08T18:22:04.163136",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'Search by title, skill, or company' = 'Senior Software Engineer'"
+  },
+  {
+    "id": "1cbddd38",
+    "ts": "2026-08-08T18:21:28.776100",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "9ffce9ee",
+    "ts": "2026-08-08T18:21:07.688745",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "64766a73",
+    "ts": "2026-08-08T18:21:07.485603",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "8f61b978",
+    "ts": "2026-08-08T18:21:07.301169",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "be0e6d0a",
+    "ts": "2026-08-08T18:21:06.397360",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: Senior Software Engineer @ SCIENTE"
+  },
+  {
+    "id": "b8fd6c58",
+    "ts": "2026-08-08T18:20:38.361987",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "4df473c1",
+    "ts": "2026-08-08T18:19:56.680344",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "02e1278f",
+    "ts": "2026-08-08T18:19:56.441676",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "0b95d6fb",
+    "ts": "2026-08-08T18:19:56.144892",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "54135f0c",
+    "ts": "2026-08-08T18:19:55.274199",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "920edf14",
+    "ts": "2026-08-08T18:19:55.173427",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "b5ad425c",
+    "ts": "2026-08-08T18:19:55.050634",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "0ede0b52",
+    "ts": "2026-08-08T18:19:50.861049",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "8341f37e",
+    "ts": "2026-08-08T18:19:50.752215",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "46ca720b",
+    "ts": "2026-08-08T18:19:50.645551",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "9572a11f",
+    "ts": "2026-08-08T18:19:50.177835",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "bef9d4b9",
+    "ts": "2026-08-08T18:19:49.627162",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "5fee3733",
+    "ts": "2026-08-08T18:19:49.188037",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "dd82b131",
+    "ts": "2026-08-08T18:19:48.487965",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "64e6ee2c",
+    "ts": "2026-08-08T18:19:48.374155",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "55ac6ac7",
+    "ts": "2026-08-08T18:19:46.783679",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "76be2f35",
+    "ts": "2026-08-08T18:18:26.516712",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "a5cc8fa9",
+    "ts": "2026-08-08T18:18:26.220678",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "93824ece",
+    "ts": "2026-08-08T18:18:25.829469",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "31245f93",
+    "ts": "2026-08-08T18:18:25.574083",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "b8f2e34c",
+    "ts": "2026-08-08T18:18:03.457471",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "ddafc034",
+    "ts": "2026-08-08T18:18:03.358780",
+    "level": "INFO",
+    "site": "system",
+    "message": "--- Starting LinkedIn ---"
+  },
+  {
+    "id": "78bc1bcd",
+    "ts": "2026-08-08T18:18:03.256271",
+    "level": "INFO",
+    "site": "system",
+    "message": "Filtering run for LinkedIn ONLY per configuration."
+  },
+  {
+    "id": "3cf5938c",
+    "ts": "2026-08-08T18:18:03.155764",
+    "level": "INFO",
+    "site": "system",
+    "message": "Today's applications so far: {'linkedin': 5, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
+  },
+  {
+    "id": "f8e370c5",
+    "ts": "2026-08-08T18:18:03.051769",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "0a292fc4",
+    "ts": "2026-08-08T18:18:02.947208",
+    "level": "INFO",
+    "site": "system",
+    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-08-2026"
+  },
+  {
+    "id": "6f5f4882",
+    "ts": "2026-08-08T18:18:02.845292",
+    "level": "INFO",
+    "site": "system",
+    "message": "Job Bot Session Started — 2026-08-08 18:18:02"
+  },
+  {
+    "id": "76303a6c",
+    "ts": "2026-08-08T18:18:02.736465",
+    "level": "INFO",
+    "site": "system",
+    "message": "============================================================"
+  },
+  {
+    "id": "7d61321a",
+    "ts": "2026-08-08T18:18:02.651260",
+    "level": "INFO",
+    "site": "main",
+    "message": "Time window restriction active: 0:00 to 23:00"
+  },
+  {
+    "id": "84d2674c",
+    "ts": "2026-08-08T18:18:02.538975",
+    "level": "INFO",
+    "site": "main",
+    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
+  },
+  {
+    "id": "0690adbb",
+    "ts": "2026-08-08T18:18:02.426356",
+    "level": "INFO",
+    "site": "main",
+    "message": "Starting All Sites standard loop..."
+  },
+  {
+    "id": "02cd3391",
+    "ts": "2026-08-08T18:18:02.317928",
+    "level": "INFO",
+    "site": "main",
+    "message": "Command-line argument provided: mode=4"
+  },
+  {
+    "id": "17a405ce",
+    "ts": "2026-08-08T18:17:50.521373",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "78c756ee",
+    "ts": "2026-08-08T18:17:50.304371",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "7c262a8c",
+    "ts": "2026-08-08T18:17:50.103730",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "dc706cc7",
+    "ts": "2026-08-08T18:17:49.271276",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "1e4583e0",
+    "ts": "2026-08-08T18:16:18.954987",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "b84a97fd",
+    "ts": "2026-08-08T18:16:18.719889",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "4f36c2b6",
+    "ts": "2026-08-08T18:16:18.485775",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "7ce60d78",
+    "ts": "2026-08-08T18:16:17.550730",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "2bddc0fc",
+    "ts": "2026-08-08T18:14:11.265194",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "41553fc9",
+    "ts": "2026-08-08T18:14:10.822784",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "116697bf",
+    "ts": "2026-08-08T18:14:10.547825",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "5ddb0731",
+    "ts": "2026-08-08T18:14:09.657879",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "ecd53ad8",
+    "ts": "2026-08-08T18:14:09.486359",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "ffdac53b",
+    "ts": "2026-08-08T18:14:09.328344",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "32ae1980",
+    "ts": "2026-08-08T18:14:03.229589",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "59ed5b58",
+    "ts": "2026-08-08T18:14:03.063138",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "02a52e42",
+    "ts": "2026-08-08T18:14:02.915356",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "194cc27f",
+    "ts": "2026-08-08T18:14:02.538059",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "8c33911c",
+    "ts": "2026-08-08T18:14:02.142341",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "8d3891fc",
+    "ts": "2026-08-08T18:14:01.704452",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "b4234dbe",
+    "ts": "2026-08-08T18:14:01.298130",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "2531addf",
+    "ts": "2026-08-08T18:14:01.159032",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "b7794e9c",
+    "ts": "2026-08-08T18:13:16.700587",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 2"
+  },
+  {
+    "id": "fa2ec778",
+    "ts": "2026-08-08T18:12:42.517841",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for A*STAR - Agency for Science, Technology and Research — Senior Research Software Engineer to bulk_urls.txt"
+  },
+  {
+    "id": "aaaaa10e",
+    "ts": "2026-08-08T18:11:45.343965",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Found 25 jobs on page 1"
+  },
+  {
+    "id": "e67c82ff",
+    "ts": "2026-08-08T18:11:38.412128",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Searching for: Senior Software Engineer (Past Week)"
+  },
+  {
+    "id": "dcc1ba76",
+    "ts": "2026-08-08T18:11:38.203818",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search: 'Senior Software Engineer' in 'Singapore' (geoId=102454443)"
+  },
+  {
+    "id": "cf410df6",
+    "ts": "2026-08-08T18:11:38.001031",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn: searching in Singapore (geoId=102454443)"
+  },
+  {
+    "id": "d538f9b4",
+    "ts": "2026-08-08T18:11:37.784924",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Cookies saved for linkedin"
+  },
+  {
+    "id": "7143b477",
+    "ts": "2026-08-08T18:11:37.338553",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "LinkedIn: already logged in via persistent session (URL check)"
+  },
+  {
+    "id": "ddb5b968",
+    "ts": "2026-08-08T18:11:31.989155",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Logging into LinkedIn..."
+  },
+  {
+    "id": "fd8bf0b0",
+    "ts": "2026-08-08T18:11:31.815535",
+    "level": "SUCCESS",
+    "site": "safety",
+    "message": "Playwright connected over CDP successfully."
+  },
+  {
+    "id": "a239eb1d",
+    "ts": "2026-08-08T18:11:31.609307",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Playwright-Stealth applied successfully to CDP context."
+  },
+  {
+    "id": "0496d141",
+    "ts": "2026-08-08T18:11:31.074083",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Connecting Playwright over CDP to port 9222..."
+  },
+  {
+    "id": "ffa6d77f",
+    "ts": "2026-08-08T18:11:30.444152",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Launching native Chrome via subprocess on port 9222..."
+  },
+  {
+    "id": "ae406866",
+    "ts": "2026-08-08T18:11:27.282325",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
+  },
+  {
+    "id": "6265ec44",
+    "ts": "2026-08-08T18:11:26.144020",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn search scope: Singapore"
+  },
+  {
+    "id": "88e51cb0",
+    "ts": "2026-08-08T18:11:23.044744",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
+  },
+  {
+    "id": "bbaa485f",
+    "ts": "2026-08-08T18:11:22.931515",
+    "level": "INFO",
+    "site": "main",
+    "message": "Running LinkedIn Bot only..."
+  },
+  {
+    "id": "ad3a5540",
+    "ts": "2026-08-08T18:10:35.793242",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "LinkedIn bot session ended"
+  },
+  {
+    "id": "be6167fa",
+    "ts": "2026-08-08T18:10:35.298072",
+    "level": "INFO",
+    "site": "safety",
+    "message": "Terminating Chrome subprocess..."
+  },
+  {
+    "id": "f1a44788",
+    "ts": "2026-08-08T18:10:35.016705",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "da5357c3",
+    "ts": "2026-08-08T18:10:34.660798",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "676ea43f",
+    "ts": "2026-08-08T18:10:34.104021",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "38a46b2c",
+    "ts": "2026-08-08T18:10:33.989285",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
     "id": "25987a52",
     "ts": "2026-08-08T18:10:15.740273",
     "level": "SUCCESS",
@@ -2889,614 +3498,5 @@
     "level": "INFO",
     "site": "linkedin",
     "message": "Cookies saved for linkedin"
-  },
-  {
-    "id": "89fd23c3",
-    "ts": "2026-08-08T16:28:16.018293",
-    "level": "SUCCESS",
-    "site": "linkedin",
-    "message": "LinkedIn: already logged in via persistent session (URL check)"
-  },
-  {
-    "id": "2a3d4f9b",
-    "ts": "2026-08-08T16:28:08.509423",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Logging into LinkedIn..."
-  },
-  {
-    "id": "d45c5355",
-    "ts": "2026-08-08T16:28:08.216810",
-    "level": "SUCCESS",
-    "site": "safety",
-    "message": "Playwright connected over CDP successfully."
-  },
-  {
-    "id": "14bd1022",
-    "ts": "2026-08-08T16:28:07.901112",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Playwright-Stealth applied successfully to CDP context."
-  },
-  {
-    "id": "d5dc3bbc",
-    "ts": "2026-08-08T16:28:05.240632",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Connecting Playwright over CDP to port 9222..."
-  },
-  {
-    "id": "3a2d280b",
-    "ts": "2026-08-08T16:28:04.534752",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Launching native Chrome via subprocess on port 9222..."
-  },
-  {
-    "id": "baa01014",
-    "ts": "2026-08-08T16:28:01.257364",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Killed existing Chrome processes using profile: chrome_profile_shared"
-  },
-  {
-    "id": "a588e19e",
-    "ts": "2026-08-08T16:27:51.433643",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search scope: India"
-  },
-  {
-    "id": "bd53e6e7",
-    "ts": "2026-08-08T16:27:48.333660",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "1abfdaab",
-    "ts": "2026-08-08T16:27:48.163384",
-    "level": "INFO",
-    "site": "main",
-    "message": "Running LinkedIn Bot only..."
-  },
-  {
-    "id": "0a1365ff",
-    "ts": "2026-08-08T16:22:59.246416",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "f4db4094",
-    "ts": "2026-08-08T16:22:58.771995",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "3bb851dc",
-    "ts": "2026-08-08T16:22:58.586073",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "04744904",
-    "ts": "2026-08-08T16:22:58.288052",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "ea22d7ad",
-    "ts": "2026-08-08T16:22:57.987699",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "65410b85",
-    "ts": "2026-08-08T16:22:57.804571",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\08-08-2026"
-  },
-  {
-    "id": "5da50ffb",
-    "ts": "2026-08-08T16:22:57.687225",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-08-08 16:22:57"
-  },
-  {
-    "id": "55e28bdc",
-    "ts": "2026-08-08T16:22:57.588187",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "830e4525",
-    "ts": "2026-08-08T16:22:57.488224",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "8ad44544",
-    "ts": "2026-08-08T16:22:57.387272",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "bff944fe",
-    "ts": "2026-08-08T16:22:57.224169",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "b86372ae",
-    "ts": "2026-08-08T16:22:57.088444",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "9d5f49fd",
-    "ts": "2026-08-01T17:31:43.783328",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "eaf22048",
-    "ts": "2026-08-01T17:31:43.678154",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "1aae69d3",
-    "ts": "2026-08-01T17:31:43.580033",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "8d5b5b75",
-    "ts": "2026-08-01T17:31:43.475478",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "15694fb4",
-    "ts": "2026-08-01T17:31:43.352346",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "512a17aa",
-    "ts": "2026-08-01T17:31:43.253078",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\01-08-2026"
-  },
-  {
-    "id": "5f665a8f",
-    "ts": "2026-08-01T17:31:43.146828",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-08-01 17:31:43"
-  },
-  {
-    "id": "e2ab08e9",
-    "ts": "2026-08-01T17:31:43.009032",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "31db81da",
-    "ts": "2026-08-01T17:31:42.901536",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "def61c3c",
-    "ts": "2026-08-01T17:31:42.801055",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "9cab10c8",
-    "ts": "2026-08-01T17:31:42.698584",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "49e8ed32",
-    "ts": "2026-08-01T17:31:42.550037",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "58e70147",
-    "ts": "2026-07-31T21:52:03.707215",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "781957c0",
-    "ts": "2026-07-31T21:52:03.533926",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "3c94cf12",
-    "ts": "2026-07-31T21:52:03.358143",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "f08a3b5c",
-    "ts": "2026-07-31T21:52:03.182841",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "c031d43b",
-    "ts": "2026-07-31T21:52:02.977121",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "a45c50b1",
-    "ts": "2026-07-31T21:52:02.820411",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\31-07-2026"
-  },
-  {
-    "id": "53097e92",
-    "ts": "2026-07-31T21:52:02.634719",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-31 21:52:02"
-  },
-  {
-    "id": "ae43f915",
-    "ts": "2026-07-31T21:52:02.445437",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "0a100b07",
-    "ts": "2026-07-31T21:52:02.161263",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "c3530af9",
-    "ts": "2026-07-31T21:51:57.193096",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "b35e70d3",
-    "ts": "2026-07-31T21:51:33.512104",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "6d7e3ad0",
-    "ts": "2026-07-31T21:51:23.261651",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "99d08787",
-    "ts": "2026-07-31T15:18:07.316764",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Starting LinkedIn Easy Apply bot — Production Mode"
-  },
-  {
-    "id": "75998303",
-    "ts": "2026-07-31T15:18:07.220434",
-    "level": "INFO",
-    "site": "system",
-    "message": "--- Starting LinkedIn ---"
-  },
-  {
-    "id": "8c8eeb6b",
-    "ts": "2026-07-31T15:18:07.119107",
-    "level": "INFO",
-    "site": "system",
-    "message": "Filtering run for LinkedIn ONLY per configuration."
-  },
-  {
-    "id": "ae7cd0a7",
-    "ts": "2026-07-31T15:18:07.007057",
-    "level": "INFO",
-    "site": "system",
-    "message": "Today's applications so far: {'linkedin': 0, 'naukri': 0, 'indeed': 0, 'shine': 0, 'monster': 0, 'company_careers': 0, 'jobstreet': 0, 'jooble': 0}"
-  },
-  {
-    "id": "18c99a4e",
-    "ts": "2026-07-31T15:18:06.866851",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "6c365486",
-    "ts": "2026-07-31T15:18:06.761585",
-    "level": "INFO",
-    "site": "system",
-    "message": "Tailored resumes: E:\\SivaShankar\\aTresume\\31-07-2026"
-  },
-  {
-    "id": "d6bdcae1",
-    "ts": "2026-07-31T15:18:06.647010",
-    "level": "INFO",
-    "site": "system",
-    "message": "Job Bot Session Started — 2026-07-31 15:18:06"
-  },
-  {
-    "id": "a129a99e",
-    "ts": "2026-07-31T15:18:06.547551",
-    "level": "INFO",
-    "site": "system",
-    "message": "============================================================"
-  },
-  {
-    "id": "7eab2cfd",
-    "ts": "2026-07-31T15:18:06.437699",
-    "level": "INFO",
-    "site": "main",
-    "message": "Time window restriction active: 0:00 to 23:00"
-  },
-  {
-    "id": "58d52414",
-    "ts": "2026-07-31T15:18:06.324029",
-    "level": "INFO",
-    "site": "main",
-    "message": "Anti-ban: random delays, cookie persistence, stealth browser"
-  },
-  {
-    "id": "cf5280f7",
-    "ts": "2026-07-31T15:18:06.208916",
-    "level": "INFO",
-    "site": "main",
-    "message": "Starting All Sites standard loop..."
-  },
-  {
-    "id": "87408739",
-    "ts": "2026-07-31T15:18:05.832568",
-    "level": "INFO",
-    "site": "main",
-    "message": "Command-line argument provided: mode=4"
-  },
-  {
-    "id": "ad164a69",
-    "ts": "2026-07-24T21:44:02.561014",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn bot session ended"
-  },
-  {
-    "id": "63613b2a",
-    "ts": "2026-07-24T21:44:02.316750",
-    "level": "INFO",
-    "site": "safety",
-    "message": "Terminating Chrome subprocess..."
-  },
-  {
-    "id": "374053e4",
-    "ts": "2026-07-24T21:44:02.096710",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1da8a792",
-    "ts": "2026-07-24T21:44:01.954715",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "73755b0f",
-    "ts": "2026-07-24T21:44:01.786949",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "7a932c98",
-    "ts": "2026-07-24T21:44:01.606588",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "4e098ef4",
-    "ts": "2026-07-24T21:44:01.452662",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Software Engineer (Past Week)"
-  },
-  {
-    "id": "8c0a69ae",
-    "ts": "2026-07-24T21:44:01.291898",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "0804198c",
-    "ts": "2026-07-24T21:44:01.156616",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f9fab4d4",
-    "ts": "2026-07-24T21:44:01.050552",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Azure Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "04ca0e74",
-    "ts": "2026-07-24T21:44:00.921861",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "801a019e",
-    "ts": "2026-07-24T21:44:00.756877",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1c2701e5",
-    "ts": "2026-07-24T21:44:00.602696",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Azure Developer (Past Week)"
-  },
-  {
-    "id": "e91e3d67",
-    "ts": "2026-07-24T21:44:00.436850",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "10f13252",
-    "ts": "2026-07-24T21:44:00.272912",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "b565aebb",
-    "ts": "2026-07-24T21:44:00.112629",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "c4e872dd",
-    "ts": "2026-07-24T21:43:59.952663",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "2f21ceb0",
-    "ts": "2026-07-24T21:43:59.802710",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0cb11feb",
-    "ts": "2026-07-24T21:43:59.632788",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Backend Developer (Past Week)"
-  },
-  {
-    "id": "a15a814d",
-    "ts": "2026-07-24T21:43:59.476772",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "75602af3",
-    "ts": "2026-07-24T21:43:59.328842",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "9584a071",
-    "ts": "2026-07-24T21:43:59.146944",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "efdfe293",
-    "ts": "2026-07-24T21:43:58.996971",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "9b45039f",
-    "ts": "2026-07-24T21:43:58.832945",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1bc0fa1b",
-    "ts": "2026-07-24T21:43:58.676758",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Backend Developer (Past Week)"
-  },
-  {
-    "id": "600ee7fd",
-    "ts": "2026-07-24T21:43:58.522936",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'France' (geoId=105646813)"
-  },
-  {
-    "id": "e88d4aaa",
-    "ts": "2026-07-24T21:43:58.346864",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "828f51a0",
-    "ts": "2026-07-24T21:43:58.176936",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "f2f440ee",
-    "ts": "2026-07-24T21:43:57.991813",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'France' (geoId=105646813)"
   }
 ]
