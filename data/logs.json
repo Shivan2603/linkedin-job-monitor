@@ -1,5 +1,390 @@
 [
   {
+    "id": "02d8cae9",
+    "ts": "2026-08-08T17:55:22.934333",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Applied: Ampstek | Dotnet Developer | Lodz Metropolitan Area | 100% match"
+  },
+  {
+    "id": "abb97ba2",
+    "ts": "2026-08-08T17:55:22.617243",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "✅ LinkedIn Easy Apply submitted: Ampstek — Dotnet Developer"
+  },
+  {
+    "id": "9b87ae68",
+    "ts": "2026-08-08T17:55:14.573787",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Profile updated with new learned answers."
+  },
+  {
+    "id": "5085dd5e",
+    "ts": "2026-08-08T17:55:14.313382",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'What is your level of proficiency in Polish?' = 'None'"
+  },
+  {
+    "id": "f3b42756",
+    "ts": "2026-08-08T17:55:14.086702",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of experience in .Net developer?' = '4'"
+  },
+  {
+    "id": "500e7799",
+    "ts": "2026-08-08T17:55:13.871856",
+    "level": "INFO",
+    "site": "linkedin",
+    "message": "Learned from form: 'How many years of experience in TCP/IP socket programming?' = '4'"
+  },
+  {
+    "id": "4af504f8",
+    "ts": "2026-08-08T17:54:26.462603",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "688878dd",
+    "ts": "2026-08-08T17:54:26.362799",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "21bd0863",
+    "ts": "2026-08-08T17:54:26.247853",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "88654cc9",
+    "ts": "2026-08-08T17:54:25.863322",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "73a3b176",
+    "ts": "2026-08-08T17:54:25.348050",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "c8e76f73",
+    "ts": "2026-08-08T17:54:25.015486",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "2139d140",
+    "ts": "2026-08-08T17:54:24.600551",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "3e103492",
+    "ts": "2026-08-08T17:54:24.472301",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "584395de",
+    "ts": "2026-08-08T17:54:23.057206",
+    "level": "INFO",
+    "site": "system",
+    "message": "[FollowUp] Logged application: .NET Developer @ Ampstek"
+  },
+  {
+    "id": "53356d22",
+    "ts": "2026-08-08T17:54:22.881852",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "4bb9260b",
+    "ts": "2026-08-08T17:52:33.811242",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "e5cee917",
+    "ts": "2026-08-08T17:52:33.548490",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "7bb03bc1",
+    "ts": "2026-08-08T17:52:33.295766",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "1a56ab66",
+    "ts": "2026-08-08T17:52:33.053668",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "b28c4ae9",
+    "ts": "2026-08-08T17:52:15.365374",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "36711c56",
+    "ts": "2026-08-08T17:52:14.178832",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "210454c5",
+    "ts": "2026-08-08T17:52:11.908259",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "1f3bd634",
+    "ts": "2026-08-08T17:52:09.117305",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "8db73d88",
+    "ts": "2026-08-08T17:50:46.491934",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "1fdb6784",
+    "ts": "2026-08-08T17:50:46.249723",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "763bea78",
+    "ts": "2026-08-08T17:50:45.783001",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "7ae0da79",
+    "ts": "2026-08-08T17:50:45.522859",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "bc8b737b",
+    "ts": "2026-08-08T17:50:35.228423",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "c8fc296e",
+    "ts": "2026-08-08T17:50:34.763491",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "ff23b54a",
+    "ts": "2026-08-08T17:50:34.498431",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "aa0f3806",
+    "ts": "2026-08-08T17:50:33.633670",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "bde6d9de",
+    "ts": "2026-08-08T17:49:23.378259",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "f4a8f580",
+    "ts": "2026-08-08T17:49:22.956133",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "ba299392",
+    "ts": "2026-08-08T17:49:22.736157",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "05ba499c",
+    "ts": "2026-08-08T17:49:21.874962",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Gemini placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "d171cde7",
+    "ts": "2026-08-08T17:49:21.688602",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini failed: All Gemini models failed or hit quota limits"
+  },
+  {
+    "id": "adec749f",
+    "ts": "2026-08-08T17:49:21.481077",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-pro not found, trying next..."
+  },
+  {
+    "id": "2b59c4aa",
+    "ts": "2026-08-08T17:49:21.037306",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-1.5-flash not found, trying next..."
+  },
+  {
+    "id": "46f8fb56",
+    "ts": "2026-08-08T17:49:20.315968",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash-lite quota hit, trying next..."
+  },
+  {
+    "id": "07a5bce3",
+    "ts": "2026-08-08T17:49:19.665490",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Gemini gemini-2.0-flash quota hit, trying next..."
+  },
+  {
+    "id": "3d6ddc90",
+    "ts": "2026-08-08T17:49:18.899884",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Ollama-Cloud placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "0bccd09c",
+    "ts": "2026-08-08T17:49:18.720197",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Ollama-Cloud failed: Ollama Cloud (HF Spaces) is sleeping or unreachable — skipping"
+  },
+  {
+    "id": "bd5d7095",
+    "ts": "2026-08-08T17:49:17.147144",
+    "level": "AI",
+    "site": "ai",
+    "message": "AI response from OpenRouter (nemotron-3-super-120b-a12b:free)"
+  },
+  {
+    "id": "76065a1d",
+    "ts": "2026-08-08T17:47:47.742927",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter qwen/qwen3-coder:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen3-coder\",\"code\":404},\"use"
+  },
+  {
+    "id": "085d5f1d",
+    "ts": "2026-08-08T17:47:47.476793",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter meta-llama/llama-3.3-70b-instruct:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-3.3-70b-instruct\""
+  },
+  {
+    "id": "22d23454",
+    "ts": "2026-08-08T17:47:47.236133",
+    "level": "WARN",
+    "site": "ai",
+    "message": "OpenRouter openai/gpt-oss-120b:free status 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: openai/gpt-oss-120b\",\"code\":404},\""
+  },
+  {
+    "id": "d86ad3c2",
+    "ts": "2026-08-08T17:47:46.355110",
+    "level": "WARN",
+    "site": "ai",
+    "message": "⚠️ Provider Groq placed on 5-minute cooldown to avoid retry lag."
+  },
+  {
+    "id": "02d4499d",
+    "ts": "2026-08-08T17:47:46.256040",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq failed: Groq failed: Groq 429 Rate Limit"
+  },
+  {
+    "id": "79f8e465",
+    "ts": "2026-08-08T17:47:46.119004",
+    "level": "WARN",
+    "site": "ai",
+    "message": "Groq 429 rate limit hit — switching instantly to next provider"
+  },
+  {
+    "id": "a17c2fc0",
+    "ts": "2026-08-08T17:47:13.861934",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Jit Team — Senior/Lead .NET Developer to bulk_urls.txt"
+  },
+  {
+    "id": "fa611903",
+    "ts": "2026-08-08T17:46:57.356271",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Brenntag — RPA & Intelligent Automation Developer to bulk_urls.txt"
+  },
+  {
+    "id": "95f27553",
+    "ts": "2026-08-08T17:46:34.346234",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for EY — Full Stack Developer to bulk_urls.txt"
+  },
+  {
+    "id": "f2769317",
+    "ts": "2026-08-08T17:46:11.952833",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for Comarch — .NET Developer (Backend / Full-Stack Platform to bulk_urls.txt"
+  },
+  {
+    "id": "c0331092",
+    "ts": "2026-08-08T17:45:48.924773",
+    "level": "SUCCESS",
+    "site": "linkedin",
+    "message": "Saved external URL for IMPACT Commerce — .NET Developer with Azure to bulk_urls.txt"
+  },
+  {
     "id": "6fea7d64",
     "ts": "2026-08-08T17:45:23.450973",
     "level": "SUCCESS",
@@ -3110,391 +3495,6 @@
   {
     "id": "3f39cc01",
     "ts": "2026-07-24T21:43:45.722880",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "70eed9b8",
-    "ts": "2026-07-24T21:43:45.546776",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Full Stack Developer (Past Week)"
-  },
-  {
-    "id": "529be762",
-    "ts": "2026-07-24T21:43:45.446793",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Full Stack Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "ffdf1e15",
-    "ts": "2026-07-24T21:43:45.306656",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "a812c0c5",
-    "ts": "2026-07-24T21:43:45.136606",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior .NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "d4c41056",
-    "ts": "2026-07-24T21:43:44.971918",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "6c59aeb0",
-    "ts": "2026-07-24T21:43:44.796869",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "727e5261",
-    "ts": "2026-07-24T21:43:44.642652",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior .NET Developer (Past Week)"
-  },
-  {
-    "id": "9aaba851",
-    "ts": "2026-07-24T21:43:44.486751",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior .NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "c2d7e5bb",
-    "ts": "2026-07-24T21:43:44.332821",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "edaa287f",
-    "ts": "2026-07-24T21:43:44.166904",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (.NET Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "f4f8ad04",
-    "ts": "2026-07-24T21:43:44.006785",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "fb19e669",
-    "ts": "2026-07-24T21:43:43.881933",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "351f3b20",
-    "ts": "2026-07-24T21:43:43.716960",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: .NET Developer (Past Week)"
-  },
-  {
-    "id": "df38a63c",
-    "ts": "2026-07-24T21:43:43.547513",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: '.NET Developer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "e81a3d97",
-    "ts": "2026-07-24T21:43:43.389775",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "bb238204",
-    "ts": "2026-07-24T21:43:43.238646",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "4a8990b8",
-    "ts": "2026-07-24T21:43:43.092750",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "80d37698",
-    "ts": "2026-07-24T21:43:42.936811",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5243f0c7",
-    "ts": "2026-07-24T21:43:42.746844",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Software Engineer (Past Week)"
-  },
-  {
-    "id": "130a9405",
-    "ts": "2026-07-24T21:43:42.596932",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Software Engineer' in 'Finland' (geoId=100819756)"
-  },
-  {
-    "id": "7aec4e01",
-    "ts": "2026-07-24T21:43:42.446900",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn: searching in Finland (geoId=100819756)"
-  },
-  {
-    "id": "bfef2ca2",
-    "ts": "2026-07-24T21:43:42.256651",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "5e800ebc",
-    "ts": "2026-07-24T21:43:42.106697",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Software Engineer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "59d2e0b0",
-    "ts": "2026-07-24T21:43:41.966545",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "d5863ac6",
-    "ts": "2026-07-24T21:43:41.822585",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "014d18d2",
-    "ts": "2026-07-24T21:43:41.666600",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Software Engineer (Past Week)"
-  },
-  {
-    "id": "564cdf11",
-    "ts": "2026-07-24T21:43:41.516570",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Software Engineer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "869a0842",
-    "ts": "2026-07-24T21:43:41.362889",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "09c90b24",
-    "ts": "2026-07-24T21:43:41.197723",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Azure Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "59102c78",
-    "ts": "2026-07-24T21:43:41.006730",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "b328e067",
-    "ts": "2026-07-24T21:43:40.846636",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "ac0403b0",
-    "ts": "2026-07-24T21:43:40.687095",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Azure Developer (Past Week)"
-  },
-  {
-    "id": "1e0ce15e",
-    "ts": "2026-07-24T21:43:40.526697",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Azure Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "bcced2d5",
-    "ts": "2026-07-24T21:43:40.342025",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "faf826c0",
-    "ts": "2026-07-24T21:43:40.172780",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "02977411",
-    "ts": "2026-07-24T21:43:40.022863",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "f3cb7b4e",
-    "ts": "2026-07-24T21:43:39.856819",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "f97b9ed1",
-    "ts": "2026-07-24T21:43:39.697145",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Senior Backend Developer (Past Week)"
-  },
-  {
-    "id": "d59be5f1",
-    "ts": "2026-07-24T21:43:39.542769",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "d5eea95e",
-    "ts": "2026-07-24T21:43:39.366736",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1dbcc1bc",
-    "ts": "2026-07-24T21:43:39.194553",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Backend Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "e6e17e5e",
-    "ts": "2026-07-24T21:43:39.036635",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "33cba59d",
-    "ts": "2026-07-24T21:43:38.892890",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "bc808005",
-    "ts": "2026-07-24T21:43:38.731877",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: Backend Developer (Past Week)"
-  },
-  {
-    "id": "59e707b3",
-    "ts": "2026-07-24T21:43:38.567838",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Backend Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "558009c0",
-    "ts": "2026-07-24T21:43:38.406756",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "0c7fd91e",
-    "ts": "2026-07-24T21:43:38.232647",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (C# Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "61454f08",
-    "ts": "2026-07-24T21:43:38.054440",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "49ff28a4",
-    "ts": "2026-07-24T21:43:37.886861",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "1fcc85a1",
-    "ts": "2026-07-24T21:43:37.722762",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for: C# Developer (Past Week)"
-  },
-  {
-    "id": "6a4e707b",
-    "ts": "2026-07-24T21:43:37.562812",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'C# Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "180139c9",
-    "ts": "2026-07-24T21:43:37.406942",
-    "level": "WARN",
-    "site": "linkedin",
-    "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
-  },
-  {
-    "id": "2a5f8e97",
-    "ts": "2026-07-24T21:43:37.246826",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "Searching for freelance/contract positions: (Senior Full Stack Developer) AND (\"freelance\" OR \"contract\" OR \"temporary\" OR \"contractor\")"
-  },
-  {
-    "id": "c47c6f08",
-    "ts": "2026-07-24T21:43:37.096725",
-    "level": "INFO",
-    "site": "linkedin",
-    "message": "LinkedIn search: 'Senior Full Stack Developer' in 'Norway' (geoId=105015875)"
-  },
-  {
-    "id": "bdf6faf8",
-    "ts": "2026-07-24T21:43:36.917859",
     "level": "WARN",
     "site": "linkedin",
     "message": "Search page load failed: Page.goto: Target page, context or browser has been closed"
